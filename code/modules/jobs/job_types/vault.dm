@@ -84,8 +84,8 @@ Head of Security
 	department_flag = VAULT
 	head_announce = list("Security")
 	faction = "Vault"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with organising the safety, security and readiness of the Vault, as well as managing the Security team. It is also your duty to secure the Vault against outside invasion. At your discretion, you are encouraged to train capable dwellers in the usage of firearms and issue weapon permits accordingly."
@@ -230,8 +230,8 @@ Security Officer
 	department_head = list("Chief of Security")
 	department_flag = VAULT
 	faction = "Vault"
-	total_positions = 3 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	spawn_positions = 3 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
+	total_positions = 1 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
+	spawn_positions = 1 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
@@ -308,8 +308,8 @@ Vault Engineer
 	department_head = list("Overseer")
 	department_flag = VAULT
 	faction = "Vault"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
@@ -343,8 +343,8 @@ Vault Engineer
 	flag = ASSISTANT
 	department_flag = VAULT
 	faction = "Vault"
-	total_positions = 8
-	spawn_positions = 8
+	total_positions = 2
+	spawn_positions = 2
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer, being assigned to fulfill whatever menial tasks are required. You lack an assignment, but may be given one the Overseer if required or requested. You should otherwise busy yourself with assisting personnel with tasks around the Vault."
