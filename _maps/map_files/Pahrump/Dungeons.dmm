@@ -5,14 +5,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/vault)
 "aaK" = (
-/obj/machinery/power/am_control_unit,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "1-2"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/plating,
+/obj/structure/lattice,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/vault)
 "abc" = (
 /obj/effect/decal/cleanable/dirt{
@@ -626,6 +623,10 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/vault)
+"bmL" = (
+/obj/structure/lattice,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/vault)
 "bnB" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Armory";
@@ -1150,6 +1151,14 @@
 /obj/item/trash/f13/rotten,
 /turf/open/floor/f13/wood,
 /area/f13/bunker)
+"clF" = (
+/obj/item/circuitboard/machine/smes,
+/obj/machinery/light/broken{
+	dir = 8;
+	icon_state = "tube-broken"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault)
 "cmp" = (
 /obj/machinery/light{
 	dir = 8
@@ -1907,13 +1916,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/vault)
 "dOF" = (
-/obj/machinery/door/window/brigdoor{
-	icon_state = "rightsecure";
-	req_access_txt = "31"
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor/closed,
+/obj/item/shard,
+/obj/item/shard,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "dPu" = (
@@ -2247,6 +2255,7 @@
 	pixel_x = -27;
 	pixel_y = 2
 	},
+/obj/item/stack/cable_coil/red,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/vault)
 "exl" = (
@@ -2382,7 +2391,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/vault)
 "eOH" = (
-/obj/item/am_shielding_container,
+/obj/machinery/atmospherics/pipe/manifold{
+	dir = 4
+	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "eOI" = (
@@ -2505,12 +2516,6 @@
 /obj/item/storage/book,
 /obj/machinery/light/small,
 /turf/open/floor/f13/wood,
-/area/f13/vault)
-"fcq" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "fcG" = (
 /obj/item/radio/intercom{
@@ -3633,6 +3638,10 @@
 	icon_state = "bar"
 	},
 /area/f13/bunker)
+"gZX" = (
+/obj/machinery/atmospherics/components/binary/circulator/cold,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/vault)
 "hah" = (
 /obj/structure/closet/crate,
 /obj/item/clothing/head/f13/gambler,
@@ -3730,7 +3739,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/f13/vault)
 "hiN" = (
-/obj/effect/turf_decal/stripes/corner,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "hkd" = (
@@ -3834,6 +3843,15 @@
 	icon_state = "bar"
 	},
 /area/f13/bunker)
+"hrP" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault)
 "hrW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/comfy/beige{
@@ -4459,10 +4477,7 @@
 	},
 /area/f13/bunker)
 "iOq" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 8
-	},
-/obj/item/multitool/uplink,
+/obj/machinery/atmospherics/components/binary/circulator/cold,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "iOE" = (
@@ -4505,7 +4520,9 @@
 /turf/closed/indestructible/riveted,
 /area/f13/tcoms)
 "iTR" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/item/circuitboard/machine/thermomachine/heater,
+/obj/structure/frame/machine,
+/obj/item/stack/cable_coil/red,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "iVn" = (
@@ -4731,6 +4748,10 @@
 	icon_state = "tunnelchess"
 	},
 /area/f13/bunker)
+"jrx" = (
+/obj/item/multitool/uplink,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault)
 "jsf" = (
 /obj/structure/table,
 /obj/item/clothing/gloves/boxing,
@@ -5031,6 +5052,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"kcC" = (
+/obj/item/circuitboard/machine/smes,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault)
 "kcN" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
@@ -5101,6 +5126,13 @@
 	},
 /obj/machinery/status_display/supply,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/vault)
+"kmu" = (
+/obj/machinery/power/generator,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "kmR" = (
 /obj/item/twohanded/required/kirbyplants/random,
@@ -5213,10 +5245,6 @@
 	icon_state = "darkdirty"
 	},
 /area/f13/bunker)
-"kvA" = (
-/obj/item/shard,
-/turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/vault)
 "kws" = (
 /obj/structure/table/wood,
 /obj/item/grenade/empgrenade,
@@ -6508,10 +6536,7 @@
 	},
 /area/f13/bunker)
 "nbF" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plasteel/f13/vault_floor/plating,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/vault)
 "nbW" = (
 /obj/structure/rack,
@@ -6565,6 +6590,10 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/dark,
+/area/f13/vault)
+"nkV" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "nlq" = (
 /obj/machinery/computer/aifixer{
@@ -6828,9 +6857,8 @@
 	},
 /area/f13/bunker)
 "nOi" = (
-/obj/item/am_containment,
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold{
+	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
@@ -7747,8 +7775,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/f13/vault)
 "pEA" = (
-/obj/item/shard,
-/obj/item/shard,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "pFL" = (
@@ -9525,6 +9552,13 @@
 /obj/item/reagent_containers/food/drinks/soda_cans,
 /turf/open/floor/wood,
 /area/f13/vault)
+"tAY" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault)
 "tCc" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 1
@@ -9661,6 +9695,13 @@
 /obj/item/book/granter/crafting_recipe/gunsmith_three,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/bunker)
+"tVU" = (
+/obj/machinery/light/broken{
+	dir = 4;
+	icon_state = "tube-broken"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault)
 "tWv" = (
 /obj/structure/bookcase/random,
 /obj/structure/window/reinforced/tinted{
@@ -9710,6 +9751,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/tunnel)
+"uhl" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/vault)
 "uhH" = (
 /obj/structure/chair{
 	dir = 8
@@ -9729,9 +9776,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/ruins)
 "ujC" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
+/obj/item/pipe_dispenser,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "ukU" = (
@@ -11147,9 +11192,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "wUX" = (
-/obj/machinery/light{
+/obj/machinery/light/broken{
 	dir = 8;
-	light_color = "#e8eaff"
+	icon_state = "tube-broken"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
@@ -26933,9 +26978,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -27190,9 +27235,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -27447,11 +27492,11 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
+soK
+soK
+soK
 bsh
 bsh
 bsh
@@ -27704,11 +27749,11 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
+soK
+soK
+soK
 bsh
 bsh
 bsh
@@ -27961,9 +28006,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -28218,9 +28263,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -28475,9 +28520,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -28732,9 +28777,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -28989,9 +29034,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -29246,9 +29291,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -29268,16 +29313,16 @@ mAN
 mAN
 mAN
 mAN
-bZy
-bZy
+mAN
+mAN
 bZy
 wUX
 bZy
 aIS
-bZy
-bZy
-wUX
-kvA
+gZX
+jrx
+clF
+pEA
 wwg
 wCN
 wCN
@@ -29503,9 +29548,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -29526,13 +29571,13 @@ bZy
 drs
 bZy
 bZy
+mAN
 bZy
-hiN
-nbF
-nbF
-nbF
-iOq
 bZy
+nbF
+bmL
+bZy
+bmL
 bZy
 pEA
 nZA
@@ -29760,9 +29805,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -29783,15 +29828,15 @@ bZy
 bZy
 bZy
 bZy
-bZy
+mAN
 iTR
 eOH
-eOH
-eOH
+bmL
+nbF
 ujC
-bZy
-bZy
-bZy
+nbF
+tAY
+pEA
 whC
 wCN
 tYR
@@ -30017,9 +30062,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -30040,14 +30085,14 @@ bZy
 bZy
 bZy
 bZy
+mAN
 bZy
-iTR
-eOH
-eOH
-eOH
+bZy
+kmu
+uhl
 aaK
-bZy
-uZd
+nkV
+hrP
 dOF
 mvs
 wCN
@@ -30274,9 +30319,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -30297,15 +30342,15 @@ mAN
 bZy
 bZy
 bZy
+mAN
+hiN
 bZy
-iTR
-eOH
-eOH
-eOH
-ujC
 bZy
+bZy
+bZy
+bmL
 mtg
-bZy
+pEA
 wCN
 wCN
 wCN
@@ -30531,9 +30576,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -30554,15 +30599,15 @@ xsH
 mAN
 bZy
 bZy
-bZy
+mAN
 nKv
-fcq
-fcq
-fcq
+bZy
+nbF
+bZy
 nOi
 jwW
 bZy
-kvA
+pEA
 blH
 edM
 wCN
@@ -30788,9 +30833,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -30811,15 +30856,15 @@ xsH
 mAN
 mAN
 bZy
-bZy
-bZy
+mAN
+iOq
 uAJ
+bmL
 bZy
+kcC
 bZy
-bZy
-bZy
-uAJ
-bZy
+tVU
+pEA
 ewu
 edM
 nPe
@@ -31045,11 +31090,11 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
+bsh
+soK
+soK
 bsh
 bsh
 bsh
@@ -31068,14 +31113,14 @@ xsH
 mAN
 mAN
 bZy
-bZy
-bZy
-bZy
-bZy
-bZy
-bZy
-bZy
-bZy
+mAN
+mAN
+mAN
+mAN
+mAN
+mAN
+mAN
+mAN
 mAN
 ryV
 iwF
@@ -31302,10 +31347,10 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
+bsh
+bsh
+soK
 bsh
 bsh
 bsh
@@ -31559,9 +31604,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+soK
 bsh
 bsh
 bsh
@@ -31816,9 +31861,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+soK
 bsh
 bsh
 bsh
@@ -32073,9 +32118,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -32330,9 +32375,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -32587,9 +32632,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -32844,9 +32889,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -33101,9 +33146,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -33358,9 +33403,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -33615,9 +33660,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -33872,9 +33917,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -34129,9 +34174,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -34386,9 +34431,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -34643,12 +34688,12 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
 bsh
+bsh
+soK
+soK
 bsh
 bsh
 bsh
@@ -34900,11 +34945,11 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
+bsh
+soK
+soK
 bsh
 bsh
 bsh
@@ -35157,9 +35202,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -35414,9 +35459,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -35671,9 +35716,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -35928,9 +35973,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -36185,9 +36230,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -36442,9 +36487,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -36699,9 +36744,6 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
 bsh
@@ -36709,9 +36751,12 @@ bsh
 bsh
 bsh
 bsh
+soK
+soK
 bsh
 bsh
 bsh
+soK
 bsh
 bsh
 bsh
@@ -36956,20 +37001,20 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
 bsh
 bsh
 bsh
+soK
+soK
+soK
 bsh
 bsh
 bsh
 bsh
-bsh
-bsh
+soK
+soK
 bsh
 bsh
 bsh
@@ -37213,9 +37258,12 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+soK
+bsh
+soK
+soK
 bsh
 bsh
 bsh
@@ -37223,10 +37271,7 @@ bsh
 bsh
 bsh
 bsh
-bsh
-bsh
-bsh
-bsh
+soK
 bsh
 bsh
 bsh
@@ -37470,11 +37515,11 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
+bsh
+bsh
+soK
 bsh
 bsh
 bsh
@@ -37727,11 +37772,11 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
 bsh
 bsh
+bsh
+bsh
+soK
 bsh
 bsh
 bsh
@@ -37984,9 +38029,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -38241,9 +38286,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -38498,9 +38543,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -38755,9 +38800,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -39012,9 +39057,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -39269,9 +39314,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -39526,9 +39571,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -39783,9 +39828,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
@@ -40040,9 +40085,9 @@ heT
 heT
 heT
 heT
-heT
-heT
-heT
+bsh
+bsh
+bsh
 bsh
 bsh
 bsh
