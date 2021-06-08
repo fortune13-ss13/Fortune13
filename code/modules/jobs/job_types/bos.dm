@@ -149,8 +149,8 @@ Head Paladin
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc=3,
-		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/m10mm_adv/simple=2)
+		/obj/item/ammo_box/magazine/m9mmds=3,
+		/obj/item/gun/ballistic/automatic/pistol/beretta/automatic=1)
 
 /datum/outfit/loadout/sentvet
 	name = "Veteran Head Paladin"
@@ -393,10 +393,10 @@ Star Paladin
 /datum/outfit/loadout/spaladinc
 	name = "Mainline Senior Paladin"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer12=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/m10mm_adv/simple=2
+		/obj/item/gun/energy/laser/wattz2k/extended=1,
+		/obj/item/stock_parts/cell/ammo/mfc=3,
+		/obj/item/gun/ballistic/automatic/pistol/beretta/automatic=1,
+		/obj/item/ammo_box/magazine/m9mmds=3
 		)
 
 /*
@@ -827,8 +827,8 @@ Off-Duty
 	title = "BoS Off-Duty"
 	flag = F13OFFDUTYBOS
 	faction = "BOS"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 3
+	spawn_positions = 3
 	description = "Whether operating in disguise or simply enjoying time from the off-shift, you are still a member of the Brotherhood and must abide by the Codex and follow the orders of your superiors. That being said, while off-duty your orders do not take precedence and you should resist issuing them when another of your rank is currently on duty, and if one does not exist, commit to going on-duty. You have a duty to safeguard what equipment you are given, especially your holotags. Ideally, you should be paired with one or more fellow off-duty members; and you would know where the bunker in the region is."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
