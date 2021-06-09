@@ -6,6 +6,7 @@
 /datum/component/combat_mode
 	var/mode_flags = COMBAT_MODE_INACTIVE
 	var/combatmessagecooldown
+	var/togglecooldown
 	var/lastmousedir
 	var/obj/screen/combattoggle/hud_icon
 	var/hud_loc
@@ -76,7 +77,7 @@
 	if(!silent)
 		var/self_message = forced? "<span class='warning'>Your muscles reflexively tighten!</span>" : "<span class='warning'>You drop into a combative stance!</span>"
 		if(visible && (forced || world.time >= combatmessagecooldown))
-			combatmessagecooldown = world.time + 10 SECONDS
+			combatmessagecooldown = world.time + 5 SECONDS
 			if(!forced)
 				if(source.a_intent != INTENT_HELP)
 					source.visible_message("<span class='warning'>[source] [source.resting ? "tenses up" : "drops into a combative stance"].</span>", self_message)
@@ -97,6 +98,28 @@
 	var/mob/living/L = source
 	L.toggle_combat_mode()
 
+/datum/component/combat_mode/proc/enable_second_combat_mode(mob/living/source, silent = TRUE, forced = TRUE, visible = FALSE, locked = FALSE, playsound = FALSE)
+	if(mode_flags & SECOND_COMBAT_MODE_ACTIVE)
+		return
+	mode_flags |= SECOND_COMBAT_MODE_ACTIVE
+	if(!silent)
+		var/self_message = forced? "<span class='warning'>Your muscles reflexively tighten!</span>" : "<span class='warning'>You drop into a combative stance!</span>"
+		if(visible && (forced || world.time >= combatmessagecooldown))
+			combatmessagecooldown = world.time + 5 SECONDS
+			if(!forced)
+				if(source.a_intent != INTENT_HELP)
+					source.visible_message("<span class='warning'>[source] [source.resting ? "tenses up" : "drops into a combative stance"].</span>", self_message)
+				else
+					source.visible_message("<span class='notice'>[source] [pick("looks","seems","goes")] [pick("alert","attentive","vigilant")].</span>")
+			else
+				source.visible_message("<span class='warning'>[source] drops into a combative stance!</span>", self_message)
+		else
+			to_chat(source, self_message)
+		if(playsound)
+			source.playsound_local(source, 'sound/misc/ui_toggle_vats.ogg', 50, FALSE, pressure_affected = FALSE) //Sound from interbay!
+	var/mob/living/L = source
+	L.toggle_combat_mode()
+
 /// Disables combat mode. Please use 'safe_disable_combat_mode' instead, if you wish to also disable the toggle flag.
 /datum/component/combat_mode/proc/disable_combat_mode(mob/living/source, silent = TRUE, forced = TRUE, visible = FALSE, locked = FALSE, playsound = FALSE)
 	if(locked)
@@ -107,6 +130,8 @@
 	if(!(mode_flags & COMBAT_MODE_ACTIVE))
 		return
 	mode_flags &= ~COMBAT_MODE_ACTIVE
+	mode_flags &= ~SECOND_COMBAT_MODE_ACTIVE
+
 	mode_flags |= COMBAT_MODE_INACTIVE
 	SEND_SIGNAL(source, COMSIG_LIVING_COMBAT_DISABLED, forced)
 	if(!silent)
@@ -146,12 +171,29 @@
 
 /// Toggles whether the user is intentionally in combat mode. THIS should be the proc you generally use! Has built in visual/to other player feedback, as well as an audible cue to ourselves.
 /datum/component/combat_mode/proc/user_toggle_intentional_combat_mode(mob/living/source)
-	if(mode_flags & COMBAT_MODE_TOGGLED)
+	if(mode_flags & SECOND_COMBAT_MODE_TOGGLED)
 		safe_disable_combat_mode(source)
-	else if(source.stat == CONSCIOUS && !(source.combat_flags & COMBAT_FLAG_HARD_STAMCRIT))
-		safe_enable_combat_mode(source)
+		return
+
+	if(source.stat == CONSCIOUS && !(source.combat_flags & COMBAT_FLAG_HARD_STAMCRIT))
+		if(!(mode_flags & COMBAT_MODE_TOGGLED))
+			safe_enable_combat_mode(source)
+			togglecooldown = world.time + 5 SECONDS
+			return
+		if(world.time >= togglecooldown)
+			safe_enable_second_combat_mode(source)
+			return
 
 /// Enables intentionally being in combat mode. Please try to use the COMSIG_COMBAT_MODE_CHECK signal for feedback when possible.
+/datum/component/combat_mode/proc/safe_enable_second_combat_mode(mob/living/source, silent = FALSE, visible = TRUE)
+	if((mode_flags & SECOND_COMBAT_MODE_TOGGLED) && (mode_flags & SECOND_COMBAT_MODE_ACTIVE))
+		return TRUE
+	mode_flags |= SECOND_COMBAT_MODE_TOGGLED
+	enable_second_combat_mode(source, silent, FALSE, visible, FALSE, TRUE)
+	if(source.client)
+		source.client.show_popup_menus = FALSE
+	return TRUE
+
 /datum/component/combat_mode/proc/safe_enable_combat_mode(mob/living/source, silent = FALSE, visible = TRUE)
 	if((mode_flags & COMBAT_MODE_TOGGLED) && (mode_flags & COMBAT_MODE_ACTIVE))
 		return TRUE
@@ -166,6 +208,7 @@
 	if(!(mode_flags & COMBAT_MODE_TOGGLED) && !(mode_flags & COMBAT_MODE_ACTIVE))
 		return TRUE
 	mode_flags &= ~COMBAT_MODE_TOGGLED
+	mode_flags &= ~SECOND_COMBAT_MODE_TOGGLED
 	disable_combat_mode(source, silent, FALSE, visible, !(mode_flags & COMBAT_MODE_ACTIVE), TRUE)
 	if(source.client)
 		source.client.show_popup_menus = TRUE

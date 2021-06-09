@@ -83,3 +83,7 @@
 #define COMBAT_MODE_ACTIVE					(1<<1)
 /// combat mode is not active
 #define COMBAT_MODE_INACTIVE				(1<<2)
+
+#define SECOND_COMBAT_MODE_TOGGLED			(1<<3)
+
+#define SECOND_COMBAT_MODE_ACTIVE			(1<<4)
