@@ -105,9 +105,7 @@
 	if(!silent)
 		if(visible && (forced || world.time >= combatmessagecooldown))
 			combatmessagecooldown = world.time + 5 SECONDS
-			source.visible_message("<span class='warning'>[source] begins their attack!</span>")
-		else
-			to_chat(source, self_message)
+			source.visible_message("<span class='big bold'>[source] begins their attack!</span>")
 		if(playsound)
 			source.playsound_local(source, 'sound/misc/ui_toggle_vats.ogg', 50, FALSE, pressure_affected = FALSE) //Sound from interbay!
 	var/mob/living/L = source
