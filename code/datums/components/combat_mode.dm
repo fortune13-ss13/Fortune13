@@ -103,16 +103,9 @@
 		return
 	mode_flags |= SECOND_COMBAT_MODE_ACTIVE
 	if(!silent)
-		var/self_message = forced? "<span class='warning'>Your muscles reflexively tighten!</span>" : "<span class='warning'>You drop into a combative stance!</span>"
 		if(visible && (forced || world.time >= combatmessagecooldown))
 			combatmessagecooldown = world.time + 5 SECONDS
-			if(!forced)
-				if(source.a_intent != INTENT_HELP)
-					source.visible_message("<span class='warning'>[source] [source.resting ? "tenses up" : "drops into a combative stance"].</span>", self_message)
-				else
-					source.visible_message("<span class='notice'>[source] [pick("looks","seems","goes")] [pick("alert","attentive","vigilant")].</span>")
-			else
-				source.visible_message("<span class='warning'>[source] drops into a combative stance!</span>", self_message)
+			source.visible_message("<span class='warning'>[source] begins their attack!</span>")
 		else
 			to_chat(source, self_message)
 		if(playsound)
