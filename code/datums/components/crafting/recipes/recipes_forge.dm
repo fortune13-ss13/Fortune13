@@ -117,6 +117,15 @@
 	tools = list(TOOL_CROWBAR)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
+	
+/datum/crafting_recipe/ironanvil
+	name = "Iron Anvil"
+	result = /obj/structure/anvil/obtainable/basic
+	time = 300
+	reqs = list(/obj/item/ingot/iron = 24)
+	tools = list(TOOL_CROWBAR, TOOL_WELDER)
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
 
 /datum/crafting_recipe/furnace
 	name = "Sandstone Furnace"
