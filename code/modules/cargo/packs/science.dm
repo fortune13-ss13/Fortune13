@@ -97,27 +97,6 @@
 					/obj/item/clothing/gloves/color/latex/nitrile,
 					/obj/item/clothing/gloves/color/latex/nitrile)
 	crate_name = "nitrile gloves crate"
-/*
-/datum/supply_pack/science/plasma
-	name = "Plasma Assembly Crate"
-	desc = "Everything you need to burn something to the ground, this contains three plasma assembly sets. Each set contains a plasma tank, igniter, proximity sensor, and timer! Warranty void if exposed to high temperatures. Requires Toxins access to open."
-	cost = 1800
-	access = ACCESS_TOX_STORAGE
-	contains = list(/obj/item/tank/internals/plasma,
-					/obj/item/tank/internals/plasma,
-					/obj/item/tank/internals/plasma,
-					/obj/item/assembly/igniter,
-					/obj/item/assembly/igniter,
-					/obj/item/assembly/igniter,
-					/obj/item/assembly/prox_sensor,
-					/obj/item/assembly/prox_sensor,
-					/obj/item/assembly/prox_sensor,
-					/obj/item/assembly/timer,
-					/obj/item/assembly/timer,
-					/obj/item/assembly/timer)
-	crate_name = "plasma assembly crate"
-	crate_type = /obj/structure/closet/crate/secure/plasma
-*/
 /datum/supply_pack/science/relic
 	name = "Relic Crate"
 	desc = "Ever wanted to play with old discounted toys? Look no further. Contains two relics."
@@ -180,62 +159,3 @@
 					/obj/item/modular_computer/tablet/preset/cargo,
 					/obj/item/modular_computer/tablet/preset/cargo)
 	crate_name = "tablet crate"
-
-/datum/supply_pack/science/transfer_valves
-	name = "Tank Transfer Valves Crate"
-	desc = "The key ingredient for making a lot of people very angry very fast. Contains two tank transfer valves. Requires RD access to open."
-	cost = 6000
-	access = ACCESS_RD
-	contains = list(/obj/item/transfer_valve,
-					/obj/item/transfer_valve)
-	crate_name = "tank transfer valves crate"
-	crate_type = /obj/structure/closet/crate/secure/science
-	dangerous = TRUE
-
-//////// RAW ANOMALY CORES
-/*
-/datum/supply_pack/science/raw_flux_anomaly
-	name = "Raw Flux Anomaly"
-	desc = "The raw core of a flux anomaly, ready to be implosion-compressed into a powerful artifact."
-	cost = 5000
-	access = ACCESS_TOX
-	contains = list(/obj/item/raw_anomaly_core/flux)
-	crate_name = "raw flux anomaly"
-	crate_type = /obj/structure/closet/crate/secure/science
-
-/datum/supply_pack/science/raw_grav_anomaly
-	name = "Raw Gravitational Anomaly"
-	desc = "The raw core of a gravitational anomaly, ready to be implosion-compressed into a powerful artifact."
-	cost = 5000
-	access = ACCESS_TOX
-	contains = list(/obj/item/raw_anomaly_core/grav)
-	crate_name = "raw pyro anomaly"
-	crate_type = /obj/structure/closet/crate/secure/science
-
-/datum/supply_pack/science/raw_vortex_anomaly
-	name = "Raw Vortex Anomaly"
-	desc = "The raw core of a vortex anomaly, ready to be implosion-compressed into a powerful artifact."
-	cost = 5000
-	access = ACCESS_TOX
-	contains = list(/obj/item/raw_anomaly_core/vortex)
-	crate_name = "raw vortex anomaly"
-	crate_type = /obj/structure/closet/crate/secure/science
-
-/datum/supply_pack/science/raw_bluespace_anomaly
-	name = "Raw Bluespace Anomaly"
-	desc = "The raw core of a bluespace anomaly, ready to be implosion-compressed into a powerful artifact."
-	cost = 5000
-	access = ACCESS_TOX
-	contains = list(/obj/item/raw_anomaly_core/bluespace)
-	crate_name = "raw bluespace anomaly"
-	crate_type = /obj/structure/closet/crate/secure/science
-
-/datum/supply_pack/science/raw_pyro_anomaly
-	name = "Raw Pyro Anomaly"
-	desc = "The raw core of a pyro anomaly, ready to be implosion-compressed into a powerful artifact."
-	cost = 5000
-	access = ACCESS_TOX
-	contains = list(/obj/item/raw_anomaly_core/pyro)
-	crate_name = "raw pyro anomaly"
-	crate_type = /obj/structure/closet/crate/secure/science
-*/
