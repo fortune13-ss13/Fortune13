@@ -12863,6 +12863,7 @@
 /area/f13/bunker)
 "kot" = (
 /obj/structure/frame/machine,
+/obj/item/circuitboard/machine/techfab/department/medical,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -13410,7 +13411,9 @@
 /area/f13/brotherhood/offices2nd)
 "kQO" = (
 /obj/structure/window/spawner,
-/obj/structure/frame/machine,
+/obj/machinery/computer/rdconsole/core/followers{
+	dir = 1
+	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -13460,6 +13463,7 @@
 "kSn" = (
 /obj/structure/frame/machine,
 /obj/structure/window/spawner,
+/obj/item/circuitboard/machine/circuit_imprinter,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -14626,6 +14630,12 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/tunnel)
+"lQk" = (
+/obj/machinery/rnd/server/followers,
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "lQA" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -64440,7 +64450,7 @@ cyG
 bAz
 bcv
 kTB
-eHS
+lQk
 eHS
 igD
 eHS
