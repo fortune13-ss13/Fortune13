@@ -1961,6 +1961,9 @@
 	dir = 1;
 	name = "Server Room"
 	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
 "dgM" = (
@@ -2201,6 +2204,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
 "dAl" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/open/floor/plasteel/darkpurple/side,
 /area/f13/vault)
 "dBr" = (
@@ -2330,6 +2336,13 @@
 	icon_state = "dirt"
 	},
 /area/f13/bunker)
+"dMz" = (
+/obj/item/reagent_containers/food/snacks/grown/citrus/lemon{
+	desc = "It appear's to be a normal lemon, however it's labeled as being the Vault Blueprints. Odd.";
+	name = "Vault Blueprints"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault)
 "dMU" = (
 /obj/effect/turf_decal{
 	dir = 9
@@ -5654,6 +5667,12 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker)
+"iXa" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel/darkpurple/side,
+/area/f13/vault)
 "iXy" = (
 /obj/machinery/workbench/advanced,
 /obj/machinery/light,
@@ -7991,10 +8010,6 @@
 	name = "temple wall"
 	},
 /area/f13/bunker)
-"mFo" = (
-/obj/structure/table,
-/turf/open/floor/wood/f13/oak,
-/area/f13/vault)
 "mFH" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/handy/securitron,
@@ -10657,6 +10672,9 @@
 /obj/machinery/status_display/supply{
 	pixel_y = 32
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/yellow/side{
 	dir = 1
 	},
@@ -10907,13 +10925,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
 "reP" = (
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/floor/plasteel/yellow/side{
-	dir = 4
-	},
+/obj/structure/table,
+/turf/open/floor/wood/f13/oak,
 /area/f13/vault)
 "rfn" = (
 /turf/open/floor/plasteel/yellow/side{
@@ -10951,7 +10964,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
 "rjk" = (
-/obj/machinery/ore_silo,
+/obj/machinery/ore_silo{
+	desc = "An all-in-one quantum storage and transmission system for the vault's mineral distribution needs."
+	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -12834,6 +12849,16 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/bunker)
+"uqQ" = (
+/obj/machinery/door/window{
+	dir = 1;
+	name = "Server Room"
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/vault)
 "ura" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
@@ -12912,13 +12937,6 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/bunker)
-"uyE" = (
-/obj/item/reagent_containers/food/snacks/grown/citrus/lemon{
-	desc = "It appear's to be a normal lemon, however it's labeled as being the Vault Blueprints. Odd.";
-	name = "Vault Blueprints"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/vault)
 "uzC" = (
 /obj/structure/barricade/wooden/strong,
 /obj/structure/barricade/wooden/planks,
@@ -14752,6 +14770,7 @@
 	name = "paper- 'Your very first C.A.S.P. system!'"
 	},
 /obj/item/stamp/qm,
+/obj/machinery/light,
 /turf/open/floor/plasteel/neutral,
 /area/f13/vault)
 "xMf" = (
@@ -21555,9 +21574,9 @@ omR
 gDI
 yaI
 mAN
+mkZ
 kcN
-kcN
-kcN
+mGB
 mAN
 omR
 gDI
@@ -22583,9 +22602,9 @@ deX
 rjk
 mAN
 mAN
-kcN
+mkZ
 bBo
-kcN
+mGB
 mAN
 mAN
 kml
@@ -22836,7 +22855,7 @@ mAN
 ciO
 xSY
 xSY
-deZ
+uqQ
 dAl
 mAN
 mAN
@@ -23094,7 +23113,7 @@ giH
 xSY
 xSY
 dfc
-dAl
+iXa
 mAN
 mAN
 kcN
@@ -23611,9 +23630,9 @@ dhm
 uZd
 mAN
 mAN
-kcN
+mkZ
 qle
-kcN
+mGB
 mAN
 xsH
 xsH
@@ -25695,7 +25714,7 @@ qdb
 eYz
 pet
 dog
-reP
+rfn
 rfn
 xsH
 xsH
@@ -30527,7 +30546,7 @@ bsh
 bsh
 mAN
 mAN
-mFo
+reP
 vrE
 aCL
 kol
@@ -31557,7 +31576,7 @@ bsh
 mAN
 mAN
 xsH
-uyE
+dMz
 xsH
 xsH
 mAN
