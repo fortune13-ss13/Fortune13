@@ -1,6 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaC" = (
 /obj/structure/displaycase,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/carpet/black,
 /area/f13/vault)
 "aaF" = (
@@ -361,6 +364,10 @@
 "aCL" = (
 /obj/structure/table,
 /obj/item/clothing/neck/cloak/overseer,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/vault)
 "aDZ" = (
@@ -458,6 +465,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/f13/overseer,
+/obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "aJr" = (
@@ -4027,6 +4035,7 @@
 	dir = 1
 	},
 /obj/machinery/disposal/bin,
+/obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
 "gvL" = (
@@ -4675,6 +4684,23 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/bunker)
+"hqY" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/vault)
 "hrW" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 4
@@ -4951,6 +4977,13 @@
 	dir = 1
 	},
 /area/f13/bunker)
+"hNN" = (
+/obj/structure/chair/sofa/corp/left,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/wood/f13/carpet,
+/area/f13/vault)
 "hOw" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
@@ -12093,6 +12126,13 @@
 "tin" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/bunker)
+"tjV" = (
+/obj/structure/chair/sofa/corp/right,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood/f13/carpet,
+/area/f13/vault)
 "tjZ" = (
 /obj/structure/flora/junglebush/large,
 /obj/structure/flora/grass/jungle,
@@ -13695,6 +13735,12 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/bunker)
+"waf" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/carpet/black,
+/area/f13/vault)
 "wbe" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -18153,11 +18199,11 @@ bsh
 mAN
 mAN
 vrE
+wFZ
 vrE
 vrE
 vrE
-vrE
-vrE
+wFZ
 vrE
 vrE
 xsH
@@ -19181,11 +19227,11 @@ mAN
 xsH
 xsH
 vrE
+gDI
 vrE
 vrE
 vrE
-vrE
-vrE
+gDI
 vrE
 vrE
 mAN
@@ -19709,7 +19755,7 @@ yaI
 mAN
 jyl
 vCD
-kCt
+tjV
 oYC
 vCD
 dnh
@@ -20465,18 +20511,18 @@ mAN
 kcN
 kcN
 kcN
+wui
 kcN
 kcN
 kcN
 kcN
 kcN
 kcN
+wui
 kcN
 kcN
 kcN
-kcN
-kcN
-kcN
+wui
 kcN
 vCD
 vCD
@@ -20722,18 +20768,18 @@ xsH
 kcN
 kcN
 kcN
+gyP
 kcN
 kcN
 kcN
 kcN
 kcN
 kcN
+gyP
 kcN
 kcN
 kcN
-kcN
-kcN
-kcN
+gyP
 kcN
 vCD
 vCD
@@ -21508,7 +21554,7 @@ yaI
 mAN
 jyl
 vCD
-kEu
+hNN
 oYC
 vCD
 dnh
@@ -27129,7 +27175,7 @@ vTS
 vTS
 vTS
 vTS
-vTS
+waf
 mAN
 xrO
 vQS
@@ -28153,7 +28199,7 @@ bsh
 bsh
 mAN
 mAN
-vTS
+hzJ
 agM
 anY
 aGJ
@@ -28177,7 +28223,7 @@ gQo
 muE
 eET
 eWF
-jWr
+hqY
 dVu
 jWr
 gvo
@@ -29185,7 +29231,7 @@ vTS
 vTS
 vTS
 vTS
-vTS
+geI
 mAN
 aTC
 uMj
