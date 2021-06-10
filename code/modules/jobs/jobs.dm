@@ -76,20 +76,20 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Paladin",
 "Head Knight",
 "Head Scribe",
-"Star Paladin",
+"Senior Paladin",
 "Paladin",
-"Star Knight",
+"Senior Knight",
 "Knight",
-"Proctor",
+"Senior Scribe",
 "Scribe",
 "BoS Off-Duty",
 
 "Legion Centurion",
 "Legion Venator",
 "Legion Veteran Decanus",
-"Veteran Legionary",
+"Veteran Legionnaire",
 "Legion Prime Decanus",
-"Prime Legionary",
+"Prime Legionnaire",
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
@@ -124,16 +124,16 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 ))
 
 GLOBAL_LIST_INIT(faction_player_positions, list(
-"Star Knight",
+"Senior Knight",
 "Knight",
-"Proctor",
+"Senior Scribe",
 "Scribe",
 "BoS Off-Duty",
 
 "Legion Veteran Decanus",
-"Veteran Legionary",
+"Veteran Legionnaire",
 "Legion Prime Decanus",
-"Prime Legionary",
+"Prime Legionnaire",
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
@@ -168,7 +168,7 @@ GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
 
 GLOBAL_LIST_INIT(brotherhood_paladin_positions, list(
 	"Head Paladin",
-	"Star Paladin",
+	"Senior Paladin",
 	"Paladin"
 ))
 
@@ -183,11 +183,11 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Head Paladin",
 	"Head Knight",
 	"Head Scribe",
-	"Star Paladin",
+	"Senior Paladin",
 	"Paladin",
-	"Star Knight",
+	"Senior Knight",
 	"Knight",
-	"Proctor",
+	"Senior Scribe",
 	"Scribe",
 	"Initiate",
 	"BoS Off-Duty"
@@ -217,11 +217,11 @@ GLOBAL_LIST_INIT(legion_command_positions, list(
 
 GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Veteran Decanus",
-	"Veteran Legionary",
+	"Veteran Legionnaire",
 	"Legion Prime Decanus",
-	"Prime Legionary",
+	"Prime Legionnaire",
 	"Legion Recruit Decanus",
-	"Recruit Legionary",
+	"Recruit Legionnaire",
 	"Legion Explorer",
 	"Auxilia",
 	"Camp Follower",
@@ -275,7 +275,8 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Rear Echelon",
 	"NCR Off-Duty",
 	"NCR Veteran Ranger",
-	"NCR Ranger"
+	"NCR Ranger",
+	"NCR Military Police"
 ))
 
 GLOBAL_LIST_INIT(vault_command_positions, list(

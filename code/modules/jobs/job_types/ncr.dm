@@ -70,7 +70,7 @@ Colonel
 	suit 		= /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m45=3, \
-		/obj/item/ammo_box/magazine/m556/rifle=2, \
+		/obj/item/ammo_box/magazine/m556/rifle=1, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/gun/ballistic/automatic/pistol/m1911=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
@@ -132,9 +132,9 @@ Captain
 	name = "Armored Officer"
 	suit 		= /obj/item/clothing/suit/armor/f13/ncrarmor/captain
 	belt 		= /obj/item/storage/belt/military/assault/ncr
-	l_hand 		= /obj/item/gun/ballistic/automatic/service/automatic
+	l_hand 		= /obj/item/gun/ballistic/automatic/assault_rifle
 	backpack_contents = list(
-	/obj/item/ammo_box/magazine/m556/rifle/assault=3,
+	/obj/item/ammo_box/magazine/m556/rifle/assault=1,
 	/obj/item/gun/ballistic/automatic/pistol/deagle=1,
 	/obj/item/ammo_box/magazine/m44=3)
 
@@ -144,7 +144,7 @@ Captain
 	belt = 		/obj/item/storage/belt/military/assault/ncr
 	l_hand =	/obj/item/gun/ballistic/automatic/assault_rifle
 	backpack_contents = list(
-	/obj/item/ammo_box/magazine/m556/rifle/assault=3,
+	/obj/item/ammo_box/magazine/m556/rifle/assault=1,
 	/obj/item/gun/ballistic/revolver/hunting=1,
 	/obj/item/ammo_box/c4570=3
 	)
@@ -188,7 +188,7 @@ Lieutenant
 		/obj/item/ammo_box/magazine/m9mm=3, \
 		/obj/item/binoculars=1, \
 		/obj/item/storage/bag/money/small/ncr, \
-		/obj/item/ammo_box/magazine/m556/rifle/assault=3)
+		/obj/item/ammo_box/magazine/m556/rifle/assault=1)
 
 /datum/outfit/job/ncr/f13lieutenant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -277,15 +277,14 @@ Logistics Officer
 	glasses			= /obj/item/clothing/glasses/welding
 	belt 			= /obj/item/storage/belt/utility/full/engi
 	gloves			= /obj/item/clothing/gloves/color/yellow
-	accessory		= /obj/item/clothing/accessory/ncr/SPC
-	suit_store		= /obj/item/gun/ballistic/automatic/service
+	suit_store		= /obj/item/gun/ballistic/automatic/service/r82
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom=1, \
 		/obj/item/ammo_box/magazine/m45=3, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/storage/survivalkit_aid=1, \
 		/obj/item/storage/bag/money/small/ncr, \
-		/obj/item/ammo_box/magazine/m556/rifle=3, \
+		/obj/item/ammo_box/magazine/m556/rifle=1, \
 		/obj/item/grenade/plastic=2, \
 		/obj/item/stack/sheet/metal/fifty=2, \
 		/obj/item/stack/sheet/glass/fifty=2
@@ -333,7 +332,7 @@ Sergeant First Class
 	ears 			= /obj/item/radio/headset/headset_ncr_com
 	suit 			= /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced
 	head 			= /obj/item/clothing/head/f13/ncr_campaign
-	suit_store		= /obj/item/gun/ballistic/automatic/service
+	suit_store		= /obj/item/gun/ballistic/automatic/service/r82
 	belt			= /obj/item/storage/belt/military/assault/ncr
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat=1, \
@@ -342,7 +341,7 @@ Sergeant First Class
 		/obj/item/storage/survivalkit_aid=1, \
 		/obj/item/storage/bag/money/small/ncr, \
 		/obj/item/melee/classic_baton/telescopic=1, \
-		/obj/item/ammo_box/magazine/m556/rifle/assault=3, \
+		/obj/item/ammo_box/magazine/m556/rifle/assault=1, \
 		/obj/item/binoculars=1)
 
 /*
@@ -380,7 +379,7 @@ Sergeant
 		/obj/item/storage/survivalkit_aid=1, \
 		/obj/item/ammo_box/magazine/m9mm=3, \
 		/obj/item/storage/bag/money/small/ncrofficers, \
-		/obj/item/ammo_box/magazine/m556/rifle/assault=3, \
+		/obj/item/ammo_box/magazine/m556/rifle/assault=1, \
 		/obj/item/binoculars=1)
 
 /*
@@ -419,7 +418,7 @@ Heavy Trooper
 		/obj/item/storage/survivalkit_aid=1, \
 		/obj/item/ammo_box/magazine/m9mm=3, \
 		/obj/item/storage/bag/money/small/ncrofficers, \
-		/obj/item/ammo_box/magazine/lmg=3, \
+		/obj/item/ammo_box/magazine/lmg=1, \
 		/obj/item/binoculars=1)
 
 /datum/outfit/job/ncr/f13logisticsofficer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -461,7 +460,7 @@ Corporal
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/storage/survivalkit_aid=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted=1, \
-		/obj/item/ammo_box/magazine/m556/rifle/assault=3
+		/obj/item/ammo_box/magazine/m556/rifle/assault=1
 		)
 
 /*
@@ -499,7 +498,7 @@ Combat Engineer
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/storage/survivalkit_aid_adv=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted=1, \
-		/obj/item/ammo_box/magazine/m556/rifle=3, \
+		/obj/item/ammo_box/magazine/m556/rifle=1, \
 		/obj/item/storage/firstaid/regular=1
 		)
 
@@ -545,7 +544,7 @@ Combat Engineer
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/storage/survivalkit_aid=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted=1, \
-		/obj/item/ammo_box/magazine/m556/rifle=3, \
+		/obj/item/ammo_box/magazine/m556/rifle=1, \
 		/obj/item/grenade/plastic=1, \
 		/obj/item/stack/sheet/metal/fifty=1, \
 		/obj/item/stack/sheet/glass/fifty=1
@@ -560,6 +559,7 @@ Combat Engineer
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lmg)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 
 /*
 Trooper
@@ -576,6 +576,12 @@ Trooper
 	display_order = JOB_DISPLAY_ORDER_TROOPER
 	outfit = /datum/outfit/job/ncr/f13trooper
 
+	loadout_options = list(
+	/datum/outfit/loadout/trooperrifleman,
+	/datum/outfit/loadout/trooperpathfinder,
+	/datum/outfit/loadout/trooperfiresupport
+	)
+
 /datum/outfit/job/ncr/f13trooper
 	name = "NCR Trooper"
 	jobtype = /datum/job/ncr/f13trooper
@@ -587,12 +593,70 @@ Trooper
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
 	belt =          /obj/item/storage/belt/military/assault/ncr
 	glasses = 		null
-	suit_store = 	/obj/item/gun/ballistic/automatic/service
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/storage/survivalkit_aid=1, \
-		/obj/item/storage/bag/money/small/ncrenlisted, \
-		/obj/item/ammo_box/magazine/m556/rifle=3)
+		/obj/item/storage/bag/money/small/ncrenlisted)
+
+
+/datum/outfit/loadout/trooperrifleman
+	name = "Rifleman"
+	suit_store = /obj/item/gun/ballistic/automatic/service //Service rifle is dead, long live the varmint rifle! Higher tier roles still get the Service Rifle.
+	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_two=1,
+		/obj/item/ammo_box/magazine/m556/rifle=1)
+
+/datum/outfit/loadout/trooperpathfinder
+	name = "Pathfinder"
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine //Generally worse weapon, though can be upgraded
+	backpack_contents = list(
+		/obj/item/book/granter/trait/trekking=1, //You get a worse weapon, but are good at scouting. Hence "Pathfinder."
+		/obj/item/storage/box/ration/menu_eight=1, 
+		/obj/item/ammo_box/magazine/m10mm_adv/ext=1)
+
+/datum/outfit/loadout/trooperfiresupport
+	name = "Fire Support"
+	suit_store = /obj/item/gun/ballistic/automatic/sten //Barely better then a pipe gun but you get a pretty rapid burst fire. Intended for suppression/CQC
+	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_one=1,
+		/obj/item/ammo_box/magazine/uzim9mm=1)
+
+
+
+//MP
+
+/datum/job/ncr/f13mp
+	title = "NCR Military Police"
+	flag = F13MP
+	total_positions = 2
+	spawn_positions = 2
+	description = "You are tasked with the supervision of the NCRA to maintain internal order and disciplice and to prevent any warcrimes from happening."
+	supervisors = "the Captain"
+	selection_color = "#fff5cc"
+	display_order = JOB_DISPLAY_ORDER_TROOPER
+	outfit = /datum/outfit/job/ncr/f13mp
+	exp_requirements = 300
+
+/datum/outfit/job/ncr/f13mp
+	name = "NCR Military Police"
+	jobtype = /datum/job/ncr/f13mp
+	id = 			/obj/item/card/id/dogtag/ncrsergeant
+	uniform =  		/obj/item/clothing/under/f13/ncr
+	shoes = 		/obj/item/clothing/shoes/f13/military/ncr
+	accessory =     /obj/item/clothing/accessory/armband/black
+	head = 			/obj/item/clothing/head/f13/ncr/steelpot_mp
+	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	belt =          /obj/item/storage/belt/military/assault/ncr
+	suit_store =    /obj/item/melee/classic_baton/telescopic
+	glasses = 		null
+	r_pocket = 		/obj/item/binoculars
+
+	backpack_contents = list(
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/storage/survivalkit_aid=1, \
+		/obj/item/storage/bag/money/small/ncrofficers, \
+		/obj/item/ammo_box/magazine/m9mm=3, \
+		/obj/item/gun/ballistic/automatic/pistol/ninemil=1)
 
 /*
 Rear Echelon
@@ -614,7 +678,7 @@ Rear Echelon
 	/datum/outfit/loadout/rearlog,
 	/datum/outfit/loadout/reartech,
 	/datum/outfit/loadout/rearcorps,
-	/datum/outfit/loadout/rearstatic
+	/datum/outfit/loadout/rearscav
 	)
 
 /datum/outfit/job/ncr/f13rearechelon
@@ -637,8 +701,9 @@ Rear Echelon
 /datum/outfit/loadout/rearlog
 	name = "Logistics"
 	backpack_contents = list(
+		/obj/item/book/granter/trait/tinkering=1, \
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
-		/obj/item/ammo_box/magazine/m9mm=3 )
+		/obj/item/ammo_box/magazine/m9mm=3)
 
 //Technical repairs and engineering
 /datum/outfit/loadout/reartech
@@ -647,7 +712,7 @@ Rear Echelon
 	gloves = /obj/item/clothing/gloves/color/yellow
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
-		/obj/item/ammo_box/magazine/m9mm=3 )
+		/obj/item/ammo_box/magazine/m9mm=3)
 
 //Medical
 /datum/outfit/loadout/rearcorps
@@ -657,16 +722,20 @@ Rear Echelon
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
 		/obj/item/ammo_box/magazine/m9mm=3, \
-		/obj/item/book/granter/trait/chemistry = 1)
+		/obj/item/book/granter/trait/chemistry=1)
 
 //Guard duty
-/datum/outfit/loadout/rearstatic
-	name = "Static Infantry"
+/datum/outfit/loadout/rearscav
+	name = "Scavenger"
 	head = /obj/item/clothing/head/f13/ncr
 	belt = /obj/item/storage/belt/military/NCR_Bandolier
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/m1carbine=1, \
-		/obj/item/ammo_box/magazine/m10mm_adv/simple=3)
+		/obj/item/metaldetector=1, \
+		/obj/item/shovel/spade=1, \
+		/obj/item/gun/ballistic/shotgun/hunting=1, \
+		/obj/item/storage/fancy/ammobox/lethalshot=2, \
+		/obj/item/weldingtool/largetank)
+		
 
 /*
 Trooper
@@ -675,8 +744,8 @@ Trooper
 /datum/job/ncr/f13ncroffduty
 	title = "NCR Off-Duty"
 	flag = F13NCROFFDUTY
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are off-duty NCR-A personnel in the Yuma Region. Despite being out of uniform and off-duty you are still expected to follow NCR COMJ and represent the uniform properly. Failure to abide by this will result in disciplinary action."
 	supervisors = "All NCOs and COs"
 	selection_color = "#fff5cc"
@@ -714,7 +783,7 @@ Veteran Ranger
 	loadout_options = list(
 	/datum/outfit/loadout/vrclassic, //AMR and Sequoia,
 	/datum/outfit/loadout/vrlite, //Rangemaster and Sequoia,
-	/datum/outfit/loadout/vrbrush //Scoped Brushgun and Sequoia
+	/datum/outfit/loadout/vrcqc //R91 and a MK23 instead of a Sequoia
 	)
 
 /datum/outfit/job/ncr/f13vetranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -741,33 +810,38 @@ Veteran Ranger
 	gloves =		/obj/item/clothing/gloves/rifleman
 	shoes =			/obj/item/clothing/shoes/f13/military/leather
 	glasses = 		/obj/item/clothing/glasses/sunglasses
+	neck = 			/obj/item/storage/belt/holster
 	ears = 			/obj/item/radio/headset/headset_ranger
 	r_pocket = 		/obj/item/binoculars
 	backpack_contents = list(
 		/obj/item/kitchen/knife/bowie=1, \
 		/obj/item/storage/survivalkit_aid_adv=1, \
-		/obj/item/storage/bag/money/small/ncr=1,
-		/obj/item/gun/ballistic/revolver/sequoia=1,
-		/obj/item/ammo_box/c4570=3)
+		/obj/item/storage/bag/money/small/ncr=1)
 
 /datum/outfit/loadout/vrclassic
 	name = "Classic Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/shotgun/antimateriel
 	backpack_contents = list(
-		/obj/item/ammo_box/a50MG=3)
+		/obj/item/ammo_box/a50MG=2,
+		/obj/item/gun/ballistic/revolver/sequoia=1,
+		/obj/item/ammo_box/c4570=1)
 
 /datum/outfit/loadout/vrlite
 	name = "Light Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762/ext=2)
+		/obj/item/ammo_box/magazine/m762/ext=1,
+		/obj/item/gun/ballistic/revolver/sequoia=1,
+		/obj/item/ammo_box/c4570=1)
 
-/datum/outfit/loadout/vrbrush
-	name = "Brush Veteran Ranger"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
+
+/datum/outfit/loadout/vrcqc
+	name = "Close Quarters Combat Ranger"
+	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/c4570=3,
-		/obj/item/attachments/scope = 1)
+		/obj/item/ammo_box/magazine/m556/rifle/assault=1,
+		/obj/item/gun/ballistic/automatic/pistol/mk23=1,
+		/obj/item/ammo_box/magazine/m45exp=2)
 
 
 //NCR Ranger
@@ -787,8 +861,7 @@ Veteran Ranger
 	/datum/outfit/loadout/rangerrecon,
 	/datum/outfit/loadout/rangertrail,
 	/datum/outfit/loadout/rangerpatrol,
-	/datum/outfit/loadout/rangerpatrolcqb,
-	/datum/outfit/loadout/rangermedic
+	/datum/outfit/loadout/rangerpatrolcqb
 	)
 
 /datum/outfit/job/ncr/f13ranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -830,7 +903,7 @@ Veteran Ranger
 		/obj/item/ammo_box/magazine/w308 = 3,
 		/obj/item/storage/survivalkit_aid=1,
 		/obj/item/gun/ballistic/revolver/revolver45=1,
-		/obj/item/ammo_box/c45rev=3
+		/obj/item/ammo_box/c45rev=2
 
 	)
 
@@ -845,8 +918,8 @@ Veteran Ranger
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/storage/survivalkit_aid=1,
 		/obj/item/attachments/scope=1,
-		/obj/item/gun/ballistic/revolver/colt357=1,
-		/obj/item/ammo_box/a357=3
+		/obj/item/gun/ballistic/revolver/colt357=2,
+		/obj/item/ammo_box/a357=4
 	)
 
 /datum/outfit/loadout/rangerpatrol
@@ -857,12 +930,12 @@ Veteran Ranger
 	belt =	/obj/item/storage/belt/military/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
+		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/storage/survivalkit_aid = 1,
 		/obj/item/attachments/scope = 1,
 		/obj/item/gun/ballistic/revolver/revolver44 = 1,
-		/obj/item/ammo_box/m44=3
+		/obj/item/ammo_box/m44=2
 	)
 
 /datum/outfit/loadout/rangerpatrolcqb
@@ -878,7 +951,6 @@ Veteran Ranger
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/storage/survivalkit_aid = 1,
 		/obj/item/gun/ballistic/revolver/m29/snub=1,
-		/obj/item/ammo_box/m44=3,
 		/obj/item/ammo_box/m44box=1
 	)
 
@@ -890,12 +962,13 @@ Veteran Ranger
 	belt =	/obj/item/storage/belt/military/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_adv/ = 3,
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 3,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/clothing/accessory/armband/med/ncr = 1,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/storage/survivalkit_aid_adv = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
-		/obj/item/ammo_box/magazine/m45=3
+		/obj/item/ammo_box/magazine/m45=3,
+		/obj/item/book/granter/trait/lowsurgery
 	)

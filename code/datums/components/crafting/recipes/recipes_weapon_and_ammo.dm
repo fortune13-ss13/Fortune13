@@ -42,9 +42,9 @@
 	name = "Spear"
 	result = /obj/item/twohanded/spear
 	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
-				/obj/item/shard = 1,
-				/obj/item/stack/rods = 1)
-	parts = list(/obj/item/shard = 1)
+				/obj/item/kitchen/knife/combat = 1,
+				/obj/item/stack/rods = 1,
+				/obj/item/stack/crafting/goodparts = 2)
 	time = 40
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
@@ -580,9 +580,9 @@
 	name = "Service Rifle 5.56mm"
 	result = /obj/item/gun/ballistic/automatic/service
 	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/stack/crafting/metalparts = 10,
+				/obj/item/stack/crafting/metalparts = 8,
 				/obj/item/stack/sheet/mineral/wood = 5,
-				/obj/item/stack/crafting/goodparts = 5
+				/obj/item/stack/crafting/goodparts = 4
 				)
 	tools = list(TOOL_WORKBENCH)
 	time = 120

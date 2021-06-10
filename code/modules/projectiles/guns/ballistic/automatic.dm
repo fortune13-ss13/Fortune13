@@ -537,7 +537,6 @@
 	can_suppress = FALSE
 	can_attachments = TRUE
 	spread = 12
-	can_suppress = TRUE
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 26
 	suppressor_y_offset = 19
@@ -596,7 +595,7 @@
 	weapon_weight = WEAPON_MEDIUM
 	force = 15
 	burst_size = 2
-	fire_delay = 5
+	fire_delay = 4
 	burst_shot_delay = 2
 	can_suppress = TRUE
 	can_attachments = TRUE
@@ -660,7 +659,7 @@
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 4
+	fire_delay = 5
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	can_bayonet = TRUE
@@ -704,20 +703,13 @@
 /obj/item/gun/ballistic/automatic/service/r82
 	name = "R82 heavy service rifle"
 	desc = "The assault rifle variant of the R84, based off the pre-war FN FNC. Issued to high-ranking troopers and specialized units. Chambered in 5.56."
-	fire_delay = 1 //faster ROF, superior to regular service rifle
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	icon_state = "R82"
 	item_state = "R84"
-	//automatic = 1
 	spread = 3
-	burst_size = 2
-	fire_delay = 3
-	automatic_burst_overlay = TRUE
-	actions_types = list(/datum/action/item_action/toggle_firemode)
-	semi_auto = FALSE
-	burst_shot_delay = 2.2 //Was 2 before.
+	fire_delay = 2
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
@@ -760,7 +752,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	extra_damage = 0
 	extra_penetration = 0
-	fire_delay = 6
+	fire_delay = 8.5
 	w_class = WEIGHT_CLASS_BULKY
 	can_bayonet = FALSE
 	can_suppress = TRUE
@@ -928,7 +920,7 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	fire_delay = 10
 	burst_size = 1
-	//projectile_speed = 0
+	extra_speed = 5000
 	can_bayonet = FALSE
 	semi_auto = TRUE
 	can_automatic = FALSE
@@ -960,7 +952,7 @@
 	burst_shot_delay = 3
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	spread = 10
+	spread = 7
 	randomspread = 1
 	slowdown = 2
 
@@ -970,17 +962,14 @@
 		if(0)
 			select += 1
 			burst_size = 2
-			spread = 10
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select += 1
 			burst_size = 3
-			spread = 10
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(2)
 			select = 0
 			burst_size = 1
-			spread = 10
 			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
@@ -1066,7 +1055,7 @@
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	force = 40
+	force = 25
 	automatic_burst_overlay = FALSE
 	//automatic = 0
 	semi_auto = TRUE
@@ -1296,9 +1285,9 @@
 	item_state = "smg9mm"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	burst_size = 2
-	burst_shot_delay = 1
+	burst_shot_delay = 2
 	fire_delay = 1
-	spread = 14
+	spread = 11
 	extra_damage = -2
 	can_attachments = TRUE
 	can_suppress = FALSE
