@@ -1725,6 +1725,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/shuttle/vault_elevator
 	name = "Vault Elevator"
 
+/area/shuttle/subway_elevator
+	name = "Subway Elevator"
 
 /area/shuttle/enclavefort_elevator
 	name = "Enclave Fort Elevator"
