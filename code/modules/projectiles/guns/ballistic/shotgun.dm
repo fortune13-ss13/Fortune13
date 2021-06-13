@@ -115,7 +115,6 @@
 /obj/item/gun/ballistic/revolver/caravan_shotgun/update_icon_state()
 	if(sawn_off)
 		icon_state = "[initial(icon_state)]-sawn"
-		return
 	else if(!magazine || !magazine.ammo_count(0))
 		icon_state = "[initial(icon_state)]-e"
 	else
@@ -151,7 +150,6 @@
 /obj/item/gun/ballistic/revolver/widowmaker/update_icon_state()
 	if(sawn_off)
 		icon_state = "[initial(icon_state)]-sawn"
-		return
 	else if(!magazine || !magazine.ammo_count(0))
 		icon_state = "[initial(icon_state)]-e"
 	else
@@ -181,7 +179,6 @@
 /obj/item/gun/ballistic/shotgun/hunting/update_icon_state()
 	if(sawn_off)
 		icon_state = "[initial(icon_state)]-sawn"
-		return
 	else if(!magazine || !magazine.ammo_count(0))
 		icon_state = "[initial(icon_state)]-e"
 	else
@@ -819,7 +816,7 @@ HOOK GUN CODE. Bizarre but could be made into something useful.
 	//our hook gun!
 	var/obj/item/gun/magic/hook/bounty/hook
 	var/toggled = FALSE
-  
+
 Not currently implemented due to balance issues
 /obj/item/gun/ballistic/automatic/shotgun/pancor
 	name = "Pancor Jackhammer"
