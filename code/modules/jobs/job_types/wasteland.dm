@@ -68,7 +68,7 @@
 	head = 			/obj/item/clothing/head/helmet/f13/power_armor/advanced
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
-	uniform =		/obj/item/clothing/under/f13/navy
+	uniform =		/obj/item/clothing/under/f13/enclave/peacekeeper
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/advanced
 	belt = 			/obj/item/storage/belt/military/assault/enclave
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
@@ -82,6 +82,7 @@
 		/obj/item/stock_parts/cell/ammo/mfc=3,
 		/obj/item/storage/bag/money/small/wastelander=1,
 		/obj/item/kitchen/knife/combat=1
+		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
 		)
 
 /datum/outfit/job/wasteland/enclavesgt/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -133,6 +134,7 @@
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/storage/bag/money/small/wastelander=1,
 		/obj/item/kitchen/knife/combat=1
+		/obj/item/clothing/head/helmet/f13/helmet/enclave/science
 		)
 
 /datum/outfit/job/wasteland/enclavesci/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -169,21 +171,21 @@
 	name = "Enclave Lieutenant"
 	jobtype = /datum/job/wasteland/enclavelt
 	backpack = /obj/item/storage/backpack/satchel/enclave
-	head = 			/obj/item/clothing/head/donor/enclave
+	head = 			/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
 	mask = 			/obj/item/clothing/mask/gas/enclave
-	uniform =		/obj/item/clothing/under/f13/enclave_officer
+	uniform =		/obj/item/clothing/under/f13/enclave/officer
 	belt = 			/obj/item/storage/belt/military/assault/enclave
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	id = 			/obj/item/card/id/dogtag/enclave
-	suit_store =  	/obj/item/gun/energy/laser/plasma/glock/extended
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=2,
 		/obj/item/grenade/flashbang=1,
 		/obj/item/pda=1,
 		/obj/item/stock_parts/cell/ammo/ec=3,
+		/obj/item/gun/energy/laser/plasma/glock/extended,
 		/obj/item/storage/bag/money/small/wastelander=1,
 		/obj/item/kitchen/knife/combat=1
 		)
