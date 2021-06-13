@@ -306,7 +306,8 @@
 	build_path = /obj/item/gun/energy/decloner
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
+	
+/*
 /datum/design/rapidsyringe
 	name = "Rapid Syringe Gun"
 	desc = "A gun that fires many syringes."
@@ -316,6 +317,7 @@
 	build_path = /obj/item/gun/syringe/rapidsyringe
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+*/
 
 /datum/design/temp_gun
 	name = "Temperature Gun"
