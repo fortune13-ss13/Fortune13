@@ -115,10 +115,10 @@
 /obj/item/gun/ballistic/revolver/caravan_shotgun/update_icon_state()
 	if(sawn_off)
 		icon_state = "[initial(icon_state)]-sawn"
-		else if (!magazine || !magazine.ammo_count(0))
-			icon_state = "[initial(icon_state)]-e"
-			else
-			icon_state = "[initial(icon_state)]"
+	else if (!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
 
 
 //Widowmaker double barrel
