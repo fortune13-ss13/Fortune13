@@ -150,10 +150,10 @@
 /obj/item/gun/ballistic/revolver/widowmaker/update_icon_state()
 	if(sawn_off)
 		icon_state = "[initial(icon_state)]-sawn"
-		else if (!magazine || !magazine.ammo_count(0))
+	else if (!magazine || !magazine.ammo_count(0))
 		icon_state = "[initial(icon_state)]-e"
-			else
-			icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]"
 
 
 //Hunting shotgun. Pump action.
@@ -179,10 +179,10 @@
 /obj/item/gun/ballistic/shotgun/hunting/update_icon_state()
 	if(sawn_off)
 		icon_state = "[initial(icon_state)]-sawn"
-		else if (!magazine || !magazine.ammo_count(0))
-			icon_state = "[initial(icon_state)]-e"
-			else
-				icon_state = "[initial(icon_state)]"
+	else if (!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
 
 
 //Lever action shotgun.
@@ -199,8 +199,8 @@
 /obj/item/gun/ballistic/shotgun/trench/update_icon_state()
 	if(!magazine || !magazine.ammo_count(0))
 		icon_state = "[initial(icon_state)]-e"
-		else
-			icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]"
 
 
 //Trench shotgun. Pump action.
@@ -222,8 +222,8 @@
 /obj/item/gun/ballistic/shotgun/trench/update_icon_state()
 	if(!magazine || !magazine.ammo_count(0))
 		icon_state = "[initial(icon_state)]-e"
-		else
-			icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]"
 
 
 ///////////////////////////
