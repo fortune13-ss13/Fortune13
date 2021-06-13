@@ -113,7 +113,7 @@
 /datum/outfit/job/wasteland/enclavesci
 	name = "Enclave Scientist"
 	jobtype = /datum/job/wasteland/enclavesci
-	backpack = /obj/item/storage/backpack/satchel/leather
+	backpack = /obj/item/storage/backpack/satchel/enclave
 	head = 			/obj/item/clothing/head/helmet/f13/envirosuit
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
@@ -122,7 +122,7 @@
 	uniform =		/obj/item/clothing/under/f13/enclave/science
 	suit = 			/obj/item/clothing/suit/armor/f13/environmentalsuit
 	belt = 			/obj/item/storage/belt/medical
-	shoes = 		/obj/item/clothing/shoes/combat/swat
+	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	id = 			/obj/item/card/id/dogtag/enclave
 	suit_store =  	/obj/item/tank/internals/oxygen
 
