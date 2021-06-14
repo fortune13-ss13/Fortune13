@@ -1520,8 +1520,8 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 25
 	burst_size = 2
-	fire_delay = 2
-	burst_shot_delay = 2
+	fire_delay = 3
+	burst_shot_delay = 2.0
 	can_suppress = FALSE
 	can_attachments = TRUE
 	//automatic = 1
@@ -1531,7 +1531,6 @@
 	zoom_out_amt = 13
 	can_attachments = TRUE
 	can_scope = FALSE
-	burst_size = 1
 	can_automatic = TRUE
 	semi_auto = TRUE
 
@@ -1540,8 +1539,8 @@
 	icon_state = "g11e"
 	item_state = "g11e"
 	burst_size = 2
-	fire_delay = 1
-	burst_shot_delay = 1
+	fire_delay = 2.5
+	burst_shot_delay = 2.0
 	can_suppress = FALSE
 	spread = 5
 
