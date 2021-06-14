@@ -488,7 +488,7 @@
 			to_chat(M, "<span class='danger'>You feel your throat closing up!</span>")
 		else if(method == INJECT)
 			return
-		else if(method in list(PATCH, TOUCH))
+		else if(method in list(PATCH))
 			M.adjustBruteLoss(-1 * reac_volume)
 			M.adjustFireLoss(-1 * reac_volume)
 			for(var/i in C.all_wounds)
