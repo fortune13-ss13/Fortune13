@@ -41,7 +41,7 @@
 	design_ids = list("magrifle", "magpistol", "mag_magrifle", "mag_magrifle_nl", "mag_magpistol", "mag_magpistol_nl")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-*/
+/*
 /datum/techweb_node/medical_weapons
 	id = "medical_weapons"
 	display_name = "Medical Weaponry"
@@ -67,7 +67,7 @@
 	design_ids = list("beamrifle")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3250) // Sniper
 
-*/
+/*
 /datum/techweb_node/explosive_weapons
 	id = "explosive_weapons"
 	display_name = "Explosive & Pyrotechnical Weaponry"
