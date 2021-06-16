@@ -49,7 +49,6 @@
 	design_ids = list("rapidsyringe", "shotgundartcryostatis")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
 
-
 /datum/techweb_node/beam_weapons
 	id = "beam_weapons"
 	display_name = "Beam Weaponry"
@@ -58,7 +57,6 @@
 	design_ids = list("temp_gun")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/*
 /datum/techweb_node/adv_beam_weapons
 	id = "adv_beam_weapons"
 	display_name = "Advanced Beam Weaponry"
