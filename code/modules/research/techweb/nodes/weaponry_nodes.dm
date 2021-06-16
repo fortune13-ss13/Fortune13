@@ -85,7 +85,7 @@
 	design_ids = list("mag_oldsmg", "mag_oldsmg_ap", "mag_oldsmg_ic", "mag_oldsmg_rubber", "mag_oldsmg_tx")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2750)
 
-*/
+/*
 /datum/techweb_node/exotic_ammo
 	id = "exotic_ammo"
 	display_name = "Exotic Ammunition"
