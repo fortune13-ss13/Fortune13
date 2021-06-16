@@ -69,16 +69,3 @@
 	..()
 	summon_backup(15)
 	say("411 in progress, requesting backup!")
-
-/mob/living/simple_animal/hostile/retaliate/nanotrasenpeace/ranged
-	icon_state = "nanotrasenrangedsmg"
-	icon_living = "nanotrasenrangedsmg"
-	vision_range = 9
-	rapid = 3
-	ranged = 1
-	retreat_distance = 3
-	minimum_distance = 5
-	casingtype = /obj/item/ammo_casing/c46x30mm
-	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/wt550,
-				/obj/effect/mob_spawn/human/corpse/nanotrasensoldier)

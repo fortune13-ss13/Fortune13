@@ -45,14 +45,6 @@
 //	projectile_type = "/obj/item/projectile/practice"
 	clumsy_check = 0 //No sense in having a harmless gun blow up in the clowns face
 
-//Syndicate sub-machine guns.
-/obj/item/gun/ballistic/automatic/c20r/sc_c20r
-
-/obj/item/gun/ballistic/automatic/c20r/sc_c20r/Initialize()
-	. = ..()
-	for(var/ammo in magazine.stored_ammo)
-		if(prob(95)) //95% chance
-			magazine.stored_ammo -= ammo
 
 //Barman's shotgun
 /obj/item/gun/ballistic/shotgun/sc_pump

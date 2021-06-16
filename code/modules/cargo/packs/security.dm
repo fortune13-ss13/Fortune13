@@ -14,11 +14,9 @@
 
 /datum/supply_pack/security/ammo
 	name = "Ammo Crate - General Purpose"
-	desc = "Contains two 20-round magazines for the WT-550 Auto Rifle, three boxes of buckshot ammo, three boxes of rubber ammo and special .38 speedloarders. Requires Security access to open."
+	desc = "Contains three boxes of buckshot ammo, three boxes of rubber ammo and special .38 speedloarders. Requires Security access to open."
 	cost = 2500
-	contains = list(/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/storage/fancy/ammobox/lethalshot,
+	contains = list(/obj/item/storage/fancy/ammobox/lethalshot,
 					/obj/item/storage/fancy/ammobox/lethalshot,
 					/obj/item/storage/fancy/ammobox/lethalshot,
 					/obj/item/storage/fancy/ammobox,

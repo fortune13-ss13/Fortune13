@@ -56,19 +56,12 @@
 		/obj/effect/spawner/lootdrop/minor/beret_or_rabbitears,
 		/obj/item/clothing/glasses/sunglasses/blindfold)
 
-
 /obj/effect/spawner/bundle/costume/butler
 	name = "butler costume spawner"
 	items = list(
 		/obj/item/clothing/accessory/waistcoat,
 		/obj/item/clothing/under/suit/black,
 		/obj/item/clothing/head/that)
-
-/obj/effect/spawner/bundle/costume/highlander
-	name = "highlander costume spawner"
-	items = list(
-		/obj/item/clothing/under/costume/kilt,
-		/obj/item/clothing/head/beret)
 
 /obj/effect/spawner/bundle/costume/prig
 	name = "prig costume spawner"
@@ -107,16 +100,7 @@
 	name = "waiter costume spawner"
 	items = list(
 		/obj/item/clothing/under/suit/waiter,
-		/obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears,
 		/obj/item/clothing/suit/apron)
-
-/obj/effect/spawner/bundle/costume/pirate
-	name = "pirate costume spawner"
-	items = list(
-		/obj/item/clothing/under/costume/pirate,
-		/obj/item/clothing/suit/pirate,
-		/obj/effect/spawner/lootdrop/minor/pirate_or_bandana,
-		/obj/item/clothing/glasses/eyepatch)
 
 /obj/effect/spawner/bundle/costume/commie
 	name = "commie costume spawner"
@@ -149,13 +133,6 @@
 		/obj/item/clothing/head/witchwig,
 		/obj/item/staff/broom)
 
-/obj/effect/spawner/bundle/costume/wizard
-	name = "wizard costume spawner"
-	items = list(
-		/obj/item/clothing/shoes/sandal,
-		/obj/item/clothing/suit/wizrobe/fake,
-		/obj/item/clothing/head/wizard/fake,
-		/obj/item/staff)
 
 /obj/effect/spawner/bundle/crate/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE)
@@ -175,11 +152,4 @@
 	items = list(
 		/obj/item/gun/ballistic/shotgun/mosin,
 		/obj/item/ammo_box/a762
-	)
-
-/obj/effect/spawner/bundle/crate/surplusrifle
-	name = "surplus rifle spawner"
-	items = list(
-		/obj/item/gun/ballistic/automatic/surplus,
-		/obj/item/ammo_box/magazine/m10mm/rifle
 	)

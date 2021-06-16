@@ -402,14 +402,6 @@
 		damage = 60
 	. = ..()
 
-/obj/item/gun/ballistic/automatic/laser/ctf
-	mag_type = /obj/item/ammo_box/magazine/recharge/ctf
-	desc = "This looks like it could really hurt in melee."
-	force = 50
-
-/obj/item/gun/ballistic/automatic/laser/ctf/dropped(mob/user)
-	. = ..()
-	addtimer(CALLBACK(GLOBAL_PROC, /proc/ctf_floor_vanish, src), 1)
 
 /obj/item/ammo_box/magazine/recharge/ctf
 	ammo_type = /obj/item/ammo_casing/caseless/laser/ctf
@@ -441,33 +433,10 @@
 
 // RED TEAM GUNS
 
-/obj/item/gun/ballistic/automatic/laser/ctf/red
-	mag_type = /obj/item/ammo_box/magazine/recharge/ctf/red
 
-/obj/item/ammo_box/magazine/recharge/ctf/red
-	ammo_type = /obj/item/ammo_casing/caseless/laser/ctf/red
-
-/obj/item/ammo_casing/caseless/laser/ctf/red
-	projectile_type = /obj/item/projectile/beam/ctf/red
-
-/obj/item/projectile/beam/ctf/red
-	icon_state = "laser"
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
 
 // BLUE TEAM GUNS
 
-/obj/item/gun/ballistic/automatic/laser/ctf/blue
-	mag_type = /obj/item/ammo_box/magazine/recharge/ctf/blue
-
-/obj/item/ammo_box/magazine/recharge/ctf/blue
-	ammo_type = /obj/item/ammo_casing/caseless/laser/ctf/blue
-
-/obj/item/ammo_casing/caseless/laser/ctf/blue
-	projectile_type = /obj/item/projectile/beam/ctf/blue
-
-/obj/item/projectile/beam/ctf/blue
-	icon_state = "bluelaser"
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 
 // MELEE GANG
 /obj/item/claymore/ctf
@@ -493,9 +462,6 @@
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	belt = /obj/item/gun/ballistic/automatic/pistol/deagle/ctf
-	l_pocket = /obj/item/ammo_box/magazine/recharge/ctf
-	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf
-	r_hand = /obj/item/gun/ballistic/automatic/laser/ctf
 	back = /obj/item/claymore/ctf
 
 /datum/outfit/ctf/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
@@ -522,9 +488,7 @@
 
 /datum/outfit/ctf/red
 	suit = /obj/item/clothing/suit/space/hardsuit/shielded/ctf/red
-	r_hand = /obj/item/gun/ballistic/automatic/laser/ctf/red
-	l_pocket = /obj/item/ammo_box/magazine/recharge/ctf/red
-	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf/red
+
 
 /datum/outfit/ctf/red/instagib
 	r_hand = /obj/item/gun/energy/laser/instakill/red
@@ -532,9 +496,6 @@
 
 /datum/outfit/ctf/blue
 	suit = /obj/item/clothing/suit/space/hardsuit/shielded/ctf/blue
-	r_hand = /obj/item/gun/ballistic/automatic/laser/ctf/blue
-	l_pocket = /obj/item/ammo_box/magazine/recharge/ctf/blue
-	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf/blue
 
 /datum/outfit/ctf/blue/instagib
 	r_hand = /obj/item/gun/energy/laser/instakill/blue

@@ -137,7 +137,6 @@
 /datum/outfit/syndicate/leader
 	name = "Syndicate Leader - Basic"
 	id = /obj/item/card/id/syndicate/nuke_leader
-	gloves = /obj/item/clothing/gloves/krav_maga/combatglovesplus
 	r_hand = /obj/item/nuclear_challenge
 	command_radio = TRUE
 
@@ -171,25 +170,19 @@
 	r_pocket = /obj/item/tank/internals/emergency_oxygen/engi
 	internals_slot = SLOT_R_STORE
 	belt = /obj/item/storage/belt/military
-	r_hand = /obj/item/gun/ballistic/automatic/shotgun/bulldog
 	backpack_contents = list(/obj/item/storage/box/syndie=1,\
 		/obj/item/tank/jetpack/oxygen/harness=1,\
-		/obj/item/gun/ballistic/automatic/pistol=1,\
 		/obj/item/kitchen/knife/combat/survival)
 
 /datum/outfit/syndicate/lone
 	name = "Syndicate Operative - Lone"
 
-	glasses = /obj/item/clothing/glasses/night/syndicate
 	mask = /obj/item/clothing/mask/gas/syndicate
 	suit = /obj/item/clothing/suit/space/syndicate/black/red
 	head = /obj/item/clothing/head/helmet/space/syndicate/black/red
-	r_pocket = /obj/item/tank/internals/emergency_oxygen/engi
 	internals_slot = SLOT_R_STORE
 	belt = /obj/item/storage/belt/military
 	backpack_contents = list(/obj/item/storage/box/syndie=1,\
-	/obj/item/tank/jetpack/oxygen/harness=1,\
-	/obj/item/gun/ballistic/automatic/pistol=1,\
 	/obj/item/kitchen/knife/combat/survival)
 
 	tc = 40
