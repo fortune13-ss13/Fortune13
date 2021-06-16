@@ -40,8 +40,8 @@
 	prereq_ids = list("weaponry", "adv_weaponry", "emp_adv")
 	design_ids = list("magrifle", "magpistol", "mag_magrifle", "mag_magrifle_nl", "mag_magpistol", "mag_magpistol_nl")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
 
+*/
 /datum/techweb_node/medical_weapons
 	id = "medical_weapons"
 	display_name = "Medical Weaponry"
@@ -66,8 +66,8 @@
 	prereq_ids = list("beam_weapons")
 	design_ids = list("beamrifle")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3250) // Sniper
-*/
 
+*/
 /datum/techweb_node/explosive_weapons
 	id = "explosive_weapons"
 	display_name = "Explosive & Pyrotechnical Weaponry"
@@ -84,8 +84,8 @@
 	prereq_ids = list("weaponry")
 	design_ids = list("mag_oldsmg", "mag_oldsmg_ap", "mag_oldsmg_ic", "mag_oldsmg_rubber", "mag_oldsmg_tx")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2750)
-*/
 
+*/
 /datum/techweb_node/exotic_ammo
 	id = "exotic_ammo"
 	display_name = "Exotic Ammunition"
