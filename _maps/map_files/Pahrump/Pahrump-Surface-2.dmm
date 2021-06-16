@@ -200,6 +200,14 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
+"ahi" = (
+/obj/effect/turf_decal/arrows/white{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/followers)
 "ahs" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced,
@@ -2271,6 +2279,14 @@
 	icon_state = "horizontaltopbordertop0"
 	},
 /area/f13/wasteland)
+"bwJ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "bwM" = (
 /obj/effect/landmark/start/f13/auxilia,
 /obj/effect/decal/cleanable/dirt,
@@ -4622,8 +4638,14 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "dgU" = (
-/obj/structure/sign/departments/medbay,
-/turf/closed/wall/f13/store,
+/obj/machinery/microwave/stove,
+/obj/machinery/light{
+	dir = 8;
+	pixel_y = -16
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
 /area/f13/followers)
 "dhh" = (
 /obj/item/stack/sheet/animalhide/human,
@@ -15446,6 +15468,16 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/village)
+"jMO" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	id = "soupkitchen";
+	name = "soup kitchen shutters"
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "jMP" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_west_north"
@@ -17687,6 +17719,17 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"llE" = (
+/obj/effect/turf_decal/arrows/white{
+	pixel_y = 14
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/followers)
 "llG" = (
 /obj/structure/wreck/trash/two_barrels,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -21672,6 +21715,15 @@
 /obj/item/ammo_casing/c9mm,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
+"nVL" = (
+/obj/machinery/door/airlock/medical{
+	name = "Clinic";
+	req_one_access_txt = "124"
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "nVM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/trimline/yellow/line{
@@ -23952,9 +24004,19 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "pvx" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/table,
+/obj/item/kitchen/knife{
+	pixel_x = 11
 	},
+/obj/item/reagent_containers/glass/bowl,
+/obj/item/reagent_containers/glass/bowl,
+/obj/item/reagent_containers/glass/bowl,
+/obj/item/reagent_containers/glass/bowl,
+/obj/machinery/light{
+	dir = 1;
+	pixel_x = 16
+	},
+/obj/item/clothing/suit/apron/chef,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -30366,6 +30428,22 @@
 /obj/item/clothing/head/helmet/f13/deathskull,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"tBt" = (
+/obj/structure/decoration/vent,
+/obj/structure/sink/kitchen{
+	pixel_y = 28
+	},
+/obj/item/storage/bag/trash,
+/obj/machinery/button/door{
+	id = "soupkitchen";
+	name = "service counter shutters";
+	pixel_x = 25;
+	pixel_y = -5
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "tBN" = (
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt"
@@ -30779,6 +30857,12 @@
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"tPn" = (
+/obj/effect/decal/cleanable/flour,
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "tPs" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/indestructible/ground/inside/mountain,
@@ -31822,12 +31906,21 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/bar)
 "uyp" = (
-/obj/machinery/light{
-	dir = 1
+/obj/structure/closet/fridge,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/storage/box/ingredients/american,
+/obj/item/storage/box/ingredients/vegetarian,
+/obj/item/reagent_containers/food/snacks/cannedpeaches,
+/obj/item/reagent_containers/food/snacks/cannedpeaches,
+/obj/item/reagent_containers/food/snacks/branrequests,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/structure/decoration/clock{
+	pixel_y = 30
 	},
-/obj/structure/table,
 /turf/open/floor/f13{
-	icon_state = "floorrusty"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "uyB" = (
@@ -31934,7 +32027,10 @@
 	},
 /area/f13/wasteland)
 "uBJ" = (
-/turf/closed/wall/f13/store,
+/obj/structure/fluff/railing,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
 /area/f13/followers)
 "uCd" = (
 /obj/structure/closet/crate/freezer/blood,
@@ -72978,15 +73074,15 @@ gcK
 gcK
 gcK
 gcK
-gcK
-gcK
-gcK
-gcK
-uBJ
-uBJ
-uBJ
-uBJ
-dgU
+xAZ
+xAZ
+xAZ
+xAZ
+xAZ
+xAZ
+xAZ
+xAZ
+ujQ
 dlc
 ebV
 pBz
@@ -73235,14 +73331,14 @@ ktB
 ktB
 ktB
 ktB
-ktB
-ktB
-gcK
-gcK
-uBJ
-qkO
-qkO
+xAZ
+dgU
+wkx
+jMO
 uVE
+llE
+qkO
+qkO
 fNP
 dkg
 unI
@@ -73493,13 +73589,13 @@ xAZ
 xAZ
 xAZ
 xAZ
-ktB
-gcK
-gcK
+pvx
+wkx
+jMO
 uBJ
-uyp
-cub
 uVE
+cub
+cub
 fNP
 dkg
 hto
@@ -73750,13 +73846,13 @@ qsX
 qvR
 nft
 xAZ
-ktB
-gcK
-gcK
+uyp
+tPn
+jMO
 uBJ
-cfz
-cfz
 uVE
+cfz
+cfz
 fNP
 cam
 pBv
@@ -74007,11 +74103,11 @@ qvR
 qvR
 nqw
 xAZ
-ktB
-gcK
-gcK
-uBJ
+tBt
+wkx
+jMO
 uVE
+ahi
 uVE
 uVE
 fNP
@@ -74265,7 +74361,7 @@ qvR
 wyM
 xAZ
 xAZ
-xAZ
+nVL
 xAZ
 xAZ
 ctT
@@ -74521,8 +74617,8 @@ nEG
 nEG
 nEG
 eeN
+bwJ
 wkx
-pvx
 wkx
 dsh
 uVE
