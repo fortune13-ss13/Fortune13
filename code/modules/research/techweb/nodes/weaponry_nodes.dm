@@ -40,25 +40,7 @@
 	prereq_ids = list("weaponry", "adv_weaponry", "emp_adv")
 	design_ids = list("magrifle", "magpistol", "mag_magrifle", "mag_magrifle_nl", "mag_magpistol", "mag_magpistol_nl")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
 
-/datum/techweb_node/medical_weapons
-	id = "medical_weapons"
-	display_name = "Medical Weaponry"
-	description = "Weapons using medical technology."
-	prereq_ids = list("adv_biotech", "adv_weaponry")
-	design_ids = list("rapidsyringe", "shotgundartcryostatis")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
-
-/datum/techweb_node/beam_weapons
-	id = "beam_weapons"
-	display_name = "Beam Weaponry"
-	description = "Various basic beam weapons"
-	prereq_ids = list("adv_weaponry")
-	design_ids = list("temp_gun")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
-/*
 /datum/techweb_node/adv_beam_weapons
 	id = "adv_beam_weapons"
 	display_name = "Advanced Beam Weaponry"
