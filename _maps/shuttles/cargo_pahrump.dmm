@@ -12,7 +12,10 @@
 /turf/open/floor/plasteel/floorgrime,
 /area/shuttle/supply)
 "d" = (
-/obj/structure/simple_door/bunker,
+/obj/structure/simple_door/bunker{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0
+	},
 /turf/open/floor/plating,
 /area/shuttle/supply)
 "e" = (
@@ -71,7 +74,10 @@
 	dwidth = 5;
 	width = 12
 	},
-/obj/structure/simple_door/bunker,
+/obj/structure/simple_door/bunker{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0
+	},
 /turf/open/floor/plating,
 /area/shuttle/supply)
 
