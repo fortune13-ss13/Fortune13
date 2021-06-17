@@ -23,8 +23,7 @@ here's a tip, go search DEFINES/access.dm
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 //Easy changes
-VForbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault. Killing fellow Vault Dwellers. Creating or participating in conflicts outside of the vault."
-VEnforces = "The Vault expects: Contributing to Vault society. Participation in special projects, as ordered by the Overseer."
+
 /*
 Overseer
 */
@@ -40,8 +39,8 @@ Overseer
 	faction = "Vault"
 	total_positions = 1
 	spawn_positions = 1
-	forbids = VForbids
-	enforces = VEnforces
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault. Killing fellow Vault Dwellers. Creating or participating in conflicts outside of the vault."
+	enforces = "The Vault expects: Contributing to Vault society. Participation in special projects, as ordered by the Overseer."
 	description = "You are the leader of the Vault, and your word is law. Working with the Security team and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault, through any and all means necessary."
 	supervisors = "Vault-tec"
 	selection_color = "#ccffcc"
@@ -147,8 +146,8 @@ Medical Doctor
 	faction = "Vault"
 	total_positions = 2
 	spawn_positions = 2
-	forbids = VForbids
-	enforces = VEnforces
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault. Killing fellow Vault Dwellers. Creating or participating in conflicts outside of the vault."
+	enforces = "The Vault expects: Contributing to Vault society. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with providing medical care to Vault Dwellers and ensuring the medical well-being of everyone in the Vault."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
@@ -195,8 +194,8 @@ Scientist
 	faction = "Vault"
 	total_positions = 2
 	spawn_positions = 2
-	forbids = VForbids
-	enforces = VEnforces
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault. Killing fellow Vault Dwellers. Creating or participating in conflicts outside of the vault."
+	enforces = "The Vault expects: Contributing to Vault society. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
@@ -237,8 +236,8 @@ Security Officer
 	faction = "Vault"
 	total_positions = 1 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 1 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	forbids = VForbids
-	enforces = VEnforces
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault. Killing fellow Vault Dwellers. Creating or participating in conflicts outside of the vault."
+	enforces = "The Vault expects: Contributing to Vault society. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
 	supervisors = "the head of security"
 	selection_color = "#ddffdd"
@@ -315,8 +314,8 @@ Vault Engineer
 	faction = "Vault"
 	total_positions = 1
 	spawn_positions = 1
-	forbids = VForbids
-	enforces = VEnforces
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault. Killing fellow Vault Dwellers. Creating or participating in conflicts outside of the vault."
+	enforces = "The Vault expects: Contributing to Vault society. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
 	supervisors = "the Overseer"
 	selection_color = "#ddffdd"
@@ -350,8 +349,8 @@ Vault Engineer
 	faction = "Vault"
 	total_positions = 2
 	spawn_positions = 2
-	forbids = VForbids
-	enforces = VEnforces
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault. Killing fellow Vault Dwellers. Creating or participating in conflicts outside of the vault."
+	enforces = "The Vault expects: Contributing to Vault society. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer, being assigned to fulfill whatever menial tasks are required. You lack an assignment, but may be given one the Overseer if required or requested. You should otherwise busy yourself with assisting personnel with tasks around the Vault."
 	supervisors = "absolutely everyone"
 	selection_color = "#ddffdd"
