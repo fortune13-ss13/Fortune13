@@ -4758,14 +4758,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "djK" = (
-/obj/docking_port/stationary{
-	area_type = /area/f13;
-	dwidth = 1;
-	height = 3;
-	id = "subway_surface";
-	name = "Subway Surface";
-	roundstart_template = /datum/map_template/shuttle/subway/elevator;
-	width = 4
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = vault1
 	},
 /turf/open/floor/plasteel/elevatorshaft,
 /area/f13/village)
@@ -12158,14 +12153,9 @@
 	},
 /area/f13/village)
 "hJM" = (
-/obj/machinery/computer/shuttle/northbunkerelevator{
-	name = "Elevator Controls";
-	possible_destinations = "subway_surface;subway_underground";
-	shuttleId = "subway_elevator"
-	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
+/obj/structure/debris/v4,
+/obj/structure/debris/v3,
+/turf/open/floor/plasteel/elevatorshaft,
 /area/f13/village)
 "hJQ" = (
 /obj/item/storage/trash_stack,
@@ -29433,6 +29423,11 @@
 /obj/item/book/granter/crafting_recipe/gunsmith_two,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"sBG" = (
+/obj/structure/debris/v4,
+/obj/structure/debris/v4,
+/turf/open/floor/plasteel/elevatorshaft,
+/area/f13/village)
 "sBH" = (
 /obj/structure/chair/wood/modern{
 	dir = 1
@@ -66788,8 +66783,8 @@ vwM
 uWA
 uWA
 uWA
-goC
-hJM
+xqp
+xqp
 xqp
 xqp
 hKo
@@ -67042,10 +67037,10 @@ bFJ
 vGA
 bFJ
 vwM
-uWA
-uWA
 djK
-heZ
+sBG
+ryf
+xqp
 xqp
 xqp
 xqp
@@ -67299,9 +67294,9 @@ dkg
 uaf
 bFJ
 vwM
-uWA
-uWA
-uWA
+hJM
+pYH
+sBG
 heZ
 xqp
 xqp
@@ -67556,9 +67551,9 @@ uaf
 dkg
 bFJ
 vwM
-uWA
-uWA
-uWA
+pYH
+pYH
+pYH
 goC
 xqp
 xqp

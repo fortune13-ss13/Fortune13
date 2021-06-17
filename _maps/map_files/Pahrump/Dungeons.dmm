@@ -5137,14 +5137,11 @@
 	},
 /area/f13/bunker)
 "igr" = (
-/obj/machinery/computer/shuttle/northbunkerelevator{
-	name = "Elevator Controls";
-	possible_destinations = "subway_surface;subway_underground";
-	shuttleId = "subway_elevator"
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = vault1
 	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
+/turf/open/floor/plasteel/elevatorshaft,
 /area/f13/tunnel)
 "igy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12141,15 +12138,8 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/underground/cave)
 "tkj" = (
-/obj/docking_port/stationary{
-	area_type = /area/f13;
-	dwidth = 1;
-	height = 3;
-	id = "subway_underground";
-	name = "Subway Underground";
-	roundstart_template = /datum/map_template/shuttle/subway/elevator;
-	width = 4
-	},
+/obj/structure/debris/v4,
+/obj/structure/debris/v3,
 /turf/open/floor/plasteel/elevatorshaft,
 /area/f13/tunnel)
 "tku" = (
@@ -39600,7 +39590,7 @@ swN
 swN
 swN
 swN
-igr
+uvt
 uvt
 uvt
 uvt
@@ -39856,7 +39846,7 @@ tYu
 sAk
 sAk
 sAk
-tAS
+uvt
 uvt
 uvt
 uvt
@@ -40110,10 +40100,10 @@ bsh
 bsh
 bsh
 tYu
-sAk
-sAk
-tkj
-tSZ
+igr
+mxq
+mxq
+uvt
 uvt
 uvt
 uvt
@@ -40367,10 +40357,10 @@ bsh
 bsh
 bsh
 tYu
-sAk
-sAk
-sAk
-tSZ
+tkj
+nTy
+nTy
+uvt
 uvt
 uvt
 uvt
@@ -40624,10 +40614,10 @@ bsh
 bsh
 bsh
 tYu
+nTy
+tkj
 sAk
-sAk
-sAk
-tAS
+uvt
 uvt
 uvt
 uvt
