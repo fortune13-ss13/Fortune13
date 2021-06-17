@@ -8,6 +8,15 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 
+/datum/crafting_recipe/noose
+	name = "Noose"
+	result = /obj/structure/chair/noose
+	time = 30
+	reqs = list(/obj/item/stack/cable_coil = 20,)
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+
+
 /////////////////
 //Large Objects//
 /////////////////
