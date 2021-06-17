@@ -181,6 +181,7 @@
 					/obj/item/modular_computer/tablet/preset/cargo)
 	crate_name = "tablet crate"
 
+/* Removed, FO13
 /datum/supply_pack/science/transfer_valves
 	name = "Tank Transfer Valves Crate"
 	desc = "The key ingredient for making a lot of people very angry very fast. Contains two tank transfer valves. Requires RD access to open."
@@ -191,6 +192,7 @@
 	crate_name = "tank transfer valves crate"
 	crate_type = /obj/structure/closet/crate/secure/science
 	dangerous = TRUE
+*/
 
 //////// RAW ANOMALY CORES
 /*
