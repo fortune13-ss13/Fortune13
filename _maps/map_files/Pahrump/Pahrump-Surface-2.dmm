@@ -2155,11 +2155,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/f13/wood,
 /area/f13/caves)
-"brb" = (
-/obj/structure/rack,
-/obj/item/reagent_containers/glass/bucket,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/tunnel)
 "brw" = (
 /obj/structure/car/rubbish2,
 /turf/open/indestructible/ground/outside/dirt{
@@ -6252,6 +6247,10 @@
 /obj/machinery/chem_master/primitive,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"egf" = (
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "egn" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag,
@@ -8400,6 +8399,11 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"fry" = (
+/obj/structure/rack,
+/obj/item/cultivator,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "frB" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/f13/wood,
@@ -8599,6 +8603,14 @@
 	icon_state = "housewood2"
 	},
 /area/f13/village)
+"fwJ" = (
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "vault1";
+	name = "Old Ladder"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "fxx" = (
 /obj/item/picket_sign,
 /turf/open/indestructible/ground/outside/road{
@@ -12154,6 +12166,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"hDp" = (
+/obj/machinery/door/airlock/grunge/abandoned{
+	name = "Abandoned Bunker"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "hDC" = (
 /obj/structure/decoration/shock,
 /turf/closed/wall/r_wall/rust,
@@ -13738,12 +13756,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
-"iCc" = (
-/obj/machinery/door/airlock/grunge/abandoned{
-	name = "Abandoned Bunker"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/tunnel)
 "iCl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood,
@@ -16259,14 +16271,6 @@
 /obj/item/stack/rods,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"jYh" = (
-/obj/structure/ladder/unbreakable{
-	height = 2;
-	id = "vault1";
-	name = "Old Ladder"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/tunnel)
 "jYn" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13{
@@ -24194,6 +24198,11 @@
 	icon_state = "verticalinnermain2"
 	},
 /area/f13/wasteland)
+"paL" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "paM" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
@@ -33810,10 +33819,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"uIO" = (
-/obj/machinery/hydroponics/constructable,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/tunnel)
 "uIT" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -36925,11 +36930,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"wAs" = (
-/obj/structure/rack,
-/obj/item/cultivator,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/tunnel)
 "wAU" = (
 /obj/structure/rack,
 /obj/item/taperecorder,
@@ -41474,8 +41474,8 @@ gcK
 coQ
 gPd
 apt
-uIO
-uIO
+egf
+egf
 coQ
 gcK
 gcK
@@ -41986,7 +41986,7 @@ gcK
 gcK
 gcK
 coQ
-jYh
+fwJ
 apt
 apt
 apt
@@ -42247,7 +42247,7 @@ apt
 apt
 apt
 apt
-iCc
+hDp
 mwp
 uYx
 mwp
@@ -42501,11 +42501,11 @@ gcK
 gcK
 gcK
 gcK
-brb
+paL
 apt
 apt
 coQ
-wEs
+mwp
 mwp
 mwp
 mwp
@@ -42760,7 +42760,7 @@ gcK
 gcK
 gcK
 gcK
-wAs
+fry
 gcK
 gcK
 gcK
