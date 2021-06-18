@@ -498,8 +498,7 @@
 	},
 /area/f13/wasteland)
 "apt" = (
-/obj/machinery/hydroponics/soil,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "apw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2156,6 +2155,11 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/f13/wood,
 /area/f13/caves)
+"brb" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "brw" = (
 /obj/structure/car/rubbish2,
 /turf/open/indestructible/ground/outside/dirt{
@@ -3536,8 +3540,10 @@
 	},
 /area/f13/wasteland)
 "coQ" = (
-/obj/machinery/smartfridge/drying_rack,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/closed/wall/f13/store{
+	desc = "A pre-War wall made of solid concrete.";
+	name = "concrete wall"
+	},
 /area/f13/tunnel)
 "coZ" = (
 /turf/open/indestructible/ground/outside/dirt{
@@ -10786,12 +10792,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "gPd" = (
-/obj/item/storage/fancy/rollingpapers,
-/obj/item/storage/fancy/rollingpapers,
-/obj/item/storage/fancy/rollingpapers,
-/obj/item/lighter,
 /obj/structure/rack,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/item/storage/fancy/rollingpapers,
+/obj/item/storage/fancy/rollingpapers,
+/obj/item/storage/fancy/rollingpapers,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "gPg" = (
 /obj/structure/simple_door/metal/store,
@@ -13733,6 +13738,12 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
+"iCc" = (
+/obj/machinery/door/airlock/grunge/abandoned{
+	name = "Abandoned Bunker"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "iCl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood,
@@ -14120,14 +14131,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "iLD" = (
-/obj/item/seeds/cannabis,
-/obj/item/seeds/cannabis,
-/obj/item/seeds/cannabis,
-/obj/item/seeds/cannabis,
 /obj/structure/rack,
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/cultivator,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/item/seeds/cannabis,
+/obj/item/seeds/cannabis,
+/obj/item/seeds/cannabis,
+/obj/item/seeds/cannabis,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "iLI" = (
 /obj/effect/spawner/lootdrop/trash,
@@ -16250,6 +16259,14 @@
 /obj/item/stack/rods,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"jYh" = (
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "vault1";
+	name = "Old Ladder"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "jYn" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13{
@@ -33793,6 +33810,10 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"uIO" = (
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "uIT" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -36904,6 +36925,11 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"wAs" = (
+/obj/structure/rack,
+/obj/item/cultivator,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "wAU" = (
 /obj/structure/rack,
 /obj/item/taperecorder,
@@ -41188,12 +41214,12 @@ gbL
 gcK
 gcK
 gcK
-gcK
-gcK
-gcK
-gcK
-gcK
-gcK
+coQ
+coQ
+coQ
+coQ
+coQ
+coQ
 gcK
 gcK
 gcK
@@ -41445,12 +41471,12 @@ gcK
 gcK
 gcK
 gcK
-gcK
-gcK
-mwp
-mwp
-wEs
-mwp
+coQ
+gPd
+apt
+uIO
+uIO
+coQ
 gcK
 gcK
 gcK
@@ -41702,12 +41728,12 @@ gcK
 gcK
 gcK
 gcK
-gcK
-mwp
+coQ
+iLD
 apt
-mwp
 apt
-mwp
+apt
+coQ
 gcK
 gcK
 mwp
@@ -41959,12 +41985,12 @@ gcK
 gcK
 gcK
 gcK
-mwp
-mwp
+coQ
+jYh
 apt
-mwp
 apt
-mwp
+apt
+coQ
 mwp
 mwp
 mwp
@@ -42216,12 +42242,12 @@ gcK
 gcK
 gcK
 gcK
-mwp
-mwp
-mwp
-mwp
-mwp
-mwp
+gcK
+apt
+apt
+apt
+apt
+iCc
 mwp
 uYx
 mwp
@@ -42473,13 +42499,13 @@ gbL
 gbL
 gcK
 gcK
-mwp
-mwp
+gcK
+gcK
+brb
 apt
-mwp
 apt
-mwp
-mwp
+coQ
+wEs
 mwp
 mwp
 mwp
@@ -42730,12 +42756,12 @@ gbL
 gbL
 gcK
 gcK
-mwp
-mwp
-apt
-mwp
-apt
-mwp
+gcK
+gcK
+gcK
+gcK
+wAs
+gcK
 gcK
 gcK
 gcK
@@ -42989,10 +43015,10 @@ gcK
 gcK
 gcK
 gcK
-iLD
-gPd
-mwp
-coQ
+gcK
+gcK
+gcK
+gcK
 gcK
 gcK
 gcK
