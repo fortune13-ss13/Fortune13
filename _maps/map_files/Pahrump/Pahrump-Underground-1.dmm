@@ -569,13 +569,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/brotherhood/offices1st)
 "aBr" = (
-/obj/structure/simple_door/metal/fence{
-	dir = 8
+/obj/machinery/door/airlock/medical{
+	name = "Clinic";
+	req_one_access_txt = "124"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
-/area/f13/tunnel)
+/area/f13/followers)
 "aBI" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /turf/open/floor/plating/tunnel,
@@ -3784,6 +3785,13 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/brotherhood/operations)
+"cVp" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/handrail/g_central{
+	pixel_y = -16
+	},
+/turf/open/water,
+/area/f13/tunnel)
 "cVB" = (
 /mob/living/simple_animal/hostile/raider/firefighter,
 /turf/open/indestructible/ground/inside/subway,
@@ -7272,7 +7280,7 @@
 	extra_projectiles = 1;
 	faction = list("wastebot");
 	loot = null;
-	name = "mutated enclave soldier";
+	name = "Private Downs";
 	speak = list("AUUGHGHHH!");
 	speak_emote = list("shouts")
 	},
@@ -9395,11 +9403,8 @@
 	},
 /area/f13/tunnel)
 "hsR" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/handrail/g_central{
-	pixel_y = -16
-	},
-/turf/open/water,
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall/rust,
 /area/f13/tunnel)
 "htu" = (
 /mob/living/simple_animal/hostile/raider/thief,
@@ -10638,9 +10643,7 @@
 /area/f13/enclave)
 "imX" = (
 /obj/structure/table/wood,
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/structure/fluff/railing,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "inU" = (
@@ -11857,9 +11860,7 @@
 	},
 /area/f13/bunker)
 "jll" = (
-/obj/machinery/telecomms/hub/preset{
-	autolinkers = list("hub","relay","s_relay","m_relay","r_relay","h_relay","science","medical","supply","service","vault","ncr","bos","enclave","town","den","legion","common","command","engineering","security","ranger","receiverA","receiverB","broadcasterA","broadcasterB")
-	},
+/obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plasteel/vault/telecomms/mainframe{
 	dir = 8
 	},
@@ -12113,15 +12114,15 @@
 /obj/item/key,
 /obj/item/key,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
-/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
+/obj/item/radio/headset/headset_den,
 /obj/item/storage/box/citizenship_permits,
 /obj/item/assembly/signaler/advanced,
 /obj/item/assembly/signaler,
@@ -14963,9 +14964,11 @@
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/f13/tcoms)
 "lSo" = (
-/obj/machinery/telecomms/server/presets/town,
-/turf/open/floor/plasteel/dark/telecomms/mainframe,
-/area/f13/tcoms)
+/obj/structure/fluff/railing{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/den)
 "lSQ" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/cannabis,
@@ -15827,16 +15830,24 @@
 /mob/living/simple_animal/hostile/enclave/soldier{
 	aggro_vision_range = 15;
 	armour_penetration = 1;
-	desc = "What visibly appears to be a proud Enclave soldier clad in armor is in actuality a grotesque, FEV-exposed mutant grafted to the interior of his suit, never able to leave. You've gotten a lot farther than you should have...";
+	desc = "A grotesque, Enclave-manufactured and Enclave-loyal prime super mutant given cybernetic augmentations, unique hardened power armor, and an arm-mounted plasma repeater, alongside drug cocktails administered by his suit. Your ride's over mutie, time to die.";
+	environment_smash = 2;
 	extra_projectiles = 10;
 	faction = list("wastebot");
 	health = 3000;
+	icon = 'icons/fallout/mobs/bigmob.dmi';
+	icon_dead = "arlem";
+	icon_gib = "arlem";
+	icon_living = "arlem";
+	icon_state = "arlem";
 	loot = list(/obj/item/keycard/library);
 	maxHealth = 3000;
 	melee_damage_lower = 100;
 	melee_damage_upper = 100;
 	melee_queue_distance = 10;
 	name = "Captain Arlem";
+	obj_damage = 300;
+	ranged_ignores_vision = 1;
 	speak = list("Die... mutie!","AAAAUHGHHHH!","DIE!","Perish!","FOR THE ENCLAVE!");
 	speak_chance = 10;
 	speak_emote = list("shouts");
@@ -16338,6 +16349,15 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/brotherhood/rnd)
+"mWE" = (
+/obj/machinery/porta_turret/syndicate/energy{
+	faction = list("wastebot")
+	},
+/turf/open/floor/f13{
+	dir = 10;
+	icon_state = "redmark"
+	},
+/area/f13/bunker)
 "mWM" = (
 /obj/machinery/computer/med_data,
 /turf/open/floor/carpet/black,
@@ -16653,10 +16673,6 @@
 /area/f13/den)
 "nkJ" = (
 /obj/structure/rack,
-/obj/item/weaponcrafting/reciever,
-/obj/item/weaponcrafting/reciever,
-/obj/item/advanced_crafting_components/assembly,
-/obj/item/advanced_crafting_components/assembly,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/den)
 "nld" = (
@@ -17780,6 +17796,21 @@
 /obj/structure/flora/junglebush,
 /turf/open/indestructible/ground/outside/water,
 /area/f13/caves)
+"nYI" = (
+/mob/living/simple_animal/hostile/enclave/soldier{
+	desc = "A former Enclave soldier, mutated by the forced evolutionary virus and grafted to the interior of his suit.";
+	extra_projectiles = 1;
+	faction = list("wastebot");
+	loot = null;
+	name = "Sergeant Armstrong";
+	speak = list("AUUGHGHHH!");
+	speak_emote = list("shouts")
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/bunker)
 "nYR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/bin,
@@ -19842,6 +19873,12 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/brotherhood/mining)
+"pJf" = (
+/obj/structure/fluff/railing{
+	dir = 4
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/den)
 "pJO" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/item/storage/trash_stack,
@@ -19989,11 +20026,14 @@
 /area/f13/caves)
 "pRe" = (
 /mob/living/simple_animal/hostile/enclave/soldier{
-	desc = "A former Enclave soldier, mutated by the forced evolutionary virus and grafted to the interior of his suit.";
-	extra_projectiles = 1;
+	desc = "A former Enclave soldier, mutated by the forced evolutionary virus and grafted to the interior of his suit. This one's got a giant ass pulse sniper!";
+	extra_projectiles = 0;
 	faction = list("wastebot");
 	loot = null;
-	name = "mutated enclave soldier";
+	name = "Sergeant Mercer";
+	projectiletype = /obj/item/projectile/beam/pulse;
+	ranged_cooldown_time = 24;
+	ranged_message = "fires the pulse sniper";
 	speak = list("AUUGHGHHH!");
 	speak_emote = list("shouts")
 	},
@@ -20926,7 +20966,7 @@
 /area/f13/ncr)
 "qGp" = (
 /obj/structure/simple_door/brokenglass,
-/turf/open/floor/plating/wooden,
+/turf/closed/wall/rust,
 /area/f13/den)
 "qGr" = (
 /obj/structure/chair/wood{
@@ -21609,9 +21649,7 @@
 	},
 /area/f13/ncr)
 "rgJ" = (
-/obj/machinery/telecomms/bus/preset_three{
-	autolinkers = list("processor3","security","command","vault","ncr","bos","enclave","town","den","legion","ranger")
-	},
+/obj/machinery/telecomms/bus/preset_three,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
 "rgX" = (
@@ -21859,8 +21897,7 @@
 	},
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
-/obj/item/clothing/suit/armor/f13/power_armor/t45d/gunslinger,
-/obj/item/clothing/head/helmet/f13/power_armor/t45d/gunslinger,
+/obj/effect/spawner/lootdrop/f13/armor/tier5,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "rpx" = (
@@ -24381,8 +24418,10 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "tzJ" = (
-/obj/structure/sign/warning/radiation,
-/turf/closed/wall/rust,
+/obj/structure/fence,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
 /area/f13/tunnel)
 "tzZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -24419,12 +24458,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"tCS" = (
-/obj/item/chair,
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
-	},
-/area/f13/bunker)
 "tDc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/mineral/random/low_chance,
@@ -26044,7 +26077,9 @@
 	},
 /area/f13/bunker)
 "veR" = (
-/obj/structure/fence,
+/obj/structure/simple_door/metal/fence{
+	dir = 8
+	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -28456,7 +28491,6 @@
 /obj/item/stack/sheet/cardboard/fifty,
 /obj/item/stack/sheet/cardboard/fifty,
 /obj/item/stack/sheet/cardboard/fifty,
-/obj/item/stack/sheet/glass/ten,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/den)
 "xFN" = (
@@ -28645,6 +28679,7 @@
 "xPN" = (
 /obj/structure/simple_door/wood,
 /obj/effect/decal/cleanable/blood/tracks,
+/obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "xRm" = (
@@ -33293,7 +33328,7 @@ eLE
 aOW
 eBg
 eBg
-pRe
+nYI
 aOW
 eLE
 eLE
@@ -33805,7 +33840,7 @@ aOW
 aOW
 aOW
 aOW
-fSV
+cuc
 qju
 fSV
 aOW
@@ -34315,18 +34350,18 @@ eLE
 eLE
 aOW
 xlU
-fSV
+cuc
 mpF
 mir
 aOW
 eBg
-tCS
+dFI
 eBg
 aOW
 gPj
 mcF
 oFi
-oFi
+dFI
 aOW
 eLE
 eLE
@@ -35860,7 +35895,7 @@ jXz
 aOW
 aOW
 aOW
-wSf
+mWE
 mGm
 fSV
 qJg
@@ -36638,7 +36673,7 @@ eBg
 iDK
 aOW
 wle
-fSV
+cuc
 ycu
 fSV
 rhO
@@ -36892,7 +36927,7 @@ wSf
 xnV
 fSV
 xnV
-wSf
+mWE
 aOW
 aOW
 aOW
@@ -41531,9 +41566,9 @@ eLE
 eLE
 eLE
 aOW
-tyw
-rTP
-vKJ
+uTN
+uTN
+uTN
 eOF
 vmk
 aOW
@@ -64587,8 +64622,8 @@ kUN
 tfb
 rzI
 tTR
-tfb
-rHU
+imX
+lSo
 bZn
 rHU
 bZn
@@ -64844,7 +64879,7 @@ kUN
 tfb
 tfb
 tfb
-tfb
+imX
 rHU
 bZn
 rHU
@@ -65098,10 +65133,10 @@ kPW
 mrv
 nbG
 kUN
-imX
+tfb
 rzI
 tfb
-tfb
+imX
 rHU
 bZn
 rHU
@@ -65358,7 +65393,7 @@ kUN
 tfb
 tfb
 tfb
-tfb
+imX
 rHU
 bZn
 rHU
@@ -65615,8 +65650,8 @@ kUN
 tfb
 rzI
 tTR
-tfb
-rHU
+imX
+pJf
 bZn
 rHU
 bZn
@@ -76495,36 +76530,36 @@ weW
 weW
 weW
 weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+lYx
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
+weW
 kPb
 nuA
 nuA
-hsR
-weW
-weW
-weW
-weW
-weW
-weW
-lYx
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-weW
-lYx
-weW
-weW
-weW
+cVp
 weW
 weW
 weW
@@ -76752,37 +76787,37 @@ tur
 tur
 tur
 tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+hsR
 tzJ
 veR
-aBr
-veR
 tzJ
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
-tur
+hsR
 tur
 tur
 tur
@@ -79874,7 +79909,7 @@ jPC
 jPC
 jPC
 jPC
-myy
+uoO
 uoO
 uoO
 uoO
@@ -80070,8 +80105,8 @@ xVz
 xVz
 xVz
 qFS
+aBr
 qFS
-cUk
 qFS
 qFS
 eGX
@@ -80125,13 +80160,13 @@ myy
 myy
 myy
 myy
-myy
-myy
-myy
-myy
-myy
-myy
-myy
+uoO
+uoO
+uoO
+uoO
+uoO
+uoO
+uoO
 uoO
 uoO
 uoO
@@ -80327,8 +80362,8 @@ xVz
 xVz
 xVz
 bFC
+aBr
 qFS
-cUk
 qFS
 bFC
 eGX
@@ -80387,8 +80422,8 @@ jPC
 jPC
 jPC
 jPC
-myy
-myy
+uoO
+uoO
 uoO
 uoO
 uoO
@@ -89625,8 +89660,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -89882,8 +89917,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 aoj
@@ -90402,8 +90437,8 @@ uoO
 uoO
 aoj
 aoj
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -90659,8 +90694,8 @@ aoj
 uoO
 uoO
 aoj
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -90916,8 +90951,8 @@ aoj
 uoO
 uoO
 aoj
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -91173,8 +91208,8 @@ aoj
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -91185,7 +91220,7 @@ qzI
 cZA
 tNq
 pHv
-lSo
+qLD
 qLD
 eQC
 fZG
@@ -91678,8 +91713,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -91688,8 +91723,8 @@ aoj
 aoj
 aoj
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -91936,17 +91971,17 @@ uoO
 uoO
 aoj
 aoj
-uoO
-uoO
 aoj
 uoO
 aoj
+uoO
+aoj
 aoj
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -92193,7 +92228,7 @@ uoO
 uoO
 aoj
 aoj
-uoO
+aoj
 uoO
 aoj
 aoj
@@ -92202,8 +92237,8 @@ aoj
 uoO
 tKU
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -92449,6 +92484,8 @@ aoj
 uoO
 uoO
 uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -92457,10 +92494,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -92716,8 +92751,8 @@ tvw
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -92966,15 +93001,15 @@ uoO
 uoO
 aoj
 aoj
-uoO
+aoj
 uoO
 xVz
 xVz
 xVz
 tZq
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -93222,16 +93257,16 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 agL
 xVz
 xVz
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -93479,8 +93514,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 tzE
@@ -93488,7 +93523,7 @@ tCt
 uoO
 uoO
 aoj
-uoO
+aoj
 uoO
 uoO
 uoO
@@ -93737,15 +93772,15 @@ aoj
 aoj
 aoj
 aoj
+aoj
 uoO
 uoO
 uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -93993,11 +94028,11 @@ uoO
 aoj
 uoO
 uoO
+aoj
+aoj
 uoO
-uoO
-uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 uoO
@@ -94253,8 +94288,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+aoj
+aoj
 uoO
 uoO
 aoj
