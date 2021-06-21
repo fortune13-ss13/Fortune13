@@ -760,10 +760,12 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/fnfal)
 
+/*
 /obj/item/book/granter/crafting_recipe/blueprint/caws
 	name = "h&k caws blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/caws)
+*/
 
 /obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine
 	name = "scout carbine blueprint"
@@ -777,7 +779,7 @@
 	granted_trait = TRAIT_MASTER_GUNSMITH
 	traitname = "forge mastery"
 	remarks = list("Strike the steel while its hot...", "Don't take a rest..keep hammering...", "Don't forget to make a handle...", "Use gloves when touching red hot metal...", "Watch the sparks dance like fireflies..")
-	crafting_recipe_types = list(/datum/crafting_recipe/lance, /datum/crafting_recipe/spatha, /datum/crafting_recipe/gladius, /datum/crafting_recipe/trail_carbine, /datum/crafting_recipe/legionshield)
+	crafting_recipe_types = list(/datum/crafting_recipe/lance, /datum/crafting_recipe/spatha, /datum/crafting_recipe/gladius, /datum/crafting_recipe/trail_carbine, /datum/crafting_recipe/legionshield, /datum/crafting_recipe/brush)
 
 /obj/item/book/granter/trait/chemistry
 	name = "Chemistry for Wastelanders"
@@ -868,6 +870,7 @@
 	name = "Private Diary"
 	desc = "Your private diary, reminding you of the knowledge you previously had."
 	granted_trait = null
+	pages_to_mastery = 0
 
 /obj/item/book/granter/trait/selection/attack_self(mob/user)
 	var/list/choices = list("Chemistry","Craftsmanship","Melee Expert","Minor Surgery","Power Armor","Tinkerer","Trekking")
