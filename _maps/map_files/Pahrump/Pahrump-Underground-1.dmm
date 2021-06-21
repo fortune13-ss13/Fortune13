@@ -944,6 +944,7 @@
 "aWj" = (
 /obj/structure/table,
 /obj/item/book/granter/trait/midsurgery,
+/obj/item/storage/backpack/duffelbag/med/surgery,
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -1379,8 +1380,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "bgL" = (
-/obj/structure/table,
-/obj/item/defibrillator/loaded,
+/obj/structure/table/optable,
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -3140,12 +3140,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/brotherhood/leisure)
 "czl" = (
-/obj/item/reagent_containers/medspray/synthflesh,
-/obj/item/reagent_containers/medspray/synthflesh,
-/obj/item/reagent_containers/medspray/synthflesh,
-/obj/item/reagent_containers/medspray/synthflesh,
-/obj/item/reagent_containers/medspray/synthflesh,
 /obj/structure/table,
+/obj/item/defibrillator/loaded,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -4296,19 +4295,7 @@
 	},
 /area/f13/brotherhood/offices1st)
 "dwY" = (
-/obj/structure/table,
-/obj/item/storage/bag/chemistry{
-	pixel_x = 7;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/glass/beaker/large{
-	pixel_x = -10;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/glass/beaker/large{
-	pixel_x = -10;
-	pixel_y = 4
-	},
+/obj/structure/closet/crate/freezer/blood/anchored,
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -5374,7 +5361,15 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "ejG" = (
+/obj/item/reagent_containers/medspray/synthflesh,
+/obj/item/reagent_containers/medspray/synthflesh,
+/obj/item/reagent_containers/medspray/synthflesh,
+/obj/item/reagent_containers/medspray/synthflesh,
+/obj/item/reagent_containers/medspray/synthflesh,
 /obj/structure/table,
+/obj/machinery/defibrillator_mount{
+	pixel_x = 32
+	},
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -5438,7 +5433,19 @@
 	},
 /area/f13/brotherhood/rnd)
 "emV" = (
-/obj/machinery/chem_dispenser,
+/obj/structure/table,
+/obj/item/storage/bag/chemistry{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_x = -10;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_x = -10;
+	pixel_y = 4
+	},
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -12765,6 +12772,12 @@
 	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
+"jRb" = (
+/obj/structure/table,
+/turf/open/floor/f13{
+	icon_state = "bluedirtyfull"
+	},
+/area/f13/enclave)
 "jSf" = (
 /obj/structure/chair/stool/retro/black,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
@@ -16341,12 +16354,12 @@
 /obj/item/clothing/gloves/f13/military,
 /obj/item/clothing/gloves/f13/military,
 /obj/item/clothing/gloves/f13/military,
-/obj/item/clothing/under/syndicate/skirt,
 /obj/item/storage/belt/fannypack/black,
 /obj/item/storage/belt,
 /obj/item/storage/belt/military,
 /obj/item/storage/belt,
 /obj/item/storage/belt/military,
+/obj/item/clothing/under/f13/legskirt/tac,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -18516,7 +18529,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/chem_master/advanced,
+/obj/machinery/chem_dispenser,
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -20586,13 +20599,6 @@
 /obj/item/candle,
 /turf/open/floor/mineral/plastitanium,
 /area/f13/brotherhood/rnd)
-"qfx" = (
-/obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery,
-/turf/open/floor/f13{
-	icon_state = "bluedirtyfull"
-	},
-/area/f13/enclave)
 "qfB" = (
 /obj/machinery/rnd/production/protolathe,
 /obj/effect/decal/cleanable/dirt,
@@ -21345,7 +21351,7 @@
 	},
 /area/f13/brotherhood/rnd)
 "qNd" = (
-/obj/structure/table/optable,
+/obj/machinery/iv_drip,
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -21515,7 +21521,8 @@
 /turf/open/water,
 /area/f13/caves)
 "qRy" = (
-/obj/machinery/light,
+/obj/structure/bed,
+/obj/item/bedsheet/medical,
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -24726,6 +24733,12 @@
 "tCe" = (
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/f13/brotherhood/rnd)
+"tCj" = (
+/obj/machinery/chem_master/advanced,
+/turf/open/floor/f13{
+	icon_state = "bluedirtyfull"
+	},
+/area/f13/enclave)
 "tCl" = (
 /obj/machinery/light/fo13colored/Pink{
 	dir = 1;
@@ -64595,7 +64608,7 @@ uoO
 uoO
 aoj
 aoj
-uoO
+joH
 joH
 joH
 hsN
@@ -64852,12 +64865,12 @@ uoO
 uoO
 aoj
 aoj
-uoO
 joH
 aWj
 hMJ
 hMJ
-qfx
+hMJ
+qRy
 joH
 rsK
 snf
@@ -65109,8 +65122,8 @@ uoO
 uoO
 aoj
 aoj
-uoO
 joH
+czl
 bgL
 hMJ
 imP
@@ -65366,9 +65379,9 @@ uoO
 aoj
 uoO
 aoj
-uoO
 joH
-czl
+ejG
+hMJ
 hMJ
 hMJ
 qRy
@@ -65623,10 +65636,10 @@ uoO
 aoj
 aoj
 uoO
-uoO
+joH
 joH
 dwY
-imP
+emV
 hMJ
 rOT
 joH
@@ -65882,8 +65895,8 @@ uoO
 uoO
 uoO
 joH
-ejG
-imP
+joH
+jRb
 mQd
 uIk
 joH
@@ -66138,9 +66151,9 @@ uoO
 uoO
 uoO
 uoO
+uoO
 joH
-emV
-hMJ
+tCj
 ouq
 uLI
 joH
@@ -66395,7 +66408,7 @@ uoO
 uoO
 uoO
 uoO
-joH
+uoO
 joH
 joH
 joH
