@@ -9479,6 +9479,10 @@
 	icon_state = "bluerustychess2"
 	},
 /area/f13/building)
+"fyc" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/r_wall/rust,
+/area/f13/building)
 "fyf" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -9636,6 +9640,7 @@
 /area/f13/building)
 "fCM" = (
 /obj/machinery/door/unpowered/wooddoor{
+	autoclose = 1;
 	max_integrity = 300;
 	obj_integrity = 300;
 	req_access_txt = "131"
@@ -12223,6 +12228,10 @@
 /obj/item/reagent_containers/glass/bucket/wood,
 /obj/item/shovel/spade,
 /obj/item/plant_analyzer,
+/obj/item/storage/bag/plants,
+/obj/item/cultivator,
+/obj/item/shovel/spade,
+/obj/item/reagent_containers/glass/bucket/wood,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt"
@@ -15579,6 +15588,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13,
 /area/f13/building)
+"iOo" = (
+/obj/structure/closet/cabinet,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "iOr" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -16629,6 +16642,10 @@
 	icon_state = "sheetgrey"
 	},
 /turf/open/floor/f13/wood,
+/area/f13/village)
+"jnt" = (
+/obj/structure/simple_door/wood,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "jnE" = (
 /obj/structure/chair/wood{
@@ -30601,6 +30618,10 @@
 	},
 /turf/closed/wall/r_wall/rust,
 /area/f13/building)
+"rzB" = (
+/obj/structure/rack,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "rzE" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/barricade/wooden,
@@ -52219,7 +52240,7 @@ qFk
 dgK
 otr
 otr
-hTs
+jnt
 otr
 otr
 qFk
@@ -55845,7 +55866,7 @@ cos
 cos
 cos
 cos
-gcK
+cos
 gcK
 gcK
 gcK
@@ -56103,7 +56124,7 @@ cos
 cos
 lHU
 cos
-gcK
+cos
 gcK
 gcK
 gcK
@@ -58159,7 +58180,7 @@ cos
 cos
 ryH
 cos
-nlO
+cos
 mfD
 xGH
 mvv
@@ -58415,7 +58436,7 @@ cos
 cos
 cos
 cos
-trW
+cos
 fyf
 fyf
 tBN
@@ -58666,10 +58687,10 @@ mfD
 mfD
 mfD
 hCg
+fyf
+cos
 gcK
 gcK
-gcK
-ktB
 gcK
 fyf
 fyf
@@ -58920,13 +58941,13 @@ gcK
 gcK
 gcK
 gcK
+cos
+cos
+cos
+fCM
+cos
 gcK
 gcK
-gcK
-gcK
-gcK
-gcK
-ktB
 gcK
 trW
 fyf
@@ -59177,12 +59198,12 @@ gcK
 gcK
 gcK
 gcK
+cos
+rzB
+xzn
+fjs
+cos
 gcK
-gcK
-gcK
-gcK
-gcK
-ktB
 gcK
 gcK
 fyf
@@ -59434,11 +59455,11 @@ ktB
 ktB
 ktB
 ktB
-gcK
-ktB
-ktB
-gcK
-ktB
+cos
+rzB
+rzB
+iOo
+cos
 gcK
 gcK
 gcK
@@ -59691,11 +59712,11 @@ gcK
 gcK
 gcK
 gcK
-ktB
-gcK
-gcK
-ktB
-gcK
+cos
+cos
+cos
+cos
+cos
 gcK
 gcK
 fyf
@@ -74116,7 +74137,7 @@ sYX
 hDo
 rpu
 tDZ
-sYX
+dCV
 sYX
 sYX
 sYX
@@ -74373,7 +74394,7 @@ sYX
 sYX
 aug
 rpu
-sYX
+dCV
 aiT
 nKA
 sYX
@@ -74887,7 +74908,7 @@ sYX
 jeq
 rpu
 rpu
-sYX
+dCV
 bxl
 rpu
 sYX
@@ -75658,7 +75679,7 @@ uTq
 dXf
 rpu
 rpu
-sYX
+dCV
 rpu
 ezz
 sYX
@@ -76172,7 +76193,7 @@ uTq
 aPR
 rpu
 rpu
-sYX
+dCV
 aSY
 vcM
 uTq
@@ -76429,7 +76450,7 @@ uTq
 sYX
 sYX
 uTq
-uTq
+fyc
 hRB
 bPe
 sYX

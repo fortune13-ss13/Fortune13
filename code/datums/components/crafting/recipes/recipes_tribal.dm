@@ -237,6 +237,7 @@
 	time = 30
 	reqs = list(/obj/item/stack/sheet/bone = 1)
 	tools = list(TOOL_WORKBENCH)
+	category = CAT_TRIBAL
 
 /datum/crafting_recipe/tribal/maletribal
 	name = "Coarse Tribal outfit"

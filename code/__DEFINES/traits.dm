@@ -150,6 +150,7 @@
 #define TRAIT_CALCIUM_HEALER	"calcium_healer"
 #define TRAIT_MAGIC_CHOKE		"magic_choke"
 #define TRAIT_CAPTAIN_METABOLISM "captain-metabolism"
+#define TRAIT_TRIBAL_ARTISAN	"tribal_artisan"
 #define TRAIT_ABDUCTOR_TRAINING "abductor-training"
 #define TRAIT_ABDUCTOR_SCIENTIST_TRAINING "abductor-scientist-training"
 #define TRAIT_SURGEON           "surgeon"
