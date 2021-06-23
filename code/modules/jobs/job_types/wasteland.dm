@@ -42,7 +42,7 @@
 		/obj/item/ammo_box/magazine/m556/rifle/extended=2,
 		/obj/item/storage/bag/money/small/wastelander=1,
 		/obj/item/kitchen/knife/combat=1
-		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
+		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper=1
 		)
 
 /datum/job/wasteland/enclavesgt
@@ -101,7 +101,7 @@
 	faction = "Enclave"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
+	description = "You are the last surviving Scientist in this garrison, responsible for logistics, medicine, and science. Remember that you are a non-combatant and your service pistol is for self defence only, you are not to leave the base unless ordered or left with no choice, (I.E. the base is raided and the rest of the garrison are dead or abandoning the base.)"
 	forbids = ""
 	enforces = ""
 	supervisors = "The Lieutenant, the Sergeants."
