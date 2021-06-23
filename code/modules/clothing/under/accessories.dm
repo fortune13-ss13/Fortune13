@@ -492,7 +492,7 @@
 	item_color = "elder"
 	minimize_when_attached = TRUE
 
-//Ranks
+//NCR Ranks
 
 /obj/item/clothing/accessory/ncr
 	name = "(O-6) Colonel rank pin"
@@ -574,7 +574,7 @@
 
 /obj/item/clothing/accessory/ncr/REC
 	name = "(E-2) Private rank pins"
-	desc = "A recruit should wear this."
+	desc = "A trooper should wear this."
 	icon_state = "ncrenlisted"
 	item_color = "ncrenlisted"
 	minimize_when_attached = TRUE
@@ -624,3 +624,4 @@
 	desc = "A Chief Ranger should wear this."
 	icon_state = "colonelrank" //TO-DO: Add a new sprite
 	item_color = "colonelrank"
+

@@ -10,7 +10,7 @@
 	description = "You are an undercover operative for the remnants of the Enclave. You are to remain concealed and attempt to present the Enclave in a positive light to the population of the wasteland unless overt action is absolutely necessary."
 	forbids = ""
 	enforces = ""
-	supervisors = "the United States Government."
+	supervisors = "The Lieutenant, the Sergeants, the Science Officer."
 	selection_color = "#162b2c"
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 600
@@ -23,14 +23,15 @@
 /datum/outfit/job/wasteland/enclavespy
 	name = "Enclave Private"
 	jobtype = /datum/job/wasteland/enclavespy
-	backpack = /obj/item/storage/backpack/satchel/leather
+	backpack = /obj/item/storage/backpack/satchel/enclave
 	head = 			/obj/item/clothing/head/helmet/f13/combat/enclave
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
-	uniform =		/obj/item/clothing/under/f13/navy
+	uniform =		/obj/item/clothing/under/f13/enclave/peacekeeper
+	accessory =     /obj/item/clothing/accessory/ncr/TPR
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/enclave
-	belt = 			/obj/item/storage/belt/military/army
-	shoes = 		/obj/item/clothing/shoes/combat/swat
+	belt = 			/obj/item/storage/belt/military/assault/enclave
+	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	id = 			/obj/item/card/id/dogtag/enclave
 	suit_store =  	/obj/item/gun/ballistic/automatic/assault_carbine
 
@@ -41,6 +42,7 @@
 		/obj/item/ammo_box/magazine/m556/rifle/extended=2,
 		/obj/item/storage/bag/money/small/wastelander=1,
 		/obj/item/kitchen/knife/combat=1
+		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
 		)
 
 /datum/job/wasteland/enclavesgt
@@ -52,7 +54,7 @@
 	description = "You are in charge of the recruiting for the remnants of the Enclave. You are to recruit all those interested to your cause."
 	forbids = ""
 	enforces = ""
-	supervisors = "the United States Government."
+	supervisors = "The Lieutenant."
 	selection_color = "#162b2c"
 	exp_requirements = 1200
 	exp_type = EXP_TYPE_FALLOUT
@@ -69,6 +71,7 @@
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/f13/enclave/peacekeeper
+	accessory =     /obj/item/clothing/accessory/ncr/SGT
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/x02
 	belt = 			/obj/item/storage/belt/military/assault/enclave
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
@@ -96,12 +99,12 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	faction = "Enclave"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
 	forbids = ""
 	enforces = ""
-	supervisors = "the United States Government."
+	supervisors = "The Lieutenant, the Sergeants."
 	selection_color = "#162b2c"
 	exp_requirements = 1400
 	exp_type = EXP_TYPE_FALLOUT
@@ -120,6 +123,7 @@
 	mask =			/obj/item/clothing/mask/breath/medical
 	gloves = 		/obj/item/clothing/gloves/color/latex/nitrile
 	uniform =		/obj/item/clothing/under/f13/enclave/science
+	accessory =     /obj/item/clothing/accessory/ncr/SPC
 	suit = 			/obj/item/clothing/suit/armor/f13/environmentalsuit
 	belt = 			/obj/item/storage/belt/medical
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
@@ -157,7 +161,7 @@
 	description = "You are the Lieutenant in charge of commanding the remnants of the Enclave forces in the area. You are to recruit all those interested to your cause."
 	forbids = ""
 	enforces = ""
-	supervisors = "the United States Government."
+	supervisors = "Enclave Armed Forces."
 	selection_color = "#162b2c"
 	exp_requirements = 1500
 	exp_type = EXP_TYPE_ENCLAVE
@@ -176,6 +180,7 @@
 	glasses = 		/obj/item/clothing/glasses/night
 	mask = 			/obj/item/clothing/mask/gas/enclave
 	uniform =		/obj/item/clothing/under/f13/enclave/officer
+	accessory =     /obj/item/clothing/accessory/ncr/LT1
 	belt = 			/obj/item/storage/belt/military/assault/enclave
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	id = 			/obj/item/card/id/dogtag/enclave
@@ -710,7 +715,7 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 600
 	exp_type = EXP_TYPE_OUTLAW
-	
+
 	outfit = /datum/outfit/job/wasteland/f13enforcer
 
 	access = list(ACCESS_DEN)
@@ -721,7 +726,7 @@ Raider
 							/datum/outfit/loadout/hitman,
 							/datum/outfit/loadout/bodyguard)
 
-					
+
 
 
 /datum/outfit/job/wasteland/f13enforcer
@@ -789,7 +794,7 @@ Raider
 						/obj/item/kitchen/knife/combat=1
 							)
 
-							
+
 
 
 /datum/job/wasteland/f13mobboss
@@ -804,7 +809,7 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 1000
 	exp_type = EXP_TYPE_OUTLAW
-	
+
 	outfit = /datum/outfit/job/wasteland/f13mobboss
 
 	access = list(ACCESS_DEN)
@@ -832,7 +837,7 @@ Raider
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/ammo_box/magazine/m10mm_p90=2, \
-		/obj/item/storage/bag/money/small/raider/mobboss)	
+		/obj/item/storage/bag/money/small/raider/mobboss)
 
 /datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -850,7 +855,7 @@ Raider
 		GLOB.all_gangs |= DM
 		DM.add_member(H)
 		H.gang = DM
-	
+
 //vigilante
 
 
@@ -872,7 +877,7 @@ Raider
 							/datum/outfit/loadout/desert_ranger,
 							/datum/outfit/loadout/bounty_hunter,
 							/datum/outfit/loadout/retired_ranger)
-		
+
 
 /datum/outfit/job/wasteland/f13vigilante
 	name = "Vigilante"
