@@ -782,7 +782,7 @@
 	desc = "(II) A helmet fastened from the skull of a deer. Something about it doesn't look right."
 	icon_state = "shamskull"
 	item_state = "shamskull"
-	armor = list("tier" = 2, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 10, "fire" = 10, "acid" = 0)
+	armor = list("tier" = 4, "energy" = 40, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 0)
 
 /obj/item/clothing/head/f13/helmet/wayfarer
 
@@ -843,6 +843,13 @@
 	icon_state = "chiefgreen"
 	item_state = "chiefgreen"
 	armor = list("tier" = 7, "energy" = 40, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/tribe_helmet
+	name = "tribal combat helmet"
+	desc = "(V) An old military grade pre-war combat helmet, fashioned with bones, sinew, and war paint of a tribal."
+	icon_state = "tribe_helmet"
+	item_state = "tribe_helmet"
+	armor = list("tier" = 5, "energy" = 30, "bomb" = 40, "bio" = 50, "rad" = 10, "fire" = 50, "acid" = 20)
 
 //Followers
 

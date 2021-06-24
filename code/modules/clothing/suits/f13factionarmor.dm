@@ -638,6 +638,24 @@
 	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
 )
 
+/obj/item/clothing/suit/armor/f13/lightcloak
+	name = "light tribal cloak"
+	desc = "(IV) A light gecko skin cloak, made of cloth and insect chitin. The material is rather light and allows for quick movement, a favorite amongst scouts and skirmishers of the Tribe."
+	icon_state = "lightcloak"
+	item_state = "lightcloak"
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 45, "fire" = 50, "acid" = 100)
+	slowdown = -0.1
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
+)
+
+/obj/item/clothing/suit/armor/f13/tribe_combat_armor
+	name = "tribal combat armor"
+	desc = "(V) An old military grade pre war combat armor, sinew, bones, and markings cover the armor in its now tribalized style."
+	icon_state = "tribecombatarmor"
+	item_state = "tribecombatarmor"
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
+)
+
 //Followers
 
 //Vault
