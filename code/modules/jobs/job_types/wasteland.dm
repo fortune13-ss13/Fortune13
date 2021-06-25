@@ -1,6 +1,6 @@
 /datum/job/wasteland
 	department_flag = WASTELAND
-
+//.
 /datum/job/wasteland/enclavespy
 	title = "Enclave Private"
 	flag = F13USPRIVATE
