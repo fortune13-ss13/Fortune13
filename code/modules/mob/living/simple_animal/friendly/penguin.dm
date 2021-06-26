@@ -49,3 +49,11 @@
 	density = FALSE
 	pass_flags = PASSMOB
 	mob_size = MOB_SIZE_SMALL
+
+/mob/living/simple_animal/pet/penguin/emperor/captain
+	name = "Captain P. E. Guin"
+	desc = "Captain of all he surveys."
+	icon_state = "penguin_shamebrero"
+	icon_living = "penguin_shamebrero"
+	gold_core_spawnable = NO_SPAWN
+	unique_pet = TRUE

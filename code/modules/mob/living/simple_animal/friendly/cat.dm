@@ -317,3 +317,11 @@
 		return
 	else
 		..()
+
+//cat for the VERY SECRET UPCOMING CHINESE REMNANT BASE DON'T TELL ANYONE
+/mob/living/simple_animal/pet/cat/chinese
+	name = "General Xia"
+	desc = "A follower of Chairman Meow."
+	icon_state = "communist_cat"
+	icon_living = "communist_cat"
+	icon_dead = "communist_cat_dead"
