@@ -1,5 +1,4 @@
 /*PARENT ITEMS FOR REFERENCE PURPOSES. DO NOT UNCOMMENT
-
 /obj/item/clothing/head
 	name = BODY_ZONE_HEAD
 	icon = 'icons/obj/clothing/hats.dmi'
@@ -12,6 +11,7 @@
 	dynamic_hair_suffix = "+generic"
 	var/datum/beepsky_fashion/beepsky_fashion //the associated datum for applying this to a secbot
 	var/list/speechspan = null
+	armor = list("tier" = 1)
 
 /obj/item/clothing/head/Initialize()
 	. = ..()
@@ -61,6 +61,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	permeability_coefficient = 0.7 // for chemicals/diseases. 1 is no protection, 0.01 is effective immunity. Doing 30% for this, only covers the top of the head. Better wear a gas mask!
 
 /obj/item/clothing/head/helmet/f13/combat/dark
 	color = "#302E2E" // Dark Grey
@@ -102,6 +103,7 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	flash_protect = 1
+	permeability_coefficient = 0.85 // Broken!
 
 /obj/item/clothing/head/helmet/f13/combat/swat
 	name = "SWAT combat helmet"
@@ -118,6 +120,7 @@
 	strip_delay = 60
 	equip_delay_other = 60
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	permeability_coefficient = 0.01
 
 /obj/item/clothing/head/helmet/f13/combat/environmental/ComponentInitialize()
 	. = ..()
@@ -133,6 +136,7 @@
 	armor = list("tier" = 6, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	permeability_coefficient = 0.4
 
 //Metal
 
@@ -173,6 +177,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
+	permeability_coefficient = 0.7 // Crude
 
 /obj/item/clothing/head/helmet/f13/metalmask/Initialize()
 	. = ..()
@@ -200,6 +205,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	var/hit_reflect_chance = 20
 	protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/helmet/f13/tesla/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(is_energy_reflectable_projectile(object) && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
@@ -223,6 +229,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	clothing_flags = THICKMATERIAL
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	permeability_coefficient = 0.01
 	item_flags = SLOWS_WHILE_IN_HAND
 	flash_protect = 2
 	dynamic_hair_suffix = ""
@@ -603,6 +610,7 @@
 	strip_delay = 30
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/f13
 	flags_inv = HIDEHAIR
@@ -626,6 +634,7 @@
 	desc = "White cloth headdress for nurses"
 	icon_state = "nursehat"
 	item_state = "nursehat"
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/f13/beaver
 	name = "beaverkin"
@@ -676,6 +685,7 @@
 	icon_state = "headscarf"
 	item_state = "dethat"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/f13/headscarf/Initialize()
 	. = ..()
@@ -690,6 +700,7 @@
 	hitsound = 'sound/items/trayhit1.ogg'
 	flags_inv = HIDEHAIR
 	armor = list("tier" = 3)
+	permeability_coefficient = 0.9
 
 /obj/item/clothing/head/f13/cowboy
 	name = "cowboy hat"
@@ -756,6 +767,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	permeability_coefficient = 0.01
 
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	name = "brahmin leather cowboy hat"
@@ -873,6 +885,7 @@
 	icon_state = "jasonmask"
 	item_state = "jasonmask"
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
+	permeability_coefficient = 0.3
 
 /obj/item/clothing/head/welding/f13/fire
 	name = "cremator welding helmet"
@@ -890,6 +903,7 @@
 	armor = list("tier" = 2, "energy" = 45, "bomb" = 55, "bio" = 65, "rad" = 100, "fire" = 60, "acid" = 20)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	permeability_coefficient = 0.35
 
 /obj/item/clothing/head/f13/flatranger
 	name = "NCR gambler ranger hat"
@@ -897,6 +911,7 @@
 	icon_state = "gamblerrang"
 	item_state = "gamblerrang"
 	armor = list("tier" = 4, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/head/helmet/f13/legion/venator/diohelmet
 	name = "galerum lacertarex"
@@ -904,6 +919,7 @@
 	icon_state = "diohelmet"
 	item_state = "diohelmet"
 	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/herbertranger
 	name = "weathered desert ranger helmet"

@@ -56,6 +56,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list("tier" = 4, "energy" = 25, "bomb" = 30, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	permeability_coefficient = 0.7 // for chemicals/diseases. 1 is no protection, 0.01 is effective immunity. Doing 30% for this, only covers the top of the head. Better wear a gas mask!
 
 /obj/item/clothing/head/helmet/f13/raider/supafly
 	name = "supa-fly raider helmet"
@@ -187,6 +188,7 @@
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
 	armor = list("tier" = 1)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/intel
 	name = "intel beret"
@@ -223,6 +225,7 @@
 	item_state = "legslaveservant"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
+	permeability_coefficient = 0.7 // Not as good as true medical gear, but better than nothing!
 
 /obj/item/clothing/head/f13/legion/auxilia
 	name = "auxilia headwear"
@@ -231,6 +234,7 @@
 	item_state = "legaux"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet"
@@ -244,6 +248,7 @@
 	strip_delay = 50
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/helmet/f13/legion/recruit
 	name = "legion recruit helmet"
@@ -263,6 +268,7 @@
 	item_state = "legprime"
 	icon_state = "legprime"
 	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
 	name = "slave master helmet"
@@ -279,6 +285,7 @@
 	icon_state = "legvet"
 	item_state = "legvet"
 	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/legion/heavy
 	name = "legion veteran decan helmet"
@@ -287,12 +294,14 @@
 	item_state = "legheavy"
 	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
 	actions_types = list(/datum/action/item_action/toggle)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/legion/heavy/attack_self(mob/user)
 	weldingvisortoggle(user)
 	icon_state = "legheavyup"
 	item_state = "legheavyup"
 	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/legion/vet/explorer
 	name = "legion explorer hood"
@@ -318,6 +327,7 @@
 	icon_state = "legvenator"
 	item_state = "legvenator"
 	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/legion/libritor
 	name = "legion libritor helmet"
@@ -325,6 +335,7 @@
 	icon_state = "legheavy"
 	item_state = "legheavy"
 	armor = list("tier" = 7, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/legion/recruit/decan
 	name = "legion recruit decanus helmet"
@@ -332,6 +343,7 @@
 	icon_state = "legdecan"
 	item_state = "legdecan"
 	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
@@ -339,6 +351,7 @@
 	item_state = "legdecanprim"
 	icon_state = "legdecanprim"
 	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
@@ -346,7 +359,7 @@
 	icon_state = "legdecanvet"
 	item_state = "legdecanvet"
 	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
-
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/f13/legion/centurion
 	name = "legion centurion helmet"
@@ -355,6 +368,7 @@
 	item_state = "legcenturion"
 	armor = list("tier" = 6, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "ranger-hunter centurion helmet"
@@ -363,6 +377,7 @@
 	item_state = "rangercent"
 	armor = list("tier" = 5, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "paladin-slayer centurion helmet"
@@ -371,12 +386,14 @@
 	item_state = "palacent"
 	armor = list("tier" = 6, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/legion/palacent/custom_excess
 	name = "Champion of Kanab's Helm"
 	desc = "(VII) A custom forged steel full helmet made for the Conqueror and Champion of Kanab. It has a large plume of red horse hair across the top of it going horizontally, symbolizing the position of a Centurion."
 	icon_state = "palacent_excess"
 	item_state = "palacent_excess"
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/legion/legate
 	name = "legion legate helmet"
@@ -387,6 +404,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/legion/marsheaddress
 	name = "priestess' headdress"
@@ -394,6 +412,7 @@
 	icon_state = "mars_headdress"
 	item_state = "mars_headdress"
 	dynamic_hair_suffix = "+generic"
+	permeability_coefficient = 0.01 // Blessed by Mars... And the admemes.
 
 /obj/item/clothing/head/helmet/f13/combat/legion
 	name = "Legion combat helmet"
@@ -418,6 +437,7 @@
 	strip_delay = 50
 	obj_flags = UNIQUE_RENAME
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
+	permeability_coefficient = 0.7 // The goggles do nothing!
 
 /obj/item/clothing/head/f13/ncr/Initialize()
 	. = ..()
@@ -496,6 +516,7 @@
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	icon_state = "ncr_flapcap"
 	item_state = "ncr_flapcap"
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/f13/ncr_slouch
 	name = "NCR slouch hat"
@@ -503,6 +524,7 @@
 	icon_state = "ncr_slouch"
 	item_state = "ncr_slouch"
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr
 	name = "NCR officer beret"
@@ -510,6 +532,7 @@
 	icon_state = "ncr_officer_beret"
 	item_state = "ncr_officer_beret"
 	armor = list("tier" = 6, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr_recon
 	name = "NCR First Recon beret"
@@ -517,6 +540,7 @@
 	icon_state = "ncr_recon_beret"
 	item_state = "ncr_recon_beret"
 	armor = list("tier" = 6, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr_scout
 	name = "NCR Third Scout beret"
@@ -524,6 +548,7 @@
 	icon_state = "scoutberet"
 	item_state = "scoutberet"
 	armor = list("tier" = 6, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr_scout_lt
 	name = "NCR Third Scout officer beret"
@@ -531,6 +556,7 @@
 	icon_state = "scoutberet"
 	item_state = "scoutberet"
 	armor = list("tier" = 6, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr_sapper
 	name = "NCR Sapper beret"
@@ -538,6 +564,7 @@
 	icon_state = "ncr_sapper_beret"
 	item_state = "ncr_sapper_beret"
 	armor = list("tier" = 7, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr_sof
 	name = "NCR SOF beret"
@@ -545,6 +572,7 @@
 	icon_state = "ncr_sof_beret"
 	item_state = "ncr_sof_beret"
 	armor = list("tier" = 7, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/f13/ncr_stetson
 	name = "NCR air cavalry stetson"
@@ -552,6 +580,7 @@
 	icon_state = "ncr_stetson"
 	item_state = "ncr_stetson"
 	armor = list("tier" = 7, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/f13/ncr_cap
 	name = "NCR garrison cap"
@@ -566,6 +595,7 @@
 	icon_state = "ncr_campaign"
 	item_state = "ncr_campaign"
 	armor = list("tier" = 7, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr_dresscap
 	name = "NCR peaked cap"
@@ -573,6 +603,7 @@
 	icon_state = "ncr_dresscap"
 	item_state = "ncr_dresscap"
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/beret/ncr_codresscap
 	name = "NCR peaked cap"
@@ -580,6 +611,7 @@
 	icon_state = "ncr_codresscap"
 	item_state = "ncr_codresscap"
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 //NCR Ranger
 
@@ -589,6 +621,7 @@
 	icon_state = "scoutberet"
 	item_state = "scoutberet"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/head/f13/trailranger
 	name = "NCR trail ranger hat"
@@ -596,6 +629,7 @@
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
 	armor = list("tier" = 4, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/head/f13/ranger
 	name = "NCR ranger campaign hat"
@@ -603,6 +637,7 @@
 	icon_state = "drillhat"
 	item_state = "drill_hat"
 	armor = list("tier" = 5, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/head/helmet/f13/combat/ncr_patrol
 	name = "NCR patrol helmet"
@@ -639,6 +674,7 @@
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/eliteriot
 	name = "elite riot gear helmet"
@@ -646,6 +682,7 @@
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
 	armor = list("tier" = 8, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
+	permeability_coefficient = 0.4
 
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
@@ -662,6 +699,7 @@
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
 	armor = list("tier" = 4, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
+	permeability_coefficient = 0.7
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
@@ -673,6 +711,7 @@
 	icon_state = "brotherhood_helmet_knight"
 	item_state = "brotherhood_helmet_knight"
 	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood star knight helmet"
@@ -730,6 +769,7 @@
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
 	armor = list("tier" = 3, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 30, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/head/f13/town/mayor
 	name = "mayoral tricorn"
@@ -783,6 +823,7 @@
 	icon_state = "shamskull"
 	item_state = "shamskull"
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 10, "fire" = 10, "acid" = 0)
+	permeability_coefficient = 0.8
 
 /obj/item/clothing/head/f13/helmet/wayfarer
 
@@ -792,6 +833,7 @@
 	icon_state = "hunterhelm"
 	item_state = "hunterhelm"
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 10, "fire" = 10, "acid" = 0)
+	permeability_coefficient = 0.8
 
 /obj/item/clothing/head/helmet/f13/wayfarer/antler
 	name = "antler skullcap"
@@ -799,6 +841,7 @@
 	icon_state = "antlerhelm"
 	item_state = "antlerhelm"
 	armor = list("tier" = 3, "energy" = 0, "bomb" = 20, "bio" = 70, "rad" = 10, "fire" = 20, "acid" = 0)
+	permeability_coefficient = 0.3
 
 /obj/item/clothing/head/helmet/f13/wayfarer/shamanblue
 	name = "ritual headdress"
@@ -806,6 +849,7 @@
 	icon_state = "shamanblue"
 	item_state = "shamanblue"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 20, "bio" = 70, "rad" = 10, "fire" = 20, "acid" = 0)
+	permeability_coefficient = 0.3
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/wayfarer/shamanred
@@ -814,6 +858,7 @@
 	icon_state = "shamanred"
 	item_state = "shamanred"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 20, "bio" = 70, "rad" = 10, "fire" = 20, "acid" = 0)
+	permeability_coefficient = 0.3
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/wayfarer/chief
@@ -822,6 +867,7 @@
 	icon_state = "chiefblue"
 	item_state = "chiefblue"
 	armor = list("tier" = 7, "energy" = 40, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.4
 	actions_types = list(/datum/action/item_action/toggle)
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
@@ -836,6 +882,7 @@
 	icon_state = "chiefred"
 	item_state = "chiefred"
 	armor = list("tier" = 7, "energy" = 40, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/head/helmet/f13/wayfarer/chief/green
 	name = "helm of the helping hand"
@@ -843,6 +890,7 @@
 	icon_state = "chiefgreen"
 	item_state = "chiefgreen"
 	armor = list("tier" = 7, "energy" = 40, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.4
 
 //Followers
 
@@ -852,13 +900,15 @@
 	name = "security helmet"
 	desc = "(V) A standard issue vault security helmet, pretty robust."
 	armor = list("tier" = 5, "energy" = 5, "bomb" = 5, "bio" = 2, "rad" = 0, "fire" = 50, "acid" = 50)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/head/helmet/riot/vaultsec/vc
 	name = "vtcc riot helmet"
 	desc = "(VII) A riot helmet adapted from the design of most pre-war riot helmets, painted blue."
 	icon_state = "vtcc_riot_helmet"
 	item_state = "vtcc_riot_helmet"
-	armor = list("tier" = 7, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+	armor = list("tier" = 7, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 60)
+	permeability_coefficient = 0.4
 
 
 

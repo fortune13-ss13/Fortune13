@@ -114,6 +114,7 @@
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 40, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 20)
 	strip_delay = 30
 	icon = 'icons/fallout/clothing/suits.dmi'
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/exile/ncrexile
 	name = "modified NCR armor"
@@ -151,6 +152,7 @@
 	icon_state = "raider_combat"
 	item_state = "raider_combat"
 	armor = list("tier" = 5, "energy" = 30, "bomb" = 50, "bio" = 50, "rad" = 10, "fire" = 60, "acid" = 10)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/suit/armor/f13/raider/raidermetal
 	name = "metal raider armor"
@@ -158,6 +160,7 @@
 	icon_state = "raider_metal"
 	item_state = "raider_metal"
 	armor = list("tier" = 5, "energy" = 35, "bomb" = 50, "bio" = 50, "rad" = 10, "fire" = 60, "acid" = 10)
+	permeability_coefficient = 0.5
 	resistance_flags = FIRE_PROOF
 
 //Legion
@@ -168,6 +171,7 @@
 	icon_state = "legmedicus"
 	armor = list("energy" = 0, "bomb" = 0, "bio" = 20, "rad" = 0, "fire" = 0, "acid" = 0)
 	allowed = list(/obj/item/scalpel, /obj/item/surgical_drapes, /obj/item/cautery, /obj/item/hemostat, /obj/item/retractor)
+	permeability_coefficient = 0.8
 
 /obj/item/clothing/suit/armor/f13/opifex
 	name = "opifex apron"
@@ -176,6 +180,7 @@
 	item_state = "opifex_apron"
 	blood_overlay_type = "armor"
 	armor = list("melee" = 5,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 5)
+	permeability_coefficient = 0.7
 	allowed = list(/obj/item/crowbar,
 		/obj/item/screwdriver,
 		/obj/item/weldingtool,
@@ -209,6 +214,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	allowed = list(/obj/item/gun, /obj/item/claymore, /obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/twohanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
 	armor = list("tier" = 2, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/suit/armor/f13/legion/Initialize()
 	. = ..()
@@ -231,6 +237,7 @@
 	icon_state = "legprime"
 	slowdown = -0.13
 	armor = list("tier" = 3, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/legion/prime/slavemaster
 	name = "slavemaster armor"
@@ -243,6 +250,7 @@
 	icon_state = "legvet"
 	slowdown = -0.1
 	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/suit/armor/f13/legion/heavy
 	name = "legion veteran decan armor"
@@ -251,6 +259,7 @@
 	item_state = "legmetal"
 	slowdown = -0.1
 	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/suit/armor/f13/legion/vet/explorer
 	name = "legion explorer armor"
@@ -268,12 +277,14 @@
 	desc = "(VI) The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers and a chainmail skirt."
 	icon_state = "legvenator"
 	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/suit/armor/f13/legion/vet/orator
 	name = "legion orator armor"
 	desc = "(VI) The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
 	icon_state = "legheavy"
 	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	permeability_coefficient = 0.5
 
 /obj/item/clothing/suit/armor/f13/legion/centurion
 	name = "legion centurion armor"
@@ -281,6 +292,7 @@
 	icon_state = "legcenturion"
 	slowdown = -0.13
 	armor = list("tier" = 6, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/legion/palacent
 	name = "paladin-slayer centurion armor"
@@ -288,6 +300,7 @@
 	icon_state = "palacent"
 	slowdown = -0.13
 	armor = list("tier" = 6, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/legion/palacent/custom_excess
 	name = "Champion of Kanab's Armor"
@@ -302,6 +315,7 @@
 	item_state = "rangercent"
 	slowdown = -0.2
 	armor = list("tier" = 5, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/legion/legate
 	name = "legion legate armor"
@@ -309,6 +323,7 @@
 	icon_state = "leglegat"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("tier" = 8, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/combat/legion
 	name = "Legion combat armor"
@@ -330,6 +345,7 @@
 	item_state = "ncr_infantry_vest"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/Initialize()
 	. = ..()
@@ -362,6 +378,7 @@
 	icon_state = "ncr_labcoat"
 	item_state = "ncr_labcoat"
 	armor = list("tier" = 3, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.4
 	allowed = list(/obj/item/gun, /obj/item/analyzer, /obj/item/stack/medical, /obj/item/dnainjector, /obj/item/reagent_containers/dropper, /obj/item/reagent_containers/syringe, /obj/item/reagent_containers/hypospray, /obj/item/healthanalyzer, /obj/item/flashlight/pen, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/glass/beaker, /obj/item/reagent_containers/pill, /obj/item/storage/pill_bottle, /obj/item/paper, /obj/item/melee/classic_baton/telescopic, /obj/item/soap, /obj/item/sensor_device, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/captain
@@ -442,6 +459,7 @@
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/f13/rangerrig
@@ -450,6 +468,7 @@
 	icon_state = "r_gear_rig"
 	item_state = "r_gear_rig"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/f13/trailranger
@@ -458,6 +477,7 @@
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.7
 	slowdown = -0.14
 
 /obj/item/clothing/suit/armor/f13/modif_r_vest
@@ -466,6 +486,7 @@
 	icon_state = "modif_r_vest"
 	item_state = "modif_r_vest"
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/combat/ncr_patrol
 	name = "ranger patrol armor"
@@ -473,6 +494,7 @@
 	icon_state = "ncr_patrol"
 	item_state = "ncr_patrol"
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/combat/ncr_patrol/mutant
 	name = "mutant ranger armor"
@@ -492,6 +514,7 @@
 	icon_state = "refurb_scout"
 	item_state = "refurb_scout"
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "veteran ranger combat armor"
@@ -500,6 +523,7 @@
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list("tier" = 7, "energy" = 40, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/ncrcfjacket
 	name = "NCRCF jacket"
@@ -549,6 +573,7 @@
 	icon_state = "brotherhood_armor_knight"
 	item_state = "brotherhood_armor_knight"
 	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight armor"
@@ -568,6 +593,7 @@
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
 	armor = list("tier" = 5, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/initiate/mk2
 	name = "reinforced initiate armor"
@@ -575,6 +601,7 @@
 	icon_state = "brotherhood_armor_mk2"
 	item_state = "brotherhood_armor_mk2"
 	armor = list("tier" = 6, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/outcast
 	name = "brotherhood armor"
@@ -582,6 +609,7 @@
 	icon_state = "brotherhood_armor_outcast"
 	item_state = "brotherhood_armor_outcast"
 	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 
 //Oasis/Town
 /obj/item/clothing/suit/armor/f13/town
@@ -591,23 +619,27 @@
 	item_state = "hostrench"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("tier" = 3, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 30, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/town/mayor
 	name = "mayor trenchcoat"
 	desc = "(IV) A symbol of the mayor's authority (or lack thereof)."
 	armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/town/sheriff
 	name = "sheriff trenchcoat"
 	desc = "(VI) A trenchcoat which does not attempt to hide the full-body combat armor beneath it."
 	icon_state = "towntrench_heavy"
 	armor = list("tier" = 6, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/town/deputy
 	name = "deputy trenchcoat"
 	desc = "(V) An armored trench coat with added shoulderpads, a chestplate, and legguards."
 	icon_state = "towntrench_medium"
 	armor = list("tier" = 5, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+	permeability_coefficient = 0.6
 
 //Great Khan
 /obj/item/clothing/suit/armor/khan_jacket
@@ -625,6 +657,7 @@
 	item_state = "tribal_armor"
 	body_parts_covered = CHEST|GROIN|ARMS
 	armor = list("tier" = 4, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100)
+	permeability_coefficient = 0.01
 	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
 )
 
@@ -634,6 +667,7 @@
 	icon_state = "heavy_tribal_armor"
 	item_state = "heavy_tribal_armor"
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	permeability_coefficient = 0.4
 	flags_inv = HIDEJUMPSUIT
 	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
 )
@@ -647,7 +681,8 @@
 	desc = "(VII) A suit of riot armour adapted from the design of the pre-war U.S.M.C. armour, painted blue and white."
 	icon_state = "vtcc_riot_gear"
 	item_state = "vtcc_riot_gear"
-	armor = list("tier" = 7, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+	armor = list("tier" = 7, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 60)
+	permeability_coefficient = 0.4
 
 
 //THE GRAVEYARD

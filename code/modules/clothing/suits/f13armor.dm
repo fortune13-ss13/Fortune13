@@ -31,6 +31,7 @@
 	item_state = "combat_jacket"
 	desc = "(III) This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
 	armor = list("tier" = 3, "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
+	permeability_coefficient = 0.75
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
 	name = "combat leather coat"
@@ -38,6 +39,7 @@
 	item_state = "combat_coat"
 	desc = "(IV) A combat leather jacket, outfitted with a special armored leather coat."
 	armor = list("tier" = 4, "energy" = 35, "bomb" = 45, "bio" = 30, "rad" = 5, "fire" = 50, "acid" = 35)
+	permeability_coefficient = 0.65
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice
 	name = "combat body armor"
@@ -45,6 +47,7 @@
 	item_state = "combat_coat"
 	desc = "(VII) A heavy armor with ballistic inserts, sewn into a padded riot police coat."
 	armor = list("tier" = 7, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 35)
+	permeability_coefficient = 0.55
 
 /obj/item/clothing/suit/armor/f13/kit
 	name = "armor kit"
@@ -77,6 +80,7 @@
 	icon_state = "leather_armor"
 	item_state = "leather_armor"
 	armor = list("tier" = 3, "energy" = 25, "bomb" = 32, "bio" = 0, "rad" = 10, "fire" = 30, "acid" = 35)
+	permeability_coefficient = 0.8
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
@@ -85,6 +89,7 @@
 	item_state = "leather_armor_2"
 	desc = "(IV) An enhanced version of the basic leather armor with extra layers of protection. Finely crafted from tanned brahmin hide."
 	armor = list("tier" = 4, "energy" = 30, "bomb" = 35, "bio" = 0, "rad" = 15, "fire" = 40, "acid" = 35)
+	permeability_coefficient = 0.8
 
 /obj/item/clothing/suit/armor/f13/metalarmor
 	name = "metal armor"
@@ -92,6 +97,7 @@
 	icon_state = "metal_chestplate"
 	item_state = "metal_chestplate"
 	armor = list("tier" = 4, "energy" = 40, "bomb" = 40, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.8
 	slowdown = 0.25
 	strip_delay = 10
 
@@ -110,6 +116,7 @@
 	icon_state = "metal_chestplate2"
 	item_state = "metal_chestplate2"
 	armor = list("tier" = 5, "energy" = 50, "bomb" = 40, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	permeability_coefficient = 0.8
 	slowdown = 0.05
 	strip_delay = 10
 
@@ -120,6 +127,7 @@
 	icon_state = "combat_armor"
 	item_state = "combat_armor"
 	armor = list("tier" = 5, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	permeability_coefficient = 0.4
 
 /obj/item/clothing/suit/armor/f13/combat/dark
 	name = "combat armor"
@@ -179,6 +187,7 @@
 	permeability_coefficient = 0.5
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	armor = list("tier" = 5,"energy" = 45, "bomb" = 55, "bio" = 70, "rad" = 100, "fire" = 60, "acid" = 50)
+	permeability_coefficient = 0.01
 	strip_delay = 60
 	equip_delay_other = 60
 	flags_inv = HIDEJUMPSUIT
@@ -208,6 +217,7 @@
 	equip_delay_other = 60
 	strip_delay = 200
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	permeability_coefficient = 0.01
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -627,6 +637,7 @@
 	icon_state = "insect_armor"
 	item_state = "insect_armor"
 	armor = list("tier" = 4, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100)
+	permeability_coefficient = 0.3
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 
@@ -656,6 +667,7 @@
 	icon_state = "sulphitearmor"
 	item_state = "sulphitearmor"
 	armor = list("tier" = 6, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	permeability_coefficient = 0.7
 
 /obj/item/clothing/suit/toggle/armor
 	body_parts_covered = CHEST|GROIN
@@ -694,6 +706,7 @@
 	icon_state = "battlecoat"
 	item_state = "battlecoat"
 	armor = list("tier" = 3, "energy" = 30, "bomb" = 30, "bio" = 0, "rad" = 30, "fire" = 30, "acid" = 30)
+	permeability_coefficient = 0.7
 	strip_delay = 30
 	icon = 'icons/fallout/clothing/suits.dmi'
 
@@ -716,6 +729,7 @@
 	icon_state = "marshal_commandcoat"
 	item_state = "marshal_commandcoat"
 	armor = list("tier" = 7, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/battlecoat/vault/armoured
 	name = "armoured vault battlecoat"
@@ -723,6 +737,7 @@
 	icon_state = "armouredvault_commandcoat"
 	item_state = "armouredvault_commandcoat"
 	armor = list("tier" = 4, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/battlecoat/tan
 	name = "tan battlecoat"
@@ -736,6 +751,7 @@
 	icon_state = "brahmin_leather_duster"
 	item_state = "brahmin_leather_duster"
 	armor = list("tier" = 3, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/rustedcowboy
 	name = "rusted cowboy outfit"
@@ -743,6 +759,7 @@
 	icon_state = "rusted_cowboy"
 	item_state = "rusted_cowboy"
 	armor = list("tier" = 3, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
+	permeability_coefficient = 0.6
 
 //Inherited from SS13
 /obj/item/clothing/suit/armor/bulletproof
@@ -752,6 +769,7 @@
 	item_state = "armor"
 	blood_overlay_type = "armor"
 	armor = list("tier" = 4, "linebullet" = 50, "energy" = 35, "bomb" = 55, "bio" = 0, "rad" = 0, "fire" = 55, "acid" = 55)
+	permeability_coefficient = 0.4
 	strip_delay = 70
 	equip_delay_other = 50
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON

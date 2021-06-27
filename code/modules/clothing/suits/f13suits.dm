@@ -219,6 +219,7 @@
 	icon = 'icons/fallout/clothing/suits.dmi'
 	icon_state = "hazmat"
 	item_state = "hazmat_suit"
+	permeability_coefficient = 0.01
 
 /obj/item/clothing/head/bio_hood/f13/hazmat
 	name = "hazmat hood"
@@ -227,6 +228,7 @@
 	icon_state = "hazmat"
 	item_state = "hazmat_helmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	permeability_coefficient = 0.01
 
 //Fallout 13 toggle apparel directory
 /obj/item/clothing/suit/toggle/labcoat/f13/emergency
@@ -234,6 +236,7 @@
 	desc = "(I) A high-visibility jacket worn by medical first responders."
 	icon_state = "fr_jacket"
 	item_state = "fr_jacket"
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/toggle/labcoat/f13/warriors
 	name = "warriors jacket"
@@ -276,6 +279,7 @@
 	icon_state = "followers"
 	item_state = "labcoat"
 	armor = list("tier" = 2, "energy" = 10, "bomb" = 0, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/f13/generaluniform
 	name = "Yuma 1st Irregular General Uniform"
@@ -334,6 +338,7 @@
 	desc = "(III) A staunch, practical parka made out of a wind-breaking jacket, reinforced with metal plates."
 	armor = list("tier" = 3, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 	hoodtype = /obj/item/clothing/head/hooded/parkahood/medical
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/head/hooded/parkahood/medical
 	name = "armored medical parka hood"
@@ -341,6 +346,7 @@
 	desc = "(III) A protective & concealing parka hood."
 	armor = list("tier" = 3, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	permeability_coefficient = 0.6
 
 /obj/item/clothing/suit/hooded/parka/grey
 	name = "grey armored parka"

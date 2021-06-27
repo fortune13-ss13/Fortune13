@@ -1,5 +1,6 @@
 /obj/item/clothing/gloves/f13
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
+	permeability_coefficient = 0.9 // for chemicals/diseases. 1 is no protection, 0.01 is effective immunity. Defaulting to 10% protection.
 
 /obj/item/clothing/gloves/f13/baseball
 	name = "baseball glove"
@@ -31,6 +32,7 @@
 	icon_state = "ncr_gloves"
 	item_state = "ncr_gloves"
 	transfer_prints = TRUE
+	permeability_coefficient = 0.95
 
 /obj/item/clothing/gloves/f13/military
 	name = "military gloves"
@@ -44,6 +46,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	permeability_coefficient = 0.05
 
 /obj/item/clothing/gloves/f13/doom
 	name = "strange gloves"
@@ -58,6 +61,7 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 80, rad = 80, fire = 80, acid = 50)
+	permeability_coefficient = 0.01
 
 /obj/item/clothing/gloves/f13/handwraps
 	name = "handwraps"
@@ -71,6 +75,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	permeability_coefficient = 0.95 // Only 5% defense for you.
 
 /obj/item/clothing/gloves/f13/lace
 	name = "lace gloves"
@@ -97,6 +102,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	permeability_coefficient = 0.05
 
 /obj/item/clothing/gloves/f13/crudemedical
 	name = "crude medical gloves"
@@ -112,6 +118,7 @@
 	icon_state = "mutie_bracer"
 	item_state = "mutie_bracer"
 	armor = list("tier" = 4, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	permeability_coefficient = 1 // This isn't stopping any chemical splash at all
 
 /obj/item/clothing/gloves/f13/mutant/mk2
 	name = "mutant bracers"

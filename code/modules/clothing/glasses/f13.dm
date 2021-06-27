@@ -8,24 +8,28 @@
 	desc = "Simple goggles to protect against wind and dirt."
 	icon_state = "biker"
 	item_state = "biker"
+	permeability_coefficient = 0.05 // for chemicals/diseases. 1 is no protection, 0.01 is effective immunity.
 
 /obj/item/clothing/glasses/legiongoggles
 	name = "sandstorm goggles"
 	desc = "Post-war makeshift protective goggles made by legion artisans."
 	icon_state = "legion"
 	item_state = "legion"
+	permeability_coefficient = 0.05
 
 /obj/item/clothing/glasses/legionpolarizing
 	name = "polarizing goggles"
 	desc = "Fancy goggles with rare polarizing glass, usually reserved for commanders due to rarity."
 	icon_state = "legpolarizing"
 	item_state = "legpolarizing"
+	permeability_coefficient = 0.05
 
 //Fallout 13 sunglasses
 
 /obj/item/clothing/glasses/sunglasses/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
+	permeability_coefficient = 0.9 // 10% protection. Not great, but not nothing!
 
 
 //Fallout 13 thermals
@@ -33,6 +37,7 @@
 /obj/item/clothing/glasses/thermal/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
+	permeability_coefficient = 0.9
 
 /obj/item/clothing/glasses/thermal/f13/doctorwho
 	name = "3D glasses"
@@ -46,12 +51,14 @@
 	desc = "Heat-sensitive goggles commonly worn by Enclave vertibird pilots."
 	icon_state = "enclavegoggles"
 	item_state = "enclavegoggles"
+	permeability_coefficient = 0.01
 
 //Fallout 13 science goggles
 
 /obj/item/clothing/glasses/science/f13
 	icon = 'icons/fallout/clothing/glasses.dmi'
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
+	permeability_coefficient = 0.01
 
 /obj/item/clothing/glasses/science/f13/steampunk
 	name = "\improper goggles"
