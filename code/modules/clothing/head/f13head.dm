@@ -645,25 +645,6 @@
 	icon_state = "trilby"
 	item_state = "fedora"
 
-//chinesearmy
-/obj/item/clothing/head/f13/chinese_soldier
-	name = "chinese side cap"
-	desc = "(I) An pre-war People's Liberation Army side cap, worn enlisted and NCOs"
-	icon_state = "chinese_solder"
-	item_state = "secsoft"
-
-/obj/item/clothing/head/f13/chinese_officer
-	name = "chinese officer cap"
-	desc = "(I) An pre-war People's Liberation Army cap, worn by low rankedi officers."
-	icon_state = "chinese_officer"
-	item_state = "secsoft"
-
-/obj/item/clothing/head/f13/chinese_general
-	name = "chinese peaked cap"
-	desc = "(I) An pre-war People's Liberation Army peaked cap, worn by high ranked officers and generals."
-	icon_state = "chinese_general"
-	item_state = "fedora"
-
 /obj/item/clothing/head/f13/stormchaser
 	name = "stormchaser hat"
 	desc = "(I) Home, home on the wastes,<br>Where the mole rat and the fire gecko play.<br>Where seldom is heard a discouraging word,<br>And my skin is not glowing all day."
