@@ -702,10 +702,10 @@
 				)
 
 /obj/effect/spawner/bundle/f13/single_shotgun
-	name = "single single-shot single shotgun and ammo spawner"
+	name = "single slam-fire shotgun and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/single_shotgun,
-				/obj/item/ammo_box/shotgun/bean
+				/obj/item/ammo_box/shotgun/buck
 				)
 
 /obj/effect/spawner/bundle/f13/caravan_shotgun
@@ -1794,7 +1794,7 @@
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/r91,
 		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
-		/obj/item/book/granter/crafting_recipe/blueprint/breacher,
+		/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/r84,
 		/obj/item/book/granter/crafting_recipe/blueprint/r82,
 		/obj/item/book/granter/crafting_recipe/blueprint/deagle
