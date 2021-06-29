@@ -73,7 +73,6 @@
 	caliber = "a556"
 	max_ammo = 5
 
-
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	name = "44 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/m44
@@ -96,10 +95,4 @@
 	name = ".45 ACP revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = ".45"
-	max_ammo = 6
-
-/obj/item/ammo_box/magazine/internal/cylinder/rev45/gunslinger
-	name = ".45 LC revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/a45lc
-	caliber = "a45lc"
 	max_ammo = 6
