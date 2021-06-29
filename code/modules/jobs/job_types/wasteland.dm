@@ -570,7 +570,7 @@ Raider
 	faction = "Wastelander"
 	total_positions = -1
 	spawn_positions = -1
-	description = "You travelled far to arrive at the ruined town of Pahrump, a bleak paradise far from the troubles of the Mojave Conflict - protected by Red Rock Canyon to the east, free of the many factions vying for control over Nevada. Here in Pahrump, your story and fate is your own."
+	description = "You travelled far to arrive at Yuma Valley, a ruined town mired in the troubles of the Mojave Conflict - but at least in this backwater conflict zone, there are fewer soldiers stationed. You might have a chance at survival, but its unlikely."
 	supervisors = "no one"
 	selection_color = "#dddddd"
 
@@ -609,25 +609,14 @@ Raider
 	suit = pick(
 		/obj/item/clothing/suit/armor/f13/kit, \
 		/obj/item/clothing/suit/f13/veteran, \
-		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer, \
-		/obj/item/clothing/suit/armor/f13/leatherarmor)
-	l_pocket = 	/obj/item/reagent_containers/food/drinks/flask
-	r_pocket = /obj/item/flashlight/flare
+		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer)
 	belt = 	/obj/item/kitchen/knife/combat/survival
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
-		/obj/item/reagent_containers/pill/radx=1, \
 		/obj/item/storage/bag/money/small/wastelander, \
 		/obj/item/kitchen/knife)
-	suit_store = pick(
-	/obj/item/gun/ballistic/revolver/detective, \
-	/obj/item/gun/ballistic/shotgun/remington, \
-	/obj/item/gun/ballistic/revolver/zipgun, \
-	/obj/item/gun/ballistic/revolver/pipe_rifle)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
-	suit = /obj/item/clothing/suit/apron
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	head = /obj/item/clothing/head/welding
