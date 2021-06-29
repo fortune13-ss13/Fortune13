@@ -149,6 +149,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/shrapnelmine
+	name = "Shrapnel Mine (WARNING: MINE IS PLACED WHERE YOU CRAFT IT)"
+	result = /obj/effect/mine/shrapnel
+	reqs = list(/obj/item/grenade/iedcasing = 1,
+				/obj/item/stack/tile = 1,
+				/obj/item/ammo_casing/a22 = 5
+				)
+	time = 15
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/lance
 	name = "Explosive Lance (Grenade)"
 	result = /obj/item/twohanded/spear
@@ -212,6 +223,16 @@
 	time = 20
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/flamerfuel
+	name = "Flamethrower Fuel"
+	result = /obj/item/ammo_box/jerrycan
+	reqs = list(/datum/reagent/napalm = 50,
+				/obj/item/reagent_containers/glass/beaker/large)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO	
 
 
 
@@ -676,7 +697,7 @@
 //uzi
 /datum/crafting_recipe/uzi
 	name = "Uzi SMG"
-	result = /obj/item/gun/ballistic/automatic/mini_uzi
+	result = /obj/item/gun/ballistic/automatic/smg/mini_uzi
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1
 				)

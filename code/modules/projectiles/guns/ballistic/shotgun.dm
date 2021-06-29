@@ -17,6 +17,8 @@ MECHANISMS
 	
 	AUTOMATIC
 	fire_delay = 3-7
+	burst_shot_delay = 3
+	spread = 7-14
 
 	REPEATER	
 	fire_delay = 8
@@ -40,8 +42,8 @@ BULK
 
 	MEDIUM GUNS
 	slowdown = 0.3-0.4
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY	
+	w_class = WEIGHT_CLASS_MEDUM - BULKY
+	weapon_weight = WEAPON_NORMAL - HEAVY	
 
 	RIFLES 
 	slowdown = 0.5
@@ -50,9 +52,9 @@ BULK
 
 GENERAL ACCURACY
 
-	PISTOLS Base spread = 2
-	RIFLES Base spread = 1
-	BURST FIRE Base spread = 10
+	PISTOLS Base spread = 3
+	RIFLES Base spread = 2
+	BURST FIRE Base spread = 7-14
 	(accurate guns lower, crap guns higher)
 
 
@@ -83,6 +85,12 @@ PARTS
 	AMMO RECOIL BASE VALUES
 	.50/12.7mm  recoil = 2
 	.45/70  recoil = 1
+
+FORCE 	Delicate, clumsy or small gun force 10
+		Pistol whip force 12
+		Rifle type force 15
+		Unusually sturdy clublike 20
+
 */
 
 
@@ -108,6 +116,7 @@ PARTS
 	spawnwithmagazine = TRUE
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	untinkerable = TRUE //no tinkering shotguns, bad.
 
 /obj/item/gun/ballistic/shotgun/process_chamber(mob/living/user, empty_chamber = 0)
 	return ..() //changed argument value
@@ -549,6 +558,25 @@ PARTS
 	extra_penetration = 0.2
 
 /obj/item/gun/ballistic/shotgun/remington/paciencia/attackby(obj/item/A, mob/user, params) //no sawing off this one
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
+		return
+	else if(istype(A, /obj/item/melee/transforming/energy))
+		var/obj/item/melee/transforming/energy/W = A
+		if(W.active)
+			return
+	else
+		..()
+
+/obj/item/gun/ballistic/shotgun/remington/ncr
+	name = "accurized hunting rifle"
+	desc = "A modified  hunting rifle rechambered to 7.62. This one has had the barrel floated with shims to increase accuracy. In use by 1st Recon and designated marksman throughout the NCR."
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/remington/ncr
+	fire_delay = 7 //much longer fire delay
+	extra_damage = 5 //49 damage when loaded with 7.62. Slightly higher then the semi auto sniper rifle.
+	extra_penetration = 0.05 //slightly higher pen, 0.30 total vs 0.25. 
+	untinkerable = TRUE
+
+/obj/item/gun/ballistic/shotgun/remington/ncr/attackby(obj/item/A, mob/user, params) //DO NOT BUBBA YOUR STANDARD ISSUE RIFLE SOLDIER!
 	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
 		return
 	else if(istype(A, /obj/item/melee/transforming/energy))
