@@ -119,7 +119,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/plant
 	icon_state = "plantmeat"
-	desc = "All the joys of healthy eating with all the fun of cannibalism."
+	desc = "You aren't sure if this is vegan or not."
 	filling_color = "#E9967A"
 	tastes = list("salad" = 1, "wood" = 1)
 	foodtype = VEGETABLES

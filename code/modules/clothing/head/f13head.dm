@@ -782,13 +782,6 @@
 	armor = list("tier" = 1, "energy" = 0, "bomb" = 25, "bio" = 0, "rad" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/simplekitty
-	name = "Kitty Headband"
-	desc = "A headband with a pair of cute kitty ears"
-	icon_state = "kittyb"
-	color = "#999999"
-	armor = list("tier" = 0)
-
 //Soft caps
 /obj/item/clothing/head/soft/f13
 	flags_inv = HIDEEARS|HIDEHAIR
