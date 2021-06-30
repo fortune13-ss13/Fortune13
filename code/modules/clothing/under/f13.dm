@@ -587,6 +587,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
 
 //WAYFARER TRIBAL
+
 /obj/item/clothing/under/f13/tribe
 	name = "tribal rags"
 	desc = "Dusty rags decorated with strips of leather and small pieces of turquoise."
@@ -698,28 +699,29 @@
 	item_state = "nato_uniform"
 	item_color = "nato_uniform"
 
-//chinesearmy
+//Chinese Army
+
 /obj/item/clothing/under/f13/chinese
-	name = "Chinese Army uniform"
+	name = "chinese uniform"
 	desc = "An pre-war People's Liberation Army uniform, worn by enlisted and NCOs."
-	icon_state = "chinese_solder"
-	item_state = "bl_suit"
+	icon_state = "chinese_soldier"
+	item_state = "chinese_soldier"
 	item_color = "chinese_soldier"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/chinese/officer
-	name = "Chinese Army officer's uniform"
+	name = "chinese officer's uniform"
 	desc = "An pre-war People's Liberation Army uniform, worn by officers."
 	icon_state = "chinese_officer"
-	item_state = "bl_suit"
+	item_state = "chinese_officer"
 	item_color = "chinese_officer"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/chinese/general
-	name = "Chinese Army general's uniform"
+	name = "chinese general's uniform"
 	desc = "An pre-war People's Liberation Army uniform, worn by generals."
 	icon_state = "chinese_general"
-	item_state = "bl_suit"
+	item_state = "chinese_general"
 	item_color = "chinese_general"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
