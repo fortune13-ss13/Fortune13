@@ -510,7 +510,7 @@ Corporal
 
 /datum/outfit/loadout/corporaldesignatedmarksman
 	name = "Designated marksman"
-	suit_store = /obj/item/gun/ballistic/shotgun/remington/ncr
+	suit_store = /obj/item/gun/ballistic/rifle/hunting/ncr
 	head = /obj/item/clothing/head/beret/ncr_recon/worn
 	backpack_contents = list(
 		/obj/item/attachments/scope=1,
@@ -651,7 +651,7 @@ Combat Engineer
 
 /datum/outfit/loadout/combatengineerflamethrower
 	name = "Combat Sapper"
-	suit_store = /obj/item/gun/ballistic/automatic/greasegun
+	suit_store = /obj/item/gun/ballistic/automatic/smg/greasegun
 	head = /obj/item/clothing/head/f13/ncr/goggles
 	belt = /obj/item/storage/belt/military/assault/ncr
 	glasses	= /obj/item/clothing/glasses/sunglasses
@@ -1083,7 +1083,7 @@ Veteran Ranger
 	head = /obj/item/clothing/head/f13/ranger
 	uniform = /obj/item/clothing/under/f13/ranger/patrol
 	belt =	/obj/item/storage/belt/military/assault/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
+	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 3,
 		/obj/item/storage/firstaid/ancient = 1,
