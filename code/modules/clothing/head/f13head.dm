@@ -544,10 +544,10 @@
 	deflection_chance = 15 //40% chance to block damage from blockable bullets and redirect the bullet at a random angle. Your ride's over mutie, time to die.
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire
-	name = "hellfire power helmet
+	name = "hellfire power helmet"
 	desc = "(XIII) This helmet was specially developed by the Enclave following the destruction of Control Station Enclave and the sacking of Navarro. It is most commonly fielded on the East Coast, and is the most powerful suit of power armor ever fielded."
 	icon_state = "hellfirehelm"
-	item_state = "hellfirehelm
+	item_state = "hellfirehelm"
 	melee_block_threshold = 50
 	armor_block_threshold = 0.5
 	armor_block_chance = 90
