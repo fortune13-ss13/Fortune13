@@ -40,6 +40,14 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/legion)
+"abI" = (
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "vault1";
+	name = "Old Ladder"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "abL" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/road{
@@ -612,8 +620,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
 /area/f13/building)
 "apt" = (
-/obj/machinery/hydroponics/soil,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "apw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4070,8 +4077,10 @@
 	},
 /area/f13/wasteland)
 "coQ" = (
-/obj/machinery/smartfridge/drying_rack,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/closed/wall/f13/store{
+	desc = "A pre-War wall made of solid concrete.";
+	name = "concrete wall"
+	},
 /area/f13/tunnel)
 "coZ" = (
 /turf/open/indestructible/ground/outside/dirt{
@@ -7938,6 +7947,12 @@
 /obj/item/stack/f13Cash/random/med,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"eDG" = (
+/obj/machinery/door/airlock/grunge/abandoned{
+	name = "Abandoned Bunker"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "eDV" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -10070,6 +10085,11 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
+"fId" = (
+/obj/structure/rack,
+/obj/item/cultivator,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "fIn" = (
 /obj/structure/chair/booth{
 	dir = 8
@@ -12249,12 +12269,11 @@
 	},
 /area/f13/building)
 "gPd" = (
-/obj/item/storage/fancy/rollingpapers,
-/obj/item/storage/fancy/rollingpapers,
-/obj/item/storage/fancy/rollingpapers,
-/obj/item/lighter,
 /obj/structure/rack,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/item/storage/fancy/rollingpapers,
+/obj/item/storage/fancy/rollingpapers,
+/obj/item/storage/fancy/rollingpapers,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "gPg" = (
 /obj/structure/simple_door/metal/store,
@@ -14424,6 +14443,11 @@
 	icon_state = "verticalrightborderright1"
 	},
 /area/f13/wasteland)
+"hVk" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "hVp" = (
 /mob/living/simple_animal/hostile/handy,
 /turf/open/floor/f13/wood,
@@ -15900,14 +15924,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "iLD" = (
-/obj/item/seeds/cannabis,
-/obj/item/seeds/cannabis,
-/obj/item/seeds/cannabis,
-/obj/item/seeds/cannabis,
 /obj/structure/rack,
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/cultivator,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/item/seeds/cannabis,
+/obj/item/seeds/cannabis,
+/obj/item/seeds/cannabis,
+/obj/item/seeds/cannabis,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "iLI" = (
 /obj/effect/spawner/lootdrop/trash,
@@ -28233,6 +28255,10 @@
 	icon_state = "verticalrightborderleft1"
 	},
 /area/f13/wasteland)
+"pOr" = (
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "pOs" = (
 /obj/structure/ladder/unbreakable{
 	desc = "A sturdy ladder that leads down deep into the earth... don't fall.";
@@ -44663,12 +44689,12 @@ gbL
 gcK
 gcK
 gcK
-gcK
-gcK
-gcK
-gcK
-gcK
-gcK
+coQ
+coQ
+coQ
+coQ
+coQ
+coQ
 gcK
 gcK
 gcK
@@ -44920,12 +44946,12 @@ gcK
 gcK
 gcK
 gcK
-gcK
-gcK
-mwp
-mwp
-wEs
-mwp
+coQ
+gPd
+apt
+pOr
+pOr
+coQ
 gcK
 gcK
 gcK
@@ -45177,12 +45203,12 @@ gcK
 gcK
 gcK
 gcK
-gcK
-mwp
+coQ
+iLD
 apt
-mwp
 apt
-mwp
+apt
+coQ
 gcK
 gcK
 mwp
@@ -45434,12 +45460,12 @@ gcK
 gcK
 gcK
 gcK
-mwp
-mwp
+coQ
+abI
 apt
-mwp
 apt
-mwp
+apt
+coQ
 mwp
 mwp
 mwp
@@ -45691,12 +45717,12 @@ gcK
 gcK
 gcK
 gcK
-mwp
-mwp
-mwp
-mwp
-mwp
-mwp
+gcK
+apt
+apt
+apt
+apt
+eDG
 mwp
 uYx
 mwp
@@ -45948,12 +45974,12 @@ gbL
 gbL
 gcK
 gcK
-mwp
-mwp
+gcK
+gcK
+hVk
 apt
-mwp
 apt
-mwp
+coQ
 mwp
 mwp
 mwp
@@ -46205,12 +46231,12 @@ gbL
 gbL
 gcK
 gcK
-mwp
-mwp
-apt
-mwp
-apt
-mwp
+gcK
+gcK
+gcK
+gcK
+fId
+gcK
 gcK
 gcK
 gcK
@@ -46464,10 +46490,10 @@ gcK
 gcK
 gcK
 gcK
-iLD
-gPd
-mwp
-coQ
+gcK
+gcK
+gcK
+gcK
 gcK
 gcK
 gcK
