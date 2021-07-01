@@ -76,3 +76,18 @@
 	list_reagents = null
 	icon_state = "bandaid_healingpowder"
 	self_delay = 0
+
+/obj/item/reagent_containers/pill/patch/bitterdrink
+	name = "Bitter drink"
+	desc = "A strong herbal healing concoction which enables wounded soldiers and travelers to tend to their wounds without stopping during journeys."
+	list_reagents = list(/datum/reagent/medicine/bitter_drink = 15) 
+	icon_state = "Voodoo"
+	self_delay = 0
+
+/obj/item/reagent_containers/pill/patch/healingpowder/berserker
+	name = "Berserker Powder"
+	desc = "a combination of psychadelic mushrooms and tribal drugs used by legion berserkers. Induces a trancelike state, allowing them much greater pain resistance. Extremely dangerous, even for those who are trained to use it. It's a really bad idea to use this if you're not a berserker. Even if you are, taking it for too long causes extreme symptoms when the trance ends."
+	list_reagents = list(/datum/reagent/medicine/berserker_powder = 10)
+	icon_state = "bandaid_berserkerpowder"
+	self_delay = 0
+

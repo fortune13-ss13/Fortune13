@@ -505,6 +505,9 @@
 
 /obj/machinery/smartfridge/chemistry/virology/preloaded
 	initial_contents = list(
+		/obj/item/reagent_containers/syringe/antiviral = 4,
+		/obj/item/reagent_containers/glass/bottle/cold = 1,
+		/obj/item/reagent_containers/glass/bottle/flu_virion = 1,
 		/obj/item/reagent_containers/glass/bottle/mutagen = 1,
 		/obj/item/reagent_containers/glass/bottle/sugar = 1,
 		/obj/item/reagent_containers/glass/bottle/plasma = 1,
@@ -638,6 +641,20 @@
 		return TRUE
 	return FALSE
 
+
+//-------------------------
+// Alchemy Rack
+//-------------------------
+/obj/machinery/smartfridge/bottlerack/alchemy_rack
+	name = "alchemy rack"
+	desc = "A neatly organized cupboard for the storage of homemade remedies and flasks."
+	icon_state = "alchemyrack"
+	max_n_of_items = 100
+
+/obj/machinery/smartfridge/bottlerack/alchemy_rack/accept_check(obj/item/O)
+	if(istype(O, /obj/item/reagent_containers/pill/patch/healingpowder) || istype(O, /obj/item/reagent_containers/glass/bottle/primitive) || istype(O, /obj/item/reagent_containers/pill/patch/healpoultice))
+		return TRUE
+	return FALSE
 // -------------------------
 // LOOTABLE RACKS - PREWAR SHELVES ETC
 // -------------------------------------------------------------------------

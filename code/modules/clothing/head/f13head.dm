@@ -333,19 +333,11 @@
 	if(emped == 0)
 		if(ismob(loc))
 			to_chat(loc, "<span class='warning'>Warning: electromagnetic surge detected in helmet. Rerouting power to emergency systems.</span>")
-			tint += 2
-			if(istype(loc, /mob/living/carbon))
-				var/mob/living/carbon/M = loc
-				M.update_tint()
-			armor = armor.modifyRating(linemelee = -50, linebullet = -50, linelaser = -50)
+			armor = armor.modifyRating(linemelee = -100, linebullet = -100, linelaser = -100)
 			emped = 1
 			spawn(50) //5 seconds of being blind and weak
 				to_chat(loc, "<span class='warning'>Helmet power reroute successful. All systems operational.</span>")
-				tint -= 2
-				if(istype(loc, /mob/living/carbon))
-					var/mob/living/carbon/M = loc
-					M.update_tint()
-				armor = armor.modifyRating(linemelee = 50, linebullet = 50, linelaser = 50)
+				armor = armor.modifyRating(linemelee = 100, linebullet = 100, linelaser = 100)
 				emped = 0
 
 /obj/item/clothing/head/helmet/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
@@ -551,18 +543,18 @@
 	armor_block_chance = 80 //Enclave. 'nuff said
 	deflection_chance = 15 //40% chance to block damage from blockable bullets and redirect the bullet at a random angle. Your ride's over mutie, time to die.
 
-/obj/item/clothing/head/helmet/f13/power_armor/advanced/mk2
-	name = "advanced power helmet MK2"
-	desc = "(XIII) It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
-	icon_state = "advhelmet2"
-	item_state = "advhelmet2"
-	melee_block_threshold = 50
-	armor_block_threshold = 0.5
-	armor_block_chance = 90
-	deflection_chance = 30
+/obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire
+	name = "hellfire power armor"
+	desc = "(XIII) A deep black helmet of Enclave-manufactured heavy power armor with yellow ballistic glass, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no other helmet rivals it's strength."
+	icon_state = "hellfirehelm"
+	item_state = "hellfirehelm"
+	melee_block_threshold = 70
+	armor_block_threshold = 0.8
+	armor_block_chance = 99
+	deflection_chance = 70
 	armor = list("tier" = 13, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0, "wound" = 100)
 
-/obj/item/clothing/head/helmet/f13/power_armor/advanced/mk2/wbos
+/obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire/wbos
 	name = "advanced Washington power helmet"
 	desc = "It's an improved model of the power armor helmet used exclusively by the Washington Brotherhood, designed to induce fear in a target."
 	icon_state = "t51wboshelmet"
@@ -585,10 +577,10 @@
 
 //Part of the peacekeeper enclave stuff, adjust values as needed.
 /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
-	name = "X-02 helmet"
-	desc = "(XI) The X-02 Enclave power armor helmet."
-	icon_state = "PA_helmet_x02"
-	item_state = "PA_helmet_x02"
+	name = "Enclave power armor helmet"
+	desc = "(XI) The Enclave Mark II Powered Combat Armor helmet."
+	icon_state = "advanced"
+	item_state = "advanced"
 	slowdown = 0.1
 	armor = list("tier" = 11, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 70)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
@@ -653,22 +645,23 @@
 	icon_state = "trilby"
 	item_state = "fedora"
 
+//chinesearmy
 /obj/item/clothing/head/f13/chinese_soldier
 	name = "chinese side cap"
-	desc = "(I) A foldable military cap with straight sides, with insignia of People's Liberation Army, that was supposedly worn by regular troops."
-	icon_state = "chinese_s"
+	desc = "(I) An pre-war People's Liberation Army side cap, worn enlisted and NCOs"
+	icon_state = "chinese_solder"
 	item_state = "secsoft"
 
 /obj/item/clothing/head/f13/chinese_officer
 	name = "chinese officer cap"
-	desc = "(I) A foldable military cap with straight sides, with insignia of People's Liberation Army, that was supposedly worn by low rank officers."
-	icon_state = "chinese_o"
+	desc = "(I) An pre-war People's Liberation Army cap, worn by low rankedi officers."
+	icon_state = "chinese_officer"
 	item_state = "secsoft"
 
-/obj/item/clothing/head/f13/chinese_commander
+/obj/item/clothing/head/f13/chinese_general
 	name = "chinese peaked cap"
-	desc = "(I) A peaked cap of dark green in color with a red star on the frontside.<br>It obviously belonged to a high rank officer of People's Liberation Army."
-	icon_state = "chinese_c"
+	desc = "(I) An pre-war People's Liberation Army peaked cap, worn by high ranked officers and generals."
+	icon_state = "chinese_general"
 	item_state = "fedora"
 
 /obj/item/clothing/head/f13/stormchaser

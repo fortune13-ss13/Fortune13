@@ -223,7 +223,6 @@ Head Scribe
 		/obj/item/shield/energy=1, \
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=2, \
-		/obj/item/reagent_containers/dropper/SR/NotVault = 1
 		)
 
 /datum/outfit/loadout/hsstand
@@ -320,7 +319,7 @@ Head Knight
 /datum/outfit/loadout/capalt
 	name = "Warden-Defender"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/riot=1,
+		/obj/item/gun/ballistic/shotgun/police=1,
 		/obj/item/storage/fancy/ammobox/lethalshot=2,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
@@ -670,7 +669,7 @@ datum/job/bos/f13seniorknight
 /datum/outfit/loadout/sknightb
 	name = "Knight-Defender"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/riot=1,
+		/obj/item/gun/ballistic/shotgun/police=1,
 		/obj/item/storage/fancy/ammobox/lethalshot=2,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
@@ -751,7 +750,7 @@ Knight
 		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/gun/ballistic/shotgun/trench=1,
 		/obj/item/storage/fancy/ammobox/lethalshot=2,
-		/obj/item/shield/riot/tele=1
+		/obj/item/shield/riot=1
 		)
 /*
 Initiate

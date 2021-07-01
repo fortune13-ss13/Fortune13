@@ -604,6 +604,17 @@
 	fire_delay = 4
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
 
+
+/obj/item/gun/ballistic/revolver/revolver45/gunslinger
+	name = "\improper Colt Single Action Army"
+	desc = "A Colt Single Action Army, chambered in the archaic .45 long colt cartridge."
+	item_state = "coltwalker"
+	icon_state = "peacemaker"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45/gunslinger
+	fire_delay = 8 //This fires MUCH slower then the Sequoia or 357. You're rewarded with bouncing bullets
+	fire_sound = 'sound/f13weapons/45revolver.ogg'
+	spread = 0 //Your reward for the slower fire rate is less spread anddd
+
 /obj/item/gun/ballistic/revolver/colt357
 	name = "\improper .357 magnum revolver"
 	desc = "A relatively primitive .357 magnum revolver."
@@ -716,9 +727,9 @@
 	icon_state = "thatgun"
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
-	extra_penetration = -0.25
 	extra_damage = -2
 	spread = 5
+
 
 /obj/item/gun/ballistic/revolver/zhurong
 	name = "chinese Type 10"

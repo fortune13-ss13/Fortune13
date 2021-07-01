@@ -469,3 +469,13 @@
 	name = "Sakura kimono"
 	path = /obj/item/clothing/under/costume/kimono/sakura
 */
+
+/datum/gear/uniform/chinese
+	name = "Chinese Army uniform"
+	path = /obj/item/clothing/under/f13/chinese
+	cost = 2
+
+/datum/gear/uniform/chinese/officer
+	name = "Chinese Army officer's uniform"
+	path = /obj/item/clothing/under/f13/chinese/officer
+	cost = 3

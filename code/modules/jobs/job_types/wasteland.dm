@@ -11,7 +11,7 @@
 	forbids = ""
 	enforces = ""
 	supervisors = "the United States Government."
-	selection_color = "#162b2c"
+	selection_color = "#323232"
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 600
 
@@ -53,7 +53,7 @@
 	forbids = ""
 	enforces = ""
 	supervisors = "the United States Government."
-	selection_color = "#162b2c"
+	selection_color = "#323232"
 	exp_requirements = 1200
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
@@ -96,13 +96,13 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	faction = "Enclave"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
-	forbids = ""
-	enforces = ""
+	forbids = "The Enclave forbids you from leaving the base while still habitable"
+	enforces = "The Enclave Encourages you to use your various skills, such as brainwashing, flight, and more, to help keep your small team alive."
 	supervisors = "the United States Government."
-	selection_color = "#162b2c"
+	selection_color = "#323232"
 	exp_requirements = 1400
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
@@ -141,12 +141,13 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) //enclave scientists can do pretty much everything, they've got the knowhow preserved by the enclave. a valuable asset to be defended
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)          //ditto
-	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)    //ditto
+	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
+	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
+	
 
 /datum/job/wasteland/enclavelt
 	title = "Enclave Lieutenant"
@@ -158,7 +159,7 @@
 	forbids = ""
 	enforces = ""
 	supervisors = "the United States Government."
-	selection_color = "#162b2c"
+	selection_color = "#323232"
 	exp_requirements = 1500
 	exp_type = EXP_TYPE_ENCLAVE
 
@@ -360,7 +361,8 @@ Raider
 	/datum/outfit/loadout/raider_mafia,
 	/datum/outfit/loadout/raider_vault,
 	/datum/outfit/loadout/raider_ncr,
-	/datum/outfit/loadout/raider_legion
+	/datum/outfit/loadout/raider_legion,
+	/datum/outfit/loadout/raider_tribal
 	)
 
 /datum/outfit/job/wasteland/f13raider
@@ -422,7 +424,7 @@ Raider
 
 	suit_store = pick(
 		/obj/item/gun/ballistic/revolver/detective, \
-		/obj/item/gun/ballistic/shotgun/remington, \
+		/obj/item/gun/ballistic/rifle/hunting, \
 		/obj/item/gun/ballistic/revolver/zipgun, \
 		/obj/item/gun/ballistic/revolver/pipe_rifle, \
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
@@ -453,7 +455,7 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
 	backpack_contents = list(
 		/obj/item/twohanded/baseball/spiked=1,
-		/obj/item/gun/ballistic/shotgun/mosin=1,
+		/obj/item/gun/ballistic/rifle/mosin=1,
 		/obj/item/ammo_box/a762=2,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
 		/obj/item/megaphone=1)
@@ -507,7 +509,7 @@ Raider
 	uniform = /obj/item/clothing/under/f13/exile
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/mosin=1,
+		/obj/item/gun/ballistic/rifle/mosin=1,
 		/obj/item/ammo_box/a762=2)
 
 /datum/outfit/loadout/raider_legion
@@ -541,12 +543,25 @@ Raider
 		/obj/item/toy/cards/deck=1)
 
 /datum/outfit/loadout/raider_vault
-	name = "Vault Outcast"
+	name = "Vault Renegade"
 	suit = /obj/item/clothing/suit/armor/f13/leatherarmor
 	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/widowmaker=1)
+
+/datum/outfit/loadout/raider_tribal 
+	name = "Tribal Outcast"
+	suit = 		/obj/item/clothing/suit/hooded/tribaloutcast
+	uniform = 	/obj/item/clothing/under/f13/exile/tribal
+	shoes = 	/obj/item/clothing/shoes/sandal
+	belt = 		/obj/item/storage/backpack/spearquiver
+	suit_store = /obj/item/claymore/machete/warclub
+	box = 		/obj/item/storage/survivalkit_tribal
+	id = 		/obj/item/card/id/outcasttattoo
+	backpack_contents = list(
+		/obj/item/clothing/mask/cigarette/pipe=1,
+		/obj/item/kitchen/knife/combat/bone=1)
 
 
 /datum/job/wasteland/f13wastelander
@@ -606,7 +621,7 @@ Raider
 		/obj/item/kitchen/knife)
 	suit_store = pick(
 	/obj/item/gun/ballistic/revolver/detective, \
-	/obj/item/gun/ballistic/shotgun/remington, \
+	/obj/item/gun/ballistic/rifle/hunting, \
 	/obj/item/gun/ballistic/revolver/zipgun, \
 	/obj/item/gun/ballistic/revolver/pipe_rifle)
 
@@ -683,7 +698,7 @@ Raider
 	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/welding
-	l_hand = /obj/item/shield/legion/buckler
+	l_hand = /obj/item/shield/riot/buckler
 	backpack_contents = list(
 		/obj/item/claymore/machete/spatha=1)
 
@@ -731,6 +746,7 @@ Raider
 	id = /obj/item/card/id/dentattoo
 	belt = /obj/item/storage/belt/military/assault
 	shoes = /obj/item/clothing/shoes/laceup
+	ears = /obj/item/radio/headset/headset_den
 	l_pocket = /obj/item/switchblade
 	r_pocket = /obj/item/flashlight/seclite
 	uniform = /obj/item/clothing/under/suit/white
@@ -772,7 +788,7 @@ Raider
 
 /datum/outfit/loadout/hitman
 	name = "Hitman"
-	r_hand = /obj/item/gun/ballistic/automatic/mini_uzi
+	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
 	suit = /obj/item/clothing/suit/armor/vest
 	backpack_contents = list(
 						/obj/item/ammo_box/magazine/uzim9mm=3, \
@@ -781,7 +797,7 @@ Raider
 
 /datum/outfit/loadout/bodyguard
 	name = "Bodyguard"
-	r_hand = /obj/item/gun/ballistic/shotgun/riot
+	r_hand = /obj/item/gun/ballistic/shotgun/police
 	suit = /obj/item/clothing/suit/armor/vest
 	backpack_contents = list(
 						/obj/item/ammo_box/shotgun/buck=2, \
@@ -815,6 +831,7 @@ Raider
 
 	id = /obj/item/card/id/dentattoo
 	belt = /obj/item/storage/belt/military/assault
+	ears = /obj/item/radio/headset/headset_den
 	shoes = /obj/item/clothing/shoes/laceup
 	l_pocket = /obj/item/switchblade
 	r_pocket = /obj/item/flashlight/seclite
@@ -825,7 +842,7 @@ Raider
 	gloves = /obj/item/clothing/gloves/color/white
 	head = /obj/item/clothing/head/caphat/beret/white
 	mask = /obj/item/clothing/mask/bandana/durathread
-	suit_store = /obj/item/gun/ballistic/automatic/p90/worn
+	suit_store = /obj/item/gun/ballistic/automatic/smg/p90/worn
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \

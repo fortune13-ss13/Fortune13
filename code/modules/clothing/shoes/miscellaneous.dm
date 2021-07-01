@@ -200,15 +200,6 @@
 	icon_state = "laceups"
 	equip_delay_other = 50
 
-/obj/item/clothing/shoes/roman
-	name = "roman sandals"
-	desc = "Sandals with buckled leather straps on it."
-	icon_state = "roman"
-	strip_delay = 100
-	equip_delay_other = 100
-	permeability_coefficient = 0.9
-	can_be_tied = FALSE
-
 /obj/item/clothing/shoes/griffin
 	name = "griffon boots"
 	desc = "A pair of costume boots fashioned after bird talons."
@@ -429,13 +420,13 @@
 			issolid = TRUE
 	if (!issolid)
 		for (var/atom/T in newloc) //stuff on the new turf
-			if (!T.CanPass(m,newloc) && T != m)
+			if (!T.CanPass(m, dir) && T != m)
 				issolid = TRUE
 				newlocobject = T
 				break
 		if (!issolid)
 			for (var/atom/T in oldloc) //directional shit on the old turf
-				if (!T.CanPass(m,newloc) && T != m && T != newlocobject)
+				if (!T.CanPass(m, dir) && T != m && T != newlocobject)
 					issolid = TRUE
 					break
 			newlocobject = null //stopping structures from using two charges because of how shitty the canpass code is

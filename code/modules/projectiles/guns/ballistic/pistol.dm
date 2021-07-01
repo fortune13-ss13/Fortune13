@@ -8,10 +8,11 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	item_state = "gun"
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_NORMAL //How much space it takes in a bag
+	weapon_weight = WEAPON_LIGHT //Nakes dual weild possible
 	slot_flags = ITEM_SLOT_BELT
 	force = 12 //Pistol whip
-	mag_type = /obj/item/ammo_box/magazine/m10mm
+	mag_type = /obj/item/ammo_box/magazine/m10mm_adv/simple
 	burst_size = 1
 	fire_delay = 2
 	automatic_burst_overlay = FALSE
@@ -56,7 +57,6 @@
 	name = "10mm pistol"
 	desc = "A pre-war large-framed, gas-operated advanced 10mm pistol."
 	icon_state = "n99"
-	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv/simple
 	can_attachments = TRUE
 	can_automatic = TRUE
@@ -80,7 +80,6 @@
 	name = "Type 17"
 	desc = "Chinese military sidearm at the time of the Great War. The ones around are old and worn, but somewhat popular due to the long barrel and rechambered in 10mm after the original ammo ran dry decades ago."
 	icon_state = "chinapistol"
-	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv/simple
 	extra_damage = 1
 	extra_penetration = 0.05
@@ -95,7 +94,6 @@
 	name = "Browning Hi-power"
 	desc = "A mass produced pre-war Browning Hi-power 9mm pistol."
 	icon_state = "ninemil"
-	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	can_attachments = TRUE
 	suppressor_state = "pistol_suppressor"
@@ -117,6 +115,7 @@
 	name = "Sig P220"
 	desc = "The P220 Sig Sauer. A Swiss designed pistol that is compact and has a good rate of fire."
 	icon_state = "sig"
+	w_class = WEIGHT_CLASS_SMALL 
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	extra_damage = 2
 	fire_delay = 1
@@ -145,7 +144,6 @@
 	name = "Beretta M93R"
 	desc = "A rare select fire variant of the M93R."
 	icon_state = "m93r"
-	w_class = WEIGHT_CLASS_NORMAL
 	burst_size = 2
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	automatic_burst_overlay = TRUE
@@ -158,10 +156,10 @@
 	name = "M1911"
 	desc = "A classic .45 handgun with a small magazine capacity."
 	icon_state = "m1911"
-	icon_state = "pistolchrome"
+	item_state = "pistolchrome"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45
-	extra_damage = 3
+	extra_damage = 2
 	can_attachments = TRUE
 	suppressor_state = "pistol_suppressor"
 	suppressor_x_offset = 30
@@ -192,10 +190,9 @@
 	name = "Mk. 23"
 	desc = "A modern looking pistol chambered in .45 ACP with a attached laser sight."
 	icon_state = "mk23"
-	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45exp
 	fire_delay = 1
-	extra_damage = 4
+	extra_damage = 3
 	extra_penetration = 0.05
 	suppressor_state = "pistol_suppressor"
 	suppressor_x_offset = 28
@@ -209,10 +206,9 @@
 	desc = "A robust .44 magnum semi-automatic handgun."
 	icon_state = "deagle"
 	item_state = "deagle"
-	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m44
 	force = 15
-	extra_damage = 5
+	extra_damage = 4
 	extra_speed = 400
 	fire_delay = 3
 	can_suppress = FALSE
@@ -226,7 +222,6 @@
 	desc = "A long-barreled .44 magnum semi-automatic handgun."
 	icon_state = "automag"
 	item_state = "deagle"
-	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m44
 	extra_damage = 3
 	extra_speed = 400
@@ -236,31 +231,30 @@
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 
 
-//12.7mm Pistol. 
-/obj/item/gun/ballistic/automatic/pistol/pistol127
-	name = "12.7mm pistol"
-	desc = "A Swiss SIG-Sauer 14mm handgun rechambered for 12.7mm ammunition, powerful but a little inaccurate"
+//14mm Pistol. 
+/obj/item/gun/ballistic/automatic/pistol/pistol14
+	name = "14mm pistol"
+	desc = "A Swiss SIG-Sauer 14mm handgun, powerful but a little inaccurate"
 	icon_state = "pistol127"
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/m127mm
+	mag_type = /obj/item/ammo_box/magazine/m14mm
 	force = 15
 	fire_delay = 4
 	spread = 2
 	can_suppress = FALSE
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 
-/obj/item/gun/ballistic/automatic/pistol/pistol127/compact
-	name = "compact 12.7mm pistol"
-	desc = "A Swiss SIG-Sauer 14mm handgun rechambered for 12.7mm ammunition, this one is a compact model for concealed carry."
+/obj/item/gun/ballistic/automatic/pistol/pistol14/compact
+	name = "compact 14mm pistol"
+	desc = "A Swiss SIG-Sauer 14mm handgun, this one is a compact model for concealed carry."
 	icon_state = "pistol127_compact"
 	w_class = WEIGHT_CLASS_SMALL
 	extra_damage = -2 //Smaller barrel, smaller bullet velocity
 	extra_penetration = -0.05 //See above
 	spread = 3
 
-/obj/item/gun/ballistic/automatic/pistol/pistol127/lildevil
-	name= "Little Devil 12.7mm pistol"
-	desc = "A Swiss SIG-Sauer 14mm handgun rechambered for 12.7mm ammunition, this one is a finely tuned custom firearm from the Gunrunners."
+/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
+	name= "Little Devil 14mm pistol"
+	desc = "A Swiss SIG-Sauer 14mm handgun, this one is a finely tuned custom firearm from the Gunrunners."
 	icon_state = "lildev"
 	w_class = WEIGHT_CLASS_SMALL
 	extra_damage = 3

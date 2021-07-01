@@ -11,13 +11,12 @@
 	new /obj/item/aicard(src)
 	new /obj/item/assembly/flash/handheld(src)
 	if(prob(50))
-		new /obj/item/ammo_box/magazine/m50(src)
-		new /obj/item/ammo_box/magazine/m50(src)
+		new /obj/item/ammo_box/magazine/m44(src)
+		new /obj/item/ammo_box/magazine/m44(src)
 		new /obj/item/gun/ballistic/automatic/pistol/deagle(src)
 	else
 		new /obj/item/ammo_box/a357(src)
 		new /obj/item/ammo_box/a357(src)
-		new /obj/item/gun/ballistic/revolver/mateba(src)
 
 /obj/structure/closet/secure_closet/ertSec
 	name = "security closet"
@@ -31,7 +30,7 @@
 	new /obj/item/storage/box/teargas(src)
 	new /obj/item/storage/box/flashes(src)
 	new /obj/item/storage/box/handcuffs(src)
-	new /obj/item/shield/riot/tele(src)
+	new /obj/item/shield/riot(src)
 
 /obj/structure/closet/secure_closet/ertMed
 	name = "medical closet"

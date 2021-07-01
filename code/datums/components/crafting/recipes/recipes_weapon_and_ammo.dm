@@ -1,29 +1,22 @@
-
-
-/*
-/datum/crafting_recipe/strobeshield
-	name = "Strobe Shield"
-	result = /obj/item/assembly/flash/shield
-	reqs = list(/obj/item/wallframe/flasher = 1,
-				/obj/item/assembly/flash/handheld = 1,
-				/obj/item/shield/riot = 1)
+/datum/crafting_recipe/twohanded/spear
+	name = "Spear"
+	result = /obj/item/twohanded/spear
+	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
+				/obj/item/kitchen/knife/combat = 1,
+				/obj/item/stack/rods = 1,
+				/obj/item/stack/crafting/goodparts = 2)
 	time = 40
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
-/datum/crafting_recipe/strobeshield/New()
-	..()
-	blacklist |= subtypesof(/obj/item/shield/riot/)
-*/
-
-/datum/crafting_recipe/makeshiftshield
-	name = "Makeshift Metal Shield"
-	result = /obj/item/shield/makeshift
+/datum/crafting_recipe/scrapshield
+	name = "Scrap Shield"
+	result = /obj/item/shield/riot/scrapshield
 	reqs = list(/obj/item/stack/cable_coil = 30,
 				/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 2,
-				/obj/item/stack/sheet/leather = 3)
-	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(TOOL_WELDER)
 	time = 100
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
@@ -34,17 +27,6 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 15,
 				/obj/item/stack/sheet/leather = 1)
 	tools = list(TOOL_SCREWDRIVER)
-	time = 40
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-
-/datum/crafting_recipe/twohanded/spear
-	name = "Spear"
-	result = /obj/item/twohanded/spear
-	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
-				/obj/item/kitchen/knife/combat = 1,
-				/obj/item/stack/rods = 1,
-				/obj/item/stack/crafting/goodparts = 2)
 	time = 40
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
@@ -167,6 +149,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/shrapnelmine
+	name = "Shrapnel Mine (WARNING: MINE IS PLACED WHERE YOU CRAFT IT)"
+	result = /obj/effect/mine/shrapnel
+	reqs = list(/obj/item/grenade/iedcasing = 1,
+				/obj/item/stack/tile = 1,
+				/obj/item/ammo_casing/a22 = 5
+				)
+	time = 15
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/lance
 	name = "Explosive Lance (Grenade)"
 	result = /obj/item/twohanded/spear
@@ -213,8 +206,8 @@
 	name = "Plasma Can"
 	result = /obj/item/ammo_box/plasmamusket
 	reqs = list(/obj/item/stack/crafting/electronicparts = 2,
-				/obj/item/stack/sheet/glass = 4,
-				/obj/item/stack/sheet/metal = 4)
+				/obj/item/stack/sheet/glass = 3,
+				/obj/item/stack/sheet/metal = 3)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 20
 	category = CAT_WEAPONRY
@@ -223,13 +216,23 @@
 /datum/crafting_recipe/batterybox //lasmusket ammo
 	name = "Laser Musket battery pack"
 	result = /obj/item/ammo_box/lasmusket
-	reqs = list(/obj/item/stack/crafting/electronicparts = 3,
-				/obj/item/stack/sheet/glass = 6,
-				/obj/item/stack/sheet/metal = 6)
+	reqs = list(/obj/item/stack/crafting/electronicparts = 1,
+				/obj/item/stack/sheet/glass = 2,
+				/obj/item/stack/sheet/metal = 2)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 20
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/flamerfuel
+	name = "Flamethrower Fuel"
+	result = /obj/item/ammo_box/jerrycan
+	reqs = list(/datum/reagent/napalm = 50,
+				/obj/item/reagent_containers/glass/beaker/large)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO	
 
 
 
@@ -289,8 +292,8 @@
 
 /datum/crafting_recipe/plasmamusket //lasmusket ammo
 	name = "Plasma Musket"
-	result = /obj/item/gun/ballistic/shotgun/plasmacaster
-	reqs = list(/obj/item/gun/ballistic/shotgun/lasmusket = 1,
+	result = /obj/item/gun/ballistic/rifle/plasmacaster
+	reqs = list(/obj/item/gun/ballistic/rifle/lasmusket = 1,
 				/obj/item/advanced_crafting_components/conductors = 1)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 20
@@ -299,7 +302,7 @@
 
 /datum/crafting_recipe/lasmusket
 	name = "Laser Musket"
-	result = /obj/item/gun/ballistic/shotgun/lasmusket
+	result = /obj/item/gun/ballistic/rifle/lasmusket
 	reqs = list(/obj/item/stack/crafting/electronicparts = 2,
 	/obj/item/gun/ballistic/revolver/pipe_rifle = 1,
 	/obj/item/reagent_containers/food/drinks/bottle = 1,
@@ -366,7 +369,7 @@
 //hunting rifle
 /datum/crafting_recipe/huntingrifle
 	name = "Hunting Rifle"
-	result = /obj/item/gun/ballistic/shotgun/remington
+	result = /obj/item/gun/ballistic/rifle/hunting
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 4,
 				/datum/reagent/blackpowder = 20,
@@ -565,10 +568,10 @@
 /datum/crafting_recipe/servicerifle
 	name = "Service Rifle 5.56mm"
 	result = /obj/item/gun/ballistic/automatic/service
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/stack/crafting/metalparts = 8,
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/crafting/metalparts = 10,
 				/obj/item/stack/sheet/mineral/wood = 5,
-				/obj/item/stack/crafting/goodparts = 4
+				/obj/item/stack/crafting/goodparts = 5
 				)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -609,7 +612,7 @@
 //lever action
 /datum/crafting_recipe/lever_action
 	name = "Lever Action Shotgun"
-	result = /obj/item/gun/ballistic/shotgun/trench
+	result = /obj/item/gun/ballistic/rifle/repeater/shotgunlever
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -623,7 +626,7 @@
 //trail carbine
 /datum/crafting_recipe/trail_carbine
 	name = "Trail Carbine"
-	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	result = /obj/item/gun/ballistic/rifle/repeater/trail
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
@@ -650,7 +653,7 @@
 //pps
 /datum/crafting_recipe/pps
 	name = "Ppsh-41"
-	result = /obj/item/gun/ballistic/automatic/pps
+	result = /obj/item/gun/ballistic/automatic/smg/ppsh
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 2
@@ -694,7 +697,7 @@
 //uzi
 /datum/crafting_recipe/uzi
 	name = "Uzi SMG"
-	result = /obj/item/gun/ballistic/automatic/mini_uzi
+	result = /obj/item/gun/ballistic/automatic/smg/mini_uzi
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1
 				)
@@ -707,7 +710,7 @@
 //10mm smg
 /datum/crafting_recipe/smg10mm
 	name = "10mm SMG"
-	result = /obj/item/gun/ballistic/automatic/smg10mm
+	result = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1
 				)
@@ -720,7 +723,7 @@
 //grease gun
 /datum/crafting_recipe/grease_gun
 	name = "Grease Gun"
-	result = /obj/item/gun/ballistic/automatic/greasegun
+	result = /obj/item/gun/ballistic/automatic/smg/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				)
@@ -733,7 +736,7 @@
 //brush gun
 /datum/crafting_recipe/brush
 	name = "Brush Gun"
-	result = /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
+	result = /obj/item/gun/ballistic/rifle/repeater/brush
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -762,9 +765,9 @@
 	subcategory = CAT_WEAPON
 	always_availible = FALSE
 
-//breacher
-/datum/crafting_recipe/breacher
-	name = "Breacher Shotgun"
+//Riot shotgun
+/datum/crafting_recipe/riotshotgun
+	name = "Riot Shotgun"
 	result = /obj/item/gun/ballistic/automatic/shotgun/riot
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/alloys = 1,
@@ -863,7 +866,7 @@
 //AM rifle
 /datum/crafting_recipe/am_rifle
 	name = "Anti-Materiel Rifle"
-	result = /obj/item/gun/ballistic/shotgun/antimateriel
+	result = /obj/item/gun/ballistic/rifle/antimateriel
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
