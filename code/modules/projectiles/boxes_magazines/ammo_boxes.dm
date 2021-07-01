@@ -66,17 +66,6 @@
 	ammo_type = /obj/item/ammo_casing/a22/hp
 	custom_materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 2000)
 
-//qsp
-/obj/item/ammo_box/qspbox
-	name = "ammo box (10mm QSP)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "ammobox"
-	multiple_sprites = 3
-	max_ammo = 40
-	ammo_type = /obj/item/ammo_casing/qsp
-	w_class = WEIGHT_CLASS_NORMAL
-	custom_materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 2000)
-
 
 //9mm and .38
 /obj/item/ammo_box/c9mm
@@ -187,6 +176,15 @@
 	ammo_type = /obj/item/ammo_casing/m44/swc
 	custom_materials = list(/datum/material/iron = 19000, /datum/material/blackpowder = 2000)
 
+/obj/item/ammo_box/a45lcbox
+	name = "ammo box (.45 Long Colt)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "ammobox"
+	caliber = "a45lc"
+	ammo_type = /obj/item/ammo_casing/a45lc
+	max_ammo = 30
+	w_class = WEIGHT_CLASS_NORMAL
+	custom_materials = list(/datum/material/iron = 14000, /datum/material/blackpowder = 1500)
 
 //.45 ACP
 /obj/item/ammo_box/c45
@@ -305,7 +303,7 @@
 	custom_materials = list(/datum/material/iron = 28000, /datum/material/blackpowder = 3500)
 
 
-//.50 MG and .50 AE
+//.50 MG and 14mm
 /obj/item/ammo_box/a50MGbox
 	name = "ammo box (.50 MG)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -318,18 +316,18 @@
 	custom_materials = list(/datum/material/iron = 20000, /datum/material/blackpowder = 2000)
 
 /obj/item/ammo_box/m127mm
-	name = "ammo box (12.7mm)"
+	name = "ammo box (14mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "50aebox"
+	icon_state = "14mmbox"
 	multiple_sprites = 2
-	caliber = "12.7"
+	caliber = "14"
 	ammo_type = /obj/item/ammo_casing/a127mm
 	max_ammo = 30
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron = 11000, /datum/material/blackpowder = 1500)
 
 /obj/item/ammo_box/m127mm/jhp
-	name = "ammo box (12.7mm JHP)"
+	name = "ammo box (14mm JHP)"
 	ammo_type = /obj/item/ammo_casing/a127mm/jhp
 	custom_materials = list(/datum/material/iron = 11000)
 
@@ -395,20 +393,6 @@
 /obj/item/ammo_box/c38/empty
 	start_empty = 1
 
-
-//QSP
-/obj/item/ammo_box/qsp
-	name = "speed loader (10mm qsp)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "qsp10mm"
-	caliber = "qspbuckshot"
-	ammo_type = /obj/item/ammo_casing/qsp
-	max_ammo = 6
-	multiple_sprites = 1
-	custom_materials = list(/datum/material/iron = 3000)
-
-/obj/item/ammo_box/qsp/empty
-	start_empty = 1
 
 //10mm
 /obj/item/ammo_box/l10mm
@@ -497,6 +481,19 @@
 	custom_materials = list(/datum/material/iron = 3000)
 
 /obj/item/ammo_box/c45rev/empty
+	start_empty = 1
+
+/obj/item/ammo_box/a45lcrev
+	name = "speed loader (.45 LC)"
+	desc = "Designed to quickly reload revolvers."
+	icon_state = "38"
+	caliber = "a45lc"
+	ammo_type = /obj/item/ammo_casing/a45lc
+	max_ammo = 6
+	multiple_sprites = 1
+	custom_materials = list(/datum/material/iron = 3000)
+
+/obj/item/ammo_box/a45lcrev/empty
 	start_empty = 1
 
 /obj/item/ammo_box/jerrycan

@@ -424,7 +424,7 @@ Raider
 
 	suit_store = pick(
 		/obj/item/gun/ballistic/revolver/detective, \
-		/obj/item/gun/ballistic/shotgun/remington, \
+		/obj/item/gun/ballistic/rifle/hunting, \
 		/obj/item/gun/ballistic/revolver/zipgun, \
 		/obj/item/gun/ballistic/revolver/pipe_rifle, \
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
@@ -455,7 +455,7 @@ Raider
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
 	backpack_contents = list(
 		/obj/item/twohanded/baseball/spiked=1,
-		/obj/item/gun/ballistic/shotgun/mosin=1,
+		/obj/item/gun/ballistic/rifle/mosin=1,
 		/obj/item/ammo_box/a762=2,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
 		/obj/item/megaphone=1)
@@ -509,7 +509,7 @@ Raider
 	uniform = /obj/item/clothing/under/f13/exile
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/mosin=1,
+		/obj/item/gun/ballistic/rifle/mosin=1,
 		/obj/item/ammo_box/a762=2)
 
 /datum/outfit/loadout/raider_legion
@@ -621,7 +621,7 @@ Raider
 		/obj/item/kitchen/knife)
 	suit_store = pick(
 	/obj/item/gun/ballistic/revolver/detective, \
-	/obj/item/gun/ballistic/shotgun/remington, \
+	/obj/item/gun/ballistic/rifle/hunting, \
 	/obj/item/gun/ballistic/revolver/zipgun, \
 	/obj/item/gun/ballistic/revolver/pipe_rifle)
 
@@ -788,7 +788,7 @@ Raider
 
 /datum/outfit/loadout/hitman
 	name = "Hitman"
-	r_hand = /obj/item/gun/ballistic/automatic/mini_uzi
+	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
 	suit = /obj/item/clothing/suit/armor/vest
 	backpack_contents = list(
 						/obj/item/ammo_box/magazine/uzim9mm=3, \
@@ -797,7 +797,7 @@ Raider
 
 /datum/outfit/loadout/bodyguard
 	name = "Bodyguard"
-	r_hand = /obj/item/gun/ballistic/shotgun/riot
+	r_hand = /obj/item/gun/ballistic/shotgun/police
 	suit = /obj/item/clothing/suit/armor/vest
 	backpack_contents = list(
 						/obj/item/ammo_box/shotgun/buck=2, \
@@ -842,7 +842,7 @@ Raider
 	gloves = /obj/item/clothing/gloves/color/white
 	head = /obj/item/clothing/head/caphat/beret/white
 	mask = /obj/item/clothing/mask/bandana/durathread
-	suit_store = /obj/item/gun/ballistic/automatic/p90/worn
+	suit_store = /obj/item/gun/ballistic/automatic/smg/p90/worn
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \

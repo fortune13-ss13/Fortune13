@@ -140,20 +140,6 @@
 	build_path = /obj/item/ammo_box/c38box
 	category = list("initial", "Simple Ammo")
 
-/datum/design/ammolathe/qsp
-	name = "ammo box (10mm QSP)"
-	id = "qspammobox"
-	materials = list(/datum/material/iron = 14000, /datum/material/blackpowder = 1500)
-	build_path = /obj/item/ammo_box/qspbox
-	category = list("initial", "Advanced Ammo")	
-
-/datum/design/ammolathe/speedloaderqsp
-	name = "empty speed loader (10mm QSP)"
-	id = "qsp"
-	materials = list(/datum/material/iron = 3000)
-	build_path = /obj/item/ammo_box/qsp/empty
-	category = list("initial", "Advanced Magazines")	
-
 /datum/design
 /datum/design/ammolathe/a22plink
 	name = ".22lr plinking ammo box"
@@ -220,12 +206,6 @@
 	build_path = /obj/item/ammo_box/magazine/uzim9mm/empty
 	category = list("initial", "Basic Magazines")
 
-/datum/design/ammolathe/rifleassault556
-	name = "empty 30rd rifle magazine (5.56mm)"
-	id = "rifleassault556"
-	materials = list(/datum/material/iron = 8000)
-	build_path = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
-	category = list("initial", "Basic Magazines")
 
 /datum/design/ammolathe/pistol22mag
 	name = "empty pistol magazine (.22lr)"
@@ -378,6 +358,13 @@
 	build_path = /obj/item/ammo_box/tube/c4570/empty
 	category = list("initial", "Intermediate Magazines")
 
+/datum/design/ammolathe/speedloader45lc
+	name = "empty speed loader (.45 LC)"
+	id = "speedloader45lc"
+	materials = list(/datum/material/iron = 4000)
+	build_path = /obj/item/ammo_box/a45lcrev/empty
+	category = list("initial", "Intermediate Magazines")
+
 /datum/design/ammolathe/pps_mag
 	name = "empty ppsh magazine (9mm)"
 	id = "pps_mag"
@@ -403,7 +390,7 @@
 	name = "empty handgun magazine (12.7)"
 	id = "m127mm"
 	materials = list(/datum/material/iron = 6000)
-	build_path = /obj/item/ammo_box/magazine/m127mm/empty
+	build_path = /obj/item/ammo_box/magazine/m14mm/empty
 	category = list("initial", "Intermediate Magazines")
 
 /datum/design/ammolathe/m22smg
@@ -447,6 +434,13 @@
 	id = "c4570jhp"
 	materials = list(/datum/material/iron = 12000, /datum/material/blackpowder = 2000)
 	build_path = /obj/item/ammo_box/c4570box/jhp
+	category = list("initial", "Intermediate Ammo")
+
+/datum/design/ammolathe/c4570
+	name = ".45 LC ammo box"
+	id = "c45lc"
+	materials = list(/datum/material/iron = 12000, /datum/material/blackpowder = 1500)
+	build_path = /obj/item/ammo_box/a45lcbox
 	category = list("initial", "Intermediate Ammo")
 
 /datum/design/ammolathe/a50mg
@@ -519,6 +513,13 @@
 	id = "m10mm_p90"
 	materials = list(/datum/material/iron = 6000)
 	build_path = /obj/item/ammo_box/magazine/m10mm_p90/empty
+	category = list("initial", "Advanced Magazines")
+
+/datum/design/ammolathe/rifleassault556
+	name = "empty 30rd rifle magazine (5.56mm)"
+	id = "rifleassault556"
+	materials = list(/datum/material/iron = 8000)
+	build_path = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
 	category = list("initial", "Advanced Magazines")
 
 /*

@@ -9,6 +9,7 @@
 	var/oneuse = TRUE //default this is true, but admins can var this to 0 if we wanna all have a pass around of the rod form book
 	var/used = FALSE //only really matters if oneuse but it might be nice to know if someone's used it for admin investigations perhaps
 	var/select = FALSE
+	var/time_per_page = 5 SECONDS
 
 /obj/item/book/granter/proc/turn_page(mob/user)
 	playsound(user, pick('sound/effects/pageturn1.ogg','sound/effects/pageturn2.ogg','sound/effects/pageturn3.ogg'), 30, 1)
@@ -52,12 +53,12 @@
 	else
 		on_reading_start(user)
 		reading = TRUE
-		for(var/i=1, i<=pages_to_mastery, i++)
+		for(var/i in 1 to pages_to_mastery)
 			if(!turn_page(user))
 				on_reading_stopped()
 				reading = FALSE
 				return
-		if(do_after(user,50, TRUE, user))
+		if(do_after(user, time_per_page, TRUE, user))
 			on_reading_finished(user)
 		reading = FALSE
 	return TRUE
@@ -471,6 +472,23 @@
 		name = "empty scroll"
 		icon_state = "blankscroll"
 
+/obj/item/book/granter/martial/berserker
+	martial = /datum/martial_art/berserker
+	name = "berserker's rites"
+	martialname = "berserkers rites"
+	desc = "A paper scroll detailing the sacred rites of the berserker. It is against the law of the Legion for any not walking the path of the berserker to read this."
+	greet = "<span class='sciradio'>You have mastered the rites of the berserker. Use the help verb to see your combos.</span>"
+	icon = 'icons/obj/wizard.dmi'
+	icon_state = "scroll2"
+	remarks = list("Rip and tear...", "Overwhelming force, immovable object...", "Focus... And you'll be able to incapacitate any foe in seconds...", "I must pierce armor for maximum damage...", "You are huge, that means you have huge guts...")
+
+/obj/item/book/granter/martial/berserker/onlearned(mob/living/carbon/user)
+	..()
+	if(oneuse == TRUE)
+		desc = "It's completely blank."
+		name = "empty scroll"
+		icon_state = "blankscroll"
+
 /obj/item/book/granter/martial/plasma_fist
 	martial = /datum/martial_art/plasma_fist
 	name = "frayed scroll"
@@ -695,10 +713,10 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/r91)
 
-/obj/item/book/granter/crafting_recipe/blueprint/breacher
-	name = "breacher shotgun blueprint"
+/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun
+	name = "riot shotgun blueprint"
 	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/breacher)
+	crafting_recipe_types = list(/datum/crafting_recipe/riotshotgun)
 
 /obj/item/book/granter/crafting_recipe/blueprint/sniper
 	name = "sniper rifle blueprint"
@@ -864,6 +882,16 @@
 	traitname = "trekking"
 	remarks = list("It never hurts to take the road less traveled...", "Proper movement is key to your survival...", "Whether during combat or for simple travel, the desert can be your friend...", "Without proper knowledge, it can be hard to traverse the desert on foot...", "A Ranger is always prepared...")
 
+
+/obj/item/book/granter/trait/trekking/legion
+	name = "Speculatores Codice"
+	desc = "An extensive guide about scouting, ambushing, and moving through harsh terrain. Originally written as a manual for the infamous Speculatores of the Legion."
+	oneuse = TRUE
+	granted_trait = TRAIT_HARD_YARDS
+	traitname = "trekking"
+	remarks = list("It never hurts to take the road less traveled...", "Proper movement is key to your survival...", "Whether during combat or for simple travel, the desert can be your friend...", "Without proper knowledge, it can be hard to traverse the desert on foot...", "A Ranger is always prepared...")
+
+
 /obj/item/book/granter/trait/gunslinger
 	name = "Shalashaska: A gunslinger's memoirs"
 	desc = "The memoirs of an old gunslinger, has some useful advice."
@@ -888,6 +916,7 @@
 	desc = "Your private diary, reminding you of the knowledge you previously had."
 	granted_trait = null
 	pages_to_mastery = 0
+	time_per_page = 0
 
 /obj/item/book/granter/trait/selection/attack_self(mob/user)
 	var/list/choices = list("Chemistry","Craftsmanship","Melee Expert","Minor Surgery","Power Armor","Tinkerer","Trekking")
@@ -925,9 +954,8 @@
 				granted_trait = TRAIT_MASTER_GUNSMITH
 				traitname = "tinkering"
 				remarks = list("Adapt weaponry and armor to your uses...", "Experiment freely...", "You can always try three times...", "Be careful with loaded guns...")
+	return ..()
 
-	else
-		. = ..()
 
 /obj/item/book/granter/trait/selection/Initialize()
 	. = ..()
