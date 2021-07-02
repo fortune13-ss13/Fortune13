@@ -70,6 +70,7 @@
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 12
 	multiple_sprites = 2
+	caliber = "10mm"
 
 /obj/item/ammo_box/magazine/m10mm_adv/empty
 	start_empty = 1
@@ -142,7 +143,7 @@
 	..()
 	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
 
-/obj/item/ammo_box/magazine/m44
+/obj/item/ammo_box/magazine/automag
 	name = "automag magazine (.44 magnum)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "magnum"

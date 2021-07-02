@@ -281,7 +281,7 @@ Logistics Officer
 	glasses			= /obj/item/clothing/glasses/welding
 	belt 			= /obj/item/storage/belt/utility/full/engi
 	gloves			= /obj/item/clothing/gloves/color/yellow
-	suit_store		= /obj/item/gun/ballistic/automatic/service/r82
+	suit_store		= /obj/item/gun/ballistic/automatic/service
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom=1, \
 		/obj/item/ammo_box/magazine/m45=3, \
@@ -401,7 +401,7 @@ Sergeant
 
 /datum/outfit/loadout/sergeantrecon
 	name = "Pathfinder Squad Leader"
-	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact //behold, the only autosearable M1
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	head 			= /obj/item/clothing/head/f13/ncr
 	backpack_contents = list(
 		/obj/item/book/granter/trait/trekking=1,
@@ -414,7 +414,7 @@ Sergeant
 	suit_store = /obj/item/gun/ballistic/shotgun/trench //Over thereee over thereeeee spread the spread the word over thereeee
 	head = /obj/item/clothing/head/f13/ncr/goggles
 	backpack_contents = list(
-		/obj/item/storage/fancy/ammobox/lethalshot=2, \
+		/obj/item/ammo_box/shotgun/buck=2, \
 		/obj/item/clothing/mask/gas=1, \
 		/obj/item/tank/internals/emergency_oxygen/engi=1, \
 		/obj/item/grenade/smokebomb=3, \
@@ -520,12 +520,13 @@ Corporal
 
 /datum/outfit/loadout/corporalspotter
 	name = "Spotter"
-	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	head = /obj/item/clothing/head/beret/ncr_recon/worn
 	backpack_contents = list(
 		/obj/item/storage/box/ration/menu_eight=1, 
+		/obj/item/book/granter/trait/trekking=1,
 		/obj/item/binoculars=1,
-		/obj/item/ammo_box/magazine/m556/rifle/assault=1)
+		/obj/item/ammo_box/magazine/m10mm_adv/ext=2)
 
 /datum/outfit/loadout/corporalrifleman
 	name = "Assistant Squad Leader"
@@ -559,7 +560,7 @@ Corporal
 	head			= /obj/item/clothing/head/f13/ncr/steelpot_med
 	gloves			= /obj/item/clothing/gloves/color/latex/nitrile
 	accessory		= /obj/item/clothing/accessory/armband/med/ncr
-	suit_store		= /obj/item/gun/ballistic/automatic/service
+	suit_store		= /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	mask 			= /obj/item/clothing/mask/surgical
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
@@ -567,7 +568,7 @@ Corporal
 		/obj/item/kitchen/knife/combat=1, \
 		/obj/item/storage/survivalkit_aid_adv=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted=1, \
-		/obj/item/ammo_box/magazine/m556/rifle=1, \
+		/obj/item/ammo_box/magazine/m10mm_adv/ext=2, \
 		/obj/item/storage/firstaid/regular=1
 		)
 
@@ -713,25 +714,26 @@ Trooper
 
 /datum/outfit/loadout/trooperrifleman
 	name = "Rifleman"
-	suit_store = /obj/item/gun/ballistic/automatic/varmint //Service rifle is dead, long live the varmint rifle! Higher tier roles still get the Service Rifle.
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	backpack_contents = list(
 		/obj/item/storage/box/ration/menu_two=1,
-		/obj/item/ammo_box/magazine/m556/rifle=1)
+		/obj/item/ammo_box/magazine/m10mm_adv/ext=2)
 
 /datum/outfit/loadout/trooperpathfinder
 	name = "Pathfinder"
-	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n //Generally worse weapon, though can be upgraded
+	suit_store = /obj/item/gun/ballistic/automatic/smg/rockwell
 	backpack_contents = list(
 		/obj/item/book/granter/trait/trekking=1, //You get a worse weapon, but are good at scouting. Hence "Pathfinder."
 		/obj/item/storage/box/ration/menu_eight=1,
-		/obj/item/ammo_box/magazine/m10mm_adv/ext=1)
+		/obj/item/ammo_box/magazine/uzim9mm=2)
 
 /datum/outfit/loadout/trooperfiresupport
-	name = "Fire Support"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/rockwell //Barely better then a pipe gun but you get a pretty rapid burst fire. Intended for suppression/CQC
+	name = "Pointman"
+	suit_store = /obj/item/gun/ballistic/shotgun/police 
 	backpack_contents = list(
 		/obj/item/storage/box/ration/menu_one=1,
-		/obj/item/ammo_box/magazine/uzim9mm=1)
+		/obj/item/flashlight/seclite=1, //for putting on your shotgun. You're a pointman, you lead the way in attacks.
+		/obj/item/ammo_box/shotgun/buck=2)
 
 
 
@@ -918,8 +920,12 @@ Veteran Ranger
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	
+	/*
 	var/datum/martial_art/rangertakedown/RT = new
 	RT.teach(H)
+	commented out for now, readd it if it gets reworked later.
+	*/
 
 /datum/outfit/job/ncr/f13vetranger
 	name = "NCR Veteran Ranger"
@@ -994,8 +1000,11 @@ Veteran Ranger
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	/*
 	var/datum/martial_art/rangertakedown/RT = new
 	RT.teach(H)
+	commented out for now, readd it if it gets reworked later.
+	*/
 
 /datum/outfit/job/ncr/f13ranger
 	name = "NCR Ranger"

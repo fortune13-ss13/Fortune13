@@ -138,6 +138,8 @@
 	/datum/outfit/loadout/rangerhunter, //hunting revolver and ripper
 	/datum/outfit/loadout/centurion //marksman and powerfist
 	)
+/*	/datum/outfit/loadout/berserkercenturion 
+kept here incase it gets reworked later*/
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -189,6 +191,18 @@
 	backpack_contents = list(
 					/obj/item/melee/powerfist/goliath=1,
 					/obj/item/ammo_box/magazine/m556/rifle=2)
+
+/* /datum/outfit/loadout/berserkercenturion
+	name = 			"Praetorian Candidate"
+	suit = 			/obj/item/clothing/suit/armor/f13/legion/centurion
+	head = 			/obj/item/clothing/head/helmet/f13/legion/centurion
+	backpack_contents = list(
+					/obj/item/melee/unarmed/sappers=1,
+					/obj/item/book/granter/martial/berserker=1,
+					/obj/item/reagent_containers/pill/patch/healingpowder/berserker=2)
+					
+					
+commented out pending rework*/
 
 
 // VETERAN DECANUS (Riot Shotgun, Spatha M1911)
@@ -348,6 +362,7 @@
 	belt = 			null
 	glasses = 		/obj/item/clothing/glasses/legiongoggles
 	r_pocket =		/obj/item/flashlight/lantern
+	l_pocket = 		/obj/item/storage/survivalkit_tribal
 	backpack_contents = list(
 					/obj/item/reagent_containers/pill/patch/healingpowder=1,
 					/obj/item/restraints/handcuffs=1)
@@ -497,6 +512,7 @@
 					/obj/item/ammo_box/a357=1,
 					/obj/item/gun/ballistic/revolver/colt357=1)
 
+
 /datum/outfit/loadout/vetberserker
 	name =			"Berserker"
 	suit_store =	/obj/item/gun/ballistic/rifle/repeater/shotgunlever
@@ -504,6 +520,7 @@
 					/obj/item/ammo_box/shotgun/slug=1,
 					/obj/item/twohanded/fireaxe=1,
 					/obj/item/restraints/legcuffs/bola=1)
+
 
 // PRIME
 
