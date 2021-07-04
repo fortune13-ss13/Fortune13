@@ -482,8 +482,7 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
  * Cardboard
  */
 GLOBAL_LIST_INIT(cardboard_recipes, list ( \
-	new/datum/stack_recipe("box", /obj/item/storage/box),										\
-	new/datum/stack_recipe("large box", /obj/structure/closet/cardboard, 4),					\
+	new/datum/stack_recipe("box", /obj/item/storage/box),										\					
 	new/datum/stack_recipe("cardboard cutout", /obj/item/cardboard_cutout, 5),					\
 	new/datum/stack_recipe("folder", /obj/item/folder),											\
 	// holy fuck why are there so many boxes
