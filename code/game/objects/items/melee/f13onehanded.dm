@@ -639,11 +639,11 @@
 	item_state = "tribalspear"
 	force = 20
 	throwforce = 35
-	armour_penetration = 0.10
+	armour_penetration = 0.65
 	max_reach = 2
 	item_flags = SLOWS_WHILE_IN_HAND
 	slowdown = 0.3
-	embedding = list("pain_mult" = 2, "embed_chance" = 60, "fall_chance" = 20)
+	embedding = list("pain_mult" = 2, "embed_chance" = 100, "fall_chance" = 20)
 	w_class = WEIGHT_CLASS_NORMAL
 
 
