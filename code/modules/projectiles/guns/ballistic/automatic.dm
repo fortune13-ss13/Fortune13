@@ -16,14 +16,12 @@
 	force = 15
 	burst_size = 2
 	burst_shot_delay = 3
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	var/automatic_burst_overlay = TRUE
 	var/semi_auto = FALSE
 	var/auto_eject = 0
 	var/auto_eject_sound = null
 	var/alarmed = 0
 	var/select = 1
-
 	can_suppress = FALSE
 	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 
@@ -39,6 +37,7 @@
 			src.desc += " It has an automatic sear installed."
 			src.burst_size += 1
 			src.spread += 6
+			src.recoil += 0.1
 			src.automatic_burst_overlay = TRUE
 			src.semi_auto = FALSE
 			to_chat(user, "<span class='notice'>You attach \the [A] to \the [src].</span>")
@@ -164,9 +163,10 @@
 	fire_delay = 4 //most SMGs are pretty rapid fire
 	spread = 10
 	force = 12 //Less good for bashing since smaller than rifles
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 
 
-//Rockwell gun. 9mm poor quality.
+//Rockwell gun								Keywords: 9mm, Automatic, 20/32 rounds. Special modifiers: damage -1
 /obj/item/gun/ballistic/automatic/smg/rockwell
 	name = "the Rockwell gun"
 	desc = "Post-war submachine gun in 9mm, based on old schematics by T.G. Rockwell for home-made weapons if under enemy occupation. Basically a toploaded sten gun with a pistol grip, allowing makeshift magazines without a spring."
@@ -174,51 +174,72 @@
 	item_state = "rockwell"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	init_mag_type = /obj/item/ammo_box/magazine/uzim9mm/rockwell
-	burst_shot_delay = 2.5
+	burst_shot_delay = 3
+	recoil = 0.1
 	spread = 13
 	extra_damage = -1
 	can_attachments = TRUE
 
 
-//American 180. .22 LR
+//American 180								Keywords: .22 LR, Automatic, 180 rounds
 /obj/item/gun/ballistic/automatic/smg/american180
 	name = "American 180"
 	desc = "An integrally suppressed submachinegun chambered in the common .22 long rifle. Top loaded drum magazine."
 	icon_state = "smg22"
 	item_state = "shotgun"
-	slowdown = 0.3
+	slowdown = 0.4
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/m22smg
 	can_unsuppress = FALSE
-	burst_shot_delay = 1 //rapid fire
+	burst_shot_delay = 1.5 //rapid fire
 	suppressed = 1
 	fire_sound = 'sound/f13weapons/american180.ogg'
 
 
-//Greasegun. .45 ACP
+//Greasegun									Keywords: .45 ACP, Automatic, 30 rounds
 /obj/item/gun/ballistic/automatic/smg/greasegun
 	name = "M3A1 Grease Gun"
 	desc = "An inexpensive submachine gun chambered in .45 ACP. Slow fire rate allows the operator to conserve ammunition in controllable bursts."
 	icon_state = "grease_gun"
 	item_state = "smg9mm"
 	mag_type = /obj/item/ammo_box/magazine/greasegun
-	weapon_weight = WEAPON_MEDIUM
 	fire_delay = 5
-	burst_shot_delay = 5 //Slow rate of fire
+	burst_shot_delay = 3.25 //Slow rate of fire
 	can_attachments = TRUE
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 26
 	suppressor_y_offset = 19
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/greasegun.ogg'
 
+/obj/item/gun/ballistic/automatic/smg/greasegun/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			spread = 10
+			fire_delay = 5
+			weapon_weight = WEAPON_HEAVY
+			to_chat(user, "<span class='notice'>You switch to automatic fire.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 4.5
+			spread = 3
+			recoil = 0.1
+			weapon_weight = WEAPON_MEDIUM
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
 
-//10mm SMG
+//10mm SMG									Keywords: 10mm, Automatic, 12/24 rounds
 /obj/item/gun/ballistic/automatic/smg/smg10mm
 	name = "10mm submachine gun"
 	desc = "One of the most common personal-defense weapons of the Great War, a sturdy and reliable open-bolt 10mm submachine gun."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
-	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	init_mag_type = /obj/item/ammo_box/magazine/m10mm_adv/ext
 	fire_delay = 4
@@ -226,26 +247,44 @@
 	suppressor_state = "10mm_suppressor" //activate if sprited 
 	suppressor_x_offset = 30
 	suppressor_y_offset = 16
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 
 /obj/item/gun/ballistic/automatic/smg/smg10mm/worn
 	name = "worn-out 10mm submachine gun"
 	desc = "Mass-produced weapon from the Great War, this one has seen use ever since. Grip is wrapped in tape to keep the plastic from crumbling, the metals are oxidizing, but the gun still works."
 	init_mag_type = /obj/item/ammo_box/magazine/m10mm_adv/simple
-	spread = 12
-	fire_delay = 5
-	burst_shot_delay = 2.5
 	worn_out = TRUE
 
+/obj/item/gun/ballistic/automatic/smg/smg10mm/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			spread = 10
+			fire_delay = 4
+			recoil = 0.1
+			weapon_weight = WEAPON_HEAVY
+			to_chat(user, "<span class='notice'>You switch to automatic fire.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 3.5
+			spread = 3
+			weapon_weight = WEAPON_MEDIUM
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
 
-//UZI. 9mm
+//Uzi										Keywords: 9mm, Automatic, 32 rounds
 /obj/item/gun/ballistic/automatic/smg/mini_uzi
 	name = "Uzi"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "uzi"
 	item_state = "uzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	weapon_weight = WEAPON_MEDIUM
 	fire_delay = 3
 	burst_shot_delay = 2.5
 	can_suppress = TRUE
@@ -254,9 +293,31 @@
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 29
 	suppressor_y_offset = 16
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 
+/obj/item/gun/ballistic/automatic/smg/mini_uzi/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			spread = 11
+			fire_delay = 3
+			recoil = 0.1
+			weapon_weight = WEAPON_HEAVY
+			to_chat(user, "<span class='notice'>You switch to automatic fire.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 3
+			spread = 3
+			weapon_weight = WEAPON_MEDIUM
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
 
-//Carl Gustaf. 10mm
+//Carl Gustaf								Keywords: 10mm, Automatic, 36 rounds
 /obj/item/gun/ballistic/automatic/smg/cg45
 	name = "Carl Gustaf 10mm"
 	desc = "Post-war submachine gun made in workshops in Phoenix, a copy of a simple old foreign design."
@@ -266,11 +327,12 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
 	spread = 9
+	recoil = 0.1
 	can_attachments = TRUE
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 
 
-//Ppsh-41. 9mm
+//Ppsh-41									Keywords: 9mm, Automatic, 71 rounds. Special modifiers: damage -4
 /obj/item/gun/ballistic/automatic/smg/ppsh
 	name = "Ppsh-41"
 	desc = "An extremely fast firing, inaccurate submachine gun from World War 2. Low muzzle velocity. Uses 9mm rounds."
@@ -278,19 +340,20 @@
 	slowdown = 0.3
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/pps9mm
+	spread = 20
 	burst_size = 3
 	fire_delay = 6
 	burst_shot_delay = 1.5
-	can_attachments = TRUE
 	extra_damage = -4
+	recoil = 0.25
+	can_attachments = TRUE
 	can_scope = TRUE
 	scope_state = "AEP7_scope"
 	scope_x_offset = 9
 	scope_y_offset = 21
-	spread = 20
 
 
-//MP-5. Silenced 9mm
+//MP-5 SD									Keywords: 9mm, Automatic, 32 rounds, Suppressed
 /obj/item/gun/ballistic/automatic/smg/mp5
 	name = "MP-5 SD"
 	desc = "An integrally suppressed sub machine chambered in 9mm."
@@ -301,43 +364,45 @@
 	fire_delay = 4
 	burst_shot_delay = 2
 	suppressed = 1
+	recoil = 0.1
 	can_attachments = TRUE
 	can_suppress = FALSE
 	can_unsuppress = FALSE
 	fire_sound = 'sound/weapons/Gunshot_silenced.ogg'
 
 
-//Tommygun .45
+//Tommygun									Keywords: .45 ACP, Automatic, 50 rounds. Special modifiers: damage -1
 /obj/item/gun/ballistic/automatic/smg/tommygun
 	name = "ancient Thompson SMG"
 	desc = "Rusty, dinged up, but somehow still functional."
 	icon_state = "tommygun"
 	item_state = "shotgun"
-	slowdown = 0.3
+	slowdown = 0.4
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
 	burst_size = 3
-	burst_shot_delay = 4
-	fire_delay = 6
+	burst_shot_delay = 3
+	fire_delay = 5
 	extra_damage = -1
+	spread = 12
+	recoil = 0.5
 
 
-//P90 9mm. Top SMG, rare.
+//P90										Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
 /obj/item/gun/ballistic/automatic/smg/p90
 	name = "FN P90c"
 	desc = "The Fabrique Nationale P90c was just coming into use at the time of the war. The weapon's bullpup layout, and compact design, make it easy to control. The durable P90c is prized for its reliability, and high firepower in a ruggedly-compact package. Chambered in 10mm."
 	icon_state = "p90"
 	item_state = "m90"
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
 	burst_size = 3
 	fire_delay = 3
 	spread = 7
-	burst_shot_delay = 0.5
-	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
-	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_LIGHT
-	extra_damage = 2
-	extra_penetration = 0.1
+	burst_shot_delay = 2
+	extra_damage = 1
+	recoil = 0.25
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
 	suppressor_x_offset = 29
@@ -352,50 +417,34 @@
 	extra_damage = 0
 
 
+
 ////////////
 //CARBINES//
 ////////////
 
 
-//Auto-pipe rifle. The ultimate in hobo firearms. .357 autofire, inaccurate as hell, slow RoF.
-/obj/item/gun/ballistic/automatic/autopipe
-	name = "Auto-pipe rifle (.357)"
-	desc = "A belt fed pipe rifle held together with duct tape. Highly inaccurate. What could go wrong."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "autopipe"
-	item_state = "autopipe"
-	mag_type = /obj/item/ammo_box/magazine/autopipe
-	burst_size = 4
-	fire_delay = 26
-	burst_shot_delay = 5
-	spread = 24
-	fire_sound = 'sound/weapons/Gunshot.ogg'
-
-
-//M1 Carbine - 10mm long barrel. Low end carbine option for NCR.
+//M1 Carbine								Keywords: 10mm, Semi-auto, 12/24 rounds, Long barrel
 /obj/item/gun/ballistic/automatic/m1carbine
 	name = "m1 carbine"
-	desc = "The M1 Carbine was mass produced in the 40´s, and at some point NCR found stockpiles and rechambered them to 10mm to make up for the fact their service rifle production can't keep up with demand."
+	desc = "The M1 Carbine was mass produced during some old war, and at some point NCR found stockpiles and rechambered them to 10mm to make up for the fact their service rifle production can't keep up with demand."
 	icon_state = "m1carbine"
 	item_state = "rifle"
+	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	burst_size = 1
 	fire_delay = 5
 	spread = 2
-	mag_type = /obj/item/ammo_box/magazine/m10mm_adv
 	extra_damage = 2
 	automatic_burst_overlay = FALSE
 	can_bayonet = TRUE
-	bayonet_state = "lasmusket"
+	bayonet_state = "bayonet"
 	knife_x_offset = 22
 	knife_y_offset = 21
 	can_scope = TRUE
-	scope_state = "lasmusket_scope"
+	scope_state = "scope_medium"
 	scope_x_offset = 5
 	scope_y_offset = 14
 	can_attachments = TRUE
-	can_automatic = FALSE
+	can_automatic = TRUE
 	semi_auto = TRUE
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
@@ -403,6 +452,8 @@
 	suppressor_y_offset = 31
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
+
+//M1/n Carbine								Keywords: NCR, 10mm, Semi-auto, 12/24 rounds, Long barrel, No autosear, No tinker.  Special modifiers: damage +1
 /obj/item/gun/ballistic/automatic/m1carbine/m1n
 	name = "m1/n carbine"
 	desc = "An M1 Carbine with markings identifying it as issued to the NCR Mojave Expedtionary Force. Looks beat up but functional."
@@ -410,15 +461,17 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "ncr-m1carbine"
 	item_state = "rifle"
+	extra_damage = 3 //slightly higher damage per shot to make up for not being able to (sic: tinker) it. (Adjusting it down to be in line with all the other gun stats)
 	untinkerable = TRUE
-	
+
+
+//M1A! Carbine								Keywords: 10mm, Semi-auto, 12/24 rounds, Long barrel, Folding stock.
 /obj/item/gun/ballistic/automatic/m1carbine/compact
 	name = "m1a1 carbine"
 	desc = "The M1A1 carbine is an improvement of the original, with this particular model having a folding stock allowing for greater mobility. Chambered in 10mm."
 	icon_state = "m1a1carbine"
 	var/stock = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
-	spread = 4
 
 /obj/item/gun/ballistic/automatic/m1carbine/compact/AltClick(mob/user)
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
@@ -434,42 +487,20 @@
 	if(stock)
 		w_class = WEIGHT_CLASS_BULKY
 		to_chat(user, "You unfold the stock.")
-		spread = 4
+		spread = 2
 	else
 		w_class = WEIGHT_CLASS_NORMAL
 		to_chat(user, "You fold the stock.")
-		spread = 14
+		recoil = 0.5
+		spread = 5
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/m1carbine/compact/update_icon_state()
 	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][stock ? "" : "-f"]"
 
 
-//Commando carbine, .45 ACP
-/obj/item/gun/ballistic/automatic/commando
-	name = "commando carbine"
-	desc = "An integrally suppressed bolt action carbine, perfect for quiet varmint hunting. Uses .45 pistol magazines."
-	icon_state = "delisle"
-	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/greasegun
-	extra_damage = 2
-	fire_delay = 4.5
-	burst_size = 1
-	spread = 2
-	can_unsuppress = FALSE
-	suppressed = 1
-	can_attachments = TRUE
-	can_automatic = TRUE
-	automatic_burst_overlay = FALSE
-	can_scope = TRUE
-	scope_state = "lasmusket_scope"
-	scope_x_offset = 6
-	scope_y_offset = 14
-	semi_auto = TRUE
-	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
-
-
-/obj/item/gun/ballistic/automatic/commando/ranger
+//Destroyer carbine							Keywords: .45 ACP, Automatic, 30 rounds, Long barrel, Suppressor
+/obj/item/gun/ballistic/automatic/destroyer
 	name = "destroyer carbine"
 	desc = "There are many ways to describe this, very few of them nice. This is a .45 caliber silenced bolt action rifle - that via the expertise of a gun runner mainlining 50 liters of psycho, mentats, and turbo - has been converted into a semi auto."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -477,123 +508,75 @@
 	item_state = "varmintrifle"
 	mag_type = /obj/item/ammo_box/magazine/greasegun
 	extra_damage = 2
-	extra_penetration = 0.1
 	fire_delay = 5
 	burst_size = 2
 	can_attachments = FALSE
 	can_automatic = FALSE
 	automatic_burst_overlay = TRUE
 	can_scope = FALSE
-	scope_state = "lasmusket_scope"
+	scope_state = "scope_medium"
 	scope_x_offset = 6
 	scope_y_offset = 14
 	untinkerable = TRUE
 	semi_auto = FALSE
+
+
 
 //////////
 //RIFLES//
 //////////
 
 
-//Varmint rifle. 5.56.
-/obj/item/gun/ballistic/automatic/varmint
-	name = "varmint rifle"
-	desc = "A low powered 5.56, easy to use rifle."
-	icon_state = "varmint_rifle"
-	item_state = "varmintrifle"
-	force = 20
-	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 7
-	burst_size = 1
-	spread = 1
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
-	can_attachments = TRUE
-	can_bayonet = FALSE
-	can_scope = TRUE
-	scope_state = "rifle_scope"
-	scope_x_offset = 4
-	scope_y_offset = 12
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 27
-	suppressor_y_offset = 31
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
-
-
-//Ratslayer. Varmint rifle with more crap on it.
-/obj/item/gun/ballistic/automatic/varmint/ratslayer
-	name = "Ratslayer"
-	desc = "A modified varmint rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
-	icon_state = "rat_slayer"
-	item_state = "ratslayer"
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	suppressed = 1
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	can_scope = FALSE
-	suppressed = 1
-	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
-
-
-//Service rifle. 5.56mm.
+//Service rifle								Keywords: NCR, 5.56mm, Semi-auto, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/service
 	name = "service rifle"
 	desc = "A 5.56x45 semi-automatic service rifle manufactured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "servicerifle"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	untinkerable = TRUE
-	fire_delay = 5
+	fire_delay = 4.5
 	burst_size = 1
-	spread = 3
+	spread = 1
+	can_attachments = TRUE
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
 	can_bayonet = TRUE
-	bayonet_state = "lasmusket"
-	can_attachments = TRUE
+	bayonet_state = "bayonet"
 	knife_x_offset = 22
 	knife_y_offset = 21
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 28
-	suppressor_y_offset = 30
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 
-//R82 Heavy service rifle. 5.56
+//R82 Heavy service rifle					Keywords: NCR, 5.56mm, Semi-auto, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/service/r82
 	name = "R82 heavy service rifle"
 	desc = "The assault rifle variant of the R84, based off the pre-war FN FNC. Issued to high-ranking troopers and specialized units. Chambered in 5.56."
 	icon_state = "R82"
 	item_state = "R84"
-	spread = 2
 	fire_delay = 4
+	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
 	suppressor_y_offset = 28
 
 
-//Scout carbine. 5.56, slightly worse damage and faster rate of fire than normal service. 
+//Scout carbine								Keywords: NCR, 5.56mm, Semi-auto, 20 (10-50) round magazine. Special modifiers: spread -1
 /obj/item/gun/ballistic/automatic/service/carbine
 	name = "scout carbine"
 	desc = "A cut down version of the standard-issue service rifle tapped with mounting holes for a scope. Shorter barrel, lower muzzle velocity."
 	icon_state = "scout_carbine"
 	extra_damage = -2
-	fire_delay = 4
+	fire_delay = 3.5
 	spread = 3
 	can_scope = TRUE
-	scope_state = "smallrifle_scope"
+	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 15
 	suppressor_x_offset = 26
 	suppressor_y_offset = 28
 
 
-//Marksman carbine. 5.56.
+//Marksman carbine							Keywords: 5.56mm, Semi-auto, 20 (10-50) round magazine. Special modifiers: damage +1
 /obj/item/gun/ballistic/automatic/marksman
 	name = "marksman carbine"
 	desc = "A marksman carbine built off the AR platform chambered in 5.56x45. Seen heavy usage in pre-war conflicts. This particular model is a civilian version and is semi-auto only."
@@ -603,7 +586,7 @@
 	fire_delay = 4
 	burst_size = 1
 	extra_damage = 1
-	spread = 3
+	spread = 1
 	can_attachments = TRUE
 	can_automatic = TRUE
 	semi_auto = TRUE
@@ -622,7 +605,7 @@
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 
 
-//Colt Rangemaster. 7.62.
+//Colt Rangemaster							Keywords: 7.62mm, Semi-auto, 10/20 round magazine
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "Colt Rangemaster"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
@@ -632,26 +615,22 @@
 	mag_type = /obj/item/ammo_box/magazine/m762
 	burst_size = 1
 	fire_delay = 5
-	spread = 2
+	spread = 1
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
 	can_attachments = TRUE
 	can_scope = TRUE
 	can_bayonet = TRUE
-	bayonet_state = "lasmusket"
+	bayonet_state = "bayonet"
 	knife_x_offset = 24
 	knife_y_offset = 21
-	scope_state = "rifle_scope"
+	scope_state = "scope_long"
 	scope_x_offset = 4
 	scope_y_offset = 11
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 27
-	suppressor_y_offset = 27
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
-// Enfield SLR. 7.62.
+// Enfield SLR								Keywords: 7.62mm, Semi-auto, 10/20 round magazine
 /obj/item/gun/ballistic/automatic/slr
 	name = "Enfield SLR"
 	desc = "A self-loading rifle in 7.62mm NATO. Semi-auto only."
@@ -664,22 +643,22 @@
 	mag_type = /obj/item/ammo_box/magazine/m762
 	burst_size = 1
 	fire_delay = 5
-	spread = 2
+	spread = 1
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
 	can_attachments = TRUE
 	can_scope = TRUE
 	can_bayonet = TRUE
-	bayonet_state = "lasmusket"
+	bayonet_state = "bayonet"
 	knife_x_offset = 24
 	knife_y_offset = 21
-	scope_state = "rifle_scope"
+	scope_state = "scope_long"
 	scope_x_offset = 4
 	scope_y_offset = 11
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
-//M1 Garand. .308.
+//M1 Garand									Keywords: .308, Semi-auto, 8 rounds internal
 /obj/item/gun/ballistic/automatic/m1garand
 	name = "M1 Garand"
 	desc = "The WWII American Classic. Still has that satisfiying ping."
@@ -687,18 +666,18 @@
 	item_state = "rifle"
 	force = 20
 	mag_type = /obj/item/ammo_box/magazine/garand308
-	fire_delay = 5
+	fire_delay = 5.5
 	burst_size = 1
 	spread = 1
 	en_bloc = 1
 	auto_eject = 1
 	semi_auto = TRUE
 	can_bayonet = TRUE
-	bayonet_state = "lasmusket"
+	bayonet_state = "bayonet"
 	knife_x_offset = 22
 	knife_y_offset = 21
 	can_scope = TRUE
-	scope_state = "rifle_scope"
+	scope_state = "scope_long"
 	scope_x_offset = 5
 	scope_y_offset = 14
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
@@ -713,14 +692,14 @@
 	if(.)
 		return
 
-//Old Glory. Better M1 Garand. .308.
+//Old Glory									Keywords: UNIQUE, .308, Semi-auto, 8 rounds internal. Special modifiers: damage +10
 /obj/item/gun/ballistic/automatic/m1garand/oldglory
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
 	extra_damage = 10
 
-//Republics Pride. Better M1 Garand. 7.62.
+//Republics Pride							Keywords: UNIQUE, 7.62mm, Semi-auto, 8 rounds internal. Special modifiers: damage +8, penetration +0.1
 /obj/item/gun/ballistic/automatic/m1garand/republicspride
 	name = "Republic's Pride"
 	desc = "A well-tuned scoped M1C rifle crafted by master gunsmith from the Gunrunners. Chambered in 7.62x51."
@@ -734,40 +713,39 @@
 	can_scope = FALSE
 
 
-//SKS. .308
+//SKS										Keywords: LEGION, .308, Semi-auto, 10 rounds internal. Special modifiers: penetration +0.1
 /obj/item/gun/ballistic/automatic/m1garand/sks
 	name = "SKS"
-	desc = "Refurbished old rifle. .308, semi-auto only, internal magazine."
+	desc = "Old hunting rifle taken from disovered stockpiles and refurbished in Phoenix workshops. The standard heavy rifle of the Legion, still rare. .308, semi-auto only, internal magazine."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "sks"
 	item_state = "sks"
-	force = 20
-	spread = 1
 	mag_type = /obj/item/ammo_box/magazine/sks
 	fire_delay = 6
 	extra_penetration = 0.1
+	bayonet_state = "bayonet"
 	knife_x_offset = 24
-	knife_y_offset = 21
+	knife_y_offset = 23
+	scope_state = "scope_mosin"
 	scope_x_offset = 4
-	scope_y_offset = 11
-	can_suppress = FALSE
+	scope_y_offset = 12
 	auto_eject_sound = 'sound/weapons/magout.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
-//DKS 501 sniper rifle. .308, extra projectile speed.
+//DKS 501 sniper rifle						Keywords: .308, Semi-auto, 7 round magazine. Special modifiers: extra projectile speed +500, fire delay +4
 /obj/item/gun/ballistic/automatic/marksman/sniper
 	name = "sniper rifle"
 	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert."
-	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "sniper_rifle"
 	item_state = "sniper_rifle"
+	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/w308
 	fire_delay = 10
 	burst_size = 1
-	extra_speed = 5000
+	extra_speed = 500
 	semi_auto = TRUE
 	can_automatic = FALSE
 	can_bayonet = FALSE
@@ -780,33 +758,13 @@
 	item_state = "gold_sniper"
 
 
-//Infiltrator. 5.56
-/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
-	name = "infiltrator"
-	desc = "A customized R91 assault rifle, with an integrated suppressor, cut down stock and polymer furniture."
-	icon_state = "infiltrator"
-	item_state = "fnfal"
-	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	spread = 5
-	fire_delay = 4
-	burst_shot_delay = 2
-	can_suppress = FALSE
-	can_unsuppress = FALSE
-	suppressed = 1
-	can_bayonet = FALSE
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
-
-
 
 //////////////////
 //ASSAULT RIFLES//
 //////////////////
 
 
-//R91 assault rifle. Auto fire 5.56
+//R91 assault rifle							Keywords: 5.56mm, Automatic, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/assault_rifle
 	name = "r91 assault rifle"
 	desc = "A standard R91 assault rifle, out of use around the time of the Great War."
@@ -814,8 +772,8 @@
 	item_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	fire_delay = 4
-	burst_shot_delay = 1
 	spread = 7
+	recoil = 0.1
 	can_attachments = TRUE
 	can_bayonet = TRUE
 	bayonet_state = "rifles"
@@ -825,28 +783,34 @@
 	suppressor_x_offset = 32
 	suppressor_y_offset = 15
 	suppressor_state = "ar_suppressor"
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 
-//Bozar. Autofire 5.56
-/obj/item/gun/ballistic/automatic/bozar
-	name = "Bozar"
-	desc = "The ultimate refinement of the sniper's art, the Bozar is a scoped, accurate, light machine gun that will make nice big holes in your enemy. Uses 5.56."
-	icon_state = "bozar"
-	item_state = "sniper"
-	slot_flags = SLOT_BACK
+//Infiltrator								Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, Suppressed. Special modifiers: damage -2, spread -2
+/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
+	name = "infiltrator"
+	desc = "A customized R91 assault rifle, with an integrated suppressor, cut down stock and polymer furniture."
+	icon_state = "infiltrator"
+	item_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	burst_size = 3
-	burst_shot_delay = 1
-	fire_delay = 3
-	spread = 4
-	can_attachments = TRUE
+	extra_damage = -2
+	spread = 5
+	fire_delay = 3.5
+	burst_shot_delay = 2
+	recoil = 0.1
+	can_suppress = FALSE
+	can_unsuppress = FALSE
+	suppressed = 1
+	can_bayonet = FALSE
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	can_scope = FALSE
-	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
-//Type 93 Chinese rifle. Autofire 5.56
+
+//Type 93 Chinese rifle						Keywords: 5.56mm, Automatic, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/type93
 	name = "type 93 assault rifle"
 	desc = "The Type 93 Chinese assault rifle was designed and manufactured by a Chinese industrial conglomerate for the People's Liberation Army during the Resource Wars, for the purpose of equipping the Chinese infiltrators and American fifth-columnists. Chambered in 5.56x45."
@@ -856,10 +820,12 @@
 	fire_delay = 4
 	spread = 10
 	extra_damage = 1
+	recoil = 0.1
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
 	suppressor_y_offset = 27
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
 /obj/item/gun/ballistic/automatic/type93/worn
@@ -873,54 +839,70 @@
 	extra_damage = -3
 	can_suppress = FALSE
 
-//CAR-15 rifle. Autofire 5.56
+//Bozar										Keywords: 5.56mm, Automatic, 20 (10-50) round magazine
+/obj/item/gun/ballistic/automatic/bozar
+	name = "Bozar"
+	desc = "The ultimate refinement of the sniper's art, the Bozar is a scoped, accurate, light machine gun that will make nice big holes in your enemy. Uses 5.56."
+	icon_state = "bozar"
+	item_state = "sniper"
+	slot_flags = SLOT_BACK
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	burst_size = 3
+	burst_shot_delay = 1
+	fire_delay = 3
+	spread = 4
+	recoil = 0.1
+	can_attachments = FALSE
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	can_scope = FALSE
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
+
+
+//CAR-15									Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, Flashlight
 /obj/item/gun/ballistic/automatic/assault_carbine
-	name = "assault carbine"
-	desc = "A CAR-15 assault rifle, designated as the 'R8' in the U.S. Army. A variant of the R84 with increased rate of fire and a matte black exterior."
+	name = "CAR-15 carbine"
+	desc = "A CAR-15 assault carbine, designated as the 'R8' in the U.S. Army. A variant of the R84 with increased rate of fire and a matte black exterior."
 	icon_state = "assault_carbine"
 	item_state = "assault_carbine"
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 3
-	burst_shot_delay = 1
+	fire_delay = 3.5
+	burst_shot_delay = 2
 	spread = 10
+	recoil = 0.1
 	can_attachments = TRUE
 	can_scope = TRUE
-	scope_state = "smallrifle_scope"
+	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 15
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 26
 	suppressor_y_offset = 28
+	can_flashlight = TRUE
+	gunlight_state = "flightangle"
+	flight_x_offset = 21
+	flight_y_offset = 21
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 
 
-//M16. Autofire 5.56
-/obj/item/gun/ballistic/automatic/service/automatic
-	name = "m16a1"
-	desc = "The pre-war predecessor of the NCR service rifle. Select fire with three round burst. Chambered in 5.56."
-	icon_state = "m16a1"
-	fire_delay = 4
-	burst_size = 3
-	spread = 9
-	automatic_burst_overlay = TRUE
-	actions_types = list(/datum/action/item_action/toggle_firemode)
-	semi_auto = FALSE
-
-
-//FN-FAL. Autofire 7.62
+//FN-FAL									Keywords: 7.62mm, Automatic, 10/20 round magazine
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
 	desc = "This rifle has been more widely used by armed forces than any other rifle in history. It's a reliable assault weapon for any terrain or tactical situation."
 	icon_state = "fnfal"
 	item_state = "fnfal"
 	force = 20
-	fire_delay = 3
-	burst_shot_delay = 2
+	fire_delay = 3.5
 	mag_type = /obj/item/ammo_box/magazine/m762
-	spread = 10
+	spread = 12
 	fire_delay = 4
+	recoil = 0.25
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
 
@@ -930,7 +912,7 @@
 ////////////////
 
 
-//R84 Light machinegun 5.56.
+//R84 Light machinegun						Keywords: NCR, 5.56mm, Automatic, 60 rounds. Special modifiers: damage decrease bullethose
 /obj/item/gun/ballistic/automatic/r84
 	name = "R84 LMG"
 	desc = "A light machinegun using 60 round belts fed from an ammobox, its one of the few heavy weapons designs NCR has produced."
@@ -939,12 +921,10 @@
 	slowdown = 1
 	mag_type = /obj/item/ammo_box/magazine/lmg
 	burst_size = 1
-	fire_delay = 4
-	extra_damage = -1
-	burst_shot_delay = 2
-	spread = 6
-	randomspread = 1
-	untinkerable = TRUE
+	fire_delay = 6
+	burst_shot_delay = 2.5
+	can_attachments = FALSE
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
 /obj/item/gun/ballistic/automatic/r84/burst_select()
@@ -953,23 +933,23 @@
 		if(0)
 			select += 1
 			burst_size = 2
-			spread = 10
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
-		if(1)
-			select += 1
-			burst_size = 3
 			spread = 12
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
-		if(2)
+			extra_damage = -3
+			recoil = 0.25
+			to_chat(user, "<span class='notice'>You switch to burst fire.</span>")
+		if(1)
 			select = 0
-			burst_size = 6
-			to_chat(user, "<span class='notice'>You switch to semi-automatic.</span>")
+			burst_size = 5
+			spread = 16
+			extra_damage = -6
+			recoil = 0.75
+			to_chat(user, "<span class='notice'>You switch to full auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
 	return
 
 
-//LSW squad support weapon. 5.56.
+//LSW squad support weapon					Keywords: 5.56mm, Automatic, 20 (10-50) round magazine. Special modifiers: damage decrease bullethose
 /obj/item/gun/ballistic/automatic/lsw
 	name = "LSW (Light Support Weapon)"
 	desc = "This squad-level support weapon has a bullpup design. The bullpup design makes it difficult to use while lying down. Because of this it was remanded to National Guard units. It, however, earned a reputation as a reliable weapon that packs a lot of punch for its size."
@@ -986,9 +966,32 @@
 	zoom_out_amt = 13
 	can_attachments = TRUE
 	can_scope = FALSE
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+
+/obj/item/gun/ballistic/automatic/lsw/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			spread = 8
+			extra_damage = -3
+			recoil = 0.25
+			to_chat(user, "<span class='notice'>You switch to burst fire.</span>")
+		if(1)
+			select = 0
+			burst_size = 4
+			spread = 12
+			extra_damage = -4
+			recoil = 0.5
+			to_chat(user, "<span class='notice'>You switch to full auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
 
 
-//M1919 Machinegun. 7.62.
+//M1919 Machinegun							Keywords: LEGION, 7.62mm, Automatic, 80 round belt. Special modifiers: damage decrease bullethose
 /obj/item/gun/ballistic/automatic/m1919
 	name = "Browning M1919"
 	desc = "An old pre-war machine gun used in service by the US Military around the time of the war. Rechambered in 7.62x51."
@@ -997,14 +1000,15 @@
 	slot_flags = 0
 	slowdown = 2
 	mag_type = /obj/item/ammo_box/magazine/mm762
-	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
-	can_suppress = FALSE
 	burst_size = 1
 	burst_shot_delay = 1.5
 	fire_delay = 3
 	extra_damage = -1
 	spread = 8
+	can_attachments = FALSE
 	var/cover_open = FALSE
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
 /obj/item/gun/ballistic/automatic/m1919/update_icon()
 	icon_state = "M38[cover_open ? "open" : "closed"][magazine ? CEILING(get_ammo(0)/20, 1)*20 : "-empty"]"
@@ -1087,6 +1091,23 @@
 ////////
 
 
+//Auto-pipe rifle. The ultimate in hobo firearms. .357 autofire, inaccurate as hell, slow RoF.
+/obj/item/gun/ballistic/automatic/autopipe
+	name = "Auto-pipe rifle (.357)"
+	desc = "A belt fed pipe rifle held together with duct tape. Highly inaccurate. What could go wrong."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "autopipe"
+	item_state = "autopipe"
+	mag_type = /obj/item/ammo_box/magazine/autopipe
+	burst_size = 4
+	fire_delay = 26
+	burst_shot_delay = 5
+	spread = 24
+	fire_sound = 'sound/weapons/Gunshot.ogg'
+
+
 //M72 Gauss rifle
 /obj/item/gun/ballistic/automatic/m72
 	name = "\improper M72 gauss rifle"
@@ -1111,8 +1132,8 @@
 	icon_state = "xl70e3"
 	item_state = "xl70e3"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 1
-	burst_shot_delay = 1
+	fire_delay = 2
+	burst_shot_delay = 2
 	spawnwithmagazine = TRUE
 	spread = 4
 	can_attachments = TRUE
@@ -1127,13 +1148,13 @@
 	icon_state = "g11"
 	item_state = "g11"
 	mag_type = /obj/item/ammo_box/magazine/m473
-	fire_delay = 2
-	burst_shot_delay = 1.0
+	fire_delay = 2.5
+	burst_shot_delay = 1.5
 	can_attachments = TRUE
 	can_automatic = TRUE
 	semi_auto = TRUE
 	can_scope = FALSE
-	spread = 10
+	spread = 9
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -1143,8 +1164,8 @@
 	icon_state = "g11e"
 	item_state = "g11e"
 	fire_delay = 2.0
-	burst_shot_delay = 1
-	spread = 5
+	burst_shot_delay = 1.25
+	spread = 7
 
 
 
