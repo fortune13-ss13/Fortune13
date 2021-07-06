@@ -395,7 +395,6 @@
 				/obj/item/storage/fancy/cigarettes/cigpack_syndicate = 2,
 				/obj/item/storage/fancy/cigarettes/cigpack_midori = 10,
 				/obj/item/storage/fancy/cigarettes/cigpack_shadyjims = 5,
-				/obj/item/storage/fancy/cigarettes/cigpack_xeno = 3,
 				/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 10,
 				/obj/item/storage/fancy/cigarettes/cigpack_mindbreaker = 10,
 				/obj/item/storage/fancy/rollingpapers = 10

@@ -26,7 +26,6 @@
 	species = "megacannabis"
 	plantname = "Rainbow Weed"
 	product = /obj/item/reagent_containers/food/snacks/grown/cannabis/rainbow
-	mutatelist = list(/obj/item/seeds/cannabis/ultimate)
 	reagents_add = list(/datum/reagent/toxin/mindbreaker = 0.15, /datum/reagent/toxin/lipolicide = 0.35)
 	rarity = 40
 
@@ -88,11 +87,3 @@
 	foodtype = VEGETABLES | ANTITOXIC
 	icon_state = "whitecannabis"
 	wine_power = 10
-
-/obj/item/reagent_containers/food/snacks/grown/cannabis/ultimate
-	seed = /obj/item/seeds/cannabis/ultimate
-	name = "omega cannabis leaf"
-	desc = "You feel dizzy looking at it. What the fuck?"
-	icon_state = "ocannabis"
-	volume = 420
-	wine_power = 90

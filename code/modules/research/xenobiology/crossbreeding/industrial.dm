@@ -161,7 +161,7 @@ Industrial extracts:
 /obj/item/slimecross/industrial/black //What does this have to do with black slimes? No clue! Fun, though
 	colour = "black"
 	plasmarequired = 6
-	itempath = /obj/item/storage/fancy/cigarettes/cigpack_xeno
+	itempath = /obj/item/storage/fancy/heart_box
 
 /obj/item/slimecross/industrial/lightpink
 	colour = "light pink"
