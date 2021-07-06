@@ -106,7 +106,7 @@
 	r_pocket =      /obj/item/storage/bag/money/small/legion
 	l_pocket = 		/obj/item/flashlight/lantern
 	r_hand = 		/obj/item/gun/ballistic/revolver/ballisticfist
-	l_hand = 		/obj/item/storage/fancy/ammobox/slugshot
+	l_hand = 		/obj/item/ammo_box/shotgun/slug
 	backpack = 		null
 	satchel = 		null
 	box = 			/obj/item/storage/box/legate
@@ -369,7 +369,7 @@ commented out pending rework*/
 
 /datum/outfit/loadout/recdeclegion
 	name =			"Born in the Legion"
-	suit_store =	/obj/item/gun/ballistic/rifle/repeater/shotgunlever
+	suit_store =	/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	belt = 			/obj/item/storage/belt/military/assault/legion
 	backpack_contents = list(
 					/obj/item/ammo_box/shotgun/buck=2,
@@ -515,7 +515,7 @@ commented out pending rework*/
 
 /datum/outfit/loadout/vetberserker
 	name =			"Berserker"
-	suit_store =	/obj/item/gun/ballistic/rifle/repeater/shotgunlever
+	suit_store =	/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	backpack_contents = list(
 					/obj/item/ammo_box/shotgun/slug=1,
 					/obj/item/twohanded/fireaxe=1,
@@ -706,7 +706,7 @@ commented out pending rework*/
 // For both : Defend camp, help out there, dont run off, Mars teachings to help make potions.
 
 /datum/job/CaesarsLegion/Legionnaire/f13campfollower
-	title = "Camp Duty"
+	title = "Legion Camp Duty"
 	flag = F13CAMPFOLLOWER
 	faction = "Legion"
 	total_positions = 2
