@@ -49,21 +49,6 @@
 /obj/item/reagent_containers/food/snacks/donut/plain
 	//Use this donut ingame
 
-/obj/item/reagent_containers/food/snacks/donut/chaos
-	name = "chaos donut"
-	desc = "Like life, it never quite tastes the same."
-	icon_state = "donut_chaos"
-	bitesize = 10
-	tastes = list("donut" = 3, "chaos" = 1)
-
-/obj/item/reagent_containers/food/snacks/donut/chaos/Initialize()
-	. = ..()
-	extra_reagent = pick(/datum/reagent/consumable/nutriment, /datum/reagent/consumable/capsaicin, /datum/reagent/consumable/frostoil,
-					/datum/reagent/drug/krokodil, /datum/reagent/toxin/plasma, /datum/reagent/consumable/coco,
-					/datum/reagent/toxin/slimejelly, /datum/reagent/consumable/banana, /datum/reagent/consumable/berryjuice,
-					/datum/reagent/medicine/omnizine)
-	reagents.add_reagent(extra_reagent, 3)
-
 /obj/item/reagent_containers/food/snacks/donut/meat
 	name = "meat donut"
 	desc = "Tastes as gross as it looks."

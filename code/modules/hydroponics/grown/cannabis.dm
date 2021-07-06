@@ -52,34 +52,6 @@
 	reagents_add = list(/datum/reagent/medicine/omnizine = 0.35, /datum/reagent/drug/space_drugs = 0.15, /datum/reagent/toxin/lipolicide = 0.15)
 	rarity = 40
 
-
-/obj/item/seeds/cannabis/ultimate
-	name = "pack of omega weed seeds"
-	desc = "These seeds grow into omega weed."
-	icon_state = "seed-ocannabis"
-	species = "ocannabis"
-	plantname = "Omega Weed"
-	product = /obj/item/reagent_containers/food/snacks/grown/cannabis/ultimate
-	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/glow/green)
-	mutatelist = list()
-	reagents_add = list(/datum/reagent/drug/space_drugs = 0.3,
-						/datum/reagent/toxin/mindbreaker = 0.3,
-						/datum/reagent/mercury = 0.15,
-						/datum/reagent/lithium = 0.15,
-						/datum/reagent/medicine/atropine = 0.15,
-						/datum/reagent/medicine/haloperidol = 0.15,
-						/datum/reagent/drug/methamphetamine = 0.15,
-						/datum/reagent/consumable/capsaicin = 0.15,
-						/datum/reagent/barbers_aid = 0.15,
-						/datum/reagent/drug/bath_salts = 0.15,
-						/datum/reagent/toxin/itching_powder = 0.15,
-						/datum/reagent/drug/crank = 0.15,
-						/datum/reagent/drug/krokodil = 0.15,
-						/datum/reagent/toxin/histamine = 0.15,
-						/datum/reagent/toxin/lipolicide = 0.15)
-	rarity = 69
-
-
 // ---------------------------------------------------------------
 
 /obj/item/reagent_containers/food/snacks/grown/cannabis

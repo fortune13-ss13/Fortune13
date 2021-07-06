@@ -96,13 +96,4 @@
 		part.incoming_stam_mult = incoming_stam_mult
 		//todo: add negative wound resistance to all parts when wounds is merged (zombies are physically weak in terms of limbs)
 
-// Your skin falls off
-/datum/species/krokodil_addict
-	name = "Human"
-	id = "goofzombies"
-	limbs_id = "zombie" //They look like zombies
-	sexes = 0
-	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/zombie
-	mutanttongue = /obj/item/organ/tongue/zombie
-
 #undef REGENERATION_DELAY

@@ -138,7 +138,6 @@ datum/bounty/reagent/chemical/New()
 		/datum/reagent/medicine/regen_jelly,\
 		/datum/reagent/drug/space_drugs,\
 		/datum/reagent/drug/crank,\
-		/datum/reagent/drug/krokodil,\
 		/datum/reagent/drug/methamphetamine,\
 		/datum/reagent/drug/bath_salts,\
 		/datum/reagent/drug/aranesp,\
