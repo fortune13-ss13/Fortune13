@@ -257,7 +257,7 @@
 
 /obj/structure/reagent_dispensers/keg/milk
 	name = "keg of milk"
-	desc = "A keg of pasteurised, homogenised, filtered and semi-skimmed space milk."
+	desc = "A keg of pasteurised, homogenised, filtered and semi-skimmed milk."
 	icon_state = "whitekeg"
 	reagent_id = /datum/reagent/consumable/milk
 

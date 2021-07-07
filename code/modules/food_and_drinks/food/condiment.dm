@@ -178,8 +178,8 @@
 		icon_state = "peppermillsmall"
 
 /obj/item/reagent_containers/food/condiment/milk
-	name = "space milk"
-	desc = "It's milk. White and nutritious goodness!"
+	name = "milk"
+	desc = "You hope it hasn't expired, but its likely."
 	icon_state = "milk"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
