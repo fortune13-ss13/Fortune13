@@ -320,7 +320,7 @@ Head Knight
 	name = "Warden-Defender"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/police=1,
-		/obj/item/ammo_casing/shotgun/buckshot=2,
+		/obj/item/ammo_box/shotgun/buck=2,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
 		)
@@ -341,7 +341,7 @@ Star Paladin
 	supervisors = "the Head Paladin"
 	selection_color = "#95a5a6"
 
-	exp_requirements = 600
+	exp_requirements = 750
 	exp_type = EXP_TYPE_BROTHERHOOD
 
 	loadout_options = list(
@@ -407,14 +407,14 @@ Paladin
 	title = "Paladin"
 	flag = F13PALADIN
 	faction = "BOS"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Senior Paladin and Head Paladin"
 	selection_color = "#95a5a6"
-	exp_requirements = 300
+	exp_requirements = 450
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladina, //Carbine and aep7
@@ -559,6 +559,8 @@ Scribe
 	supervisors = "the Senior Scribe and Head Scribe"
 	selection_color = "#95a5a6"
 
+	exp_requirements = 300
+
 	loadout_options = list(
 	/datum/outfit/loadout/scribea,
 	/datum/outfit/loadout/scribeb,
@@ -619,8 +621,8 @@ datum/job/bos/f13seniorknight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
 	faction = "BOS"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You report directly to the Head Knight. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
@@ -670,7 +672,7 @@ datum/job/bos/f13seniorknight
 	name = "Knight-Defender"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/police=1,
-		/obj/item/ammo_casing/shotgun/buckshot=2,
+		/obj/item/ammo_box/shotgun/buck=2,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
 		)
@@ -690,6 +692,8 @@ Knight
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Senior Knight, and Head Knight"
 	selection_color = "#95a5a6"
+
+	exp_requirements = 300
 
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9
@@ -733,7 +737,7 @@ Knight
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/gun/ballistic/shotgun/trench=1,
-		/obj/item/ammo_casing/shotgun/buckshot=2
+		/obj/item/ammo_box/shotgun/buck=2
 		)
 
 /datum/outfit/loadout/knightc
@@ -749,7 +753,7 @@ Knight
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/gun/ballistic/shotgun/trench=1,
-		/obj/item/ammo_casing/shotgun/buckshot=2,
+		/obj/item/ammo_box/shotgun/buck=2,
 		/obj/item/shield/riot=1
 		)
 /*
@@ -767,6 +771,9 @@ Initiate
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the scribes, knights, or Paladins"
 	selection_color = "#95a5a6"
+
+	exp_type = EXP_TYPE_FALLOUT
+	exp_requirements = 300
 
 	loadout_options = list(
 	/datum/outfit/loadout/initiatek, //AEP7 and Engibelt with combat armor, no helmet
