@@ -2773,15 +2773,6 @@
 	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/wasteland)
-"bvA" = (
-/obj/machinery/conveyor/auto{
-	dir = 4
-	},
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/building)
 "bvO" = (
 /obj/item/ammo_casing/c10mm/ap,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -4772,9 +4763,6 @@
 /area/f13/building)
 "cEJ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/effect/mine/stun,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
@@ -18193,10 +18181,15 @@
 /turf/open/floor/carpet/green,
 /area/f13/ncr)
 "jkA" = (
-/obj/machinery/mineral/processing_unit_console{
-	machinedir = 1
+/obj/machinery/light/small{
+	dir = 1
 	},
-/turf/closed/wall/r_wall/rust,
+/obj/structure/spider/stickyweb,
+/obj/machinery/mineral/ore_redemption,
+/turf/open/floor/plasteel/barber{
+	icon = 'icons/turf/f13floors2.dmi';
+	icon_state = "bluerustychess2"
+	},
 /area/f13/building)
 "jkB" = (
 /obj/structure/chair/comfy{
@@ -20015,6 +20008,7 @@
 /area/f13/caves)
 "kez" = (
 /obj/item/storage/toolbox/electrical,
+/obj/structure/rack,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
@@ -23455,8 +23449,8 @@
 /area/f13/wasteland)
 "mbl" = (
 /obj/structure/rack,
-/obj/item/stack/sheet/glass,
-/obj/item/stack/sheet/metal,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
@@ -27905,15 +27899,6 @@
 /obj/structure/reagent_dispensers/compostbin,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/ncr)
-"oDv" = (
-/obj/machinery/conveyor/auto{
-	dir = 6
-	},
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/building)
 "oDC" = (
 /obj/structure/chair{
 	dir = 1
@@ -28395,10 +28380,7 @@
 	},
 /area/f13/wasteland)
 "oRu" = (
-/obj/machinery/mineral/processing_unit{
-	input_dir = 8;
-	output_dir = 4
-	},
+/obj/structure/ore_box,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
@@ -30417,7 +30399,10 @@
 	},
 /area/f13/building)
 "pPX" = (
-/obj/machinery/mineral/unloading_machine,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/mineral/ore_redemption,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
@@ -33640,12 +33625,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building)
-"rzz" = (
-/obj/machinery/mineral/stacking_unit_console{
-	machinedir = 5
-	},
-/turf/closed/wall/r_wall/rust,
-/area/f13/building)
 "rzE" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/barricade/wooden,
@@ -36636,16 +36615,6 @@
 	icon_state = "bluerustychess2"
 	},
 /area/f13/bunker)
-"thv" = (
-/obj/machinery/mineral/stacking_machine{
-	input_dir = 1;
-	output_dir = 2
-	},
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/building)
 "thG" = (
 /obj/structure/fence{
 	dir = 4
@@ -42734,14 +42703,6 @@
 /obj/structure/fence/wooden,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/village)
-"woN" = (
-/obj/structure/plasticflaps,
-/obj/machinery/conveyor/auto,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/building)
 "woS" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -52663,7 +52624,7 @@ koD
 gcK
 ktB
 dCV
-mZD
+oRu
 rXj
 oeW
 kez
@@ -52921,8 +52882,8 @@ gcK
 ktB
 dCV
 pPX
-dCV
-lTw
+mZD
+mZD
 mZD
 dCV
 rXj
@@ -53177,8 +53138,8 @@ koD
 gcK
 ktB
 dCV
-bvA
-mNT
+oRu
+mZD
 rXj
 rXj
 hkA
@@ -53435,7 +53396,7 @@ gcK
 ktB
 dCV
 oRu
-jkA
+mZD
 mZD
 rXj
 hkA
@@ -53691,9 +53652,9 @@ koD
 gcK
 ktB
 dCV
-bvA
-mNT
-rzz
+jkA
+mZD
+mZD
 cEJ
 dCV
 rXj
@@ -53948,9 +53909,9 @@ koD
 gcK
 ktB
 dCV
-oDv
-thv
-woN
+rXj
+rXj
+mZD
 oIm
 dCV
 rXj
