@@ -37,7 +37,8 @@ SUBSYSTEM_DEF(traumas)
 						"anime" = strings(PHOBIA_FILE, "anime"),
 						"cats" = strings(PHOBIA_FILE, "cats"),
 						"syndicate"= strings(PHOBIA_FILE, "syndicate"),
-						"eye" = strings(PHOBIA_FILE, "eye")
+						"eye" = strings(PHOBIA_FILE, "eye"),
+						"enclave" = strings(PHOBIA_FILE, "enclave")
 						)
 
 	phobia_mobs = list("spiders"  = typecacheof(list(/mob/living/simple_animal/hostile/poison/giant_spider)),
@@ -59,7 +60,8 @@ SUBSYSTEM_DEF(traumas)
 		"anime" = typecacheof(list(/mob/living/simple_animal/hostile/guardian)),
 		"cats"= typecacheof(list(/mob/living/simple_animal/mouse, /mob/living/simple_animal/pet/cat, /mob/living/simple_animal/hostile/cat_butcherer)),
 		"syndicate" = typecacheof(list(/mob/living/simple_animal/hostile/syndicate, /mob/living/simple_animal/hostile/viscerator, /mob/living/simple_animal/hostile/carp/cayenne, /mob/living/silicon/robot/modules/syndicate)),
-		"eye" = typecacheof(list(/mob/living/simple_animal/hostile/asteroid/basilisk/watcher, /mob/living/simple_animal/hostile/carp/eyeball))
+		"eye" = typecacheof(list(/mob/living/simple_animal/hostile/asteroid/basilisk/watcher, /mob/living/simple_animal/hostile/carp/eyeball)),
+		"enclave" = typecacheof(list(/mob/living/simple_animal/hostile/eyebot, /mob/living/simple_animal/pet/dog/eyebot, /mob/living/simple_animal/hostile/enclave, /mob/living/simple_animal/pet/dog/protectron, /mob/living/simple_animal/hostile/megafauna/captainarlem))
 		)
 
 
@@ -153,7 +155,15 @@ SUBSYSTEM_DEF(traumas)
 
 					"syndicate" = typecacheof(list(/obj/item/stack/tile/mineral/plastitanium, /obj/item/toy/plush/nukeplushie)),
 
-					"eye" = typecacheof(list(/obj/item/organ/eyes, /obj/item/reagent_containers/syringe))
+					"eye" = typecacheof(list(/obj/item/organ/eyes, /obj/item/reagent_containers/syringe)),
+
+					"enclave" = typecacheof(list(/obj/item/clothing/suit/armor/f13/combat/enclave, /obj/item/clothing/suit/armor/f13/environmentalsuit,
+						/obj/item/clothing/suit/armor/f13/combat/remnant, /obj/item/clothing/suit/armor/f13/power_armor/advanced, /obj/item/clothing/suit/armor/f13/power_armor/x02,
+						/obj/item/clothing/suit/armor/f13/enclave, /obj/item/clothing/suit/armor/f13/battlecoat/tan/enclave, /obj/item/clothing/glasses/thermal/f13/enclave,
+						/obj/item/clothing/head/helmet/f13/helmet/enclave, /obj/item/clothing/head/helmet/f13/combat/enclave, /obj/item/clothing/head/helmet/f13/combat/remnant,
+						/obj/item/clothing/head/helmet/f13/envirosuit, /obj/item/clothing/head/soft/f13/enclave, /obj/item/clothing/head/helmet/f13/power_armor/advanced,
+						/obj/item/clothing/head/helmet/f13/power_armor/x02helmet, /obj/item/clothing/mask/infiltrator, /obj/item/clothing/mask/gas/enclave,
+						/obj/item/clothing/neck/cloak/enclavecaptain, /obj/item/gun/ballistic/automatic/assault_carbine, /obj/item/reagent_containers/glass/bottle/FEV_solution))
 						)
 
 	phobia_turfs = list("space" = typecacheof(list(/turf/open/space, /turf/open/floor/holofloor/space, /turf/open/floor/fakespace)),

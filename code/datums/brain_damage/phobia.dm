@@ -204,3 +204,8 @@
 /datum/brain_trauma/mild/phobia/conspiracies
 	phobia_type = "conspiracies"
 	random_gain = FALSE
+
+/datum/brain_trauma/mild/phobia/enclave
+	name = "Enclavophobia"
+	phobia_type = "enclave"
+	random_gain = FALSE
