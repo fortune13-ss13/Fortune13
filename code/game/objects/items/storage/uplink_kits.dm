@@ -271,6 +271,7 @@
 	new /obj/item/screwdriver/nuke(src)
 	new /obj/item/nuke_core_container(src)
 	new /obj/item/paper/guides/antag/nuke_instructions(src)
+	new /obj/item/card/emag(src)
 
 /obj/item/storage/box/syndie_kit/supermatter
 	name = "box"

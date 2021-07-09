@@ -18,6 +18,13 @@ Mayor
 /datum/job/den
 	exp_type = EXP_TYPE_DEN
 
+/datum/outfit/job/den/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.mind.assigned_role = ROLE_OASIS
+	
+
 /datum/job/den/f13mayor
 	title = "Mayor"
 	flag = F13MAYOR

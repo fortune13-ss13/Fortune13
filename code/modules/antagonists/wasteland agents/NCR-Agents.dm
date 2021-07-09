@@ -31,17 +31,8 @@
 	return ..()
 
 /datum/antagonist/ncragent/greet()
-	var/ncragent_text = ""
-	var/list/ncragents = team.members - owner
-	for(var/i = 1 to ncragents.len)
-		var/datum/mind/M = ncragents[i]
-		ncragent_text += M.name
-		if(i == ncragents.len - 1)
-			ncragent_text += " and "
-		else if(i != ncragents.len)
-			ncragent_text += ", "
-	to_chat(owner.current, "<B><font size=3 color=red>You are the [owner.special_role] of [ncragent_text].</font></B>")
-	to_chat(owner.current, "The Special Activities Divsion only accepts the most skilled, and most unscrupulous of volunteers. Whether you are a raider given the choice between death and service, a mercenary in too deep, or a genuine patriot, you and [team.member_name] are both fully willing to go beyond the call of duty for the NCR. Good luck.")
+	to_chat(owner.current, "<B><font size=3 color=red>You are a member of the Special Divities.</font></B>")
+	to_chat(owner.current, "The Special Activities Divsion only accepts the most skilled, and most unscrupulous of volunteers. Whether you are a raider given the choice between death and service, a mercenary in too deep, or a genuine patriot, you and your partner are both fully willing to go beyond the call of duty for the NCR. Good luck.")
 	owner.announce_objectives()
 
 /datum/antagonist/ncragent/proc/finalize_ncragent()
@@ -49,7 +40,7 @@
 
 /datum/team/ncragent_team
 	name = "Special Activities Division"
-	member_name = "fellow SAD agent"
+	member_name = "SAD agent"
 
 /datum/team/ncragent_team/is_solo()
 	return FALSE
@@ -65,7 +56,7 @@
 /datum/team/ncragent_team/roundend_report()
 	var/list/parts = list()
 
-	parts += "<span class='header'>The Agents of the NCR Special Activities Divisionn were:</span>"
+	parts += "<span class='header'>The Agents of the NCR Special Activities Division were:</span>"
 	for(var/datum/mind/M in members)
 		parts += printplayer(M)
 	var/win = TRUE
@@ -105,15 +96,31 @@
 		add_objective(new/datum/objective/escape)
 
 /datum/team/ncragent_team/proc/forge_single_objective()
-	if(prob(50))
-		if(prob(30))
-			add_objective(new/datum/objective/maroon, TRUE)
-		else
-			var/datum/objective/ncragent/assassinate/kill_objective = new
-			kill_objective.find_target_by_role(role = ROLE_NCR, role_type = 0, invert = 1)
-			objectives += kill_objective
+	if(prob(80))
+		switch(pick(1, 2, 3, 4, 5, 6, 7, 8))
+			if(1)
+				add_objective(new/datum/objective/ncragent/smuggling/khan, TRUE)
+			if(2)
+				add_objective(new/datum/objective/ncragent/smuggling/den, TRUE)
+			if(3)	
+				var/datum/objective/ncragent/psyop/kill_objective = new
+				kill_objective.find_target_by_role(role = ROLE_OASIS, role_type = 0, invert = 0)
+				objectives += kill_objective
+				//SAD agents glow in the dark
+			if(4)
+				add_objective(new/datum/objective/ncragent/download)
+			if(5)
+				var/datum/objective/ncragent/assassinate/kill_objective = new
+				kill_objective.find_target_by_role(role = ROLE_NCR, role_type = 0, invert = 1)
+				objectives += kill_objective
+			if(6)
+				add_objective(new/datum/objective/ncragent/falseflag)
+			if(7)
+				add_objective(new/datum/objective/ncragent/pmc)
+			if(8)
+				add_objective(new/datum/objective/ncragent/pmc/oasisfalseflag)
 	else
-		add_objective(new/datum/objective/steal, TRUE)
+		add_objective(new/datum/objective/ncragent/steal, TRUE)
 
 /datum/team/ncragent_team/antag_listing_name()
 	return "[name] NCR SAD agent"

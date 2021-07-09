@@ -161,6 +161,9 @@ GLOBAL_LIST_EMPTY(objectives)
 				var/obj/O = new eq_path
 				H.equip_in_one_of_slots(O, slots)
 
+
+
+
 //NCR agent objectives
 
 /datum/objective/ncragent/assassinate
@@ -179,10 +182,161 @@ GLOBAL_LIST_EMPTY(objectives)
 /datum/objective/ncragent/assassinate/update_explanation_text()
 	..()
 	if(target && target.current)
-		if(prob(75))
+		if(prob(40))
+			explanation_text = "[target.name], the [!target_role_type ? target.assigned_role : target.special_role], needs to die. Eliminate them by any means necessary."
+		else if (prob(30))
 			explanation_text = "[target.name], the [!target_role_type ? target.assigned_role : target.special_role], needs to die, but it can't be connected back to the NCR. Form a loyal group of PMCs and have them kill the target."
 		else
 			explanation_text = "[target.name], the [!target_role_type ? target.assigned_role : target.special_role], needs to die, but it can't be connected back to the NCR. Form a loyal group of PMCs and have them kill the target. For added security, the PMCs you hire should also be disposed of - poison them, rat them out to the legion, frame them as raiders and have the Troopers kill them. Any way you can, just make sure there's no one left to testify."
+
+
+/datum/objective/ncragent/download
+	name = "download"
+
+/datum/objective/ncragent/download/proc/gen_amount_goal()
+	target_amount = rand(1,2)
+	update_explanation_text()
+	return target_amount
+
+/datum/objective/ncragent/download/update_explanation_text()
+	..()
+	explanation_text = "The agency has got a hard one for you today. We've recieved word that the Brotherhood and remnant Enclave elements may be conducting research projects in the Yuma region. We can't let them develop a superweapon right under our noses. To secure the safety of the NCR we need you to infiltrate them, get access to their R&D console, insert a technology disk, load the technology databse onto the disk, and secure it. Your best bet is stealth - failing that, bring EMPs with you and try to move fast. Good luck"
+
+/datum/objective/ncragent/download/check_completion()
+	var/datum/techweb/checking = new
+	var/list/datum/mind/owners = get_owners()
+	for(var/datum/mind/owner in owners)
+		if(ismob(owner.current))
+			var/mob/M = owner.current			//Yeah if you get morphed and you eat a quantum tech disk with the RD's latest backup good on you soldier.
+			if(ishuman(M))
+				var/mob/living/carbon/human/H = M
+				if(H && (H.stat != DEAD) && istype(H.wear_suit, /obj/item/clothing/suit/space/space_ninja))
+					var/obj/item/clothing/suit/space/space_ninja/S = H.wear_suit
+					S.stored_research.copy_research_to(checking)
+			var/list/otherwise = M.GetAllContents()
+			for(var/obj/item/disk/tech_disk/TD in otherwise)
+				TD.stored_research.copy_research_to(checking)
+	return checking.researched_nodes.len >= target_amount
+
+/datum/objective/ncragent/download/admin_edit(mob/admin)
+	var/count = input(admin,"How many nodes ?","Nodes",target_amount) as num|null
+	if(count)
+		target_amount = count
+	update_explanation_text()
+
+GLOBAL_LIST_EMPTY(possible_items_agent)
+/datum/objective/ncragent/steal
+	name = "steal"
+	var/datum/objective_item_agents/targetinfo = null //Save the chosen item datum so we can access it later.
+	var/obj/item/steal_target = null //Needed for custom objectives (they're just items, not datums).
+	martyr_compatible = 0
+
+/datum/objective/ncragent/steal/get_target()
+	return steal_target
+
+/datum/objective/ncragent/steal/New()
+	..()
+	if(!GLOB.possible_items.len)//Only need to fill the list when it's needed.
+		for(var/I in subtypesof(/datum/objective_item_agents/steal))
+			new I
+
+/datum/objective/ncragent/steal/find_target()
+	var/list/datum/mind/owners = get_owners()
+	var/approved_targets = list()
+	check_items:
+		for(var/datum/objective_item/possible_item in GLOB.possible_items)
+			if(!is_unique_objective(possible_item.targetitem))
+				continue
+			for(var/datum/mind/M in owners)
+				if(M.current.mind.assigned_role in possible_item.excludefromjob)
+					continue check_items
+			approved_targets += possible_item
+	return set_target(safepick(approved_targets))
+
+/datum/objective/ncragent/steal/proc/set_target(datum/objective_item/item)
+	if(item)
+		targetinfo = item
+		steal_target = targetinfo.targetitem
+		explanation_text = "Steal [targetinfo.name]"
+		give_special_equipment(targetinfo.special_equipment)
+		return steal_target
+	else
+		explanation_text = "Free objective"
+		return
+
+
+
+/datum/objective/ncragent/psyop
+	name = "psyop"
+	var/target_role_type=0
+	give_special_equipment(/obj/item/storage/fancy/cigarettes/cigpack_lsd)
+
+/datum/objective/ncragent/psyop/find_target_by_role(role, role_type=0, invert=0)
+	if(!invert)
+		target_role_type = role_type
+	..()
+	return target
+
+/datum/objective/ncragent/psyop/update_explanation_text()
+	..()
+	if(target && target.current)
+		explanation_text = "[target.name], the [!target_role_type ? target.assigned_role : target.special_role], has been spreading anti-NCR rhetoric and needs to be publicly disgraced. You've been provided with cigarettes containing a powerful kind of psychosis inducing drug. Dose them, and use gaslighting, harassment, and anonymous threats to drive them to a mental breakdown."
+	
+/datum/objective/ncragent/falseflag
+	name = "false flag bombing"
+	give_special_equipment(/obj/item/storage/backpack/duffelbag/durathread/espionage/falseflag/ncragent)
+
+/datum/objective/ncragent/falseflag/update_explanation_text()
+	..()
+	if(prob(50))
+		explanation_text = "In order to turn the sympathies of Oasis more towards the NCR, your orders are to conduct a false flag attack. You will be provided with a small bomb and legion disguise. Make sure you're seen planting the bomb so the blame will be pinned on the legion."
+	else
+		explanation_text = "In order to turn the sympathies of the outlaw settlement of The Den more towards the NCR, your orders are to conduct a false flag attack. You will be provided with a small bomb and legion disguise. Make sure you're seen planting the bomb so the blame will be pinned on the legion."
+/datum/objective/ncragent/pmc
+	name = "form a PMC"
+
+/datum/objective/ncragent/pmc/update_explanation_text()
+	..()
+	if(prob(60))
+		explanation_text = "The NCR is short on manpower. Form a PMC in the Yuma region, loyal to the California Republic. In order to test their loyalty, order them to kill a target they believe is innoccent. It can be a frumentarii, citizen, raider, whoever - just have them kill someone."
+	else
+		explanation_text = "The NCR is short on manpower. Form a PMC in the Yuma region, loyal to the California Republic. In order to test their loyalty, reveal that one of them is secretly a frumentarii and have the rest kill them. They don't actually have to be one - just lie about it."
+
+/datum/objective/ncragent/pmc/oasisfalseflag
+	name = "Oasis PMC False Flag"
+
+/datum/objective/ncragent/pmc/oasisfalseflag/update_explanation_text()
+	..()
+	if(prob(60))
+		explanation_text = "In order to drive Oasis into the arms of the NCR, you are to form a PMC, disguise them as raiders, then have them attack Oasis after offering the town NCR protection. AFterwards, they should accept our gracious offer.."
+	else
+		explanation_text = "In order to drive Oasis into the arms of the NCR, you are to form a PMC, disguise them as raiders, then have them attack Oasis after offering the town NCR protection. Make sure you dispose of the PMCs afterwards - no book deals and radio interviews"
+
+/datum/objective/ncragent/smuggling/khan
+	name = "smuggle guns to the khans"
+	give_special_equipment(/obj/item/storage/backpack/duffelbag/durathread/espionage/type56bundle)
+
+/datum/objective/ncragent/smuggling/khan/update_explanation_text()
+	..()
+	if(prob(70))
+		explanation_text = "The NCR has agreed to provide the khans with firepower in turn for ceasing raids on the NCR and giving us more contacts within the black market. Once you complete the deal they'll give you a phonebook with contacts we need."
+	else
+		explanation_text = "The NCR has agreed to provide the khans with firepower in turn for ceasing raids on the NCR and giving us black market contacts. Once you complete the deal they'll give you a phonebook with contacts we need. Try to recover the weapons afterwards - send hitmen after them or kill the khans yourselves, or buy it off of them."
+
+/datum/objective/ncragent/smuggling/den
+	name = "smuggle drugs to the Den Mob"
+	give_special_equipment(/obj/item/storage/backpack/duffelbag/durathread/espionage/drugs)
+		
+/datum/objective/ncragent/smuggling/khan/update_explanation_text()
+	..()
+	explanation_text = "The NCR has agreed to provide the Den Mob with drugs in turn for identifying members of the Reno Mob who have forgotten their loyalties to the NCR. Upon completing the deal they should supply you with a phonebook with the names of the traitors."
+	
+
+//End of NCR agent objectives
+
+
+
+
 
 
 /datum/objective/assassinate

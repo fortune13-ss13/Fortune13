@@ -26,7 +26,7 @@
 #define ROLE_DEVIL					"devil"
 #define ROLE_SERVANT_OF_RATVAR		"servant of Ratvar"
 #define ROLE_BROTHER				"blood brother"
-#define ROLE_NCRAGENT				"Fellow SAD agent"
+#define ROLE_NCRAGENT				"SAD agent"
 #define ROLE_BRAINWASHED			"brainwashed victim"
 #define ROLE_OVERTHROW				"syndicate mutineer"
 #define ROLE_SENTIENCE          	"sentience potion spawn"
@@ -37,6 +37,7 @@
 #define ROLE_LAVALAND               "lavaland"
 #define ROLE_INTERNAL_AFFAIRS		"internal affairs agent"
 #define ROLE_NCR					"NCR"
+#define ROLE_OASIS					"Oasis"
 #define ROLE_BLOODSUCKER			"bloodsucker"
 //#define ROLE_MONSTERHUNTER			"monster hunter" Disabled for now
 #define ROLE_GHOSTCAFE				"ghostcafe"

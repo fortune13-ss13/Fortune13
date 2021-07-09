@@ -56,6 +56,41 @@
 	..()
 	. = 1
 
+
+/datum/reagent/drug/lsd
+	name = "LSD"
+	description = "A drug known to cause vivid hallucinations. Very long lasting."
+	reagent_state = LIQUID
+	metabolization_rate = 0.005 * REAGENTS_METABOLISM //small ammounts last for minutes. Only available in very small quantitites from smoking LSD cigarettes
+	color = "#60A584" // rgb: 96, 165, 132
+	addiction_threshold = 2
+	taste_description = "sourness"
+	trippy = FALSE
+	pH = 8
+	var/datum/brain_trauma/special/death_whispers/badtrip
+
+/datum/reagent/drug/lsd/on_mob_life(mob/living/carbon/M)
+	M.AdjustUnconscious(-20, 0)
+	M.hallucination += 10
+	..()
+	. = 1
+
+/datum/reagent/drug/lsd/on_mob_metabolize(mob/living/L)
+	..()
+	ADD_TRAIT(L, TRAIT_SLEEPIMMUNE, type)
+	if(iscarbon(L))
+		var/mob/living/carbon/C = L
+		badtrip = new()
+		C.gain_trauma(badtrip, TRAUMA_RESILIENCE_ABSOLUTE)
+
+/datum/reagent/drug/lsd/on_mob_end_metabolize(mob/living/L)
+	REMOVE_TRAIT(L, TRAIT_STUNIMMUNE, type)
+	REMOVE_TRAIT(L, TRAIT_SLEEPIMMUNE, type)
+	if(badtrip)
+		QDEL_NULL(badtrip)
+	..()
+
+
 /datum/reagent/drug/crank
 	name = "Crank"
 	description = "Reduces stun times by about 200%. If overdosed or addicted it will deal significant Toxin, Brute and Brain damage."

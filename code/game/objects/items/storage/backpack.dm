@@ -709,6 +709,36 @@ obj/item/storage/backpack/duffelbag/syndie/shredderbundle
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/clothing/suit/space/hardsuit/syndi/elite(src)
 
+
+/obj/item/storage/backpack/duffelbag/durathread/espionage/type56bundle
+	desc = "An unmarked duffel bag. Looks suspicious..."
+
+/obj/item/storage/backpack/duffelbag/durathread/espionage/type56bundle/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/type93/worn(src)
+	new /obj/item/gun/ballistic/automatic/type93/worn(src)
+	new /obj/item/gun/ballistic/automatic/pistol/type17(src)
+	new /obj/item/gun/ballistic/automatic/pistol/type17(src)
+
+/obj/item/storage/backpack/duffelbag/durathread/espionage/drugs
+	desc = "An unmarked duffel bag. Looks suspicious..."
+
+/obj/item/storage/backpack/duffelbag/durathread/espionage/drugs/PopulateContents()
+	new /obj/item/storage/pill_bottle/chem_tin/buffout(src)
+	new /obj/item/storage/pill_bottle/chem_tin/buffout(src)
+
+/obj/item/storage/backpack/duffelbag/durathread/espionage/falseflag/ncragent
+	desc = "An unmarked duffel bag. Looks suspicious..."
+
+/obj/item/storage/backpack/duffelbag/durathread/espionage/falseflag/ncragent/PopulateContents()
+	new /obj/item/clothing/under/f13/exile/legion(src)
+	new /obj/item/card/id/dogtag/legprime(src)
+	new /obj/item/clothing/mask/bandana/legion/legprime(src)
+	new /obj/item/clothing/head/helmet/f13/legion/prime(src)
+	new /obj/item/clothing/suit/armor/f13/legion/prime(src)
+	new /obj/item/clothing/shoes/f13/military/plated(src)
+	new /obj/item/sbeacondrop/bomb(src)
+
+
 ///FO13 Edit
 /obj/item/storage/backpack/trekker
 	name = "trekkers pack"

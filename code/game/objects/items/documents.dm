@@ -20,17 +20,21 @@
 	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence."
 
 /obj/item/documents/syndicate/red
-	name = "red secret documents"
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence. These documents are verified with a red wax seal."
+	name = "NCR Command Status Report"
+	desc = "\"Top Secret\" documents detailing NCR patrol patterns, operational strength, and logistical details in the Yuma region. These documents are verified with a red wax seal."
 	icon_state = "docs_red"
 
 /obj/item/documents/syndicate/blue
-	name = "blue secret documents"
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence. These documents are verified with a blue wax seal."
+	name = "Frumentarii Reports"
+	desc = "\"Top Secret\" documents detailing sensitive operational intelligence gathered by the Frumentarii. These documents are verified with a blue wax seal."
 	icon_state = "docs_blue"
 
 /obj/item/documents/syndicate/mining
 	desc = "\"Top Secret\" documents detailing Syndicate plasma mining operations."
+
+/obj/item/documents/syndicate/oasis
+	name = "Oasis Financial Quarter Documents"
+	desc = "Highly valuable documents detailing the finances of the Oasis settlement. Includes some shady dealings..."
 
 /obj/item/documents/photocopy
 	desc = "A copy of some top-secret documents. Nobody will notice they aren't the originals... right?"

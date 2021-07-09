@@ -322,6 +322,17 @@
 	else
 		..()
 
+/obj/item/book/espionage/den
+	name = "Suspicious Reno phonebook"
+	icon = 'icons/obj/library.dmi'
+	icon_state ="book"
+	desc = "A book filled with names from the Reno area. A few names are outlined."
+
+/obj/item/book/espionage/khans
+	name = "Suspicious phonebook"
+	icon = 'icons/obj/library.dmi'
+	icon_state ="book"
+	desc = "A book filled with names. A few are outlined."
 
 /*
  * Barcode Scanner

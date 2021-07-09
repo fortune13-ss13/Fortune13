@@ -274,3 +274,61 @@
 	name = "25 refined uranium bars."
 	targetitem = /obj/item/stack/sheet/mineral/uranium
 	difficulty = 10
+
+
+//Fallout 13 steal objectives
+/datum/objective_item_agents
+	var/name = "A silly bike horn! Honk!"
+	var/targetitem = /obj/item/bikehorn		//typepath of the objective item
+	var/difficulty = 9001							//vaguely how hard it is to do this objective
+	var/list/excludefromjob = list()				//If you don't want a job to get a certain objective (no captain stealing his own medal, etcetc)
+	var/list/altitems = list()				//Items which can serve as an alternative to the objective (darn you blueprints)
+	var/list/special_equipment = list()
+
+/datum/objective_item_agents/proc/check_special_completion() //for objectives with special checks (is that slime extract unused? does that intellicard have an ai in it? etcetc)
+	return 1
+
+/datum/objective_item_agents/proc/TargetExists()
+	return TRUE
+
+/datum/objective_item_agents/steal/New()
+	..()
+	if(TargetExists())
+		GLOB.possible_items_agent += src
+	else
+		qdel(src)
+
+/datum/objective_item_agents/steal/Destroy()
+	GLOB.possible_items_agent -= src
+	return ..()
+
+/datum/objective_item_agents/steal/ncrdocuments
+	name = "the NCR patrol documents, located within the NCR bunker on the west side of base."
+	targetitem = /obj/item/documents/syndicate/red //the NCRs docs
+	difficulty = 5
+	excludefromjob = list("NCR SAD Agent")
+
+/datum/objective_item_agents/steal/legiondocuments
+	name = "the frumentarii reports, located within the legion base."
+	targetitem = /obj/item/documents/syndicate/blue //the Legion docs
+	difficulty = 5
+	excludefromjob = list("Frumentarii")
+
+/datum/objective_item_agents/steal/oasisdocuments
+	name = "the Oasis Financial Reports, located within the mayor's office."
+	targetitem = /obj/item/documents/syndicate/oasis 
+	difficulty = 5
+/datum/objective_item_agents/steal/nuke_core
+	name = "the heavily radioactive plutonium core from the brotherhood's self-destruct. You have been given extra tools to help you infiltrate their base, the core is on the southwest side near the reactor. Good luck."
+	targetitem = /obj/item/nuke_core
+	difficulty = 10
+
+/datum/objective_item_agents/steal/nuke_core/New()
+	special_equipment += /obj/item/storage/box/syndie_kit/nuke
+	..()
+
+
+
+
+
+

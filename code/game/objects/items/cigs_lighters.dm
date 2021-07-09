@@ -309,6 +309,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A Grey Tortoise brand cigarette."
 	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/medicine/omnizine = 5)
 
+
+/obj/item/clothing/mask/cigarette/greytort/lsd
+	name = "Grey Tortoise Cigarette"
+	desc = "A Grey Tortoise brand cigarette."
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/drug/lsd = 10)
+
+
 // Rollies.
 
 /obj/item/clothing/mask/cigarette/rollie

@@ -407,6 +407,12 @@
 	icon_state = "greytort"
 	spawn_type = /obj/item/clothing/mask/cigarette/greytort
 
+/obj/item/storage/fancy/cigarettes/cigpack_lsd
+	name = "\improper Grey Tortoise Smokes"
+	desc = "Imported famous cigarettes from the East Coast."
+	icon_state = "greytort"
+	spawn_type = /obj/item/clothing/mask/cigarette/greytort/lsd
+
 /obj/item/storage/fancy/rollingpapers
 	name = "rolling paper pack"
 	desc = "A pack of Big Boss brand rolling papers."
