@@ -563,10 +563,19 @@
 
 /obj/item/clothing/head/beret/ncr_sof
 	name = "NCR SOF beret"
-	desc = "(IV) A tan beret, issued members of the New California Republic Special Operations Command."
+	desc = "(V) A tan beret, issued members of the New California Republic Special Operations Command."
 	icon_state = "ncr_sof_beret"
 	item_state = "ncr_sof_beret"
-	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+
+/obj/item/clothing/head/beret/ncr_sof/sad
+	name = "NCR SAD beret"
+	desc = "(V) A tan beret, issued members of the New California Republic Special Activities Division"
+	icon_state = "hat_enclave_intel"
+	item_state = "hat_enclave_intel"
+	flags_inv = HIDEEARS|HIDEFACE
+	flags_cover = null
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/head/f13/ncr_stetson
 	name = "NCR air cavalry stetson"

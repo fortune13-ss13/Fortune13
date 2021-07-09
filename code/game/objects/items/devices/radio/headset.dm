@@ -323,6 +323,14 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
 
+/obj/item/radio/headset/headset_ncr_com/ncragent
+	name = "NCR Special Activities Division radio headset"
+	desc = "This is used by the New California Republic.\nTo access the NCR channel, use :w. \nTo access the SAD Command channel, use :c"
+	icon_state = "com_headset_alt"
+	item_state = "com_headset_alt"
+	keyslot = new /obj/item/encryptionkey/headset_ncragent
+
+
 /obj/item/radio/headset/headset_legion
 	name = "Legion radio headset"
 	desc = "This is used by Caesar's Legion.\nTo access the Legion channel, use :l."

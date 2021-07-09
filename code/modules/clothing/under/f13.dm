@@ -1151,6 +1151,15 @@
 	item_state = "lawyer_black"
 	item_color = "agent47"
 
+
+/obj/item/clothing/under/f13/ncragent
+	name = "charcoal suit"
+	desc = "This suit was made by a blind man named Tommy, who ran a tailor shop in the ruins of the Boneyard.<br>"
+	icon_state = "agent47"
+	item_state = "lawyer_black"
+	item_color = "agent47"
+
+
 /obj/item/clothing/under/f13/psychologist
 	name = "psychologist's turtleneck"
 	desc = "A turqouise turtleneck and a pair of dark blue slacks, belonging to a psychologist."

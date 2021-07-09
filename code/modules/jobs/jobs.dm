@@ -247,6 +247,7 @@ GLOBAL_LIST_INIT(ncr_upper_command_positions, list(
 	"NCR Captain",
 	"NCR Lieutenant",
 	"NCR Sergeant First Class",
+	"NCR Special Activities Division Agent"
 ))
 
 GLOBAL_LIST_INIT(ncr_lower_command_positions, list(
@@ -267,6 +268,7 @@ GLOBAL_LIST_INIT(ncr_general_positions, list(
 GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Captain",
 	"NCR Lieutenant",
+	"NCR Special Activities Division Agent",
 	"NCR Medical Officer",
 	"NCR Logistics Officer",
 	"NCR Sergeant First Class",
@@ -373,7 +375,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 
 	EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
 	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Followers Administrator")),
-	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant First Class","NCR Captain", "NCR Veteran Ranger"))
+	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant First Class","NCR Captain","NCR Special Activities Division Agent", "NCR Veteran Ranger"))
 
 
 ))

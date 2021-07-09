@@ -31,6 +31,10 @@
 	if(slot == SLOT_SHOES)
 		ADD_TRAIT(user, TRAIT_SILENT_STEP, SHOES_TRAIT)
 
+/obj/item/clothing/shoes/combat/sneakboots/ncragent
+	name = "operative boots"
+	desc = "A pair of combat boots with special noise muffling soles which very slightly drown out your footsteps, used previously for urban warfare."
+	icon_state = "combat"
 /obj/item/clothing/shoes/combat/sneakboots/dropped(mob/user)
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_SILENT_STEP, SHOES_TRAIT)

@@ -161,6 +161,30 @@ GLOBAL_LIST_EMPTY(objectives)
 				var/obj/O = new eq_path
 				H.equip_in_one_of_slots(O, slots)
 
+//NCR agent objectives
+
+/datum/objective/ncragent/assassinate
+	name = "assasinate"
+	var/target_role_type=0
+
+/datum/objective/ncragent/assassinate/find_target_by_role(role, role_type=0, invert=0)
+	if(!invert)
+		target_role_type = role_type
+	..()
+	return target
+
+/datum/objective/ncragent/assassinate/check_completion()
+	return !considered_alive(target) || considered_afk(target)	
+
+/datum/objective/ncragent/assassinate/update_explanation_text()
+	..()
+	if(target && target.current)
+		if(prob(75))
+			explanation_text = "[target.name], the [!target_role_type ? target.assigned_role : target.special_role], needs to die, but it can't be connected back to the NCR. Form a loyal group of PMCs and have them kill the target."
+		else
+			explanation_text = "[target.name], the [!target_role_type ? target.assigned_role : target.special_role], needs to die, but it can't be connected back to the NCR. Form a loyal group of PMCs and have them kill the target. For added security, the PMCs you hire should also be disposed of - poison them, rat them out to the legion, frame them as raiders and have the Troopers kill them. Any way you can, just make sure there's no one left to testify."
+
+
 /datum/objective/assassinate
 	name = "assasinate"
 	var/target_role_type=0

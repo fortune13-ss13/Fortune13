@@ -91,6 +91,12 @@
 	. = ..()
 	REMOVE_TRAIT(user, carrytrait, GLOVE_TRAIT)
 
+/obj/item/clothing/gloves/tackler/combat/insulated/infiltrator/agent
+	name = "tactical patrol gloves"
+	desc = "Specialized combat gloves, with the area round the knuckles hardened for strikes."
+	icon_state = "fingerless"
+	item_state = "fingerless"
+
 /obj/item/clothing/gloves/tackler/rocket
 	name = "rocket gloves"
 	desc = "The ultimate in high risk, high reward, perfect for when you need to stop a criminal from fifty feet away or die trying. Banned in most Spinward gridiron football and rugby leagues."

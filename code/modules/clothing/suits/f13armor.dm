@@ -155,6 +155,13 @@
 	item_state = "armoralt"
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
+/obj/item/clothing/suit/armor/f13/combat/ncragent
+	name = "Operations Officer Armor"
+	desc = "(V) A custom version of the pre-war combat armor, slimmed down and reinforced with kevlar weave and mag pouches. Used by Operations Officer's of the NCR, though few outside the Frumentarii or the SAD would recognize this."
+	icon_state = "armoralt"
+	item_state = "armoralt"
+	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
 /obj/item/clothing/suit/armor/f13/combat/chinese
 	name = "chinese combat armor"
 	desc = "(IV) An uncommon suit of pre-war Chinese combat armor. It's a very basic and straightforward piece of armor that covers the front of the user."

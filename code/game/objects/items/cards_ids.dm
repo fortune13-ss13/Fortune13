@@ -978,6 +978,13 @@
 	desc = "A silver bar dog tag that denotes a member of the NCR military with a lieutenant commission."
 	icon_state = "ncrdogtagofficer"
 
+
+/obj/item/card/id/dogtag/ncragent
+	name = "Operation Officer's tags"
+	desc = "A silver bar dog tag that denotes a member of the NCR military with an officers comission. This one is issued to an agent of the Special Activities Division, officially an 'Operations Officer'."
+	icon_state = "ncrdogtagofficer"
+
+
 /obj/item/card/id/dogtag/ncrcaptain
 	name = "captain's tags"
 	desc = "A dog tag that demands respect from all those subordinate to it. This one belongs to an NCR captain."

@@ -30,7 +30,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrcombathelmetmk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/entrenching_tool)
-
+	H.mind.assigned_role = ROLE_NCR
 /*
 Colonel
 */
@@ -1102,3 +1102,56 @@ Veteran Ranger
 		/obj/item/ammo_box/magazine/m45=3,
 		/obj/item/book/granter/trait/midsurgery=1
 	)
+
+/datum/job/ncr/f13ncragent
+	title = "NCR SAD Agent"
+	flag = F13NCRSAD
+	total_positions = 2
+	spawn_positions = 2
+	description = "No one except the President of the New California Republic and the Director of the Special Activities Division. You are under orders to cooperate closely with the Captain and to work with the local garrison. It is expected you do everything in your power to assist them, and to follow their wishes."
+	supervisors = "The Captain (unless you want the Director to beat you senseless) "
+	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
+	selection_color = "#dcb003"
+	display_order = JOB_DISPLAY_ORDER_NCRAGENT
+	outfit = /datum/outfit/job/ncr/f13ncragent
+	exp_requirements = 1500
+
+/datum/outfit/job/ncr/f13ncragent
+	name = "NCR SAD Agent"
+	jobtype	= /datum/job/ncr/f13ncragent
+	id			= /obj/item/card/id/dogtag/ncragent
+	uniform		= /obj/item/clothing/under/f13/ncragent
+	shoes 		= /obj/item/clothing/shoes/combat/sneakboots/ncragent
+	accessory 	= /obj/item/clothing/accessory/ncr/LT1
+	head 		= /obj/item/clothing/head/beret/ncr_sof/sad
+	neck 		= /obj/item/storage/belt/holster
+	glasses 	= /obj/item/clothing/glasses/orange
+	gloves 		= /obj/item/clothing/gloves/tackler/combat/insulated/infiltrator/agent //sweet jesus that path
+	ears 		= /obj/item/radio/headset/headset_ncr_com/ncragent
+	suit 		= /obj/item/clothing/suit/armor/f13/combat/ncragent
+	belt		= /obj/item/storage/belt/holster/gunslingerholster
+	backpack_contents = list(
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/binoculars=1, \
+		/obj/item/suppressor=2, \
+		/obj/item/storage/bag/money/small/ncr=1)
+
+/datum/outfit/job/ncr/f13ncragent/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
+	var/datum/team/ncragent_team/T = new
+	T.add_member(H)
+	T.forge_ncragent_objectives()
+	H.mind.add_antag_datum(/datum/antagonist/ncragent, T)
+	H.mind.add_antag_datum(/datum/antagonist/ncragent, T)
+	T.update_name()
+
+
+	

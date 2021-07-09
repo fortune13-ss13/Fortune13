@@ -26,6 +26,7 @@
 #define ROLE_DEVIL					"devil"
 #define ROLE_SERVANT_OF_RATVAR		"servant of Ratvar"
 #define ROLE_BROTHER				"blood brother"
+#define ROLE_NCRAGENT				"Fellow SAD agent"
 #define ROLE_BRAINWASHED			"brainwashed victim"
 #define ROLE_OVERTHROW				"syndicate mutineer"
 #define ROLE_SENTIENCE          	"sentience potion spawn"
@@ -35,6 +36,7 @@
 #define ROLE_DEATHSQUAD             "deathsquad"
 #define ROLE_LAVALAND               "lavaland"
 #define ROLE_INTERNAL_AFFAIRS		"internal affairs agent"
+#define ROLE_NCR					"NCR"
 #define ROLE_BLOODSUCKER			"bloodsucker"
 //#define ROLE_MONSTERHUNTER			"monster hunter" Disabled for now
 #define ROLE_GHOSTCAFE				"ghostcafe"
@@ -45,6 +47,7 @@
 GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_TRAITOR = /datum/game_mode/traitor,
 	ROLE_BROTHER = /datum/game_mode/traitor/bros,
+	ROLE_NCRAGENT,
 	ROLE_OPERATIVE = /datum/game_mode/nuclear,
 	ROLE_CHANGELING = /datum/game_mode/changeling,
 	ROLE_WIZARD = /datum/game_mode/wizard,

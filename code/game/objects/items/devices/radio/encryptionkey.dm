@@ -165,6 +165,13 @@
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_NCR = 1, RADIO_CHANNEL_RANGER = 1)
 
+
+/obj/item/encryptionkey/headset_ncragent
+	name = "NCR Special Activities Division radio encryption key"
+	desc = "An encryption key for a radio headset. To access the NCR channel, use :w. To access the SAD Command channel, use :c."
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_NCR = 1, RADIO_CHANNEL_COMMAND = 1)
+
 /obj/item/encryptionkey/headset_bos
 	name = "Brotherhood radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the Enclave channel, use :q."

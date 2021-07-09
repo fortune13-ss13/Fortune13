@@ -721,6 +721,18 @@
 	desc = "A holster to carry a handgun and ammo worn on the leg."
 	icon_state = "holsterleg"
 	item_state = "holsterleg"
+	
+/obj/item/storage/belt/holster/gunslingerholster
+	name = "gunslinger belt holster"
+	desc = "A holster designed to carry two pistols, used by pistoleros, deplorables, and shady oldstyle intelligence agents"
+	icon_state = "holsterleg"
+	item_state = "holsterleg"
+
+/obj/item/storage/belt/holster/gunslingerholster/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/m1911/custom(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911/custom(src)
+	new /obj/item/ammo_box/magazine/m45/ap(src)
+	new /obj/item/ammo_box/magazine/m45/ap(src)
 
 /obj/item/storage/belt/fannypack
 	name = "fannypack"
