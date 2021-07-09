@@ -315,9 +315,10 @@
 	excludefromjob = list("Frumentarii")
 
 /datum/objective_item_agents/steal/oasisdocuments
-	name = "the Oasis Financial Reports, located within the mayor's office."
+	name = "the Oasis Financial Reports, located within the downstairs of the northern gathehouse"
 	targetitem = /obj/item/documents/syndicate/oasis 
 	difficulty = 5
+	
 /datum/objective_item_agents/steal/nuke_core
 	name = "the heavily radioactive plutonium core from the brotherhood's self-destruct. You have been given extra tools to help you infiltrate their base, the core is on the southwest side near the reactor. Good luck."
 	targetitem = /obj/item/nuke_core

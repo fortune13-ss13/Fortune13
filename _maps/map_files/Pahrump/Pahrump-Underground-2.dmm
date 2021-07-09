@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aah" = (
+/obj/machinery/power/tesla_coil,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "aao" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/f13{
@@ -1703,6 +1709,14 @@
 /obj/effect/decal/cleanable/oil/slippery,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
+"bFa" = (
+/obj/machinery/light/fo13colored/Red{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "bFk" = (
 /obj/machinery/door/airlock/hatch,
 /obj/structure/timeddoor/sixtyminute,
@@ -4488,6 +4502,14 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"dZo" = (
+/obj/machinery/light/fo13colored/Red{
+	pixel_x = 0
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "dZF" = (
 /obj/structure/timeddoor,
 /turf/closed/wall/r_wall/rust,
@@ -6817,6 +6839,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/documents/syndicate/oasis,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "gaf" = (
@@ -7219,6 +7242,12 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/brotherhood/leisure)
+"goP" = (
+/obj/machinery/nuclearbomb/selfdestruct,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "goR" = (
 /obj/structure/destructible/tribal_torch/lit,
 /obj/effect/decal/cleanable/oil/slippery,
@@ -7592,6 +7621,9 @@
 	},
 /turf/closed/wall,
 /area/f13/tcoms)
+"gIZ" = (
+/turf/closed/wall/r_wall,
+/area/f13/brotherhood)
 "gJa" = (
 /obj/effect/mine/stun,
 /turf/open/floor/f13{
@@ -9263,6 +9295,15 @@
 	icon_state = "tunnelrusty"
 	},
 /area/f13/bunker)
+"hVB" = (
+/obj/machinery/light/fo13colored/Red{
+	dir = 1;
+	pixel_x = -16
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "hVF" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -9822,6 +9863,14 @@
 	icon_state = "bluerustysolid"
 	},
 /area/f13/bunker)
+"irI" = (
+/obj/structure/fluff/railing{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "ise" = (
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
@@ -11758,6 +11807,12 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
+"jOy" = (
+/obj/machinery/light/fo13colored/Red,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "jOE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/broken,
@@ -12948,6 +13003,16 @@
 	icon_state = "bluedirtyfull"
 	},
 /area/f13/bunker)
+"kPS" = (
+/obj/machinery/computer/terminal{
+	dir = 4;
+	termtag = "Business"
+	},
+/obj/structure/table/reinforced,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "kPW" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/structure/table/optable,
@@ -14015,6 +14080,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/brotherhood/offices1st)
+"lHO" = (
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall/r_wall,
+/area/f13/brotherhood)
 "lHX" = (
 /turf/open/floor/f13/wood,
 /area/f13/den)
@@ -16799,6 +16868,14 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/brotherhood/medical)
+"nOl" = (
+/obj/machinery/light/fo13colored/Red{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "nOW" = (
 /obj/structure/table{
 	layer = 2.9
@@ -17914,9 +17991,11 @@
 /area/f13/den)
 "oDO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/table/reinforced,
-/obj/item/multitool,
-/obj/item/multitool,
+/obj/machinery/door/airlock/vault{
+	name = "Self Destruct Core";
+	req_access_txt = "120"
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -19790,6 +19869,10 @@
 /obj/effect/decal/riverbank,
 /turf/open/indestructible/ground/outside/river,
 /area/f13/tunnel)
+"pZf" = (
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall/r_wall/syndicate,
+/area/f13/brotherhood/reactor)
 "pZr" = (
 /obj/structure/sink{
 	dir = 1;
@@ -22585,7 +22668,7 @@
 /area/f13/bunker)
 "rWh" = (
 /obj/structure/table/reinforced,
-/obj/item/documents,
+/obj/item/documents/syndicate/red,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -23524,6 +23607,14 @@
 /obj/item/reagent_containers/pill/patch/jet,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/den)
+"sPn" = (
+/obj/structure/fluff/railing{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "sPK" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/armor/f13/battlecoat,
@@ -25495,6 +25586,12 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/ncr)
+"uBz" = (
+/obj/structure/fluff/railing,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/brotherhood/reactor)
 "uBO" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/terminal{
@@ -26899,6 +26996,7 @@
 /obj/structure/table/wood,
 /obj/item/storage/fancy/cigarettes/cigars,
 /obj/item/lighter/gold,
+/obj/item/book/espionage/den,
 /turf/open/floor/carpet,
 /area/f13/den)
 "vKJ" = (
@@ -28531,6 +28629,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
+/obj/item/book/espionage/khans,
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid{
 	icon_state = "whiterustysolid"
 	},
@@ -55383,17 +55482,17 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+xBs
+xBs
+xBs
+xBs
+xBs
+xBs
+xBs
+xBs
+xBs
+xBs
+xBs
 uoO
 uoO
 uoO
@@ -55640,17 +55739,17 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+xBs
+wLv
+wLv
+wLv
+wLv
+wLv
+wLv
+wLv
+wLv
+wLv
+xBs
 uoO
 uoO
 uoO
@@ -55896,18 +55995,18 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+xBs
+xyI
+ecc
+ecc
+ecc
+ecc
+jOy
+pZf
+kPS
+bFa
+wLv
+xBs
 uoO
 uoO
 uoO
@@ -56153,18 +56252,18 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+xBs
+wLv
+nOl
+aah
+irI
+aah
+ecc
+uIN
+ecc
+ecc
+wLv
+xBs
 uoO
 uoO
 uoO
@@ -56410,17 +56509,17 @@ uoO
 uoO
 uoO
 uoO
-uoO
-aoj
-aoj
-aoj
-uoO
-uoO
-uoO
-uoO
-uoO
 xBs
-xBs
+wLv
+ecc
+uBz
+goP
+ecc
+ecc
+oDO
+ecc
+ecc
+wLv
 xBs
 xBs
 xBs
@@ -56667,16 +56766,16 @@ uoO
 uoO
 uoO
 uoO
-uoO
-aoj
-aoj
-aoj
-uoO
-uoO
-uoO
-uoO
-uoO
 xBs
+wLv
+nOl
+aah
+sPn
+aah
+ecc
+uIN
+ecc
+ecc
 wLv
 wLv
 wLv
@@ -56924,16 +57023,16 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
 xBs
+lHO
+ecc
+ecc
+ecc
+ecc
+dZo
+pZf
+ecc
+ecc
 wLv
 iFH
 rSP
@@ -57182,15 +57281,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
 xBs
+wLv
+wLv
+wLv
+wLv
+wLv
+wLv
+wLv
+ecc
 wLv
 ecc
 vcp
@@ -57446,8 +57545,8 @@ xBs
 xBs
 xBs
 xBs
-xBs
-xBs
+gIZ
+hVB
 wLv
 iFH
 vcp
@@ -57704,7 +57803,7 @@ yhh
 yhh
 yhh
 yhh
-wLv
+ecc
 wLv
 iFH
 vcp
