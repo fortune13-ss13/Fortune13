@@ -433,4 +433,26 @@
 	desc = "(VI) A hood madde of deathclaw hides, light while also being comfortable to wear, designed for speed."
 	armor = list("tier" = 5, "energy" = 10, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 0)
 	heat_protection = HEAD
+	body_parts_covered = HEAD
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+
+/obj/item/clothing/suit/hooded/cloak/tribe_heavy_armor_u
+	name = "heavy tribal armor"
+	desc = "(V) Heavy armor make of sturdy leather and pieces of bone. Worn by seasoned veterans within the Wayfinder tribe."
+	icon_state = "heavy_tribal_armor_u"
+	item_state = "heavy_tribal_armor_u"
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 45, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/heavy_tribal_helmet
+	heat_protection = CHEST|GROIN|LEGS|ARMS|HANDS
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+
+/obj/item/clothing/head/hooded/cloakhood/heavy_tribal_helmet
+	name = "night stalker headdress"
+	icon_state = "heavy_tribal_helmet"
+	desc = "(V) A headdress of a nightstalker, fitted with a metal face covering for protection against all forms of attack."
+	armor = list("tier" = 5, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 0)
+	heat_protection = HEAD
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR

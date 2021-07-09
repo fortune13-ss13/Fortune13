@@ -313,7 +313,7 @@
 
 /datum/crafting_recipe/tribalwar/heavytribe
 	name = "Heavy Tribal Plates"
-	result = /obj/item/clothing/suit/armor/f13/tribe_heavy_armor
+	result = /obj/item/clothing/suit/hooded/cloak/tribe_heavy_armor_u
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 20,
 				/obj/item/stack/sheet/cloth = 5)

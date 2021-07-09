@@ -267,14 +267,14 @@
 	name = "deathclaw spear"
 	desc = "A finely crafted spear with a shaft wrapped in deathclaw leather. It is tipped with a claw from a beast that must have been terrifying in size."
 	force = 20
-	armour_penetration = 0.30
+	armour_penetration = 0.4
 	max_reach = 2
 	icon_state = "clawspear0"
 	icon_prefix = "clawspear"
 
 /obj/item/twohanded/spear/bonespear/deathclaw/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 20, force_wielded = 45)
+	AddComponent(/datum/component/two_handed, force_unwielded = 20, force_wielded = 50)
 
 //Ultracite
 /obj/item/twohanded/spear/ultra
