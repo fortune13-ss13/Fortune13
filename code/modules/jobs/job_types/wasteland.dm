@@ -198,6 +198,13 @@
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
+/datum/outfit/job/wasteland/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
 
 /*
 Coven Stuff
@@ -425,8 +432,8 @@ Raider
 	suit_store = pick(
 		/obj/item/gun/ballistic/revolver/detective, \
 		/obj/item/gun/ballistic/rifle/hunting, \
-		/obj/item/gun/ballistic/revolver/zipgun, \
-		/obj/item/gun/ballistic/revolver/pipe_rifle, \
+		/obj/item/gun/ballistic/automatic/hobo/zipgun, \
+		/obj/item/gun/ballistic/revolver/hobo/pepperbox, \
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
 		/obj/item/gun/ballistic/revolver/single_shotgun)
 
@@ -622,8 +629,8 @@ Raider
 	suit_store = pick(
 	/obj/item/gun/ballistic/revolver/detective, \
 	/obj/item/gun/ballistic/rifle/hunting, \
-	/obj/item/gun/ballistic/revolver/zipgun, \
-	/obj/item/gun/ballistic/revolver/pipe_rifle)
+	/obj/item/gun/ballistic/automatic/hobo/zipgun, \
+	/obj/item/gun/ballistic/revolver/hobo/pepperbox)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
@@ -873,8 +880,8 @@ Raider
 	title = "Vigilante"
 	flag = F13VIGILANTE
 	faction = "Wastelander"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You have come a long way to reach this god forsaken place... it is now your job to protect its inhabitants from all sorts of injustice. Your moral codex requires you to help anyone in need and to never harm an innocent. Always try to capture and reeducate criminals instead of killing. Do not get involved in the conflicts between the major factions, that is not your fight."
 	supervisors = "your moral code"
 	selection_color = "#76885f"

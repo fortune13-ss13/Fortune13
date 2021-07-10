@@ -1178,7 +1178,6 @@
 	A.armor.linelaser += tiermod*2
 	A.name = prefix + A.name
 	A.tinkered += 1
-	A.desc += " Armor: Melee: [A.armor.linemelee], Bullet: [A.armor.linebullet], Laser: [A.armor.linelaser]"
 
 	to_chat(usr, "You tinker with the armor making [W.name]...")
 	qdel(src)
@@ -1220,7 +1219,6 @@
 	H.armor.linelaser += tiermod*2
 	H.name = prefix + H.name
 	H.tinkered += 1
-	H.desc += " Armor: Melee: [H.armor.linemelee], Bullet: [H.armor.linebullet], Laser: [H.armor.linelaser]"
 
 	to_chat(usr, "You tinker with the armor making [W.name]...")
 	qdel(src)
@@ -1302,10 +1300,10 @@
 	/obj/item/circuitboard/machine/cell_charger)
 
 	var/list/mid = list(/obj/item/twohanded/fireaxe/bmprsword, /obj/item/twohanded/sledgehammer, /obj/item/shield/riot/scrapshield,/obj/item/gun/ballistic/automatic/autopipe,
-	/obj/item/gun/ballistic/rifle/lasmusket, /obj/item/gun/ballistic/rifle/plasmacaster, /obj/item/clothing/suit/armor/f13/metalarmor,
+	/obj/item/gun/ballistic/rifle/hobo/lasmusket, /obj/item/gun/ballistic/rifle/hobo/plasmacaster, /obj/item/clothing/suit/armor/f13/metalarmor,
 	/obj/item/clothing/head/helmet/f13/raider/eyebot, /obj/item/clothing/head/helmet/knight/f13/metal/reinforced)
 
-	var/list/low = list(/obj/item/gun/ballistic/revolver/zipgun,/obj/item/gun/ballistic/revolver/pipe_rifle,/obj/item/fishingrod,/obj/item/grenade/iedcasing,
+	var/list/low = list(/obj/item/gun/ballistic/automatic/hobo/zipgun,/obj/item/gun/ballistic/revolver/hobo/pepperbox,/obj/item/fishingrod,/obj/item/grenade/iedcasing,
 	/obj/item/clothing/suit/armor/f13/slam, /obj/item/clothing/suit/armor/f13/raider/raidermetal,/obj/item/clothing/head/helmet/f13/raidermetal,
 	/obj/item/clothing/head/helmet/knight/f13/metal, /obj/item/melee/unarmed/punchdagger)
 
