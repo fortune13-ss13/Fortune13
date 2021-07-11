@@ -14,7 +14,7 @@
 
 	else
 		if(!sender_override)
-			announcement += "<h1 class='alert'>[command_name()] Update</h1>"
+			announcement += "<h1 class='alert'>Radio Station Broadcast</h1>"
 		else
 			announcement += "<h1 class='alert'>[sender_override]</h1>"
 		if (title && length(title) > 0)
@@ -129,7 +129,7 @@
 
 /proc/print_command_report(text = "", title = null, announce=TRUE)
 	if(!title)
-		title = "Classified [command_name()] Update"
+		title = "Classified Central Command Report"
 
 	if(announce)
 		priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", "commandreport")
