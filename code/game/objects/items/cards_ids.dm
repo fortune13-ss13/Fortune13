@@ -898,10 +898,10 @@
 	access = list(ACCESS_BAR, ACCESS_GATEWAY)
 
 
-/obj/item/card/id/dogtag/radio
+/obj/item/card/id/radiohost
 	name = "Radio Host's Card"
 	desc = "A identification card that seems to slot into some sort of console"
-	assignment = "badge"
+	assignment = "ID tags"
 	icon_state = "gold"
 	item_state = "gold_id"
 	access = list(ACCESS_HEADS)
