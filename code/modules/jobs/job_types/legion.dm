@@ -93,6 +93,9 @@
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legate
 	name =			"Legate"
@@ -138,7 +141,7 @@
 	/datum/outfit/loadout/rangerhunter, //hunting revolver and ripper
 	/datum/outfit/loadout/centurion //marksman and powerfist
 	)
-/*	/datum/outfit/loadout/berserkercenturion 
+/*	/datum/outfit/loadout/berserkercenturion
 kept here incase it gets reworked later*/
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -149,6 +152,9 @@ kept here incase it gets reworked later*/
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 	name = 			"Legion Centurion"
@@ -200,8 +206,8 @@ kept here incase it gets reworked later*/
 					/obj/item/melee/unarmed/sappers=1,
 					/obj/item/book/granter/martial/berserker=1,
 					/obj/item/reagent_containers/pill/patch/healingpowder/berserker=2)
-					
-					
+
+
 commented out pending rework*/
 
 
@@ -322,7 +328,7 @@ commented out pending rework*/
 	suit_store =	/obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 					/obj/item/ammo_box/tube/m44=2,
-					/obj/item/claymore/machete/gladius=1)					
+					/obj/item/claymore/machete/gladius=1)
 
 
 // RECRUIT DECANUS
@@ -461,8 +467,8 @@ commented out pending rework*/
 	title = "Veteran Legionnaire"
 	flag = F13VETLEGIONARY
 	faction = "Legion"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 	description = "A hardened warrior, obeying the orders from the Decanus and Centurion is second nature, as is fighting the profligates. If no officers are present, make sure the younger warriors act like proper Legionaires."
 	supervisors = "the Decani and Centurion"
 	display_order = JOB_DISPLAY_ORDER_VETLEGIONARY
@@ -596,8 +602,8 @@ commented out pending rework*/
 	title = "Recruit Legionnaire"
 	flag = F13RECRUITLEG
 	faction = "Legion"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 5
+	spawn_positions = 5
 	description = "You have recently come of age or been inducted into Caesar's Legion. You have absolutely no training, and are expected to follow every whim of the Decanii and your Centurion. Respect the soldiers of higher rank."
 	supervisors = "the Decani and Centurion."
 	display_order = JOB_DISPLAY_ORDER_RECRUITLEG
@@ -623,7 +629,7 @@ commented out pending rework*/
 
 /datum/outfit/loadout/recruittribal
 	name =			"Tribal Recruit"
-	suit_store = 	/obj/item/twohanded/baseball/spiked
+	suit_store = 	/obj/item/twohanded/spear/lance
 	backpack_contents = list(
 					/obj/item/ammo_box/a357=1,
 					/obj/item/gun/ballistic/revolver/colt357=1)
@@ -771,16 +777,16 @@ commented out pending rework*/
 		/obj/item/book/granter/trait/techno=1)
 
 
-// AUXILIA - Females with specialist training. Cause men dont do womens work in Legion and vice versa. Cant have it both ways. Healing is womens work, basta.
+// AUXILIA - Civilians with special training.
 // Medicus only one with MID surgery, Treasurer get tinkering, both get Mars & Low Surgery.
 
 /datum/job/CaesarsLegion/auxilia
-	title = "Household Slave"
+	title = "Legion Auxilia"
 	flag = F13AUXILIA
 	faction = "Legion"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You are a slave that has been recognized as being talented and trustworthy, given special medical training or entrusted with the camp funds and maintaining weapons. As part of the Centurions household you are expected to help the camp even if given no orders."
+	description = "A non-combat position in the Legion for free citizens who perform tasks that need special training, such as surgery."
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_AUXILIA
 	outfit = /datum/outfit/job/CaesarsLegion/auxilia
@@ -791,6 +797,7 @@ commented out pending rework*/
 	/datum/outfit/loadout/auxmedicus // Do surgery, medical tasks.
 	)
 
+/*
 /datum/outfit/job/CaesarsLegion/auxilia/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -803,11 +810,12 @@ commented out pending rework*/
 			var/obj/item/card/id/dogtag/L = H.wear_id
 			L.registered_name = H.name
 			L.update_label()
+*/
 
 /datum/outfit/job/CaesarsLegion/auxilia
-	name = 			"Household Slave"
+	name = 			"Auxilia"
 	jobtype = 		/datum/job/CaesarsLegion/auxilia
-	id =			/obj/item/card/id/legionbrand
+	id =			/obj/item/card/id/dogtag/legauxilia
 	head =			/obj/item/clothing/head/f13/legion/auxilia
 	uniform = 		/obj/item/clothing/under/f13/legauxiliaf
 	shoes = 		/obj/item/clothing/shoes/roman
@@ -861,8 +869,8 @@ commented out pending rework*/
 	title = "Legion Slave"
 	flag = F13LEGIONSLAVE
 	faction = "Legion"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 	description = "A slave that survives the breaking camps is given a Legion appropriate name (latin-tribal inspired) and bull tattoo. Be obedient, respectful, stay inside the camp. Work the farm, mine, make food, clean and help injured men. Do NOT escape on your own, up to you how to handle it if forcibly freed by outside forces."
 	supervisors = "Officers and slavemaster first, then auxilia and warriors."
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
