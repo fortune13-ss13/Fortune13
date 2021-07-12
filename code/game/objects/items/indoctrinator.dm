@@ -22,6 +22,9 @@
 	. += "It has [item_charges] uses left."
 
 /obj/item/indoctrinator/attack(mob/living/carbon/human/M, mob/living/carbon/human/user)
+	if(user.a_intent == INTENT_HARM) // On harm intent do nothing useful.
+		..()
+		return
 	if(M == user)
 		to_chat(user, "<span class='warning'>You can't use [src] on yourself!</span>")
 		return
@@ -31,17 +34,14 @@
 	if(given_faction in M.faction) // Target already has the faction.
 		to_chat(user, "<span class='notice'>[M] is already a part of [given_faction].</span>")
 		return
-	if(M && (M.stat == DEAD || M.stat == UNCONSCIOUS))
+	if(M.stat > SOFT_CRIT)
 		to_chat(user, "<span class='warning'>[M] should be healthy to receive treatment!</span>")
 		return
 	if(!M.mind)
 		to_chat(user, "<span class='warning'>[M] has no mind!</span>")
 		return
 	if(!M.key)
-		to_chat(user, "<span class='warning'>[M] isn't sentient!</span>")
-		return
-	if(!M.client)
-		to_chat(user, "<span class='warning'>[M] isn't capable of receiving treatment at the moment.</span>")
+		to_chat(user, "<span class='warning'>[M] isn't capable of receiving treatment.</span>")
 		return
 	if(!M.getorgan(/obj/item/organ/brain))
 		to_chat(user, "<span class='warning'>[M] is lacking a brain to operate on!</span>")
