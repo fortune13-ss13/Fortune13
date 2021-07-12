@@ -13,7 +13,7 @@
 	supervisors = "the United States Government."
 	selection_color = "#323232"
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 600
+	exp_requirements = 1200
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -47,14 +47,14 @@
 	title = "Enclave Sergeant"
 	flag = F13USSGT
 	faction = "Enclave"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are in charge of the recruiting for the remnants of the Enclave. You are to recruit all those interested to your cause."
-	forbids = ""
-	enforces = ""
+	forbids = "You are not allowed to have friendly interactions with those outside of the Enclave."
+	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 1200
+	exp_requirements = 2400
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -65,23 +65,19 @@
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/wasteland/enclavesgt
 	backpack = /obj/item/storage/backpack/satchel/enclave
-	head = 			/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/f13/enclave/peacekeeper
 	accessory =     /obj/item/clothing/accessory/ncr/SGT
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/x02
 	belt = 			/obj/item/storage/belt/military/assault/enclave
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves = 		/obj/item/clothing/gloves/combat
 	id = 			/obj/item/card/id/dogtag/enclave
-	suit_store =  	/obj/item/gun/energy/laser/aer12
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/grenade/flashbang=1,
 		/obj/item/pda=1,
-		/obj/item/stock_parts/cell/ammo/mfc=3,
 		/obj/item/storage/bag/money/small/wastelander=1,
 		/obj/item/kitchen/knife/combat=1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper=1
@@ -98,14 +94,14 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	faction = "Enclave"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
-	forbids = "The Enclave forbids you from leaving the base while still habitable"
-	enforces = "The Enclave Encourages you to use your various skills, such as brainwashing, flight, and more, to help keep your small team alive."
+	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
+	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 1400
+	exp_requirements = 2800
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -155,11 +151,11 @@
 	title = "Enclave Lieutenant"
 	flag = F13USLT
 	faction = "Enclave"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the Lieutenant in charge of commanding the remnants of the Enclave forces in the area. You are to recruit all those interested to your cause."
-	forbids = ""
-	enforces = ""
+	forbids = "You are not allowed to have friendly interactions with those outside of the Enclave."
+	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
 	exp_requirements = 1500
@@ -199,9 +195,16 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
+/datum/outfit/job/wasteland/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
 
 /*
 Coven Stuff
@@ -429,8 +432,8 @@ Raider
 	suit_store = pick(
 		/obj/item/gun/ballistic/revolver/detective, \
 		/obj/item/gun/ballistic/rifle/hunting, \
-		/obj/item/gun/ballistic/revolver/zipgun, \
-		/obj/item/gun/ballistic/revolver/pipe_rifle, \
+		/obj/item/gun/ballistic/automatic/hobo/zipgun, \
+		/obj/item/gun/ballistic/revolver/hobo/pepperbox, \
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
 		/obj/item/gun/ballistic/revolver/single_shotgun)
 
@@ -626,8 +629,8 @@ Raider
 	suit_store = pick(
 	/obj/item/gun/ballistic/revolver/detective, \
 	/obj/item/gun/ballistic/rifle/hunting, \
-	/obj/item/gun/ballistic/revolver/zipgun, \
-	/obj/item/gun/ballistic/revolver/pipe_rifle)
+	/obj/item/gun/ballistic/automatic/hobo/zipgun, \
+	/obj/item/gun/ballistic/revolver/hobo/pepperbox)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
@@ -877,8 +880,8 @@ Raider
 	title = "Vigilante"
 	flag = F13VIGILANTE
 	faction = "Wastelander"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You have come a long way to reach this god forsaken place... it is now your job to protect its inhabitants from all sorts of injustice. Your moral codex requires you to help anyone in need and to never harm an innocent. Always try to capture and reeducate criminals instead of killing. Do not get involved in the conflicts between the major factions, that is not your fight."
 	supervisors = "your moral code"
 	selection_color = "#76885f"
@@ -931,7 +934,7 @@ Raider
 	name = "Bounty Hunter"
 	head = /obj/item/clothing/suit/armor/f13/combat/mk2/dark
 	suit = /obj/item/clothing/head/helmet/f13/combat/mk2/dark
-	r_hand = /obj/item/gun/ballistic/automatic/g11/upgraded
+	r_hand = /obj/item/gun/ballistic/automatic/g11
 	backpack_contents = list(
 							/obj/item/ammo_box/magazine/m473=2
 							)
