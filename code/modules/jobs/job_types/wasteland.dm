@@ -1003,7 +1003,7 @@ Radio Host
 	description = "You have been supplied by investors far west to report & inform those of the wasteland about ongoing local events. You have ample radios to use a less official way of reporting, or you could even use the radio broadcast console. You're going to have to hire armed muscle as someone may come knocking for your equipment & may want to use it."
 	supervisors = "none"
 	selection_color = "#002366"
-	exp_requirements = 1000
+	exp_requirements = 1500
 	exp_type = EXP_TYPE_FALLOUT
 	outfit = /datum/outfit/job/wasteland/f13radiohost
 	access = list(ACCESS_HEADS)
