@@ -129,7 +129,6 @@
 
 		if("announce")
 			if(authenticated)
-				playsound(src, 'sound/machines/terminal_prompt.ogg', 50, FALSE)
 				make_announcement(usr)
 
 		if("crossserver")
