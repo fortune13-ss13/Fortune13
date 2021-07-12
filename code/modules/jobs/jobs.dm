@@ -49,9 +49,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Enclave Lieutenant",
 
-	"Legate",
 	"Legion Centurion",
-	"Legion Veteran Decanus",
+	"Legion Venator",
 
 	"Overseer",
 	"Chief of Security",
@@ -94,7 +93,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
-"Legion Auxilia",
+"Auxilia",
 "Legion Slave",
 
 "Mayor",
@@ -138,7 +137,7 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
-"Legion Auxilia",
+"Auxilia",
 "Legion Slave",
 
 "Deputy",
@@ -214,25 +213,24 @@ GLOBAL_LIST_INIT(den_positions, list(
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
-	"Legate",
 	"Legion Centurion",
-	"Legion Veteran Decanus"
+	"Legion Venator"
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
-	"Legion Centurion",
 	"Legion Veteran Decanus",
-	"Legion Prime Decanus",
-	"Legion Recruit Decanus",
-	"Legion Vexillarius",
 	"Veteran Legionnaire",
+	"Legion Prime Decanus",
 	"Prime Legionnaire",
+	"Legion Recruit Decanus",
 	"Recruit Legionnaire",
-	"Legion Venator",
 	"Legion Explorer",
-	"Legion Auxilia",
-	"Legion Camp Duty",
-	"Legion Slave"
+	"Auxilia",
+	"Camp Follower",
+	"Legion Slave",
+	"Legion Vexillarius",
+	"Legion Centurion",
+	"Legion Venator"
 ))
 
 GLOBAL_LIST_INIT(ncr_rangervet_positions, list(

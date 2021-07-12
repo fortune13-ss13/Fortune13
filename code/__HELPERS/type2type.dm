@@ -687,7 +687,5 @@
 			return 'modular_citadel/icons/ui/screen_operative.dmi'
 		if('icons/mob/screen_clockwork.dmi')
 			return 'modular_citadel/icons/ui/screen_clockwork.dmi'
-		if('icons/mob/screen_midnight.dmi')
-			return 'modular_citadel/icons/ui/screen_midnight.dmi'
 		else
-			return 'modular_citadel/icons/ui/screen_fallout2.dmi'
+			return 'modular_citadel/icons/ui/screen_midnight.dmi'

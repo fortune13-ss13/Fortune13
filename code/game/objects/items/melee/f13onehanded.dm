@@ -124,16 +124,6 @@
 	playsound(src.loc, on_sound, 50, 1)
 	add_fingerprint(user)
 
-/obj/item/melee/powered/ripper/prewar
-	name = "pre-war military ripper"
-	desc = "A hand-held, militarized chainsaw, popular with Army units requiring a compact engineering tool for cutting. Just what material is intended to be cut with the weapon remains open to debate."
-	icon_state = "prewarrip_off"
-	on_icon_state = "prewarrip_on"
-	off_icon_state = "prewarrip_off"
-	on_item_state = "prewarrip_on"
-	off_item_state = "prewarrip_off"
-	force_on = 50
-	armour_penetration = 0.15
 
 /obj/item/claymore/machete
 	name = "machete"
@@ -626,7 +616,7 @@
 
 /obj/item/bostaff //May as well make it a "claymore" and inherit the blocking
 	name = "quarterstaff"
-	desc = "A long, tall staff made of polished wood. Fitted with heavy metal ends. Traditionally used in ancient pre-collapse martial arts."
+	desc = "A long, tall staff made of polished wood. Fitted with heavy metal ends. Traditionally used in ancient old-Earth martial arts."
 	w_class = WEIGHT_CLASS_BULKY
 	force = 20
 	block_chance = 50

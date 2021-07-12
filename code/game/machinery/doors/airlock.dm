@@ -34,9 +34,8 @@
 
 #define AIRLOCK_INTEGRITY_N			 300 // Normal airlock integrity
 #define AIRLOCK_INTEGRITY_MULTIPLIER 1.5 // How much reinforced doors health increases
-#define AIRLOCK_DAMAGE_DEFLECTION_N  27  // Normal airlock damage deflection
-#define AIRLOCK_DAMAGE_DEFLECTION_R  31  // Metal-reinforced airlock damage deflection
-#define AIRLOCK_DAMAGE_DEFLECTION_SR  34  // Plasteel-reinforced airlock damage deflection
+#define AIRLOCK_DAMAGE_DEFLECTION_N  21  // Normal airlock damage deflection
+#define AIRLOCK_DAMAGE_DEFLECTION_R  30  // Reinforced airlock damage deflection
 
 #define NOT_ELECTRIFIED 0
 #define ELECTRIFIED_PERMANENT -1
@@ -118,10 +117,8 @@
 	else
 		obj_integrity = normal_integrity
 		max_integrity = normal_integrity
-	if(damage_deflection < AIRLOCK_DAMAGE_DEFLECTION_R && security_level == AIRLOCK_SECURITY_METAL)
+	if(damage_deflection == AIRLOCK_DAMAGE_DEFLECTION_N && security_level > AIRLOCK_SECURITY_METAL)
 		damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_R
-	else if(damage_deflection < AIRLOCK_DAMAGE_DEFLECTION_SR && security_level >= AIRLOCK_SECURITY_PLASTEEL)
-		damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_SR
 	prepare_huds()
 	for(var/datum/atom_hud/data/diagnostic/diag_hud in GLOB.huds)
 		diag_hud.add_to_hud(src)
@@ -848,8 +845,6 @@
 						user.visible_message("<span class='notice'>[user] reinforces \the [src] with metal.</span>",
 											"<span class='notice'>You reinforce \the [src] with metal.</span>")
 						security_level = AIRLOCK_SECURITY_METAL
-						if(damage_deflection < AIRLOCK_DAMAGE_DEFLECTION_R)
-							damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_R
 						update_icon()
 					return
 				else if(istype(C, /obj/item/stack/sheet/plasteel))
@@ -865,8 +860,7 @@
 											"<span class='notice'>You reinforce \the [src] with plasteel.</span>")
 						security_level = AIRLOCK_SECURITY_PLASTEEL
 						modify_max_integrity(normal_integrity * AIRLOCK_INTEGRITY_MULTIPLIER)
-						if(damage_deflection < AIRLOCK_DAMAGE_DEFLECTION_SR)
-							damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_SR
+						damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_R
 						update_icon()
 					return
 			if(AIRLOCK_SECURITY_METAL)

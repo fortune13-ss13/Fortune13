@@ -516,8 +516,8 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/gun/ballistic/rifle/mosin,
 	/obj/item/ammo_box/a762,
-	/obj/item/gun/ballistic/automatic/hobo/zipgun,
-	/obj/item/gun/ballistic/revolver/hobo/pepperbox,
+	/obj/item/gun/ballistic/revolver/zipgun,
+	/obj/item/gun/ballistic/revolver/pipe_rifle,
 	/obj/item/gun/ballistic/rifle/hunting,
 	/obj/item/ammo_box/a308,
 	/obj/item/gun/ballistic/automatic/pistol/n99,
@@ -915,15 +915,16 @@ GLOBAL_LIST_INIT(loot_t1_blueprint, list(
 	/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
 	/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 	/obj/item/book/granter/crafting_recipe/blueprint/aer9,
-	/obj/item/book/granter/crafting_recipe/blueprint/smg10mm
+	/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
+	/obj/item/book/granter/crafting_recipe/blueprint/pps,
 ))
 
 GLOBAL_LIST_INIT(loot_t2_blueprint, list(
 	/obj/item/book/granter/crafting_recipe/blueprint/r91,
 	/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 	/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
-	/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
-	/obj/item/book/granter/crafting_recipe/blueprint/lsw,
+	/obj/item/book/granter/crafting_recipe/blueprint/r84,
+	/obj/item/book/granter/crafting_recipe/blueprint/r82,
 	/obj/item/book/granter/crafting_recipe/blueprint/deagle
 ))
 

@@ -625,7 +625,7 @@ obj/item/storage/box/stingbangs
 
 /obj/item/storage/box/matches
 	name = "matchbox"
-	desc = "A small box of dry matches, these fetch a good price in the cities."
+	desc = "A small box of Almost But Not Quite Plasma Premium Matches."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	item_state = "zippo"
@@ -1341,6 +1341,7 @@ obj/item/storage/box/stingbangs
 		/obj/item/modular_computer/tablet/preset/advanced=1,\
 		/obj/item/geiger_counter=1,\
 		/obj/item/construction/rcd/combat/admin=1,\
+		/obj/item/pipe_dispenser=1,\
 		/obj/item/card/emag=1,\
 		/obj/item/healthanalyzer/advanced=1,\
 		/obj/item/disk/tech_disk/debug=1,\

@@ -1,19 +1,14 @@
-// In this document: Revolvers, Needlers, Weird revolvers
-// See gun.dm for keywords and the system used for gun balance
-
-
 /obj/item/gun/ballistic/revolver
 	slowdown = 0.1
 	name = "revolver template"
 	desc = "should not exist."
 	icon_state = "revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
-	fire_delay = 5	
-	spread = 1
+	fire_delay = 6	
+	spread = 2
 	force = 12 // Pistol whip
 	casing_ejector = FALSE
 	spawnwithmagazine = TRUE
-	weapon_weight = WEAPON_LIGHT
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	var/select = 0
@@ -146,22 +141,25 @@
 	return TRUE
 
 
+/obj/item/gun/ballistic/revolver/mateba
+	name = "\improper Unica 6 auto-revolver"
+	desc = "A retro high-powered autorevolver typically used by officers of the New Russia military. Uses .357 ammo."
+	icon_state = "mateba"
+
 
 ///////////////////
 // .38 REVOLVERS //
 ///////////////////
 
-
-// .38 Detective								Keywords: .38, Double action, 6 rounds cylinder, Short barrel
+// .38 Detective	Keywords: .38, 6 rounds, Double action, Short barrel.
 /obj/item/gun/ballistic/revolver/detective
 	name = ".38 Detective Special"
 	desc = "A small revolver thats easily concealable."
 	icon_state = "detective"
-	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	force = 10
 	extra_damage = -2
-	spread = 4
+	spread = 5
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("Default" = "detective",
 						"Leopard Spots" = "detective_leopard",
@@ -171,22 +169,21 @@
 						)
 	var/list/safe_calibers
 
-
-//Police revolver								Keywords: .38, Double action, 6 rounds cylinder
+//Police revolver	Keywords: .38, 6 rounds, Double action.
 /obj/item/gun/ballistic/revolver/police
 	name = ".38 police revolver"
 	desc = "Pre-war double action police revolver in .38 calibre."
 	icon_state = "police"
+	fire_sound = 'sound/f13weapons/policepistol.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	w_class = WEIGHT_CLASS_SMALL
-	fire_sound = 'sound/f13weapons/policepistol.ogg'
 
 
 /////////////////////
 // 10 MM REVOLVERS //
 /////////////////////
 
-//Colt 6520			 							Keywords: 10mm, Double action, 12 rounds cylinder
+//Colt 6520			 Keywords: 10mm, Double action.
 /obj/item/gun/ballistic/revolver/colt6520
 	name = "Colt 6520"
 	desc = "The Colt 6520 10mm double action revolver is a highly durable weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction."
@@ -195,91 +192,84 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 
 
-
 ///////////////////////
 // .45 ACP REVOLVERS //
 ///////////////////////
 
-
-//S&W 45										 Keywords: .45, Single action, 7 rounds cylinder, Long barrel
+//Colt 45			 Keywords: .45, 6 rounds, Single action, Long barrel.
 /obj/item/gun/ballistic/revolver/revolver45
-	name = "S&W .45 ACP revolver"
-	desc = "Smith and Wesson revolver firing .45 ACP from a seven round cylinder."
+	name = "\improper .45 colt revolver"
+	desc = "A Colt Single Action Army retooled to accept .45 ACP catridges. A classic piece of Americana."
 	item_state = "45revolver"
 	icon_state = "45revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
-	fire_delay = 6
+	fire_delay = 7
 	spread = 1
 	extra_damage = 2
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
-
-
 
 ////////////////////
 // .357 REVOLVERS //
 ////////////////////
 
-
-//357 Magnum									Keywords: .357, Double action, 6 rounds cylinder 
+//357 Magnum		Keywords: .357, 6 rounds, Double action 
 /obj/item/gun/ballistic/revolver/colt357
 	name = "\improper .357 magnum revolver"
-	desc = "A no-nonsense revolver, more than likely made in some crude workshop in one of the more prosperous frontier towns."
-	icon_state = "357colt"
+	desc = "A relatively primitive .357 magnum revolver."
 	item_state = "357colt"
+	icon_state = "357colt"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	fire_sound = 'sound/f13weapons/357magnum.ogg'
 
-
-//Lucky											Keywords: UNIQUE, .357, Double action, 6 rounds cylinder, Block chance, Fire delay -1
 /obj/item/gun/ballistic/revolver/colt357/lucky
 	name = "Lucky"
-	desc = "Just holding this gun makes you feel like an ace. This revolver was handmade from pieces of other guns in some workshop after the war. A one-of-a-kind gun, it was someone's lucky gun for many a year, it's in good condition and hasn't changed hands often."
-	icon_state = "lucky37"
+	desc = "Just holding this gun makes you feel like an ace. This .357 revolver has been decorated with a polished ivory handle and a smooth black barrel, and seems just a little quicker on the draw than most guns."
 	item_state = "lucky"
+	icon_state = "lucky"
 	w_class = WEIGHT_CLASS_SMALL
-	fire_delay = 4
-	block_chance = 20
+	fire_delay = 0
+	block_chance = 20 //Do you feel lucky? Well, do you, punk?
 
+/obj/item/gun/ballistic/revolver/lucky37
+	name = "Lucky 37"
+	desc = "One of the few weapons designed and created purely in the post-war world, it takes .38 ad .357 rounds, adjusting the rifling and boring based upon which is loaded."
+	item_state = "gun"
+	icon_state = "lucky37"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/lucky37
 
 
 ///////////////////
 // .44 REVOLVERS //
 ///////////////////
 
-
-//.44 Magnum revolver		 					Keywords: .44, Double action, 6 rounds cylinder
+//.44 Magnum revolver		 Keywords: .44, 6 rounds, Double action
 /obj/item/gun/ballistic/revolver/m29
 	name = ".44 magnum revolver"
-	desc = "Powerful handgun for those who want to travel the wasteland safely in style. Has a bit of a kick."
+	desc = "Powerful handgun for the fashion sensitive. "
 	item_state = "model29"
 	icon_state = "m29"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	recoil = 0.1
-	can_scope = FALSE
+	fire_sound = 'sound/f13weapons/44mag.ogg'
+	can_scope = TRUE
 	scope_state = "revolver_scope"
 	scope_x_offset = 6
 	scope_y_offset = 24
-	fire_sound = 'sound/f13weapons/44mag.ogg'
 
 /obj/item/gun/ballistic/revolver/m29/alt
-	desc = "Powerful handgun with a bit of a kick. This one has nickled finish and pearly grip, and has been kept in good condition by its owner."
 	item_state = "44magnum"
 	icon_state = "mysterious_m29"
 	can_scope = FALSE
 
-/*
-/obj/item/gun/ballistic/revolver/m29/coltwalker //literally a blackpowder revolver. Needs a fun gimmick, just a .44 clone in the code and not implemented.
+/obj/item/gun/ballistic/revolver/m29/coltwalker //literally a blackpowder revolver. Needs a fun gimmick
 	name = "Colt Walker 1847"
 	desc = "A legendary gun of the west. The Colt Walker bears a fearsome reputation for a very good reason, finding itself in the hands of everyone from ancient army officials to outlaws throughout the years. An antique when the bombs dropped, the weapon is now incredibly outdated. Still, that doesn't make it any less lethal."
 	item_state = "coltwalker"
 	icon_state = "coltwalker"
 	can_scope = FALSE
-*/
 
-//Peacekeeper					 					Keywords: OASIS, .44, Double action, 6 rounds cylinder, Extra Firemode
 /obj/item/gun/ballistic/revolver/m29/peacekeeper
 	name = "Peacekeeper"
-	desc = "When you don't just need excessive force, but crave it. This .44 has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots."
+	desc = "Even desert roses have thorns. This .44 revolver has been modified with a special hammer mechanism, allowing for slow, powerful shots, or fanning the hammer for a flurry of more inaccurate shots."
 	item_state = "m29peace"
 	icon_state = "m29peace"
 	extra_damage = 15
@@ -299,7 +289,6 @@
 			select += 1
 			burst_size = 3 //fan the hammer
 			spread = 15
-			extra_damage = 0
 			extra_penetration = 0
 			fire_delay = 1
 			to_chat(user, "<span class='notice'>You prepare to fan the hammer for a rapid burst of shots.</span>")
@@ -307,51 +296,47 @@
 			select = 0
 			burst_size = 1
 			spread = 0
-			extra_damage = 15
+			extra_damage = 15 //50 damage, 10 AP - equivalent to a .45-70 Govt round. Strong, but slow.
 			extra_penetration = 0.1
 			to_chat(user, "<span class='notice'>You switch to single-shot fire.</span>")
 	update_icon()
 
-
-//.44 Snubnose										Keywords: .44, Double action, 6 rounds cylinder, Short barrel
+//.44 Snubnose			 Keywords: .44, 6 rounds, Double action, Short barrel
 /obj/item/gun/ballistic/revolver/m29/snub
 	name = "snubnose .44 magnum revolver"
 	desc = "A snubnose variant of the commonplace .44 magnum. An excellent holdout weapon for self defense."
 	icon_state = "m29_snub"
 	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT
 	extra_damage = -2
-	spread = 3
+	spread = 5
 
-
-//.44 single action		 							Keywords: .44, Single action, 6 rounds cylinder, Long barrel
+//.44 single action		 Keywords: .44, 6 rounds, Single action, Long barrel
 /obj/item/gun/ballistic/revolver/revolver44
 	name = "\improper .44 magnum single-action revolver"
 	desc = "I hadn't noticed, but there on his hip, was a short-barreled bad .44..."
 	item_state = "44colt"
 	icon_state = "44colt"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	fire_delay = 6
+	fire_delay = 7
 	extra_damage = 2
-	spread = 0
+	spread = 1
 	fire_sound = 'sound/f13weapons/44revolver.ogg'
 
-
-//Desert Ranger revolver							Keywords: .44, Single action, 6 rounds cylinder, Long barrel, Fire delay -2,  Damage +5, Penetration +0.1
+//.44 Desert Ranger		Keywords: .44, 6 rounds, Single action, Long barrel. Special modifiers: fire delay -1,  damage +10, penetration +0.25
 /obj/item/gun/ballistic/revolver/revolver44/desert_ranger
-	name = "desert ranger revolver"
+	name = ".44 magnum desert ranger revolver"
 	desc = "I hadn't noticed, but there on his hip, was a short-barreled bad .44... This one has been improved by its owner."
-	fire_delay = 4
-	extra_damage = 5
-	extra_penetration = 0.1
-
+	fire_delay = 6
+	extra_damage = 10
+	extra_penetration = 0.25
 
 
 //////////////////////
 // .45-70 REVOLVERS //
 //////////////////////
 
-
-//Sequioa											Keywords: NCR, .45-70, 6 rounds cylinder, Double action, Heavy
+//Sequioa				Keywords: .45-70, 6 rounds, Double action, Heavy
 /obj/item/gun/ballistic/revolver/sequoia
 	name = "ranger sequoia"
 	desc = "This large, double-action revolver is a trademark weapon of the New California Republic Rangers. It features a dark finish with intricate engravings etched all around the weapon. Engraved along the barrel are the words 'For Honorable Service,' and 'Against All Tyrants.' The hand grip bears the symbol of the NCR Rangers, a bear, and a brass plate attached to the bottom that reads '20 Years.' "
@@ -375,10 +360,9 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570/death
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
 	fire_delay = 0
-	spread = 0
+	spread = 1
 
-
-//Hunting revolver									Keywords: .45-70, Double action, 5 rounds cylinder, Heavy
+//Hunting revolver		Keywords: .45-70, 5 rounds, Double action, Heavy
 /obj/item/gun/ballistic/revolver/hunting
 	name = "hunting revolver"
 	desc = "A scoped double action revolver chambered in 45-70."
@@ -397,38 +381,33 @@
 // WEIRD REVOLVERS //
 /////////////////////
 
-
-//Colt Army											Keywords: .45 long colt (bouncing), Single action, 6 rounds cylinder, Spread -1, Fire delay +2
+//Colt Army				Keywords: .45 long colt (bouncing), Single action. Special modifiers: spread -2 and fire delay +3
 /obj/item/gun/ballistic/revolver/revolver45/gunslinger
 	name = "\improper Colt Single Action Army"
 	desc = "A Colt Single Action Army, chambered in the archaic .45 long colt cartridge."
 	item_state = "coltwalker"
 	icon_state = "peacemaker"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45/gunslinger
-	fire_delay = 8 //This fires MUCH slower then the Sequoia or 357. You're rewarded with bouncing bullets
+	fire_delay = 10 //This fires MUCH slower then the Sequoia or 357. You're rewarded with bouncing bullets
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
 	spread = 0 //Your reward for the slower fire rate is less spread anddd
 
-
-//.223 Pistol										Keywords: .223, Double action, 5 rounds internal, Short barrel
+//.223 Pistol			Keywords: .223. Double action, Short barrel.
 /obj/item/gun/ballistic/revolver/thatgun
 	name = ".223 pistol"
 	desc = "A strange pistol firing rifle ammunition, possibly damaging the users wrist and with poor accuracy."
 	icon_state = "thatgun"
+	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
 	extra_damage = -2
-	spread = 4
-	recoil = 0.5
+	spread = 6
+	recoil = 1
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
-
-
 
 /////////////
 // NEEDLER //
 /////////////
 
-
-//Needler											Keywords: Needler, Double action, 10 rounds internal
 /obj/item/gun/ballistic/revolver/needler
 	name = "Needler pistol"
 	desc = "You suspect this Bringham needler pistol was once used in scientific field studies. It uses small hard-plastic hypodermic darts as ammo. "
@@ -439,11 +418,40 @@
 
 /obj/item/gun/ballistic/revolver/needler/ultra
 	name = "Ultracite needler"
-	desc = "An ultracite enhanced needler pistol" //Sounds like lame bethesda stuff to me
+	desc = "An ultracite enhanced needler pistol"
 	icon_state = "ultraneedler"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
 	w_class = WEIGHT_CLASS_SMALL
+
+
+//Hobo guns
+
+/obj/item/gun/ballistic/revolver/zipgun
+	name = "zipgun (9mm)"
+	desc = "A crudely-made 9mm pistol. You're not sure this thing is reliable."
+	icon_state = "zipgun"
+	item_state = "gun"
+	fire_sound = 'sound/weapons/Gunshot.ogg'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised9mm
+	spread = 20
+
+/obj/item/gun/ballistic/revolver/pipe_rifle
+	name = "pepperbox gun (10mm)"
+	desc = "Take six pipes. Tie them together. Add planks, 10mm ammo and prayers."
+	icon_state = "pepperbox"
+	item_state = "improvgun"
+	fire_sound = 'sound/weapons/Gunshot.ogg'
+	extra_damage = 1
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised10mm
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	spread = 15
+
+/obj/item/gun/ballistic/revolver/pipe_rifle/attackby(obj/item/A, mob/user, params)
+	..()
+	if(A.tool_behaviour == TOOL_SAW || istype(A, /obj/item/gun/energy/plasmacutter))
+		sawoff(user)
 
 
 // LEGACY STUFF

@@ -39,6 +39,8 @@ Tribal Chief
 /datum/job/tribal
 	exp_type = EXP_TYPE_TRIBAL
 
+	mind_traits = list(TRAIT_TRIBAL)
+
 /datum/job/tribal/f13chief
 	title = "Chief"
 	flag = F13CHIEF
@@ -73,7 +75,7 @@ Tribal Chief
 	neck =			/obj/item/clothing/neck/cloak/chiefcloak
 	id = 			/obj/item/card/id/tribetattoo
 	suit =			/obj/item/clothing/suit/hooded/cloak/hhunter
-	suit_store =	/obj/item/twohanded/spear/bonespear/deathclaw
+	suit_store =	/obj/item/melee/transforming/cleaving_saw
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola=1,
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
@@ -245,8 +247,8 @@ Villager
 	flag = F13VILLAGER
 	department_flag = TRIBAL
 	faction = "Village"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "Tribal Chief, Shaman and Headhunter"
 	description = "A proud member of the Wayfarer tribe, you do what needs to be done to ensure the survival of yourself and your people while following the laws of the tribe. While it is common to venture out into the wasteland, do not thread far or without informing your kin."
 	selection_color = "#006666"
@@ -323,8 +325,8 @@ Hunter
 	flag = F13HUNTER
 	department_flag = TRIBAL
 	faction = "Village"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "The chief and Head Hunter."
 	enforces = "The ways of the Machine spirits."
 	forbids = "Abusing technology and using Pre-War weapons."
@@ -381,7 +383,7 @@ Hunter
 		/obj/item/twohanded/spear/bonespear/deathclaw=1,
 		/obj/item/kitchen/knife/combat/bone=1,
 		/obj/item/binoculars=1,
-		/obj/item/restraints/legcuffs/bola/tactical=1,
+		/obj/item/restraints/legcuffs/bola/tactical=2,
 		/obj/item/reagent_containers/pill/patch/healingpowder=1
 	)
 
@@ -393,8 +395,8 @@ Spirit-Pledged
 	flag = F13SPIRITPLEDGED
 	department_flag = TRIBAL
 	faction = "Village"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "All other tribals."
 	description = "An outsider to the tribe, you have been welcomed to learn their ways and grow closer to their culture and lifestyle, do NOT run off alone into the wasteland without the supervision of another higher ranking tribal."
 	selection_color = "#006666"
@@ -422,7 +424,7 @@ Guardian
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "All leadership, but the Chief is priority"
-	description = "A hand chosen Hunter with much promise, you are one of the village Guardians. An elite Hunter given the duty to protect the village, your duty is to ensure your kin are safe at all costs, as well as follow any orders from your superiors and enforce the law of the tribe. Do not leave the village unless circumstances allow it."
+	description = "A hand chosen Hunter with much promise, you are one of the village Guardians. An elite Hunter given the duty to protect the leaders of the tribe, and the village. Your duty is to ensure your kin are safe at all costs, as well as follow any orders from your superiors and enforce the law of the tribe."
 	selection_color = "#006666"
 	exp_requirements = 900
 
@@ -431,24 +433,17 @@ Guardian
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
 
-/datum/outfit/job/tribal/f13guardian/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-
 /datum/outfit/job/tribal/f13guardian
 	name = "Guardian"
 	jobtype = /datum/job/tribal/f13guardian
 	uniform = 	/obj/item/clothing/under/f13/wayfarer/hunter
 	gloves = 	/obj/item/clothing/gloves/f13/handwraps
 	shoes = 	/obj/item/clothing/shoes/sandal
-	suit = 		/obj/item/clothing/suit/armor/f13/tribe_heavy_armor
+	suit = 		/obj/item/clothing/suit/hooded/cloak/hhunter
 	suit_store = /obj/item/twohanded/spear/bonespear/deathclaw
 	id = 		/obj/item/card/id/tribetattoo
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder=2,
+		/obj/item/reagent_containers/pill/patch/healpoultice=2,
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/flashlight/flare/torch=1,
-		/obj/item/restraints/legcuffs/bola/tactical=1)
+		/obj/item/restraints/legcuffs/bola/tactical=2)

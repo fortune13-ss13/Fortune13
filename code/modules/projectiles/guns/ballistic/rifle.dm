@@ -1,15 +1,131 @@
-//IN THIS DOCUMENT: Rifle template, Lever-action rifles, Bolt-action rifles, Magazine-fed bolt-action rifles
-// See gun.dm for keywords and the system used for gun balance
+//In this document. Lever action rifles, Bolt action rifles
+
+//////////////////////////////////////////
+//UNIVERSAL GUN CATEGORIES AND MODIFIERS//
+//////////////////////////////////////////
+/*
+GENERAL
+
+	Bonuses should not go far from this framework, for non-unique stuff plus minus one or two is enough to give a good spread, considering its compounded by tinkering and attachments and ammo.
+	A reduction of 1 in burst shot delay gives a lot more effect than adding 1 damage.
+
+MECHANISMS
+
+	SINGLE ACTION REVOLVER
+	fire_delay = 7
+	spread = 1
+
+	DOUBLE ACTION REVOLVER
+	fire_delay = 6	
+	spread = 2
+
+	SEMI-AUTOMATIC PISTOL
+	fire_delay = 3-5	
+	spread = 3
+
+	SEMI-AUTOMATIC RIFLE
+	fire_delay = 3-6
+	spread = 1-2
+
+	AUTOMATIC
+	fire_delay = 3-7
+	burst_shot_delay = 2.5
+	spread = 7-14
+
+	REPEATER	
+	fire_delay = 8
+	spread = 1	
+
+	DOUBLE BARREL
+	fire_delay = 1
+
+	PUMP-ACTION
+	fire_delay = 7
+	extra damage = 1
+	spread = 0 (shotguns need 0 spread unless sawn off since it scatters the individual pellets. Slugs have gotten a 2 spread increase instead, so all good.)
+	(requires manual action to cycle)
+
+	BOLT-ACTION
+	fire_delay = 10-15
+	extra damage = 5
+	extra_speed = 500
+	(requires manual action to cycle)
+
+BULK
+	SMALL GUNS
+	slowdown = 0.1-0.2
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT - MEDIUM		
+
+	MEDIUM GUNS
+	slowdown = 0.3-0.4
+	w_class = WEIGHT_CLASS_NORMAL - BULKY
+	weapon_weight = WEAPON_MEDIUM - HEAVY	
+
+	RIFLES 
+	slowdown = 0.5
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+PARTS
+
+	PISTOL GRIP/FOLDED STOCK MALUS
+	For rifles, not pistols obviously
+	recoil = +0.5
+	spread = +2 unless shotgun
+
+	SAWN OFF
+	recoil = 1
+	spread = 10
+	weapon_weight = WEAPON_LIGHT
+
+	LONG BARREL
+	extra_damage = +2
+	spread = -1
+
+	SHORT BARREL
+	extra_damage = -2
+	spread = +3
+
+	HEAVY
+	recoil = 0.1
+	No dual wield
+
+	AMMO RECOIL BASE VALUES
+	.50  recoil = 1
+	.45/70  recoil = 0.25
 
 
+FORCE 	Delicate, clumsy or small gun force 10
+		Pistol whip force 12
+		Rifle type force 15
+		Unusually sturdy clublike 20
 
-////////////////////
-// RIFLE TEMPLATE //
-////////////////////
+ATTACHMENTS
+
+	BURST CAM
+	burst_size + 1
+	spread + 5 (recoil)
+	burst_shot_delay + 0.5 (recoil managment)
+
+	RECOIL COMPENSATOR
+	spread above 10 = -4 spread
+	spread under 10 = -2 spread
+
+	AUTO SEAR
+	Enables fire select automatic
+	burst_size + 1
+	spread + 6 (to bring it into the automatic template range)
+*/
 
 
+////////////
+// RIFLES //
+////////////
+
+// Rifle template
 /obj/item/gun/ballistic/rifle
-
+	slowdown = 0.5 
 	name = "rifle template"
 	desc = "Should not exist"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -21,9 +137,8 @@
 	weapon_weight = WEAPON_HEAVY
 	slot_flags = ITEM_SLOT_BACK
 	can_automatic = FALSE
-	slowdown = 0.5 
-	fire_delay = 7
-	spread = 0
+	fire_delay = 8
+	spread = 1
 	force = 15 //Decent clubs generally speaking
 	flags_1 =  CONDUCT_1
 	casing_ejector = FALSE
@@ -95,6 +210,10 @@
 /obj/item/gun/ballistic/rifle/repeater
 	name = "repeater template"
 	desc = "should not exist"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 8 //Standard repeater mechanism delay 
+	can_automatic = FALSE
 	can_scope = TRUE
 	scope_state = "scope_long"
 	scope_x_offset = 5
@@ -155,8 +274,8 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting
 	sawn_desc = "A hunting rifle, crudely shortened with a saw. It's far from accurate, but the short barrel makes it quite portable."
 	fire_delay = 10
-	extra_damage = 6
-	extra_speed = 800
+	extra_damage = 5
+	extra_speed = 500
 	spread = 0
 	force = 18
 	can_scope = TRUE
@@ -178,12 +297,12 @@
 //Remington rifle						Keywords: 7.62, Bolt-action, 5 rounds internal
 /obj/item/gun/ballistic/rifle/hunting/remington
 	name = "Remington rifle"
-	desc = "A militarized hunting rifle rechambered to 7.62. This one has had the barrel floated with shims to increase accuracy."
+	desc = "A militarized hunting rifle rechambered to 7.62. This one has had the barrel floated with shims to increase accuracy. In use by 1st Recon and designated marksman throughout the NCR."
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting/remington
 	fire_delay = 12
-	extra_damage = 7
+	extra_damage = 6
 	extra_penetration = 0.05
-	extra_speed = 800 
+	extra_speed = 500 
 	force = 18
 	untinkerable = TRUE
 
@@ -198,7 +317,7 @@
 		..()
 
 
-//Paciencia								Keywords: UNIQUE, .308, Bolt-action, 5 rounds internal, Scoped
+//Paciencia								Keywords: Unique, .308, Bolt-action, 5 rounds internal
 /obj/item/gun/ballistic/rifle/hunting/paciencia
 	name = "Paciencia"
 	desc = "A modified .308 hunting rifle with a reduced magazine but an augmented receiver. A Mexican flag is wrapped around the stock. You only have three shots- make them count."
@@ -208,10 +327,6 @@
 	fire_delay = 8
 	extra_damage = 20 //60 damage- hits as hard as an AMR!
 	extra_penetration = 0.2
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	can_scope = FALSE
 
 /obj/item/gun/ballistic/rifle/hunting/paciencia/attackby(obj/item/A, mob/user, params) //no sawing off this one
 	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
@@ -227,12 +342,12 @@
 //Mosin-Nagant							Keywords: 7.62, Bolt-action, 5 rounds internal
 /obj/item/gun/ballistic/rifle/mosin
 	name = "Mosin-Nagant m38"
-	desc = "A rusty old Russian bolt action chambered in 7.62."
+	desc = "A classic Russian bolt action chambered in 7.62. Now all you need is some vodka."
 	icon_state = "mosin"
 	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
-	extra_damage = 5
-	extra_speed = 600
+	extra_damage = 4
+	extra_speed = 400
 	fire_delay = 12
 	force = 18
 	can_scope = TRUE
@@ -256,7 +371,7 @@
 /obj/item/gun/ballistic/rifle/mag
 	name = "magazine fed bolt-action rifle template"
 	desc = "should not exist."
-	extra_speed = 800
+	extra_speed = 500
 
 /obj/item/gun/ballistic/rifle/mag/examine(mob/user)
 	. = ..()
@@ -289,7 +404,7 @@
 	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"]"
 
 
-//Varmint rifle								Keywords: 5.56, Bolt-action, 10/20/30 round magazine, Reduced damage
+//Varmint rifle								Keywords: 5.56, Bolt-action, 10/20/30 round magazine, Reduced damage & speed
 /obj/item/gun/ballistic/rifle/mag/varmint
 	name = "varmint rifle"
 	desc = "A simple bolt action rifle in 5.56mm calibre. Easy to use and maintain."
@@ -300,7 +415,8 @@
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
 	fire_delay = 9
 	spread = 0
-	extra_damage = 5
+	extra_damage = 4
+	extra_speed = 400
 	can_bayonet = FALSE
 	scope_state = "scope_short"
 	scope_x_offset = 4
@@ -312,16 +428,16 @@
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 
-//Commando carbine							Keywords: BoS, .45 ACP, Bolt-action, 12 round magazine, Long barrel, Suppressed
+//Commando carbine							Keywords: BOS, .45 ACP, Bolt-action, 12 round magazine, Long barrel, Suppressed
 /obj/item/gun/ballistic/rifle/mag/commando
 	name = "commando carbine"
-	desc = "A integrally suppressed bolt action carbine, the few existing examples of this rare gun are mostly in Brotherhood hands. Uses .45 socom magazines."
+	desc = "An integrally suppressed bolt action carbine, the few existing examples of this rare gun are mostly in Brotherhood hands. Uses .45 socom magazines."
 	icon_state = "commando"
 	item_state = "varmintrifle"
 	mag_type = /obj/item/ammo_box/magazine/m45exp
-	extra_damage = 8
+	extra_damage = 7
 	fire_delay = 8
-	spread = 0
+	spread = 1
 	can_unsuppress = FALSE
 	suppressed = 1
 	scope_state = "scope_medium"
@@ -330,19 +446,23 @@
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 
-//Ratslayer									Keywords: UNIQUE, 5.56, Bolt-action, 10/20/30 round magazine, Suppressed, Scoped, Extra damage +3
+//Ratslayer									Keywords: Unique, 5.56, Bolt-action, 10/20/30 round magazine, Suppressed, Extra damage +3
 /obj/item/gun/ballistic/rifle/mag/varmint/ratslayer
 	name = "Ratslayer"
 	desc = "A modified varmint rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
 	icon_state = "ratslayer"
 	item_state = "ratslayer"
-	extra_damage = 9
+	extra_damage = 8
 	extra_penetration = 0.1
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
 	suppressed = 1
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
+	suppressed = 1
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 
@@ -362,3 +482,113 @@
 	zoom_out_amt = 13
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
+
+
+/////////////
+//HOBO GUNS//
+/////////////
+
+
+//Laser musket
+/obj/item/gun/ballistic/rifle/lasmusket
+	name = "Laser Musket"
+	desc = "In the wasteland, one must make do. And making do is what the creator of this weapon does. Made from metal scraps, electronic parts. an old rifle stock and a bottle full of dreams, the Laser Musket is sure to stop anything in their tracks and make those raiders think twice."
+	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon_state = "lasmusket"
+	item_state = "lasmusket"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/lasmusket
+	fire_delay = 15
+	isenergy = TRUE
+	var/bolt_open = FALSE
+	can_bayonet = TRUE
+	knife_x_offset = 22
+	knife_y_offset = 20
+	bayonet_state = "bayonet"
+	can_scope = TRUE
+	scope_state = "scope_long"
+	scope_x_offset = 11
+	scope_y_offset = 14
+	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
+	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+
+
+//Plasma musket.
+/obj/item/gun/ballistic/rifle/plasmacaster
+	name = "Plasma Musket"
+	desc = "The cooling looks dubious and is that a empty can of beans used as a safety valve? Pray the plasma goes towards the enemy and not your face when you pull the trigger."
+	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon_state = "plasmamusket"
+	item_state = "plasmamusket"
+	mag_type = /obj/item/ammo_box/magazine/internal/plasmacaster
+	fire_delay = 20
+	var/bolt_open = FALSE
+	isenergy = TRUE
+	can_scope = TRUE
+	scope_state = "scope_medium"
+	scope_x_offset = 9
+	scope_y_offset = 20
+	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
+	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+
+
+//Slamfire shotgun.
+/obj/item/gun/ballistic/revolver/single_shotgun
+	name = "Slamfire shotgun"
+	desc = "A pipe, some wood and a screwdriver is all you need to fire a shotgun shell apparantly."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "shotgunimprov"
+	item_state = "improvgun"
+	force = 20 //Good club
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
+	sawn_desc = "At this point, you're basically holding an individual shotgun shell as it goes off."
+	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
+
+/obj/item/gun/ballistic/revolver/single_shotgun/attackby(obj/item/A, mob/user, params)
+	..()
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
+		sawoff(user)
+	if(istype(A, /obj/item/melee/transforming/energy))
+		var/obj/item/melee/transforming/energy/W = A
+		if(W.active)
+			sawoff(user)
+
+
+
+/////////////////
+//CODE SNIPPETS//
+/////////////////
+
+
+/*
+SOME SORT OF  BOLT ACTION CODE UNUSED
+/obj/item/gun/ballistic/shotgun/boltaction/pump(mob/M)
+	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
+	if(bolt_open)
+		pump_reload(M)
+	else
+		pump_unload(M)
+	bolt_open = !bolt_open
+	update_icon()	//I.E. fix the desc
+	return 1
+
+/obj/item/gun/ballistic/shotgun/boltaction/pump(mob/M)
+	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
+	pump_unload(M)
+	pump_reload(M)
+	update_icon()	//I.E. fix the desc
+	return 1
+
+/obj/item/gun/ballistic/shotgun/boltaction/attackby(obj/item/A, mob/user, params)
+	if(!bolt_open)
+		to_chat(user, "<span class='notice'>The bolt is closed!</span>")
+		return
+	. = ..()
+
+/obj/item/gun/ballistic/shotgun/boltaction/examine(mob/user)
+	. = ..()
+	. += "The bolt is [bolt_open ? "open" : "closed"]."
+*/

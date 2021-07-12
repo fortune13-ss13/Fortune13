@@ -690,16 +690,15 @@
 	icon_living = "abomination"
 	icon_dead = "abomination_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	robust_searching = 1
 	maxHealth = 1000
 	health = 1000
 	harm_intent_damage = 8
 	melee_damage_lower = 75
 	melee_damage_upper = 75
-	armour_penetration = 0.1
 	attack_verb_simple = "eviscerates"
-	attack_sound = 'sound/weapons/bladeslice.ogg'
+	attack_sound = 'sound/weapons/punch1.ogg'
+	attack_verb_simple = "lacerates"
 	speed = -0.5
 	var/static/list/abom_sounds
 	deathmessage = "wails as its form shudders and violently comes to a stop."
@@ -709,7 +708,7 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		var/choice = pick(1, 1, 2, 2, 3, 4)
+		var/choice = pick(1, 1, 1, 2, 3, 5)
 		H.reagents.add_reagent(/datum/reagent/toxin/FEV_solution, choice)
 
 /mob/living/simple_animal/hostile/abomination/Initialize()
@@ -731,15 +730,6 @@
 		var/chosen_sound = pick(abom_sounds)
 		playsound(src, chosen_sound, 70, TRUE)
 
-/mob/living/simple_animal/hostile/abomination/weak // For FEV mutation.
-	environment_smash = ENVIRONMENT_SMASH_STRUCTURES // So you don't break walls
-	maxHealth = 500
-	health = 500
-	harm_intent_damage = 8
-	melee_damage_lower = 45
-	melee_damage_upper = 45
-	speed = 2
-
 /mob/living/simple_animal/hostile/abomhorror
 	name = "failed experiment"
 	desc = "A terrible fusion of man, animal, and something else entirely. It looks to be in great pain."
@@ -756,6 +746,7 @@
 	melee_damage_upper = 50
 	attack_verb_simple = "eviscerates"
 	attack_sound = 'sound/weapons/punch1.ogg'
+	attack_verb_simple = "lacerates"
 	speed = -0.5
 	var/static/list/abom_sounds
 	deathmessage = "wails as its form shudders and violently comes to a stop."

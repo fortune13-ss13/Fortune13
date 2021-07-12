@@ -109,9 +109,6 @@ Captain
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
-	if(H.mind)
-		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
-		H.mind.AddSpell(S)
 
 /datum/outfit/job/ncr/f13captain
 	name = "NCR Captain"
@@ -314,11 +311,12 @@ Logistics Officer
 
 /*
 Sergeant First Class
+*/
 
 /datum/job/ncr/f13firstsergeant
-	title = "NCR Sergeant First Class"
+	title = "NCR Sergeant First Class" 
 	flag = F13FIRSTSERGEANT
-	total_positions = 0
+	total_positions = 0 //basically doesn't get used, remove the bloat roles. I wont delete this but it should be either reworked or commented out.
 	spawn_positions = 0
 	description = "You are the most senior NCO in Camp Miller. You act as an senior enlisted advisor to the Lieutenant as well as act as in the third in Command. You have the authority to recommend promotions and as well as managing the enlisted personnel"
 	supervisors = "Lieutenant and above"
@@ -350,7 +348,6 @@ Sergeant First Class
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/ammo_box/magazine/m556/rifle/assault=1, \
 		/obj/item/binoculars=1)
-*/
 
 /*
 Sergeant
@@ -359,15 +356,15 @@ Sergeant
 /datum/job/ncr/f13sergeant
 	title = "NCR Sergeant"
 	flag = F13SERGEANT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
 	supervisors = "Sergeant First Class and above"
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_SERGEANT
 	outfit = /datum/outfit/job/ncr/f13sergeant
 	exp_requirements = 600
-
+	
 	loadout_options = list(
 	/datum/outfit/loadout/sergeantrifleman,
 	/datum/outfit/loadout/sergeantrecon,
@@ -396,7 +393,7 @@ Sergeant
 
 /datum/outfit/loadout/sergeantrifleman
 	name = "Rifleman"
-	suit_store = /obj/item/gun/ballistic/automatic/service
+	suit_store = /obj/item/gun/ballistic/automatic/service 
 	head = /obj/item/clothing/head/f13/ncr
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault=2, \
@@ -404,7 +401,7 @@ Sergeant
 
 /datum/outfit/loadout/sergeantrecon
 	name = "Pathfinder Squad Leader"
-	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	head 			= /obj/item/clothing/head/f13/ncr
 	backpack_contents = list(
 		/obj/item/book/granter/trait/trekking=1,
@@ -432,8 +429,8 @@ Heavy Trooper
 /datum/job/ncr/f13heavytrooper
 	title = "NCR Heavy Trooper"
 	flag = F13HEAVYTROOPER
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are the most elite of the enlisted, sergeant in rank but forgoing regular command roles to lead in battle only. You are expected to be on the frontlines of every engagement, and to provide firing support for the rank and file. Your power armor lacks the protects the full working sets have, but you have trained with it and can use it in battle well. General Oliver praises you and your other Heavy Troopers, prove to him you're no exception to the rule."
 	supervisors = "Sergeant First Class and above"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
@@ -478,8 +475,8 @@ Corporal
 /datum/job/ncr/f13corporal
 	title = "NCR Corporal"
 	flag = F13CORPORAL
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are a junior NCO. You are tasked with organizing the enlisted ranks into fireteams and answer directly to a Sergeant and/or the Sergeant First Class."
 	supervisors = "Sergeant and above"
 	selection_color = "#fff5cc"
@@ -522,10 +519,10 @@ Corporal
 
 /datum/outfit/loadout/corporalspotter
 	name = "Spotter"
-	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	head = /obj/item/clothing/head/beret/ncr_recon/worn
 	backpack_contents = list(
-		/obj/item/storage/box/ration/menu_eight=1,
+		/obj/item/storage/box/ration/menu_eight=1, 
 		/obj/item/binoculars=1,
 		/obj/item/ammo_box/magazine/m10mm_adv/ext=2)
 
@@ -561,7 +558,7 @@ Corporal
 	head			= /obj/item/clothing/head/f13/ncr/steelpot_med
 	gloves			= /obj/item/clothing/gloves/color/latex/nitrile
 	accessory		= /obj/item/clothing/accessory/armband/med/ncr
-	suit_store		= /obj/item/gun/ballistic/automatic/m1carbine/m1n
+	suit_store		= /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	mask 			= /obj/item/clothing/mask/surgical
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
@@ -587,8 +584,8 @@ Combat Engineer
 /datum/job/ncr/f13combatengineer
 	title = "NCR Combat Engineer"
 	flag = F13COMBATENGINEER
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are a veteran enlisted with an engineering skill set. You work closely with your squad, taking orders from your officers. You have the authority to command troopers if there are none present."
 	supervisors = "Corporals and above"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
@@ -626,9 +623,9 @@ Combat Engineer
 		/obj/item/storage/bag/money/small/ncrenlisted=1 \
 		)
 
-/datum/outfit/loadout/combatengineerbuilder
+/datum/outfit/loadout/combatengineerbuilder	
 	name = "Construction Specialist"
-	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	head = /obj/item/clothing/head/f13/ncr/goggles
 	belt = /obj/item/storage/belt/military/assault/ncr/engineer
 	glasses	= /obj/item/clothing/glasses/welding
@@ -715,7 +712,7 @@ Trooper
 
 /datum/outfit/loadout/trooperrifleman
 	name = "Rifleman"
-	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n 
 	backpack_contents = list(
 		/obj/item/storage/box/ration/menu_two=1,
 		/obj/item/ammo_box/magazine/m10mm_adv/ext=2)
@@ -743,8 +740,8 @@ Trooper
 /datum/job/ncr/f13mp
 	title = "NCR Military Police"
 	flag = F13MP
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are tasked with the supervision of the NCRA to maintain internal order and disciplice and to prevent any warcrimes from happening."
 	supervisors = "the Captain"
 	selection_color = "#fff5cc"
@@ -921,7 +918,7 @@ Veteran Ranger
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-
+	
 	/*
 	var/datum/martial_art/rangertakedown/RT = new
 	RT.teach(H)
@@ -979,7 +976,7 @@ Veteran Ranger
 	title = "NCR Ranger"
 	flag = F13RANGER
 	total_positions = 4
-	spawn_positions = 4
+	spawn_positions = 5
 	description = "As an NCR Ranger, you are the premier special forces unit of the NCR. You are the forward observations and support the Army in it's campaigns, as well as continuing the tradition of stopping slavery in it's tracks."
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
