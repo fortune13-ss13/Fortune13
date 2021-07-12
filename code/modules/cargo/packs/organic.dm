@@ -340,11 +340,11 @@
 /datum/supply_pack/organic/exoticseeds
 	name = "Seeds Crate (Exotic)"
 	desc = "Any entrepreneuring botanist's dream. Contains twelve different seeds, including three replica-pod seeds and two mystery seeds!"
-	cost = 1500
+	cost = 9500 // 9500 for some useless stuff and 2 exotic seeds
 	contains = list(/obj/item/seeds/nettle,
-					/obj/item/seeds/replicapod,
-					/obj/item/seeds/replicapod,
-					/obj/item/seeds/replicapod,
+					///obj/item/seeds/replicapod,
+					///obj/item/seeds/replicapod,
+					///obj/item/seeds/replicapod,
 					/obj/item/seeds/plump,
 					/obj/item/seeds/liberty,
 					/obj/item/seeds/amanita,

@@ -36,7 +36,7 @@
 	cost = 1700
 	contains = list(/obj/item/storage/box/chemimp)
 	crate_name = "chemical implant crate"
-
+/*
 /datum/supply_pack/security/armory/ballistic
 	name = "Combat Shotguns Crate"
 	desc = "For when the enemy absolutely needs to be replaced with lead. Contains three Aussec-designed Combat Shotguns, with three Shotgun Bandoliers, as well as seven buchshot and 12g shotgun slugs. Requires Armory access to open."
@@ -49,7 +49,7 @@
 					/obj/item/storage/belt/bandolier,
 					/obj/item/ammo_box/shotgun/buck)
 	crate_name = "combat shotguns crate"
-
+*/
 /datum/supply_pack/security/armory/dragnetgun
 	name = "DRAGnet gun Crate"
 	desc = "Contains two DRAGnet guns. A Dynamic Rapid-Apprehension of the Guilty net the revolution in law enforcement technology that YOU Want! Requires Armory access to open."
@@ -67,14 +67,14 @@
 					/obj/item/gun/energy/e_gun)
 	crate_name = "energy gun crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
-
+/*
 /datum/supply_pack/security/armory/exileimp // Theres boxes in 2 lockers as well as gateway never realy being used sad
 	name = "Exile Implants Crate"
 	desc = "Contains five Exile implants. Requires Armory access to open."
 	cost = 1050 //stops endless points
 	contains = list(/obj/item/storage/box/exileimp)
 	crate_name = "exile implant crate"
-
+*/
 /datum/supply_pack/security/armory/mindshield
 	name = "Mindshield Implants Crate"
 	desc = "Prevent against radical thoughts with three Mindshield implants. Requires Armory access to open."
@@ -88,7 +88,7 @@
 	cost = 1100
 	contains = list(/obj/item/storage/box/trackimp)
 	crate_name = "tracking implant crate"
-
+/*
 /datum/supply_pack/security/armory/fire
 	name = "Incendiary Weapons Crate"
 	desc = "Burn, baby burn. Contains three incendiary grenades, seven incendiary slugs, three plasma canisters, and a flamethrower. Requires Brige access to open."
@@ -124,7 +124,7 @@
 					/obj/item/clothing/suit/armor/laserproof)
 	crate_name = "reflector vest crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
-
+*/
 /datum/supply_pack/security/armory/riotarmor
 	name = "Riot Armor Crate"
 	desc = "Contains three sets of heavy body armor. Advanced padding protects against close-ranged weaponry, making melee attacks feel only half as potent to the user. Requires Armory access to open."
@@ -191,7 +191,7 @@
 					/obj/item/clothing/gloves/tackler/combat/insulated,
 					/obj/item/clothing/gloves/tackler/combat/insulated)
 	crate_name = "swat crate"
-
+/*
 /datum/supply_pack/security/armory/wt550ammo_nonlethal // Takes around 12 shots to stamcrit someone
 	name = "WT-550 Semi-Auto SMG Non-Lethal Ammo Crate"
 	desc = "Contains four 32-round magazines for the WT-550 Semi-Auto SMG. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
@@ -202,9 +202,10 @@
 					/obj/item/ammo_box/magazine/wt550m9/wtrubber)
 	crate_name = "auto rifle ammo crate"
 
-///datum/supply_pack/security/armory/hell_single
-//	name = "Hellgun Single-Pack"
-//	crate_name = "hellgun crate"
-//	desc = "Contains one hellgun, an old pattern of laser gun infamous for its ability to horribly disfigure targets with burns. Technically violates the Geneva Convention when used on humanoids."
-//	cost = 1500
-//	contains = list(/obj/item/gun/energy/laser/hellgun)
+datum/supply_pack/security/armory/hell_single
+	name = "Hellgun Single-Pack"
+	crate_name = "hellgun crate"
+	desc = "Contains one hellgun, an old pattern of laser gun infamous for its ability to horribly disfigure targets with burns. Technically violates the Geneva Convention when used on humanoids."
+	cost = 1500
+	contains = list(/obj/item/gun/energy/laser/hellgun)
+*/

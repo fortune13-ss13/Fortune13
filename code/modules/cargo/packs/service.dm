@@ -65,7 +65,7 @@
 			/obj/item/clothing/mask/gas/explorer)
 	crate_name = "shaft miner starter kit"
 	crate_type = /obj/structure/closet/crate/secure
-
+/*
 /datum/supply_pack/service/snowmobile
 	name = "Snowmobile kit"
 	desc = "trapped on a frigid wasteland? need to get around fast? purchase a refurbished snowmobile, with a FREE 10 microsecond warranty!"
@@ -75,7 +75,7 @@
 			/obj/item/clothing/mask/gas/explorer = 1)
 	crate_name = "Snowmobile kit"
 	crate_type = /obj/structure/closet/crate/large
-
+*/
 //////////////////////////////////////////////////////////////////////////////
 /////////////////////// Chef, Botanist, Bartender ////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -218,7 +218,7 @@
 					/obj/item/holosign_creator)
 	crate_name = "advanced santation crate"
 	crate_type = /obj/structure/closet/crate/secure
-
+/*
 /datum/supply_pack/service/janitor/janpimp
 	name = "Custodial Cruiser"
 	desc = "Clown steal your ride? Assistant lock it in the dorms? Order a new one and get back to cleaning in style!"
@@ -228,7 +228,7 @@
 					/obj/item/key/janitor)
 	crate_name = "janitor ride crate"
 	crate_type = /obj/structure/closet/crate/large
-
+*/
 /datum/supply_pack/service/janitor/janitank
 	name = "Janitor Backpack Crate"
 	desc = "Call forth divine judgement upon dirt and grime with this high capacity janitor backpack. Contains 500 units of station-cleansing cleaner. Requires janitor access to open."
