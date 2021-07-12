@@ -96,9 +96,9 @@
 	faction = "Midwest BOS"
 	total_positions = 0
 	spawn_positions = 0
-	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping this bunker alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Paladin Commander	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
+	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping this bunker alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Paladin Commander"
 	enforces = "You must try to keep peaceful relations with Oasis and the Wayfarers"
-	supervisors = "The Elder of the Midwest Chapter.
+	supervisors = "The Elder of the Midwest Chapter."
 	selection_color = "#323232"
 	exp_requirements = 1250
 	exp_type = EXP_TYPE_ENCLAVE
