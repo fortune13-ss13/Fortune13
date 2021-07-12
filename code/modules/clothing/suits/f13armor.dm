@@ -330,7 +330,7 @@
 				emped = 0
 				if(istype(L))
 					L.update_equipment_speed_mods()
-					
+
 /obj/item/clothing/suit/armor/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	. = ..()
 	if(damage >= src.dmg_block_threshold && check_armor_penetration(object) >= 0)
@@ -468,7 +468,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
 	name = "midwestern power armor"
-	desc = "(IX) This set of power armor once belonged to the Midwestern branch of the Brotherhood of Steel, and now resides here."
+	desc = "(XI) This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel, and now resides here."
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
 	armor = list("tier" = 9, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0, "wound" = 60)
@@ -504,7 +504,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/reforgedwbos
 	name = "reforged Washington power armor"
-	desc = "(X) A dark mirror to the pinnacle of pre-war technology, reforged. This suit of power armor provides substantial protection to the wearer."
+	desc = "(XI) A dark mirror to the pinnacle of pre-war technology, reforged to be a set that the local Paladin Commander wears. This suit of power armor provides substantial protection to the wearer."
 	icon_state = "t51matt"
 	item_state = "t51matt"
 
