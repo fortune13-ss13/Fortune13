@@ -16,7 +16,6 @@
 	var/item_charges = 999 // How many uses left
 	var/indoc_message = "You are now part of coders. You will code funny PRs." // The message that will show up and added to the notes on use.
 	var/use_time = 4 SECONDS // How long will be the do_after.
-	var/in_use = FALSE
 
 /obj/item/indoctrinator/examine(mob/user)
 	. = ..()
@@ -24,8 +23,8 @@
 
 /obj/item/indoctrinator/attack(mob/living/carbon/human/M, mob/living/carbon/human/user)
 	if(user.a_intent == INTENT_HARM) // On harm intent do nothing useful.
-		..()
-		return
+		return ..()
+	. = STOP_ATTACK_PROC_CHAIN
 	if(in_use)
 		return
 	if(M == user)
@@ -50,8 +49,8 @@
 		to_chat(user, "<span class='warning'>[M] is lacking a brain to operate on!</span>")
 		return
 	to_chat(user, "<span class='notice'>You begin to place [src] near the head of [M].</span>")
-	. = STOP_ATTACK_PROC_CHAIN
-	in_use = TRUE
+	if(INTERACTING_WITH(user, M))
+		return
 	if(!do_after(user, use_time, target = M))
 		in_use = FALSE
 		return
