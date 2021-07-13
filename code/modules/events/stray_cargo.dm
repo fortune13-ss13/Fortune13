@@ -82,6 +82,7 @@
 		return pick(possible_areas)
 
 ///A rare variant that drops a crate containing syndicate uplink items
+/*
 /datum/round_event_control/stray_cargo/syndicate
 	name = "Stray Syndicate Cargo Pod"
 	typepath = /datum/round_event/stray_cargo/syndicate
@@ -97,3 +98,4 @@
 	var/obj/structure/closet/supplypod/S = new
 	S.setStyle(STYLE_SYNDICATE)
 	return S
+*/
