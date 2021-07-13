@@ -217,8 +217,8 @@ Coven Stuff
 	total_positions = 4
 	spawn_positions = 4
 	description = "You are a Servitor of the Children of the Cathedral. As the Servitor you answer directly to the High Priests. Super Mutants are the primary military force of your organization. From far away to the west, in The Cathedral, New California. You have come to do the bidding of The Master, your holy leader. He is long dead only his ideals remain in your mind. Unleash the Unity. Your job is to organize missions to subvert the power of the local factions, spread scripture, protect and recruit citizens, and disperse technology to the people. The High Priests of the Cathedral have given you the permission to recruit and command your own squad, given that they eventually submit to the Children of the Cathedral's FEV treatment. You spread the scripture of the Unity. you distribute technology to the masses and though you are in open war with the Brotherhood and the NCR. it is your sworn duty to preserve all life in the name of fulfilling the Unity. In the eyes of your superiors, all deserve a chance to bask in the shadow of the Unity."
-	forbids = ""
-	enforces = ""
+	forbids = "Disrespecting the Unity. Using drugs such as Jet. Painting the Cathedral in a bad light.Killing without reason. Theft while in the Uniform."
+	enforces = "Helping the common Waster.Destabilizing the BOS and NCR. Converting those worthy to become Super Mutants.Sharing tech to the common wastelander "
 	supervisors = "The High-Priests."
 	selection_color = "#95a5a6"
     exp_type = EXP_TYPE_FALLOUT
