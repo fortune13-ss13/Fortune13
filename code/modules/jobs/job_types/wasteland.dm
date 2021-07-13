@@ -577,13 +577,13 @@ Raider
 	faction = "Wastelander"
 	total_positions = -1
 	spawn_positions = -1
-	description = "You travelled far to arrive at the ruined town of Pahrump, a bleak paradise far from the troubles of the Mojave Conflict - protected by Red Rock Canyon to the east, free of the many factions vying for control over Nevada. Here in Pahrump, your story and fate is your own."
-	supervisors = "no one"
+	description = "You arrive in Yuma Valley, hoping to escape your past, the war, or perhaps something worse. But you’ve seen the torchlight and heard the bark of the military officers. You haven’t escaped anything. Try to survive, establish your own settlement, make your own legend. Suffer well and die gladly."
+	supervisors = "God"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
+	access = list()		//the loadouts need rebalance and alteration, wastelanders have it too easy right now - weezer
 	minimal_access = list()
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
@@ -616,9 +616,7 @@ Raider
 	suit = pick(
 		/obj/item/clothing/suit/armor/f13/kit, \
 		/obj/item/clothing/suit/f13/veteran, \
-		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer, \
-		/obj/item/clothing/suit/armor/f13/leatherarmor)
-	l_pocket = 	/obj/item/reagent_containers/food/drinks/flask
+		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer)
 	r_pocket = /obj/item/flashlight/flare
 	belt = 	/obj/item/kitchen/knife/combat/survival
 	backpack_contents = list(
@@ -626,15 +624,9 @@ Raider
 		/obj/item/reagent_containers/pill/radx=1, \
 		/obj/item/storage/bag/money/small/wastelander, \
 		/obj/item/kitchen/knife)
-	suit_store = pick(
-	/obj/item/gun/ballistic/revolver/detective, \
-	/obj/item/gun/ballistic/rifle/hunting, \
-	/obj/item/gun/ballistic/automatic/hobo/zipgun, \
-	/obj/item/gun/ballistic/revolver/hobo/pepperbox)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
-	suit = /obj/item/clothing/suit/apron
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	head = /obj/item/clothing/head/welding
