@@ -343,7 +343,7 @@
 	if(alert("Are you sure you want to recolor your blade?", "Confirm Repaint", "Yes", "No") == "Yes")
 		var/energy_color_input = input(usr,"","Choose Energy Color",light_color) as color|null
 		if(energy_color_input)
-			light_color = sanitize_hexcolor(energy_color_input, desired_format=6, include_crunch=1)
+			set_light_color(sanitize_hexcolor(energy_color_input, desired_format=6, include_crunch=1))
 		update_icon()
 		update_light()
 	return TRUE
@@ -758,7 +758,7 @@
 
 /obj/item/toy/cards/deck
 	name = "deck of cards"
-	desc = "A deck of space-grade playing cards."
+	desc = "A deck of well worn playing cards."
 	icon = 'icons/obj/toy.dmi'
 	deckstyle = "nanotrasen"
 	icon_state = "deck_nanotrasen_full"

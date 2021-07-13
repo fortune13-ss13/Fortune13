@@ -261,7 +261,7 @@
 /obj/item/projectile/beam/laser/musket //musket
 	name = "laser beam"
 	damage = 40
-	armour_penetration = 0.6
+	armour_penetration = 0.5
 	pixels_per_second = TILES_TO_PIXELS(50)
 
 //plasma caster
@@ -269,11 +269,23 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 70
+	damage = 49
 	armour_penetration = 0.6
 	flag = "laser"
 	eyeblur = 0
 	is_reflectable = TRUE
+	pixels_per_second = TILES_TO_PIXELS(50)
+
+//Alrem's plasmacaster
+/obj/item/projectile/f13plasma/plasmacaster/arlem
+	name = "plasma bolt"
+	icon_state = "plasma_clot"
+	damage_type = BURN
+	damage = 60
+	armour_penetration = 0.8
+	flag = "laser"
+	eyeblur = 0
+	is_reflectable = FALSE
 	pixels_per_second = TILES_TO_PIXELS(50)
 
 /obj/item/projectile/beam/laser/lasgun //AER9

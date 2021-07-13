@@ -101,7 +101,6 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 35
 	mob_size = 5
-	faction = list("hostile")
 	wound_bonus = 0
 	bare_wound_bonus = 0
 
@@ -117,10 +116,11 @@
 	harm_intent_damage = 8
 	melee_damage_lower = 25
 	melee_damage_upper = 25
+	light_system = MOVABLE_LIGHT
+	light_range = 2
 
-/mob/living/simple_animal/hostile/ghoul/glowing/Initialize()
+/mob/living/simple_animal/hostile/ghoul/glowing/Initialize(mapload)
 	. = ..()
-	set_light(2)
 	// we only heal BRUTELOSS because each type directly heals a simplemob's health
 	// therefore setting it to BRUTELOSS | FIRELOSS | TOXLOSS | OXYLOSS would mean healing 4x as much
 	// aka 40% of max life every tick, which is basically unkillable
@@ -136,6 +136,14 @@
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+/mob/living/simple_animal/hostile/ghoul/glowing/strong // FEV mutation
+	maxHealth = 320
+	health = 320
+	speed = 1.4 // Nyooom
+	melee_damage_lower = 35
+	melee_damage_upper = 35
+	armour_penetration = 0.1
 
 /mob/living/simple_animal/hostile/ghoul/soldier
 	name = "ghoul soldier"

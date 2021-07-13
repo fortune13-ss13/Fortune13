@@ -120,7 +120,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		if(!price)
 			return
 
-		content[Itm] = max(round(price),0)
+		content[Itm] = min(max(round(price),0),50000)
 
 		if(istype(Itm.loc, /mob))
 			var/mob/M = Itm.loc
@@ -270,6 +270,19 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 	machine_state = new_state
 	updateIcon()
+
+/* Welder Act */
+/obj/machinery/trading_machine/welder_act(mob/living/carbon/human/user, obj/item/OtherItem)
+	if(machine_state == STATE_LOCKOPEN)
+		if(!OtherItem.tool_start_check(user, amount=3))
+			return
+		user.visible_message("[user.name] repairs \the [src].", \
+						"<span class='notice'>You start repairing the vending machine.</span>", \
+						"<span class='italics'>You hear welding.</span>")
+		if(OtherItem.use_tool(src, user, 100, volume=50, amount=20))
+			to_chat(user, SPAN_NOTICE("You repair the vending machine."))
+			stat &= ~BROKEN
+			obj_integrity = max_integrity
 
 /* Attack By */
 /obj/machinery/trading_machine/attackby(obj/item/OtherItem, mob/living/carbon/human/user, parameters)
@@ -527,7 +540,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Rad-X pill",					/obj/item/reagent_containers/pill/radx,								20),
 		new /datum/data/wasteland_equipment("RadAway",						/obj/item/reagent_containers/blood/radaway,							30),
 		new /datum/data/wasteland_equipment("Chemistry for Wastelanders",	/obj/item/book/granter/trait/chemistry,								600),
-		new /datum/data/wasteland_equipment("Surgery for Wastelanders",		/obj/item/book/granter/trait/lowsurgery,							500)		
+		new /datum/data/wasteland_equipment("Surgery for Wastelanders",		/obj/item/book/granter/trait/lowsurgery,							500)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/weapons

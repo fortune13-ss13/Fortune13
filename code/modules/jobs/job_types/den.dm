@@ -25,8 +25,8 @@ Mayor
 	faction = "Town"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the people of the town"
-	description = "You are the head honcho of Oasis and the people look to you for leadership. Pass laws to protect your Citizens, distribute the Town's funds and make deals with the powers present within the Region to better the people - or exploit them for your own personal gain."
+	supervisors = "Oasis"
+	description = "You are the benevolent tyrant of Oasis, chosen by the people to represent and lead them. Pass laws to protect your citizens, distribute town funds and make deals with the powers present within the Region to better the people, and yourself, of course."
 	selection_color = "#d7b088"
 
 	exp_requirements = 1500
@@ -46,7 +46,7 @@ Mayor
 	name = "Mayor"
 	jobtype = /datum/job/den/f13mayor
 
-	ears = 			/obj/item/radio/headset/headset_den
+	ears = 			/obj/item/radio/headset/headset_town
 	id =            /obj/item/card/id/silver/mayor
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
@@ -73,8 +73,8 @@ Mayor
 	faction = "Town"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the mayor"
-	description = "As the chief law enforcer of the Town, your job is to keep the peace, settle local disputes, and keep your townsfolk safe and alive. Unfortunately, with the NCR and Legion closing in on the region, the Town is caught between a rock and a hard place, as with the war brings with it unsavory elements like the Khans and Outlaws. Sometimes the people you handle inside the town will be alive in cuffs, or dead on the street. Other times, they'll escape the limits of the town, to which you can put a bounty on their head for their capture, or have your deputies capture them. However, you must remember these three critical things: never leave the town undefended, keep the townsfolk alive and safe, and most importantly - keep your hand on your gun and don't you trust anyone."
+	supervisors = "Oasis Government"
+	description = "You are the Mayor's best friend, you helped them get where they are. While they handle civil matters, you've been rewarded with more hands-on work, as preferred. With your loyal patrolmen, you maintain your claim to authority by keeping the peace, and protecting the citizens from threats within and without. Never leave Oasis undefended, and don't let its people die out. You have nowhere left to go, if this town falls, so will you."
 	selection_color = "#d7b088"
 	exp_requirements = 1500
 
@@ -92,14 +92,14 @@ Mayor
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 
-	ears = 			/obj/item/radio/headset/headset_den
+	ears = 			/obj/item/radio/headset/headset_town
 	uniform =  		/obj/item/clothing/under/f13/sheriff
 	neck =			/obj/item/storage/belt/holster
 	shoes = 		/obj/item/clothing/shoes/f13/cowboy
 	suit = 			/obj/item/clothing/suit/armor/f13/town/sheriff
 	head = 			/obj/item/clothing/head/f13/town/sheriff
 	glasses =		/obj/item/clothing/glasses/sunglasses
-	l_hand = 		/obj/item/gun/ballistic/shotgun/automatic/hunting/brush
+	l_hand = 		/obj/item/gun/ballistic/rifle/repeater/brush
 	l_pocket =		/obj/item/storage/bag/money/small/den
 	backpack_contents = list(
 		/obj/item/storage/box/deputy_badges=1, \
@@ -128,8 +128,8 @@ Mayor
 	faction = "Town"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the sheriff and the mayor"
-	description = "Working alongside the Sheriff you've known them for a while, having worked with them under the previous Sheriff - you bagged many a bandit and raider together on the road. These days you patrol the areas outside of town, tracking down bounties on the run and keeping the settlers safe from harm."
+	supervisors = "Oasis Police Department"
+	description = "You've passed the training and tests to join the OPD, and your loyalty to the Chief is absolute - this is your new home, your family. This oasis of civilization will not fall as long as you breathe. Protect its citizens and property, for that is your new purpose."
 	selection_color = "#dcba97"
 	exp_requirements = 12
 	exp_type = EXP_TYPE_DEN
@@ -143,13 +143,13 @@ Mayor
 	name = "Deputy"
 	jobtype = /datum/job/den/f13deputy
 
-	ears = 			/obj/item/radio/headset/headset_den
+	ears = 			/obj/item/radio/headset/headset_town
 	id =            /obj/item/card/id/dogtag/deputy
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
 	suit = 			/obj/item/clothing/suit/armor/f13/town/deputy
 	head =	/obj/item/clothing/head/f13/town/deputy
 	belt = /obj/item/gun/ballistic/revolver/colt357
@@ -176,8 +176,8 @@ Mayor
 	faction = "Town"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "law and order"
-	description = "As a Farmer, you believe that the frontier holds abundant opportunities for you to encroach and take advantage of. Enshrouded in safety by the walls of Oasis, you enact out your skills of cultivation and husbandry, making you a vital backbone business of the town in growing medicines, crops and livestock, focusing on thriving and profiting off of this for your own intrinsic goals. As per your terms of agreement you should follow the law and order of the town, maintaining a distinct amount of peace from the wild wasteland that civilisation hopes to outrun..."
+	supervisors = "Oasis Government & Police Department"
+	description = "Growing up in the Oasis, you have an endless love for the sacred Oak, for nowhere in the valley is the soil as fertile, the bounty as rich. Behind the safety of the walls, you grow crops, medicines, and raise livestock. The community depends on you, you are a manifestation of the Oak’s will."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13farmer
@@ -190,7 +190,7 @@ Mayor
 	jobtype = /datum/job/den/f13farmer
 
 	id = /obj/item/card/id/dogtag/town
-	ears = 			/obj/item/radio/headset/headset_den
+	ears = 			/obj/item/radio/headset/headset_town
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -222,8 +222,8 @@ Mayor
 	faction = "Town"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "law and order"
-	description = "Prospecting is a complicated business, some call it scrounging or looting, but there is more to it then sifting through rubble - few can boast the skills you posess in mining and delving through the ruins of pre-war America. Not many survive this line of business and the pay has always been uncertain, but perhaps today you'll find strike gold."
+	supervisors = "Oasis Government & Police Department"
+	description = "Prospecting is a complicated business, some call it scrounging or looting, but there is more to it than sifting through rubble - few can boast the skills you possess in mining and delving through the ruins of the fallen empire. Not many survive this line of business, and the pay has always been uncertain, but perhaps today you'll strike gold."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13prospector
@@ -236,7 +236,7 @@ Mayor
 	jobtype = /datum/job/den/f13prospector
 
 	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast/
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
@@ -273,8 +273,8 @@ Mayor
 	flag = F13DENDOC
 	department_flag = DEN
 	faction = "Town"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "law and order"
 	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
@@ -289,7 +289,7 @@ Mayor
 	chemwhiz = TRUE
 	uniform = /obj/item/clothing/under/f13/medic
 	glasses = /obj/item/clothing/glasses/hud/health
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	neck = /obj/item/clothing/neck/stethoscope
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	backpack = /obj/item/storage/backpack/medic
@@ -319,8 +319,8 @@ Mayor
 	faction = "Town"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Your Master(s)."
-	description = "You are a beacon of faith in the wasteland. Guide the Town and any others who wish to be led on spiritual matters, and try to build your flock. Remember, the Oasis Oak and the Church are the centre of your religion - protect them at all costs."
+	supervisors = "Oasis Government & Police Department"
+	description = "You have finished your long pilgrimage to the fabled oasis. You have restored the chapel and cleared weeds from the grove, and it is now your duty to restore faith to this empty land. Remember that the Oak is the most holy living relic in this valley, protect it at all costs."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13preacher
@@ -447,7 +447,7 @@ Mayor
 	jobtype = /datum/job/den/f13preacher
 
 	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	belt = null
 	uniform = /obj/item/clothing/under/f13/chaplain
 	backpack_contents = list(/obj/item/camera/spooky = 1)
@@ -474,8 +474,8 @@ Mayor
 	faction = "Town"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "law and order"
-	description = "As a Barkeep, you believe that the frontier holds abundant opportunity for bartending and service. Hidden safely away behind the walls of Oasis, you enact out your skills of mixing the finest drinks and serving the best grub in the wasteland. As per your terms of agreement you should follow the law and order of the town. However the Blue Oyster is your private business, working in harmony with the farm next door to supply you with crop and goods to keep you in profit."
+	supervisors = "Oasis Government & Police Department"
+	description = "As the innkeeper, you are responsible for comfort and full bellies in town. Hidden safely away behind the town walls, you are free to refine your skills without always watching your back. As a citizen of the town you must follow its laws. However the inn is your private business, and you decide who is allowed to dine or reside in your hospitality."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13barkeep
@@ -495,13 +495,13 @@ Mayor
 
 	uniform = /obj/item/clothing/under/f13/bartenderalt
 	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/storage/fancy/ammobox/beanbag = 2
+		/obj/item/ammo_box/shotgun/bean = 2
 		)
 
 /datum/outfit/loadout/rugged
@@ -547,8 +547,8 @@ Mayor
 	faction = "Town"
 	total_positions = 8
 	spawn_positions = 8
-	supervisors = "law and order"
-	description = "You are a Settler living within the Town of Oasis - as the name suggests, it is a slightly more civilised place amidst the chaos of the Wasteland. Treat it as such, be sure to follow the laws of the land and do not associate with those who have a tendency not to, or you are likely to face exile. Remember that Oasis is your home, and that you should not be leaving to explore the Wastes."
+	supervisors = "Oasis Government & Police Department"
+	description = "You are a citizen living in the Town of Oasis - as the name suggests, it is a somewhat safe place amidst the chaos of the continent. Treat it as such, be sure to follow the laws of the land and do not associate with those who have a tendency not to, or you are likely to face exile. Remember that Oasis is your home, and that you should not be leaving to explore the Wastes."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
@@ -609,10 +609,10 @@ Mayor
 /datum/outfit/job/den/f13settler
 	name = "Citizen"
 	jobtype = /datum/job/den/f13settler
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	belt = null
 	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
@@ -632,8 +632,8 @@ Mayor
 	faction = "Town"
 	total_positions = 1
 	spawn_positions = 1
-	description = "As a Detective you are a private eye and investigator who assists private persons to gather evidence, conduct surveillance, find missing people, and verify information. As a private investigator you are not responsible for peacekeeping the wasteland, but by working with forces greater than yourself to resolve conflicts and bring order where it is not present."
-	supervisors = "law and order"
+	description = "As a Detective you are a private eye who assists clients to gather evidence, conduct surveillance, find missing people, and verify information. As a private investigator you are not responsible for peacekeeping the valley, but for finding answers. Your life is already over, make the ending mean something."
+	supervisors = "paying clients"
 	selection_color = "#dcba97"
 	outfit = /datum/outfit/job/wasteland/f13detective
 
@@ -645,7 +645,7 @@ Mayor
 	name = "Detective"
 	jobtype = /datum/job/wasteland/f13detective
 	suit = /obj/item/clothing/suit/det_suit/grey
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	uniform = /obj/item/clothing/under/f13/detectivealt
 	head = /obj/item/clothing/head/f13/det_hat_alt
 	shoes =  /obj/item/clothing/shoes/laceup
@@ -696,7 +696,7 @@ Mayor
 
 	uniform = /obj/item/clothing/under/lawyer/blacksuit
 	id = /obj/item/card/id/silver
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	backpack = /obj/item/storage/backpack/satchel/leather
 	satchel = /obj/item/storage/backpack/satchel/leather
@@ -713,7 +713,7 @@ Mayor
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
 	/obj/item/cane=1,
-	/obj/item/gun/ballistic/revolver/zipgun=1,
+	/obj/item/gun/ballistic/automatic/hobo/zipgun=1
 	/obj/item/storage/fancy/cigarettes/cigpack_bigboss=1,
 	/obj/item/reagent_containers/food/drinks/bottle/whiskey=1,
 	/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass=1
@@ -729,7 +729,7 @@ Mayor
 	backpack_contents = list(
 	/obj/item/reagent_containers/food/drinks/bottle/whiskey=1,
 	/obj/item/storage/box/matches=1,
-	/obj/item/gun/ballistic/automatic/mini_uzi=1
+	/obj/item/gun/ballistic/automatic/smg/mini_uzi=1
 	)
 
 /datum/outfit/loadout/investor
@@ -755,8 +755,8 @@ Mayor
 	faction = "Town"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "law and order"
-	description = "The capitalist economy of pre-war america survived alongside its people. Now it's your job to continue its survival, so make some caps!"
+	supervisors = "free hand of the market"
+	description = "The greed of the United States survived better than its people. You are an organ of this greed. Ensure its continuation."
 	selection_color = "#dcba97"
 	exp_requirements = 600
 
@@ -770,7 +770,7 @@ Mayor
 
 	id = /obj/item/card/id/dogtag/town
 	uniform = /obj/item/clothing/under/f13/roving
-	ears = /obj/item/radio/headset/headset_den
+	ears = /obj/item/radio/headset/headset_town
 	backpack = /obj/item/storage/backpack
 	satchel = /obj/item/storage/backpack/satchel
 	duffelbag = /obj/item/storage/backpack/duffelbag
@@ -792,4 +792,3 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/automatic_sear)

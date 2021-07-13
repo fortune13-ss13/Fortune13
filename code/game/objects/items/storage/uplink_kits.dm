@@ -17,7 +17,6 @@
 			new /obj/item/chameleon(src) // 7 tc
 
 		if("stealth") // 31 tc
-			new /obj/item/gun/energy/kinetic_accelerator/crossbow(src)
 			new /obj/item/pen/sleepy(src)
 			new /obj/item/healthanalyzer/rad_laser(src)
 			new /obj/item/chameleon(src)
@@ -25,9 +24,6 @@
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 
 		if("bond") // 29 tc
-			new /obj/item/gun/ballistic/automatic/pistol/suppressed(src)
-			new /obj/item/ammo_box/magazine/m10mm(src)
-			new /obj/item/ammo_box/magazine/m10mm(src)
 			new /obj/item/clothing/under/chameleon(src)
 			new /obj/item/card/id/syndicate(src)
 			new /obj/item/reagent_containers/syringe/stimulants(src)
@@ -124,15 +120,14 @@
 			new /obj/item/book/granter/spell/summonitem(src)
 
 		if("sniper") //This shit is unique so can't really balance it around tc, also no silencer because getting killed without ANY indicator on what killed you sucks
-			new /obj/item/gun/ballistic/automatic/sniper_rifle(src) // 12 tc
-			new /obj/item/ammo_box/magazine/sniper_rounds/penetrator(src)
+			new /obj/item/gun/ballistic/rifle/mosin(src) // 12 tc
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 			new /obj/item/clothing/gloves/color/latex/nitrile(src)
 			new /obj/item/clothing/under/suit/black_really(src)
 
 		if("metaops") // 30 tc
 			new /obj/item/clothing/suit/space/hardsuit/syndi(src) // 8 tc
-			new /obj/item/gun/ballistic/automatic/shotgun/bulldog/unrestricted(src) // 8 tc
+			new /obj/item/gun/ballistic/shotgun/trench(src) // 8 tc
 			new /obj/item/implanter/explosive(src) // 2 tc
 			new /obj/item/ammo_box/magazine/m12g(src) // 2 tc
 			new /obj/item/ammo_box/magazine/m12g(src) // 2 tc
@@ -340,7 +335,7 @@
 		new/obj/item/grenade/chem_grenade/ez_clean(src)
 
 /obj/item/storage/box/hug/reverse_revolver/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/reverse(src)
+	new /obj/item/clipboard(src)
 
 /obj/item/storage/box/syndie_kit/imp_radio/PopulateContents()
 	new /obj/item/implanter/radio/syndicate(src)
@@ -387,9 +382,7 @@
 	name = "Kitchen Gun (TM) package"
 
 /obj/item/storage/box/syndie_kit/kitchen_gun/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/m1911/kitchengun(src)
-	new /obj/item/ammo_box/magazine/m45/kitchengun(src)
-	new /obj/item/ammo_box/magazine/m45/kitchengun(src)
+	new /obj/item/gun/ballistic/automatic/pistol(src)
 
 
 /obj/item/storage/box/strange_seeds_10pack
@@ -404,14 +397,12 @@
 /obj/item/storage/box/syndie_kit/revolver
 
 /obj/item/storage/box/syndie_kit/revolver/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/syndicate(src)
 	new /obj/item/ammo_box/a357(src)
 
 /obj/item/storage/box/syndie_kit/pistol
 
 /obj/item/storage/box/syndie_kit/pistol/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol(src)
-	new /obj/item/ammo_box/magazine/m10mm(src)
 
 /obj/item/storage/box/syndie_kit/contract_kit
 	name = "contractor kit"
@@ -492,7 +483,6 @@
 		/obj/item/clothing/glasses/thermal/syndi,
 		/obj/item/storage/box/syndie_kit/imp_uplink,
 		/obj/item/clothing/gloves/krav_maga/combatglovesplus,
-		/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted/riot,
 		/obj/item/reagent_containers/syringe/stimulants,
 		/obj/item/storage/box/syndie_kit/imp_freedom,
 		/obj/item/storage/toolbox/infiltrator

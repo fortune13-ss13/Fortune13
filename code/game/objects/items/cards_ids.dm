@@ -887,6 +887,7 @@
 	icon_state = "deputy"
 	item_state = "badge-deputy"
 
+
 /obj/item/card/id/dogtag/deputy
 	name = "deputy's badge"
 	desc = "A silver badge which shows honour and dedication."
@@ -1118,6 +1119,20 @@
 	item_state = "brokenholodog"
 	uses_overlays = FALSE
 
+/obj/item/card/id/dentattoo
+	name = "Den Gang tattoo"
+	desc = "A tattoo identifying the bearer as a 'Made Man' of the Den Mob."
+	icon_state = "skin"
+	item_state = "skin"
+	assignment = "gang tattoo"
+	uses_overlays = FALSE
+
+	access = list(ACCESS_DEN)
+
+/obj/item/card/id/dentattoo/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
 /obj/item/card/id/khantattoo
 	name = "Great Khan tattoo"
 	desc = "A tattoo of the symbol of the Great Khans."
@@ -1127,6 +1142,18 @@
 	uses_overlays = FALSE
 
 	access = list(ACCESS_KHAN)
+
+/obj/item/card/id/khantattoo/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
+/obj/item/card/id/outcasttattoo
+	name = "faded tribal tattoos"
+	desc = "Tattoos marking the wearer as a tribal, worn and faded colors."
+	icon_state = "skin"
+	item_state = "skin"
+	assignment = "gang tattoo"
+	uses_overlays = FALSE
 
 /obj/item/card/id/khantattoo/Initialize()
 	. = ..()

@@ -59,7 +59,82 @@
 	if(part)
 		part.drop_limb()
 
+
 //F13 Weapons
+
+
+//Ripper. Small weaponized chainsaw. Supposed to be run on a cell, functionality not yet implemented.
+/obj/item/melee/powered/ripper
+	name = "ripper"
+	desc = "The Ripper™ vibroblade is powered by a small energy cell wich allows it to easily cut through flesh and bone."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	icon_state = "ripper"
+	var/on_icon_state = "ripper_on"
+	var/off_icon_state = "ripper"
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
+	var/on_item_state = "ripper_on"
+	var/off_item_state = "ripper"
+	w_class = WEIGHT_CLASS_BULKY
+	var/weight_class_on = WEIGHT_CLASS_HUGE
+	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
+	slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
+	force = 10
+	var/force_on = 45
+	var/force_off = 10
+	wound_bonus = -10
+	block_chance = 15
+	throw_speed = 3
+	throw_range = 4
+	throwforce = 10
+	var/on = FALSE
+	tool_behaviour = TOOL_SAW
+	sharpness = SHARP_EDGED
+	toolspeed = 1.5 //slower than a real saw
+	resistance_flags = FIRE_PROOF
+	hitsound = 'sound/weapons/chainsawhit.ogg'
+	var/on_sound = 'sound/weapons/chainsawhit.ogg'
+
+// Description for when turning the ripper on
+/obj/item/melee/powered/ripper/proc/get_on_description()
+	. = list()
+	.["local_on"] = "<span class ='warning'>You thumb the on button, the whining, blurry edge of the Ripper now lethal to touch.</span>"
+	.["local_off"] = "<span class ='notice'>You turn off the Ripper, the buzz of the cutting teeth ceasing.</span>"
+	return
+
+/obj/item/melee/powered/ripper/attack_self(mob/user)
+	on = !on
+	var/list/desc = get_on_description()
+	if(on)
+		to_chat(user, desc["local_on"])
+		icon_state = on_icon_state
+		item_state = on_item_state
+		w_class = weight_class_on
+		force = force_on
+		slot_flags = null
+		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
+	else
+		to_chat(user, desc["local_off"])
+		icon_state = off_icon_state
+		item_state = off_item_state
+		w_class = WEIGHT_CLASS_BULKY
+		force = force_off
+		slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
+		attack_verb = list("poked", "scraped")
+	playsound(src.loc, on_sound, 50, 1)
+	add_fingerprint(user)
+
+/obj/item/melee/powered/ripper/prewar
+	name = "pre-war military ripper"
+	desc = "A hand-held, militarized chainsaw, popular with Army units requiring a compact engineering tool for cutting. Just what material is intended to be cut with the weapon remains open to debate."
+	icon_state = "prewarrip_off"
+	on_icon_state = "prewarrip_on"
+	off_icon_state = "prewarrip_off"
+	on_item_state = "prewarrip_on"
+	off_item_state = "prewarrip_off"
+	force_on = 50
+	armour_penetration = 0.15
+
 /obj/item/claymore/machete
 	name = "machete"
 	desc = "A makeshift machete made of a lawn mower blade."
@@ -105,7 +180,7 @@
 
 /obj/item/claymore/machete/spatha
 	name = "spatha"
-	desc = "This long blade is favoured by Legion officers and leaders, a finely crafted weapon with good steel and hilt made from brass and bone."
+	desc = "This long blade is favoured by Legion officers and leaders, a finely crafted weapon with good steel and hilt made from bronze and bone."
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	icon_state = "spatha"
@@ -227,6 +302,7 @@
 	item_flags = DROPDEL
 	slot_flags = null
 	block_chance = 0 //RNG WON'T HELP YOU NOW, PANSY
+	light_system = MOVABLE_LIGHT
 	light_range = 3
 	attack_verb = list("brutalized", "eviscerated", "disemboweled", "hacked", "carved", "cleaved") //ONLY THE MOST VISCERAL ATTACK VERBS
 	var/notches = 0 //HOW MANY PEOPLE HAVE BEEN SLAIN WITH THIS BLADE
@@ -550,7 +626,7 @@
 
 /obj/item/bostaff //May as well make it a "claymore" and inherit the blocking
 	name = "quarterstaff"
-	desc = "A long, tall staff made of polished wood. Fitted with heavy metal ends. Traditionally used in ancient old-Earth martial arts."
+	desc = "A long, tall staff made of polished wood. Fitted with heavy metal ends. Traditionally used in ancient pre-collapse martial arts."
 	w_class = WEIGHT_CLASS_BULKY
 	force = 20
 	block_chance = 50
@@ -573,7 +649,8 @@
 	item_state = "tribalspear"
 	force = 20
 	throwforce = 35
-	reach = 2
+	armour_penetration = 0.10
+	max_reach = 2
 	item_flags = SLOWS_WHILE_IN_HAND
 	slowdown = 0.3
 	embedding = list("pain_mult" = 2, "embed_chance" = 60, "fall_chance" = 20)
@@ -620,14 +697,11 @@
 	AddComponent(/datum/component/butchering, 20, 105)
 	AddComponent(/datum/component/two_handed, force_multiplier=2, icon_wielded="mars_staff")
 
-
-var/brightness_on = 6 //TWICE AS BRIGHT AS A REGULAR ESWORD
-var/list/possible_colors = list("red")
 /*
 /obj/item/sledgehammer/marsstaff/update_icon()
 	if(wielded)
 		playsound(loc, 'sound/effects/torch_light.ogg', 50, 0)
-		light_color = LIGHT_COLOR_RED
+		set_light_color(LIGHT_COLOR_RED)
 		START_PROCESSING(SSobj, src)
 		set_light(brightness_on)
 		sharpness = SHARP_NONE

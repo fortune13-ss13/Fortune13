@@ -1,11 +1,12 @@
 /mob/living
+	flags_1 = HEAR_1 | CRITICAL_ATOM_1
 	see_invisible = SEE_INVISIBLE_LIVING
 	sight = 0
 	see_in_dark = 2
-	hud_possible = list(HEALTH_HUD,STATUS_HUD,ANTAG_HUD,NANITE_HUD,DIAG_NANITE_FULL_HUD,RAD_HUD)
+	hud_possible = list(HEALTH_HUD,STATUS_HUD,ANTAG_HUD,NANITE_HUD,DIAG_NANITE_FULL_HUD,RAD_HUD,ONLINE_HUD)
 	pressure_resistance = 10
 	has_field_of_vision = TRUE
-
+	pass_flags_self = PASSMOB
 	typing_indicator_enabled = TRUE
 
 	var/last_click_move = 0 // Stores the previous next_move value.

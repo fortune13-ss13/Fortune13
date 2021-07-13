@@ -60,10 +60,10 @@
 /obj/item/implant/hijack/proc/InterceptClickOn(mob/living/user,params,atom/object)
 	if (isitem(object) || !toggled || user.incapacitated())
 		return
-	if (stealthmode == FALSE && istype(object,/obj/machinery/power/apc) && !user.CanReach(object))
+	if (stealthmode == FALSE && istype(object,/obj/machinery/power/apc) && !user.can_reach(object))
 		if (hijack_remotely(object))
 			return
-	if (stealthmode && !user.CanReach(object))
+	if (stealthmode && !user.can_reach(object))
 		return
 	if (!object.hasSiliconAccessInArea(imp_in))
 		return
@@ -83,7 +83,7 @@
 		return TRUE
 	if (user.get_active_held_item())
 		return
-	if (user.CanReach(object))
+	if (user.can_reach(object))
 		object.attack_robot(imp_in)
 	else
 		object.attack_ai(imp_in)
@@ -109,9 +109,9 @@
 		to_chat(src,"<span class='warning'>You are connected to too many APCs! Too many more will fry your brain.</span>")
 		hijacking = FALSE
 		return TRUE
-	imp_in.light_power = 2
-	imp_in.light_range = 2
-	imp_in.light_color = COLOR_YELLOW
+	imp_in.set_light_power(2)
+	imp_in.set_light_range(2)
+	imp_in.set_light_color(COLOR_YELLOW)
 	imp_in.update_light()
 	imp_in.visible_message("<span class='warning'>[imp_in] starts glowing a with a hollow yellow light!</span>")
 	to_chat(imp_in, "<span class='notice'>Beginning hijack of APC.</span>")
@@ -127,8 +127,8 @@
 		to_chat(imp_in, "<span class='warning'>Aborting.</span>")
 	apc.being_hijacked = FALSE
 	hijacking = FALSE
-	imp_in.light_power = 0
-	imp_in.light_range = 0
-	imp_in.light_color = COLOR_YELLOW
+	imp_in.set_light_power(0)
+	imp_in.set_light_range(0)
+	imp_in.set_light_color(COLOR_YELLOW)
 	imp_in.update_light()
 	return TRUE

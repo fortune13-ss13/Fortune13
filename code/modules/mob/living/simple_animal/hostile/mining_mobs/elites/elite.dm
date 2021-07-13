@@ -231,7 +231,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		visible_message("<span class='boldwarning'>As [user] drops the core into [src], [src] appears to swell.</span>")
 		icon_state = "advanced_tumor"
 		boosted = TRUE
-		light_range = 6
+		set_light_range(6)
 		desc = "[desc]  This one seems to glow with a strong intensity."
 		qdel(core)
 		return TRUE
@@ -365,7 +365,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	ourelite = null
 	return ..()
 
-/obj/effect/temp_visual/elite_tumor_wall/CanPass(atom/movable/mover, turf/target)
+/obj/effect/temp_visual/elite_tumor_wall/CanPass(atom/movable/mover, border_dir)
 	if(mover == ourelite || mover == activator)
 		return FALSE
 	else

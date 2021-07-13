@@ -761,10 +761,10 @@
 	name = "cleaving saw"
 	desc = "This saw is the tool of choice for the Head Hunter. Capable of switching its reach and attack speed on the fly, it's an incredibly useful weapon for slaying the denizens of the wastes. Animal or human, the saw doesn't judge."
 	force = 30
-	force_on = 40 //force when active
+	force_on = 60 //force when active
 	throwforce = 20
 	throwforce_on = 20
-	reach = 1
+	max_reach = 1
 	reach_on = 2
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
@@ -1105,7 +1105,7 @@
 		if(1)
 			new /obj/item/mayhem(src)
 		if(2)
-			new /obj/item/gun/ballistic/revolver/doublebarrel/super(src)
+			new /obj/item/guardiancreator(src)
 		if(3)
 			new /obj/item/guardiancreator(src)
 
@@ -1175,17 +1175,6 @@
 
 	log_combat(user, L, "took out a blood contract on", src)
 	qdel(src)
-
-/obj/item/gun/ballistic/revolver/doublebarrel/super
-	name = "super combat shotgun"
-	desc = "From the belly of the beast - or rather, demon. Twice as lethal as a less-than-super shotgun, but a tad bulkier."
-	icon_state = "heckgun"
-	slot_flags = null
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual/heck
-	burst_size = 2
-	burst_shot_delay = 0
-	unique_reskin = null
-	sawn_off = TRUE
 
 //Colossus
 /obj/structure/closet/crate/necropolis/colossus

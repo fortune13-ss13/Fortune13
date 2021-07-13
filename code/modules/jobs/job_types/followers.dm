@@ -62,7 +62,7 @@ Administrator
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_PRACTITIONER_EXPERT, src)
+	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 
 /datum/outfit/job/followers/f13leadpractitioner
@@ -84,7 +84,6 @@ Administrator
 		/obj/item/reagent_containers/medspray/synthflesh=2,
 		/obj/item/reagent_containers/hypospray/combat=1,
 		/obj/item/clothing/glasses/hud/health=1,
-		/obj/item/reagent_containers/dropper/SR/NotVault=1,
 		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/book/granter/trait/techno=1)
 
@@ -163,7 +162,7 @@ Practitioner
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_PRACTITIONER, src)
+	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
@@ -319,8 +318,8 @@ Follower Guard
 	flag = F13FOLLOWERGUARD
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance and the other Doctors as well."
 	description = "You are a Follower Guard. As a Guard for the Followers of Apocalypse, you are responsible for the safety and the maintenance of order in the hospital and among your peers. Your reason for being here is to make sure the other staff can provide education and medical services to those in need, furthering research in non-military matters, as well as helping their communities get access to basic necessities. "
 	forbids = "Causing harm to others except in times of self-defense or in defense of other followers."
@@ -361,6 +360,6 @@ Follower Guard
 	name = "Followers Close Protection Guard"
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
-		/obj/item/storage/fancy/ammobox/beanbag=1,
-		/obj/item/storage/fancy/ammobox/lethalshot=1
+		/obj/item/ammo_box/shotgun/bean=1,
+		/obj/item/ammo_box/shotgun/buck=1
 	)

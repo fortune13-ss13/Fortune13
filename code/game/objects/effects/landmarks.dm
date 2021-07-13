@@ -525,7 +525,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "NCR Lieutenant"
 	icon_state = "NCR Lieutenant"
 
-obj/effect/landmark/start/f13/ncrlogisticsofficer	
+obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Logistics Officer"
 	icon_state = "NCR Lieutenant"
 
@@ -541,7 +541,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Sergeant"
 	icon_state = "NCR Sergeant"
 
-/obj/effect/landmark/start/f13/ncrheavytrooper	
+/obj/effect/landmark/start/f13/ncrheavytrooper
 	name = "NCR Heavy Trooper"
 	icon_state = "NCR Sergeant"
 
@@ -609,7 +609,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Vexillarius"
 
 /obj/effect/landmark/start/f13/vetlegionary
-	name = "Veteran Legionary"
+	name = "Veteran Legionnaire"
 	icon_state = "Veteran Legionnaire"
 
 /obj/effect/landmark/start/f13/decan
@@ -617,7 +617,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/legionary
-	name = "Prime Legionary"
+	name = "Prime Legionnaire"
 	icon_state = "Veteran Legionnaire"
 
 /obj/effect/landmark/start/f13/decanrec
@@ -625,7 +625,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/recleg
-	name = "Recruit Legionary"
+	name = "Recruit Legionnaire"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/explorer
@@ -633,15 +633,15 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/venator
-	name = "Legion Vexillarius"
+	name = "Legion Venator"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/auxilia
-	name = "Household Slave"
+	name = "Legion Auxilia"
 	icon_state = "Wastelander"
 
 /obj/effect/landmark/start/f13/campfollower
-	name = "Camp Duty"
+	name = "Legion Camp Duty"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/slave
@@ -659,7 +659,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Head Scribe"
 
 /obj/effect/landmark/start/f13/seniorscribe
-	name = "Proctor"
+	name = "Senior Scribe"
 	icon_state = "Head Scribe"
 
 /obj/effect/landmark/start/f13/sentinel
@@ -671,11 +671,11 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Initiate Knight"
 
 /obj/effect/landmark/start/f13/seniorknight
-	name = "Star Knight"
+	name = "Senior Knight"
 	icon_state = "Initiate Knight"
 
 /obj/effect/landmark/start/f13/seniorpaladin
-	name = "Star Paladin"
+	name = "Senior Paladin"
 	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/paladin
@@ -773,7 +773,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/vigilante
 	name = "Vigilante"
 	icon_state = "Wastelander"
-	
+
 /obj/effect/landmark/start/f13/wastelander
 	name = "Wastelander"
 	icon_state = "Wastelander"
@@ -785,6 +785,14 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/pusher
 	name = "Great Khan"
 	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/enforcer
+	name = "Den Mob Enforcer"
+	icon_state = "Enforcer"
+
+/obj/effect/landmark/start/f13/mobboss
+	name = "Den Mob Boss"
+	icon_state = "Boss"
 
 /obj/effect/landmark/start/f13/preacher
 	name = "Preacher"
@@ -818,7 +826,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "US Private"
 
 /obj/effect/landmark/start/f13/usscientist
-	name = "US Scientist"
+	name = "Enclave Scientist"
 
 /obj/effect/landmark/start/f13/usengineer
 	name = "US Engineer"
@@ -853,6 +861,9 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/spiritpledged
 	name = "Spirit-Pledged"
+
+/obj/effect/landmark/start/f13/guardian
+	name = "Guardian"
 
 //Followers of the Apocalypse
 /obj/effect/landmark/start/f13/followersadministrator

@@ -8,7 +8,13 @@
 	anchored = 1
 	layer = 5
 	icon = 'icons/obj/Ritas.dmi'
+	bound_width = 64
 	resistance_flags = INDESTRUCTIBLE
+
+/obj/structure/billboard/Initialize()
+	. = ..()
+	AddComponent(/datum/component/largetransparency, x_size = 1, y_size = 1)
+
 /*
 /obj/structure/billboard/New()
 	..()
@@ -66,8 +72,8 @@
 
 //Taken from removed F13billboards.dm
 /obj/structure/billboard/den
-	name = "Kebab sign"
-	desc =  "A sprayed metal sheet that says \"Kebab \"."
+	name = "\improper The Den sign"
+	desc =  "A sprayed metal sheet that says \"The Den \"."
 	icon_state = "den"
 
 /obj/structure/billboard/klamat

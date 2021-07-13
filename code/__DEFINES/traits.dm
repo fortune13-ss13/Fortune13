@@ -240,13 +240,14 @@
 
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
 #define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens
+#define TRAIT_LONGPORKLOVER		"Cannibal"
+#define TRAIT_TRIBAL			"Tribalistic Person"
+#define TRAIT_BERSERKER			"berserker"
 #define TRAIT_TECHNOPHREAK		"technophreak"	//needed to use the autolathe, renamed and sprited 30/06/2020
 #define TRAIT_PA_WEAR           "pa_wear"
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
-#define TRAIT_PRACTITIONER		"Practitioner" //Has access to FoA surguries
-#define TRAIT_PRACTITIONER_EXPERT	"Practitioner Expert" //Lead follower works on par of other factions
+#define TRAIT_MEDICALGRADUATE		"Medical Graduate" //generalised offmap medschool graduation training
 #define TRAIT_UNETHICAL_PRACTITIONER	"Unethical Practitioner" //Can do harmful experimental surguries
-#define TRAIT_SCRIBE_TRAINED	"scribe_trained" //BOS practitioner
 #define TRAIT_CYBERNETICIST		"Cyberneticist" //Utilizes powerful cybernetics
 #define TRAIT_CYBERNETICIST_EXPERT	"Cyberneticist Expert" //Can augument people into robots directly
 #define TRAIT_MACHINE_SPIRITS	"machine_spirits" //for tribe unique functions.
@@ -337,6 +338,7 @@
 #define NINJA_SUIT_TRAIT "ninja-suit"
 #define ANTI_DROP_IMPLANT_TRAIT "anti-drop-implant"
 #define MARTIAL_ARTIST_TRAIT "martial_artist"
+#define BERSERKER_TRAIT "berserker"
 #define SLEEPING_CARP_TRAIT "sleeping_carp"
 #define RISING_BASS_TRAIT "rising_bass"
 #define ABDUCTOR_ANTAGONIST "abductor-antagonist"

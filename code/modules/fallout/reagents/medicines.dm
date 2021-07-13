@@ -96,6 +96,103 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	M.adjustOxyLoss(12*REAGENTS_EFFECT_MULTIPLIER)
 	..()
 	. = TRUE
+	
+/datum/reagent/medicine/longpork_stew
+	name = "longpork stew"
+	description = "A dish sworn by some to have unusual healing properties. To most it just tastes disgusting. What even is longpork anyways?..."
+	reagent_state = LIQUID
+	color =  "#915818"
+	taste_description = "oily water, with bits of raw-tasting tender meat."
+	metabolization_rate = 0.15 * REAGENTS_METABOLISM //slow, weak heal that lasts a while. Metabolizies much faster if you are not hurt.
+	overdose_threshold = 50 //If you eat too much you get poisoned from all the human flesh you're eating
+	var/longpork_hurting = 0
+	var/longpork_lover_healing = -2
+
+/datum/reagent/medicine/longpork_stew/on_mob_life(mob/living/carbon/M)
+	var/is_longporklover = FALSE
+	if(HAS_TRAIT(M, TRAIT_LONGPORKLOVER))
+		is_longporklover = TRUE
+	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0)
+		metabolization_rate = 3 * REAGENTS_METABOLISM //metabolizes much quicker if not injured
+	var/longpork_heal_rate = (is_longporklover ? longpork_lover_healing : longpork_hurting) * REAGENTS_EFFECT_MULTIPLIER
+	if(!M.reagents.has_reagent(/datum/reagent/medicine/stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder))
+		M.adjustFireLoss(longpork_heal_rate)
+		M.adjustBruteLoss(longpork_heal_rate)
+		M.adjustToxLoss(is_longporklover ? 0 : 3)
+		. = TRUE
+		..()
+
+/datum/reagent/medicine/longpork_stew/overdose_process(mob/living/M)
+	M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
+	..()
+	. = TRUE
+
+
+/datum/reagent/medicine/berserker_powder
+	name = "berserker powder"
+	description = "a combination of psychadelic mushrooms and tribal drugs used by the legion. Induces a trancelike state, allowing them much greater pain resistance. Extremely dangerous, even for those who are trained to use it. It's a really bad idea to use this if you're not initiated in the rites of the berserker. Even if you are, taking it for too long causes extreme symptoms when the trance ends."
+	reagent_state = SOLID
+	color =  "#7f7add"
+	taste_description = "heaven."
+	metabolization_rate = 0.7 * REAGENTS_METABOLISM 
+	overdose_threshold = 30 //hard to OD on, besides if you use too much it kills you when it wears off
+
+/datum/reagent/medicine/berserker_powder/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_BERSERKER))
+		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.AdjustKnockdown(-5*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.AdjustUnconscious(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+	else
+		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 8)
+		M.adjustToxLoss(5*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustOxyLoss(5*REAGENTS_EFFECT_MULTIPLIER)
+	..()
+	. = TRUE
+/datum/reagent/medicine/berserker_powder/on_mob_add(mob/living/carbon/human/M)
+	..()
+	if(isliving(M))
+		to_chat(M, "<span class='notice'>The veil breaks, and the heavens spill out! The spirits of Mars float down from the heavens, and the deafining beat of the holy legion's wardrums fills your ears. Their ethereal forms are guiding you in battle!</span>")
+		M.maxHealth += 20
+		M.health += 20
+		ADD_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
+
+/datum/reagent/medicine/berserker_powder/on_mob_delete(mob/living/carbon/human/M)
+	if(isliving(M))
+		to_chat(M, "<span class='notice'>The veil comes back, blocking out the heavenly visions. You breathe a sigh of relief...</span>")
+		M.maxHealth -= 20
+		M.health -= 20
+		REMOVE_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
+
+	switch(current_cycle)
+		if(1 to 30)
+			M.confused += 10
+			M.blur_eyes(20)
+			to_chat(M, "<span class='notice'>Your head is pounding. You feel like screaming. The visions beckon you to go further, to split the veil forever and cross over. You know you shouldn't. </span>")
+		if(30 to 55)
+			M.confused +=20
+			M.blur_eyes(30)
+			M.losebreath += 8
+			M.set_disgust(12)
+			M.adjustStaminaLoss(30*REAGENTS_EFFECT_MULTIPLIER)
+			to_chat(M, "<span class='danger'>Your stomach churns, you vomit, and the blurring of your vision doesn't go away. The visions beckon you further, you're so close.... </span>")
+		if(55 to INFINITY)
+			M.confused +=40
+			M.blur_eyes(30)
+			M.losebreath += 10
+			M.set_disgust(25)
+			M.adjustStaminaLoss(40*REAGENTS_EFFECT_MULTIPLIER)
+			M.vomit(30, 1, 1, 5, 0, 0, 0, 60)
+			M.Jitter(1000)
+			M.playsound_local(M, 'sound/effects/singlebeat.ogg', 100, 0)
+			M.set_heartattack(TRUE)
+			M.visible_message("<span class='userdanger'>[M] grabs at their throat and vomits violently onto the ground, screaming as they have a seizure! They need medical attention immediately!</span>")
+			to_chat(M, "<span class='userdanger'>The sky splits in half, rays of golden light piercing down towards you. Mars reaches out of the sky above, the holy aura causing you to fall to your knees. He beckoning you to heaven, and you take his hand. Your whole body begins to seize up as you go in a glorious rapture. </span>")
+
+/datum/reagent/medicine/berserker/overdose_process(mob/living/M)
+	M.adjustToxLoss(5*REAGENTS_EFFECT_MULTIPLIER)
+	..()
+	. = TRUE
 
 /datum/reagent/medicine/bitter_drink
 	name = "bitter drink"
@@ -103,22 +200,29 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	reagent_state = LIQUID
 	color ="#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.4 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
-	overdose_threshold = 30
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
+	overdose_threshold = 31
+	var/heal_factor = -3 //Subtractive multiplier if you do not have the perk.
+	var/heal_factor_perk = -8 //Multiplier if you have the right perk.
 
-datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
+/datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
+	var/is_tribal = FALSE
+	if(HAS_TRAIT(M, TRAIT_TRIBAL))
+		is_tribal = TRUE
 	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0)
 		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
-	if(!M.reagents.has_reagent(/datum/reagent/medicine/stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder)) //should prevent stacking with healing powder and stimpaks
-		M.adjustFireLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
-		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
-		M.hallucination = max(M.hallucination, 5)
+	var/heal_rate = (is_tribal ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
+	if(!M.reagents.has_reagent(/datum/reagent/medicine/stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder))
+		M.adjustFireLoss(heal_rate)
+		M.adjustBruteLoss(heal_rate)
+		M.adjustToxLoss(heal_rate)
+		M.hallucination = max(M.hallucination, is_tribal ? 0 : 5)
 		. = TRUE
 	..()
 
 /datum/reagent/medicine/bitter_drink/overdose_process(mob/living/M)
-	M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustOxyLoss(4*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(1*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustOxyLoss(2*REAGENTS_EFFECT_MULTIPLIER)
 	..()
 	. = TRUE
 
@@ -134,15 +238,16 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	var/heal_factor_perk = -3 //Multiplier if you have the right perk.
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
-	var/is_technophobe = FALSE
-	if(HAS_TRAIT(M, TRAIT_TECHNOPHOBE))
-		is_technophobe = TRUE
+	var/is_tribal = FALSE
+	if(HAS_TRAIT(M, TRAIT_TRIBAL))
+		is_tribal = TRUE
 	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0)
 		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
-	var/heal_rate = (is_technophobe ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
+	var/heal_rate = (is_tribal ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
 	M.adjustFireLoss(heal_rate)
 	M.adjustBruteLoss(heal_rate)
-	M.hallucination = max(M.hallucination, is_technophobe ? 0 : 5)
+	M.adjustToxLoss(heal_rate)
+	M.hallucination = max(M.hallucination, is_tribal ? 0 : 5)
 	. = TRUE
 	..()
 

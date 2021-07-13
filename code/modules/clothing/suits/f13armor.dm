@@ -316,16 +316,21 @@
 		return
 	if(emped == 0)
 		if(ismob(loc))
+			var/mob/living/L = loc
 			to_chat(loc, "<span class='warning'>Warning: electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
-			slowdown += 30
-			armor = armor.modifyRating(linemelee = -75, linebullet = -75, linelaser = -75)
+			slowdown += 1.2
+			armor = armor.modifyRating(linemelee = -100, linebullet = -100, linelaser = -100)
 			emped = 1
+			if(istype(L))
+				L.update_equipment_speed_mods()
 			spawn(50) //5 seconds of being slow and weak
 				to_chat(loc, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
-				slowdown -= 30
-				armor = armor.modifyRating(linemelee = 75, linebullet = 75, linelaser = 75)
+				slowdown -= 1.2
+				armor = armor.modifyRating(linemelee = 100, linebullet = 100, linelaser = 100)
 				emped = 0
-
+				if(istype(L))
+					L.update_equipment_speed_mods()
+					
 /obj/item/clothing/suit/armor/f13/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	. = ..()
 	if(damage >= src.dmg_block_threshold && check_armor_penetration(object) >= 0)
@@ -444,7 +449,7 @@
 	desc = "(IX) What was once a suit of T-51 Power Armor is now an almost unrecognizable piece of art or garbage, depending on who you ask. Almost all of the external plating has either been removed or stripped to allow for maximum mobility, and overlapping underplates protect the user from small arms fire. Whoever designed this had a very specific purpose in mind: mobility and aesthetics over defense."
 	icon_state = "t51bgs"
 	item_state = "t51bgs"
-	slowdown = 0
+	slowdown = -0.2
 	flags_inv = HIDEJUMPSUIT|HIDENECK
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
@@ -551,18 +556,18 @@
 	armor_block_chance = 80 //Enclave. 'nuff said
 	deflection_chance = 15 //40% chance to block damage from blockable bullets and redirect the bullet at a random angle. Your ride's over mutie, time to die.
 
-/obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2
-	name = "advanced power armor MK2"
-	desc = "(XIII) It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
-	icon_state = "advpowerarmor2"
-	item_state = "advpowerarmor2"
-	melee_block_threshold = 50
-	armor_block_threshold = 0.5
-	armor_block_chance = 90
-	deflection_chance = 30
+/obj/item/clothing/suit/armor/f13/power_armor/advanced/hellfire
+	name = "hellfire power armor"
+	desc = "(XIII) A deep black suit of Enclave-manufactured heavy power armor, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no suit rivals it's strength."
+	icon_state = "hellfire"
+	item_state = "hellfire"
+	melee_block_threshold = 70
+	armor_block_threshold = 0.8
+	armor_block_chance = 99
+	deflection_chance = 70
 	armor = list("tier" = 13, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0, "wound" = 100)
 
-/obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2/wbos
+/obj/item/clothing/suit/armor/f13/power_armor/advanced/hellfire/wbos
 	name = "advanced Washington power armor"
 	desc = "It's an improved model of the power armor used exclusively by the Washington Brotherhood."
 	icon_state = "apawbos"
@@ -585,16 +590,16 @@
 
 //Peacekeeper armor adjust as needed
 /obj/item/clothing/suit/armor/f13/power_armor/x02
-	name = "X-02 power armor"
-	desc = "(XI) Upgraded pre-war power armor design used by the Enclave."
-	icon_state = "PA_x02"
-	item_state = "PA_x02"
+	name = "Enclave power armor"
+	desc = "(XI) Upgraded pre-war power armor design used by the Enclave. It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
+	icon_state = "advanced"
+	item_state = "advanced"
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
-	armor_block_threshold = 0.45
-	melee_block_threshold = 45
-	armor_block_chance = 80
-	deflection_chance = 15	
-	armor = list("tier" = 11, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 70)
+	armor_block_threshold = 0.35
+	melee_block_threshold = 35
+	armor_block_chance = 70
+	deflection_chance = 10
+	armor = list("tier" = 10, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 70)
 
 /obj/item/clothing/suit/armor/f13/enclave/armorvest
 	name = "armored vest"
@@ -611,6 +616,29 @@
 	armor = list("tier" = 7)
 
 //Generic Tribal - For Wayfarer specific, see f13factionhead.dm
+//Trying generic tribal armor stats for this one for now.
+/obj/item/clothing/suit/hooded/tribaloutcast
+	name = "patched heavy leather cloak"
+	desc = "(IV) A robust cloak made from layered gecko skin patched with various bits of leather from dogs and other animals, able to absorb more force than one would expect from leather."
+	icon = 'icons/fallout/objects/clothing/suits.dmi'
+	icon_state = "armor_tribaloutcast"
+	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+	item_state = "armor_tribaloutcast"
+	armor = list("tier" = 4, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+	strip_delay = 40
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tribaloutcast
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+
+/obj/item/clothing/head/hooded/cloakhood/tribaloutcast
+	name = "patched leather hood"
+	desc = "(IV) Thick layered leather, patched together."
+	icon = 'icons/fallout/objects/clothing/hats.dmi'
+	icon_state = "hood_tribaloutcast"
+	mob_overlay_icon = 'icons/fallout/onmob/clothing/head.dmi'
+	item_state = "hood_tribaloutcast"
+	armor = list("tier" = 4, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+
 /obj/item/clothing/suit/armor/f13/tribal
 	name = "tribal armor"
 	desc = "(IV) A set of armor made of gecko hides.<br>It's pretty good for makeshift armor."
@@ -729,6 +757,11 @@
 	desc = "(III) A heavy padded leather coat, worn by pre-War bomber pilots in the past and post-War zeppelin pilots in the future. This one's colors have faded somewhat."
 	icon_state = "battlecoat_tan"
 	item_state = "maxson_battlecoat"
+
+/obj/item/clothing/suit/armor/f13/battlecoat/tan/enclave
+	name = "lieutenant's battlecoat"
+	desc = "(VII) A battle coat usually worn by the high-ranking officers within the US Military. This one has been armored with light-weight alloys, providing maximum defense at almost no weight cost."
+	armor = list("tier" = 7, "energy" = 35, "bomb" = 35, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10)
 
 /obj/item/clothing/suit/armor/f13/brahmin_leather_duster
 	name = "brahmin leather duster"

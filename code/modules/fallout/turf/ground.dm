@@ -51,8 +51,7 @@
 //////////////////////////////////////////////////////////////////////
 
 /turf/open/indestructible/ground/outside
-	turf_light_range = 3
-	turf_light_power = 0.75
+	sunlight_state = SUNLIGHT_SOURCE
 	slowdown = 0.2
 
 /turf/open/indestructible/ground/outside/Initialize()
@@ -138,8 +137,8 @@
 	var/obj/dugpit/mypit
 	var/unburylevel = 0
 	var/list/loots = list(
-						/obj/item/stack/crafting/metalparts/five = 50,
-						/obj/item/stack/crafting/goodparts/five = 50,
+						/obj/item/stack/crafting/metalparts/five = 30,
+						/obj/item/stack/crafting/goodparts/five = 30,
 						/obj/item/stack/ore/blackpowder/twenty = 10,
 						/obj/effect/spawner/lootdrop/f13/armor/random_high = 3,
 						/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high = 3

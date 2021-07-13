@@ -49,8 +49,9 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Enclave Lieutenant",
 
+	"Legate",
 	"Legion Centurion",
-	"Legion Venator",
+	"Legion Veteran Decanus",
 
 	"Overseer",
 	"Chief of Security",
@@ -76,24 +77,24 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Paladin",
 "Head Knight",
 "Head Scribe",
-"Star Paladin",
+"Senior Paladin",
 "Paladin",
-"Star Knight",
+"Senior Knight",
 "Knight",
-"Proctor",
+"Senior Scribe",
 "Scribe",
 "BoS Off-Duty",
 
 "Legion Centurion",
 "Legion Venator",
 "Legion Veteran Decanus",
-"Veteran Legionary",
+"Veteran Legionnaire",
 "Legion Prime Decanus",
-"Prime Legionary",
+"Prime Legionnaire",
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
-"Auxilia",
+"Legion Auxilia",
 "Legion Slave",
 
 "Mayor",
@@ -124,20 +125,20 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 ))
 
 GLOBAL_LIST_INIT(faction_player_positions, list(
-"Star Knight",
+"Senior Knight",
 "Knight",
-"Proctor",
+"Senior Scribe",
 "Scribe",
 "BoS Off-Duty",
 
 "Legion Veteran Decanus",
-"Veteran Legionary",
+"Veteran Legionnaire",
 "Legion Prime Decanus",
-"Prime Legionary",
+"Prime Legionnaire",
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
-"Auxilia",
+"Legion Auxilia",
 "Legion Slave",
 
 "Deputy",
@@ -163,12 +164,14 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
 	"Raider",
 	"Outlaw",
-	"Great Khan" //DA KHANZ, BAY BEEEEEEE
+	"Great Khan", //DA KHANZ, BAY BEEEEEEE
+	"Den Mob Enforcer",
+	"Den Mob Boss"
 ))
 
 GLOBAL_LIST_INIT(brotherhood_paladin_positions, list(
 	"Head Paladin",
-	"Star Paladin",
+	"Senior Paladin",
 	"Paladin"
 ))
 
@@ -183,11 +186,11 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Head Paladin",
 	"Head Knight",
 	"Head Scribe",
-	"Star Paladin",
+	"Senior Paladin",
 	"Paladin",
-	"Star Knight",
+	"Senior Knight",
 	"Knight",
-	"Proctor",
+	"Senior Scribe",
 	"Scribe",
 	"Initiate",
 	"BoS Off-Duty"
@@ -211,24 +214,25 @@ GLOBAL_LIST_INIT(den_positions, list(
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
+	"Legate",
 	"Legion Centurion",
-	"Legion Venator"
+	"Legion Veteran Decanus"
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
-	"Legion Veteran Decanus",
-	"Veteran Legionary",
-	"Legion Prime Decanus",
-	"Prime Legionary",
-	"Legion Recruit Decanus",
-	"Recruit Legionary",
-	"Legion Explorer",
-	"Auxilia",
-	"Camp Follower",
-	"Legion Slave",
-	"Legion Vexillarius",
 	"Legion Centurion",
-	"Legion Venator"
+	"Legion Veteran Decanus",
+	"Legion Prime Decanus",
+	"Legion Recruit Decanus",
+	"Legion Vexillarius",
+	"Veteran Legionnaire",
+	"Prime Legionnaire",
+	"Recruit Legionnaire",
+	"Legion Venator",
+	"Legion Explorer",
+	"Legion Auxilia",
+	"Legion Camp Duty",
+	"Legion Slave"
 ))
 
 GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
@@ -297,12 +301,15 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Outlaw",
 	"Faithful",
 	"Wastelander",
-	"Vigilante"
+	"Vigilante",
+	"Den Mob Enforcer",
+	"Den Mob Boss"
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Private",
 	"Enclave Sergeant",
+	"Enclave Scientist",
 	"Enclave Lieutenant"
 ))
 

@@ -1,3 +1,136 @@
+/*
+IN THIS DOCUMENT: Universal Gun system rules/keywords. Universal gun template and procs/vars.
+
+/////////////////////////////////////
+//UNIVERSAL GUN KEYWORDS AND SYSTEM//
+/////////////////////////////////////
+
+GENERAL
+
+	Bonuses should not go far from this framework, for non-unique stuff plus minus one or two is enough to give a good spread, considering its compounded by tinkering and attachments and ammo.
+	A reduction of 1 in burst shot delay gives a lot more effect than adding 1 damage.
+
+KEYWORDS
+
+	SINGLE ACTION REVOLVER
+	fire_delay = 6
+	spread = 1
+
+	DOUBLE ACTION REVOLVER
+	fire_delay = 5	
+	spread = 1
+
+	SEMI-AUTOMATIC PISTOL
+	fire_delay = 3-5	
+	spread = 2
+
+	SEMI-AUTOMATIC RIFLE
+	fire_delay = 3-6
+	spread = 1
+
+	AUTOMATIC SMG
+	fire_delay = 2.5-6
+	burst_shot_delay = 2.75
+	spread = 8-14
+
+	AUTOMATIC RIFLE
+	fire_delay = 3-6
+	burst_shot_delay = 3
+	spread = 7-12
+
+	REPEATER	
+	fire_delay = 7
+	spread = 0
+
+	DOUBLE BARREL
+	fire_delay = 0.5
+	extra damage = 1
+
+	PUMP-ACTION
+	fire_delay = 7
+	extra damage = 1
+	spread = 1 (to avoid slugs being too good snipers, might need to be set to 2 for all shotguns)
+	(requires manual action to cycle)
+
+	BOLT-ACTION
+	fire_delay = 10-15
+	extra damage = 6
+	extra_speed = 800
+	spread = 0
+	(requires manual action to cycle)
+
+	PISTOL GRIP/FOLDED STOCK MALUS (For rifles, not pistols obviously)
+	recoil = 0.5
+	spread = +2 (not for shotguns)
+	w_class = WEIGHT_CLASS_NORMAL
+
+	SAWN OFF
+	recoil = 1
+	spread = 10
+	weapon_weight = WEAPON_LIGHT
+
+	LONG BARREL/LASERSIGHT
+	extra_damage = +2
+	spread = -1
+
+	SHORT BARREL
+	extra_damage = -2
+	spread = +2
+
+	HEAVY
+	recoil = 0.1
+	weapon_weight = WEAPON_MEDIUM at least (no dual wield)
+
+GENERAL RULES
+
+	SMALL GUNS
+	slowdown = 0.1-0.2
+	w_class = WEIGHT_CLASS_SMALL
+	weapon_weight = WEAPON_LIGHT - MEDIUM		
+
+	MEDIUM GUNS
+	slowdown = 0.3-0.4
+	w_class = WEIGHT_CLASS_NORMAL - BULKY
+	weapon_weight = WEAPON_MEDIUM - HEAVY	
+
+	RIFLES 
+	slowdown = 0.5
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+	AMMO RECOIL BASE VALUES
+	.50  recoil = 1
+	.45/70  recoil = 0.25
+
+	2-ROUND BURST
+	recoil = 0.1
+
+	3-ROUND BURST
+	recoil = 0.25
+
+	FORCE
+	Delicate, clumsy or small gun force 10
+	Pistol whip force 12
+	Rifle type force 15
+	Unusually sturdy clublike 20
+
+ATTACHMENTS
+
+	BURST CAM
+	burst_size + 1
+	spread + 5 (recoil)
+	burst_shot_delay + 0.5 (recoil managment)
+
+	RECOIL COMPENSATOR
+	spread above 10 = -4 spread
+	spread under 10 = -2 spread
+
+	AUTO SEAR
+	Enables fire select automatic
+	burst_size + 1
+	recoil = +0.1
+	spread + 6 (to bring it into the automatic template range)
+*/
 
 #define DUALWIELD_PENALTY_EXTRA_MULTIPLIER 1.4
 
@@ -64,20 +197,20 @@
 	var/obj/item/firing_pin/pin = /obj/item/firing_pin //standard firing pin for most guns
 	var/no_pin_required = FALSE //whether the gun can be fired without a pin
 
-	var/obj/item/flashlight/gun_light
-	var/can_flashlight = FALSE
+	var/can_flashlight = FALSE //if a flashlight can be added or removed if it already has one.
+	var/obj/item/flashlight/seclite/gun_light
+	var/datum/action/item_action/toggle_gunlight/alight
 	var/gunlight_state = "flight"
 
 	var/obj/item/kitchen/knife/bayonet
 	var/mutable_appearance/knife_overlay
 	var/can_bayonet = FALSE
-	var/bayonet_state = "bayonet"
+	var/bayonet_state = "bayonetstraight"
 
 	var/mutable_appearance/scope_overlay
 	var/can_scope = FALSE
 	var/scope_state = "scope"
 
-	var/datum/action/item_action/toggle_gunlight/alight
 	var/mutable_appearance/flashlight_overlay
 	var/can_attachments = FALSE
 	var/can_automatic = FALSE
@@ -114,6 +247,7 @@
 
 	var/dualwield_spread_mult = 1		//dualwield spread multiplier
 
+	var/worn_out = FALSE	//If true adds overlay with suffix _worn, and a slight malus to stats
 	//var/tinkered = 0
 	/// Just 'slightly' snowflakey way to modify projectile damage for projectiles fired from this gun.
 //	var/projectile_damage_multiplier = 1
@@ -143,6 +277,13 @@
 		QDEL_NULL(chambered)
 	return ..()
 
+/obj/item/gun/handle_atom_del(atom/A)
+	if(A == chambered)
+		chambered = null
+		update_icon()
+	if(A == gun_light)
+		clear_gunlight()
+
 /obj/item/gun/CheckParts(list/parts_list)
 	..()
 	var/obj/item/gun/G = locate(/obj/item/gun) in contents
@@ -154,16 +295,23 @@
 
 /obj/item/gun/examine(mob/user)
 	. = ..()
-	if(no_pin_required)
-		return
-	if(pin)
-		. += "It has \a [pin] installed."
-	else
-		. += "It doesn't have a firing pin installed, and won't fire."
+	if(!no_pin_required)
+		if(pin)
+			. += "It has \a [pin] installed."
+		else
+			. += "It doesn't have a firing pin installed, and won't fire."
+	if(gun_light)
+		. += "It has \a [gun_light] [can_flashlight ? "" : "permanently "]mounted on it."
+		if(can_flashlight) //if it has a light and this is false, the light is permanent.
+			. += "<span class='info'>[gun_light] looks like it can be <b>unscrewed</b> from [src].</span>"
+	else if(can_flashlight)
+		. += "It has a mounting point for a <b>seclite</b>."
 
 //called after the gun has successfully fired its chambered ammo.
 /obj/item/gun/proc/process_chamber(mob/living/user)
 	return FALSE
+
+
 
 //check if there's enough ammo/energy/whatever to shoot one time
 //i.e if clicking would make it shoot
@@ -232,7 +380,7 @@
 
 /obj/item/gun/afterattack(atom/target, mob/living/user, flag, params)
 	. = ..()
-	if(!CheckAttackCooldown(user, target, TRUE))
+	if(!CheckAttackCooldown(user, target))
 		return
 	process_afterattack(target, user, flag, params)
 
@@ -441,22 +589,23 @@
 /obj/item/gun/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)
 		return ..()
-	else if(istype(I, /obj/item/flashlight/seclite))
+
+	if(istype(I, /obj/item/flashlight/seclite))
 		if(!can_flashlight)
 			return ..()
 		var/obj/item/flashlight/seclite/S = I
 		if(!gun_light)
 			if(!user.transferItemToLoc(I, src))
 				return
-			to_chat(user, "<span class='notice'>You click \the [S] into place on \the [src].</span>")
-			if(S.on)
-				set_light(0)
-			gun_light = S
-			update_gunlight(user)
-			alight = new /datum/action/item_action/toggle_gunlight(src)
+			to_chat(user, "<span class='notice'>You click [S] into place on [src].</span>")
+			set_gun_light(S)
+			update_gunlight()
+			alight = new(src)
 			if(loc == user)
 				alight.Grant(user)
-	else if(istype(I, /obj/item/kitchen/knife))
+		return
+
+	if(istype(I, /obj/item/kitchen/knife))
 		var/obj/item/kitchen/knife/K = I
 		if(!can_bayonet || !K.bayonet || bayonet) //ensure the gun has an attachment point available, and that the knife is compatible with it.
 			return ..()
@@ -466,7 +615,9 @@
 		bayonet = K
 		update_icon()
 		update_overlays()
-	else if(istype(I, /obj/item/attachments/scope))
+		return
+
+	if(istype(I, /obj/item/attachments/scope))
 		if(!can_scope)
 			return ..()
 		var/obj/item/attachments/scope/C = I
@@ -481,20 +632,23 @@
 			src.build_zooming()
 			update_overlays()
 			update_icon()
-	else if(istype(I, /obj/item/attachments/recoil_decrease))
+		return
+
+	if(istype(I, /obj/item/attachments/recoil_decrease))
 		var/obj/item/attachments/recoil_decrease/R = I
 		if(!recoil_decrease && can_attachments)
 			if(!user.transferItemToLoc(I, src))
 				return
 			recoil_decrease = R
 			src.desc += " It has a recoil compensator installed."
-			if (src.spread > 8)
-				src.spread -= 8
+			if (src.spread > 10)
+				src.spread -= 4
 			else
-				src.spread = 0
+				src.spread -= 2
 			to_chat(user, "<span class='notice'>You attach \the [R] to \the [src].</span>")
+			return
 
-	else if(istype(I, /obj/item/attachments/burst_improvement))
+	if(istype(I, /obj/item/attachments/burst_improvement))
 		var/obj/item/attachments/burst_improvement/T = I
 		if(!burst_improvement && burst_size > 1 && can_attachments)
 			if(!user.transferItemToLoc(I, src))
@@ -502,33 +656,90 @@
 			burst_improvement = T
 			src.desc += " It has a modified burst cam installed."
 			src.burst_size += 1
+			src.spread += 5
+			src.burst_shot_delay += 0.5
 			to_chat(user, "<span class='notice'>You attach \the [T] to \the [src].</span>")
 			update_icon()
-	else if(istype(I, /obj/item/screwdriver))
-		if(gun_light)
-			var/obj/item/flashlight/seclite/S = gun_light
-			to_chat(user, "<span class='notice'>You unscrew the seclite from \the [src].</span>")
-			gun_light = null
-			S.forceMove(get_turf(user))
-			update_gunlight(user)
-			S.update_brightness(user)
-			QDEL_NULL(alight)
-		if(bayonet)
-			to_chat(user, "<span class='notice'>You unscrew the bayonet from \the [src].</span>")
-			var/obj/item/kitchen/knife/K = bayonet
-			K.forceMove(get_turf(user))
-			bayonet = null
-			update_icon()
-		if(scope)
-			to_chat(user, "<span class='notice'>You unscrew the scope from \the [src].</span>")
-			var/obj/item/attachments/scope/C = scope
-			C.forceMove(get_turf(user))
-			src.zoomable = FALSE
-			azoom.Remove(user)
-			scope = null
-			update_icon()
-	else
-		return ..()
+			return
+	return ..()
+
+
+/obj/item/gun/screwdriver_act(mob/living/user, obj/item/I)
+	. = ..()
+	if(.)
+		return
+
+	if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+		return
+	
+	if(can_flashlight && gun_light)
+		I.play_tool_sound(src)
+		var/obj/item/flashlight/seclite/S = gun_light
+		to_chat(user, "<span class='notice'>You unscrew the seclite from \the [src].</span>")
+		S.forceMove(get_turf(user))
+		clear_gunlight()
+		return TRUE
+
+	if(can_bayonet && bayonet)
+		I.play_tool_sound(src)
+		to_chat(user, "<span class='notice'>You unscrew the bayonet from \the [src].</span>")
+		var/obj/item/kitchen/knife/K = bayonet
+		K.forceMove(get_turf(user))
+		bayonet = null
+		update_icon()
+		return TRUE
+
+	if(scope)
+		I.play_tool_sound(src)
+		to_chat(user, "<span class='notice'>You unscrew the scope from \the [src].</span>")
+		var/obj/item/attachments/scope/C = scope
+		C.forceMove(get_turf(user))
+		src.zoomable = FALSE
+		azoom.Remove(user)
+		scope = null
+		update_icon()
+		return TRUE
+
+
+/obj/item/gun/proc/clear_gunlight()
+	if(!gun_light)
+		return
+	var/obj/item/flashlight/seclite/removed_light = gun_light
+	set_gun_light(null)
+	update_gunlight()
+	removed_light.update_brightness()
+	QDEL_NULL(alight)
+	return TRUE
+
+
+/**
+ * Swaps the gun's seclight, dropping the old seclight if it has not been qdel'd.
+ *
+ * Returns the former gun_light that has now been replaced by this proc.
+ * Arguments:
+ * * new_light - The new light to attach to the weapon. Can be null, which will mean the old light is removed with no replacement.
+ */
+/obj/item/gun/proc/set_gun_light(obj/item/flashlight/seclite/new_light)
+	// Doesn't look like this should ever happen? We're replacing our old light with our old light?
+	if(gun_light == new_light)
+		CRASH("Tried to set a new gun light when the old gun light was also the new gun light.")
+
+	. = gun_light
+
+	// If there's an old gun light that isn't being QDELETED, detatch and drop it to the floor.
+	if(!QDELETED(gun_light))
+		gun_light.set_light_flags(gun_light.light_flags & ~LIGHT_ATTACHED)
+		if(gun_light.loc == src)
+			gun_light.forceMove(get_turf(src))
+
+	// If there's a new gun light to be added, attach and move it to the gun.
+	if(new_light)
+		new_light.set_light_flags(new_light.light_flags | LIGHT_ATTACHED)
+		if(new_light.loc != src)
+			new_light.forceMove(src)
+
+	gun_light = new_light
+
 
 /obj/item/gun/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/toggle_scope_zoom))
@@ -542,20 +753,13 @@
 
 	var/mob/living/carbon/human/user = usr
 	gun_light.on = !gun_light.on
+	gun_light.update_brightness()
 	to_chat(user, "<span class='notice'>You toggle the gunlight [gun_light.on ? "on":"off"].</span>")
 
-	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
-	update_gunlight(user)
-	return
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_gunlight()
 
 /obj/item/gun/proc/update_gunlight(mob/user = null)
-	if(gun_light)
-		if(gun_light.on)
-			set_light(gun_light.brightness_on, gun_light.flashlight_power, gun_light.light_color)
-		else
-			set_light(0)
-	else
-		set_light(0)
 	update_icon()
 	for(var/X in actions)
 		var/datum/action/A = X
@@ -588,9 +792,9 @@
 	. = ..()
 	if(gun_light)
 		var/state = "[gunlight_state][gun_light.on? "_on":""]"	//Generic state.
-		if(gun_light.icon_state in icon_states('icons/obj/guns/flashlights.dmi'))	//Snowflake state?
+		if(gun_light.icon_state in icon_states('icons/fallout/objects/guns/attachments.dmi'))	//Snowflake state?
 			state = gun_light.icon_state
-		flashlight_overlay = mutable_appearance('icons/obj/guns/flashlights.dmi', state)
+		flashlight_overlay = mutable_appearance('icons/fallout/objects/guns/attachments.dmi', state)
 		flashlight_overlay.pixel_x = flight_x_offset
 		flashlight_overlay.pixel_y = flight_y_offset
 		. += flashlight_overlay
@@ -598,9 +802,9 @@
 		flashlight_overlay = null
 
 	if(bayonet)
-		if(bayonet.icon_state in icon_states('icons/obj/guns/bayonets.dmi'))		//Snowflake state?
+		if(bayonet.icon_state in icon_states('icons/fallout/objects/guns/attachments.dmi'))		//Snowflake state?
 			knife_overlay = bayonet.icon_state
-		var/icon/bayonet_icons = 'icons/obj/guns/bayonets.dmi'
+		var/icon/bayonet_icons = 'icons/fallout/objects/guns/attachments.dmi'
 		knife_overlay = mutable_appearance(bayonet_icons, bayonet_state)
 		knife_overlay.pixel_x = knife_x_offset
 		knife_overlay.pixel_y = knife_y_offset
@@ -609,9 +813,9 @@
 		knife_overlay = null
 	
 	if(scope)
-		if(scope.icon_state in icon_states('icons/obj/guns/scopes.dmi'))
+		if(scope.icon_state in icon_states('icons/fallout/objects/guns/attachments.dmi'))
 			scope_overlay = scope.icon_state
-		var/icon/scope_icons = 'icons/obj/guns/scopes.dmi'
+		var/icon/scope_icons = 'icons/fallout/objects/guns/attachments.dmi'
 		scope_overlay = mutable_appearance(scope_icons, scope_state)
 		scope_overlay.pixel_x = scope_x_offset
 		scope_overlay.pixel_y = scope_y_offset
@@ -620,13 +824,20 @@
 		scope_overlay = null
 
 	if(suppressed)
-		var/icon/suppressor_icons = 'icons/obj/guns/suppressors.dmi'
+		var/icon/suppressor_icons = 'icons/fallout/objects/guns/attachments.dmi'
 		suppressor_overlay = mutable_appearance(suppressor_icons, suppressor_state)
 		suppressor_overlay.pixel_x = suppressor_x_offset
 		suppressor_overlay.pixel_y = suppressor_y_offset
 		. += suppressor_overlay
 	else
 		suppressor_overlay = null
+
+	if(worn_out)
+		. += ("[initial(icon_state)]_worn")
+		src.fire_delay += 0.1
+		src.spread += 2
+		src.extra_damage -= 1
+
 
 /obj/item/gun/item_action_slot_check(slot, mob/user, datum/action/A)
 	if(istype(A, /datum/action/item_action/toggle_scope_zoom) && slot != SLOT_HANDS)
@@ -731,20 +942,23 @@
 		user.client.change_view(zoom_out_amt)
 		user.client.pixel_x = world.icon_size*_x
 		user.client.pixel_y = world.icon_size*_y
-		RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/on_walk)
 		RegisterSignal(user, COMSIG_ATOM_DIR_CHANGE, .proc/rotate)
+		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
 		user.visible_message("<span class='notice'>[user] looks down the scope of [src].</span>", "<span class='notice'>You look down the scope of [src].</span>")
 	else
 		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
-		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 		UnregisterSignal(user, COMSIG_ATOM_DIR_CHANGE)
 		user.visible_message("<span class='notice'>[user] looks up from the scope of [src].</span>", "<span class='notice'>You look up from the scope of [src].</span>")
+		RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/on_walk) //Extra proc to make sure your zoom resets for bug where you don't unzoom when toggling while moving
 
-/obj/item/gun/proc/on_walk(mob/living/L)
-	//zoom(L, FALSE)
+/obj/item/gun/proc/on_walk(mob/living/user)
+	UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
+	user.client.change_view(CONFIG_GET(string/default_view))
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0	
 
 /obj/item/gun/proc/rotate(mob/living/user, old_dir, direction = FALSE)
 	var/_x = 0
@@ -769,11 +983,6 @@
 
 	if(zoomable)
 		azoom = new(src)
-
-/obj/item/gun/handle_atom_del(atom/A)
-	if(A == chambered)
-		chambered = null
-		update_icon()
 
 /obj/item/gun/proc/getinaccuracy(mob/living/user, bonus_spread, stamloss)
 	if(inaccuracy_modifier == 0)
@@ -803,3 +1012,245 @@
 	. = recoil
 	if(user && !user.has_gravity())
 		. = recoil*5
+
+///////////////////
+//GUNCODE ARCHIVE//
+///////////////////
+
+/*
+STICK GUN PICKUP WEIRDNESS
+/obj/item/gun/ballistic/automatic/pistol/stickman/pickup(mob/living/user)
+	. = ..()
+	to_chat(user, "<span class='notice'>As you try to pick up [src], it slips out of your grip..</span>")
+	if(prob(50))
+		to_chat(user, "<span class='notice'>..and vanishes from your vision! Where the hell did it go?</span>")
+		qdel(src)
+		user.update_icons()
+	else
+		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
+		user.dropItemToGround(src)
+
+/obj/item/gun/ballistic/automatic/pistol/deagle/update_overlays()
+	. = ..()
+	if(magazine)
+		. += "deagle_magazine"
+
+CITADEL MODULAR PISTOL CODE
+/obj/item/gun/ballistic/automatic/pistol/modular
+	name = "modular pistol"
+	desc = "A small, easily concealable 10mm handgun. Has a threaded barrel for suppressors."
+	icon = 'modular_citadel/icons/obj/guns/cit_guns.dmi'
+	icon_state = "cde"
+	can_unsuppress = TRUE
+	automatic_burst_overlay = FALSE
+	obj_flags = UNIQUE_RENAME
+	unique_reskin = list("Default" = "cde",
+						"N-99" = "n99",
+						"Stealth" = "stealthpistol",
+						"HKVP-78" = "vp78",
+						"Luger" = "p08b",
+						"Mk.58" = "secguncomp",
+						"PX4 Storm" = "px4"
+						)
+
+/obj/item/gun/ballistic/automatic/pistol/modular/update_icon_state()
+	if(current_skin)
+		icon_state = "[unique_reskin[current_skin]][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+	else
+		icon_state = "[initial(icon_state)][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+
+/obj/item/gun/ballistic/automatic/pistol/modular/update_overlays()
+	. = ..()
+	if(magazine && suppressed)
+		. += "[unique_reskin[current_skin]]-magazine-sup"	//Yes, this means the default iconstate can't have a magazine overlay
+	else if (magazine)
+		. += "[unique_reskin[current_skin]]-magazine"
+
+
+SOME SORT OF  BOLT ACTION CODE UNUSED
+/obj/item/gun/ballistic/shotgun/boltaction/pump(mob/M)
+	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
+	if(bolt_open)
+		pump_reload(M)
+	else
+		pump_unload(M)
+	bolt_open = !bolt_open
+	update_icon()	//I.E. fix the desc
+	return 1
+
+/obj/item/gun/ballistic/shotgun/boltaction/pump(mob/M)
+	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
+	pump_unload(M)
+	pump_reload(M)
+	update_icon()	//I.E. fix the desc
+	return 1
+
+/obj/item/gun/ballistic/shotgun/boltaction/attackby(obj/item/A, mob/user, params)
+	if(!bolt_open)
+		to_chat(user, "<span class='notice'>The bolt is closed!</span>")
+		return
+	. = ..()
+
+/obj/item/gun/ballistic/shotgun/boltaction/examine(mob/user)
+	. = ..()
+	. += "The bolt is [bolt_open ? "open" : "closed"]."
+
+
+CODE FOR RESKIN
+	unique_reskin = list("Tactical" = "cshotgun",
+						"Slick" = "cshotgun_slick"
+						)
+
+
+DUAL TUBE PUMP ACTION (seems redundant with neostead but why not keep it.)
+/obj/item/gun/ballistic/shotgun/automatic/dual_tube/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Alt-click to pump it.</span>"
+
+/obj/item/gun/ballistic/shotgun/automatic/dual_tube/attack_self(mob/living/user)
+	if(!chambered && magazine.contents.len)
+		pump()
+	else
+		toggle_tube(user)
+
+/obj/item/gun/ballistic/shotgun/automatic/dual_tube/AltClick(mob/living/user)
+	. = ..()
+	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	pump()
+	return TRUE
+
+
+ATTACHING SLING
+/obj/item/gun/ballistic/shotgun/boltaction/improvised/attackby(obj/item/A, mob/user, params)
+	..()
+	if(istype(A, /obj/item/stack/cable_coil) && !sawn_off)
+		if(A.use_tool(src, user, 0, 10, skill_gain_mult = EASY_USE_TOOL_MULT))
+			slot_flags = ITEM_SLOT_BACK
+			to_chat(user, "<span class='notice'>You tie the lengths of cable to the rifle, making a sling.</span>")
+			slung = TRUE
+			update_icon()
+		else
+			to_chat(user, "<span class='warning'>You need at least ten lengths of cable if you want to make a sling!</span>")
+
+/obj/item/gun/ballistic/shotgun/boltaction/improvised/update_overlays()
+	. = ..()
+	if(slung)
+		. += "[icon_state]sling"
+
+
+HOOK GUN CODE. Bizarre but could be made into something useful.
+/obj/item/gun/ballistic/shotgun/doublebarrel/hook
+	name = "hook modified sawn-off shotgun"
+	desc = "Range isn't an issue when you can bring your victim to you."
+	icon_state = "hookshotgun"
+	item_state = "shotgun"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/bounty
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_MEDIUM
+	force = 16 //it has a hook on it
+	attack_verb = list("slashed", "hooked", "stabbed")
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	//our hook gun!
+	var/obj/item/gun/magic/hook/bounty/hook
+	var/toggled = FALSE
+
+CODE FOR ASSAULT RIFE WITH GRENADE LAUNCHER ATTACHED
+/obj/item/gun/ballistic/automatic/m90
+	name = "\improper M-90gl Carbine"
+	desc = "A three-round burst 5.56 toploading carbine, designated 'M-90gl'. Has an attached underbarrel grenade launcher which can be toggled on and off."
+	icon_state = "m90"
+	item_state = "m90"
+	mag_type = /obj/item/ammo_box/magazine/m556
+	fire_sound = 'sound/weapons/gunshot_smg.ogg'
+	can_suppress = FALSE
+	automatic_burst_overlay = FALSE
+	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
+
+/obj/item/gun/ballistic/automatic/m90/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher(src)
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/m90/unrestricted
+	pin = /obj/item/firing_pin
+
+/obj/item/gun/ballistic/automatic/m90/unrestricted/Initialize()
+	. = ..()
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/unrestricted(src)
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/m90/afterattack(atom/target, mob/living/user, flag, params)
+	if(select == 2)
+		underbarrel.afterattack(target, user, flag, params)
+	else
+		. = ..()
+		return
+/obj/item/gun/ballistic/automatic/m90/attackby(obj/item/A, mob/user, params)
+	if(istype(A, /obj/item/ammo_casing))
+		if(istype(A, underbarrel.magazine.ammo_type))
+			underbarrel.attack_self()
+			underbarrel.attackby(A, user, params)
+	else
+		..()
+/obj/item/gun/ballistic/automatic/m90/update_overlays()
+	. = ..()
+	switch(select)
+		if(0)
+			. += "[initial(icon_state)]semi"
+		if(1)
+			. += "[initial(icon_state)]burst"
+		if(2)
+			. += "[initial(icon_state)]gren"
+
+/obj/item/gun/ballistic/automatic/m90/update_icon_state()
+	icon_state = "[initial(icon_state)][magazine ? "" : "-e"]"
+
+/obj/item/gun/ballistic/automatic/m90/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 2
+			to_chat(user, "<span class='notice'>You switch to grenades.</span>")
+		if(2)
+			select = 0
+			burst_size = 1
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
+
+
+LONG SCOPE
+	zoomable = TRUE
+	zoom_amt = 10 //Long range, enough to see in front of you, but no tiles behind you.
+	zoom_out_amt = 13
+
+
+MAG ICON CODE
+/obj/item/gun/ballistic/automatic/surplus/update_icon_state()
+	if(magazine)
+		icon_state = "surplus"
+	else
+		icon_state = "surplus-e"
+
+SPREAD UPON BURST TOGGLE
+/obj/item/gun/ballistic/automatic/wt550/enable_burst()
+	. = ..()
+	spread = 15
+
+/obj/item/gun/ballistic/automatic/wt550/disable_burst()
+	. = ..()
+	spread = 0
+
+ICON UPDATE FOR GRADUAL DEPLETION, PLASTIC MAGS ETC
+/obj/item/gun/ballistic/automatic/c20r/update_icon_state()
+	icon_state = "c20r[magazine ? "-[CEILING(get_ammo(0)/4, 1)*4]" : ""][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
+
+/obj/item/gun/ballistic/automatic/wt550/update_icon_state()
+	icon_state = "wt550[magazine ? "-[CEILING(((get_ammo(FALSE) / magazine.max_ammo) * 20) /4, 1)*4]" : "-0"]" //Sprites only support up to 20.
+*/

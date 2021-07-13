@@ -55,7 +55,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/katana
 	name = "katana"
-	desc = "Woefully underpowered in D20."
+	desc = "After the world ended, seppuku rates in Japan skyrocketed!"
 	icon_state = "katana"
 	item_state = "katana"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -75,7 +75,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
 
 /obj/item/katana/lavaland
-	desc = "Woefully underpowered in Lavaland."
+	desc = "This katana upon inspection is lower quality than the average blade."
 	block_chance = 30
 	force = 25 //Like a fireaxe but one handed and can block!
 
@@ -126,7 +126,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/melee/bokken // parrying stick
 	name = "bokken"
-	desc = "A space-Japanese training sword made of wood and shaped like a katana."
+	desc = "A Japanese training sword made of wood and shaped like a katana."
 	icon_state = "bokken"
 	item_state = "bokken"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -697,7 +697,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 0
 	throwforce = 5
-	reach = 2
+	max_reach = 2
+	min_reach = 2
 
 /obj/item/extendohand/acme
 	name = "\improper ACME Extendo-Hand"
@@ -705,7 +706,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/extendohand/attack(atom/M, mob/living/carbon/human/user)
 	var/dist = get_dist(M, user)
-	if(dist < reach)
+	if(dist < min_reach)
 		to_chat(user, "<span class='warning'>[M] is too close to use [src] on.</span>")
 		return
 	M.attack_hand(user)
@@ -811,10 +812,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	desc = "A red pitchfork, it looks like the work of the devil."
 	force = 19
 	throwforce = 24
-
-/obj/item/pitchfork/demonic/Initialize()
-	. = ..()
-	set_light(3,6,LIGHT_COLOR_RED)
+	light_system = MOVABLE_LIGHT
+	light_range = 3
+	light_power = 6
+	light_color = LIGHT_COLOR_RED
 
 /obj/item/pitchfork/demonic/ComponentInitialize()
 	. = ..()
