@@ -221,8 +221,8 @@ Coven Stuff
 	enforces = "Helping the common Waster.Destabilizing the BOS and NCR. Converting those worthy to become Super Mutants.Sharing tech to the common wastelander "
 	supervisors = "The High-Priests."
 	selection_color = "#95a5a6"
-    exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 1200
+    exp_requirements = 2400
+	exp_type EXP_TYPE_FALLOUT
 
 	outfit = /datum/outfit/job/wasteland/covenwitch
 
