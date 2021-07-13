@@ -198,6 +198,7 @@ kept here incase it gets reworked later*/
 	backpack_contents = list(
 					/obj/item/melee/powerfist/goliath=1,
 					/obj/item/ammo_box/magazine/m556/rifle=2)
+
 /datum/outfit/loadout/UwUturion
 	name =			"Kitty centurion"
 	suit =			/obj/item/clothing/suit/chickensuit
