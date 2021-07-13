@@ -25,7 +25,7 @@
 	if(user.a_intent == INTENT_HARM) // On harm intent do nothing useful.
 		return ..()
 	. = STOP_ATTACK_PROC_CHAIN
-	if(in_use)
+	if(INTERACTING_WITH(user, M))
 		return
 	if(M == user)
 		to_chat(user, "<span class='warning'>You can't use [src] on yourself!</span>")
@@ -49,12 +49,8 @@
 		to_chat(user, "<span class='warning'>[M] is lacking a brain to operate on!</span>")
 		return
 	to_chat(user, "<span class='notice'>You begin to place [src] near the head of [M].</span>")
-	if(INTERACTING_WITH(user, M))
-		return
 	if(!do_after(user, use_time, target = M))
-		in_use = FALSE
 		return
-	in_use = FALSE
 	to_chat(user, "<span class='notice'>[M]'s brain begins to react to [src].</span>")
 	if(alert(M, "Do you wish to become a part of [given_faction]?", "Yes", "No") == "No" || "Cancel")
 		to_chat(user, "<span class='warning'>The brain of the subject resists procedure!</span>")
