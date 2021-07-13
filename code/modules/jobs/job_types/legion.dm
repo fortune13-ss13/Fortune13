@@ -199,9 +199,9 @@ kept here incase it gets reworked later*/
 					/obj/item/melee/powerfist/goliath=1,
 					/obj/item/ammo_box/magazine/m556/rifle=2)
 /datum/outfit/loadout/UwUturion
-	name = 			"Kitty centurion"
-	suit = 			/obj/item/clothing/suit/chickensuit
-	head = 			/obj/item/clothing/head/collectable/kitty
+	name =			"Kitty centurion"
+	suit =			/obj/item/clothing/suit/chickensuit
+	head =			/obj/item/clothing/head/collectable/kitty
 	suit_store =	/obj/item/pneumatic_cannon
 	backpack_contents = list(
 					/obj/item/dildo=20)
