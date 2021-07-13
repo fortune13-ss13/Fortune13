@@ -14,8 +14,8 @@
 	desc = "TUNNEL SNAKES OWN THIS TOWN. Contains an unbranded All Terrain Vehicle, two cans of spraypaint, and a complete gang outfit -- consists of black gloves, a menacing skull bandanna, and a SWEET leather overcoat!"
 	cost = 2500
 	contraband = TRUE
-	contains = list(/obj/vehicle/ridden/atv,
-					/obj/item/key,
+	contains = list(// /obj/vehicle/ridden/atv,
+					// /obj/item/key,
 					/obj/item/toy/crayon/spraycan,
 					/obj/item/toy/crayon/spraycan,
 					/obj/item/clothing/suit/jacket/leather/overcoat,
@@ -284,7 +284,7 @@
 					/obj/item/tank/jetpack/carbondioxide/eva)
 	crate_name = "eva jetpacks crate"
 	crate_type = /obj/structure/closet/crate/secure
-*/
+*//*
 /datum/supply_pack/emergency/specialops
 	name = "Special Ops Supplies"
 	desc = "(*!&@#NEED SOMETHING TO DEAL WITH THE GREYTIDE, HUH OPERATIVE? WELL, THIS LITTLE ORDER CAN HELP YOU OUT IN A PINCH. CONTAINS A BOX OF FIVE EMP GRENADES, THREE SMOKEBOMBS, AN INCENDIARY GRENADE, AND A \"SLEEPY PEN\" FULL OF NICE TOXINS!#@*$"
@@ -298,7 +298,7 @@
 					/obj/item/grenade/chem_grenade/incendiary)
 	crate_name = "emergency crate"
 	crate_type = /obj/structure/closet/crate/internals
-
+*/
 /datum/supply_pack/emergency/weedcontrol
 	name = "Weed Control Crate"
 	desc = "Keep those invasive species OUT. Contains a scythe, gasmask, two sprays of Plant-B-Gone, and two anti-weed chemical grenades. Warranty void if used on ambrosia. Requires Hydroponics access to open."

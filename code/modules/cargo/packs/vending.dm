@@ -82,7 +82,7 @@
 					/obj/item/vending_refill/wallmed)
 	crate_name = "medical vending crate"
 	crate_type = /obj/structure/closet/crate/medical
-
+/*
 /datum/supply_pack/vending/security
 	name = "SecTech Supply Crate"
 	desc = "Officer Paul bought all the donuts? Then refill the security vendor with ths crate. Requires Security Access to open."
@@ -92,7 +92,7 @@
 	crate_name = "SecTech supply crate"
 	crate_type = /obj/structure/closet/crate/secure/gear
 	can_private_buy = FALSE
-
+*/
 /datum/supply_pack/vending/snack
 	name = "Snack Supply Crate"
 	desc = "One vending machine refill of cavity-bringin' goodness! The number one dentist recommended order!"

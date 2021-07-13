@@ -84,7 +84,7 @@
 //////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// Canisters //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-
+/* Sorry! No war crimes here!
 /datum/supply_pack/materials/bz
 	name = "BZ Canister Crate"
 	desc = "Contains a canister of BZ. Requires Toxins access to open."
@@ -118,7 +118,7 @@
 	contains = list(/obj/machinery/portable_atmospherics/canister/nitrous_oxide)
 	crate_name = "nitrous oxide canister crate"
 	crate_type = /obj/structure/closet/crate/secure
-
+*/
 /datum/supply_pack/materials/oxygen
 	name = "Oxygen Canister"
 	desc = "Contains a canister of Oxygen. Canned in Druidia."

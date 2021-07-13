@@ -9,7 +9,7 @@
 /datum/supply_pack/science
 	group = "Science"
 	crate_type = /obj/structure/closet/crate/science
-
+/*
 /datum/supply_pack/science/ape  //Ape out!
 	name = "Ape Cube Crate"
 	desc = "Pss what a new test subject with supper strangth, speed, and love for bananas all at the same time? Say no more... Contains a single ape cube. Dont add water!"
@@ -18,7 +18,7 @@
 	contains = list (/obj/item/reagent_containers/food/snacks/cube/ape)
 	crate_name = "ape cube crate"
 	can_private_buy = FALSE
-
+*/
 /datum/supply_pack/science/beakers
 	name = "Chemistry Beakers Crate"
 	desc = "Glassware for any chemistry lab! Contains four small beakers, three large, two plastic, and one metamaterial. As well as three droppers and two pairs of latex gloves."
@@ -40,7 +40,7 @@
 					/obj/item/clothing/gloves/color/latex,
 					/obj/item/clothing/gloves/color/latex)
 	crate_name = "chemistry beaker crate"
-
+/* Cant get the frame parts or stuff anyways, but still
 /datum/supply_pack/science/robotics/mecha_odysseus
 	name = "Circuit Crate (Odysseus)"
 	desc = "Ever wanted to build your own giant medical robot? Well, now you can! Contains the Odysseus main control board and Odysseus peripherals board. Requires Robotics access to open."
@@ -61,7 +61,7 @@
 					/obj/item/circuitboard/mecha/ripley/peripherals)
 	crate_name = "\improper APLU Ripley circuit crate"
 	crate_type = /obj/structure/closet/crate/secure/science
-
+*/
 /datum/supply_pack/science/circuitry
 	name = "Circuitry Starter Pack Crate"
 	desc = "Journey into the mysterious world of Circuitry with this starter pack. Contains a circuit printer, analyzer, debugger and wirer. Power cells not included."
@@ -118,6 +118,7 @@
 	crate_name = "plasma assembly crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 */
+/*
 /datum/supply_pack/science/relic
 	name = "Relic Crate"
 	desc = "Ever wanted to play with old discounted toys? Look no further. Contains two relics."
@@ -126,7 +127,7 @@
 	contains = list(/obj/item/relic,
 					/obj/item/relic)
 	crate_name = "relic crate"
-
+*/
 /datum/supply_pack/science/robotics
 	name = "Robotics Assembly Crate"
 	desc = "The tools you need to replace those finicky humans with a loyal robot army! Contains three proximity sensors, two high-powered cells, six flashes, and an electrical toolbox. Requires Robotics access to open."
@@ -160,7 +161,7 @@
 					/obj/machinery/shieldwallgen)
 	crate_name = "shield generators crate"
 	crate_type = /obj/structure/closet/crate/secure/science
-
+/*
 /datum/supply_pack/science/slime
 	name = "Slime Core Crate"
 	desc = "Ran out of slimes? No problem, contains one gray slime core. Requires Xenobio access to open."
@@ -169,7 +170,7 @@
 	contains = list(/obj/item/slime_extract/grey)
 	crate_name = "slime core crate"
 	crate_type = /obj/structure/closet/crate/secure/science
-
+*/
 /datum/supply_pack/science/tablets
 	name = "Tablet Crate"
 	desc = "What's a computer? Contains five cargo tablets."
@@ -181,6 +182,7 @@
 					/obj/item/modular_computer/tablet/preset/cargo)
 	crate_name = "tablet crate"
 
+/* Removed, FO13
 /datum/supply_pack/science/transfer_valves
 	name = "Tank Transfer Valves Crate"
 	desc = "The key ingredient for making a lot of people very angry very fast. Contains two tank transfer valves. Requires RD access to open."
@@ -191,6 +193,7 @@
 	crate_name = "tank transfer valves crate"
 	crate_type = /obj/structure/closet/crate/secure/science
 	dangerous = TRUE
+*/
 
 //////// RAW ANOMALY CORES
 /*

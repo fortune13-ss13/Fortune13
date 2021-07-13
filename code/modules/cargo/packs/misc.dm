@@ -17,7 +17,7 @@
 /datum/supply_pack/misc/anvil
 	name = "Anvil Crate"
 	desc = "An anvil in a crate, we had to dig this out of the old warehouse. It's got wheels on it so you can move it."
-	cost = 7500
+	cost = 12500 // 7500 was alot, 12500 is more :)
 	contains = list(/obj/structure/anvil/obtainable/basic)
 
 /datum/supply_pack/misc/artsupply
@@ -168,7 +168,7 @@
 	. = ..()
 	for(var/i in 1 to 9)
 		new /obj/item/coin/silver(.)
-
+/*
 /datum/supply_pack/misc/dueling_stam
 	name = "Dueling Pistols"
 	desc = "Resolve all your quarrels with some nonlethal fun."
@@ -213,7 +213,7 @@
 	for(var/i in 1 to num_contained)
 		var/item = pick_n_take(L)
 		new item(C)
-
+*/
 //////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Misc Supplies //////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -266,18 +266,18 @@
 	desc = "Bling out with this crate of jewelry. Includes gold necklace and a set of two rings."
 	cost = 5000
 	contains = list(/obj/item/clothing/neck/necklace/dope,
-					/obj/item/storage/fancy/ringbox,
+					/obj/item/storage/fancy/ringbox, // Chance of a D-Ring spawning, worth the 5000 if anyone actually finds out about that
 					/obj/item/storage/fancy/ringbox/silver
 					)
 	crate_name = "jewelry crate"
-
+/* Lag boxes
 /datum/supply_pack/misc/jukebox
 	name = "Jukebox"
 	cost = 10000
 	contains = list(/obj/machinery/jukebox)
 	crate_name = "Jukebox"
-
-/datum/supply_pack/misc/abandonedcrate
+*/
+/datum/supply_pack/misc/abandonedcrate // 15,000 for a tiny chance at a potentially kinda useful item
 	name = "Loot Box"
 	desc = "Try your luck with these highly secure loot boxes! Solve the lock, win great prizes! WARNING: EXPLOSIVE FAILURE."
 	contraband = TRUE
@@ -398,7 +398,7 @@
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// Lewd Supplies ///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-
+/* No.
 /datum/supply_pack/misc/lewd
 	name = "Lewd Crate" // OwO
 	desc = "Pssst, want to have a good time with your sluts? Well I got what you want! Maid clothing, dildos, collars and more!"
@@ -452,3 +452,4 @@
 			continue
 		crate_value -= I.cost
 		new I.item(C)
+*/
