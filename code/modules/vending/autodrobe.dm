@@ -95,7 +95,6 @@
 						/obj/item/clothing/under/costume/singer/yellow = 1,
 						/obj/item/clothing/shoes/singerb = 1,
 						/obj/item/clothing/under/costume/singer/blue = 1,
-						/obj/item/clothing/suit/hooded/carp_costume = 1,
 						/obj/item/clothing/suit/snowman = 1,
 						/obj/item/clothing/head/snowman = 1,
 						/obj/item/clothing/mask/joy = 1,

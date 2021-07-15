@@ -55,14 +55,6 @@ GLOBAL_LIST_INIT(gondola_recipes, list ( \
 	. = ..()
 	. += GLOB.gondola_recipes
 
-GLOBAL_LIST_INIT(corgi_recipes, list ( \
-	new/datum/stack_recipe("corgi costume", /obj/item/clothing/suit/hooded/ian_costume, 3), \
-	))
-
-/obj/item/stack/sheet/animalhide/corgi/get_main_recipes()
-	. = ..()
-	. += GLOB.corgi_recipes
-
 /obj/item/stack/sheet/animalhide/cat
 	name = "cat hide"
 	desc = "The by-product of cat farming."

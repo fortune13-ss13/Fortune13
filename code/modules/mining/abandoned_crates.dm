@@ -78,7 +78,6 @@
 				new /obj/effect/spawner/lootdrop/coin(src)
 		if(65 to 66)
 			new /obj/item/clothing/suit/ianshirt(src)
-			new /obj/item/clothing/suit/hooded/ian_costume(src)
 		if(67 to 68)
 			for(var/i in 1 to rand(4, 7))
 				var/newitem = pick(subtypesof(/obj/item/stock_parts) - /obj/item/stock_parts/subspace)

@@ -244,41 +244,6 @@
 	flags_inv = HIDEJUMPSUIT|HIDESHOES
 	mutantrace_variation = NONE
 
-/obj/item/clothing/suit/hooded/carp_costume
-	name = "carp costume"
-	desc = "(I) A costume made from 'synthetic' carp scales, it smells."
-	icon_state = "carp_casual"
-	item_state = "labcoat"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET
-	cold_protection = CHEST|GROIN|ARMS
-	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT	//Space carp like space, so you should too
-	hoodtype = /obj/item/clothing/head/hooded/carp_hood
-
-/obj/item/clothing/head/hooded/carp_hood
-	name = "carp hood"
-	desc = "(I) A hood attached to a carp costume."
-	icon_state = "carp_casual"
-	body_parts_covered = HEAD
-	cold_protection = HEAD
-	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
-	flags_inv = HIDEHAIR|HIDEEARS
-
-/obj/item/clothing/suit/hooded/ian_costume	//It's Ian, rub his bell- oh god what happened to his inside parts?
-	name = "corgi costume"
-	desc = "(I) A costume that looks like someone made a human-like corgi, it won't guarantee belly rubs."
-	icon_state = "ian"
-	item_state = "labcoat"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET
-	hoodtype = /obj/item/clothing/head/hooded/ian_hood
-	dog_fashion = /datum/dog_fashion/back
-
-/obj/item/clothing/head/hooded/ian_hood
-	name = "corgi hood"
-	desc = "(I) A hood that looks just like a corgi's head, it won't guarantee dog biscuits."
-	icon_state = "ian"
-	body_parts_covered = HEAD
-	flags_inv = HIDEHAIR|HIDEEARS
-
 /obj/item/clothing/suit/hooded/bee_costume // It's Hip!
 	name = "bee costume"
 	desc = "(I) Bee the true Queen!"

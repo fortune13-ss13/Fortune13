@@ -197,10 +197,6 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	new /obj/item/stack/sheet/wetleather(drop_location(), amount)
 	qdel(src)
 
-/obj/item/clothing/suit/hooded/ian_costume/machine_wash(obj/machinery/washing_machine/WM)
-	new /obj/item/reagent_containers/food/snacks/meat/slab/corgi(loc)
-	qdel(src)
-
 /mob/living/simple_animal/pet/dog/corgi/machine_wash(obj/machinery/washing_machine/WM)
 	gib()
 
