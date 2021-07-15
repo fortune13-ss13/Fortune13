@@ -200,12 +200,6 @@
 		/obj/item/clothing/head/bowler = 1,
 		/obj/item/clothing/head/that = 1)
 
-/obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears
-	name = "kitty ears or rabbit ears spawner"
-	loot = list(
-		/obj/item/clothing/head/simplekitty = 1,
-		/obj/item/clothing/head/rabbitears = 1)
-
 /obj/effect/spawner/lootdrop/minor/pirate_or_bandana
 	name = "pirate hat or bandana spawner"
 	loot = list(
