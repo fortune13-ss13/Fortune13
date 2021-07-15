@@ -152,7 +152,6 @@
 				/obj/item/clothing/under/redeveninggown,
 				/obj/effect/spawner/bundle/f13/mexican,
 				/obj/item/clothing/under/sailor,
-				/obj/effect/spawner/lootdrop/f13/schoolgirl,
 				/obj/effect/spawner/bundle/f13/hats,
 				/obj/effect/spawner/bundle/f13/jabroni,
 				/obj/effect/spawner/bundle/f13/romeaboo,
@@ -182,13 +181,6 @@
 	items = list(
 				/obj/item/clothing/head/sombrero,
 				/obj/item/clothing/suit/poncho
-				)
-
-/obj/effect/spawner/lootdrop/f13/schoolgirl
-	name = "schoolgirl outfit spawner"
-	loot = list(
-				/obj/item/clothing/under/schoolgirl/red,
-				/obj/item/clothing/under/schoolgirl
 				)
 
 /obj/effect/spawner/bundle/f13/hats

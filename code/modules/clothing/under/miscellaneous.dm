@@ -600,15 +600,6 @@
 	item_color = "sailor"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/schoolgirl/red
-	name = "red schoolgirl uniform"
-	icon_state = "schoolgirlred"
-	item_state = "schoolgirlred"
-	item_color = "schoolgirlred"
-	body_parts_covered = CHEST|GROIN|ARMS
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
 /obj/item/clothing/under/suit_jacket/navy
 	name = "navy suit"
 	desc = "A navy suit and red tie, intended for the station's finest."
@@ -684,42 +675,5 @@
 	icon_state = "sailor_dress"
 	item_state = "sailor_dress"
 	item_color = "sailor_dress"
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
-/obj/item/clothing/under/schoolgirl
-	name = "blue schoolgirl uniform"
-	desc = "It's just like one of my Japanese animes!"
-	icon_state = "schoolgirl"
-	item_state = "schoolgirl"
-	item_color = "schoolgirl"
-	body_parts_covered = CHEST|GROIN|ARMS
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
-/obj/item/clothing/under/schoolgirl/red
-	name = "red schoolgirl uniform"
-	icon_state = "schoolgirlred"
-	item_state = "schoolgirlred"
-	item_color = "schoolgirlred"
-	body_parts_covered = CHEST|GROIN|ARMS
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
-/obj/item/clothing/under/schoolgirl/green
-	name = "green schoolgirl uniform"
-	icon_state = "schoolgirlgreen"
-	item_state = "schoolgirlgreen"
-	item_color = "schoolgirlgreen"
-	body_parts_covered = CHEST|GROIN|ARMS
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
-/obj/item/clothing/under/schoolgirl/orange
-	name = "orange schoolgirl uniform"
-	icon_state = "schoolgirlorange"
-	item_state = "schoolgirlorange"
-	item_color = "schoolgirlorange"
-	body_parts_covered = CHEST|GROIN|ARMS
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE

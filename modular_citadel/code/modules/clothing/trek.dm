@@ -96,14 +96,6 @@
 		icon_state = "fedblue"
 		item_state = "fedblue"
 
-/obj/item/clothing/suit/storage/fluff/fedcoat/eng
-		icon_state = "fedeng"
-		item_state = "fedeng"
-
-/obj/item/clothing/suit/storage/fluff/fedcoat/capt
-		icon_state = "fedcapt"
-		item_state = "fedcapt"
-
 //"modern" ones for fancy
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat
@@ -124,19 +116,6 @@
 		)
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-	//Variants
-/obj/item/clothing/suit/storage/fluff/modernfedcoat/medsci
-		icon_state = "fedmodernblue"
-		item_state = "fedmodernblue"
-
-/obj/item/clothing/suit/storage/fluff/modernfedcoat/eng
-		icon_state = "fedmoderneng"
-		item_state = "fedmoderneng"
-
-/obj/item/clothing/suit/storage/fluff/modernfedcoat/sec
-		icon_state = "fedmodernsec"
-		item_state = "fedmodernsec"
-
 /obj/item/clothing/head/caphat/formal/fedcover
 	name = "Federation Officer's Cap"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
@@ -154,14 +133,6 @@
 /obj/item/clothing/head/caphat/formal/fedcover/eng
 		icon_state = "fedcapeng"
 		item_state = "fedcapeng"
-
-/obj/item/clothing/head/caphat/formal/fedcover/sec
-		icon_state = "fedcapsec"
-		item_state = "fedcapsec"
-
-/obj/item/clothing/head/caphat/formal/fedcover/black
-		icon_state = "fedcapblack"
-		item_state = "fedcapblack"
 
 //orvilike caps
 /obj/item/clothing/head/kepi/orvi

@@ -323,8 +323,6 @@ GLOBAL_LIST_INIT(loot_prewar_costume, list(
 	/obj/item/clothing/head/sombrero,
 	/obj/item/clothing/suit/poncho,
 	/obj/item/clothing/under/sailor,
-	/obj/item/clothing/under/schoolgirl/red,
-	/obj/item/clothing/under/schoolgirl,
 	/obj/item/clothing/head/fluff/bandit,
 	/obj/item/clothing/head/fluff/gambler,
 	/obj/item/clothing/under/jabroni,
