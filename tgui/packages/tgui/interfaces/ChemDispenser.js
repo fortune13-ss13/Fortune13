@@ -28,8 +28,7 @@ export const ChemDispenser = (props, context) => {
   return (
     <Window
       width={565}
-      height={620}
-      resizable>
+      height={620}>
       <Window.Content scrollable>
         <Section
           title="Status"

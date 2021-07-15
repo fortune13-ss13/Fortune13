@@ -28,7 +28,7 @@ export const TelecommsMonitor = (props, context) => {
   return (
     <Window
       theme="ntos"
-      resizable
+     
       width={575}
       height={400}>
       <Window.Content scrollable>

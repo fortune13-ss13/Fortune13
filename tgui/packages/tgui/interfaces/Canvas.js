@@ -88,8 +88,7 @@ export const Canvas = (props, context) => {
   return (
     <Window
       width={Math.min(400, width * PX_PER_UNIT * 32 + 24)}
-      height={Math.min(400, height * PX_PER_UNIT * 32 + 24)}
-      resizable>
+      height={Math.min(400, height * PX_PER_UNIT * 32 + 24)}>
       <Window.Content scrollable>
         <Box textAlign="center">
           <PaintCanvas

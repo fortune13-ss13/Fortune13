@@ -30,7 +30,7 @@ export const TelecommsPDALog = (props, context) => {
     return ( // should have used en -> jp unicode -> other encoding method->utf8
       <Window
         theme="ntos"
-        resizable
+       
         width={727}
         height={510}>
         <Window.Content scrollable>
@@ -71,7 +71,7 @@ export const TelecommsPDALog = (props, context) => {
   }
 
   return (
-    <Window theme="ntos" resizable>
+    <Window theme="ntos">
       <Window.Content scrollable>
         <Fragment>
           {!!notice && (

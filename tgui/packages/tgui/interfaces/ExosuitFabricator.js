@@ -142,7 +142,6 @@ export const ExosuitFabricator = (props, context) => {
 
   return (
     <Window
-      resizable
       title="Exosuit Fabricator"
       width={1100}
       height={640}>

@@ -5,7 +5,7 @@ import { Button, Flex, Tabs, Section } from '../components';
 export const LoadoutSelect = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-    <Window width={500} height={450} resizable>
+    <Window width={500} height={450}>
       <Window.Content scrollable>
         <Tabs style={{ "vertical-align": "top", "flex": "initial" }}>
           {!(data.outfits?.length) && "No loadout options." || data.outfits.map(outfit => (

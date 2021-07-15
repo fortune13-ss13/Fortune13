@@ -40,8 +40,7 @@ export const Gps = (props, context) => {
     <Window
       title="Global Positioning System"
       width={470}
-      height={700}
-      resizable>
+      height={700}>
       <Window.Content scrollable>
         <Section
           title="Control"

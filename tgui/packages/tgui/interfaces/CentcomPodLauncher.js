@@ -9,8 +9,7 @@ export const CentcomPodLauncher = () => {
     <Window
       title="Config/Launch Supply Pod"
       width={700}
-      height={700}
-      resizable>
+      height={700}>
       <Window.Content scrollable>
         <CentcomPodLauncherContent />
       </Window.Content>

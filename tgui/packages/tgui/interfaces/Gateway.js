@@ -5,7 +5,7 @@ import { Window } from '../layouts';
 
 export const Gateway = () => {
   return (
-    <Window resizable>
+    <Window>
       <Window.Content scrollable>
         <GatewayContent />
       </Window.Content>

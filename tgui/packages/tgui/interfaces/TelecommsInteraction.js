@@ -31,7 +31,7 @@ export const TelecommsInteraction = (props, context) => {
   } = machine;
   return (
     <Window
-      resizable
+     
       width={520}
       height={500}>
       <Window.Content scrollable>

@@ -53,8 +53,7 @@ export const ChemFilter = (props, context) => {
   return (
     <Window
       width={500}
-      height={300}
-      resizable>
+      height={300}>
       <Window.Content scrollable>
         <Flex spacing={1}>
           <Flex.Item grow={1}>
