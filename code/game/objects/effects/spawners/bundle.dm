@@ -42,13 +42,6 @@
 		/obj/item/clothing/mask/cigarette/cigar/havana,
 		/obj/item/clothing/shoes/jackboots)
 
-/obj/effect/spawner/bundle/costume/nyangirl
-	name = "nyangirl costume spawner"
-	items = list(
-		/obj/item/clothing/under/costume/schoolgirl,
-		/obj/item/clothing/head/kitty,
-		/obj/item/clothing/glasses/sunglasses/blindfold)
-
 /obj/effect/spawner/bundle/costume/maid
 	name = "maid costume spawner"
 	items = list(
@@ -122,12 +115,6 @@
 	items = list(
 		/obj/item/clothing/under/costume/soviet,
 		/obj/item/clothing/head/ushanka)
-
-/obj/effect/spawner/bundle/costume/imperium_monk
-	name = "imperium monk costume spawner"
-	items = list(
-		/obj/item/clothing/suit/imperium_monk,
-		/obj/effect/spawner/lootdrop/minor/twentyfive_percent_cyborg_mask)
 
 /obj/effect/spawner/bundle/costume/holiday_priest
 	name = "holiday priest costume spawner"

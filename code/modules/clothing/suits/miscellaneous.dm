@@ -136,14 +136,6 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	mutantrace_variation = NONE
 
-/obj/item/clothing/suit/imperium_monk
-	name = "\improper Imperium monk suit"
-	desc = "(I) Have YOU killed a xeno today?"
-	icon_state = "imperium_monk"
-	item_state = "imperium_monk"
-	flags_inv = HIDESHOES|HIDEJUMPSUIT
-	mutantrace_variation = NONE
-
 /obj/item/clothing/suit/chickensuit
 	name = "chicken suit"
 	desc = "(I) A suit made long ago by the ancient empire KFC."
