@@ -2638,7 +2638,7 @@
 	height = 1;
 	id = "S4"
 	},
-/turf/open/indestructible/ground/inside/subway,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "cvv" = (
 /obj/structure/table/wood,
@@ -6772,7 +6772,7 @@
 /area/f13/bunker)
 "fOf" = (
 /obj/structure/closet/crate/miningcar,
-/obj/effect/spawner/lootdrop/f13/armor/tier3,
+/obj/effect/spawner/lootdrop/f13/armor/costumes,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "fOn" = (
@@ -7836,10 +7836,9 @@
 	anchored = 1;
 	can_be_unanchored = 1
 	},
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
 /obj/item/clothing/suit/armor/f13/power_armor/t45d,
 /obj/item/clothing/head/helmet/f13/power_armor/t45d,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/unique,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "gFk" = (
@@ -7937,6 +7936,10 @@
 	},
 /turf/closed/wall,
 /area/f13/tcoms)
+"gIu" = (
+/obj/structure/flora/junglebush/large,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "gJa" = (
 /obj/effect/mine/stun,
 /turf/open/floor/f13{
@@ -9999,7 +10002,7 @@
 	},
 /area/f13/den)
 "ili" = (
-/obj/machinery/workbench,
+/obj/machinery/workbench/advanced,
 /turf/open/floor/wood/f13/stage_t,
 /area/f13/tunnel)
 "ilw" = (
@@ -10495,6 +10498,16 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/den)
+"iKe" = (
+/obj/structure/destructible/tribal_torch/lit,
+/obj/structure/fence{
+	dir = 8
+	},
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "iKl" = (
 /mob/living/simple_animal/hostile/deathclaw,
 /turf/open/water,
@@ -13679,6 +13692,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"lib" = (
+/obj/structure/reagent_dispensers/barrel/four,
+/obj/effect/decal/waste{
+	icon_state = "goo10"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/radiation)
 "liq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
@@ -13839,6 +13859,10 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/den)
+"lny" = (
+/obj/structure/simple_door/metal/fence,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "lnO" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/cigarettes/cigars,
@@ -14753,8 +14777,8 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "mdg" = (
-/obj/structure/frame/machine,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/chem_master/advanced,
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
 	},
@@ -16281,6 +16305,17 @@
 /obj/item/candle/tribal_torch,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"nkp" = (
+/obj/structure/fence{
+	dir = 8
+	},
+/obj/structure/decoration/rag{
+	desc = "A string of bones and skulls.<br>A common warning from tribals and raiders to outsiders.";
+	icon_state = "skulls";
+	name = "skulls"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "nkq" = (
 /obj/machinery/light{
 	dir = 1
@@ -18338,6 +18373,13 @@
 	icon_state = "darkyellowfull"
 	},
 /area/f13/brotherhood/offices1st)
+"oOb" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/fence{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "oOE" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/f13{
@@ -20719,7 +20761,7 @@
 /area/f13/bunker)
 "qCm" = (
 /obj/structure/closet/crate/miningcar,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,
+/obj/effect/spawner/bundle/f13/plasmarifle,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "qCu" = (
@@ -25831,6 +25873,13 @@
 	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
+"uDd" = (
+/mob/living/simple_animal/hostile/gecko,
+/obj/effect/decal/waste{
+	icon_state = "goo12"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/radiation)
 "uDs" = (
 /obj/machinery/door/airlock/hatch{
 	name = "NCR High Command";
@@ -31043,7 +31092,7 @@ uoO
 eoy
 nBk
 nBk
-lnr
+nBk
 uoO
 uoO
 uoO
@@ -31300,8 +31349,8 @@ uoO
 eoy
 nBk
 nBk
-lnr
-lnr
+nBk
+nBk
 uoO
 uoO
 uoO
@@ -31557,9 +31606,9 @@ uoO
 eoy
 nBk
 nBk
-lnr
-lnr
-lnr
+nBk
+nBk
+nBk
 uoO
 uoO
 uoO
@@ -31814,13 +31863,13 @@ uoO
 eoy
 nBk
 nBk
-lnr
-lnr
-lnr
-lnr
-lnr
-lnr
-lnr
+nBk
+nBk
+nBk
+nBk
+nBk
+nBk
+nBk
 lnr
 lnr
 lnr
@@ -32071,12 +32120,12 @@ uoO
 eoy
 mRT
 nBk
-lnr
-lnr
-lnr
-lnr
-lnr
-lnr
+nBk
+nBk
+nBk
+nBk
+nBk
+nBk
 lnr
 lnr
 lnr
@@ -32328,10 +32377,10 @@ uoO
 eoy
 nBk
 nBk
-lnr
-lnr
-lnr
-lnr
+nBk
+nBk
+nBk
+nBk
 uoO
 uoO
 uoO
@@ -32585,9 +32634,9 @@ uoO
 eoy
 nBk
 nBk
-lnr
-lnr
-lnr
+nBk
+nBk
+nBk
 uoO
 uoO
 uoO
@@ -32842,7 +32891,7 @@ uoO
 eoy
 nBk
 nBk
-lnr
+nBk
 uoO
 uoO
 uoO
@@ -32974,8 +33023,8 @@ xVz
 bjI
 xVz
 xVz
-xVz
-xVz
+qDR
+qDR
 uoO
 uoO
 uoO
@@ -33098,7 +33147,7 @@ uoO
 uoO
 eoy
 nBk
-nBk
+lnr
 eoy
 uoO
 uoO
@@ -33230,8 +33279,8 @@ uoO
 aoj
 hQE
 uoO
-xVz
-xVz
+qDR
+qDR
 xVz
 uoO
 uoO
@@ -33354,7 +33403,7 @@ uoO
 uoO
 uoO
 eoy
-nBk
+lnr
 cvg
 eoy
 uoO
@@ -33612,7 +33661,7 @@ uoO
 uoO
 eoy
 nBk
-nBk
+lnr
 eoy
 uoO
 uoO
@@ -33745,9 +33794,9 @@ uoO
 uoO
 uoO
 xVz
+rZw
 xVz
-xVz
-xVz
+rZw
 xVz
 xVz
 xVz
@@ -34019,7 +34068,7 @@ xVz
 xVz
 xVz
 xVz
-fTe
+xVz
 xVz
 xVz
 xVz
@@ -34265,7 +34314,7 @@ xVz
 xVz
 xVz
 xVz
-xVz
+fpw
 xVz
 xVz
 xVz
@@ -34517,7 +34566,7 @@ aoj
 aoj
 uoO
 xVz
-xVz
+rZw
 xVz
 xVz
 uoO
@@ -40201,7 +40250,7 @@ uoO
 uoO
 uoO
 uoO
-hIR
+lAE
 xVz
 xVz
 xVz
@@ -40334,7 +40383,7 @@ iWz
 gyS
 lnr
 lnr
-lnr
+vWN
 uoO
 uoO
 uoO
@@ -40845,9 +40894,9 @@ uoO
 uoO
 vVE
 lnr
-lnr
-lnr
-lnr
+hJV
+hJV
+hJV
 lnr
 uoO
 uoO
@@ -41357,7 +41406,7 @@ uoO
 uoO
 uoO
 uoO
-vWN
+lyh
 uoO
 uoO
 uoO
@@ -41614,7 +41663,7 @@ uoO
 uoO
 uoO
 uoO
-uoO
+qDR
 uoO
 uoO
 uoO
@@ -41871,7 +41920,7 @@ jfU
 jfU
 jfU
 vBO
-jfU
+vBO
 mJG
 jfU
 vBO
@@ -42899,10 +42948,10 @@ jfU
 jfU
 jfU
 ajQ
+lbk
 jfU
 jfU
-jfU
-jfU
+hdh
 jfU
 jfU
 jfU
@@ -43156,7 +43205,7 @@ jfU
 jfU
 jfU
 jfU
-jfU
+lbk
 jfU
 jfU
 jfU
@@ -43414,7 +43463,7 @@ jfU
 jfU
 jfU
 jfU
-jfU
+lbk
 jfU
 jfU
 jfU
@@ -43667,7 +43716,7 @@ uoO
 uoO
 uoO
 jfU
-jfU
+lbk
 jfU
 jfU
 skN
@@ -43676,7 +43725,7 @@ jfU
 jfU
 jfU
 jfU
-jfU
+tVu
 xgs
 jfU
 uoO
@@ -43925,16 +43974,16 @@ uoO
 jfU
 jfU
 jfU
+hdh
 jfU
 jfU
 jfU
 jfU
 jfU
 jfU
-jfU
-jfU
+tVu
 ajQ
-wtp
+lib
 jfU
 uoO
 uoO
@@ -44189,9 +44238,9 @@ jfU
 mQX
 jfU
 jfU
-jfU
-jfU
-jfU
+tVu
+xgs
+xgs
 uoO
 uoO
 uoO
@@ -44313,7 +44362,7 @@ xVz
 xVz
 xVz
 xVz
-hIR
+pOB
 uoO
 uoO
 uoO
@@ -44436,10 +44485,10 @@ uoO
 uoO
 jfU
 jfU
+lbk
+lbk
 jfU
-jfU
-jfU
-jfU
+lbk
 jfU
 jfU
 jfU
@@ -44693,7 +44742,7 @@ uoO
 uoO
 jfU
 jfU
-kNK
+uDd
 jfU
 jfU
 jfU
@@ -44754,7 +44803,7 @@ lnr
 lnr
 lnr
 lnr
-lnr
+ejh
 uoO
 uoO
 uoO
@@ -44950,7 +44999,7 @@ uoO
 uoO
 jfU
 jfU
-jfU
+lbk
 jfU
 jfU
 jfU
@@ -45012,7 +45061,7 @@ toA
 rOJ
 lnr
 lnr
-lnr
+ejh
 uoO
 uoO
 uoO
@@ -45548,7 +45597,7 @@ myy
 myy
 myy
 xVz
-xVz
+fpw
 xVz
 xVz
 uoO
@@ -46553,8 +46602,8 @@ nNc
 rsh
 hfy
 lnr
-lnr
-lnr
+ejh
+gIu
 uoO
 uoO
 uoO
@@ -46715,7 +46764,7 @@ eoy
 bkU
 cfJ
 dxj
-vtz
+kcY
 nBk
 nBk
 nBk
@@ -46811,7 +46860,7 @@ nfv
 lnr
 lnr
 lnr
-lnr
+gIu
 uoO
 uoO
 eLE
@@ -47317,7 +47366,7 @@ vuv
 hoH
 nfv
 nfv
-nfv
+oOb
 lnr
 fmO
 lnr
@@ -47574,7 +47623,7 @@ gWt
 lnr
 nfv
 nfv
-lnr
+lny
 lnr
 fmO
 nfv
@@ -47831,11 +47880,11 @@ gWt
 lnr
 nfv
 nfv
-lnr
+nkp
 lnr
 lnr
 auh
-lnr
+rNJ
 uoO
 uoO
 uoO
@@ -48088,8 +48137,8 @@ jXF
 hsH
 lnr
 lnr
-qUx
-uoO
+iKe
+tyt
 uoO
 uoO
 uoO
@@ -48345,7 +48394,7 @@ gZF
 lnr
 fmO
 lnr
-uoO
+tyt
 uoO
 jXF
 jXF
@@ -48602,7 +48651,7 @@ vuv
 qgC
 fmO
 lnr
-uoO
+tyt
 uoO
 vuv
 iot
@@ -48859,7 +48908,7 @@ gWt
 dQG
 lnr
 lrl
-uoO
+tyt
 uoO
 vuv
 ipw
@@ -52265,7 +52314,7 @@ aoj
 uoO
 uoO
 uoO
-hHs
+tmX
 osd
 myy
 myy
@@ -52883,16 +52932,16 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+eoy
+efl
 gpM
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+efl
+eoy
+eoy
+eoy
+eoy
+eoy
+eoy
 eoy
 nBk
 nBk
@@ -53141,16 +53190,16 @@ uoO
 uoO
 uoO
 eoy
-efl
-gpM
-efl
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
+nBk
+nBk
+nBk
+nBk
+nBk
+nBk
+nBk
+nBk
+nBk
+nKZ
 nBk
 nBk
 nBk
@@ -53404,9 +53453,9 @@ nBk
 nBk
 nBk
 nBk
-hkD
-hkD
-hkD
+nBk
+mRT
+nBk
 nKZ
 nBk
 nBk
@@ -53655,15 +53704,15 @@ uoO
 uoO
 uoO
 eoy
-nBk
-nBk
-nBk
-nBk
-nBk
-nBk
-nBk
-mRT
-hkD
+eoy
+eoy
+eoy
+eoy
+eoy
+eoy
+eoy
+eoy
+eoy
 eoy
 eoy
 eoy
@@ -53911,19 +53960,19 @@ uoO
 uoO
 uoO
 uoO
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
-eoy
-uoO
-uoO
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
+aoj
 uoO
 uoO
 uoO

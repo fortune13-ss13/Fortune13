@@ -1284,12 +1284,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/village)
 "aDb" = (
-/obj/structure/pondlily_small,
-/turf/open/indestructible/ground/outside/water{
-	density = 1;
-	desc = "Deep lake water, filled with who knows what...";
-	name = "lake water"
+/obj/effect/turf_decal/weather/dirt{
+	dir = 10
 	},
+/turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
 "aDk" = (
 /turf/open/floor/wood/f13/stage_tl,
@@ -4459,6 +4457,11 @@
 	icon_state = "plating"
 	},
 /area/f13/ncr)
+"chW" = (
+/obj/structure/decoration/rag,
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/closed/wall/f13/wood,
+/area/f13/legion)
 "cio" = (
 /turf/open/floor/plasteel/f13{
 	icon_state = "platingdmg3"
@@ -10066,10 +10069,11 @@
 	},
 /area/f13/ncr)
 "eQn" = (
-/obj/structure/window/fulltile/wood_window,
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/tunnel)
+/obj/structure/flora/tree/tall,
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirtcorner"
+	},
+/area/f13/wasteland)
 "eQq" = (
 /obj/structure/car,
 /turf/open/indestructible/ground/outside/road{
@@ -10315,13 +10319,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/clinic)
 "eXx" = (
-/obj/structure/closet/bus{
-	pixel_x = -14;
-	pixel_y = 5
+/obj/effect/turf_decal/weather/dirt{
+	dir = 8
 	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaltopbordertop0"
-	},
+/turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
 "eXA" = (
 /turf/open/indestructible/ground/outside/ruins{
@@ -22327,6 +22328,10 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/village)
+"krX" = (
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/closed/wall/f13/wood/house/broken,
+/area/f13/tunnel)
 "kso" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/fluff/paper,
@@ -22929,6 +22934,13 @@
 /obj/machinery/workbench,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
+"kIv" = (
+/obj/structure/flora/tree/wasteland,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 8;
+	icon_state = "dirtcorner"
+	},
+/area/f13/wasteland)
 "kIC" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/cash_random_high,
@@ -23869,10 +23881,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "lgR" = (
-/obj/structure/simple_door/room,
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/tunnel)
+/obj/effect/turf_decal/weather/dirt,
+/turf/open/indestructible/ground/outside/water,
+/area/f13/wasteland)
 "lgX" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/cobweb,
@@ -38292,6 +38303,14 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"spQ" = (
+/obj/structure/flora/tree/tall{
+	icon_state = "tree_2"
+	},
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland32"
+	},
+/area/f13/wasteland)
 "spR" = (
 /obj/structure/table,
 /obj/item/trash/f13/electronic/toaster,
@@ -39200,6 +39219,15 @@
 /obj/item/shovel,
 /obj/structure/table,
 /turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"sMJ" = (
+/obj/structure/closet/bus{
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain1"
+	},
 /area/f13/wasteland)
 "sMP" = (
 /obj/structure/rack,
@@ -47048,10 +47076,12 @@
 	},
 /area/f13/building)
 "wsh" = (
-/obj/structure/window/fulltile/wood_window,
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/closed/wall/f13/store,
-/area/f13/tunnel)
+/obj/structure/flora/tree/tall,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "outerpavementcorner"
+	},
+/area/f13/wasteland)
 "wso" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/under/f13/raiderharness,
@@ -52333,7 +52363,7 @@ eJW
 eJW
 kOz
 kGc
-eXx
+unI
 hbW
 xzM
 xzM
@@ -54391,7 +54421,7 @@ kOz
 kGc
 unI
 hbW
-hOl
+sMJ
 hOl
 koD
 xEc
@@ -60284,7 +60314,7 @@ gcK
 gcK
 gcK
 fyf
-qOV
+eQn
 cWG
 qop
 qop
@@ -60797,7 +60827,7 @@ ktB
 gcK
 gcK
 gcK
-uXj
+aDb
 aHH
 cvp
 mvv
@@ -60812,7 +60842,7 @@ nJW
 ptf
 ptf
 ptf
-edA
+wsh
 kGc
 unI
 hbW
@@ -61055,8 +61085,8 @@ gcK
 gcK
 gcK
 uXj
-uXj
-uXj
+eXx
+aDb
 mvv
 mvv
 rjE
@@ -61312,8 +61342,8 @@ gcK
 gcK
 uXj
 uXj
-lqV
 uXj
+lgR
 rjE
 rjE
 rjE
@@ -61321,7 +61351,7 @@ bpD
 sqA
 fyf
 fyf
-fyf
+pis
 fyf
 fyf
 fyf
@@ -61571,19 +61601,19 @@ uXj
 cuG
 uXj
 uXj
-uXj
+aDb
 mvv
 rjE
-bpD
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
+doX
+cWG
+cWG
+cWG
+cWG
+cWG
+cWG
+cWG
+cWG
+wDc
 kGc
 unI
 hbW
@@ -61828,19 +61858,19 @@ uXj
 cuG
 cuG
 uXj
-uXj
+lgR
 erx
 aBH
+mfD
+mfD
+mfD
+mfD
+mfD
+mfD
+mfD
+mfD
+mfD
 hCg
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
 kGc
 unI
 hbW
@@ -62085,7 +62115,7 @@ uXj
 cuG
 cuG
 uXj
-kCH
+lgR
 rjE
 mLN
 fyf
@@ -62340,10 +62370,10 @@ gcK
 gcK
 uXj
 cuG
-aDb
 cuG
-uXj
-uXj
+cuG
+lgR
+erx
 loX
 fyf
 fyf
@@ -62353,7 +62383,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+sqA
 fyf
 kGc
 unI
@@ -62599,7 +62629,7 @@ uXj
 uXj
 cuG
 cuG
-uXj
+lgR
 erx
 bpD
 fyf
@@ -62856,7 +62886,7 @@ gcK
 uXj
 uXj
 uXj
-uXj
+lgR
 rjE
 bpD
 fyf
@@ -63429,7 +63459,7 @@ fyf
 rhr
 fyf
 fyf
-fyf
+upX
 kGc
 cpK
 unI
@@ -63549,7 +63579,7 @@ rpu
 yjG
 dTv
 fyf
-fyf
+dTv
 jKO
 kxQ
 fyf
@@ -63942,7 +63972,7 @@ gcK
 gcK
 rhr
 fyf
-fyf
+hAC
 fyf
 kGc
 cpK
@@ -64199,7 +64229,7 @@ fyf
 gcK
 rhr
 fyf
-fyf
+hAC
 fyf
 kGc
 cpK
@@ -64451,12 +64481,12 @@ uqj
 bqt
 fyf
 fyf
-fyf
+upX
 gcK
 gcK
 rhr
 fyf
-fyf
+hAC
 fyf
 kGc
 cpK
@@ -65590,7 +65620,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+hll
 fyf
 fyf
 fyf
@@ -65721,7 +65751,7 @@ qvY
 uSj
 ktB
 fyf
-nlO
+kIv
 xbK
 ezb
 aux
@@ -65734,7 +65764,7 @@ oou
 xcX
 uqj
 fWD
-fyf
+upX
 fyf
 fyf
 gcK
@@ -65767,8 +65797,8 @@ wOw
 wOw
 bph
 fyf
-fyf
-fyf
+hAC
+hAC
 fyf
 fyf
 fyf
@@ -66024,8 +66054,8 @@ fyf
 fyf
 fyf
 fyf
-fyf
-fyf
+hAC
+hAC
 fyf
 fyf
 fyf
@@ -66254,7 +66284,7 @@ fyf
 gcK
 gcK
 rhr
-fyf
+upX
 fyf
 fyf
 kGc
@@ -66622,7 +66652,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+hll
 fyf
 fyf
 fyf
@@ -67137,8 +67167,8 @@ dMW
 fyf
 fyf
 fyf
-fyf
-fyf
+hll
+hll
 fyf
 fyf
 fyf
@@ -67283,7 +67313,7 @@ gcK
 gcK
 uSj
 fyf
-fyf
+xrd
 fyf
 kGc
 uCW
@@ -67394,12 +67424,12 @@ dMW
 fyf
 fyf
 fyf
-fyf
-fyf
+hll
+hll
 fyf
 sqA
 fyf
-fyf
+hll
 kxQ
 fyf
 fyf
@@ -67540,7 +67570,7 @@ gcK
 gcK
 uSj
 fyf
-fyf
+hAC
 fyf
 kGc
 uCW
@@ -67797,7 +67827,7 @@ gcK
 gcK
 uSj
 fyf
-fyf
+hAC
 fyf
 kGc
 cpK
@@ -68420,7 +68450,7 @@ sQX
 koD
 dMW
 fyf
-fyf
+hll
 fyf
 fyf
 fyf
@@ -68677,8 +68707,8 @@ qci
 koD
 dMW
 fyf
-fyf
-fyf
+hll
+sqA
 fyf
 fyf
 fyf
@@ -68934,7 +68964,7 @@ jYQ
 koD
 dMW
 fyf
-fyf
+hll
 fyf
 fyf
 fyf
@@ -69081,8 +69111,8 @@ gcK
 gcK
 gcK
 uSj
-fyf
-fyf
+hAC
+xrd
 fyf
 kGc
 cpK
@@ -70699,7 +70729,7 @@ mvv
 bpD
 fyf
 fyf
-fyf
+hAC
 fyf
 fyf
 fyf
@@ -72156,7 +72186,7 @@ rpu
 giZ
 fyf
 fyf
-fyf
+kGc
 pBv
 dXy
 erY
@@ -72412,8 +72442,8 @@ pSH
 rpu
 sDp
 fyf
-dhD
 fyf
+kGc
 ajD
 lSD
 erY
@@ -72670,7 +72700,7 @@ irP
 giZ
 fyf
 fyf
-fyf
+kGc
 ofX
 hbW
 erY
@@ -72926,8 +72956,8 @@ wQR
 rpu
 giZ
 fyf
-fyf
-fyf
+sqA
+kGc
 pBv
 qnS
 ubg
@@ -73184,7 +73214,7 @@ sDp
 giZ
 rsE
 fyf
-fyf
+kGc
 jIB
 dXy
 cdc
@@ -73213,7 +73243,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+hAC
 fyf
 fyf
 fyf
@@ -73441,7 +73471,7 @@ rpu
 giZ
 fyf
 fyf
-fyf
+ilu
 rAt
 grp
 wKo
@@ -73696,7 +73726,7 @@ dCU
 dQf
 rpu
 giZ
-fyf
+dhD
 fyf
 fyf
 fyf
@@ -73956,9 +73986,9 @@ giZ
 fyf
 fyf
 fyf
+sqA
 fyf
-plq
-rkr
+rlN
 fFG
 ojS
 azv
@@ -74214,8 +74244,8 @@ yeJ
 yeJ
 yeJ
 noK
-hbW
-erY
+plq
+rkr
 grf
 wTA
 jHg
@@ -74718,7 +74748,7 @@ uaf
 uCW
 giZ
 qTt
-dCU
+qMA
 giZ
 wPl
 ejl
@@ -75610,18 +75640,18 @@ fyf
 fyf
 fyf
 fyf
+uey
 fyf
 fyf
 fyf
 fyf
 fyf
+uey
 fyf
 fyf
 fyf
 fyf
-fyf
-fyf
-fyf
+uey
 fyf
 fyf
 fyf
@@ -75864,7 +75894,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+upX
 fyf
 fyf
 fyf
@@ -76127,7 +76157,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+uey
 fyf
 fyf
 fyf
@@ -76374,6 +76404,11 @@ uqa
 bpD
 fyf
 fyf
+upX
+fyf
+fyf
+fyf
+uey
 fyf
 fyf
 fyf
@@ -76382,12 +76417,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
-fyf
-fyf
-fyf
-fyf
-fyf
+uey
 fyf
 fyf
 sND
@@ -76395,7 +76425,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+uey
 fyf
 fyf
 fyf
@@ -76640,7 +76670,7 @@ fyf
 fyf
 fyf
 fyf
-fyf
+upX
 fyf
 fyf
 fyf
@@ -77164,8 +77194,8 @@ sYX
 sYX
 sYX
 fyf
-fyf
-fyf
+hAC
+uey
 fyf
 fyf
 fyf
@@ -77421,8 +77451,8 @@ vWo
 kWW
 sYX
 fyf
-fyf
-sND
+uey
+spQ
 fyf
 fyf
 fyf
@@ -77915,7 +77945,7 @@ dCV
 uqa
 bpD
 fyf
-fyf
+upX
 tBN
 mvv
 xao
@@ -82945,7 +82975,7 @@ gcK
 gcK
 gcK
 gcK
-fyf
+upX
 hAC
 fyf
 ilu
@@ -90752,7 +90782,7 @@ wSw
 srw
 fyf
 fyf
-fyf
+upX
 fyf
 fyf
 hAC
@@ -97245,7 +97275,7 @@ fyf
 fyf
 gcK
 gcK
-bBn
+krX
 rmP
 jRV
 ngw
@@ -97759,7 +97789,7 @@ fyf
 gcK
 gcK
 gcK
-eQn
+vAu
 oFq
 jGt
 qDs
@@ -98016,7 +98046,7 @@ gcK
 gcK
 gcK
 gcK
-eQn
+vAu
 iXC
 wcO
 qDs
@@ -98273,7 +98303,7 @@ gcK
 gcK
 gcK
 gcK
-eQn
+vAu
 hGm
 wcO
 qDs
@@ -98532,8 +98562,8 @@ gcK
 gcK
 vAu
 vAu
-wsh
-lgR
+vAu
+vAu
 vAu
 vAu
 gcK
@@ -106485,7 +106515,7 @@ fyf
 fyf
 fyf
 jrS
-uNK
+chW
 lkp
 mIW
 mUx
