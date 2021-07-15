@@ -114,19 +114,11 @@
 						/obj/item/clothing/under/syndicate/camo/cosmetic = 3)
 	premium = list(/obj/item/clothing/suit/pirate/captain = 2,
 					/obj/item/clothing/head/pirate/captain = 2,
-					/obj/item/clothing/under/costume/lobster = 1,
-					/obj/item/clothing/head/lobsterhat = 1,
 					/obj/item/clothing/head/drfreezehat = 1,
 					/obj/item/clothing/suit/dracula = 1,
 					/obj/item/clothing/suit/drfreeze_coat = 1,
 					/obj/item/clothing/suit/gothcoat = 2,
 					/obj/item/clothing/under/costume/draculass = 1,
-					/obj/item/clothing/under/costume/christmas = 3,
-					/obj/item/clothing/under/costume/christmas/green = 3,
-					/obj/item/clothing/under/costume/christmas/croptop = 3,
-					/obj/item/clothing/under/costume/christmas/croptop/green = 3,
-					/obj/item/clothing/head/christmashat = 3,
-					/obj/item/clothing/head/christmashatg = 3,
 					/obj/item/clothing/under/costume/drfreeze = 1)
 
 	refill_canister = /obj/item/vending_refill/autodrobe
