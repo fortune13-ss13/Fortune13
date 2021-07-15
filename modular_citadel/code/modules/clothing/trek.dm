@@ -126,9 +126,6 @@
 	item_state = "fedcapofficer"
 
 	//Variants
-/obj/item/clothing/head/caphat/formal/fedcover/medsci
-		icon_state = "fedcapsci"
-		item_state = "fedcapsci"
 
 /obj/item/clothing/head/caphat/formal/fedcover/eng
 		icon_state = "fedcapeng"
