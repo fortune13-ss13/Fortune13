@@ -125,33 +125,6 @@
 	light_range = 2
 	flags_cover = HEADCOVERSEYES
 
-/*
- * Kitty ears
- */
-/obj/item/clothing/head/kitty
-	name = "kitty ears"
-	desc = "A pair of kitty ears. Meow!"
-	icon_state = "kitty"
-	color = "#999999"
-	dynamic_hair_suffix = ""
-
-	dog_fashion = /datum/dog_fashion/head/kitty
-	beepsky_fashion = /datum/beepsky_fashion/cat
-
-/obj/item/clothing/head/kitty/equipped(mob/living/carbon/human/user, slot)
-	if(ishuman(user) && slot == SLOT_HEAD)
-		update_icon(user)
-		user.update_inv_head() //Color might have been changed by update_icon.
-	..()
-
-/obj/item/clothing/head/kitty/update_icon(mob/living/carbon/human/user)
-	if(ishuman(user))
-		add_atom_colour("#[user.hair_color]", FIXED_COLOUR_PRIORITY)
-
-/obj/item/clothing/head/kitty/genuine
-	desc = "A pair of kitty ears. A tag on the inside says \"Hand made from real cats.\""
-
-
 /obj/item/clothing/head/hardhat/reindeer
 	name = "novelty reindeer hat"
 	desc = "Some fake antlers and a very fake red nose."

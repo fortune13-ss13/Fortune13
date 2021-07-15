@@ -92,7 +92,6 @@
 	/obj/item/clothing/head/centhat,
 	/obj/item/clothing/head/HoS,
 	/obj/item/clothing/head/beret,
-	/obj/item/clothing/head/kitty,
 	/obj/item/clothing/head/hopcap,
 	/obj/item/clothing/head/wizard,
 	/obj/item/clothing/head/nursehat,

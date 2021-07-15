@@ -106,16 +106,6 @@
 	cost = 25
 	item_path = /obj/item/clothing/under/f13/female/flapper
 
-/datum/gang_item/clothing/hat
-	name = "Pimp Hat"
-	id = "hat"
-	cost = 30
-	item_path = /obj/item/clothing/head/collectable/petehat/gang
-
-/obj/item/clothing/head/collectable/petehat/gang
-	name = "pimpin' hat"
-	desc = "The undisputed king of style."
-
 /datum/gang_item/clothing/glasses/sunglasses
 	name = "Sunglasses"
 	id = "sunglasses"

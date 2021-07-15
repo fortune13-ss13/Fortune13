@@ -258,16 +258,6 @@
 	subcategory = CAT_GENCLOTHES
 	always_availible = FALSE
 
-/datum/crafting_recipe/kittyears
-	name = "Kitty Ears"
-	result = /obj/item/clothing/head/kitty/genuine
-	time = 10
-	reqs = list(/obj/item/organ/tail/cat = 1,
-				/obj/item/organ/ears/cat = 1)
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
-
 /datum/crafting_recipe/hudsunsec
 	name = "Security HUDsunglasses"
 	result = /obj/item/clothing/glasses/hud/security/sunglasses
