@@ -16,7 +16,7 @@
 	emote_taunt = list("stares ferociously", "stomps")
 	speak_chance = 10
 	taunt_chance = 25
-	speed = -1
+	speed = -2.5
 	see_in_dark = 8
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 4,
 							/obj/item/stack/sheet/animalhide/deathclaw = 2,
@@ -26,8 +26,9 @@
 	response_harm_simple   = "hits"
 	maxHealth = 750
 	health = 750
-	obj_damage = 200
-	armour_penetration = 0.7
+	environment_smash = ENVIRONMENT_SMASH_RWALLS
+	obj_damage = 800
+	armour_penetration = 0.6
 	melee_damage_lower = 80
 	melee_damage_upper = 85
 	attack_verb_simple = "claws"
@@ -37,9 +38,14 @@
 	unsuitable_atmos_damage = 5
 	gold_core_spawnable = HOSTILE_SPAWN
 	var/charging = FALSE
+	var/charge_chance = 30 // prob(x) chance to charge when hit with a bullet.
 	wound_bonus = 0 //This might be a TERRIBLE idea
 	bare_wound_bonus = 0 //is already 0 from simple_animal.dm but putting it here for ease of adjustment
 	sharpness = SHARP_EDGED
+
+	var/deflect_chance = 65 // Flat chance for bullet to damage the deatclaw if it doesn't meet conditions below.
+	var/deflect_damage = 30 // If projectile has damage less than that, it might get deflected.
+	var/deflect_AP = 0.2 // If projectile has AP less than that, it might get deflected.
 
 	emote_taunt_sound = list('sound/f13npc/deathclaw/taunt.ogg')
 	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
@@ -52,7 +58,6 @@
 	aggrosound = null
 	idlesound = null
 	see_in_dark = 8
-	environment_smash = 2 //can smash walls
 	wander = 0
 
 /mob/living/simple_animal/hostile/deathclaw/mother
@@ -68,6 +73,9 @@
 	color = rgb(95,104,94)
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
+	deflect_chance = 55
+	deflect_damage = 34
+	deflect_AP = 0.25
 
 /mob/living/simple_animal/hostile/deathclaw/legendary
 	name = "legendary deathclaw"
@@ -79,6 +87,10 @@
 	melee_damage_lower = 80
 	melee_damage_upper = 85
 	armour_penetration = 0.85
+	charge_chance = 40
+	deflect_chance = 45 // Truly Legendary
+	deflect_damage = 40
+	deflect_AP = 0.3 // Bring AP ammo just to be sure.
 
 /mob/living/simple_animal/hostile/deathclaw/legendary/death(gibbed)
 	var/turf/T = get_turf(src)
@@ -89,11 +101,11 @@
 /mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
-	if(prob(10))
+	if(prob(charge_chance))
 		visible_message("<span class='danger'>\The [src] growls, enraged!</span>")
-		sleep(3)
+		SLEEP_CHECK_DEATH(3)
 		Charge()
-	if(prob(85) || Proj.damage > 30) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want deathclaws to be
+	if(prob(deflect_chance) || Proj.damage > deflect_damage || Proj.armour_penetration > deflect_AP)
 		return ..()
 	else
 		visible_message("<span class='danger'>\The [Proj] bounces off \the [src]'s thick hide!</span>")
@@ -130,7 +142,7 @@
 	setDir(get_dir(src, T))
 	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(loc,src)
 	animate(D, alpha = 0, color = "#FF0000", transform = matrix()*2, time = 1)
-	sleep(3)
+	SLEEP_CHECK_DEATH(3)
 	throw_at(T, get_dist(src, T), 1, src, 0, callback = CALLBACK(src, .proc/charge_end))
 
 /mob/living/simple_animal/hostile/deathclaw/proc/charge_end(list/effects_to_destroy)

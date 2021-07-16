@@ -691,6 +691,7 @@
 	icon_dead = "abomination_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
+	obj_damage = 500 // Begone, tables
 	robust_searching = 1
 	maxHealth = 1000
 	health = 1000
@@ -700,7 +701,7 @@
 	armour_penetration = 0.1
 	attack_verb_simple = "eviscerates"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	speed = -0.5
+	speed = -1
 	var/static/list/abom_sounds
 	deathmessage = "wails as its form shudders and violently comes to a stop."
 	death_sound = 'sound/voice/abomburning.ogg'
