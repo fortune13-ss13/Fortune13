@@ -368,7 +368,8 @@ Raider
 	/datum/outfit/loadout/raider_vault,
 	/datum/outfit/loadout/raider_ncr,
 	/datum/outfit/loadout/raider_legion,
-	/datum/outfit/loadout/raider_tribal
+	/datum/outfit/loadout/raider_tribal,
+	/datum/outfit/loadout/raider_enclave
 	)
 
 /datum/outfit/job/wasteland/f13raider
@@ -569,6 +570,17 @@ Raider
 		/obj/item/clothing/mask/cigarette/pipe=1,
 		/obj/item/kitchen/knife/combat/bone=1)
 
+/datum/outfit/loadout/raider_enclave
+	name = "Enclave Remnant"
+	r_hand = /obj/item/storage/backpack/satchel/enclave
+	suit = /obj/item/clothing/suit/armor/f13/battlecoat/tan/armored // Tier 4 armor
+	uniform = /obj/item/clothing/under/f13/exile/enclave
+	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
+	id = /obj/item/card/id/rusted/brokenholodog/enclave
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
+		/obj/item/ammo_box/magazine/m45=2)
+
 
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
@@ -576,8 +588,8 @@ Raider
 	faction = "Wastelander"
 	total_positions = -1
 	spawn_positions = -1
-	description = "You travelled far to arrive at the ruined town of Pahrump, a bleak paradise far from the troubles of the Mojave Conflict - protected by Red Rock Canyon to the east, free of the many factions vying for control over Nevada. Here in Pahrump, your story and fate is your own."
-	supervisors = "no one"
+	description = "You arrive in Yuma Valley, hoping to escape your past, the war, or perhaps something worse. But you’ve seen the torchlight and heard the bark of the military officers. You haven’t escaped anything. Try to survive, establish your own settlement, make your own legend. Suffer well and die gladly."
+	supervisors = "God"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
@@ -591,7 +603,8 @@ Raider
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/scavenger,
 	/datum/outfit/loadout/citizen,
-	/datum/outfit/loadout/ncrcitizen)
+	/datum/outfit/loadout/ncrcitizen,
+	/datum/outfit/loadout/wastelander_desert_ranger)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -609,14 +622,12 @@ Raider
 	uniform = pick(
 		/obj/item/clothing/under/f13/settler, \
 		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/machinist, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
 	suit = pick(
 		/obj/item/clothing/suit/armor/f13/kit, \
 		/obj/item/clothing/suit/f13/veteran, \
-		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer, \
-		/obj/item/clothing/suit/armor/f13/leatherarmor)
+		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer)
 	l_pocket = 	/obj/item/reagent_containers/food/drinks/flask
 	r_pocket = /obj/item/flashlight/flare
 	belt = 	/obj/item/kitchen/knife/combat/survival
@@ -625,15 +636,10 @@ Raider
 		/obj/item/reagent_containers/pill/radx=1, \
 		/obj/item/storage/bag/money/small/wastelander, \
 		/obj/item/kitchen/knife)
-	suit_store = pick(
-	/obj/item/gun/ballistic/revolver/detective, \
-	/obj/item/gun/ballistic/rifle/hunting, \
-	/obj/item/gun/ballistic/automatic/hobo/zipgun, \
-	/obj/item/gun/ballistic/revolver/hobo/pepperbox)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
-	suit = /obj/item/clothing/suit/apron
+	uniform = /obj/item/clothing/under/f13/machinist
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	head = /obj/item/clothing/head/welding
@@ -718,6 +724,17 @@ Raider
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=2)
 
+/datum/outfit/loadout/wastelander_desert_ranger
+	name = "Desert Ranger Scout"
+	uniform = /obj/item/clothing/under/f13/desert_ranger_scout
+	shoes = /obj/item/clothing/shoes/f13/cowboy
+	head = /obj/item/clothing/head/f13/cowboy
+	gloves = /obj/item/clothing/gloves/color/brown
+	l_hand = /obj/item/gun/ballistic/revolver/colt357
+	backpack_contents = list(
+		/obj/item/ammo_box/a357=2,
+		/obj/item/binoculars=1,
+		/obj/item/radio=1)
 
 /datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
