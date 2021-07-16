@@ -13,7 +13,7 @@
 	supervisors = "the United States Government."
 	selection_color = "#323232"
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 1200
+	exp_requirements = 2400
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -101,7 +101,7 @@
 	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 2800
+	exp_requirements = 4800
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -157,7 +157,7 @@
 	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 1500
+	exp_requirements = 2400
 	exp_type = EXP_TYPE_ENCLAVE
 
 	access = list(ACCESS_ENCLAVE)
