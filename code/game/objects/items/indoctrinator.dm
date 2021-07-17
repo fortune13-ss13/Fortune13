@@ -30,13 +30,13 @@
 	if(M == user)
 		to_chat(user, "<span class='warning'>You can't use [src] on yourself!</span>")
 		return
-	if(item_charges <= 0) // No charges left.
-		to_chat(user, "<span class='warning'>[src] has no uses left!</span>")
-		return
 	if(given_faction in M.faction) // Target already has the faction.
 		to_chat(user, "<span class='notice'>[M] is already a part of [given_faction].</span>")
 		return
-	if(M.stat > SOFT_CRIT)
+	if(item_charges <= 0) // No charges left.
+		to_chat(user, "<span class='warning'>[src] has no uses left!</span>")
+		return
+	if(M.stat >= SOFT_CRIT)
 		to_chat(user, "<span class='warning'>[M] should be healthy to receive treatment!</span>")
 		return
 	if(!M.mind)
@@ -52,18 +52,27 @@
 	if(!do_after(user, use_time, target = M))
 		return
 	to_chat(user, "<span class='notice'>[M]'s brain begins to react to [src].</span>")
-	if(alert(M, "Do you wish to become a part of [given_faction]?", "Yes", "No") == "No" || "Cancel")
+	if(alert(M, "Do you wish to become a part of [given_faction]?", "Indoctrination", "Yes", "No") != "Yes")
 		to_chat(user, "<span class='warning'>The brain of the subject resists procedure!</span>")
 		return
-	M.faction |= given_faction // Give the faction.
-	to_chat(M, "<big><span class='warning'><b>[indoc_message]</b></span></big>")
-	M.visible_message("<span class='notice'>[M] shakes for a moment, then [M.p_their()] eyes focus on surroundings.</span>")
-	message_admins("<span class='notice'>[key_name(M)] joined [given_faction] via the use of [src].</span>")
+	indoctrinate(M)
+
+/obj/item/indoctrinator/proc/indoctrinate(mob/living/carbon/human/target)
+	playsound(src, 'sound/effects/sparks3.ogg', 50, 1)
+	target.faction |= given_faction // Give the faction.
+	to_chat(target, "<big><span class='warning'><b>[indoc_message]</b></span></big>")
+	target.mind.store_memory(indoc_message)
+	target.visible_message("<span class='notice'>[target] shakes for a moment, then [target.p_their()] eyes focus on surroundings.</span>")
+	message_admins("<span class='notice'>[key_name(target)] joined [given_faction] via the use of [src].</span>")
 	item_charges -= 1 // Charge be gone.
-	M.Jitter(10)
+	target.Jitter(10)
 
 /obj/item/indoctrinator/enclave
 	desc = "A high-tech device used by the scientists of the Enclave. Apply it on a willing target to begin the indoctrination process."
 	given_faction = "Enclave" // What faction it gives and checks for.
 	item_charges = 12 // How many uses left
 	indoc_message = "You are a loyal soldier of the Enclave! You must obey every order issued to you by the Enclave officers and scientists. You must protect the Enclave and its secrecy. You can't abandon your duties."
+
+/obj/item/indoctrinator/enclave/indoctrinate(mob/living/carbon/human/target)
+	..()
+	target.mind.add_antag_datum(/datum/antagonist/enclave)
