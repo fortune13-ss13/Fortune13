@@ -44,7 +44,9 @@
 
 	var/true_spawn = TRUE // if this is a megafauna that should grant achievements, or have a gps signal
 	var/nest_range = 10
-	var/chosen_attack = 1 // chosen attack num
+	/// The chosen attack by the megafauna
+	var/chosen_attack = 1
+	/// Attack actions, sets chosen_attack to the number in the action
 	var/list/attack_action_types = list()
 	var/small_sprite_type
 

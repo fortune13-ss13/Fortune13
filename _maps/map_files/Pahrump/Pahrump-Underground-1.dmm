@@ -6783,6 +6783,12 @@
 /obj/structure/decoration/rag,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/den)
+"fOC" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/floor/f13{
+	icon_state = "redrustyfull"
+	},
+/area/f13/bunker)
 "fOH" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/floor/plasteel/freezer,
@@ -9375,6 +9381,10 @@
 /obj/item/cultivator,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
+"hLt" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/caves)
 "hLS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/sign{
@@ -10783,6 +10793,12 @@
 	icon_state = "bluerustysolid"
 	},
 /area/f13/den)
+"iSh" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/floor/f13{
+	icon_state = "bluerustyfull"
+	},
+/area/f13/bunker)
 "iSA" = (
 /mob/living/simple_animal/hostile/deathclaw,
 /turf/open/floor/f13{
@@ -12922,6 +12938,13 @@
 /obj/structure/reagent_dispensers/barrel/old,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/tunnel)
+"kzC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/bunker)
 "kzO" = (
 /obj/machinery/vending/nukacolavend,
 /obj/machinery/light/small{
@@ -13022,6 +13045,16 @@
 	dir = 4
 	},
 /mob/living/simple_animal/hostile/raider/firefighter,
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/bunker)
+"kDW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/decal/remains/deadeyebot,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -15477,33 +15510,8 @@
 	},
 /area/f13/clinic)
 "mEc" = (
-/mob/living/simple_animal/hostile/enclave/soldier{
-	aggro_vision_range = 15;
-	armour_penetration = 1;
-	desc = "A grotesque, Enclave-manufactured and Enclave-loyal prime super mutant given cybernetic augmentations, unique hardened power armor, and an arm-mounted plasma repeater, alongside drug cocktails administered by his suit. Your ride's over mutie, time to die.";
-	environment_smash = 2;
-	extra_projectiles = 10;
-	faction = list("wastebot");
-	health = 3000;
-	icon = 'icons/fallout/mobs/bigmob.dmi';
-	icon_dead = "arlem";
-	icon_gib = "arlem";
-	icon_living = "arlem";
-	icon_state = "arlem";
-	loot = list(/obj/item/keycard/library);
-	maxHealth = 3000;
-	melee_damage_lower = 100;
-	melee_damage_upper = 100;
-	melee_queue_distance = 10;
-	name = "Captain Arlem";
-	obj_damage = 300;
-	ranged_ignores_vision = 1;
-	speak = list("Die... mutie!","AAAAUHGHHHH!","DIE!","Perish!","FOR THE ENCLAVE!");
-	speak_chance = 10;
-	speak_emote = list("shouts");
-	speed = -1
-	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/megafauna/captainarlem,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "mEf" = (
@@ -15893,7 +15901,15 @@
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
 "mTe" = (
-/mob/living/simple_animal/hostile/enclave/soldier,
+/mob/living/simple_animal/hostile/enclave/soldier{
+	desc = "A former Enclave soldier, mutated by the forced evolutionary virus and grafted to the interior of his suit.";
+	extra_projectiles = 1;
+	faction = list("wastebot");
+	loot = null;
+	name = "Private Harry";
+	speak = list("AUUGHGHHH!");
+	speak_emote = list("shouts")
+	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -15970,6 +15986,10 @@
 	icon_state = "casino"
 	},
 /area/f13/brotherhood/operations)
+"mUU" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "mVe" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/cardboard/fifty,
@@ -16422,6 +16442,10 @@
 /obj/item/stack/ore/blackpowder/twenty,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/den)
+"nnB" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/indestructible/ground/inside/dirt,
+/area/f13/tunnel)
 "nnN" = (
 /obj/machinery/smartfridge/chemistry/preloaded,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -24219,6 +24243,10 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker)
+"tgJ" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "tht" = (
 /obj/item/storage/fancy/candle_box,
 /obj/item/storage/fancy/candle_box,
@@ -25254,6 +25282,12 @@
 /obj/structure/rack,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"tXw" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/bunker)
 "tYj" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -26378,6 +26412,7 @@
 "vaV" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/deadeyebot,
 /turf/open/floor/f13{
 	icon_state = "bluedirtyfull"
 	},
@@ -33565,7 +33600,7 @@ eLE
 eLE
 eLE
 aOW
-fSV
+fOC
 eBg
 amM
 aOW
@@ -34852,7 +34887,7 @@ mir
 aOW
 eBg
 dFI
-eBg
+tXw
 aOW
 gPj
 mcF
@@ -35138,7 +35173,7 @@ uoO
 uoO
 uoO
 uoO
-xVz
+tgJ
 xVz
 xVz
 peA
@@ -36652,7 +36687,7 @@ eBg
 eBg
 nRE
 uTk
-qju
+kzC
 aOW
 nFX
 fSV
@@ -36674,7 +36709,7 @@ myy
 myy
 myy
 myy
-myy
+hLt
 myy
 dDi
 xVz
@@ -37171,14 +37206,14 @@ aOW
 wle
 cuc
 ycu
-fSV
+fOC
 rhO
 vfY
 pba
 qiO
 myy
 myy
-myy
+hLt
 myy
 myy
 myy
@@ -37420,7 +37455,7 @@ aOW
 aOW
 aOW
 wSf
-xnV
+kDW
 fSV
 xnV
 mWE
@@ -38733,7 +38768,7 @@ uoO
 uoO
 uoO
 uoO
-xVz
+tgJ
 xVz
 wcF
 jPC
@@ -39990,7 +40025,7 @@ eLE
 eLE
 eLE
 aOW
-fSV
+fOC
 fSV
 eBg
 aOW
@@ -40006,7 +40041,7 @@ aOW
 aOW
 aOW
 aOW
-rTP
+iSh
 wYe
 mEc
 npC
@@ -41558,7 +41593,7 @@ eLE
 eLE
 uoO
 uoO
-xVz
+tgJ
 xVz
 uoO
 xVz
@@ -42044,7 +42079,7 @@ uoO
 eLE
 eLE
 aOW
-fSV
+fOC
 fSV
 fSV
 fSV
@@ -42334,7 +42369,7 @@ uoO
 uoO
 uoO
 xVz
-xVz
+tgJ
 uoO
 uoO
 uoO
@@ -42565,7 +42600,7 @@ iXE
 aOW
 aOW
 aOW
-lnr
+mUU
 euY
 euY
 nEr
@@ -43346,7 +43381,7 @@ kMZ
 nBk
 cRW
 aAE
-nEr
+nnB
 eLE
 eLE
 eLE
