@@ -17,7 +17,7 @@
 
 /datum/atom_hud/data
 
-/datum/atom_hud/data/client
+/datum/atom_hud/data/human/client
 	hud_icons = list(ONLINE_HUD)
 
 /datum/atom_hud/data/human/medical
@@ -97,12 +97,23 @@
 	var/image/onlineholder = hud_list[ONLINE_HUD]
 	var/icon/I = icon(icon, icon_state, dir)
 	onlineholder.pixel_y = I.Height() - world.icon_size
-	if(!istype(src, /mob/living/carbon/human) && !client)
-		onlineholder.icon_state = "none"
-	else if(istype(src, /mob/living/carbon/human) && !client || !key)
+	if(!client || !key)
 		onlineholder.icon_state = "offline"
 	else
-		onlineholder.icon_state = "online"
+		onlineholder.icon_state = "none"
+
+/mob/living/carbon/human/Logout()
+	..()
+	hud_client_check()
+
+/mob/living/carbon/human/Login()
+	..()
+	hud_client_check()
+
+/mob/living/carbon/human/Initialize()
+	..()
+	var/datum/atom_hud/data/human/client/clienthud = GLOB.huds[DATA_HUD_CLIENT]
+	clienthud.add_hud_to(src)
 
 //called when a carbon changes virus
 /mob/living/carbon/proc/check_virus()
@@ -194,7 +205,6 @@
 		holder.icon_state = "huddead"
 	else
 		holder.icon_state = "hudhealthy"
-	hud_client_check()
 
 /mob/living/carbon/med_hud_set_status()
 	var/image/holder = hud_list[STATUS_HUD]

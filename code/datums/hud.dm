@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(huds, list(
 	ANTAG_HUD_BLOODSUCKER = new/datum/atom_hud/antag/bloodsucker(),
 	ANTAG_HUD_FUGITIVE = new/datum/atom_hud/antag(),
 	ANTAG_HUD_HERETIC = new/datum/atom_hud/antag/hidden(),
-	DATA_HUD_CLIENT = new/datum/atom_hud/data/client()
+	DATA_HUD_CLIENT = new/datum/atom_hud/data/human/client()
 	))
 
 /datum/atom_hud

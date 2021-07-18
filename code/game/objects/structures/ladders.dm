@@ -187,6 +187,25 @@
 	if(AM)
 		user.start_pulling(AM)
 
+/obj/structure/ladder/densityBypass()
+	return TRUE
+
+/obj/structure/ladder/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
+	if(isitem(AM) && AM.CanEnterDisposals())
+		if(prob(75))
+			if(up)
+				AM.forceMove(up)
+			else if(down)
+				AM.forceMove(down)
+			else if(up && down)
+				AM.forceMove(down)
+			else
+				return ..()
+		else
+			return ..()
+	else
+		return ..()
+
 /obj/structure/ladder/proc/use(mob/user, is_ghost=FALSE)
 	if (!is_ghost && !in_range(src, user))
 		return
