@@ -330,7 +330,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
-/*
+
 /obj/item/clothing/suit/armor/f13/legion/recruit/scout
 	name = "legion scout armor"
 	desc = "(II) A modified set of recruit armor with the chestplate removed to provide greater agility and reduce weight."
@@ -347,7 +347,7 @@
 	desc = "(VI) The armor of the Champion and Conqueror of the city in Utah named Kanab. The armor is made up of pieces of Power Armor and pre-war Riot Gear, the shin guards are spraypainted a dark crimson and the Power Armour pauldron has a red trim. The symbol of a Pheonix is carefully engraved and painted upon the chest piece... I wonder what it means.."
 	icon_state = "palacent_excess"
 	item_state = "palacent_excess"
-*/
+
 
 //NCR
 /obj/item/clothing/suit/armor/f13/ncrarmor
