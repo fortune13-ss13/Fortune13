@@ -70,6 +70,7 @@ while read f; do
         echo "file $f is missing a trailing newline"
         st=1
     fi;
+done < <(find . -type f -name '*.dm')
 if grep -P '^/[\w/]\S+\(.*(var/|, ?var/.*).*\)' code/**/*.dm; then
     echo "changed files contains proc argument starting with 'var'"
     st=1
