@@ -18,7 +18,7 @@
 
 /turf/open/transparent/update_multiz(prune_on_fail = FALSE, init = FALSE)
 	. = ..()
-	var/turf/T = below()
+	var/turf/T = locate() in SSmapping.get_turf_below(get_turf(src))
 	if(!T)
 		vis_contents.len = 0
 		if(!show_bottom_level() && prune_on_fail) //If we cant show whats below, and we prune on fail, change the turf to plating as a fallback
