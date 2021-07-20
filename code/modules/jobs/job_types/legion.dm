@@ -241,21 +241,22 @@ commented out pending rework*/
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
-	name = 			"Legion Veteran Decanus"
-	jobtype = 		/datum/job/CaesarsLegion/Legionnaire/f13decanvet
-	id = 			/obj/item/card/id/dogtag/legveteran
-	suit = 			/obj/item/clothing/suit/armor/f13/legion/heavy
-	mask =			/obj/item/clothing/mask/bandana/legion/legdecan
-	neck =			/obj/item/storage/belt/holster
-	gloves =		/obj/item/clothing/gloves/legion/plated
-	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	r_pocket =      /obj/item/flashlight/lantern
-	box = 			/obj/item/storage/survivalkit_tribal/chief
+	name = "Legion Veteran Decanus"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
+	id = /obj/item/card/id/dogtag/legveteran
+	suit = /obj/item/clothing/suit/armor/f13/legion/heavy
+	mask = /obj/item/clothing/mask/bandana/legion/legdecan
+	neck = /obj/item/storage/belt/holster
+	gloves = /obj/item/clothing/gloves/legion/plated
+	glasses = /obj/item/clothing/glasses/sunglasses/big
+	r_pocket = /obj/item/flashlight/lantern
+	box = /obj/item/storage/survivalkit_tribal/chief
 	backpack_contents = list(
-					/obj/item/ammo_box/a357=1,
-					/obj/item/gun/ballistic/revolver/colt357=1,
-					/obj/item/restraints/handcuffs=1,
-					/obj/item/storage/bag/money/small/legion=1)
+		/obj/item/ammo_box/a357 = 1,
+		/obj/item/gun/ballistic/revolver/colt357 = 1,
+		/obj/item/restraints/handcuffs = 1,
+	/obj/item/storage/bag/money/small/legion = 1,
+	)
 
 /datum/outfit/loadout/decvetfront
 	name =			"Lead from the front"
