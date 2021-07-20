@@ -127,26 +127,6 @@
 	qdel(src)
 
 
-// Molotov Cocktail
-/obj/item/grenade/homemade/molotov
-	name = "molotov cocktail"
-	desc = "A bottle with flammable stuff and a rag. Either drink it or set it on fire and chuck it at people you don't like."
-	icon_state = "molotov"
-	item_state = "ied"
-
-/obj/item/grenade/homemade/molotov/attack_self(mob/user) //
-	if(!active)
-		if(!botch_check(user))
-			to_chat(user, "<span class='warning'>You light the rag!</span>")
-			primefuse(user, null, FALSE)
-
-/obj/item/grenade/homemade/molotov/prime(mob/living/lanced_by) //Blowing that can up
-	. = ..()
-	update_mob()
-	explosion(src.loc,-1, flame_range = 3)	// tiny explosion, plus a large fireball.
-	qdel(src)
-
-
 // Firebomb
 /obj/item/grenade/homemade/firebomb
 	name = "firebomb"
@@ -159,3 +139,80 @@
 	update_mob()
 	explosion(src.loc,-1,-1,2, flame_range = 4)	// small explosion, plus a very large fireball.
 	qdel(src)
+
+
+// Molotov Cocktail
+/obj/item/reagent_containers/food/drinks/bottle/molotov
+	name = "molotov cocktail"
+	desc = "A empty bottle with a rag in it. Needs to be filled with a flammable liquid before being lit on fire and chucked at someone you don't like."
+	icon = 'icons/fallout/objects/guns/explosives.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/special_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/special_righthand.dmi'
+	icon_state = "molotov"
+	item_state = "ied"
+	list_reagents = list()
+	var/list/accelerants = list(	/datum/reagent/consumable/ethanol, /datum/reagent/fuel, /datum/reagent/clf3, /datum/reagent/phlogiston,
+							/datum/reagent/napalm, /datum/reagent/hellwater, /datum/reagent/toxin/plasma, /datum/reagent/toxin/spore_burning)
+	var/active = 0
+
+/obj/item/reagent_containers/food/drinks/bottle/molotov/CheckParts(list/parts_list)
+	..()
+	var/obj/item/reagent_containers/food/drinks/bottle/B = locate() in contents
+	if(B)
+		icon_state = B.icon_state
+		B.reagents.copy_to(src,100)
+		if(!B.isGlass)
+			desc += " You're not sure if making this out of a carton was the brightest idea."
+			isGlass = FALSE
+	return
+
+/obj/item/reagent_containers/food/drinks/bottle/molotov/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	var/firestarter = 0
+	for(var/datum/reagent/R in reagents.reagent_list)
+		for(var/A in accelerants)
+			if(istype(R,A))
+				firestarter = 1
+				break
+	if(firestarter && active)
+		hit_atom.fire_act()
+		new /obj/effect/hotspot(get_turf(hit_atom))
+	..()
+
+/obj/item/reagent_containers/food/drinks/bottle/molotov/attackby(obj/item/I, mob/user, params)
+	if(I.get_temperature() && !active)
+		active = 1
+		var/message = "[ADMIN_LOOKUP(user)] has primed a [name] for detonation at [ADMIN_VERBOSEJMP(user)]."
+		GLOB.bombers += message
+		message_admins(message)
+		log_game("[key_name(user)] has primed a [name] for detonation at [AREACOORD(user)].")
+
+		to_chat(user, "<span class='info'>You light [src] on fire.</span>")
+		icon_state = initial(icon_state) + "_active"
+		item_state = initial(item_state) + "_active"
+		if(!isGlass)
+			spawn(50)
+				if(active)
+					var/counter
+					var/target = src.loc
+					for(counter = 0, counter<2, counter++)
+						if(istype(target, /obj/item/storage))
+							var/obj/item/storage/S = target
+							target = S.loc
+					if(istype(target, /atom))
+						var/atom/A = target
+						SplashReagents(A)
+						A.fire_act()
+					qdel(src)
+
+/obj/item/reagent_containers/food/drinks/bottle/molotov/attack_self(mob/user)
+	if(active)
+		if(!isGlass)
+			to_chat(user, "<span class='danger'>The flame's spread too far on it!</span>")
+			return
+		to_chat(user, "<span class='info'>You snuff out the flame on [src].</span>")
+		cut_overlay(GLOB.fire_overlay)
+		active = 0
+
+/obj/item/export/bottle/attack_self(mob/user)
+	to_chat(user, "<span class='danger'>The seal seems fine. Best to not open it.</span>")
+	return
