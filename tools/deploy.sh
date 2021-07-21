@@ -27,6 +27,8 @@ cp -r _maps/* $1/_maps/
 cp -r icons/runtime/* $1/icons/runtime/
 cp -r sound/runtime/* $1/sound/runtime/
 cp -r strings/* $1/strings/
+cp *auxmos.* $1/ || true
+cp *auxtools_tg.* $1/ || true
 cp -r tgui/public/* $1/tgui/public/
 cp -r tgui/packages/tgfont/dist/* $1/tgui/packages/tgfont/dist/
 
@@ -36,6 +38,7 @@ cp -r tgui/packages/tgfont/dist/* $1/tgui/packages/tgfont/dist/
 #find $1/_maps -name "*.dm" -type f -delete
 
 #dlls on windows
+cp rust_g* $1/ || true
 if [ "$(uname -o)" = "Msys" ]; then
 	cp ./*.dll $1/
 fi
