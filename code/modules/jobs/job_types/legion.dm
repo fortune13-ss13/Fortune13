@@ -383,7 +383,7 @@ commented out pending rework*/
 	belt = 			/obj/item/storage/belt/military/assault/legion
 	backpack_contents = list(
 					/obj/item/ammo_box/shotgun/buck=2,
-					/obj/item/claymore/machete/reinforced=1)
+					/obj/item/melee/onehanded/machete=1)
 
 /datum/outfit/loadout/recdectribal
 	name =			"Tribal background"
@@ -592,7 +592,7 @@ commented out pending rework*/
 	suit_store =	/obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
 					/obj/item/ammo_box/a357=3,
-					/obj/item/claymore/machete/reinforced=1)
+					/obj/item/melee/onehanded/machete=1)
 
 /datum/outfit/loadout/primebrave
 	name =			"Brave"
@@ -645,7 +645,7 @@ commented out pending rework*/
 	name =			"Legion Recruit"
 	suit_store =	/obj/item/gun/ballistic/automatic/autopipe
 	backpack_contents = list(
-					/obj/item/claymore/machete=1,
+					/obj/item/melee/onehanded/machete=1,
 					/obj/item/ammo_box/magazine/autopipe=1)
 
 
@@ -706,7 +706,7 @@ commented out pending rework*/
 	l_pocket =		/obj/item/attachments/scope
 	suit_store =	/obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
-					/obj/item/claymore/machete/reinforced=1,
+					/obj/item/melee/onehanded/machete=1,
 					/obj/item/ammo_box/tube/m44=3,
 					/obj/item/gun/ballistic/revolver/colt357=1,
 					/obj/item/ammo_box/a357=1)
@@ -760,9 +760,9 @@ commented out pending rework*/
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/prime/slavemaster
 	suit_store = 	/obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
-		/obj/item/claymore/machete/reinforced=1,
+		/obj/item/melee/onehanded/machete=1,
 		/obj/item/ammo_box/shotgun/bean=1,
-		/obj/item/melee/curator_whip=1,
+		/obj/item/melee/onehanded/slavewhip=1,
 		/obj/item/razor=1,
 		/obj/item/restraints/legcuffs/bola=1)
 
