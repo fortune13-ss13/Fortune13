@@ -15,7 +15,7 @@
 	icon_state = "legion"
 	item_state = "legion"
 
-/obj/item/clothing/glasses/legiongoggles
+/obj/item/clothing/glasses/legionpolarizing
 	icon_state = "legpolarizing"
 	item_state = "legpolarizing"
 
