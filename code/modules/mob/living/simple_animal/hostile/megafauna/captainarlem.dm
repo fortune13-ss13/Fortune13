@@ -37,11 +37,17 @@
 	deathmessage = "chokes on his own blood, falling over as he activates his suit's self destruct!"
 	deathsound = 'sound/effects/gravhit.ogg'
 	del_on_death = FALSE
-	loot = list(/obj/item/keycard/library, /obj/effect/gibspawner/human, /obj/effect/temp_visual/gib_animation)
-	attack_action_types = list(/datum/action/innate/megafauna_attack/charge,
-							   /datum/action/innate/megafauna_attack/triple_charge,
-							   /datum/action/innate/megafauna_attack/blast,
-							   /datum/action/innate/megafauna_attack/eyebots)
+	loot = list(
+		/obj/item/keycard/library,
+		/obj/effect/gibspawner/human,
+		/obj/effect/temp_visual/gib_animation,
+		)
+	attack_action_types = list(
+		/datum/action/innate/megafauna_attack/charge,
+		/datum/action/innate/megafauna_attack/triple_charge,
+		/datum/action/innate/megafauna_attack/blast,
+		/datum/action/innate/megafauna_attack/eyebots,
+		)
 	var/list/spans_list = list("danger", "big")
 /* Cooldowns for abilities */
 	var/charge_cooldown = 0
@@ -145,14 +151,14 @@ mob/living/simple_animal/hostile/megafauna/captainarlem/do_attack_animation(atom
 		if(isturf(A) || isobj(A) && A.density)
 			A.ex_act(EXPLODE_HEAVY)
 		else if(isliving(A))
-			var/mob/living/L = A
-			L.visible_message("<span class='danger'>[src] laughs maniacally as he rends[L]!</span>", "<span class='userdanger'>[src] slams into you, laughing maniacally!</span>")
-			L.apply_damage(50, BRUTE)
-			playsound(get_turf(L), 'sound/effects/meteorimpact.ogg', 100, 1)
-			shake_camera(L, 4, 3)
-			var/throwtarget = get_edge_target_turf(src, get_dir(src, get_step_away(L, src)))
-			L.throw_at(throwtarget, 3)
-	..()
+			var/mob/living/Moron = A
+			Moron.visible_message("<span class='danger'>[src] laughs maniacally as he rends [Moron]!</span>", "<span class='userdanger'>[src] slams into you, laughing maniacally!</span>")
+			Moron.apply_damage(50, BRUTE)
+			playsound(get_turf(Moron), 'sound/effects/meteorimpact.ogg', 100, 1)
+			shake_camera(Moron, 4, 3)
+			var/throwtarget = get_edge_target_turf(src, get_dir(src, get_step_away(Moron, src)))
+			Moron.throw_at(throwtarget, 3)
+	return ..()
 
 /mob/living/simple_animal/hostile/megafauna/captainarlem/proc/triple_charge(target)
 	if(charge_cooldown >= world.time)
@@ -241,7 +247,9 @@ mob/living/simple_animal/hostile/megafauna/captainarlem/do_attack_animation(atom
 /mob/living/simple_animal/hostile/megafauna/captainarlem/death()
 	do_sparks(3, TRUE, src)
 	playsound(src, 'sound/weapons/armbomb.ogg', 75, 1, -3)
-	..()
-	sleep(40) // Totally intended to be sleep and not a callback.
+	addtimer(CALLBACK(src, .proc/self_destruct), 4 SECONDS)
+	return ..()
+
+/mob/living/simple_animal/hostile/megafauna/captainarlem/proc/self_destruct()
 	explosion(src,3,5,7,7)
 	qdel(src)
