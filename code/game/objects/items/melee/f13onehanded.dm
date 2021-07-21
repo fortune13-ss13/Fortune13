@@ -708,10 +708,7 @@
 ///////////		-generally max 24 damage
 
 
- // obsolete	name = "kitchen knife"	force = 15
-
-
-/obj/item/melee/onehanded/knife/butcher // obsolete
+/obj/item/melee/onehanded/knife/butcher// obsolete
 	name = "butcher's cleaver"
 	desc = "Keep hackin' and whackin' and smackin'."
 	icon_state = "knife_butcher"
@@ -721,10 +718,6 @@
 	armour_penetration = 0
 	custom_materials = list(/datum/material/iron=8000)
 	attack_verb = list("cleaved", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-
-
-//	name = "rolling pin"
-
 
 /obj/item/melee/onehanded/club/fryingpan
 	name = "frying pan"
@@ -780,5 +773,7 @@
 	playsound(src, 'sound/weapons/bladeslice.ogg', 50, 1, -1)
 	return (BRUTELOSS)
 
-// Wrench force 12
-// Crowbar force 15
+// Wrench				Force 12
+// Crowbar				Force 15
+// Kitchen knife		Force 15
+// Rolling pin			Force x
