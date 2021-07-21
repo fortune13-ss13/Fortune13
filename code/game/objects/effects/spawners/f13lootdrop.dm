@@ -578,7 +578,7 @@
 				/obj/item/hatchet,
 				/obj/item/pickaxe/mini,
 				/obj/item/wrench,
-				/obj/item/melee/onehanded/knife/kitchen,
+				/obj/item/kitchen/knife,
 				/obj/item/kitchen/rollingpin,
 				)
 
@@ -614,7 +614,7 @@
 				/obj/item/weldingtool,
 				/obj/item/twohanded/spear,
 				/obj/item/twohanded/baseball,
-				/obj/item/melee/onehanded/knife/butcher,
+				/obj/item/kitchen/knife/butcher,
 				/obj/item/twohanded/baseball/golfclub,
 				/obj/item/melee/onehanded/machete,
 				/obj/item/melee/onehanded/machete/forgedmachete,

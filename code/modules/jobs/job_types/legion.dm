@@ -698,7 +698,7 @@ commented out pending rework*/
 					/obj/item/ammo_box/shotgun/slug=1,
 					/obj/item/gun/ballistic/revolver/m29/snub=1,
 					/obj/item/ammo_box/m44=1,
-					/obj/item/kitchen/knife/combat=1)
+					/obj/item/melee/onehanded/knife/hunting=1)
 
 /datum/outfit/loadout/expsniper
 	name =			"Sniper"
