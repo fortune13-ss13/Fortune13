@@ -689,6 +689,7 @@
 	SSvis_overlays.add_vis_overlay(src, icon, overlay_state, EMISSIVE_LAYER, EMISSIVE_PLANE, dir)
 	update_light()
 
+/* Atmos disabled
 /obj/machinery/airalarm/process()
 	if((stat & (NOPOWER|BROKEN)) || shorted)
 		return
@@ -726,7 +727,7 @@
 		apply_mode()
 
 	return
-
+*/
 
 /obj/machinery/airalarm/proc/post_alert(alert_level)
 	var/datum/radio_frequency/frequency = SSradio.return_frequency(alarm_frequency)

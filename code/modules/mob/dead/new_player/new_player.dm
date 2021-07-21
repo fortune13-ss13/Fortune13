@@ -37,11 +37,14 @@
 	return
 
 /mob/dead/new_player/proc/new_player_panel()
-	var/output = "<center><p>Welcome, <b>[client ? client.prefs.real_name : "Unknown User"]</b></p>"
-	output += "<center><p><a href='byond://?src=[REF(src)];show_preferences=1'>Setup Character</a></p>"
+	if (client?.interviewee)
+		return
+
+	var/datum/asset/asset_datum = get_asset_datum(/datum/asset/simple/lobby)
+	asset_datum.send(client)
+	var/list/output = list("<center><p><a href='byond://?src=[REF(src)];show_preferences=1'>Setup Character</a></p>")
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
-	/*
 		switch(ready)
 			if(PLAYER_NOT_READY)
 				output += "<p>\[ [LINKIFY_READY("Ready", PLAYER_READY_TO_PLAY)] | <b>Not Ready</b> | [LINKIFY_READY("Observe", PLAYER_READY_TO_OBSERVE)] \]</p>"
@@ -49,122 +52,65 @@
 				output += "<p>\[ <b>Ready</b> | [LINKIFY_READY("Not Ready", PLAYER_NOT_READY)] | [LINKIFY_READY("Observe", PLAYER_READY_TO_OBSERVE)] \]</p>"
 			if(PLAYER_READY_TO_OBSERVE)
 				output += "<p>\[ [LINKIFY_READY("Ready", PLAYER_READY_TO_PLAY)] | [LINKIFY_READY("Not Ready", PLAYER_NOT_READY)] | <b> Observe </b> \]</p>"
-	*/
-		output += "<p>Please be patient, the game is starting soon!</p>"
-		output += "<p><a href='byond://?src=[REF(src)];refresh=1'>(Refresh)</a></p>"
 	else
 		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>View the Crew Manifest</a></p>"
 		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Join Game!</a></p>"
 		output += "<p>[LINKIFY_READY("Observe", PLAYER_READY_TO_OBSERVE)]</p>"
 
 	if(!IsGuestKey(src.key))
-		if (SSdbcore.Connect())
-			var/isadmin = 0
-			if(src.client && src.client.holder)
-				isadmin = 1
-			var/datum/DBQuery/query_get_new_polls = SSdbcore.NewQuery({"
-				SELECT id FROM [format_table_name("poll_question")]
-				WHERE (adminonly = 0 OR :isadmin = 1)
-				AND Now() BETWEEN starttime AND endtime
-				AND id NOT IN (
-					SELECT pollid FROM [format_table_name("poll_vote")]
-					WHERE ckey = :ckey
-				)
-				AND id NOT IN (
-					SELECT pollid FROM [format_table_name("poll_textreply")]
-					WHERE ckey = :ckey
-				)
-			"}, list("isadmin" = isadmin, "ckey" = ckey))
-			var/rs = REF(src)
-			if(query_get_new_polls.Execute())
-				var/newpoll = 0
-				if(query_get_new_polls.NextRow())
-					newpoll = 1
-
-				if(newpoll)
-					output += "<p><b><a href='byond://?src=[rs];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
-				else
-					output += "<p><a href='byond://?src=[rs];showpoll=1'>Show Player Polls</A></p>"
-			qdel(query_get_new_polls)
-			if(QDELETED(src))
-				return
+		output += playerpolls()
 
 	output += "</center>"
 
-	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
 	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New Player Options</div>", 250, 265)
 	popup.set_window_options("can_close=0")
-	popup.set_content(output)
+	popup.set_content(output.Join())
 	popup.open(FALSE)
 
-/mob/dead/new_player/proc/age_gate()
-	var/list/dat = list("<center>")
-	dat += "Enter your date of birth here, to confirm that you are old enough to play here.<BR>"
-	dat += "<b>Your date of birth is not saved, only whether or not you are old enough to play here.</b><BR>"
-	dat += "</center>"
-
-	dat += "<form action='?src=[REF(src)]'>"
-	dat += "<input type='hidden' name='src' value='[REF(src)]'>"
-	dat += HrefTokenFormField()
-	dat += "<select name = 'Month'>"
-	var/monthList = list("January" = 1, "February" = 2, "March" = 3, "April" = 4, "May" = 5, "June" = 6, "July" = 7, "August" = 8, "September" = 9, "October" = 10, "November" = 11, "December" = 12)
-	for(var/month in monthList)
-		dat += "<option value = [monthList[month]]>[month]</option>"
-	dat += "</select>"
-	dat += "<select name = 'Year' style = 'float:right'>"
-	var/current_year = text2num(time2text(world.realtime, "YYYY"))
-	var/start_year = 1920
-	for(var/year in start_year to current_year)
-		var/reverse_year = 1920 + (current_year - year)
-		dat += "<option value = [reverse_year]>[reverse_year]</option>"
-	dat += "</select>"
-	dat += "<center><input type='submit' value='Submit information'></center>"
-	dat += "</form>"
-
-	winshow(src, "age_gate", TRUE)
-	var/datum/browser/popup = new(src, "age_gate", "<div align='center'>Age Gate</div>", 400, 250)
-	popup.set_content(dat.Join())
-	popup.open(FALSE)
-	onclose(src, "age_gate")
-
-	while(age_gate_result == null)
-		stoplag(1)
-
-	popup.close()
-
-	return age_gate_result
-
-/mob/dead/new_player/proc/age_verify()
-	/*
-	if(CONFIG_GET(flag/age_verification) && !check_rights_for(client, R_ADMIN) && !(client.ckey in GLOB.bunker_passthrough)) //make sure they are verified
-		if(!client.set_db_player_flags())
-			message_admins("Blocked [src] from new player panel because age gate could not access player database flags.")
-			return FALSE
+/mob/dead/new_player/proc/playerpolls()
+	var/list/output = list()
+	if (SSdbcore.Connect())
+		var/isadmin = FALSE
+		if(client?.holder)
+			isadmin = TRUE
+		var/datum/db_query/query_get_new_polls = SSdbcore.NewQuery({"
+			SELECT id FROM [format_table_name("poll_question")]
+			WHERE (adminonly = 0 OR :isadmin = 1)
+			AND Now() BETWEEN starttime AND endtime
+			AND deleted = 0
+			AND id NOT IN (
+				SELECT pollid FROM [format_table_name("poll_vote")]
+				WHERE ckey = :ckey
+				AND deleted = 0
+			)
+			AND id NOT IN (
+				SELECT pollid FROM [format_table_name("poll_textreply")]
+				WHERE ckey = :ckey
+				AND deleted = 0
+			)
+		"}, list("isadmin" = isadmin, "ckey" = ckey))
+		var/rs = REF(src)
+		if(!query_get_new_polls.Execute())
+			qdel(query_get_new_polls)
+			return
+		if(query_get_new_polls.NextRow())
+			output += "<p><b><a href='byond://?src=[rs];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
 		else
-			var/dbflags = client.prefs.db_flags
-			if(dbflags & DB_FLAG_AGE_CONFIRMATION_INCOMPLETE) //they have not completed age gate
-				var/age_verification = age_gate()
-				if(age_verification != 1)
-					client.add_system_note("Automated-Age-Gate", "Failed automatic age gate process")
-					//ban them and kick them
-					AddBan(client.ckey, client.computer_id, "SYSTEM BAN - Inputted date during join verification was under 18 years of age. Contact administration on discord for verification. https://discord.gg/NGpP36m", "SYSTEM", FALSE, null, client.address)
-					qdel(client)
-					return FALSE
-				else
-					//they claim to be of age, so allow them to continue and update their flags
-					client.update_flag_db(DB_FLAG_AGE_CONFIRMATION_COMPLETE, TRUE)
-					client.update_flag_db(DB_FLAG_AGE_CONFIRMATION_INCOMPLETE, FALSE)
-					//log this
-					message_admins("[ckey] has joined through the automated age gate process.")
-					return TRUE*/
-	return TRUE
+			output += "<p><a href='byond://?src=[rs];showpoll=1'>Show Player Polls</A></p>"
+		qdel(query_get_new_polls)
+		if(QDELETED(src))
+			return
+		return output
 
 /mob/dead/new_player/Topic(href, href_list[])
 	if(src != usr)
-		return 0
+		return
 
 	if(!client)
-		return 0
+		return
+
+	if(client.interviewee)
+		return FALSE
 
 	//don't let people get to this unless they are specifically not verified
 	if(href_list["Month"] && (CONFIG_GET(flag/age_verification) && !check_rights_for(client, R_ADMIN) && !(client.ckey in GLOB.bunker_passthrough)))
@@ -204,9 +150,6 @@
 				else
 					//it has NOT been their 18th birthday yet
 					age_gate_result = FALSE
-
-	if(!age_verify())
-		return
 
 	//Determines Relevent Population Cap
 	var/relevant_cap
@@ -749,3 +692,31 @@
 
 		return FALSE //This is the only case someone should actually be completely blocked from antag rolling as well
 	return TRUE
+
+/**
+ * Prepares a client for the interview system, and provides them with a new interview
+ *
+ * This proc will both prepare the user by removing all verbs from them, as well as
+ * giving them the interview form and forcing it to appear.
+ */
+/mob/dead/new_player/proc/register_for_interview()
+	// First we detain them by removing all the verbs they have on client
+	for (var/v in client.verbs)
+		var/procpath/verb_path = v
+		if (!(verb_path in GLOB.stat_panel_verbs))
+			remove_verb(client, verb_path)
+
+	// Then remove those on their mob as well
+	for (var/v in verbs)
+		var/procpath/verb_path = v
+		if (!(verb_path in GLOB.stat_panel_verbs))
+			remove_verb(src, verb_path)
+
+	// Then we create the interview form and show it to the client
+	var/datum/interview/I = GLOB.interviews.interview_for_client(client)
+	if (I)
+		I.ui_interact(src)
+
+	// Add verb for re-opening the interview panel, and re-init the verbs for the stat panel
+	add_verb(src, /mob/dead/new_player/proc/open_interview)
+
