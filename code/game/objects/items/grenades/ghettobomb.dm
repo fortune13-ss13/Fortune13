@@ -176,7 +176,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	var/firestarter = FALSE
-	for(var/datum/reagent/reagent_in_bottle in reagents.reagent_list)
+	for(var/datum/reagent/reagent_in_bottle as anything in reagents.reagent_list)
 		for(var/accelerant_type in accelerants)
 			if(istype(reagent_in_bottle, accelerant_type))
 				firestarter = TRUE
