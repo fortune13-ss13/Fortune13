@@ -708,7 +708,8 @@
 ///////////		-generally max 24 damage
 
 
-/obj/item/melee/onehanded/knife/butcher// obsolete
+// obsolete
+/obj/item/melee/onehanded/knife/butcher
 	name = "butcher's cleaver"
 	desc = "Keep hackin' and whackin' and smackin'."
 	icon_state = "knife_butcher"
