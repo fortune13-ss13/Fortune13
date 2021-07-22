@@ -683,7 +683,7 @@
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert/whiskey
 	name = "weathered ranger helmet"
-	desc = "A well-used desert ranger helmet passed down through generations. Though this one's stripped of night vision and it's kevlar lining, it's even more lightweight."
+	desc = "(II) A well-used desert ranger helmet passed down through generations. Though this one's stripped of night vision and it's kevlar lining, it's even more lightweight."
 	lighting_alpha = null
 	darkness_view = null
 	flash_protect = 0
