@@ -112,7 +112,7 @@
 	reqs = list(/obj/item/reagent_containers/rag = 1,
 		/obj/item/reagent_containers/food/drinks/bottle = 1,
 		)
-	time = 20
+	time = 2 SECONDS
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
