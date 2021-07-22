@@ -860,7 +860,7 @@
 	oneuse = TRUE
 	granted_trait = TRAIT_HARD_YARDS
 	traitname = "trekking"
-	remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can led into easy lines of fire.")
+	remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can be led into easy lines of fire.")
 
 /obj/item/book/granter/trait/gunslinger
 	name = "Tycho: Life of a Lawman"
@@ -898,7 +898,7 @@
 			if("Wasteland Survival Guide")
 				granted_trait = TRAIT_HARD_YARDS
 				traitname = "trekking"
-				remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can led into easy lines of fire.")
+				remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can be led into easy lines of fire.")
 			if("First Aid Pamphlet")
 				granted_trait = TRAIT_SURGERY_LOW
 				traitname = "minor surgery"
