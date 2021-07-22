@@ -151,36 +151,44 @@
 	icon_state = "molotov"
 	item_state = "ied"
 	list_reagents = list()
-	var/list/accelerants = list(	/datum/reagent/consumable/ethanol, /datum/reagent/fuel, /datum/reagent/clf3, /datum/reagent/phlogiston,
-							/datum/reagent/napalm, /datum/reagent/hellwater, /datum/reagent/toxin/plasma, /datum/reagent/toxin/spore_burning)
-	var/active = 0
+	var/list/accelerants = list(
+		/datum/reagent/consumable/ethanol,
+		/datum/reagent/fuel,
+		/datum/reagent/clf3,
+		/datum/reagent/phlogiston,
+		/datum/reagent/napalm,
+		/datum/reagent/hellwater,
+		/datum/reagent/toxin/plasma,
+		/datum/reagent/toxin/spore_burning,
+		)
+	var/active = FALSE
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/CheckParts(list/parts_list)
-	..()
-	var/obj/item/reagent_containers/food/drinks/bottle/B = locate() in contents
-	if(B)
-		icon_state = B.icon_state
-		B.reagents.copy_to(src,100)
-		if(!B.isGlass)
-			desc += " You're not sure if making this out of a carton was the brightest idea."
-			isGlass = FALSE
-	return
+	. = ..()
+	var/obj/item/reagent_containers/food/drinks/bottle/bottle_found = locate() in contents
+	if(!bottle_found)
+		return
+	icon_state = bottle_found.icon_state
+	bottle_found.reagents.copy_to(src, 100)
+	if(!bottle_found.isGlass)
+		desc = "[desc] You're not sure if making this out of a carton was the brightest idea."
+		isGlass = FALSE
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
-	var/firestarter = 0
-	for(var/datum/reagent/R in reagents.reagent_list)
-		for(var/A in accelerants)
-			if(istype(R,A))
-				firestarter = 1
+	var/firestarter = FALSE
+	for(var/datum/reagent/reagent_in_bottle in reagents.reagent_list)
+		for(var/accelerant_type in accelerants)
+			if(istype(reagent_in_bottle, accelerant_type))
+				firestarter = TRUE
 				break
 	if(firestarter && active)
 		hit_atom.fire_act()
 		new /obj/effect/hotspot(get_turf(hit_atom))
-	..()
+	return ..()
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/attackby(obj/item/I, mob/user, params)
 	if(I.get_temperature() && !active)
-		active = 1
+		active = TRUE
 		var/message = "[ADMIN_LOOKUP(user)] has primed a [name] for detonation at [ADMIN_VERBOSEJMP(user)]."
 		GLOB.bombers += message
 		message_admins(message)
@@ -189,20 +197,25 @@
 		to_chat(user, "<span class='info'>You light [src] on fire.</span>")
 		icon_state = initial(icon_state) + "_active"
 		item_state = initial(item_state) + "_active"
-		if(!isGlass)
-			spawn(50)
-				if(active)
-					var/counter
-					var/target = src.loc
-					for(counter = 0, counter<2, counter++)
-						if(istype(target, /obj/item/storage))
-							var/obj/item/storage/S = target
-							target = S.loc
-					if(istype(target, /atom))
-						var/atom/A = target
-						SplashReagents(A)
-						A.fire_act()
-					qdel(src)
+		if(isGlass)
+			return
+		addtimer(CALLBACK(src, .proc/splash_and_boom), 5 SECONDS)
+
+
+/obj/item/reagent_containers/food/drinks/bottle/molotov/proc/splash_and_boom()
+	if(QDELETED(src) || !active || isnull(loc))
+		return
+	var/atom/target = loc
+	if(!isturf(target) && !isturf(target.loc))
+		for(var/i in 1 to 3)
+			target = target.loc
+			if(isturf(target.loc))
+				break
+	if(!isturf(target))
+		target = get_turf(target) // Too deep, let's just bypass to the end.
+	SplashReagents(target)
+	target.fire_act()
+	qdel(src)
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/attack_self(mob/user)
 	if(active)
@@ -211,8 +224,7 @@
 			return
 		to_chat(user, "<span class='info'>You snuff out the flame on [src].</span>")
 		cut_overlay(GLOB.fire_overlay)
-		active = 0
+		active = FALSE
 
 /obj/item/export/bottle/attack_self(mob/user)
 	to_chat(user, "<span class='danger'>The seal seems fine. Best to not open it.</span>")
-	return
