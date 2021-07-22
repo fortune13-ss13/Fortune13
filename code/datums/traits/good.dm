@@ -225,13 +225,13 @@
 	value = 1
 	gain_text = "<span class='notice'>You have to keep up with the next big thing!.</span>"
 	lose_text = "<span class='danger'>High-tech gizmos are a scam...</span>"
-*/
 
 /datum/quirk/trandening/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/autosurgeon/gloweyes/gloweyes = new(get_turf(H))
 	H.equip_to_slot(gloweyes, SLOT_IN_BACKPACK)
 	H.regenerate_icons()
+*/
 
 /datum/quirk/bloodpressure
 	name = "Polycythemia vera"
