@@ -883,7 +883,7 @@
 
 /obj/item/book/granter/trait/selection
 	name = "Burned Book"
-	desc = "Pulled from the ashes of Sedona, it feels warm to the touch. Caesar's Legion was thorough in the razing of the city."
+	desc = "Pulled from the ashes of the old world, it feels warm to the touch. It looks to be in poor condition."
 	granted_trait = null
 	pages_to_mastery = 0
 	time_per_page = 0
