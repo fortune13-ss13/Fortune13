@@ -40,7 +40,6 @@
 	if (client?.interviewee)
 		return
 
-
 	var/datum/asset/asset_datum = get_asset_datum(/datum/asset/simple/lobby)
 	asset_datum.send(client)
 	var/list/output = list("<center><p>Welcome, <b>[client ? client.prefs.real_name : "Unknown User"]</b></p>")

@@ -101,7 +101,6 @@
 	var/list/vault = list()
 	var/list/flw = list()
 	var/list/tribe = list()
-	var/list/khan = list()
 	var/list/was = list()
 	var/list/misc = list()
 	var/dat = {"
@@ -148,9 +147,6 @@
 			department = 1
 		if(rank in GLOB.tribal_positions)
 			tribe[name] = rank
-			department = 1
-		if (rank == "Great Khan")
-			khan[name] = rank
 			department = 1
 		if(rank in GLOB.vault_positions)
 			vault[name] = rank
@@ -199,11 +195,6 @@
 		dat += "<tr><th colspan=3>Wayfarer Tribe</th></tr>"
 		for(var/name in tribe)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[tribe[name]]</td></tr>"
-			even = !even
-	if(length(khan))
-		dat += "<tr><th colspan=3>Great Khans</th></tr>"
-		for(var/name in khan)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[khan[name]]</td></tr>"
 			even = !even
 	if(length(vault))
 		dat += "<tr><th colspan=3>Vault</th></tr>"

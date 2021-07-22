@@ -1,7 +1,7 @@
 /proc/job_is_whitelist_locked(jobtitle)
-	if(!CONFIG_GET(flag/use_role_whitelist) && (jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | GLOB.ncr_general_positions | GLOB.ncr_upper_command_positions | GLOB.ncr_lower_command_positions | GLOB.brotherhood_paladin_positions | list("AI"))))
+	if(!CONFIG_GET(flag/use_role_whitelist) && (jobtitle in (GLOB.faction_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | GLOB.ncr_general_positions | GLOB.ncr_upper_command_positions | GLOB.ncr_lower_command_positions | GLOB.brotherhood_paladin_positions | list("AI"))))
 		return FALSE
-	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.antagonist_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | GLOB.ncr_general_positions | GLOB.ncr_upper_command_positions | GLOB.ncr_lower_command_positions | GLOB.brotherhood_paladin_positions | list("AI"))))
+	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in (GLOB.faction_whitelist_positions | GLOB.faction_player_positions | GLOB.command_positions | GLOB.ncr_ranger_positions | GLOB.ncr_rangervet_positions | GLOB.ncr_general_positions | GLOB.ncr_upper_command_positions | GLOB.ncr_lower_command_positions | GLOB.brotherhood_paladin_positions | list("AI"))))
 		return FALSE
 	return TRUE
 
@@ -111,10 +111,6 @@
 		for(var/rtypeWL in GLOB.vault_positions)
 			play_records[rtypeWL] = 0
 	*/
-
-	if(!whitelists["antagonist"])						 // if they do not have antagonist whitelist, remove antagonist whitelist positions
-		for(var/rtypeWL in GLOB.antagonist_whitelist_positions)
-			play_records[rtypeWL] = 0
 
 	if(whitelists["faction"])
 		for(var/rtypeWL in GLOB.faction_whitelist_positions)
