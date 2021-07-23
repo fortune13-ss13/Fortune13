@@ -31,3 +31,4 @@
 	new /obj/item/gun/ballistic/revolver/revolver44(src)
 	new /obj/item/ammo_box/m44(src)
 	new /obj/item/clothing/under/f13/ranger(src)
+	new /obj/item/storage/belt/waistsheath(src)
