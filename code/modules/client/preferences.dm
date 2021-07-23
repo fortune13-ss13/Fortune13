@@ -686,6 +686,7 @@ Records disabled until a use for them is found
 				dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"Enabled":"Disabled"]</a><br>"
 				dat += "<br>"
 				dat += "<b>Combo HUD Lighting:</b> <a href = '?_src_=prefs;preference=combohud_lighting'>[(toggles & COMBOHUD_LIGHTING)?"Full-bright":"No Change"]</a><br>"
+				dat += "<b>Split Admin Tabs:</b> <a href = '?_src_=prefs;preference=toggle_split_admin_tabs'>[(toggles & SPLIT_ADMIN_TABS)?"Enabled":"Disabled"]</a><br>"
 				dat += "</td>"
 
 			dat +="<td width='300px' height='300px' valign='top'>"
@@ -1316,7 +1317,7 @@ Records disabled until a use for them is found
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(href_list["jobbancheck"])
-		var/datum/DBQuery/query_get_jobban = SSdbcore.NewQuery(
+		var/datum/db_query/query_get_jobban = SSdbcore.NewQuery(
 			"SELECT reason, bantime, duration, expiration_time, IFNULL((SELECT byond_key FROM [format_table_name("player")] WHERE [format_table_name("player")].ckey = [format_table_name("ban")].a_ckey), a_ckey) FROM [format_table_name("ban")] WHERE ckey = :ckey AND (bantype = 'JOB_PERMABAN'  OR (bantype = 'JOB_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned) AND job = :job",
 			list("ckey" = user.ckey, "job" = href_list["jobbancheck"])
 		)
@@ -1418,6 +1419,9 @@ Records disabled until a use for them is found
 			switch(href_list["preference"])
 				if("name")
 					real_name = pref_species.random_name(gender,1)
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 				if("age")
 					age = rand(AGE_MIN, AGE_MAX)
 				if("hair")
@@ -1535,6 +1539,9 @@ Records disabled until a use for them is found
 						new_name = reject_bad_name(new_name)
 						if(new_name)
 							real_name = new_name
+							if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+								var/mob/dead/new_player/player_mob = parent.mob
+								player_mob.new_player_panel()
 						else
 							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 
@@ -2458,6 +2465,8 @@ Records disabled until a use for them is found
 					toggles ^= ANNOUNCE_LOGIN
 				if("combohud_lighting")
 					toggles ^= COMBOHUD_LIGHTING
+				if("toggle_split_admin_tabs")
+					toggles ^= SPLIT_ADMIN_TABS
 
 				if("be_special")
 					var/be_special_type = href_list["be_special_type"]
@@ -2468,6 +2477,9 @@ Records disabled until a use for them is found
 
 				if("name")
 					be_random_name = !be_random_name
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 
 				if("all")
 					be_random_body = !be_random_body
@@ -2595,6 +2607,9 @@ Records disabled until a use for them is found
 						random_character()
 						real_name = random_unique_name(gender)
 						save_character()
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 
 				if("tab")
 					if (href_list["tab"])
