@@ -392,7 +392,7 @@
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
-	force = 12 //9 hit crit
+	force = 18
 	w_class = WEIGHT_CLASS_NORMAL
 	var/stun_stam_cost_coeff = 1.25
 	var/hardstun_ds = TRUE
@@ -519,6 +519,28 @@
 				to_chat(user, wait_desc)
 			return DISCARD_LAST_ACTION
 
+// Military baton
+/obj/item/melee/classic_baton/militarypolice
+	name = "military baton"
+	desc = "Sturdy stick painted white, used by military police to get unruly troopers into line."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
+	icon_state = "batonmp"
+	item_state = "batonmp"
+
+/* Need  to make the disarm on NCR work, for the MP to keep order
+
+/obj/item/melee/onehanded/slavewhip/attack(isNCR)
+	. = ..()
+	target.drop_all_held_items()
+
+
+	if(isNCR(target))
+		target.drop_all_held_items()
+*/
+
+// Telescopic baton
 /obj/item/melee/classic_baton/telescopic
 	name = "telescopic baton"
 	desc = "A compact yet robust personal defense weapon. Can be concealed when folded."
@@ -710,30 +732,31 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 
-// Tiger claws						Keywords: Damage 27
+// Tiger claws						Keywords: Damage 28, Pointy
 /obj/item/melee/unarmed/tigerclaw
 	name = "tiger claws"
 	desc = "Gloves with short claws built into the palms."
 	icon_state = "tiger_claw"
 	item_state = "tiger_claw"
-	force = 27
+	force = 28
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_POINTY
 	w_class = WEIGHT_CLASS_NORMAL
 
 
-// Lacerator						Keywords: Damage 28
+// Lacerator						Keywords: Damage 27, Edged, Wound bonus
 /obj/item/melee/unarmed/lacerator
 	name = "lacerator"
 	desc = "Leather gloves with razor blades built into the back of the hand."
 	icon_state = "lacerator"
 	item_state = "lacerator"
-	force = 28
+	force = 27
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_NORMAL
+	bare_wound_bonus = 5
 
 
 // Mace Glove						Keywords: Damage 30
@@ -747,13 +770,13 @@
 	w_class = WEIGHT_CLASS_BULKY
 
 
-// Punch Dagger						Keywords: Damage 30
+// Punch Dagger						Keywords: Damage 29, Pointy
 /obj/item/melee/unarmed/punchdagger
 	name = "punch dagger"
 	desc = "A dagger designed to be gripped in the user�s fist with the blade protruding between the middle and ring fingers, to increase the penetration of a punch."
 	icon_state = "punch_dagger"
 	item_state = "punch_dagger"
-	force = 30
+	force = 29
 	attack_verb = list("stabbed", "sliced", "pierced", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_POINTY
@@ -823,10 +846,11 @@
 /obj/item/shovel/trench
 	name = "p81 entrenching tool"
 	desc = "The 'Pattern 2281' Entrenching Tool is a new piece of infantry equipment given in limited quantity to infantry troops. An extremely robust shovel with a serrated edge for chopping wood."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "entrenching_tool"
 	item_state = "trench"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 30
 	throwforce = 15
 	w_class = WEIGHT_CLASS_NORMAL

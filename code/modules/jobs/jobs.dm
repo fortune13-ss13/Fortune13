@@ -86,16 +86,16 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "BoS Off-Duty",
 
 "Legion Centurion",
-"Legion Venator",
 "Legion Veteran Decanus",
-"Veteran Legionnaire",
 "Legion Prime Decanus",
-"Prime Legionnaire",
 "Legion Recruit Decanus",
-"Legion Scout",
+"Veteran Legionnaire",
+"Prime Legionnaire",
 "Legion Explorer",
+"Legion Forgemaster",
 "Legion Auxilia",
 "Legion Slave",
+"Legion Venator",
 
 "Mayor",
 "Sheriff",
@@ -131,13 +131,15 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Scribe",
 "BoS Off-Duty",
 
+"Legion Centurion",
 "Legion Veteran Decanus",
-"Veteran Legionnaire",
 "Legion Prime Decanus",
-"Prime Legionnaire",
 "Legion Recruit Decanus",
-"Legion Scout",
+"Veteran Legionnaire",
+"Prime Legionnaire",
 "Legion Explorer",
+"Legion Forgemaster",
+"Legion Slavemaster",
 "Legion Auxilia",
 "Legion Slave",
 
@@ -228,11 +230,12 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Veteran Legionnaire",
 	"Prime Legionnaire",
 	"Recruit Legionnaire",
-	"Legion Venator",
 	"Legion Explorer",
+	"Legion Forgemaster",
+	"Legion Slavemaster",
 	"Legion Auxilia",
-	"Legion Camp Duty",
-	"Legion Slave"
+	"Legion Slave",
+	"Legion Venator"
 ))
 
 GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
