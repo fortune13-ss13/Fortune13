@@ -21,6 +21,7 @@
 		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
 
 /obj/item/clothing/gloves/ring/dropped(mob/user)
+	. = ..()
 	SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
 
 
