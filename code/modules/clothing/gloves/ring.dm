@@ -13,15 +13,23 @@
 	strip_delay = 40
 	var/mood_event_on_equip = /datum/mood_event/equipped_ring/gold
 
-/obj/item/clothing/gloves/ring/Initialize()
+/obj/item/clothing/gloves/ring/equipped(mob/user, slot)
 	. = ..()
-	RegisterSignal(src, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED), .proc/newEquipSlot)
+	if (slot == SLOT_GLOVES && istype(user))
+		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "ringbuff", mood_event_on_equip)
+	else
+		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
 
+/obj/item/clothing/gloves/ring/dropped(mob/user)
+	SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
+
+/*
 /obj/item/clothing/gloves/ring/proc/newEquipSlot(mob/living/carbon/user, slot)
 	if (slot == SLOT_GLOVES && istype(user))
 		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "ringbuff", mood_event_on_equip)
 	else
 		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")
+*/
 
 /obj/item/clothing/gloves/ring/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>\[user] is putting the [src] in [user.p_their()] mouth! It looks like [user] is trying to choke on the [src]!</span>")
