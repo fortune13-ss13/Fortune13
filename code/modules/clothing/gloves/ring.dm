@@ -3,7 +3,6 @@
 	desc = "A tiny gold ring, sized to wrap around a finger."
 	gender = NEUTER
 	w_class = WEIGHT_CLASS_TINY
-	obj_flags = UNIQUE_RENAME //Of course it should be renamable!
 	icon = 'icons/obj/ring.dmi'
 	icon_state = "ringgold"
 	item_state = "gring"
