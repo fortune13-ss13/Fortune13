@@ -823,19 +823,21 @@ commented out pending rework*/
 	exp_requirements = 300
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
-	name =			"Forgemaster"
+	name =			"Legion Forgemaster"
+	id =			/obj/item/card/id/dogtag/legfollower
 	glasses =		/obj/item/clothing/glasses/welding
-	belt =			/obj/item/storage/belt/utility/full/engi
+	belt =			/obj/item/storage/belt/utility/full
 	suit =			/obj/item/clothing/suit/armor/f13/legion/forgemaster
 	gloves =		/obj/item/clothing/gloves/legion/forgemaster
 	shoes = 		/obj/item/clothing/shoes/f13/military/plated
-	r_hand =		/obj/item/twohanded/chainsaw
+	suit_store =	/obj/item/twohanded/chainsaw
 	backpack_contents = list(
 					/obj/item/stack/sheet/metal/twenty=1,
 					/obj/item/stack/sheet/mineral/wood/twenty=1,
 					/obj/item/stack/sheet/leather/twenty=1,
 					/obj/item/stack/sheet/cloth/thirty=1,
-					/obj/item/stack/sheet/prewar=1,	)
+					/obj/item/stack/sheet/prewar=1,
+					)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -889,7 +891,7 @@ commented out pending rework*/
 */
 
 /datum/outfit/job/CaesarsLegion/auxilia
-	name = 			"Auxilia"
+	name = 			"Legion Auxilia"
 	jobtype = 		/datum/job/CaesarsLegion/auxilia
 	id =			/obj/item/card/id/dogtag/legauxilia
 	head =			/obj/item/clothing/head/f13/legion/auxilia

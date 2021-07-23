@@ -696,20 +696,3 @@ CODE FOR POISON EFFECT
 	reagents.add_reagent(/datum/reagent/pancuronium, 10)
 //end of Viper spear. Venom mix is interesting but a simpler poisoned weapon solution might be more generally useful, with injectable or open container weapons that have lower volume but can be easily refilled with small doses of venom or something
 */
-
-/obj/item/twohanded/chainsaw/doomslayer
-	name = "THE GREAT COMMUNICATOR"
-	desc = "<span class='warning'>VRRRRRRR!!!</span>"
-	armour_penetration = 1
-	force_on = 30
-
-/obj/item/twohanded/chainsaw/doomslayer/check_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
-	block_return[BLOCK_RETURN_REFLECT_PROJECTILE_CHANCE] = 100
-	return ..()
-
-/obj/item/twohanded/chainsaw/doomslayer/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
-	if(attack_type & ATTACK_TYPE_PROJECTILE)
-		owner.visible_message("<span class='danger'>Ranged attacks just make [owner] angrier!</span>")
-		playsound(src, pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg'), 75, 1)
-		return BLOCK_SUCCESS | BLOCK_PHYSICAL_EXTERNAL
-	return ..()

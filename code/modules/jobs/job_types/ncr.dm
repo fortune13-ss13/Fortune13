@@ -820,7 +820,7 @@
 	neck =			/obj/item/storage/belt/holster/legholster
 	suit =			/obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	glasses	=		/obj/item/clothing/glasses/welding
-	belt =			/obj/item/storage/belt/utility/full/engi
+	belt =			/obj/item/storage/belt/military/assault/ncr/engineer
 	gloves =		/obj/item/clothing/gloves/color/yellow
 	suit_store =	/obj/item/gun/ballistic/automatic/smg/rockwell
 	backpack_contents = list(
