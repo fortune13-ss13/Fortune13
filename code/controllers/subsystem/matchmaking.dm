@@ -98,9 +98,12 @@ SUBSYSTEM_DEF(matchmaking)
 		return
 	var/datum/job/candidate_job = SSjob.GetJob(pref_holder.mind.assigned_role)
 	// Does our job let us be this role? With which other jobs?
-	var/list/matching_jobs = candidate_job?.matchmaking_allowed?[type]
+	var/list/matching_jobs = candidate_job?.matchmaking_allowed
 	if(!matching_jobs)
-		return
+		return // No matchmaking allowed at all!
+	matching_jobs = matching_jobs[type]
+	if(!matching_jobs)
+		return // Not our kind of matchmaking!
 	var/candidate_ref = REF(pref_holder)
 
 	var/list/bachelors = shuffle(SSmatchmaking.bachelors)
