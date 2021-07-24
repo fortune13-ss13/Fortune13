@@ -1008,8 +1008,6 @@
 	required_reagents = list(/datum/reagent/iron = 5,  /datum/reagent/consumable/ethanol/mauna_loa = 10, /datum/reagent/sulfur = 5)
 	required_temp = 900 // (626.85'C)
 
-////////////////////////////////////////// FO-themed drinks //////////////////////////////////////
-
 /datum/chemical_reaction/nukafloat
  	name = "Nuka Float"
 	id = /datum/reagent/consumable/nukafloat
