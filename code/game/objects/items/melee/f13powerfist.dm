@@ -182,6 +182,8 @@
 	var/on = FALSE
 	var/force_on = 57
 	var/force_off = 7
+	var/description_on = "<span class ='warning'>You pull the cord, starting up the chainsaw with a roar and letting the blades spin up.</span>"
+	var/description_off = "<span class ='notice'>You press the off button, stopping the noise and the carnage.</span>"
 	var/on_sound = 'sound/weapons/chainsawhit.ogg'
 
 /obj/item/twohanded/chainsaw/ComponentInitialize()
@@ -190,17 +192,10 @@
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 	update_icon()
 
-/obj/item/twohanded/chainsaw/proc/get_on_description()
-	. = list()
-	.["local_on"] = "<span class ='warning'>You pull the cord, starting up the chainsaw with a roar and letting the blades spin up.</span>"
-	.["local_off"] = "<span class ='notice'>You press the off button, stopping the noise and the carnage.</span>"
-	return
-
 /obj/item/twohanded/chainsaw/attack_self(mob/user)
 	on = !on
-	var/list/desc = get_on_description()
 	if(on)
-		to_chat(user, desc["local_on"])
+		to_chat(user, description_on)
 		icon_state = on_icon_state
 		item_state = on_item_state
 		w_class = weight_class_on
@@ -209,7 +204,7 @@
 		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 		playsound(src.loc, on_sound, 50, 1)
 	else
-		to_chat(user, desc["local_off"])
+		to_chat(user, description_off)
 		icon_state = off_icon_state
 		item_state = off_item_state
 		w_class = WEIGHT_CLASS_NORMAL
