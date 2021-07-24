@@ -395,6 +395,7 @@ commented out pending rework*/
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/CaesarsLegion,
 		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -471,6 +472,7 @@ commented out pending rework*/
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/CaesarsLegion,
 		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -622,6 +624,7 @@ commented out pending rework*/
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/CaesarsLegion,
 		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -951,6 +954,7 @@ commented out pending rework*/
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/CaesarsLegion,
 		),
+	)
 
 /*
 /datum/outfit/job/CaesarsLegion/auxilia/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
