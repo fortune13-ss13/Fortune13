@@ -228,7 +228,7 @@ SUBSYSTEM_DEF(matchmaking)
 /datum/matchmaking_pref/outlaw
 	pref_text = "Hunters after you"
 	target_type = /datum/matchmaking_pref/bounty_hunter
-	spawn_time = 15 SECONDS //5 MINUTES
+	spawn_time = 5 MINUTES
 	acquire_memory = "You remember the foul deeds you've done. You hope they don't come back to haunt you"
 	span_class = "danger"
 	we_know_target = FALSE
@@ -239,7 +239,7 @@ SUBSYSTEM_DEF(matchmaking)
 /datum/matchmaking_pref/bounty_hunter
 	pref_text = "Head bounties"
 	target_type = /datum/matchmaking_pref/outlaw
-	spawn_time = 15 SECONDS //5 MINUTES
+	spawn_time = 5 MINUTES
 	acquire_memory = "You remember the face in the wanted poster of a criminal, rumored to be wandering this area, for whose head you've been promised a reward"
 	span_class = "danger"
 	max_matches = 3
