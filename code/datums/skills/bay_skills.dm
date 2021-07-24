@@ -16,17 +16,19 @@
 	return vars[rating]
 
 /datum/skill_list_bay/proc/getList()
-	return list("unarmed" = unarmed,\
-		"melee" = melee,\
-		"engineering" = engineering,\
-		"salvaging" = salvaging,\
-		"smithing" = smithing,\
-		"chemistry" = chemistry,\
-		"medical" = medical,\
-		"surgery" = surgery,\
-		"crafting" = crafting,\
-		"culinary" = culinary,\
-		"science" = science)
+	return list(
+		"unarmed" = unarmed,
+		"melee" = melee,
+		"engineering" = engineering,
+		"salvaging" = salvaging,
+		"smithing" = smithing,
+		"chemistry" = chemistry,
+		"medical" = medical,
+		"surgery" = surgery,
+		"crafting" = crafting,
+		"culinary" = culinary,
+		"science" = science,
+		)
 
 /datum/skill_list_bay/proc/ModifyValue(type="engineering", amount=0)
 	vars[type] += amount
