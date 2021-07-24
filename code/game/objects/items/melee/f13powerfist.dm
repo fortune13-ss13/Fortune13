@@ -161,12 +161,7 @@
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	icon_state = "chainsaw"
 	item_state = "chainsaw"
-	var/on_icon_state = "chainsaw_on"
-	var/off_icon_state = "chainsaw"
-	var/on_item_state = "chainsaw_on"
-	var/off_item_state = "chainsaw"
 	w_class = WEIGHT_CLASS_NORMAL
-	weight_class_on = WEIGHT_CLASS_HUGE
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
 	slot_flags = ITEM_SLOT_SUITSTORE
 	force = 7
@@ -174,22 +169,32 @@
 	throw_speed = 2
 	throw_range = 2
 	throwforce = 10
+	toolspeed = 0.5
 	tool_behaviour = TOOL_SAW
 	sharpness = SHARP_EDGED
-	toolspeed = 0.3 //slower than a real saw
 	resistance_flags = FIRE_PROOF
 	hitsound = 'sound/weapons/chainsawhit.ogg'
+	var/on_icon_state = "chainsaw_on"
+	var/off_icon_state = "chainsaw"
+	var/on_item_state = "chainsaw_on"
+	var/off_item_state = "chainsaw"
+	var/weight_class_on = WEIGHT_CLASS_HUGE
 	var/on = FALSE
 	var/force_on = 57
 	var/force_off = 7
 	var/on_sound = 'sound/weapons/chainsawhit.ogg'
-
 
 /obj/item/twohanded/chainsaw/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 30, 100, 0, 'sound/weapons/chainsawhit.ogg', TRUE)
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 	update_icon()
+
+/obj/item/twohanded/chainsaw/proc/get_on_description()
+	. = list()
+	.["local_on"] = "<span class ='warning'>You pull the cord, starting up the chainsaw with a roar and letting the blades spin up.</span>"
+	.["local_off"] = "<span class ='notice'>You press the off button, stopping the noise and the carnage.</span>"
+	return
 
 /obj/item/twohanded/chainsaw/attack_self(mob/user)
 	on = !on
@@ -203,7 +208,6 @@
 		slot_flags = null
 		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 		playsound(src.loc, on_sound, 50, 1)
-		var/description_on = "<span class ='warning'>You pull the cord, starting up the chainsaw with a roar and letting the blades spin up.</span>"
 	else
 		to_chat(user, desc["local_off"])
 		icon_state = off_icon_state
@@ -212,7 +216,6 @@
 		force = force_off
 		slot_flags = ITEM_SLOT_SUITSTORE
 		attack_verb = list("poked", "scraped")
-		var/description_off = "<span class ='notice'>You press the off button, stopping the noise and the carnage.</span>"
 	add_fingerprint(user)
 
 /obj/item/twohanded/chainsaw/suicide_act(mob/living/carbon/user)
