@@ -1,16 +1,27 @@
 /datum/skill_list_bay
 	var/name = "Default"
-	var/unarmed = 0 // Increases unarmed damage.
-	var/melee = 0 // Increases weapon damage + block chance with shields.
-	var/engineering = 0 // Affects speed of do_afters with engi tools.
-	var/salvaging = 0 // Affects drop-rates of salvage.
-	var/smithing = 0 // Smithing. Affects quality of smithed weapons.
-	var/chemistry = 0 // If too low - you'll have a delay before using chemistry machines.
-	var/medical = 0 // First Aid. Affects speed of applying sutures/gauzes and fixing wounds.
-	var/surgery = 0 // Surgery Steps speed.
-	var/crafting = 0 // How fast you craft items.
-	var/culinary = 0 // How fast you craft food.
-	var/science = 0 // If too low - you'll have a delay before using some scientific machines.
+	/// Increases unarmed damage.
+	var/unarmed = 0
+	/// Increases weapon damage + block chance with shields.
+	var/melee = 0
+	/// Affects speed of do_afters with engi tools.
+	var/engineering = 0
+	/// Affects drop-rates of salvage.
+	var/salvaging = 0
+	/// Smithing. Affects quality of smithed weapons.
+	var/smithing = 0
+	/// If too low you'll have a delay before using chemistry machines.
+	var/chemistry = 0
+	/// First Aid. Affects speed of applying sutures/gauzes and fixing wounds.
+	var/medical = 0
+	/// Surgery Steps speed.
+	var/surgery = 0
+	/// How fast you craft items.
+	var/crafting = 0
+	/// How fast you craft food.
+	var/culinary = 0
+	/// If too low you'll have a delay before using some scientific machines.
+	var/science = 0
 
 /datum/skill_list_bay/proc/getRating(rating)
 	return vars[rating]
