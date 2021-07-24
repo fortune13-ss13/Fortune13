@@ -285,7 +285,6 @@ Head Knight
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/bos/f13knightcap
 	name = "Head Knight"
@@ -357,6 +356,17 @@ Star Paladin
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13paladin,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/bos/paladin/senior
 
@@ -437,6 +447,20 @@ Paladin
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13initiate,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13seniorpaladin,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/bos/paladin
 
@@ -524,6 +548,18 @@ Senior Scribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13scribe,
+		),
+	)
+
 
 	skills_type = /datum/skill_list_bay/bos/scribe/senior
 
@@ -580,6 +616,20 @@ Scribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13initiate,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13seniorscribe,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/bos/scribe
 
@@ -628,7 +678,7 @@ Scribe
 Senior Knight
 */
 
-datum/job/bos/f13seniorknight
+/datum/job/bos/f13seniorknight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
 	faction = "BOS"
@@ -650,6 +700,17 @@ datum/job/bos/f13seniorknight
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13knight,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/bos/knight/senior
 
@@ -718,6 +779,20 @@ Knight
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13initiate,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13seniorknight,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/bos/knight
 
@@ -798,6 +873,18 @@ Initiate
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13knight,
+			/datum/job/bos/f13scribe,
+		),
+	)
 
 /datum/outfit/job/bos/f13initiate
 	name = "Initiate"

@@ -13,9 +13,9 @@
 	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners.  Good conduct within the Republic's laws. Wearing the uniform."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Neutralize and capture dangerous criminals", "Leadership recommends the following goal for this week: Free slaves and establish good relations with unaligned individuals.")
 
-/datum/outfit/job/ncr/
+/datum/outfit/job/ncr
 	name = "NCRdatums"
-	jobtype = /datum/job/ncr/
+	jobtype = /datum/job/ncr
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	ears = /obj/item/radio/headset/headset_ncr
@@ -176,6 +176,14 @@ Lieutenant
 	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
 	outfit = /datum/outfit/job/ncr/f13lieutenant
 	exp_requirements = 1500
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/ncr/lieutenant
 
@@ -227,6 +235,14 @@ Medical Officer
 	display_order = JOB_DISPLAY_ORDER_MEDICALOFFICER
 	outfit = /datum/outfit/job/ncr/f13medicalofficer
 	exp_requirements = 1500
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/ncr/medic/prof
 
@@ -379,10 +395,21 @@ Sergeant
 
 	skills_type = /datum/skill_list_bay/ncr/sergeant
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/mentor = NCR,
+	)
 	loadout_options = list(
-	/datum/outfit/loadout/sergeantrifleman,
-	/datum/outfit/loadout/sergeantrecon,
-	/datum/outfit/loadout/sergeantcqc
+		/datum/outfit/loadout/sergeantrifleman,
+		/datum/outfit/loadout/sergeantrecon,
+		/datum/outfit/loadout/sergeantcqc,
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
 	)
 
 
@@ -503,9 +530,17 @@ Corporal
 	skills_type = /datum/skill_list_bay/ncr/corporal
 
 	loadout_options = list(
-	/datum/outfit/loadout/corporaldesignatedmarksman,
-	/datum/outfit/loadout/corporalspotter,
-	/datum/outfit/loadout/corporalrifleman
+		/datum/outfit/loadout/corporaldesignatedmarksman,
+		/datum/outfit/loadout/corporalspotter,
+		/datum/outfit/loadout/corporalrifleman,
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
 	)
 
 /datum/outfit/job/ncr/f13corporal
@@ -564,6 +599,14 @@ Corporal
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
 	outfit = /datum/outfit/job/ncr/f13combatmedic
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
 
 	skills_type = /datum/skill_list_bay/ncr/medic
 
@@ -618,8 +661,16 @@ Combat Engineer
 	loadout_options = list(
 		/datum/outfit/loadout/combatengineerbuilder,
 		/datum/outfit/loadout/combatengineertrapper,
-		/datum/outfit/loadout/combatengineerflamethrower
-		)
+		/datum/outfit/loadout/combatengineerflamethrower,
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
 
 
 /datum/outfit/job/ncr/f13combatengineer
@@ -707,9 +758,17 @@ Trooper
 	skills_type = /datum/skill_list_bay/ncr/trooper
 
 	loadout_options = list(
-	/datum/outfit/loadout/trooperrifleman,
-	/datum/outfit/loadout/trooperpathfinder,
-	/datum/outfit/loadout/trooperfiresupport
+		/datum/outfit/loadout/trooperrifleman,
+		/datum/outfit/loadout/trooperpathfinder,
+		/datum/outfit/loadout/trooperfiresupport,
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
 	)
 
 /datum/outfit/job/ncr/f13trooper

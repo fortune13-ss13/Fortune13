@@ -278,9 +278,19 @@ Great Khan
 	skills_type = /datum/skill_list_bay/outlaw
 
 	loadout_options = list(
-	///datum/outfit/loadout/pusher,
-	/datum/outfit/loadout/enforcer,
-	/datum/outfit/loadout/brawler)
+		/datum/outfit/loadout/enforcer,
+		/datum/outfit/loadout/brawler,
+		)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+	)
 
 /datum/outfit/job/wasteland/f13pusher
 	name = "Great Khan"
@@ -363,6 +373,19 @@ Raider
 
 	access = list()
 	minimal_access = list()
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+		/datum/matchmaking_pref/outlaw = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+	)
 	loadout_options = list(
 	/datum/outfit/loadout/raider_supafly,
 	/datum/outfit/loadout/raider_yankee,
@@ -486,7 +509,7 @@ Raider
 		/obj/item/gun/ballistic/revolver/single_shotgun=1,
 		/obj/item/ammo_box/shotgun/bean,
 		/obj/item/melee/onehanded/knife/butcher = 1,
-		/obj/item/grenade/iedcasing = 6,
+		/obj/item/grenade/homemade/firebomb = 6,
 		)
 
 /datum/outfit/loadout/raider_sadist
@@ -613,6 +636,34 @@ Raider
 	minimal_access = list()
 
 	skills_type = /datum/skill_list_bay/wastelander
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13mobboss,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/bounty_hunter = list(
+			/datum/job/wasteland/f13raider,
+		),
+	)
 
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
@@ -777,11 +828,10 @@ Raider
 	skills_type = /datum/skill_list_bay/outlaw/mafia
 
 	loadout_options = list(
-							/datum/outfit/loadout/mrwhite,
-							/datum/outfit/loadout/hitman,
-							/datum/outfit/loadout/bodyguard)
-
-
+		/datum/outfit/loadout/mrwhite,
+		/datum/outfit/loadout/hitman,
+		/datum/outfit/loadout/bodyguard,
+		)
 
 
 /datum/outfit/job/wasteland/f13enforcer
@@ -868,6 +918,17 @@ Raider
 
 	access = list(ACCESS_DEN)
 	minimal_access = list(ACCESS_DEN)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis/f13mayor,
+			/datum/job/oasis/f13sheriff,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+	)
+
 
 	skills_type = /datum/skill_list_bay/outlaw/mafia
 

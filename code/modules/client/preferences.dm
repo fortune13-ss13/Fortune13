@@ -238,6 +238,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/arousable = TRUE
 	var/widescreenpref = TRUE
 	var/end_of_round_deathmatch = FALSE
+	/// Associative list: matchmaking_prefs[/datum/matchmaking_pref subtype] -> number of desired matches
+	var/list/matchmaking_prefs = list()
 	var/autostand = TRUE
 	var/auto_ooc = FALSE
 
@@ -686,11 +688,24 @@ Records disabled until a use for them is found
 				dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"Enabled":"Disabled"]</a><br>"
 				dat += "<br>"
 				dat += "<b>Combo HUD Lighting:</b> <a href = '?_src_=prefs;preference=combohud_lighting'>[(toggles & COMBOHUD_LIGHTING)?"Full-bright":"No Change"]</a><br>"
+				dat += "<b>Split Admin Tabs:</b> <a href = '?_src_=prefs;preference=toggle_split_admin_tabs'>[(toggles & SPLIT_ADMIN_TABS)?"Enabled":"Disabled"]</a><br>"
 				dat += "</td>"
 
 			dat +="<td width='300px' height='300px' valign='top'>"
 			dat += "<h2>Preferences</h2>" //Because fuck me if preferences can't be fucking modularized and expected to update in a reasonable timeframe.
 			dat += "<b>End of round deathmatch:</b> <a href='?_src_=prefs;preference=end_of_round_deathmatch'>[end_of_round_deathmatch ? "Enabled" : "Disabled"]</a><br>"
+			dat += "<b>Matchmaking preferences:</b><br>"
+			if(SSmatchmaking.initialized)
+				for(var/datum/matchmaking_pref/match_pref as anything in SSmatchmaking.all_match_types)
+					var/max_matches = initial(match_pref.max_matches)
+					if(!max_matches)
+						continue // Disabled.
+					var/current_value = clamp((matchmaking_prefs[match_pref] || 0), 0, max_matches)
+					var/set_name = !current_value ? "Disabled" : (max_matches == 1 ? "Enabled" : "[current_value]")
+					dat += "* [initial(match_pref.pref_text)]: <a href='?_src_=prefs;preference=set_matchmaking_pref;matchmake_type=[match_pref]'>[set_name]</a><br>"
+			else
+				dat += "* Loading matchmaking preferences...<br>"
+				dat += "* Refresh once the game has finished setting up...<br>"
 			dat += "<h2>Citadel Preferences</h2>" //Because fuck me if preferences can't be fucking modularized and expected to update in a reasonable timeframe.
 //			dat += "<b>Widescreen:</b> <a href='?_src_=prefs;preference=widescreenpref'>[widescreenpref ? "Enabled ([CONFIG_GET(string/default_view)])" : "Disabled (15x15)"]</a><br>"
 			dat += "<b>Auto stand:</b> <a href='?_src_=prefs;preference=autostand'>[autostand ? "Enabled" : "Disabled"]</a><br>"
@@ -1316,7 +1331,7 @@ Records disabled until a use for them is found
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(href_list["jobbancheck"])
-		var/datum/DBQuery/query_get_jobban = SSdbcore.NewQuery(
+		var/datum/db_query/query_get_jobban = SSdbcore.NewQuery(
 			"SELECT reason, bantime, duration, expiration_time, IFNULL((SELECT byond_key FROM [format_table_name("player")] WHERE [format_table_name("player")].ckey = [format_table_name("ban")].a_ckey), a_ckey) FROM [format_table_name("ban")] WHERE ckey = :ckey AND (bantype = 'JOB_PERMABAN'  OR (bantype = 'JOB_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned) AND job = :job",
 			list("ckey" = user.ckey, "job" = href_list["jobbancheck"])
 		)
@@ -1418,6 +1433,9 @@ Records disabled until a use for them is found
 			switch(href_list["preference"])
 				if("name")
 					real_name = pref_species.random_name(gender,1)
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 				if("age")
 					age = rand(AGE_MIN, AGE_MAX)
 				if("hair")
@@ -1535,6 +1553,9 @@ Records disabled until a use for them is found
 						new_name = reject_bad_name(new_name)
 						if(new_name)
 							real_name = new_name
+							if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+								var/mob/dead/new_player/player_mob = parent.mob
+								player_mob.new_player_panel()
 						else
 							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 
@@ -2326,6 +2347,23 @@ Records disabled until a use for them is found
 					user.client.change_view(CONFIG_GET(string/default_view))
 				if("end_of_round_deathmatch")
 					end_of_round_deathmatch = !end_of_round_deathmatch
+				if("set_matchmaking_pref")
+					var/datum/matchmaking_pref/matchmake_type = text2path(href_list["matchmake_type"])
+					if(matchmake_type in SSmatchmaking?.all_match_types)
+						var/max_matches = initial(matchmake_type.max_matches)
+						if(max_matches == 1)
+							if(matchmaking_prefs[matchmake_type])
+								matchmaking_prefs -= matchmake_type
+							else
+								matchmaking_prefs[matchmake_type] = TRUE
+						else if(max_matches)
+							var/current_value = clamp((matchmaking_prefs[matchmake_type] || 0), 0, max_matches)
+							var/desired_matches = input(user, "Set the amount", "[initial(matchmake_type.pref_text)]", current_value)  as null|num
+							if (!isnull(desired_matches))
+								if(desired_matches == 0)
+									matchmaking_prefs -= matchmake_type
+								else
+									matchmaking_prefs[matchmake_type] = clamp(desired_matches, 1, max_matches)
 				if("autostand")
 					autostand = !autostand
 				if("auto_ooc")
@@ -2458,6 +2496,8 @@ Records disabled until a use for them is found
 					toggles ^= ANNOUNCE_LOGIN
 				if("combohud_lighting")
 					toggles ^= COMBOHUD_LIGHTING
+				if("toggle_split_admin_tabs")
+					toggles ^= SPLIT_ADMIN_TABS
 
 				if("be_special")
 					var/be_special_type = href_list["be_special_type"]
@@ -2468,6 +2508,9 @@ Records disabled until a use for them is found
 
 				if("name")
 					be_random_name = !be_random_name
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 
 				if("all")
 					be_random_body = !be_random_body
@@ -2595,6 +2638,9 @@ Records disabled until a use for them is found
 						random_character()
 						real_name = random_unique_name(gender)
 						save_character()
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 
 				if("tab")
 					if (href_list["tab"])

@@ -295,8 +295,16 @@ commented out pending rework*/
 	skills_type = /datum/skill_list_bay/legion/prime/officer
 
 	loadout_options = list(
-	/datum/outfit/loadout/decprimfront, //worn 10mm SMG and shield, punchdagger
-	/datum/outfit/loadout/decprimrear //trail carbine, gladius
+		/datum/outfit/loadout/decprimfront, //worn 10mm SMG and shield, punchdagger
+		/datum/outfit/loadout/decprimrear, //trail carbine, gladius
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
@@ -352,6 +360,14 @@ commented out pending rework*/
 	/datum/outfit/loadout/recdeclegion, //lever shotgun, reinforced machete
 	/datum/outfit/loadout/recdectribal // .44 revolver, javelins and bumper sword
 	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 	name = 			"Legion Recruit Decanus"
@@ -375,7 +391,7 @@ commented out pending rework*/
 	belt = 			/obj/item/storage/belt/military/assault/legion
 	backpack_contents = list(
 					/obj/item/ammo_box/shotgun/buck=2,
-					/obj/item/claymore/machete/reinforced=1)
+					/obj/item/melee/onehanded/machete=1)
 
 /datum/outfit/loadout/recdectribal
 	name =			"Tribal background"
@@ -385,11 +401,14 @@ commented out pending rework*/
 					/obj/item/gun/ballistic/revolver/m29=1,
 					/obj/item/ammo_box/m44=3)
 
-////////////////////
-///Specialist///////
-////////////////////
 
-// VEXILLARIUS (.45 2 ap mag to fight PA, spatha, smoke bomb.) Intended to have flexible loadout to help counter stuff Legion can't replicate.
+
+///////////////////
+/// Specialists ///
+///////////////////
+
+
+// VEXILLARIUS
 
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
 	title = "Legion Vexillarius"
@@ -397,7 +416,7 @@ commented out pending rework*/
 	faction = "Legion"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are a Veteran of proven bravery. When not fighting, relay orders from the commander and act as a bodyguard."
+	description = "You are a Veteran of proven bravery. When not fighting, relay orders from the commander and act as a bodyguard for him."
 	supervisors = "the Veteran Decanus and Centurion"
 	display_order = JOB_DISPLAY_ORDER_VEXILLARIUS
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
@@ -406,10 +425,17 @@ commented out pending rework*/
 	skills_type = /datum/skill_list_bay/legion/veteran
 
 	loadout_options = list(
-	/datum/outfit/loadout/vexbear, //.45 with AP ammo, spatha, c4
-	/datum/outfit/loadout/vexfox // dual .357s, lance, smoke grenades
+		/datum/outfit/loadout/vexbear, //	Classic FO13 Vex with his ripper: .223 pistol, ripper
+		/datum/outfit/loadout/vexfox, // 	Classic New Vegas Vex with his sniper: DKS sniper, gladius		
 	)
-
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -425,32 +451,29 @@ commented out pending rework*/
 	mask =			/obj/item/clothing/mask/bandana/legion/legvet
 	neck =			/obj/item/storage/belt/holster
 	glasses = 		/obj/item/clothing/glasses/sunglasses
-	gloves =		/obj/item/clothing/gloves/legion/plated
 	r_pocket =		/obj/item/flashlight/lantern
 	backpack_contents = list(
 					/obj/item/reagent_containers/pill/patch/healingpowder=1,
 					/obj/item/restraints/handcuffs,
-					/obj/item/megaphone/cornu=1)
+					/obj/item/megaphone/cornu=1,
+					/obj/item/storage/bag/money/small/legion=1,)
 
 /datum/outfit/loadout/vexbear
 	name =			"Mountain Bear"
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/combvexil
-	suit_store = 	/obj/item/gun/ballistic/automatic/pistol/m1911
+	suit_store = 	/obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m45/ap = 2,
-		/obj/item/ammo_box/magazine/m45 = 2,
-		/obj/item/grenade/plastic/c4 = 1,
-		/obj/item/melee/onehanded/machete/spatha = 1,
-		)
+					/obj/item/ammo_box/a556=1,
+					/obj/item/melee/powered/ripper=1)
 
 /datum/outfit/loadout/vexfox
 	name =			"Desert Fox"
 	head = 			/obj/item/clothing/head/helmet/f13/legion/vet/vexil
-	suit_store =	/obj/item/twohanded/spear/lance
+	suit_store =	/obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-					/obj/item/ammo_box/a357=4,
-					/obj/item/gun/ballistic/revolver/colt357=2,
-					/obj/item/grenade/smokebomb=2)
+					/obj/item/ammo_box/magazine/w308=3,
+					/obj/item/melee/onehanded/machete/gladius=1,)
+
 
 
 
@@ -475,10 +498,18 @@ commented out pending rework*/
 	skills_type = /datum/skill_list_bay/legion/veteran
 
 	loadout_options = list(
-		/datum/outfit/loadout/vetshielder, //greasegun, shield, gladius
-		/datum/outfit/loadout/vetrifle, //trail gun, .357 revolver, gladius
-		/datum/outfit/loadout/vetberserker, //lever shotgun, fireaxe, bola. The former tribal at his peak.
+			/datum/outfit/loadout/vetshielder, //greasegun, shield, gladius
+			/datum/outfit/loadout/vetrifle, //trail gun, .357 revolver, gladius
+			/datum/outfit/loadout/vetberserker, //lever shotgun, fireaxe, bola. The former tribal at his peak.
 		)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -547,8 +578,16 @@ commented out pending rework*/
 	loadout_options = list(
 		/datum/outfit/loadout/primelancer, //.44 revolver, lance
 		/datum/outfit/loadout/primerifle, //cowboy repeater, machete
-		/datum/outfit/loadout/primebrave //hunting shotgun, throwing spears, bola. Experienced tribal recruit.
-		)
+		/datum/outfit/loadout/primebrave, //hunting shotgun, throwing spears, bola. Experienced tribal recruit.
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name =			"Prime Legionnaire"
@@ -580,7 +619,7 @@ commented out pending rework*/
 	suit_store =	/obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
 					/obj/item/ammo_box/a357=3,
-					/obj/item/claymore/machete/reinforced=1)
+					/obj/item/melee/onehanded/machete=1)
 
 /datum/outfit/loadout/primebrave
 	name =			"Brave"
@@ -608,8 +647,16 @@ commented out pending rework*/
 
 	loadout_options = list(
 		/datum/outfit/loadout/recruittribal, //spiked baseball bat, .357 revolver
-		/datum/outfit/loadout/recruitlegion //autopipe, machete
-		)
+		/datum/outfit/loadout/recruitlegion, //autopipe, machete
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 	name =			"Recruit Legionnaire"
@@ -635,7 +682,7 @@ commented out pending rework*/
 	name =			"Legion Recruit"
 	suit_store =	/obj/item/gun/ballistic/automatic/autopipe
 	backpack_contents = list(
-					/obj/item/claymore/machete=1,
+					/obj/item/melee/onehanded/machete=1,
 					/obj/item/ammo_box/magazine/autopipe=1)
 
 
@@ -657,8 +704,16 @@ commented out pending rework*/
 
 	loadout_options = list(
 		/datum/outfit/loadout/expsniper, //scoped trailgun, .357 revolver, c4, machete, smokebomb
-		/datum/outfit/loadout/expambusher //trench shotgun, .44 snubnose revolver, c4, smokebomb
-		)
+		/datum/outfit/loadout/expambusher, //trench shotgun, .44 snubnose revolver, c4, smokebomb
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -690,14 +745,14 @@ commented out pending rework*/
 					/obj/item/ammo_box/shotgun/slug=1,
 					/obj/item/gun/ballistic/revolver/m29/snub=1,
 					/obj/item/ammo_box/m44=1,
-					/obj/item/kitchen/knife/combat=1)
+					/obj/item/melee/onehanded/knife/hunting=1)
 
 /datum/outfit/loadout/expsniper
 	name =			"Sniper"
 	l_pocket =		/obj/item/attachments/scope
 	suit_store =	/obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
-					/obj/item/claymore/machete/reinforced=1,
+					/obj/item/melee/onehanded/machete=1,
 					/obj/item/ammo_box/tube/m44=3,
 					/obj/item/gun/ballistic/revolver/colt357=1,
 					/obj/item/ammo_box/a357=1)
@@ -727,6 +782,14 @@ commented out pending rework*/
 		/datum/outfit/loadout/slavemaster, //shotgun, whip, bolas
 		/datum/outfit/loadout/forgemaster //sledgehammer, crafting recipes spathas, gladius, lance, trail carbine
 		)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -752,9 +815,9 @@ commented out pending rework*/
 	suit = 			/obj/item/clothing/suit/armor/f13/legion/prime/slavemaster
 	suit_store = 	/obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
-		/obj/item/claymore/machete/reinforced=1,
+		/obj/item/melee/onehanded/machete=1,
 		/obj/item/ammo_box/shotgun/bean=1,
-		/obj/item/melee/curator_whip=1,
+		/obj/item/melee/onehanded/slavewhip=1,
 		/obj/item/razor=1,
 		/obj/item/restraints/legcuffs/bola=1)
 
@@ -793,8 +856,16 @@ commented out pending rework*/
 	skills_type = /datum/skill_list_bay/legion/auxilia
 
 	loadout_options = list(
-	/datum/outfit/loadout/auxassist, // Tinker and keep track of the money, handle trading beneath the warriors
-	/datum/outfit/loadout/auxmedicus // Do surgery, medical tasks.
+		/datum/outfit/loadout/auxassist, // Tinker and keep track of the money, handle trading beneath the warriors
+		/datum/outfit/loadout/auxmedicus, // Do surgery, medical tasks.
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion,
+		),
 	)
 
 /*
@@ -881,7 +952,16 @@ commented out pending rework*/
 
 	loadout_options = list(
 		/datum/outfit/loadout/slaveservant,
-		/datum/outfit/loadout/slaveworker)
+		/datum/outfit/loadout/slaveworker,
+	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion/slave,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion/slave,
+		),
+	)
 
 /datum/outfit/job/CaesarsLegion/slave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

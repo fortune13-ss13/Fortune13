@@ -91,6 +91,7 @@ Cyborg
 	return H.Robotize(FALSE, latejoin)
 
 /datum/job/cyborg/after_spawn(mob/living/silicon/robot/R, mob/M)
+	. = ..()
 	R.apply_pref_name("cyborg", M.client)
 	R.gender = NEUTER
 
@@ -112,7 +113,3 @@ Mr. Handy
 
 /datum/job/cyborg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, latejoin = FALSE, datum/outfit/outfit_override = null, client/preference_source)
 	return H.Robotize(FALSE, latejoin)
-
-/datum/job/cyborg/after_spawn(mob/living/silicon/robot/R, mob/M)
-	R.apply_pref_name("cyborg", M.client)
-	R.gender = NEUTER
