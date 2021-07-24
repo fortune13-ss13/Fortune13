@@ -1009,7 +1009,7 @@
 	required_temp = 900 // (626.85'C)
 
 /datum/chemical_reaction/nukafloat
- 	name = "Nuka Float"
+	name = "Nuka Float"
 	id = /datum/reagent/consumable/nukafloat
 	results = list(/datum/reagent/consumable/nukafloat = 15)
 	required_reagents = list(/datum/reagent/consumable/nuka_cola = 5, /datum/reagent/consumable/ice = 5, /datum/reagent/consumable/cream = 5)
