@@ -661,7 +661,7 @@ Mayor
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/book/granter/trait/selection
+	r_hand = /obj/item/book/granter/skill/basic/selection
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,

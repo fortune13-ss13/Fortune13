@@ -104,7 +104,7 @@
 		ADD_TRAIT(spawner.mind, trait, JOB_TRAIT)
 
 	if(skills_type)
-		H?.mind.bay_skills = new skills_type
+		spawner?.mind.bay_skills = new skills_type
 
 	if(/datum/quirk/paraplegic in blacklisted_quirks)
 		spawner.regenerate_limbs() //if you can't be a paraplegic, attempt to regenerate limbs to stop amputated limb selection

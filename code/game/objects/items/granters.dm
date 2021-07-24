@@ -845,43 +845,6 @@
 	traitname = "gunslinging"
 	remarks = list("Engravings offer no tactical advantage whatsoever!", "I love to reload during battle.", "There's nothing like the feeling of slamming a long silver bullet into a well greased chamber.", "It doesn't feel right to shoot an unarmed man, but you get over it.", "He was pretty good, but I was better. At least, so I thought.", "The moment any truth is passed on, it starts turning into fiction. The problem is, fiction inspires people more than facts.")
 
-/obj/item/book/granter/trait/selection
-	name = "Burned Book"
-	desc = "Pulled from the ashes of the old world, it feels warm to the touch. It looks to be in poor condition."
-	granted_trait = null
-	pages_to_mastery = 0
-	time_per_page = 0
-
-/obj/item/book/granter/trait/selection/attack_self(mob/user)
-	var/list/choices = list("Trekking","Surgery","Power Armor", "Tinkering")
-	if(granted_trait == null)
-		var/choice = input("Choose a trait:") in choices
-		switch(choice)
-			if(null)
-				return 0
-			if("Trekking")
-				granted_trait = TRAIT_HARD_YARDS
-				traitname = "trekking"
-				remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can be led into easy lines of fire.")
-			if("Surgery")
-				granted_trait = TRAIT_SURGERY_LOW
-				traitname = "minor surgery"
-				remarks = list("Sterilise your hands and all tools...", "Don't forget your instruments inside patients...", "Maintain focus when cutting...", "Cauterise incisions post-operation...", "Keep organs and blood packs refrigerated...", "Welcome the new era of prosthetic replacements...",)
-			if("Power Armor")
-				granted_trait = TRAIT_PA_WEAR
-				traitname = "Power Armor"
-				remarks = list("Don't forget to do daily maintenance...","Keep your armor well guarded..", "Slow and steady wins the race...", "Positioning is important while moving slow...","Tired? Take a nap in your suit...", "Safety comes first when wearing your gear...")
-			if("Tinkering")
-				granted_trait = TRAIT_MASTER_GUNSMITH
-				traitname = "tinkering"
-				remarks = list("There are no thieves in the army, everyone's just trying to get their shit back.", "As soon as you think you've heard the dumbest way a man's broken his rifle, the door to your office will open.", "Act like you're mediocre, because otherwise they'll ask you to do extra work.", "Third time's the charm, but that's about it.", "Ensure your firearm is emptied before any maintenance work.")
-	return ..()
-
-
-/obj/item/book/granter/trait/selection/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
 ///BAY-SKILLS///
 
 /obj/item/book/granter/skill
@@ -920,7 +883,8 @@
 	to_chat(user, "<span class='notice'>You start reading about [name_mod]...</span>")
 
 /obj/item/book/granter/skill/on_reading_finished(mob/user)
-	to_chat(user, "[greet]")
+	if(greet)
+		to_chat(user, "[greet]")
 	user.mind.bay_skills.ModifyValue(skill_type, skill_amount)
 	if(one_use)
 		to_chat(user, "<span class='warning'>The book turns to dust in your hands!</span>")
@@ -995,8 +959,8 @@
 /obj/item/book/granter/skill/basic
 	name = "basic level guide"
 	desc = "You aren't supposed to see it..."
-	maximum_skill = 1
-	skill_amount = 1
+	maximum_skill = 2
+	skill_amount = 2
 	greet = "You suddenly understand the concept of universe a bit more."
 	pages_to_mastery = 1
 
@@ -1007,9 +971,68 @@
 	remarks = list("So that's what a toolbox is for!", "You hold a wrench like this and then rotate it?", "Wait, what the fuck is plasteel?", "So that's how you are supposed to use welding tools.", "Why can't we just throw in some monkeys to do the job for us?")
 
 /obj/item/book/granter/skill/basic/medical
-	name = "first aid guide"
+	name = "basic first aid guide"
 	desc = "This guide will show you how to use sutures properly."
 	greet = "You suddenly realize how to apply sutures in a proper way."
 	skill_type = "medical"
 	name_mod = "first aid"
 	remarks = list("What do you mean gauze is to be applied on a wound?", "Huh, so it isn't a mummy wrapping?", "So you put it around the limb...", "Wait, what's CPR again?")
+
+/obj/item/book/granter/skill/basic/chemistry
+	name = "basic chemistry guide"
+	desc = "This guide will show you how to use chemical machinery."
+	greet = "You now understand how to use chemistry machinery."
+	skill_type = "chemistry"
+	remarks = list("What the hell is hydrogen?", "That's what water is for..?", "Why shouldn't I mix potassium and water..?", "That... makes no sense, but okay.")
+
+/obj/item/book/granter/skill/basic/melee
+	name = "basic melee combat guide"
+	desc = "This guide will show you how to effectively use melee weaponry."
+	greet = "You can now use melee weapons more efficiently."
+	skill_type = "melee"
+	name_mod = "melee combat"
+	remarks = list("Apply sword to the target...", "Sharp end should face the target...", "Do not touch the edge of your weapon...")
+
+/obj/item/book/granter/skill/basic/selection
+	name = "Burned Book"
+	desc = "Pulled from the ashes of the old world, it feels warm to the touch. It looks to be in poor condition."
+	icon_state = "bookSkill6"
+	skill_type = null
+	greet = null
+	maximum_skill = 999 // No limit. You just get 2 in your skill.
+	pages_to_mastery = 0
+	time_per_page = 0
+
+/obj/item/book/granter/skill/basic/selection/attack_self(mob/user)
+	var/list/choices = list("Unarmed Combat", "Melee Combat", "Engineering", "Salvaging", "Chemistry", "First Aid", "Surgery", "Crafting")
+	if(skill_type == null)
+		var/choice = input("Choose a skill:") in choices
+		switch(choice)
+			if(null)
+				return 0
+			if("Unarmed Combat")
+				skill_type = "unarmed"
+			if("Melee Combat")
+				skill_type = "melee"
+			if("Engineering")
+				skill_type = "engineering"
+			if("Salvaging")
+				skill_type = "engineering"
+			if("Chemistry")
+				skill_type = "chemistry"
+			if("First Aid")
+				skill_type = "medical"
+			if("Surgery")
+				skill_type = "surgery"
+				ADD_TRAIT(user, TRAIT_SURGERY_LOW, BOOK_TRAIT) // Temporary solution
+			if("Crafting")
+				skill_type = "crafting"
+		name_mod = choice
+	return ..()
+
+/obj/item/book/granter/skill/basic/selection/on_reading_start(mob/user)
+	to_chat(user, "<span class='notice'>You finish reading about [name_mod].</span>")
+
+/obj/item/book/granter/skill/basic/selection/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)

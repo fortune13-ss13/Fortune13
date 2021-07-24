@@ -303,7 +303,7 @@ Great Khan
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/explorer
 	uniform = /obj/item/clothing/under/f13/khan
-	r_hand = /obj/item/book/granter/trait/selection
+	r_hand = /obj/item/book/granter/skill/basic/selection
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/storage/bag/money/small/khan
 	backpack_contents = list(
@@ -412,7 +412,7 @@ Raider
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
-	r_hand = /obj/item/book/granter/trait/selection
+	r_hand = /obj/item/book/granter/skill/basic/selection
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
@@ -682,7 +682,7 @@ Raider
 	id = null
 	ears = null
 	belt = null
-	r_hand = /obj/item/book/granter/trait/selection
+	r_hand = /obj/item/book/granter/skill/basic/selection
 	l_pocket = /obj/item/reagent_containers/food/drinks/flask
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/melee/onehanded/knife/survival
@@ -857,7 +857,7 @@ Raider
 
 /datum/outfit/job/wasteland/f13enforcer/pre_equip(mob/living/carbon/human/H)
 	..()
-	r_hand = /obj/item/book/granter/trait/selection
+	r_hand = /obj/item/book/granter/skill/basic/selection
 
 /datum/outfit/job/wasteland/f13enforcer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
