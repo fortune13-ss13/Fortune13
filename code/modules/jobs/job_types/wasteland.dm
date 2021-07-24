@@ -600,6 +600,7 @@ Raider
 
 /datum/outfit/loadout/raider_enclave
 	name = "Enclave Remnant"
+	l_hand = /obj/item/book/granter/crafting_recipe/enclave_armor
 	r_hand = /obj/item/storage/backpack/satchel/enclave
 	suit = /obj/item/clothing/suit/armor/f13/battlecoat/tan/armored // Tier 4 armor
 	uniform = /obj/item/clothing/under/f13/exile/enclave
@@ -608,7 +609,6 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
 		/obj/item/ammo_box/magazine/m45=2,
-		/obj/item/book/granter/crafting_recipe/enclave_armor,
 		)
 
 
