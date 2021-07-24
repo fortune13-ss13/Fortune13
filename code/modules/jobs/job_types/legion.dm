@@ -946,7 +946,6 @@ commented out pending rework*/
 	/datum/outfit/loadout/auxmedicus, // Do surgery, medical tasks.
 	)
 
-	)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/CaesarsLegion,
