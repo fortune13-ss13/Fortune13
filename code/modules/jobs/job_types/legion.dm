@@ -323,6 +323,7 @@ commented out pending rework*/
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/CaesarsLegion,
 		),
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
