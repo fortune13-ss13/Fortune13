@@ -689,8 +689,8 @@
 	flash_protect = 0
 	resistance_flags = null
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 0)
-	
-	
+
+
 /obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
 	name = "reclaimed desert ranger gear"
 	desc = "(IV) A refurbished and personalized set of pre-unification desert ranger gear."
@@ -998,12 +998,11 @@
 	item_state = "enclave_cap"
 	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/combat/enclave
+/obj/item/clothing/head/helmet/f13/combat/mk2/enclave
 	name = "enclave combat helmet"
 	desc = "(VI) An intimidating helmet that is issued with it's corresponding suit."
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
-	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
 
 /obj/item/clothing/head/helmet/f13/combat/remnant
 	name = "remnant combat helmet"

@@ -8,6 +8,19 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 
+/datum/crafting_recipe/enclavedogtags
+	name = "Enclave dogtags"
+	result = /obj/item/card/id/dogtag/enclave/recruit/remnant
+	blacklist = list(/obj/item/clothing/suit/armor/f13/combat)
+	reqs = list(/obj/item/card/id/rusted/brokenholodog/enclave = 1,
+				/obj/item/stack/crafting/electronicparts = 5,
+				/obj/item/stack/crafting/goodparts = 3)
+	time = 120
+	tools = list(TOOL_SCREWDRIVER,TOOL_MULTITOOL,TOOL_WORKBENCH)
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	always_availible = FALSE
+
 /////////////////
 //Large Objects//
 /////////////////

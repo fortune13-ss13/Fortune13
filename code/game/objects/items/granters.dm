@@ -788,6 +788,16 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/scoutcarbine)
 
+/obj/item/book/granter/crafting_recipe/enclave_armor
+	name = "United States Military maintenance guide"
+	desc = "A short guide on modifying combat armor and repairing the dogtags."
+	icon_state = "book"
+	oneuse = TRUE
+	pages_to_mastery = 2
+	time_per_page = 10
+	remarks = list("Apply paint to the plates...", "Avoid painting the inner side of the armor...", "Do not apply water to the dogtags under any circumstances...", "Broken electronic parts in the dogtag should be all replaced...")
+	crafting_recipe_types = list(/datum/crafting_recipe/enclavecombatarmor, /datum/crafting_recipe/enclavecombathelmet, /datum/crafting_recipe/enclavedogtags)
+
 /obj/item/book/granter/trait/forgemaster
 	name = "Ashes of Phoenix: Imperial Weaponsmithing"
 	desc = "Bound in doghide, this book holds lessons from freemen in tributary cities on how to properly maintain and forge new weapons."
@@ -813,7 +823,7 @@
 	granted_trait = TRAIT_BIG_LEAGUES
 	traitname = "big_leagues"
 	remarks = list("Grognak hit the Death Knight only once, but that was enough.", "Grognak is surprisingly agile, never committing too heavily on an attack, dancing between his enemies.", "Grognak isn't good at talking, but he knows it has its place. He has friends to talk for him.", "Other barbarians might change their weapons, but Grognak could never leave his beloved axe.")
-	
+
 /obj/item/book/granter/trait/lowsurgery
 	name = "First Aid Pamphlet"
 	desc = "A flimsy collection of vital tips and tricks for the average American with a sudden injury."

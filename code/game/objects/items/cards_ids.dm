@@ -850,18 +850,28 @@
 	desc = "An advanced holographic dogtag, that shows the duty of a BoS member. This one seems a bit off somewhow..."
 
 /obj/item/card/id/dogtag/enclave/recruit
+	var/set_assignment = "Enclave Recruit"
+	var/change_one_use = FALSE // Can it be used once or more?
+	var/change_used = FALSE // For variable above
 	access = list(ACCESS_ENCLAVE)
 
 /obj/item/card/id/dogtag/enclave/recruit/attack_self(mob/user)
-	if(isliving(user))
+	if(isliving(user) && !change_used)
 		var/mob/living/living_user = user
 		if(alert(user, "Action", "Agent ID", "Show", "Forge") == "Forge")
 			registered_name = living_user.real_name
-			assignment = "Enclave Recruit"
+			assignment = set_assignment
 			update_label()
 			to_chat(user, "<span class='notice'>You successfully update your holotag.</span>")
+			if(change_one_use)
+				change_used = TRUE
 			return
 	..()
+
+/obj/item/card/id/dogtag/enclave/recruit/remnant // A craftable ID for the remnant loadout with a bit more vague assignment and only one use
+	desc = "A restored holographic dogtag, worn by a proud member of the US military, presumably."
+	set_assignment = "Enclave Soldier"
+	change_one_use = TRUE
 
 /obj/item/card/id/selfassign/attack_self(mob/user)
 	if(isliving(user))

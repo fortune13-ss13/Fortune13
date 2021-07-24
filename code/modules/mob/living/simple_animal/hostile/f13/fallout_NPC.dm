@@ -170,7 +170,7 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	//radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/f13/combat/enclave
+	head = /obj/item/clothing/head/helmet/f13/combat/mk2/enclave
 	//back = /obj/item/weapon/storage/backpack
 
 /obj/effect/mob_spawn/human/corpse/enclave/soldier

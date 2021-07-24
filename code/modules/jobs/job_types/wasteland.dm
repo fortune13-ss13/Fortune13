@@ -24,11 +24,11 @@
 	name = "Enclave Private"
 	jobtype = /datum/job/wasteland/enclavespy
 	backpack = /obj/item/storage/backpack/satchel/leather
-	head = 			/obj/item/clothing/head/helmet/f13/combat/enclave
+	head = 			/obj/item/clothing/head/helmet/f13/combat/mk2/enclave
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/f13/navy
-	suit = 			/obj/item/clothing/suit/armor/f13/combat/enclave
+	suit = 			/obj/item/clothing/suit/armor/f13/combat/mk2/enclave
 	belt = 			/obj/item/storage/belt/military/army
 	shoes = 		/obj/item/clothing/shoes/combat/swat
 	id = 			/obj/item/card/id/dogtag/enclave
@@ -607,7 +607,9 @@ Raider
 	id = /obj/item/card/id/rusted/brokenholodog/enclave
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
-		/obj/item/ammo_box/magazine/m45=2)
+		/obj/item/ammo_box/magazine/m45=2,
+		/obj/item/book/granter/crafting_recipe/enclave_armor,
+		)
 
 
 /datum/job/wasteland/f13wastelander
