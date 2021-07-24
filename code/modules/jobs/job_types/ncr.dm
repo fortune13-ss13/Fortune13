@@ -783,6 +783,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/ncr,
 		),
+	)
 
 /datum/outfit/job/ncr/f13trooper
 	name = "NCR Trooper"
@@ -795,7 +796,8 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	glasses	= null
 	backpack_contents = list(
 		/obj/item/storage/survivalkit_aid=1,
-		/obj/item/storage/bag/money/small/ncrenlisted=1,)
+		/obj/item/storage/bag/money/small/ncrenlisted=1,
+	)
 
 /datum/outfit/loadout/trooperrifleman
 	name = "Rifleman"
@@ -959,7 +961,8 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	glasses	= null
 	backpack_contents = list(
 		/obj/item/storage/survivalkit_aid=1,
-		/obj/item/storage/bag/money/small/ncrenlisted=1,)
+		/obj/item/storage/bag/money/small/ncrenlisted=1,
+		)
 
 /datum/outfit/job/ncr/f13rearechelon/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
