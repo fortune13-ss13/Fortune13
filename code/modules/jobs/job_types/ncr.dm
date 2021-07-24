@@ -28,7 +28,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 
 /datum/outfit/job/ncr/
 	name = "NCRdatums"
-	jobtype	= /datum/job/ncr/
+	jobtype = /datum/job/ncr
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	ears = /obj/item/radio/headset/headset_ncr
@@ -177,6 +177,15 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	outfit = /datum/outfit/job/ncr/f13lieutenant
 	exp_requirements = 1500
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
+
 /datum/outfit/job/ncr/f13lieutenant 		// Marksman Rifle, Binoculars, Bayonet, 9mm sidearm
 	name = "NCR Lieutenant"
 	jobtype	= /datum/job/ncr/f13lieutenant
@@ -224,6 +233,16 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	/datum/outfit/loadout/sergeantrifleman,	// Service Rifle
 	/datum/outfit/loadout/sergeantrecon,	// M1/n Carbine, Binoculars, 9mm sidearm
 	/datum/outfit/loadout/sergeantcqc)	// Trench Shotgun, Gas mask, Smoke bombs, Trench knife
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
+
 
 /datum/outfit/job/ncr/f13sergeant
 	name = "NCR Sergeant"
@@ -518,6 +537,15 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		/datum/outfit/loadout/combatengineertrapper, // Rockwell SMG, Minelaying
 		/datum/outfit/loadout/combatengineerflamethrower,) // Flamer, M1/n carbine
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
+
 /datum/outfit/job/ncr/f13combatengineer
 	name = "NCR Combat Engineer"
 	jobtype = /datum/job/ncr/f13combatengineer
@@ -629,6 +657,15 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
 	outfit = /datum/outfit/job/ncr/f13combatmedic
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
+
 /datum/outfit/job/ncr/f13combatmedic				// M1A1 Carbine, Survival knife
 	name = "NCR Combat Medic"
 	jobtype = /datum/job/ncr/f13combatmedic
@@ -676,6 +713,15 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	loadout_options = list(
 	/datum/outfit/loadout/corporaldesignatedmarksman,	// Remington rife, 9mm sidearm, Bayonet
 	/datum/outfit/loadout/corporalrifleman,	// Service rifle, Bayonet
+	)
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
 	)
 
 /datum/outfit/job/ncr/f13corporal
@@ -730,6 +776,14 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	/datum/outfit/loadout/trooperfiresupport, // M1/n carbine, Trench tool
 	)
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+
 /datum/outfit/job/ncr/f13trooper
 	name = "NCR Trooper"
 	jobtype	= /datum/job/ncr/f13trooper
@@ -778,6 +832,15 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	display_order = JOB_DISPLAY_ORDER_MEDICALOFFICER
 	outfit = /datum/outfit/job/ncr/f13medicalofficer
 	exp_requirements = 1500
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+		),
+	)
+
 
 /datum/outfit/job/ncr/f13medicalofficer	// 9mm sidearm, Telescopic baton
 	name = "NCR Medical Officer"
