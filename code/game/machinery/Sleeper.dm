@@ -13,6 +13,10 @@
 	state_open = TRUE
 	circuit = /obj/item/circuitboard/machine/sleeper
 
+	skillcheck_type = "chemistry"
+	skillcheck_level = 2
+	skillcheck_block = TRUE
+
 	var/efficiency = 1
 	var/min_health = -25
 	var/list/available_chems
@@ -154,10 +158,6 @@
 		if(!ui)
 			ui = new(user, src, "Sleeper", name)
 			ui.open()
-	else
-		if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ))
-			to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
-			return
 		if(!user.IsAdvancedToolUser())
 			to_chat(user, "<span class='warning'>The legion has no use for drugs! Better to destroy it.</span>")
 			return

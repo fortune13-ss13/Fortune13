@@ -54,14 +54,13 @@ Administrator
 	access = list(ACCESS_FOLLOWER, ACCESS_COMMAND, ACCESS_MILITARY, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS)
 	minimal_access = list(ACCESS_FOLLOWER, ACCESS_COMMAND, ACCESS_MILITARY, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS)
 
+	skills_type = /datum/skill_list_bay/medical/prof/chief
 
 /datum/outfit/job/followers/f13leadpractitioner/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 
@@ -69,7 +68,6 @@ Administrator
 	name = "Followers Administrator"
 	jobtype = /datum/job/followers/f13leadpractitioner
 	id = 		/obj/item/card/id/silver
-	chemwhiz = TRUE
 	backpack = 	/obj/item/storage/backpack/explorer
 	uniform = 	/obj/item/clothing/under/f13/followers
 	suit= 		/obj/item/clothing/suit/toggle/labcoat/cmo
@@ -83,9 +81,7 @@ Administrator
 		/obj/item/storage/firstaid/ancient=1,
 		/obj/item/reagent_containers/medspray/synthflesh=2,
 		/obj/item/reagent_containers/hypospray/combat=1,
-		/obj/item/clothing/glasses/hud/health=1,
-		/obj/item/book/granter/trait/chemistry=1,
-		/obj/item/book/granter/trait/techno=1)
+		/obj/item/clothing/glasses/hud/health=1)
 
 /*
 Professor
@@ -149,6 +145,8 @@ Practitioner
 	selection_color = "#FFDDFF"
 	exp_requirements = 600
 
+	skills_type = /datum/skill_list_bay/medical/prof
+
 	outfit = /datum/outfit/job/followers/f13practitioner
 
 	loadout_options = list(
@@ -163,7 +161,6 @@ Practitioner
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 
@@ -177,7 +174,6 @@ Practitioner
 	jobtype = /datum/job/followers/f13practitioner
 	uniform = 	/obj/item/clothing/under/f13/followers
 	id = 		/obj/item/card/id/silver
-	chemwhiz = TRUE
 	backpack = 	/obj/item/storage/backpack/medic
 	satchel = 	/obj/item/storage/backpack/satchel/med
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
@@ -223,8 +219,7 @@ Practitioner
 	backpack_contents = list(
 		/obj/item/clothing/accessory/pocketprotector/full=1,
 		/obj/item/folder/white=1,
-		/obj/item/pda/medical=1,
-		/obj/item/book/granter/trait/techno=1
+		/obj/item/pda/medical=1
 	)
 
 //datum/outfit/job/followers/practitioner/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -250,6 +245,9 @@ Follower Volunteer
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them. Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
 	outfit = /datum/outfit/job/followers/f13followervolunteer
+
+	skills_type = /datum/skill_list_bay/medical
+
 	loadout_options = list(
 	/datum/outfit/loadout/volunteer_emt,
 	/datum/outfit/loadout/volunteer_mechanic,
@@ -330,6 +328,8 @@ Follower Guard
 
 	access = list(ACCESS_FOLLOWER, ACCESS_MILITARY)
 	minimal_access = list(ACCESS_FOLLOWER, ACCESS_MILITARY)
+
+	skills_type = /datum/skill_list_bay/soldier
 
 /datum/outfit/job/followers/f13followerguard
 	name = "Followers Guard"

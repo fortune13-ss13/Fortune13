@@ -134,6 +134,16 @@ Class Procs:
 	var/barricade = TRUE //if true, acts as barricade
 	var/proj_pass_rate = 65 //percentage change for bullets to fly over, if barricade=1
 
+	// Skills stuff
+	/// Type of a skill that's getting checked.
+	var/skillcheck_type = "engineering"
+	/// Minimum skill level to use it without a delay.
+	var/skillcheck_level = 0
+	/// Type of skill block if level is too low. If TRUE - you can't use it at all. If FALSE - you can use it with a delay.
+	var/skillcheck_block = FALSE
+	/// Normal do_after delay.
+	var/skillcheck_delay = 60
+
 /obj/machinery/Initialize()
 	if(!armor)
 		armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 70)
@@ -329,6 +339,18 @@ Class Procs:
 	return 0
 
 ////////////////////////////////////////////////////////////////////////////////////////////
+
+// Skill check before using machine.
+/obj/machinery/attack_hand(mob/user)
+	var/skill = get_skill_rating(user, skillcheck_type)
+	if(skill < skillcheck_level)
+		if(skillcheck_block == TRUE)
+			to_chat(user, "<span class='warning'>You have no idea how to use [src].</span>")
+			return
+		to_chat(user, "<span class='warning'>You fumble around, trying to understand how to use [src].</span>")
+		if(!do_after(user, (skillcheck_delay / SKILL_CHECK_VALUE(user, skillcheck_type)), target = src))
+			return
+	return ..()
 
 /obj/machinery/attack_paw(mob/living/user)
 	if(user.a_intent != INTENT_HARM)

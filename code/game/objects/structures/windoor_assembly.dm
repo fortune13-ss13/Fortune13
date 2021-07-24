@@ -87,6 +87,7 @@
 	add_fingerprint(user)
 	switch(state)
 		if("01")
+			var/skill_mod = SKILL_CHECK_VALUE(user, "engineering")
 			if(istype(W, /obj/item/weldingtool) && !anchored)
 				if(!W.tool_start_check(user, amount=0))
 					return
@@ -150,7 +151,7 @@
 					return
 				to_chat(user, "<span class='notice'>You start to reinforce the windoor with plasteel...</span>")
 
-				if(do_after(user,40, target = src))
+				if(do_after(user, 40 / skill_mod, target = src))
 					if(!src || secure || P.get_amount() < 2)
 						return
 
@@ -166,7 +167,7 @@
 			else if(istype(W, /obj/item/stack/cable_coil) && anchored)
 				user.visible_message("[user] wires the windoor assembly.", "<span class='notice'>You start to wire the windoor assembly...</span>")
 
-				if(do_after(user, 40, target = src))
+				if(do_after(user, 40 / skill_mod, target = src))
 					if(!src || !anchored || src.state != "01")
 						return
 					if(!W.use_tool(src, user, 0, 1))
@@ -207,7 +208,8 @@
 				user.visible_message("[user] installs the electronics into the airlock assembly.",
 					"<span class='notice'>You start to install electronics into the airlock assembly...</span>")
 
-				if(do_after(user, 40, target = src))
+				var/skill_mod = SKILL_CHECK_VALUE(user, "engineering")
+				if(do_after(user, 40 / skill_mod, target = src))
 					if(!src || electronics)
 						W.forceMove(drop_location())
 						return

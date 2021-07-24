@@ -34,15 +34,16 @@
 /obj/item/stack/medical/proc/try_heal(mob/living/M, mob/user, silent = FALSE)
 	if(!M.can_inject(user, TRUE))
 		return
+	var/skill_mod = SKILL_CHECK_VALUE(user, "medical")
 	if(M == user)
 		if(!silent)
 			user.visible_message("<span class='notice'>[user] starts to apply \the [src] on [user.p_them()]self...</span>", "<span class='notice'>You begin applying \the [src] on yourself...</span>")
-		if(!do_mob(user, M, self_delay, extra_checks=CALLBACK(M, /mob/living/proc/can_inject, user, TRUE)))
+		if(!do_mob(user, M, self_delay / skill_mod, extra_checks=CALLBACK(M, /mob/living/proc/can_inject, user, TRUE)))
 			return
 	else if(other_delay)
 		if(!silent)
 			user.visible_message("<span class='notice'>[user] starts to apply \the [src] on [M].</span>", "<span class='notice'>You begin applying \the [src] on [M]...</span>")
-		if(!do_mob(user, M, other_delay, extra_checks=CALLBACK(M, /mob/living/proc/can_inject, user, TRUE)))
+		if(!do_mob(user, M, other_delay / skill_mod, extra_checks=CALLBACK(M, /mob/living/proc/can_inject, user, TRUE)))
 			return
 
 	if(heal(M, user))
@@ -126,8 +127,8 @@
 	singular_name = "medical gauze"
 	icon_state = "gauze"
 	heal_brute = 5
-	self_delay = 50
-	other_delay = 20
+	self_delay = 6 SECONDS
+	other_delay = 3 SECONDS
 	amount = 10
 	max_amount = 10
 	absorption_rate = 0.25
@@ -199,8 +200,8 @@
 	singular_name = "improvised gauze"
 	heal_brute = 0
 	desc = "A roll of cloth roughly cut from something that does a decent job of stabilizing wounds, but less efficiently than real medical gauze."
-	self_delay = 60
-	other_delay = 30
+	self_delay = 8 SECONDS
+	other_delay = 4 SECONDS
 	absorption_rate = 0.15
 	absorption_capacity = 4
 	merge_type = /obj/item/stack/medical/gauze/improvised
@@ -215,8 +216,8 @@
 	singular_name = "sterilized medical gauze"
 	desc = "A roll of elastic sterilized cloth that is extremely effective at stopping bleeding and covering burns."
 	heal_brute = 6
-	self_delay = 45
-	other_delay = 15
+	self_delay = 4 SECONDS
+	other_delay = 2 SECONDS
 	absorption_rate = 0.4
 	absorption_capacity = 6
 	merge_type = /obj/item/stack/medical/gauze/adv
@@ -236,8 +237,8 @@
 	gender = PLURAL
 	singular_name = "suture"
 	icon_state = "suture"
-	self_delay = 30
-	other_delay = 10
+	self_delay = 4 SECONDS
+	other_delay = 2 SECONDS
 	amount = 15
 	max_amount = 15
 	repeating = TRUE
@@ -308,8 +309,8 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount = 12
 	max_amount = 12
-	self_delay = 40
-	other_delay = 20
+	self_delay = 5 SECONDS
+	other_delay = 3 SECONDS
 	merge_type = /obj/item/stack/medical/ointment
 
 	heal_burn = 5
@@ -341,8 +342,8 @@
 	gender = PLURAL
 	singular_name = "regenerative mesh"
 	icon_state = "regen_mesh"
-	self_delay = 30
-	other_delay = 10
+	self_delay = 4 SECONDS
+	other_delay = 2 SECONDS
 	amount = 15
 	max_amount = 15
 	heal_burn = 10
@@ -438,7 +439,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 
 	amount = 4
-	self_delay = 20
+	self_delay = 3 SECONDS
 	grind_results = list(/datum/reagent/medicine/bicaridine = 10)
 	novariants = TRUE
 
@@ -479,8 +480,8 @@
 	desc = "A healing paste you can apply on wounds."
 
 	icon_state = "aloe_paste"
-	self_delay = 20
-	other_delay = 10
+	self_delay = 3 SECONDS
+	other_delay = 2 SECONDS
 	novariants = TRUE
 	amount = 20
 	max_amount = 20
@@ -518,8 +519,8 @@
 	max_amount = 15
 	heal_brute = 10
 	heal_burn = 10
-	self_delay = 40
-	other_delay = 10
+	self_delay = 5 SECONDS
+	other_delay = 2 SECONDS
 	repeating = TRUE
 	merge_type = /obj/item/stack/medical/poultice
 	novariants = TRUE

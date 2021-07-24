@@ -6,6 +6,9 @@
 
 	access = list(ACCESS_NCR)
 	minimal_access = list(ACCESS_NCR)
+
+	skills_type = /datum/skill_list_bay/ncr
+
 	forbids = "The NCR forbids: Chem and drug use such as jet or alcohol while on duty. Execution of unarmed or otherwise subdued targets without authorisation."
 	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners.  Good conduct within the Republic's laws. Wearing the uniform."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Neutralize and capture dangerous criminals", "Leadership recommends the following goal for this week: Free slaves and establish good relations with unaligned individuals.")
@@ -46,13 +49,14 @@ Colonel
 	total_positions = 0
 	spawn_positions = 0
 
+	skills_type = /datum/skill_list_bay/ncr/colonel
+
 	outfit = /datum/outfit/job/ncr/f13colonel
 
 /datum/outfit/job/ncr/f13colonel/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
@@ -95,6 +99,8 @@ Captain
 	outfit = /datum/outfit/job/ncr/f13captain
 	exp_requirements = 2000
 
+	skills_type = /datum/skill_list_bay/ncr/captain
+
 	loadout_options = list(
 	/datum/outfit/loadout/captao, //Captain armor, m16a1, deagle
 	/datum/outfit/loadout/captco, //Officer coat, R91, hunting revolver
@@ -104,7 +110,6 @@ Captain
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
@@ -172,6 +177,8 @@ Lieutenant
 	outfit = /datum/outfit/job/ncr/f13lieutenant
 	exp_requirements = 1500
 
+	skills_type = /datum/skill_list_bay/ncr/lieutenant
+
 /datum/outfit/job/ncr/f13lieutenant
 	name = "NCR Lieutenant"
 	jobtype	= /datum/job/ncr/f13lieutenant
@@ -201,7 +208,6 @@ Lieutenant
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
@@ -221,6 +227,8 @@ Medical Officer
 	display_order = JOB_DISPLAY_ORDER_MEDICALOFFICER
 	outfit = /datum/outfit/job/ncr/f13medicalofficer
 	exp_requirements = 1500
+
+	skills_type = /datum/skill_list_bay/ncr/medic/prof
 
 /datum/outfit/job/ncr/f13medicalofficer
 	name = "NCR Medical Officer"
@@ -253,7 +261,6 @@ Medical Officer
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 
 /*
@@ -271,6 +278,8 @@ Logistics Officer
 	display_order = JOB_DISPLAY_ORDER_LOGISTICSOFFICER
 	outfit = /datum/outfit/job/ncr/f13logisticsofficer
 	exp_requirements = 1500
+
+	skills_type = /datum/skill_list_bay/ncr/engineer/logistics
 
 /datum/outfit/job/ncr/f13logisticsofficer
 	name = "NCR Logistics Officer"
@@ -309,7 +318,6 @@ Logistics Officer
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rangemaster)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1garand)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 
@@ -368,6 +376,8 @@ Sergeant
 	display_order = JOB_DISPLAY_ORDER_SERGEANT
 	outfit = /datum/outfit/job/ncr/f13sergeant
 	exp_requirements = 600
+
+	skills_type = /datum/skill_list_bay/ncr/sergeant
 
 	loadout_options = list(
 	/datum/outfit/loadout/sergeantrifleman,
@@ -444,6 +454,8 @@ Heavy Trooper
 	outfit = /datum/outfit/job/ncr/f13heavytrooper
 	exp_requirements = 750
 
+	skills_type = /datum/skill_list_bay/ncr/trooper/heavy
+
 /datum/outfit/job/ncr/f13heavytrooper
 	name = "NCR Heavy Trooper"
 	jobtype = /datum/job/ncr/f13heavytrooper
@@ -487,6 +499,8 @@ Corporal
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_CORPORAL
 	outfit = /datum/outfit/job/ncr/f13corporal
+
+	skills_type = /datum/skill_list_bay/ncr/corporal
 
 	loadout_options = list(
 	/datum/outfit/loadout/corporaldesignatedmarksman,
@@ -551,6 +565,8 @@ Corporal
 	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
 	outfit = /datum/outfit/job/ncr/f13combatmedic
 
+	skills_type = /datum/skill_list_bay/ncr/medic
+
 /datum/outfit/job/ncr/f13combatmedic
 	name = "NCR Combat Medic"
 	jobtype = /datum/job/ncr/f13combatmedic
@@ -579,7 +595,6 @@ Corporal
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 
 /*
@@ -597,6 +612,8 @@ Combat Engineer
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATENGINEER
 	outfit = /datum/outfit/job/ncr/f13combatengineer
+
+	skills_type = /datum/skill_list_bay/ncr/engineer
 
 	loadout_options = list(
 		/datum/outfit/loadout/combatengineerbuilder,
@@ -671,7 +688,6 @@ Combat Engineer
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1garand)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 
 /*
 Trooper
@@ -687,6 +703,8 @@ Trooper
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_TROOPER
 	outfit = /datum/outfit/job/ncr/f13trooper
+
+	skills_type = /datum/skill_list_bay/ncr/trooper
 
 	loadout_options = list(
 	/datum/outfit/loadout/trooperrifleman,
@@ -751,6 +769,8 @@ Trooper
 	outfit = /datum/outfit/job/ncr/f13mp
 	exp_requirements = 300
 
+	skills_type = /datum/skill_list_bay/ncr/mp
+
 /datum/outfit/job/ncr/f13mp
 	name = "NCR Military Police"
 	jobtype = /datum/job/ncr/f13mp
@@ -787,6 +807,8 @@ Rear Echelon
 	exp_type = EXP_TYPE_NCR
 	display_order = JOB_DISPLAY_ORDER_REAR_ECHELON
 	outfit = /datum/outfit/job/ncr/f13rearechelon
+
+	skills_type = /datum/skill_list_bay/ncr/rear
 
 	loadout_options = list(
 	/datum/outfit/loadout/rearlog,
@@ -836,8 +858,7 @@ Rear Echelon
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/ninemil=1, \
-		/obj/item/ammo_box/magazine/m9mm=3, \
-		/obj/item/book/granter/trait/chemistry=1)
+		/obj/item/ammo_box/magazine/m9mm=3)
 
 //Guard duty
 /datum/outfit/loadout/rearscav
@@ -905,6 +926,8 @@ Veteran Ranger
 	outfit = /datum/outfit/job/ncr/f13vetranger
 	exp_requirements = 1500
 
+	skills_type = /datum/skill_list_bay/ncr/ranger/veteran
+
 	loadout_options = list(
 	/datum/outfit/loadout/vrclassic, //AMR and Sequoia,
 	/datum/outfit/loadout/vrlite, //Rangemaster and Sequoia,
@@ -917,8 +940,6 @@ Veteran Ranger
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
@@ -987,6 +1008,8 @@ Veteran Ranger
 	display_order = JOB_DISPLAY_ORDER_RANGER
 	outfit = /datum/outfit/job/ncr/f13ranger
 	exp_requirements = 600
+
+	skills_type = /datum/skill_list_bay/ncr/ranger
 
 	loadout_options = list(
 	/datum/outfit/loadout/rangerrecon,
@@ -1102,7 +1125,6 @@ Veteran Ranger
 		/obj/item/clothing/accessory/armband/med/ncr = 1,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/storage/survivalkit_aid_adv = 1,
-		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
 		/obj/item/ammo_box/magazine/m45=3,
 		/obj/item/book/granter/trait/midsurgery=1

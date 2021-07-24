@@ -63,6 +63,7 @@
 			to_chat(user, "<span class='warning'>There is already a false wall present!</span>")
 			return
 
+		var/skill_mod = SKILL_CHECK_VALUE(user, "engineering")
 		if(istype(W, /obj/item/stack/rods))
 			var/obj/item/stack/rods/S = W
 			if(state == GIRDER_DISPLACED)
@@ -70,7 +71,7 @@
 					to_chat(user, "<span class='warning'>You need at least two rods to create a false wall!</span>")
 					return
 				to_chat(user, "<span class='notice'>You start building a reinforced false wall...</span>")
-				if(do_after(user, 20*platingmodifier, target = src))
+				if(do_after(user, 20*platingmodifier / skill_mod, target = src))
 					if(S.get_amount() < 2)
 						return
 					S.use(2)
@@ -83,7 +84,7 @@
 					to_chat(user, "<span class='warning'>You need at least five rods to add plating!</span>")
 					return
 				to_chat(user, "<span class='notice'>You start adding plating...</span>")
-				if(do_after(user, 40*platingmodifier, target = src))
+				if(do_after(user, 40*platingmodifier / skill_mod, target = src))
 					if(S.get_amount() < 5)
 						return
 					S.use(5)
@@ -104,7 +105,7 @@
 					to_chat(user, "<span class='warning'>You need two sheets of metal to create a false wall!</span>")
 					return
 				to_chat(user, "<span class='notice'>You start building a false wall...</span>")
-				if(do_after(user, 20*platingmodifier, target = src))
+				if(do_after(user, 20*platingmodifier / skill_mod, target = src))
 					if(S.get_amount() < 2)
 						return
 					S.use(2)
@@ -117,7 +118,7 @@
 					to_chat(user, "<span class='warning'>You need two sheets of metal to finish a wall!</span>")
 					return
 				to_chat(user, "<span class='notice'>You start adding plating...</span>")
-				if (do_after(user, 40*platingmodifier, target = src))
+				if (do_after(user, 40*platingmodifier / skill_mod, target = src))
 					if(S.get_amount() < 2)
 						return
 					S.use(2)
@@ -134,7 +135,7 @@
 					to_chat(user, "<span class='warning'>You need at least two sheets to create a false wall!</span>")
 					return
 				to_chat(user, "<span class='notice'>You start building a reinforced false wall...</span>")
-				if(do_after(user, 20*platingmodifier, target = src))
+				if(do_after(user, 20*platingmodifier / skill_mod, target = src))
 					if(S.get_amount() < 2)
 						return
 					S.use(2)
@@ -147,7 +148,7 @@
 					if(S.get_amount() < 1)
 						return
 					to_chat(user, "<span class='notice'>You start finalizing the reinforced wall...</span>")
-					if(do_after(user, 50*platingmodifier, target = src))
+					if(do_after(user, 50*platingmodifier / skill_mod, target = src))
 						if(S.get_amount() < 1)
 							return
 						S.use(1)
@@ -161,7 +162,7 @@
 					if(S.get_amount() < 1)
 						return
 					to_chat(user, "<span class='notice'>You start reinforcing the girder...</span>")
-					if(do_after(user, 60*platingmodifier, target = src))
+					if(do_after(user, 60*platingmodifier / skill_mod, target = src))
 						if(S.get_amount() < 1)
 							return
 						S.use(1)
@@ -180,7 +181,7 @@
 				if(S.get_amount() < 2)
 					to_chat(user, "<span class='warning'>You need at least two sheets to create a false wall!</span>")
 					return
-				if(do_after(user, 20*platingmodifier, target = src))
+				if(do_after(user, 20*platingmodifier / skill_mod, target = src))
 					if(S.get_amount() < 2)
 						return
 					S.use(2)
@@ -200,7 +201,7 @@
 					to_chat(user, "<span class='warning'>You need at least two sheets to add plating!</span>")
 					return
 				to_chat(user, "<span class='notice'>You start adding plating...</span>")
-				if (do_after(user, 40*platingmodifier, target = src))
+				if (do_after(user, 40*platingmodifier / skill_mod, target = src))
 					if(S.get_amount() < 2)
 						return
 					S.use(2)

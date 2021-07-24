@@ -425,7 +425,7 @@
 	name = "tier 5 armor"
 	loot = list(
 				/obj/effect/spawner/bundle/f13/armor/t45d,
-				/obj/effect/spawner/bundle/f13/armor/t51b				
+				/obj/effect/spawner/bundle/f13/armor/t51b
 				)
 
 /obj/effect/spawner/bundle/f13/armor/t45d
@@ -1754,7 +1754,6 @@
 	name = "trait book spawner"
 	lootcount = 1
 	loot = list(/obj/item/book/granter/trait/lowsurgery = 10,
-				/obj/item/book/granter/trait/chemistry = 10,
 				/obj/item/book/granter/trait/trekking = 10,
 				/obj/item/book/granter/trait/pa_wear = 1,
 				/obj/item/book/granter/crafting_recipe/gunsmith_one = 50,

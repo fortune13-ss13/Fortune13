@@ -49,6 +49,7 @@
 /turf/open/floor/plating/attackby(obj/item/C, mob/user, params)
 	if(..())
 		return
+	var/skill_mod = SKILL_CHECK_VALUE(user, "engineering", 6)
 	if(istype(C, /obj/item/stack/rods) && attachment_holes)
 		if(broken || burnt)
 			to_chat(user, "<span class='warning'>Repair the plating first!</span>")
@@ -59,7 +60,7 @@
 			return
 		else
 			to_chat(user, "<span class='notice'>You begin reinforcing the floor...</span>")
-			if(do_after(user, 30, target = src))
+			if(do_after(user, 30 / skill_mod, target = src))
 				if (R.get_amount() >= 2 && !istype(src, /turf/open/floor/engine))
 					PlaceOnTop(/turf/open/floor/engine, flags = CHANGETURF_INHERIT_AIR)
 					playsound(src, 'sound/items/deconstruct.ogg', 80, 1)
@@ -76,7 +77,7 @@
 			return
 		else
 			to_chat(user, "<span class='notice'>You begin adding glass to the floor...</span>")
-			if(do_after(user, 5, target = src))
+			if(do_after(user, 5 / skill_mod, target = src))
 				if (G.get_amount() >= 2 && !istype(src, /turf/open/transparent/glass))
 					PlaceOnTop(/turf/open/transparent/glass, flags = CHANGETURF_INHERIT_AIR)
 					playsound(src, 'sound/items/deconstruct.ogg', 80, 1)
@@ -93,7 +94,7 @@
 			return
 		else
 			to_chat(user, "<span class='notice'>You begin adding reinforced glass to the floor...</span>")
-			if(do_after(user, 10, target = src))
+			if(do_after(user, 10 / skill_mod, target = src))
 				if (RG.get_amount() >= 2 && !istype(src, /turf/open/transparent/glass/reinforced))
 					PlaceOnTop(/turf/open/transparent/glass/reinforced, flags = CHANGETURF_INHERIT_AIR)
 					playsound(src, 'sound/items/deconstruct.ogg', 80, 1)

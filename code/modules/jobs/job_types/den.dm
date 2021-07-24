@@ -17,6 +17,7 @@ Mayor
 
 /datum/job/den
 	exp_type = EXP_TYPE_DEN
+	skills_type = /datum/skill_list_bay/citizen
 
 /datum/job/den/f13mayor
 	title = "Mayor"
@@ -35,11 +36,12 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 
+	skills_type = /datum/skill_list_bay/citizen/mayor
+
 /datum/outfit/job/den/f13mayor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /datum/outfit/job/den/f13mayor
@@ -82,6 +84,8 @@ Mayor
 
 	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+
+	skills_type = /datum/skill_list_bay/citizen/sheriff
 
 /datum/outfit/job/den/f13sheriff
 	name = "Sheriff"
@@ -137,6 +141,8 @@ Mayor
 	outfit = /datum/outfit/job/den/f13deputy
 	access = list(ACCESS_BAR, ACCESS_GATEWAY)
 	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY)
+
+	skills_type = /datum/skill_list_bay/citizen/deputy
 
 /datum/outfit/job/den/f13deputy
 	name = "Deputy"
@@ -231,6 +237,8 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_MINING)
 	minimal_access = list(ACCESS_BAR, ACCESS_MINING)
 
+	skills_type = /datum/skill_list_bay/citizen/prospector
+
 /datum/outfit/job/den/f13prospector
 	name = "Prospector"
 	jobtype = /datum/job/den/f13prospector
@@ -264,7 +272,6 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /*--------------------------------------------------------------*/
@@ -284,10 +291,11 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
 	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
 
+	skills_type = /datum/skill_list_bay/medical
+
 /datum/outfit/job/den/f13dendoc
 	name = "Doctor"
 	jobtype = /datum/job/den/f13dendoc
-	chemwhiz = TRUE
 	uniform = /obj/item/clothing/under/f13/medic
 	glasses = /obj/item/clothing/glasses/hud/health
 	ears = /obj/item/radio/headset/headset_town
@@ -490,6 +498,8 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_KITCHEN)
 	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
 
+	skills_type = /datum/skill_list_bay/culinary
+
 /datum/outfit/job/den/f13barkeep
 	name = "Barkeep"
 	jobtype = /datum/job/den/f13barkeep
@@ -646,6 +656,7 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
 
+	skills_type = /datum/skill_list_bay/citizen/deputy
 
 /datum/outfit/job/wasteland/f13detective
 	name = "Detective"
@@ -770,6 +781,8 @@ Mayor
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 
+	skills_type = /datum/skill_list_bay/citizen/shopkeeper
+
 /datum/outfit/job/den/f13shopkeeper
 	name = "Shopkeeper"
 	jobtype = /datum/job/den/f13shopkeeper
@@ -790,7 +803,6 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
 

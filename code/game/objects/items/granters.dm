@@ -797,23 +797,6 @@
 	remarks = list("Strike the steel while its hot...", "Don't take a rest..keep hammering...", "Don't forget to make a handle...", "Use gloves when touching red hot metal...", "Watch the sparks dance like fireflies..")
 	crafting_recipe_types = list(/datum/crafting_recipe/lance, /datum/crafting_recipe/spatha, /datum/crafting_recipe/gladius, /datum/crafting_recipe/trail_carbine, /datum/crafting_recipe/legionshield, /datum/crafting_recipe/brush)
 
-/obj/item/book/granter/trait/chemistry
-	name = "Chemistry for Wastelanders"
-	desc = "A useful book on chemistry."
-	oneuse = TRUE
-	granted_trait = TRAIT_CHEMWHIZ
-	traitname = "chemistry"
-	remarks = list("Always have a safe working environment...", "Don't give chems to strangers...", "Never drink any chemicals straight from the dispenser...", "Always wear your labcoat...", "Never forget your goggles...", "Potassium and water don't mix...")
-	crafting_recipe_types = list(/datum/crafting_recipe/jet, /datum/crafting_recipe/turbo, /datum/crafting_recipe/psycho, /datum/crafting_recipe/medx, /datum/crafting_recipe/buffout)
-
-/obj/item/book/granter/trait/bigleagues
-	name = "Little League Batting Guide"
-	desc = "An extensive guide about swinging bats."
-	oneuse = TRUE
-	granted_trait = TRAIT_BIG_LEAGUES
-	traitname = "big_leagues"
-	remarks = list("Swing it hard..", "Don't miss...", "Words may hurt you but a big stick hurts more...", "Adding spikes to bats is effective but the referee might complain...")
-	
 /obj/item/book/granter/trait/lowsurgery
 	name = "Surgery for Wastelanders"
 	desc = "A useful book on surgery."
@@ -856,14 +839,6 @@
 	traitname = "Mars' Teachings"
 	remarks = list("Remember the aeternit imperi of the Caesar's Legion...", "Do not abuse the knowledge of Mars to break his will, or be broken...", "Remember: In hoc signo taurus vinces...")
 
-/obj/item/book/granter/trait/techno
-	name = "Craftsmanship Monthly"
-	desc = "A book on how to use advanced tools and production machinery. It's pretty complicated."
-	oneuse = TRUE
-	granted_trait = TRAIT_TECHNOPHREAK
-	traitname = "craftsmanship"
-	remarks = list("Try turning it off and on again...", "Always craft in good form...", "Don't forget PPE...", "Keep your mechanisms OILED...", "Stay organized...")
-
 /obj/item/book/granter/trait/pa_wear
 	name = "Advanced Armor and You"
 	desc = "An in-depth look into how power armor functions."
@@ -898,17 +873,6 @@
 	traitname = "gunslinging"
 	remarks = list("Engravings offer no tactical advantage whatsoever...", "I love to reload during battle...", "There's nothing like the feeling of slamming a long silver bullet into a well greased chamber...", "It doesn't feel right to shoot an unarmed man, but I'll get over it....", "You’re pretty good...", "The moment any truth is passed on, it starts turning into fiction. The problem is, fiction inspires people more than facts...")
 
-
-/*
-/obj/item/book/granter/trait/iron_fist
-	name = "Brawler's Guide to Fisticuffs"
-	desc = "An advanced manual on fistfighting. It has pictures, too!"
-	oneuse = TRUE
-	granted_trait = TRAIT_IRONFIST
-	traitname = "punching"
-	remarks = list("Keep your fists up...", "Don't clench your thumb in your fist, or you might break it...", "Turn into your punch, and put your body weight behind it...", "Footwork is everything, make sure to step into your punches...", "Aim for their jaw for an easy K-O...")
-*/
-
 /obj/item/book/granter/trait/selection
 	name = "Private Diary"
 	desc = "Your private diary, reminding you of the knowledge you previously had."
@@ -931,19 +895,6 @@
 				granted_trait = TRAIT_SURGERY_LOW
 				traitname = "minor surgery"
 				remarks = list("Sterilise your hands and all tools...", "Don't forget your instruments inside patients...", "Maintain focus when cutting...", "Cauterise incisions post-operation...", "Keep organs and blood packs refrigerated...", "Welcome the new era of prosthetic replacements...",)
-			if("Chemistry")
-				granted_trait = TRAIT_CHEMWHIZ
-				traitname = "chemistry"
-				crafting_recipe_types = list(/datum/crafting_recipe/jet, /datum/crafting_recipe/turbo, /datum/crafting_recipe/psycho, /datum/crafting_recipe/medx, /datum/crafting_recipe/buffout)
-				remarks = list("Always have a safe working environment...", "Don't give chems to strangers...", "Never drink any chemicals straight from the dispenser...", "Always wear your labcoat...", "Never forget your goggles...", "Potassium and water don't mix...")
-			if("Craftsmanship")
-				granted_trait = TRAIT_TECHNOPHREAK
-				traitname = "craftsmanship"
-				remarks = list("Try turning it off and on again...", "Always craft in good form...", "Don't forget PPE...", "Keep your mechanisms OILED...", "Stay organized...")
-			if("Melee Expert")
-				granted_trait = TRAIT_BIG_LEAGUES
-				traitname = "hitting things"
-				remarks = list("Utilise your momentum...", "Put weight behind your blows...", "Moves should transition and flow together...", "Stagger your opponent...")
 			if("Power Armor")
 				granted_trait = TRAIT_PA_WEAR
 				traitname = "Power Armor"
@@ -958,3 +909,135 @@
 /obj/item/book/granter/trait/selection/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
+///BAY-SKILLS///
+
+/obj/item/book/granter/skill
+	name = "simple guide to breaking the game"
+	desc = "You want to know how to break the game? Then this guide is for you!"
+	icon_state = "bookSkill1"
+	/// How skill is named to be used in on_reading_start()
+	var/name_mod = "engineering"
+	/// What skill does it increase?
+	var/skill_type = "engineering"
+	/// You need to have at least this level of skill to understand the book.
+	var/minimum_skill = 0
+	/// This book is useless at this level of skill.
+	var/maximum_skill = 999
+	/// How much skill does it give to you?
+	var/skill_amount = 100
+	/// Congrats! You learned the skill and that's your message.
+	var/greet = "You suddenly understand the whole concept of universe!"
+	/// Obvious. Can you use it once, or more?
+	var/one_use = TRUE
+
+
+/obj/item/book/granter/skill/already_known(mob/user)
+	if(!user.mind || !skill_type)
+		return TRUE
+	var/skill_level = user.mind.bay_skills.getRating(skill_type)
+	if(skill_level < minimum_skill)
+		to_chat(user,"<span class='warning'>You don't understand anything written in [src]...</span>")
+		return TRUE
+	if(skill_level >= maximum_skill)
+		to_chat(user,"<span class='warning'>You know much more about [skill_type] than this book can offer.</span>")
+		return TRUE
+	return FALSE
+
+/obj/item/book/granter/skill/on_reading_start(mob/user)
+	to_chat(user, "<span class='notice'>You start reading about [name_mod]...</span>")
+
+/obj/item/book/granter/skill/on_reading_finished(mob/user)
+	to_chat(user, "[greet]")
+	user.mind.bay_skills.ModifyValue(skill_type, skill_amount)
+	if(one_use)
+		to_chat(user, "<span class='warning'>The book turns to dust in your hands!</span>")
+		qdel(src)
+
+/obj/item/book/granter/skill/random
+	icon_state = "random_book"
+	skill_amount = 1
+	var/list/varweight = list("0" = 6, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+
+/obj/item/book/granter/skill/random/Initialize()
+	. = ..()
+	skill_type = pick("unarmed", "melee", "engineering", "chemistry", "medical", "surgery", "crafting", "culinary", "science")
+	minimum_skill = text2num(pickweight(varweight))
+	maximum_skill = minimum_skill + 1
+	name_mod = skill_type
+	switch(skill_type)
+		if("unarmed")
+			name_mod = "unarmed combat"
+		if("melee")
+			name_mod = "melee combat"
+		if("medical")
+			name_mod = "first aid"
+	var/string_var = "beginner's guide to"
+	desc = "This is a simple guide to [name_mod], written so even a monkey could understand it."
+	greet = "You now understand [name_mod] slightly better."
+	pages_to_mastery = 1
+	remarks = list("Hah! Even a monkey could learn it!", "How do you spell [name_mod], again?", "So that's what [name_mod] means, huh?")
+	switch(minimum_skill)
+		if(1)
+			string_var = "notes on"
+			desc = "A small collection of notes made in regards of [name_mod] by unknown scientist."
+			pages_to_mastery = 2
+			remarks = list("I never heard about it before!", "", \
+			"Well, [name_mod] is much more complicated than I thought.")
+			greet = "You now understand [name_mod] much better."
+		if(2)
+			string_var = "essay on"
+			desc = "An essay made in Galactic University for these hoping to be proficient in [name_mod]."
+			pages_to_mastery = 3
+			remarks = list("I never heard about it before!", "Well, [name_mod] is a really interesting thing.", "Who even wrote it? It's genius!", \
+			"Without this I'd probably never get proficient in [name_mod].", "Is there anything more to it?")
+			greet = "You finally understand what [name_mod] means."
+		if(3)
+			string_var = "research on"
+			desc = "A heavy book written in scientific language. Only those who are proficient in [name_mod] could learn anything from it."
+			pages_to_mastery = 4
+			greet = "You realize the true nature of [name_mod]."
+		if(4)
+			string_var = "grand book of"
+			desc = "A complicated mess of scientific language and terms. Highly valued among the masters of [name_mod]."
+			pages_to_mastery = 5
+			greet = "You now understand everything about [name_mod]."
+		if(5)
+			string_var = "ancient tome of"
+			desc = "An ancient book explaining the entire concept of [name_mod]. Written by the first Galactic University Professors and even the Wizards' Federation itself."
+			pages_to_mastery = 6
+			greet = "Finally! You now undertsand the concept of [name_mod] in the universe!"
+
+	name = "[string_var] [name_mod]"
+	icon_state = "bookSkill[maximum_skill]"
+
+/obj/item/book/granter/skill/random/low_level // This one is still random, but can only be level 0 or 1.
+	varweight = list("0" = 2, "1" = 1)
+
+/obj/item/book/granter/skill/random/medium_level // Level 2 or 3.
+	varweight = list("2" = 2, "3" = 1)
+
+/obj/item/book/granter/skill/random/high_level // Level 4 or 5.
+	varweight = list("4" = 2, "5" = 1)
+
+/obj/item/book/granter/skill/basic
+	name = "basic level guide"
+	desc = "You aren't supposed to see it..."
+	maximum_skill = 1
+	skill_amount = 1
+	greet = "You suddenly understand the concept of universe a bit more."
+	pages_to_mastery = 1
+
+/obj/item/book/granter/skill/basic/engineer
+	name = "basic engineering guide"
+	desc = "This guide tells you how to use wrench and other useful tools."
+	greet = "You suddenly realize what toolbox is for."
+	remarks = list("So that's what a toolbox is for!", "You hold a wrench like this and then rotate it?", "Wait, what the fuck is plasteel?", "So that's how you are supposed to use welding tools.", "Why can't we just throw in some monkeys to do the job for us?")
+
+/obj/item/book/granter/skill/basic/medical
+	name = "first aid guide"
+	desc = "This guide will show you how to use sutures properly."
+	greet = "You suddenly realize how to apply sutures in a proper way."
+	skill_type = "medical"
+	name_mod = "first aid"
+	remarks = list("What do you mean gauze is to be applied on a wound?", "Huh, so it isn't a mummy wrapping?", "So you put it around the limb...", "Wait, what's CPR again?")

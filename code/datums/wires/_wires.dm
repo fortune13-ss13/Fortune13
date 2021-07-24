@@ -30,8 +30,8 @@
 	var/list/assemblies = list() // List of attached assemblies.
 	var/randomize = 0 // If every instance of these wires should be random.
 					  // Prevents wires from showing up in station blueprints
-	var/req_knowledge = INFINITY //wiring skill level on which the functions are revealed.
-	var/req_skill = JOB_SKILL_BASIC //used in user's cutting/pulsing/mending speed calculations.
+	var/req_knowledge = 5 // Engineering skill level on which the functions are revealed.
+	var/req_skill = 2 //used in user's cutting/pulsing/mending speed calculations.
 	var/list/current_users //list of untrained people currently interacting with this set of wires.
 
 /datum/wires/New(atom/holder)
@@ -141,7 +141,7 @@
 	if(current_users[user])
 		return FALSE
 	if(req_skill && user?.mind)
-		var/level_diff = req_skill - user.mind.get_skill_level(/datum/skill/level/job/wiring, round = TRUE)
+		var/level_diff = req_skill - get_skill_rating(user, type="engineering")
 		if(level_diff > 0)
 			LAZYSET(current_users, user, TRUE)
 			to_chat(user, "<span class='notice'>You begin cutting [holder]'s [color] wire...</span>")
@@ -170,7 +170,7 @@
 	if(current_users[user])
 		return FALSE
 	if(req_skill && user?.mind)
-		var/level_diff = req_skill - user.mind.get_skill_level(/datum/skill/level/job/wiring, round = TRUE)
+		var/level_diff = req_skill - get_skill_rating(user, type="engineering")
 		if(level_diff > 0)
 			LAZYSET(current_users, user, TRUE)
 			to_chat(user, "<span class='notice'>You begin pulsing [holder]'s [color] wire...</span>")
@@ -261,7 +261,7 @@
 	var/reveal_wires = FALSE
 
 	// Admin ghost can see a purpose of each wire.
-	if(IsAdminGhost(user) || user.mind.get_skill_level(/datum/skill/level/job/wiring) >= req_knowledge)
+	if(IsAdminGhost(user) || get_skill_rating(user, type="engineering") >= req_knowledge)
 		reveal_wires = TRUE
 
 	// Same for anyone with an abductor multitool.

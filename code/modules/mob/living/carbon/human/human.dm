@@ -8,6 +8,7 @@
 /mob/living/carbon/human/Initialize()
 	add_verb(src, /mob/living/proc/mob_sleep)
 	add_verb(src, /mob/living/proc/lay_down)
+	add_verb(src, /mob/living/carbon/human/proc/show_skills)
 	add_verb(src, /mob/living/carbon/human/verb/underwear_toggle)
 	add_verb(src, /mob/living/verb/subtle)
 	add_verb(src, /mob/living/verb/subtler)
@@ -1082,6 +1083,23 @@
 	if(NOBLOOD in dna.species.species_traits)
 		return FALSE
 	return ..()
+
+/mob/living/carbon/human/proc/show_skills() // Bay-skills
+	set category = "IC"
+	set name = "Show Skills"
+
+	if(!mind || !mind?.bay_skills)
+		to_chat(src, "<span class='warning'>You have no mind/skills!</span>")
+		return
+
+	var/list/dat = list()
+	var/list/skill_list = mind.bay_skills.getList()
+	for(var/i in skill_list)
+		dat += "[i]: [skill_list[i]]"
+
+	var/datum/browser/popup = new(src, "skills", "<div align='center'>Skills</div>", 300, 600)
+	popup.set_content(dat.Join("<br>"))
+	popup.open(FALSE)
 
 /mob/living/carbon/human/species
 	var/race = null

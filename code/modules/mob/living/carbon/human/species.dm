@@ -647,7 +647,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	//Warpaint and tattoos
 	if(H.warpaint)
 		standing += mutable_appearance('icons/mob/tribe_warpaint.dmi', H.warpaint, -MARKING_LAYER, color = H.warpaint_color)
-		
+
 
 	if(standing.len)
 		H.overlays_standing[BODY_LAYER] = standing
@@ -1386,9 +1386,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			else
 				user.do_attack_animation(target, ATTACK_EFFECT_PUNCH)
 
-		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
+		var/punch_damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
 		if(HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER)) // unit test no-miss trait
-			damage = user.dna.species.punchdamagehigh
+			punch_damage = user.dna.species.punchdamagehigh
+		var/skill_mod = 1 + (get_skill_rating(user, "unarmed") / 10) // Unarmed skill increases your damage
+		var/damage = punch_damage * skill_mod
 		var/puncherstam = user.getStaminaLoss()
 		var/puncherbrute = user.getBruteLoss()
 		var/punchedstam = target.getStaminaLoss()
@@ -1654,7 +1656,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		Iwound_bonus = CANT_WOUND
 
 	var/weakness = H.check_weakness(I, user)
-	apply_damage(totitemdamage * weakness, I.damtype, def_zone, armor_block, H, wound_bonus = Iwound_bonus, bare_wound_bonus = I.bare_wound_bonus, sharpness = I.get_sharpness())
+	var/skill_mod = 1 + (get_skill_rating(user, type="melee") / 10) // Maximum skill mod(normally) would be 1.6;
+	// In this case, a weapon with 20 damage would deal 32 damage. Sick!
+	apply_damage((totitemdamage * weakness) * skill_mod, I.damtype, def_zone, armor_block, H, wound_bonus = Iwound_bonus, bare_wound_bonus = I.bare_wound_bonus, sharpness = I.get_sharpness())
 
 
 	H.send_item_attack_message(I, user, hit_area, affecting, totitemdamage)

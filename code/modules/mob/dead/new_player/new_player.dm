@@ -533,8 +533,6 @@
 
 		character.update_parallax_teleport()
 
-	job.standard_assign_skills(character.mind)
-
 	SSticker.minds += character.mind
 	character.client.init_verbs() // init verbs for the late join
 	var/mob/living/carbon/human/humanc

@@ -176,6 +176,8 @@
 		var/atom/movable/AM = object
 		if(CHECK_BITFIELD(shield_flags, SHIELD_TRANSPARENT) && (AM.pass_flags & PASSGLASS))
 			return BLOCK_NONE
+	var/skill_mod = get_skill_rating(owner, type="melee") * 4 // Maximum of 40 bonus
+	final_block_chance += skill_mod
 	if(attack_type & ATTACK_TYPE_THROWN)
 		final_block_chance += 30
 	if(attack_type & ATTACK_TYPE_TACKLE)

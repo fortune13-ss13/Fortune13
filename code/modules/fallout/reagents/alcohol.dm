@@ -253,7 +253,7 @@
 	glass_desc = "Nuka Cola with an <BIG>AMERICAN<BIG> twist."
 
 /datum/reagent/consumable/ethanol/nukavictory/on_mob_life(mob/living/carbon/M)
-	ADD_TRAIT(M, TRAIT_BIG_LEAGUES, "[type]")
+	M?.mind?.bay_skills.ModifyValue("melee", 2)
 	M.adjustBruteLoss(-2.5*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -262,7 +262,7 @@
 	. = TRUE
 
 /datum/reagent/consumable/ethanol/nukavictory/on_mob_delete(mob/living/M)
-	REMOVE_TRAIT(M, TRAIT_BIG_LEAGUES, "[type]")
+	M?.mind?.bay_skills.ModifyValue("melee", -2)
 	..()
 
 /datum/reagent/consumable/ethanol/nukabomb
@@ -458,7 +458,7 @@
 	M.AdjustKnockdown(-30, 0)
 	M.AdjustUnconscious(-30, 0)
 	M.adjustStaminaLoss(-5, 0)
-	ADD_TRAIT(M, TRAIT_IRONFIST, "[type]")
+	M?.mind?.bay_skills.ModifyValue("unarmed", 2)
 	ADD_TRAIT(M, TRAIT_SLEEPIMMUNE, "[type]")
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
@@ -482,7 +482,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/nukaxtreme/on_mob_delete(mob/living/M)
-	REMOVE_TRAIT(M, TRAIT_IRONFIST, "[type]")
+	M?.mind?.bay_skills.ModifyValue("unarmed", -2)
 	REMOVE_TRAIT(M, TRAIT_SLEEPIMMUNE, "[type]")
 	if(M && M.hud_used)
 		var/list/screens = list(M.hud_used.plane_masters["[FLOOR_PLANE]"], M.hud_used.plane_masters["[GAME_PLANE]"], M.hud_used.plane_masters["[LIGHTING_PLANE]"])
@@ -927,7 +927,7 @@
 		if(41 to INFINITY)
 			M.adjustToxLoss(4*REAGENTS_EFFECT_MULTIPLIER, 0)
 	ADD_TRAIT(M, TRAIT_SLEEPIMMUNE, "[type]")
-	ADD_TRAIT(M, TRAIT_IRONFIST, "[type]")
+	M?.mind?.bay_skills.ModifyValue("unarmed", 2)
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
 		rage = new()
@@ -937,7 +937,7 @@
 
 /datum/reagent/consumable/ethanol/henessey/on_mob_delete(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_SLEEPIMMUNE, "[type]")
-	REMOVE_TRAIT(M, TRAIT_IRONFIST, "[type]")
+	M?.mind?.bay_skills.ModifyValue("unarmed", -2)
 	to_chat(M, "<span class='danger'>You feel light-headed as you start to return to your senses.</span>")
 	M.Dizzy(5)
 	M.blur_eyes(5)

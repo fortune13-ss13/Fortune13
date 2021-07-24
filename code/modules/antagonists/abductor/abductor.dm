@@ -22,7 +22,6 @@
 	landmark_type = /obj/effect/landmark/abductor/agent
 	greet_text = "Use your stealth technology and equipment to incapacitate humans for your scientist to retrieve."
 	show_in_antagpanel = TRUE
-	skill_modifiers = list(/datum/skill_modifier/job/level/wiring)
 
 /datum/antagonist/abductor/scientist
 	name = "Abductor Scientist"
@@ -31,7 +30,6 @@
 	landmark_type = /obj/effect/landmark/abductor/scientist
 	greet_text = "Use your experimental console and surgical equipment to monitor your agent and experiment upon abducted humans."
 	show_in_antagpanel = TRUE
-	skill_modifiers = list(/datum/skill_modifier/job/affinity/surgery)
 
 /datum/antagonist/abductor/create_team(datum/team/abductor_team/new_team)
 	if(!new_team)

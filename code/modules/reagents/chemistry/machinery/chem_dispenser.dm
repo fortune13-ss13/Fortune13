@@ -22,6 +22,11 @@
 	interaction_flags_machine = INTERACT_MACHINE_OPEN | INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OFFLINE
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	circuit = /obj/item/circuitboard/machine/chem_dispenser
+
+	skillcheck_type = "chemistry"
+	skillcheck_level = 2
+	skillcheck_block = TRUE
+
 	var/obj/item/stock_parts/cell/cell
 	var/powerefficiency = 0.0666666
 	var/amount = 30
@@ -190,9 +195,6 @@
 	else
 		if(!user.IsAdvancedToolUser() && !istype(src, /obj/machinery/chem_dispenser/drinks))
 			to_chat(user, "<span class='warning'>The legion has no use for drugs! Better to destroy it.</span>")
-			return
-		if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ) && !istype(src, /obj/machinery/chem_dispenser/drinks))
-			to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
 			return
 		if(!ui)
 			ui = new(user, src, "ChemDispenser", name)

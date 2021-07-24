@@ -14,6 +14,8 @@
 #define TOOL_DRILL			"drill"
 #define TOOL_SCALPEL		"scalpel"
 #define TOOL_SAW			"saw"
+// Tool groups
+#define TOOL_ENGINEERING list(TOOL_CROWBAR, TOOL_MULTITOOL, TOOL_SCREWDRIVER, TOOL_WIRECUTTER, TOOL_WRENCH, TOOL_WELDER, TOOL_ANALYZER)
 //Glasswork Tools
 #define TOOL_BLOW			"blowing_rod"
 #define TOOL_GLASS_CUT		"glasskit"

@@ -364,13 +364,11 @@
 			user.visible_message("[user] slices through a [fake_dismantle].")
 			I.play_tool_sound(src, 100)
 		var/turf/usr_turf = get_turf(user)
-		var/modifier = 0
-		if(HAS_TRAIT(user,TRAIT_TECHNOPHREAK))
-			modifier = rand(1, 3)
-		for(var/i2 in 1 to (3+modifier))
+		var/skill_mod = get_skill_rating(user, "salvaging")
+		for(var/i2 in 1 to (3+skill_mod))
 			if(prob(25))
 				new /obj/item/salvage/low(usr_turf)
-		for(var/i3 in 1 to (1+modifier)) //this is just less lines for the same thing
+		for(var/i3 in 1 to (1+skill_mod)) //this is just less lines for the same thing
 			if(prob(10))
 				new /obj/item/salvage/high(usr_turf)
 			if(prob(10))
@@ -410,13 +408,11 @@
 			user.visible_message("[user] slices through a [fake_dismantle].")
 			I.play_tool_sound(src, 100)
 		var/turf/usr_turf = get_turf(user)
-		var/modifier = 0
-		if(HAS_TRAIT(user,TRAIT_TECHNOPHREAK))
-			modifier = rand(1, 3)
-		for(var/i2 in 1 to (3+modifier))
+		var/skill_mod = get_skill_rating(user, "salvaging")
+		for(var/i2 in 1 to (3+skill_mod))
 			if(prob(25))
 				new /obj/item/salvage/low(usr_turf)
-		for(var/i3 in 1 to (1+modifier)) //this is just less lines for the same thing
+		for(var/i3 in 1 to (1+skill_mod)) //this is just less lines for the same thing
 			if(prob(10))
 				new /obj/item/salvage/high(usr_turf)
 			if(prob(10))

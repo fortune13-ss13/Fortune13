@@ -15,6 +15,8 @@
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 1200
 
+	skills_type = /datum/skill_list_bay/soldier
+
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
@@ -58,6 +60,8 @@
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
+
+	skills_type = /datum/skill_list_bay/soldier/officer
 
 	outfit = /datum/outfit/job/wasteland/enclavesgt
 
@@ -106,6 +110,8 @@
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
+	skills_type = /datum/skill_list_bay/scientist/enclave
+
 	outfit = /datum/outfit/job/wasteland/enclavesci
 
 /datum/outfit/job/wasteland/enclavesci
@@ -142,7 +148,6 @@
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
 	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
 
@@ -163,6 +168,8 @@
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
+
+	skills_type = /datum/skill_list_bay/soldier/commander
 
 	outfit = /datum/outfit/job/wasteland/enclavelt
 
@@ -268,6 +275,8 @@ Great Khan
 	access = list(ACCESS_KHAN)
 	minimal_access = list(ACCESS_KHAN)
 
+	skills_type = /datum/skill_list_bay/outlaw
+
 	loadout_options = list(
 	///datum/outfit/loadout/pusher,
 	/datum/outfit/loadout/enforcer,
@@ -311,8 +320,7 @@ Great Khan
 /datum/outfit/loadout/pusher
 	name = "Chemist"
 	backpack_contents = list(
-		/obj/item/reagent_containers/glass/beaker/large=2, \
-		/obj/item/book/granter/trait/chemistry=1)
+		/obj/item/reagent_containers/glass/beaker/large=2)
 
 /datum/outfit/loadout/enforcer
 	name = "Enforcer"
@@ -348,6 +356,8 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 600
 	exp_type = EXP_TYPE_WASTELAND
+
+	skills_type = /datum/skill_list_bay/outlaw
 
 	outfit = /datum/outfit/job/wasteland/f13raider
 
@@ -601,6 +611,9 @@ Raider
 
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
 	minimal_access = list()
+
+	skills_type = /datum/skill_list_bay/wastelander
+
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
 	/datum/outfit/loadout/salvager,
@@ -761,6 +774,8 @@ Raider
 	access = list(ACCESS_DEN)
 	minimal_access = list(ACCESS_DEN)
 
+	skills_type = /datum/skill_list_bay/outlaw/mafia
+
 	loadout_options = list(
 							/datum/outfit/loadout/mrwhite,
 							/datum/outfit/loadout/hitman,
@@ -811,7 +826,6 @@ Raider
 	suit = /obj/item/clothing/suit/toggle/labcoat/chemist
 	backpack_contents = list(
 							/obj/item/reagent_containers/glass/beaker/large=2, \
-							/obj/item/book/granter/trait/chemistry=1, \
 							/obj/item/book/granter/trait/lowsurgery=1, \
 							/obj/item/ammo_box/magazine/m10mm_adv/simple=2 \
 							)
@@ -855,6 +869,8 @@ Raider
 	access = list(ACCESS_DEN)
 	minimal_access = list(ACCESS_DEN)
 
+	skills_type = /datum/skill_list_bay/outlaw/mafia
+
 /datum/outfit/job/wasteland/f13mobboss
 	name = "Den Mob Boss"
 	jobtype = /datum/job/wasteland/f13mobboss
@@ -882,7 +898,6 @@ Raider
 /datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/wasteland/f13mobboss/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -980,6 +995,8 @@ Raider
 	selection_color = "#76885f"
 
 	outfit = /datum/outfit/job/wasteland/f13adminboos
+
+	skills_type = /datum/skill_list_bay/admin/suffering
 
 /datum/outfit/job/wasteland/f13adminboos
 	name = "Death"

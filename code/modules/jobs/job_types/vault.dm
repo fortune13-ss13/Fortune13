@@ -19,7 +19,6 @@ here's a tip, go search DEFINES/access.dm
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 /*
 Overseer
@@ -55,8 +54,6 @@ Overseer
 /datum/outfit/job/vault/f13overseer
 	name = "Overseer"
 	jobtype = /datum/job/vault/f13overseer
-	chemwhiz = TRUE
-
 	implants = list(/obj/item/implant/mindshield)
 
 	id = 			/obj/item/card/id/gold
@@ -155,7 +152,6 @@ Medical Doctor
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
 	jobtype = /datum/job/vault/f13doctor
-	chemwhiz = TRUE
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13
 	ears = 			/obj/item/radio/headset/headset_vault
@@ -202,7 +198,6 @@ Scientist
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
 	jobtype = /datum/job/vault/f13vaultscientist
-	chemwhiz = TRUE
 
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13

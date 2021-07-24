@@ -655,9 +655,6 @@
 		if(!HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
 			H.dna.species.punchdamagehigh = 1
 			H.dna.species.punchdamagelow = 10
-		if(HAS_TRAIT(user, TRAIT_IRONFIST))
-			H.dna.species.punchdamagehigh = 4
-			H.dna.species.punchdamagelow = 11
 		H.dna.species.attack_sound = 'sound/weapons/punch1.ogg'
 		H.dna.species.attack_verb = "punch"
 

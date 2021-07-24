@@ -7,6 +7,10 @@
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	flags_1 = NODECONSTRUCT_1
 	use_power = NO_POWER_USE
+
+	skillcheck_level = 0
+	skillcheck_block = FALSE
+
 	var/static/list/shortcuts = list(
 		"meth" = /datum/reagent/drug/methamphetamine,
 		"tricord" = /datum/reagent/medicine/tricordrazine

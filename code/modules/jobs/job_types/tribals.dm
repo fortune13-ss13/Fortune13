@@ -5,6 +5,7 @@
 	forbids = "The use of pre-collapse technology, especially pre-collapse weapons of war."
 	enforces = "The tribe operate as if they are a part of a singular clan. Any harm dealt upon another member is likened to harm placed upon your brother or sister. Above all things, the tribe comes first."
 	objectivesList = list("Leadership recommends the following goal for this week: Recruit worthy outlanders into the tribe","Leadership recommends the following goal for this week: Hunt dangerous creatures to improve the clan's standing", "Leadership recommends the following goal for this week: Preserve dangerous technology to prevent it from falling into the wrong hands.")
+	skills_type = /datum/skill_list_bay/tribal
 
 /datum/outfit/job/tribal/
 	name = "TRIBALdatums"
@@ -57,12 +58,13 @@ Tribal Chief
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
 
+	skills_type = /datum/skill_list_bay/tribal/chief
+
 /datum/outfit/job/tribal/f13chief/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13chief
 	name = "Chief"
@@ -101,6 +103,8 @@ Tribal Shaman
 
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
+
+	skills_type = /datum/skill_list_bay/tribal/druid/shaman
 
 	loadout_options = list(
 		/datum/outfit/loadout/invoker, //Red shaman
@@ -171,12 +175,13 @@ Tribal Head Hunter
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
 
+	skills_type = /datum/skill_list_bay/tribal/hunter/head
+
 /datum/outfit/job/tribal/f13Hhunter/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13Hhunter
 	name = "Hunter"
@@ -213,6 +218,8 @@ Druid
 	outfit = /datum/outfit/job/tribal/f13druid
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
+
+	skills_type = /datum/skill_list_bay/tribal/druid
 
 /datum/outfit/job/tribal/f13druid/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -256,6 +263,8 @@ Villager
 
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
+
+	skills_type = /datum/skill_list_bay/tribal/villager
 
 	loadout_options = list(
 		/datum/outfit/loadout/gatherer, //Bone Spear, Bone Knife, Healing powder
@@ -337,6 +346,8 @@ Hunter
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
 
+	skills_type = /datum/skill_list_bay/tribal/hunter
+
 	loadout_options = list(
 		/datum/outfit/loadout/ranged, //Quick Cloak, Bow and quiver, Bone knife, Healing powder
 		/datum/outfit/loadout/melee, //Deathclaw Bone Spear, Bone knife, Healing powder
@@ -347,7 +358,6 @@ Hunter
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13hunter
 	name = "Hunter"
@@ -429,12 +439,13 @@ Guardian
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
 
+	skills_type = /datum/skill_list_bay/tribal/guardian
+
 /datum/outfit/job/tribal/f13guardian/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13guardian
 	name = "Guardian"

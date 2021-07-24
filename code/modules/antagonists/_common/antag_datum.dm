@@ -27,8 +27,6 @@ GLOBAL_LIST_EMPTY(antagonists)
 	var/threat = 0 // Amount of threat this antag poses, for dynamic mode
 	var/show_to_ghosts = FALSE // Should this antagonist be shown as antag to ghosts? Shouldn't be used for stealthy antagonists like traitors
 
-	var/list/skill_modifiers
-
 /datum/antagonist/New()
 	GLOB.antagonists += src
 	typecache_datum_blacklist = typecacheof(typecache_datum_blacklist)
@@ -105,12 +103,6 @@ GLOBAL_LIST_EMPTY(antagonists)
 	remove_blacklisted_quirks()
 	if(is_banned(owner.current) && replace_banned)
 		replace_banned_player()
-	if(skill_modifiers)
-		for(var/A in skill_modifiers)
-			ADD_SINGLETON_SKILL_MODIFIER(owner, A, type)
-			var/datum/skill_modifier/job/M = GLOB.skill_modifiers[GET_SKILL_MOD_ID(A, type)]
-			if(istype(M))
-				M.name = "[name] Training"
 	SEND_SIGNAL(owner.current, COMSIG_MOB_ANTAG_ON_GAIN, src)
 
 /datum/antagonist/proc/is_banned(mob/M)
@@ -134,8 +126,6 @@ GLOBAL_LIST_EMPTY(antagonists)
 	clear_antag_moodies()
 	if(owner)
 		LAZYREMOVE(owner.antag_datums, src)
-		for(var/A in skill_modifiers)
-			owner.remove_skill_modifier(GET_SKILL_MOD_ID(A, type))
 		if(!silent && owner.current)
 			farewell()
 	var/datum/team/team = get_team()

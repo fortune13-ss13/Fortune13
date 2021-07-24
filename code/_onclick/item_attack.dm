@@ -89,15 +89,11 @@
 		to_chat(user, "<span class='warning'>You don't want to harm other living beings!</span>")
 		return
 
-	var/bigleagues = force*0.45
 	var/buffout = force*0.55
 	//var/regular = force*(user.special_s/100)//SPECIAL integration
 
 	//force += regular//SPECIAL integration
-	
-	if (force >= 5 && HAS_TRAIT(user, TRAIT_BIG_LEAGUES))
-		force += bigleagues
-	
+
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 		force += buffout
 
@@ -117,9 +113,6 @@
 
 	//force -= regular//SPECIAL integration
 
-	if (force >= 5 && HAS_TRAIT(user, TRAIT_BIG_LEAGUES))
-		force -= bigleagues
-	
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 		force -= buffout
 
@@ -178,6 +171,9 @@
 		visible_message("<span class='danger'>[user] has hit [src] with [I]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 		//only witnesses close by and the victim see a hit message.
 		log_combat(user, src, "attacked", I)
+	var/skill_mod = 1 + (get_skill_rating(user, type="melee") / 10) // Maximum skill mod(normally) would be 1.6;
+	totitemdamage *= skill_mod
+
 	take_damage(totitemdamage, I.damtype, "melee", 1)
 
 /mob/living/attacked_by(obj/item/I, mob/living/user, attackchain_flags = NONE, damage_multiplier = 1)
@@ -189,6 +185,8 @@
 	send_item_attack_message(I, user, null, totitemdamage)
 	I.do_stagger_action(src, user, totitemdamage)
 	if(I.force)
+		var/skill_mod = 1 + (get_skill_rating(user, type="melee") / 10) // Maximum skill mod(normally) would be 1.6;
+		totitemdamage *= skill_mod
 		apply_damage(totitemdamage, I.damtype)
 		if(I.damtype == BRUTE)
 			if(prob(33))

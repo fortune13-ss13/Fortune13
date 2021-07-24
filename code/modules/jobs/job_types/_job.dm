@@ -6,6 +6,9 @@
 	var/list/minimal_access = list()		//Useful for servers which prefer to only have access given to the places a job absolutely needs (Larger server population)
 	var/list/access = list()				//Useful for servers which either have fewer players, so each person needs to fill more than one role, or servers which like to give more access, so players can't hide forever in their super secure departments (I'm looking at you, chemistry!)
 
+	/// Job specific bay-skills. Difference from normal skills..? You can't earn these normally.
+	var/datum/skill_list_bay/skills_type
+
 	//Determines who can demote this position
 	var/department_head = list()
 
@@ -78,9 +81,6 @@
 	// How much threat this job is worth in dynamic. Is subtracted if the player's not an antag, added if they are.
 	var/threat = 0
 
-	/// Starting skill modifiers.
-	var/list/starting_modifiers
-
 	//Description, short text about the job
 	var/description = ""
 
@@ -98,6 +98,8 @@
 //H is usually a human unless an /equip override transformed it
 /datum/job/proc/after_spawn(mob/living/H, mob/M, latejoin = FALSE)
 	//do actions on H but send messages to M as the key may not have been transferred_yet
+	if(skills_type)
+		H?.mind.bay_skills = new skills_type
 	if(mind_traits)
 		for(var/t in mind_traits)
 			ADD_TRAIT(H.mind, t, JOB_TRAIT)
@@ -153,7 +155,7 @@
 	var/datum/outfit/job/O = outfit_override || outfit
 	if(O)
 		H.equipOutfit(O, visualsOnly, preference_source) //mob doesn't have a client yet.
-	
+
 	//If we have any additional loadouts, notify the player
 	if(!visualsOnly && LAZYLEN(loadout_options))
 		H.enable_loadout_select()
@@ -221,12 +223,6 @@
 /datum/job/proc/radio_help_message(mob/M)
 	to_chat(M, "<b>Prefix your message with :h to speak on your department's radio. To see other prefixes, look closely at your headset.</b>")
 
-/datum/job/proc/standard_assign_skills(datum/mind/M)
-	if(!starting_modifiers)
-		return
-	for(var/mod in starting_modifiers)
-		ADD_SINGLETON_SKILL_MODIFIER(M, mod, null)
-
 /datum/outfit/job
 	name = "Standard Gear"
 
@@ -246,7 +242,6 @@
 
 	var/pda_slot = SLOT_BELT
 
-	var/chemwhiz = FALSE //F13 Chemwhiz, for chemistry machines
 	var/pa_wear = FALSE //F13 pa_wear, ability to wear PA
 	var/gunsmith_one = FALSE //F13 gunsmith perk, ability to craft Tier 2 guns and ammo
 	var/gunsmith_two = FALSE //F13 gunsmith perk, ability to craft Tier 3 guns and ammo
@@ -283,9 +278,6 @@
 	else
 		holder = "[uniform]"
 	uniform = text2path(holder)
-
-	if(chemwhiz == TRUE)
-		ADD_TRAIT(H, TRAIT_CHEMWHIZ, "chemwhiz")
 
 	if(pa_wear == TRUE)
 		ADD_TRAIT(H, TRAIT_PA_WEAR, "pa_wear")
@@ -338,9 +330,6 @@
 		PDA.update_label()
 		if(preference_source && !PDA.equipped) //PDA's screen color, font style and look depend on client preferences.
 			PDA.update_style(preference_source)
-
-	if(chemwhiz == TRUE)
-		ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
 	if(pa_wear == TRUE)
 		ADD_TRAIT(H, TRAIT_PA_WEAR, src)

@@ -193,9 +193,7 @@
 #define TRAIT_PARA              "paraplegic"
 #define TRAIT_EMPATH			"empath"
 #define TRAIT_FRIENDLY			"friendly"
-#define TRAIT_BIG_LEAGUES		"big_leagues"
 #define TRAIT_TRAPPER			"trapper"
-#define TRAIT_IRONFIST			"iron_fist"
 #define TRAIT_SNOB				"snob"
 #define TRAIT_CULT_EYES 		"cult_eyes"
 #define TRAIT_AUTO_CATCH_ITEM	"auto_catch_item"
@@ -238,12 +236,10 @@
 #define TRAIT_SPRINT_LOCKED				"sprint_locked"
 
 
-#define	TRAIT_CHEMWHIZ			"chemwhiz"
 #define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens
 #define TRAIT_LONGPORKLOVER		"Cannibal"
 #define TRAIT_TRIBAL			"Tribalistic Person"
 #define TRAIT_BERSERKER			"berserker"
-#define TRAIT_TECHNOPHREAK		"technophreak"	//needed to use the autolathe, renamed and sprited 30/06/2020
 #define TRAIT_PA_WEAR           "pa_wear"
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
 #define TRAIT_MEDICALGRADUATE		"Medical Graduate" //generalised offmap medschool graduation training

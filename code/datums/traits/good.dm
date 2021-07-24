@@ -47,7 +47,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	REMOVE_TRAIT(H, TRAIT_TECHNOPHOBE, TRAIT_TRIBAL)
 
-	
+
 /datum/quirk/apathetic
 	name = "Apathetic"
 	desc = "You just don't care as much as other people. That's nice to have in a place like this, I guess."
@@ -281,24 +281,6 @@
 	lose_text = "<span class='danger'>You forget how to slaughter animals.</span>"
 	locked = TRUE
 
-/datum/quirk/bigleagues
-	name = "Big Leagues"
-	desc = "Swing for the fences! You deal additional damage with melee weapons."
-	value = 2
-	mob_trait = TRAIT_BIG_LEAGUES
-	gain_text = "<span class='notice'>You feel like swinging for the fences!</span>"
-	lose_text = "<span class='danger'>You feel like bunting.</span>"
-	locked = TRUE
-
-/datum/quirk/chemwhiz
-	name = "Chem Whiz"
-	desc = "You've been playing around with chemicals all your life. You know how to use chemistry machinery."
-	value = 2
-	mob_trait = TRAIT_CHEMWHIZ
-	gain_text = "<span class='notice'>The mysteries of chemistry are revealed to you.</span>"
-	lose_text = "<span class='danger'>You forget how the periodic table works.</span>"
-	locked = TRUE
-
 /datum/quirk/pa_wear
 	name = "PA Wear"
 	desc = "You've being around the wastes and have learned the importance of defense."
@@ -339,20 +321,6 @@
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.maxHealth += 10
 	mob_tar.health += 10
-
-/datum/quirk/iron_fist
-	name = "Iron Fist"
-	desc = "You have fists of kung-fury! Increases unarmed damage."
-	value = 2
-	mob_trait = TRAIT_IRONFIST
-	gain_text = "<span class='notice'>Your fists feel furious!</span>"
-	lose_text = "<span class='danger'>Your fists feel calm again.</span>"
-	locked = TRUE
-
-/datum/quirk/iron_fist/on_spawn()
-	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 4
-	mob_tar.dna.species.punchdamagehigh = 11
 
 /datum/quirk/light_step
 	name = "Light Step"

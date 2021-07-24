@@ -11,6 +11,10 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	circuit = /obj/item/circuitboard/machine/chem_master
 
+	skillcheck_type = "chemistry"
+	skillcheck_level = 2
+	skillcheck_block = TRUE
+
 	var/obj/item/reagent_containers/beaker = null
 	var/obj/item/storage/pill_bottle/bottle = null
 	var/mode = 1
@@ -169,9 +173,6 @@
 	else
 		if(!user.IsAdvancedToolUser() && !istype(src, /obj/machinery/chem_master/condimaster))
 			to_chat(user, "<span class='warning'>The legion has no use for drugs! Better to destroy it.</span>")
-			return
-		if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ) && !istype(src, /obj/machinery/chem_master/condimaster))
-			to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
 			return
 		if(!ui)
 			ui = new(user, src, "ChemMaster", name)
@@ -519,6 +520,8 @@
 	name = "CondiMaster 3000"
 	desc = "Used to create condiments and other cooking supplies."
 	condi = TRUE
+	skillcheck_type = "culinary"
+	skillcheck_block = FALSE
 
 /obj/machinery/chem_master/primitive
 	name = "alchemy table"
@@ -529,6 +532,8 @@
 	idle_power_usage = 0
 	flags_1 = NODECONSTRUCT_1
 	can_be_unanchored = TRUE
+	skillcheck_level = 0
+	skillcheck_block = FALSE
 
 /obj/machinery/chem_master/primitive/update_icon_state()
 	if(beaker)

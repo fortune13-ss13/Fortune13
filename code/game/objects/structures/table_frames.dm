@@ -30,6 +30,7 @@
 			deconstruct(TRUE)
 		return
 
+	var/skill_mod = SKILL_CHECK_VALUE(user, "engineering")
 	var/obj/item/stack/material = I
 	if (istype(I, /obj/item/stack))
 		if(material?.tableVariant)
@@ -37,14 +38,14 @@
 				to_chat(user, "<span class='warning'>You need one [material.name] sheet to do this!</span>")
 				return
 			to_chat(user, "<span class='notice'>You start adding [material] to [src]...</span>")
-			if(do_after(user, 20, target = src) && material.use(1))
+			if(do_after(user, 20 / skill_mod, target = src) && material.use(1))
 				make_new_table(material.tableVariant)
 		else
 			if(material.get_amount() < 1)
 				to_chat(user, "<span class='warning'>You need one sheet to do this!</span>")
 				return
 			to_chat(user, "<span class='notice'>You start adding [material] to [src]...</span>")
-			if(do_after(user, 20, target = src) && material.use(1))
+			if(do_after(user, 20 / skill_mod, target = src) && material.use(1))
 				var/list/material_list = list()
 				if(material.material_type)
 					material_list[material.material_type] = MINERAL_MATERIAL_AMOUNT
@@ -99,7 +100,8 @@
 				to_chat(user, "<span class='warning'>You need one [material.name] sheet to do this!</span>")
 				return
 			to_chat(user, "<span class='notice'>You start adding [material] to [src]...</span>")
-			if(do_after(user, 20, target = src) && material.use(1))
+			var/skill_mod = SKILL_CHECK_VALUE(user, "engineering")
+			if(do_after(user, 20 / skill_mod, target = src) && material.use(1))
 				make_new_table(toConstruct)
 	else
 		return ..()

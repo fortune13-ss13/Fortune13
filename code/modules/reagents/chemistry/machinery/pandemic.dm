@@ -13,6 +13,10 @@
 	circuit = /obj/item/circuitboard/computer/pandemic
 	connectable = FALSE
 
+	skillcheck_type = "chemistry"
+	skillcheck_level = 4 // Science, amirite
+	skillcheck_block = TRUE
+
 	var/wait
 	var/datum/symptom/selected_symptom
 	var/obj/item/reagent_containers/beaker
