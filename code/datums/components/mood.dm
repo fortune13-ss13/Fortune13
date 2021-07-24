@@ -2,7 +2,6 @@
 #define SLIGHT_INSANITY_PEN 1
 #define MINOR_INSANITY_PEN 5
 #define MAJOR_INSANITY_PEN 10
-#define MOOD_INSANITY_MALUS 0.13 // 13% debuff per sanity_level above the default of 4 (higher is worser), overall a 39% debuff to skills at rock bottom depression.
 
 /datum/component/mood
 	var/mood //Real happiness
@@ -14,10 +13,6 @@
 	var/list/datum/mood_event/mood_events = list()
 	var/insanity_effect = 0 //is the owner being punished for low mood? If so, how much?
 	var/obj/screen/mood/screen_obj
-	var/datum/skill_modifier/bad_mood/malus
-	var/datum/skill_modifier/great_mood/bonus
-	var/static/malus_id = 0
-	var/static/list/free_maluses = list()
 
 /datum/component/mood/Initialize()
 	if(!isliving(parent))
@@ -184,67 +179,25 @@
 	else
 		sanity = amount
 
-	var/old_sanity_level = sanity_level
 	switch(sanity)
 		if(-INFINITY to SANITY_CRAZY)
-			setInsanityEffect(MAJOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
 			sanity_level = 6
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
-			setInsanityEffect(MINOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
 			sanity_level = 5
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
-			setInsanityEffect(SLIGHT_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/disturbed)
 			sanity_level = 4
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
-			setInsanityEffect(0)
 			master.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
 			sanity_level = 3
 		if(SANITY_NEUTRAL+1 to SANITY_GREAT+1) //shitty hack but +1 to prevent it from responding to super small differences
-			setInsanityEffect(0)
 			master.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
 			sanity_level = 2
 		if(SANITY_GREAT+1 to INFINITY)
-			setInsanityEffect(ECSTATIC_SANITY_PEN) //It's not a penalty but w/e
 			master.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
 			sanity_level = 1
-
-	if(sanity_level != old_sanity_level)
-		if(sanity_level >= 4)
-			if(!malus)
-				if(!length(free_maluses))
-					ADD_SKILL_MODIFIER_BODY(/datum/skill_modifier/bad_mood, malus_id++, master, malus)
-				else
-					malus = pick_n_take(free_maluses)
-					if(master.mind)
-						master.mind.add_skill_modifier(malus.identifier)
-					else
-						malus.RegisterSignal(master, COMSIG_MOB_ON_NEW_MIND, /datum/skill_modifier.proc/on_mob_new_mind, TRUE)
-			malus.value_mod = malus.level_mod = 1 - (sanity_level - 3) * MOOD_INSANITY_MALUS
-		else if(malus)
-			if(master.mind)
-				master.mind.remove_skill_modifier(malus.identifier)
-			else
-				malus.UnregisterSignal(master, COMSIG_MOB_ON_NEW_MIND)
-			free_maluses += malus
-			malus = null
-
-	//update_mood_icon()
-
-/datum/component/mood/proc/setInsanityEffect(newval)//More code so that the previous proc works
-	if(newval == insanity_effect)
-		return
-
-	var/mob/living/L = parent
-	if(newval == ECSTATIC_SANITY_PEN && !bonus)
-		ADD_SKILL_MODIFIER_BODY(/datum/skill_modifier/great_mood, null, L, bonus)
-	else if(bonus)
-		REMOVE_SKILL_MODIFIER_BODY(/datum/skill_modifier/great_mood, null, L)
-		bonus = null
-
-	insanity_effect = newval
 
 /datum/component/mood/proc/modify_sanity(datum/source, amount, minimum = SANITY_INSANE, maximum = SANITY_AMAZING)
 	setSanity(sanity + amount, minimum, maximum)
@@ -375,4 +328,3 @@
 #undef SLIGHT_INSANITY_PEN
 #undef MINOR_INSANITY_PEN
 #undef MAJOR_INSANITY_PEN
-#undef MOOD_INSANITY_MALUS

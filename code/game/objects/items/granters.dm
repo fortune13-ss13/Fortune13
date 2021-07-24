@@ -897,7 +897,7 @@
 
 /obj/item/book/granter/skill/random/Initialize()
 	. = ..()
-	skill_type = pick("unarmed", "melee", "engineering", "chemistry", "medical", "surgery", "crafting", "culinary", "science")
+	skill_type = pick("unarmed", "melee", "engineering", "salvaging", "smithing", "chemistry", "medical", "surgery", "crafting", "culinary", "science")
 	minimum_skill = text2num(pickweight(varweight))
 	maximum_skill = minimum_skill + 1
 	name_mod = skill_type
@@ -918,12 +918,12 @@
 			string_var = "notes on"
 			desc = "A small collection of notes made in regards of [name_mod] by unknown scientist."
 			pages_to_mastery = 2
-			remarks = list("I never heard about it before!", "", \
+			remarks = list("I never heard about it before!", "Hm, very interesting.", \
 			"Well, [name_mod] is much more complicated than I thought.")
 			greet = "You now understand [name_mod] much better."
 		if(2)
 			string_var = "essay on"
-			desc = "An essay made in Galactic University for these hoping to be proficient in [name_mod]."
+			desc = "An essay made for these hoping to be proficient in [name_mod]."
 			pages_to_mastery = 3
 			remarks = list("I never heard about it before!", "Well, [name_mod] is a really interesting thing.", "Who even wrote it? It's genius!", \
 			"Without this I'd probably never get proficient in [name_mod].", "Is there anything more to it?")
@@ -940,7 +940,7 @@
 			greet = "You now understand everything about [name_mod]."
 		if(5)
 			string_var = "ancient tome of"
-			desc = "An ancient book explaining the entire concept of [name_mod]. Written by the first Galactic University Professors and even the Wizards' Federation itself."
+			desc = "An ancient book explaining the entire concept of [name_mod]. Written by the finest minds of the United States before the war."
 			pages_to_mastery = 6
 			greet = "Finally! You now undertsand the concept of [name_mod] in the universe!"
 
@@ -969,6 +969,12 @@
 	desc = "This guide tells you how to use wrench and other useful tools."
 	greet = "You suddenly realize what toolbox is for."
 	remarks = list("So that's what a toolbox is for!", "You hold a wrench like this and then rotate it?", "Wait, what the fuck is plasteel?", "So that's how you are supposed to use welding tools.", "Why can't we just throw in some monkeys to do the job for us?")
+
+/obj/item/book/granter/skill/basic/salvaging
+	name = "basic salvaging guide"
+	desc = "This guide tells you how to disassemble wrecks."
+	greet = "You now understand how to get more salvage out of wrecks."
+	remarks = list("Oh, so that's why we can't use explosives for it.", "Welding tool should be on..?", "Wait, what the fuck is plasteel?", "So that's why there are so many knives in the cars...", "I can find a fusion reactor if I try well enough..?")
 
 /obj/item/book/granter/skill/basic/medical
 	name = "basic first aid guide"
@@ -1004,7 +1010,7 @@
 	time_per_page = 0
 
 /obj/item/book/granter/skill/basic/selection/attack_self(mob/user)
-	var/list/choices = list("Unarmed Combat", "Melee Combat", "Engineering", "Salvaging", "Chemistry", "First Aid", "Surgery", "Crafting")
+	var/list/choices = list("Unarmed Combat", "Melee Combat", "Engineering", "Salvaging", "Smithing", "Chemistry", "First Aid", "Surgery", "Crafting")
 	if(skill_type == null)
 		var/choice = input("Choose a skill:") in choices
 		switch(choice)
@@ -1018,6 +1024,8 @@
 				skill_type = "engineering"
 			if("Salvaging")
 				skill_type = "engineering"
+			if("Smithing")
+				skill_type = "smithing"
 			if("Chemistry")
 				skill_type = "chemistry"
 			if("First Aid")

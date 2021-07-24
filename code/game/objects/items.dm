@@ -152,12 +152,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
  */
 	var/datum/block_parry_data/block_parry_data
 
-	///Skills vars
-	//list of skill PATHS exercised when using this item. An associated bitfield can be set to indicate additional ways the skill is used by this specific item.
-	var/list/datum/skill/used_skills
-	var/skill_difficulty = THRESHOLD_UNTRAINED //how difficult it's to use this item in general.
-	var/skill_gain = DEF_SKILL_GAIN //base skill value gain from using this item.
-
 	var/canMouseDown = FALSE
 
 
@@ -179,11 +173,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 			hitsound = 'sound/items/welder.ogg'
 		if(damtype == "brute")
 			hitsound = "swing_hit"
-
-	if(used_skills)
-		for(var/path in used_skills)
-			var/datum/skill/S = GLOB.skill_datums[path]
-			LAZYADD(used_skills[path], S.skill_traits)
 
 	if(w_class <= WEIGHT_CLASS_NORMAL) //pulling small items doesn't slow you down much
 		drag_delay = 0.05 SECONDS
@@ -852,7 +841,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 // Called when a mob tries to use the item as a tool.
 // Handles most checks.
-/obj/item/proc/use_tool(atom/target, mob/living/user, delay, amount=0, volume=0, datum/callback/extra_checks, skill_gain_mult = STD_USE_TOOL_MULT, difficulty_mod=6)
+/obj/item/proc/use_tool(atom/target, mob/living/user, delay, amount=0, volume=0, datum/callback/extra_checks, difficulty_mod=6)
 	// No delay means there is no start message, and no reason to call tool_start_check before use_tool.
 	// Run the start check here so we wouldn't have to call it manually.
 	if(!delay && !tool_start_check(user, amount))
@@ -868,9 +857,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	play_tool_sound(target, volume)
 
 	if(delay)
-		if(user.mind && used_skills)
-			delay = user.mind.item_action_skills_mod(src, delay, skill_difficulty, SKILL_USE_TOOL, null, FALSE)
-
 		// Create a callback with checks that would be called every tick by do_after.
 		var/datum/callback/tool_check = CALLBACK(src, .proc/tool_check_callback, user, amount, extra_checks)
 
@@ -894,15 +880,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	// but only if the delay between the beginning and the end is not too small
 	if(delay >= MIN_TOOL_SOUND_DELAY)
 		play_tool_sound(target, volume)
-
-
-	if(user.mind && used_skills && skill_gain_mult)
-		var/gain = skill_gain + delay/SKILL_GAIN_DELAY_DIVISOR
-		for(var/skill in used_skills)
-			if(!(SKILL_TRAINING_TOOL in used_skills[skill]))
-				continue
-			var/datum/skill/S = GLOB.skill_datums[skill]
-			user.mind.auto_gain_experience(skill, gain*skill_gain_mult*S.item_skill_gain_multi)
 
 	return TRUE
 

@@ -206,7 +206,7 @@
 			to_chat(src, "<span class='notice'>You set [I] down gently on the ground.</span>")
 			return
 
-		adjustStaminaLossBuffered(I.getweight(src, STAM_COST_THROW_MULT, SKILL_THROW_STAM_COST))
+		adjustStaminaLossBuffered(I.getweight(src, STAM_COST_THROW_MULT))
 
 	if(thrown_thing)
 		var/power_throw = 0

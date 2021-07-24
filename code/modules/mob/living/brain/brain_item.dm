@@ -51,12 +51,6 @@
 		var/datum/brain_trauma/BT = X
 		BT.owner = owner
 		BT.on_gain()
-	if(damage > BRAIN_DAMAGE_MILD)
-		var/datum/skill_modifier/S
-		ADD_SKILL_MODIFIER_BODY(/datum/skill_modifier/brain_damage, null, C, S)
-	if(damage > BRAIN_DAMAGE_SEVERE)
-		var/datum/skill_modifier/S
-		ADD_SKILL_MODIFIER_BODY(/datum/skill_modifier/heavy_brain_damage, null, C, S)
 
 	//Update the body's icon so it doesnt appear debrained anymore
 	C.update_hair()
@@ -72,8 +66,6 @@
 	if((!QDELETED(src) || C) && !no_id_transfer)
 		transfer_identity(C)
 	if(C)
-		REMOVE_SKILL_MODIFIER_BODY(/datum/skill_modifier/brain_damage, null, C)
-		REMOVE_SKILL_MODIFIER_BODY(/datum/skill_modifier/heavy_brain_damage, null, C)
 		C.update_hair()
 
 /obj/item/organ/brain/proc/transfer_identity(mob/living/L)
@@ -241,28 +233,17 @@
 	. = ..()
 	//if we're not more injured than before, return without gambling for a trauma
 	if(damage <= prev_damage)
-		if(damage < prev_damage && owner)
-			if(prev_damage > BRAIN_DAMAGE_MILD && damage <= BRAIN_DAMAGE_MILD)
-				REMOVE_SKILL_MODIFIER_BODY(/datum/skill_modifier/brain_damage, null, owner)
-			if(prev_damage > BRAIN_DAMAGE_SEVERE && damage <= BRAIN_DAMAGE_SEVERE)
-				REMOVE_SKILL_MODIFIER_BODY(/datum/skill_modifier/heavy_brain_damage, null, owner)
 		return
 	damage_delta = damage - prev_damage
 	if(damage > BRAIN_DAMAGE_MILD)
 		if(prob(damage_delta * (1 + max(0, (damage - BRAIN_DAMAGE_MILD)/100)))) //Base chance is the hit damage; for every point of damage past the threshold the chance is increased by 1% //learn how to do your bloody math properly goddamnit
 			gain_trauma_type(BRAIN_TRAUMA_MILD, natural_gain = TRUE)
-			if(prev_damage <= BRAIN_DAMAGE_MILD && owner)
-				var/datum/skill_modifier/S
-				ADD_SKILL_MODIFIER_BODY(/datum/skill_modifier/brain_damage, null, owner, S)
 	if(damage > BRAIN_DAMAGE_SEVERE)
 		if(prob(damage_delta * (1 + max(0, (damage - BRAIN_DAMAGE_SEVERE)/100)))) //Base chance is the hit damage; for every point of damage past the threshold the chance is increased by 1%
 			if(prob(20))
 				gain_trauma_type(BRAIN_TRAUMA_SPECIAL, natural_gain = TRUE)
 			else
 				gain_trauma_type(BRAIN_TRAUMA_SEVERE, natural_gain = TRUE)
-			if(prev_damage <= BRAIN_DAMAGE_SEVERE && owner)
-				var/datum/skill_modifier/S
-				ADD_SKILL_MODIFIER_BODY(/datum/skill_modifier/heavy_brain_damage, null, owner, S)
 	if (owner)
 		if(owner.stat < UNCONSCIOUS) //conscious or soft-crit
 			var/brain_message

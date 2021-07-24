@@ -4,6 +4,7 @@
 	var/melee = 0 // Increases weapon damage + block chance with shields.
 	var/engineering = 0 // Affects speed of do_afters with engi tools.
 	var/salvaging = 0 // Affects drop-rates of salvage.
+	var/smithing = 0 // Smithing. Affects quality of smithed weapons.
 	var/chemistry = 0 // If too low - you'll have a delay before using chemistry machines.
 	var/medical = 0 // First Aid. Affects speed of applying sutures/gauzes and fixing wounds.
 	var/surgery = 0 // Surgery Steps speed.
@@ -19,6 +20,7 @@
 		"melee" = melee,\
 		"engineering" = engineering,\
 		"salvaging" = salvaging,\
+		"smithing" = smithing,\
 		"chemistry" = chemistry,\
 		"medical" = medical,\
 		"surgery" = surgery,\
@@ -171,6 +173,7 @@
 	name = "Legion Camp Duty"
 	engineering = 3
 	salvaging = 2
+	smithing = 2
 	medical = 2
 	crafting = 2
 
@@ -335,6 +338,7 @@
 	name = "Tribal"
 	unarmed = 2
 	melee = 3 // Most tribal roles had big leagues trait, so here we go.
+	smithing = 2
 
 /datum/skill_list_bay/tribal/villager
 	name = "Tribal Villager"
@@ -345,6 +349,7 @@
 	name = "Tribal Chief"
 	unarmed = 3
 	engineering = 2
+	smithing = 3
 	medical = 2
 	surgery = 1
 	crafting = 2

@@ -1,8 +1,8 @@
 /datum/wires/microwave
 	holder_type = /obj/machinery/microwave
 	proper_name = "Microwave"
-	req_knowledge = JOB_SKILL_TRAINED
-	req_skill = JOB_SKILL_UNTRAINED
+	req_knowledge = 4
+	req_skill = 2
 
 /datum/wires/microwave/New(atom/holder)
 	wires = list(

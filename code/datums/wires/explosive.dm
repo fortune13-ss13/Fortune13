@@ -15,7 +15,7 @@
 /datum/wires/explosive/c4
 	holder_type = /obj/item/grenade/plastic/c4
 	randomize = TRUE	//Same behaviour since no wire actually disarms it
-	req_skill = JOB_SKILL_UNTRAINED
+	req_skill = 2
 
 /datum/wires/explosive/c4/interactable(mob/user)
 	var/obj/item/grenade/plastic/c4/P = holder
@@ -30,7 +30,7 @@
 /datum/wires/explosive/pizza
 	holder_type = /obj/item/pizzabox
 	randomize = TRUE
-	req_skill = JOB_SKILL_MASTER
+	req_skill = 4
 
 /datum/wires/explosive/pizza/New(atom/holder)
 	wires = list(

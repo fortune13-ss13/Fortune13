@@ -312,7 +312,7 @@
 		user.DelayNextAction(CLICK_CD_MELEE)
 		if(src == user)
 			to_chat(user, "<span class='notice'>You start fixing yourself...</span>")
-			if(!W.use_tool(src, user, 50, 1, skill_gain_mult = TRIVIAL_USE_TOOL_MULT))
+			if(!W.use_tool(src, user, 50, 1))
 				to_chat(user, "<span class='warning'>You need more cable to repair [src]!</span>")
 				return
 			adjustFireLoss(-10)

@@ -68,15 +68,11 @@
 	/// Skill datum
 	var/datum/skill_list_bay/bay_skills = new /datum/skill_list_bay
 
-	/// Our skill holder.
-	var/datum/skill_holder/skill_holder
-
 	///What character we spawned in as- either at roundstart or latejoin, so we know for persistent scars if we ended as the same person or not
 	var/mob/original_character
 
 
 /datum/mind/New(key)
-	skill_holder = new(src)
 	src.key = key
 	soulOwner = src
 	martial_art = default_martial_art
@@ -89,7 +85,6 @@
 			if(antag_datum.delete_on_mind_deletion)
 				qdel(i)
 		antag_datums = null
-	QDEL_NULL(skill_holder)
 	return ..()
 
 /datum/mind/proc/get_language_holder()

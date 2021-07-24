@@ -1,7 +1,7 @@
 /datum/wires/syndicatebomb
 	holder_type = /obj/machinery/syndicatebomb
 	randomize = TRUE
-	req_skill = JOB_SKILL_EXPERT //good luck, wannabe hero.
+	req_skill = 5 //good luck, wannabe hero.
 
 
 /datum/wires/syndicatebomb/New(atom/holder)

@@ -1,7 +1,7 @@
 /datum/wires/mulebot
 	holder_type = /mob/living/simple_animal/bot/mulebot
 	randomize = TRUE
-	req_knowledge = JOB_SKILL_MASTER
+	req_knowledge = 4
 
 /datum/wires/mulebot/New(atom/holder)
 	wires = list(

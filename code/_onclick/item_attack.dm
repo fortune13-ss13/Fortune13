@@ -148,23 +148,12 @@
 
 /obj/attacked_by(obj/item/I, mob/living/user, attackchain_flags = NONE, damage_multiplier = 1)
 	var/totitemdamage = I.force * damage_multiplier
-	var/bad_trait
 
 	var/stamloss = user.getStaminaLoss()
 	if(stamloss > STAMINA_NEAR_SOFTCRIT) //The more tired you are, the less damage you do.
 		var/penalty = (stamloss - STAMINA_NEAR_SOFTCRIT)/(STAMINA_NEAR_CRIT - STAMINA_NEAR_SOFTCRIT)*STAM_CRIT_ITEM_ATTACK_PENALTY
 		totitemdamage *= 1 - penalty
 
-	if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-		bad_trait = SKILL_COMBAT_MODE //blacklist combat skills.
-
-	if(I.used_skills && user.mind)
-		if(totitemdamage)
-			totitemdamage = user.mind.item_action_skills_mod(I, totitemdamage, I.skill_difficulty, SKILL_ATTACK_OBJ, bad_trait)
-		for(var/skill in I.used_skills)
-			if(!(SKILL_TRAIN_ATTACK_OBJ in I.used_skills[skill]))
-				continue
-			user.mind.auto_gain_experience(skill, I.skill_gain)
 	if(!(attackchain_flags & NO_AUTO_CLICKDELAY_HANDLING))
 		I.ApplyAttackCooldown(user, src, attackchain_flags)
 	if(totitemdamage)
@@ -217,24 +206,12 @@
 		stam_mobility_mult = LYING_DAMAGE_PENALTY
 	. *= stam_mobility_mult
 
-	var/bad_trait
 	if(!(I.item_flags & NO_COMBAT_MODE_FORCE_MODIFIER))
 		if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-			bad_trait = SKILL_COMBAT_MODE //blacklist combat skills.
 			if(SEND_SIGNAL(src, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_ACTIVE))
 				. *= 0.8
 		else if(SEND_SIGNAL(src, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
 			. *= 1.2
-
-	if(!user.mind || !I.used_skills)
-		return
-	if(.)
-		. = user.mind.item_action_skills_mod(I, ., I.skill_difficulty, SKILL_ATTACK_MOB, bad_trait)
-	for(var/skill in I.used_skills)
-		if(!(SKILL_TRAIN_ATTACK_MOB in I.used_skills[skill]))
-			continue
-		var/datum/skill/S = GLOB.skill_datums[skill]
-		user.mind.auto_gain_experience(skill, I.skill_gain*S.item_skill_gain_multi)
 
 /**
  * Called after attacking something if the melee attack chain isn't interrupted before.
@@ -294,16 +271,12 @@
 	return 1
 
 /// How much stamina this takes to swing this is not for realism purposes hecc off.
-/obj/item/proc/getweight(mob/living/user, multiplier = 1, trait = SKILL_STAMINA_COST)
+/obj/item/proc/getweight(mob/living/user, multiplier = 1)
 	. = (total_mass || w_class * STAM_COST_W_CLASS_MULT) * multiplier
 	if(!user)
 		return
-	var/bad_trait
 	if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
 		. *= STAM_COST_NO_COMBAT_MULT
-		bad_trait = SKILL_COMBAT_MODE
-	if(used_skills && user.mind)
-		. = user.mind.item_action_skills_mod(src, ., skill_difficulty, trait, bad_trait, FALSE)
 	var/total_health = user.getStaminaLoss()
 	. = clamp(., 0, STAMINA_NEAR_CRIT - total_health)
 

@@ -84,8 +84,8 @@
 			to_chat(user, "You place the [notsword] on the [src].")
 			currentquality = anvilquality
 			var/skillmod = 4
-			if(user.mind.skill_holder)
-				skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/2
+			if(user.mind)
+				skillmod = get_skill_rating(user, "smithing")/2
 			currentquality += skillmod
 			qdel(notsword)
 		else
@@ -127,8 +127,8 @@
 		busy = FALSE
 		F.busy = FALSE
 		return FALSE
-	if(user.mind.skill_holder)
-		var/skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/10 + 1
+	if(user.mind)
+		var/skillmod = get_skill_rating(user, "smithing")/10 + 1
 		steptime = 50 / skillmod
 	playsound(src, 'sound/effects/clang2.ogg',40, 2)
 	if(!do_after(user, steptime, target = src))
@@ -184,12 +184,12 @@
 /obj/structure/anvil/proc/tryfinish(mob/user)
 	var/artifactchance = 0
 	if(!artifactrolled)
-		artifactchance = (1+(user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/4))/2500
+		artifactchance = (1+(get_skill_rating(user, "smithing")/4))/2500
 		artifactrolled = TRUE
 	var/artifact = max(prob(artifactchance), debug)
 	var/finalfailchance = outrightfailchance
-	if(user.mind.skill_holder)
-		var/skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/10 + 1
+	if(user.mind)
+		var/skillmod = get_skill_rating(user, "smithing")/10 + 1
 		finalfailchance = max(0, finalfailchance / skillmod) //lv 2 gives 20% less to fail, 3 30%, etc
 	if((currentsteps > 10 || (rng && prob(finalfailchance))) && !artifact)
 		to_chat(user, "<span class='warning'>You overwork the metal, causing it to turn into useless slag!</span>")
@@ -201,8 +201,6 @@
 		currentsteps = 0
 		outrightfailchance = 1
 		artifactrolled = FALSE
-		if(user.mind.skill_holder)
-			user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 25, 400, silent = FALSE)
 	for(var/i in smithrecipes)
 		if(i == stepsdone)
 			var/turf/T = get_turf(user)
@@ -234,8 +232,6 @@
 			currentsteps = 0
 			outrightfailchance = 1
 			artifactrolled = FALSE
-			if(user.mind.skill_holder)
-				user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 100, 10000000, silent = FALSE)
 			break
 
 /obj/structure/anvil/debugsuper

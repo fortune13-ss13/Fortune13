@@ -1,8 +1,8 @@
 
 /datum/wires/emitter
 	holder_type = /obj/machinery/power/emitter
-	req_knowledge = JOB_SKILL_TRAINED
-	req_skill = JOB_SKILL_UNTRAINED
+	req_knowledge = 4
+	req_skill = 2
 
 /datum/wires/emitter/New(atom/holder)
 	wires = list(WIRE_ZAP,WIRE_HACK)
