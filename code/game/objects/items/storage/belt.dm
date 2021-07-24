@@ -161,8 +161,25 @@
 		/obj/item/implanter,
 		/obj/item/pinpointer/crew,
 		/obj/item/reagent_containers/chem_pack,
+		/obj/item/weldingtool/basic,
 		/obj/item/stack/sticky_tape //surgical tape
 		))
+
+
+/obj/item/storage/belt/medical/primitive
+	name = "primitive medical toolbelt"
+	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
+	content_overlays = FALSE
+
+/obj/item/storage/belt/medical/legion/PopulateContents()
+	new /obj/item/surgical_drapes(src)
+	new /obj/item/scalpel (src)
+	new /obj/item/circular_saw(src)
+	new /obj/item/retractor(src)
+	new /obj/item/hemostat(src)
+	new /obj/item/weldingtool/basic(src)
+	new /obj/item/bonesetter(src)
+
 
 /obj/item/storage/belt/medical/surgery_belt_adv
 	name = "surgical supply belt"

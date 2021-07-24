@@ -246,7 +246,3 @@ GLOBAL_LIST_INIT(glass_sheet_types, typecacheof(list(
 #define iskey(A) istype(A, /obj/item/key)
 
 #define islock(A) istype(A, /obj/item/lock_construct)
-
-#define isNCR(A) (istype(A, /datum/job/ncr))
-
-#define isMP(A) (istype(A, /datum/job/ncr/f13mp))

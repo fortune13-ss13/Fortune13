@@ -462,7 +462,7 @@
 				to_chat(user, wait_desc)
 			return DISCARD_LAST_ACTION
 
-// Military baton
+// Military baton - Desired effect instant disarm on hit on NCR when used by MP, could be sorted with a interesting martial art maybe.
 /obj/item/melee/classic_baton/militarypolice
 	name = "military baton"
 	desc = "Sturdy stick painted white, used by military police to get unruly troopers into line."
@@ -472,16 +472,6 @@
 	icon_state = "batonmp"
 	item_state = "batonmp"
 
-/* Need  to make the disarm on NCR work, for the MP to keep order
-
-/obj/item/melee/onehanded/slavewhip/attack(isNCR)
-	. = ..()
-	target.drop_all_held_items()
-
-
-	if(isNCR(target))
-		target.drop_all_held_items()
-*/
 
 // Telescopic baton
 /obj/item/melee/classic_baton/telescopic

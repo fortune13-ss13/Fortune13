@@ -258,7 +258,7 @@
 
 /obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
 	name = "slavemaster helmet"
-	desc = "(IV) gladiatorial style helmet."
+	desc = "(IV) The distinct helmet used by slavemasters."
 	icon_state = "legion-slavemaster"
 	item_state = "legion-slavemaster"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR

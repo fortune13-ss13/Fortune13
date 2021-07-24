@@ -26,7 +26,7 @@
 /obj/item/reagent_containers/food/snacks/grown/tobacco/dried
 	name = "fine tobacco"
 	desc = "Some aromatic tobacco."
-	dry = 1	
+	dry = TRUE
 
 // Space Tobacco
 /obj/item/seeds/tobacco/space

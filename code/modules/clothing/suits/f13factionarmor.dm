@@ -189,12 +189,14 @@
 	icon_state = "legion-opifex"
 	item_state = "legion-opifex"
 	blood_overlay_type = "armor"
-	allowed = list(	/obj/item/crowbar,
-					/obj/item/screwdriver,
-					/obj/item/weldingtool,
-					/obj/item/wirecutters,
-					/obj/item/wrench,
-					/obj/item/twohanded)
+	allowed = list(
+		/obj/item/crowbar,
+		/obj/item/screwdriver,
+		/obj/item/weldingtool,
+		/obj/item/wirecutters,
+		/obj/item/wrench,
+		/obj/item/twohanded,
+		)
 
 /obj/item/clothing/suit/armor/f13/legion/recruit
 	name = "legion recruit armor"
