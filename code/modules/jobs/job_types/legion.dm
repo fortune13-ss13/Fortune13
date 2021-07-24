@@ -506,7 +506,8 @@ commented out pending rework*/
 	suit_store = /obj/item/gun/ballistic/revolver/thatgun
 	backpack_contents = list(
 		/obj/item/ammo_box/a556=1,
-		/obj/item/melee/powered/ripper=1,)
+		/obj/item/melee/powered/ripper=1,
+		)
 
 /datum/outfit/loadout/vexfox
 	name = "Desert Fox"
@@ -547,7 +548,7 @@ commented out pending rework*/
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
+	. = ..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
@@ -727,8 +728,8 @@ commented out pending rework*/
 	l_pocket = /obj/item/restraints/handcuffs
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted=1,
-		/obj/item/reagent_containers/pill/patch/healingpowder=1
-		,)
+		/obj/item/reagent_containers/pill/patch/healingpowder=1,
+		)
 
 /datum/outfit/loadout/primelancer
 	name = "Frontliner"
@@ -787,7 +788,7 @@ commented out pending rework*/
 	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
+	. = ..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
@@ -942,8 +943,8 @@ commented out pending rework*/
 	exp_requirements = 600
 
 	loadout_options = list(
-	/datum/outfit/loadout/auxassist, // Tinker and keep track of the money, handle trading beneath the warriors
-	/datum/outfit/loadout/auxmedicus, // Do surgery, medical tasks.
+		/datum/outfit/loadout/auxassist, // Tinker and keep track of the money, handle trading beneath the warriors
+		/datum/outfit/loadout/auxmedicus, // Do surgery, medical tasks.
 	)
 
 	matchmaking_allowed = list(
