@@ -539,10 +539,10 @@ commented out pending rework*/
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/CaesarsLegion,
-		),
+			),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/CaesarsLegion,
-		),
+			),
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

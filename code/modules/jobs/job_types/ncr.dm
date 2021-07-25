@@ -713,10 +713,10 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
-		),
+			),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/ncr,
-		),
+			),
 		)
 
 /datum/outfit/job/ncr/f13combatmedic		// M1A1 Carbine, Survival knife
@@ -771,10 +771,10 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
-		),
+			),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/ncr,
-		),
+			),
 		)
 
 /datum/outfit/job/ncr/f13corporal
@@ -834,10 +834,10 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
-		),
+			),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/ncr,
-		),
+			),
 		)
 
 /datum/outfit/job/ncr/f13trooper
@@ -893,10 +893,10 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
-		),
+			),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/ncr,
-		),
+			),
 		)
 
 /datum/outfit/job/ncr/f13medicalofficer		// 9mm sidearm, Telescopic baton
@@ -926,7 +926,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		)
 
 /datum/outfit/job/ncr/f13medicalofficer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
+	. = ..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
@@ -974,7 +974,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		)
 
 /datum/outfit/job/ncr/f13logisticsofficer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
+	. = ..()
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
