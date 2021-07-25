@@ -84,53 +84,48 @@
 	desc = "The Ripper™ vibroblade is powered by a small energy cell wich allows it to easily cut through flesh and bone."
 	icon = 'icons/fallout/objects/melee/melee.dmi'
 	icon_state = "ripper"
-	var/on_icon_state = "ripper_on"
-	var/off_icon_state = "ripper"
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
-	var/on_item_state = "ripper_on"
-	var/off_item_state = "ripper"
 	w_class = WEIGHT_CLASS_NORMAL
-	var/weight_class_on = WEIGHT_CLASS_HUGE
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
 	slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
 	force = 10
-	var/force_on = 45
-	var/force_off = 10
 	wound_bonus = 25
 	block_chance = 15
 	throw_speed = 3
 	throw_range = 4
 	throwforce = 10
-	var/on = FALSE
 	tool_behaviour = TOOL_SAW
 	sharpness = SHARP_EDGED
 	toolspeed = 1.5 //slower than a real saw
 	resistance_flags = FIRE_PROOF
 	hitsound = 'sound/weapons/chainsawhit.ogg'
+	var/on_item_state = "ripper_on"
+	var/off_item_state = "ripper"
+	var/weight_class_on = WEIGHT_CLASS_HUGE
+	var/force_on = 45
+	var/force_off = 10
+	var/on = FALSE
+	var/on_icon_state = "ripper_on"
+	var/off_icon_state = "ripper"
 	var/on_sound = 'sound/weapons/chainsawhit.ogg'
-
-// Description for when turning the ripper on
-/obj/item/melee/powered/ripper/proc/get_on_description()
-	. = list()
-	.["local_on"] = "<span class ='warning'>You thumb the on button, the whining, blurry edge of the Ripper now lethal to touch.</span>"
-	.["local_off"] = "<span class ='notice'>You turn off the Ripper, the buzz of the cutting teeth ceasing.</span>"
-	return
+	var/description_on = "<span class ='warning'>You thumb the on button, the whining, blurry edge of the Ripper now lethal to touch.</span>"
+	var/description_off = "<span class ='notice'>You turn off the Ripper, the buzz of the cutting teeth ceasing.</span>"
 
 /obj/item/melee/powered/ripper/attack_self(mob/user)
 	on = !on
-	var/list/desc = get_on_description()
+	to_chat(user, description_on)
 	if(on)
-		to_chat(user, desc["local_on"])
+		to_chat(user, description_on)
 		icon_state = on_icon_state
 		item_state = on_item_state
 		w_class = weight_class_on
 		force = force_on
 		slot_flags = null
 		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
-		playsound(src.loc, on_sound, 50, 1)
+		playsound(loc, on_sound, 50, TRUE)
 	else
-		to_chat(user, desc["local_off"])
+		to_chat(user, description_off)
 		icon_state = off_icon_state
 		item_state = off_item_state
 		w_class = WEIGHT_CLASS_NORMAL
@@ -161,9 +156,10 @@
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	icon_state = "chainsaw"
 	item_state = "chainsaw"
-	w_class = WEIGHT_CLASS_NORMAL
+	icon_prefix = "chainsaw"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = null
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
-	slot_flags = ITEM_SLOT_SUITSTORE
 	force = 7
 	wound_bonus = 25
 	throw_speed = 2
@@ -200,16 +196,14 @@
 		item_state = on_item_state
 		w_class = weight_class_on
 		force = force_on
-		slot_flags = null
 		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
-		playsound(src.loc, on_sound, 50, 1)
+		playsound(loc, on_sound, 50, TRUE)
 	else
 		to_chat(user, description_off)
 		icon_state = off_icon_state
 		item_state = off_item_state
-		w_class = WEIGHT_CLASS_NORMAL
+		w_class = WEIGHT_CLASS_BULKY
 		force = force_off
-		slot_flags = ITEM_SLOT_SUITSTORE
 		attack_verb = list("poked", "scraped")
 	add_fingerprint(user)
 
