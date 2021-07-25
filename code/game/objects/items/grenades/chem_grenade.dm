@@ -490,7 +490,7 @@
 
 	beakers += B1
 	beakers += B2
-
+/*
 /obj/item/grenade/chem_grenade/glitter
 	name = "generic glitter grenade"
 	desc = "You shouldn't see this description."
@@ -524,7 +524,7 @@
 	name = "white glitter bomb"
 	desc = "For that somnolent glittery look."
 	glitter_type = /datum/reagent/glitter/white
-
+*/
 /obj/item/grenade/chem_grenade/clf3
 	name = "clf3 grenade"
 	desc = "BURN!-brand foaming clf3. In a special applicator for rapid purging of wide areas."
