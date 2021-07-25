@@ -45,7 +45,7 @@
 	required_catalysts = list(/datum/reagent/consumable/enzyme = 5)
 
 /datum/chemical_reaction/spacebeer
-	name = "Space Beer"
+	name = "Beer"
 	id = /datum/reagent/consumable/ethanol/beer
 	results = list(/datum/reagent/consumable/ethanol/beer = 10)
 	required_reagents = list(/datum/reagent/consumable/flour = 10)
@@ -789,11 +789,13 @@
 	required_reagents = list(/datum/reagent/consumable/ethanol/champagne = 2, /datum/reagent/consumable/ethanol/lizardwine = 2, /datum/reagent/consumable/eggyolk = 1, /datum/reagent/gold = 1)
 	mix_message = "The liquid's color starts shifting as the nanogold is alternately corroded and redeposited."
 
+/*
 /datum/chemical_reaction/red_queen
 	name = "Red Queen"
 	id = /datum/reagent/consumable/red_queen
 	results = list(/datum/reagent/consumable/red_queen = 10)
-	required_reagents = list(/datum/reagent/consumable/tea = 6, /datum/reagent/mercury = 2, /datum/reagent/consumable/blackpepper = 1, /datum/reagent/growthserum = 1)
+	required_reagents = list(/datum/reagent/consumable/tea = 6, /datum/reagent/mercury = 2, /datum/reagent/consumable/blackpepper = 1)
+*/
 
 /datum/chemical_reaction/gunfire
 	name = "Gunfire"
@@ -1005,3 +1007,21 @@
 	results = list(/datum/reagent/consumable/ethanol/species_drink/laval_spit = 20) //Limited use
 	required_reagents = list(/datum/reagent/iron = 5,  /datum/reagent/consumable/ethanol/mauna_loa = 10, /datum/reagent/sulfur = 5)
 	required_temp = 900 // (626.85'C)
+
+/datum/chemical_reaction/nukafloat
+	name = "Nuka Float"
+	id = /datum/reagent/consumable/nukafloat
+	results = list(/datum/reagent/consumable/nukafloat = 15)
+	required_reagents = list(/datum/reagent/consumable/nuka_cola = 5, /datum/reagent/consumable/ice = 5, /datum/reagent/consumable/cream = 5)
+
+/datum/chemical_reaction/sunsetfloat
+	name = "Sunset Float"
+	id = /datum/reagent/consumable/sunsetfloat
+	results = list(/datum/reagent/consumable/sunsetfloat = 15)
+	required_reagents = list(/datum/reagent/consumable/sunset = 5, /datum/reagent/consumable/ice = 5, /datum/reagent/consumable/cream = 5)
+
+/datum/chemical_reaction/nukashine
+	name = "Nukashine"
+	id = /datum/reagent/consumable/ethanol/nukashine
+	results = list(/datum/reagent/consumable/ethanol/nukashine = 2)
+	required_reagents = list(/datum/reagent/consumable/nuka_cola = 1, /datum/reagent/consumable/ethanol/beer = 1)

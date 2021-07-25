@@ -492,10 +492,6 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 		new /datum/stack_recipe("egg box", /obj/item/storage/fancy/egg_box), 					\
 		new /datum/stack_recipe("nugget box", /obj/item/storage/fancy/nugget_box),				\
 		new /datum/stack_recipe("security-styled box", /obj/item/storage/box/seclooking), 		\
-		new /datum/stack_recipe("buckshot shell box", /obj/item/storage/fancy/ammobox/lethalshot),		\
-		new /datum/stack_recipe("rubber shot shell box", /obj/item/storage/fancy/ammobox),		\
-		new /datum/stack_recipe("beanbag shell box", /obj/item/storage/fancy/ammobox/beanbag),			\
-		new /datum/stack_recipe("slug shell box", /obj/item/storage/box/lethalslugs), 			\
 		new /datum/stack_recipe("mouse traps box", /obj/item/storage/box/mousetraps),
 		null,																					\
 		new /datum/stack_recipe("pill bottle box", /obj/item/storage/box/pillbottles),			\
@@ -745,7 +741,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 // Bones
 
 GLOBAL_LIST_INIT(bone_recipes, list(
-	new /datum/stack_recipe("bone dagger", /obj/item/kitchen/knife/combat/bone, 2, time = 20),
+	new /datum/stack_recipe("bone dagger", /obj/item/melee/onehanded/knife/bone, 2, time = 20),
 	null, \
 	new /datum/stack_recipe("bone armor", /obj/item/clothing/suit/armor/bone, 6, time = 30),
 	new /datum/stack_recipe("skull helmet", /obj/item/clothing/head/helmet/skull, 4, time = 30),

@@ -758,7 +758,7 @@
 
 /obj/item/toy/cards/deck
 	name = "deck of cards"
-	desc = "A deck of space-grade playing cards."
+	desc = "A deck of well worn playing cards."
 	icon = 'icons/obj/toy.dmi'
 	deckstyle = "nanotrasen"
 	icon_state = "deck_nanotrasen_full"
@@ -1476,7 +1476,7 @@
 	name = "Security Officer action figure"
 	icon_state = "secofficer"
 	toysay = "I am the law!"
-	toysound = 'sound/voice/complionator/dredd.ogg'
+	toysound = 'sound/runtime/complionator/dredd.ogg'
 
 /obj/item/toy/figure/virologist
 	name = "Virologist action figure"

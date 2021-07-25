@@ -8,7 +8,7 @@
 	enforces = "Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish medical outposts throughout the wasteland","Leadership recommends the following goal for this week: Experiment with and improve medical techniques and equipment", "Leadership recommends the following goal for this week: Replenish the operation's funds through donations and sales.")
 
-/datum/outfit/job/followers/
+/datum/outfit/job/followers
 	name =		"FOLLOWERSdatums"
 	jobtype =	/datum/job/followers/
 	shoes =		/obj/item/clothing/shoes/sneakers/black
@@ -150,6 +150,17 @@ Practitioner
 	exp_requirements = 600
 
 	outfit = /datum/outfit/job/followers/f13practitioner
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/followers/f13practitioner,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/followers/f13practitioner,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/followers/f13followervolunteer,
+		),
+	)
 
 	loadout_options = list(
 	/datum/outfit/loadout/physician,
@@ -256,6 +267,17 @@ Follower Volunteer
 	/datum/outfit/loadout/volunteer_farmer,
 	/datum/outfit/loadout/volunteer_student
 	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/followers/f13followervolunteer,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/followers/f13followervolunteer,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/followers/f13practitioner,
+		),
+	)
 
 	//the follower volunteer doesn't need more access as it is already stored in the /datum/job/followers
 
@@ -318,8 +340,8 @@ Follower Guard
 	flag = F13FOLLOWERGUARD
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance and the other Doctors as well."
 	description = "You are a Follower Guard. As a Guard for the Followers of Apocalypse, you are responsible for the safety and the maintenance of order in the hospital and among your peers. Your reason for being here is to make sure the other staff can provide education and medical services to those in need, furthering research in non-military matters, as well as helping their communities get access to basic necessities. "
 	forbids = "Causing harm to others except in times of self-defense or in defense of other followers."
@@ -360,6 +382,6 @@ Follower Guard
 	name = "Followers Close Protection Guard"
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
-		/obj/item/storage/fancy/ammobox/beanbag=1,
-		/obj/item/storage/fancy/ammobox/lethalshot=1
+		/obj/item/ammo_box/shotgun/bean=1,
+		/obj/item/ammo_box/shotgun/buck=1
 	)

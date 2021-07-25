@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 
- em {
+em {
   font-style: normal;
   font-weight: bold;
 }
@@ -338,7 +338,7 @@ em {
   font-weight: bold;
 }
 
-.say {
+.say, .infoplain, .oocplain, .warningplain {
 }
 
 .deadsay {
@@ -356,6 +356,9 @@ em {
 .binarysay a:active, .binarysay a:visited {
   color: #88ff88;
 }
+
+/* RADIO COLORS */
+/* IF YOU CHANGE THIS KEEP IT IN SYNC WITH TGUI CONSTANTS */
 
 .radio {
   color: #1ecc43;
@@ -409,6 +412,14 @@ em {
   color: #3434fd;
 }
 
+.greenteamradio {
+  color: #34fd34;
+}
+
+.yellowteamradio {
+  color: #fdfd34;
+}
+
 .vaultradio	{
   color: #6eaa2c;
 
@@ -443,10 +454,6 @@ em {
 
 .alert {
   color: #d82020;
-}
-
-.emote {
-  font-style: italic;
 }
 
 .userdanger {
@@ -485,6 +492,11 @@ em {
   font-weight: bold;
 }
 
+.minorannounce {
+  font-weight: bold;
+  font-size: 185%;
+}
+
 .greenannounce {
   color: #059223;
   font-weight: bold;
@@ -508,7 +520,19 @@ em {
   font-size: 85%;
 }
 
+.tinynoticeital {
+  color: #6685f5;
+  font-style: italic;
+  font-size: 85%;
+}
+
 .smallnotice {
+  color: #6685f5;
+  font-style: italic;
+  font-size: 90%;
+}
+
+.smallnoticeital {
   color: #6685f5;
   font-style: italic;
   font-size: 90%;
@@ -866,6 +890,11 @@ em {
   font-family: "Courier New", cursive, sans-serif;
 }
 
+.tape_recorder {
+  color: #FF0000;
+  font-family: "Courier New", cursive, sans-serif;
+}
+
 .command_headset {
   font-weight: bold;
   font-size: 160%;
@@ -997,6 +1026,10 @@ em {
 .icon {
   height: 1em;
   width: auto;
+}
+
+.bigicon {
+  font-size: 2.5em;
 }
 
 .memo {

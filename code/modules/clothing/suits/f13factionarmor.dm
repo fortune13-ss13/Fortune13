@@ -6,12 +6,12 @@
 	name = "base raider armor"
 	desc = "for testing"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("tier" = 2, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
+	armor = list("tier" = 3, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/raider/supafly
 	name = "supa-fly raider armor"
-	desc = "(II) Fabulous mutant powers were revealed to me the day I held aloft my bumper sword and said...<br>BY THE POWER OF NUKA-COLA, I AM RAIDER MAN!"
+	desc = "(III) Fabulous mutant powers were revealed to me the day I held aloft my bumper sword and said...<br>BY THE POWER OF NUKA-COLA, I AM RAIDER MAN!"
 	icon_state = "supafly"
 	item_state = "supafly"
 
@@ -21,7 +21,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/rebel
 	name = "rebel raider armor"
-	desc = "(II) Rebel, rebel. Your face is a mess."
+	desc = "(III) Rebel, rebel. Your face is a mess."
 	icon_state = "raider_rebel_icon"
 	item_state = "raider_rebel_armor"
 
@@ -31,7 +31,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
-	desc = "(II) A bunch of metal chaps adorned with severed hands at the waist with a leather plate worn on the left shoulder. Very intimidating."
+	desc = "(III) A bunch of metal chaps adorned with severed hands at the waist with a leather plate worn on the left shoulder. Very intimidating."
 	icon_state = "sadist"
 	item_state = "sadist"
 
@@ -41,7 +41,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/blastmaster
 	name = "blastmaster raider armor"
-	desc = "(II) A suit composed largely of blast plating, though there's so many holes it's hard to say if it will protect against much."
+	desc = "(III) A suit composed largely of blast plating, though there's so many holes it's hard to say if it will protect against much."
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
@@ -53,7 +53,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
-	desc = "(II) A set of armor made from bulky plastic and rubber. A faded sports team logo is printed in various places. Go Desert Rats!"
+	desc = "(III) A set of armor made from bulky plastic and rubber. A faded sports team logo is printed in various places. Go Desert Rats!"
 	icon_state = "yankee"
 	item_state = "yankee"
 
@@ -63,7 +63,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/badlands
 	name = "badlands raider armor"
-	desc = "(II) A leather top with a bandolier over it and a straps that cover the arms."
+	desc = "(III) A leather top with a bandolier over it and a straps that cover the arms."
 	icon_state = "badlands"
 	item_state = "badlands"
 
@@ -73,7 +73,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
-	desc = "(II) A particularly unhuggable armor, even by raider standards. Extremely spiky."
+	desc = "(III) A particularly unhuggable armor, even by raider standards. Extremely spiky."
 	icon_state = "painspike"
 	item_state = "painspike"
 
@@ -83,7 +83,7 @@
 
 /obj/item/clothing/suit/armor/f13/raider/iconoclast
 	name = "iconoclast raider armor"
-	desc = "(II) A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
+	desc = "(III) A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
 
@@ -93,13 +93,13 @@
 
 /obj/item/clothing/suit/armor/f13/raider/combatduster
 	name = "combat duster"
-	desc = "(II) An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic."
+	desc = "(III) An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic."
 	icon_state = "combatduster"
 	item_state = "combatduster"
 
 /obj/item/clothing/suit/armor/f13/raider/combatduster/patrolduster
 	name = "Patrol Duster"
-	desc = "(II) What appears to be an NCR patrol ranger's armor under a green tinted duster. The armor itself looks much more well kept then the duster itself, said duster looking somewhat faded. On the back of the duster, is a symbol of a skull with an arrow piercing through the eye."
+	desc = "(III) What appears to be an NCR patrol ranger's armor under a green tinted duster. The armor itself looks much more well kept then the duster itself, said duster looking somewhat faded. On the back of the duster, is a symbol of a skull with an arrow piercing through the eye."
 	icon_state = "patrolduster"
 	item_state = "patrolduster"
 
@@ -111,13 +111,13 @@
 	name = "base faction exile armor"
 	desc = "this is for testing."
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("tier" = 2, "energy" = 20, "bomb" = 40, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 20)
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 40, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 20)
 	strip_delay = 30
 	icon = 'icons/fallout/clothing/suits.dmi'
 
 /obj/item/clothing/suit/armor/f13/exile/ncrexile
 	name = "modified NCR armor"
-	desc = "(II) A modified detoriated armor kit consisting of NCR gear and scrap metal."
+	desc = "(III) A modified detoriated armor kit consisting of NCR gear and scrap metal."
 	icon_state = "ncrexile"
 	item_state = "ncrexile"
 
@@ -127,7 +127,7 @@
 
 /obj/item/clothing/suit/armor/f13/exile/legexile
 	name = "modified Legion armor"
-	desc = "(II) A modified detoriated armor kit consisting of Legion gear and scrap metal."
+	desc = "(III) A modified detoriated armor kit consisting of Legion gear and scrap metal."
 	icon_state = "legexile"
 	item_state = "legexile"
 
@@ -137,7 +137,7 @@
 
 /obj/item/clothing/suit/armor/f13/exile/bosexile
 	name = "modified Brotherhood armor"
-	desc = "(II) A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
+	desc = "(III) A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
 	icon_state = "brotherhoodexile"
 	item_state = "brotherhoodexile"
 
@@ -173,7 +173,7 @@
 	icon_state = "legrecruit"
 	item_state = "legarmor"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	allowed = list(/obj/item/gun, /obj/item/claymore, /obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/twohanded, /obj/item/melee/powered, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/twohanded, /obj/item/melee/powered, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
 	armor = list("tier" = 2, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/legion/Initialize()
@@ -352,11 +352,11 @@
 //NCR
 /obj/item/clothing/suit/armor/f13/ncrarmor
 	name = "NCR patrol vest"
-	desc = "(II) A standard issue NCR Infantry vest."
+	desc = "(III) A standard issue NCR Infantry vest."
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("tier" = 2, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/Initialize()
 	. = ..()
@@ -393,17 +393,17 @@
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/captain
 	name = "NCR reinforced officer vest"
-	desc = "(VII) A heavily reinforced set of NCR mantle armour, the armor has been heavily patched and given ceramic inserts in vital areas to protect the wearer. The design indicates it belongs to a high ranking NCR officer."
+	desc = "(VI) A heavily reinforced set of NCR mantle armour, with large ceramic plating fitted to cover the torso and back, with additional plating on the shoulders and arms. Intended for use by high ranking officers."
 	icon_state = "ncr_captain_armour"
 	item_state = "ncr_captain_armour"
-	armor = list("tier" = 7, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 6, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/lieutenant
 	name = "NCR officer vest"
-	desc = "(VII) A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
+	desc = "(V) A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
 	icon_state = "ncr_lt_armour"
 	item_state = "ncr_lt_armour"
-	armor = list("tier" = 7, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/scout
 	name = "NCR 3rd Scout combat armor"
@@ -458,7 +458,7 @@
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/lieutenant/ncr_officer_coat
 	name = "NCR officer vest"
-	desc = "(VII) A special issue NCR officer's armour with an added thick overcoat for protection from the elements."
+	desc = "(V) A special issue NCR officer's armour with an added thick overcoat for protection from the elements."
 	icon_state = "ncr_officer_coat"
 	item_state = "ncr_officer_coat"
 
@@ -539,11 +539,11 @@
 
 /obj/item/clothing/suit/armor/f13/headscribe
 	name = "brotherhood head scribe robe"
-	desc = "(II) A red cloth robe with gold trimmings, worn eclusively by the Head Scribe of a chapter."
+	desc = "(IV) A red cloth robe with gold trimmings, worn eclusively by the Head Scribe of a chapter."
 	icon_state = "headscribe"
 	item_state = "headscribe"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("tier" = 2, "energy" = 0, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+	armor = list("tier" = 4, "energy" = 60, "bomb" = 36, "bio" = 50, "rad" = 69, "fire" = 10, "acid" = 70)
 
 /obj/item/clothing/suit/f13/scribe
 	name = "Brotherhood Scribe's robe"
@@ -572,43 +572,43 @@
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	name = "brotherhood armor"
-	desc = "(VII) A superior combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
+	desc = "(V) A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
 	icon_state = "brotherhood_armor_knight"
 	item_state = "brotherhood_armor_knight"
-	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	armor = list("tier" = 5, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight armor"
-	desc = "(VII) A superior combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knight. It bears a silver stripe."
+	desc = "(VI) A combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knight. It bears a silver stripe."
 	icon_state = "brotherhood_armor_senior"
 	item_state = "brotherhood_armor_senior"
-
+	armor = list("tier" = 6, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/captain
 	name = "brotherhood knight-captain armor"
-	desc = "(VII) A superior combat armor set made by the Brotherhood of Steel, standard issue for all Knight-Captains. It bears golden embroidery."
+	desc = "(VI) A combat armor set made by the Brotherhood of Steel, standard issue for all Knight-Captains. It bears golden embroidery."
 	icon_state = "brotherhood_armor_captain"
 	item_state = "brotherhood_armor_captain"
-
+	armor = list("tier" = 6, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/initiate
 	name = "initiate armor"
-	desc = "(V) An old military grade pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
+	desc = "(IV) An old degraded pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
-	armor = list("tier" = 5, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	armor = list("tier" = 4, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/initiate/mk2
-	name = "reinforced initiate armor"
+	name = "reinforced knight armor"
 	desc = "(VI) A reinforced set of bracers, greaves, and torso plating of prewar design This one is kitted with additional plates and, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_armor_mk2"
 	item_state = "brotherhood_armor_mk2"
 	armor = list("tier" = 6, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/outcast
-	name = "brotherhood armor"
-	desc = "(VII) A superior combat armor set made by the Brotherhood of Steel, bearing a series of red markings."
+	name = "brotherhood armor" //unused?
+	desc = "(V) A superior combat armor set made by the Brotherhood of Steel, bearing a series of red markings."
 	icon_state = "brotherhood_armor_outcast"
 	item_state = "brotherhood_armor_outcast"
-	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+	armor = list("tier" = 5, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
 //Oasis/Town
 /obj/item/clothing/suit/armor/f13/town
@@ -653,7 +653,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("tier" = 4, "energy" = 15, "bomb" = 15, "bio" = 50, "rad" = 35, "fire" = 50, "acid" = 100)
 	slowdown = -0.14
-	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
 
 /obj/item/clothing/suit/armor/f13/tribal_combat_armor
 	name = "tribal combat armor"
@@ -661,8 +661,8 @@
 	icon_state = "tribecombatarmor"
 	item_state = "tribecombatarmor"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("tier" = 5, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
-	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+	armor = list("tier" = 5, "energy" = 40, "bomb" = 35, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
 
 /obj/item/clothing/suit/armor/f13/tribe_armor
 	name = "light tribal armor"
@@ -671,7 +671,7 @@
 	item_state = "tribal_armor"
 	body_parts_covered = CHEST|GROIN|ARMS
 	armor = list("tier" = 4, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100)
-	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
 
 /obj/item/clothing/suit/armor/f13/tribe_heavy_armor
 	name = "heavy tribal armor"
@@ -680,7 +680,7 @@
 	item_state = "heavy_tribal_armor"
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 	flags_inv = HIDEJUMPSUIT
-	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
 )
 
 /obj/item/clothing/suit/armor/f13/lightcloak
@@ -691,7 +691,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("tier" = 4, "energy" = 15, "bomb" = 15, "bio" = 50, "rad" = 35, "fire" = 50, "acid" = 100)
 	slowdown = -0.14
-	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
 )
 
 /obj/item/clothing/suit/armor/f13/tribal_combat_armor
@@ -701,7 +701,7 @@
 	item_state = "tribecombatarmor"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("tier" = 5, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
-	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
 )
 
 /obj/item/clothing/suit/armor/f13/wayfarer/tribal_pa
@@ -709,7 +709,9 @@
 	desc = "(VI) A set of power armor, now reborn in the paints of the Wayfarers, it serves its new owners as an idol to Kwer, as well as being a piece of heavy covering, with removed parts to allow for quick nimble speed, its hardly what it used to be long ago."
 	icon_state = "tribal_power_armor"
 	item_state = "tribal_power_armor"
-	armor = list("tier" = 7, "energy" = 35, "bomb" = 40, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	armor = list("tier" = 7, "energy" = 50, "bomb" = 40, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand
+	)
 
 //Followers
 
@@ -789,6 +791,13 @@
 	desc = "(VIII) This is the original armor the NCR Ranger Combat armor was based off of. An awe inspiring suit of armor used by the legendary Desert Rangers."
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
+
+/obj/item/clothing/suit/armor/f13/rangercombat/desert/whiskey
+	name = "weathered ranger combat armor"
+	desc = "(II) An original suit of pre-war combat armor used by elite military units, passed down through generations to where it is today. Though it's not lined with kevlar, this suit's still lightweight and easy to move around in."
+	icon_state = "desert_ranger"
+	item_state = "desert_ranger"
+	armor = list("tier" = 2, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/soldier
 	name = "standard issue trooper armor"

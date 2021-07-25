@@ -683,6 +683,12 @@
 	item_state = "clothing_tribalout"
 	can_adjust = TRUE
 
+/obj/item/clothing/under/f13/exile/enclave
+	name = "disheveled peacekeeper uniform"
+	desc = "Khaki standard issue uniform over a black turtleneck. This one seems to be damaged."
+	icon_state = "enclave_uniformexile"
+	item_state = "enclave_uniformexile"
+
 //stuff ported from WW2
 /obj/item/clothing/under/f13/ncr_formal_uniform
 	name = "NCR pre-war uniform"
@@ -798,8 +804,8 @@
 	item_color = "lumberjack"
 
 /obj/item/clothing/under/f13/police
-	name = "pre-War police uniform"
-	desc = "Golden classics of pre-War police officers."
+	name = "police uniform"
+	desc = "You have the right to remain violent."
 	icon_state = "retro_police"
 	item_state = "b_suit"
 	item_color = "retro_police"
@@ -1497,3 +1503,12 @@
 	desc = "Specially made for Super Mutants living in the NCR, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel"
 	icon_state = "mutie_ranger_under"
 	item_state = "mutie_ranger_under"
+
+/obj/item/clothing/under/f13/desert_ranger_scout
+	name = "desert ranger scouting uniform"
+	desc = "A set of clothing worn by desert ranger scouts."
+	icon_state = "scoutclothes"
+	can_adjust = FALSE
+	item_state = "scoutclothes"
+	item_color = "scoutclothes"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)

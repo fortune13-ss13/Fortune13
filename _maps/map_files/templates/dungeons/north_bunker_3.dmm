@@ -25,11 +25,6 @@
 	},
 /turf/open/floor/grass,
 /area/f13/bunker)
-"aL" = (
-/obj/effect/spawner/lootdrop/bedsheet,
-/obj/structure/bed/pod,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/bunker)
 "aM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/workbench,
@@ -203,13 +198,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
 	},
-/obj/item/paper/fluff/stations/lavaland/sloth/note{
-	desc = "Enclave sucks, LMAO";
-	info = "Enclave is stinky";
-	name = "A note to the Enclave"
-	},
 /obj/structure/rack,
-/obj/item/clothing/accessory/medal/gold/heroism,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "fx" = (
@@ -226,7 +215,10 @@
 /turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
 "gl" = (
-/turf/open/floor/mineral/gold,
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/closed/mineral/random/low_chance,
 /area/f13/caves)
 "gv" = (
 /obj/structure/fluff/railing,
@@ -433,6 +425,10 @@
 /obj/machinery/computer/pandemic,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
+"lq" = (
+/obj/structure/flora/wasteplant/wild_fungus,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "lN" = (
 /obj/structure/spacevine{
 	name = "vines"
@@ -478,10 +474,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "mG" = (
-/obj/machinery/smartfridge/bottlerack/lootshelf,
-/obj/item/reagent_containers/food/snacks/store/bread/spidermeat,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/bunker)
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/closed/mineral/random/high_chance,
+/area/f13/caves)
 "mN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/grown/mushroom/libertycap,
@@ -495,6 +492,12 @@
 /obj/effect/decal/remains/human,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/radiation)
+"nB" = (
+/obj/structure/flora/grass/wasteland{
+	icon_state = "tall_grass_7"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
 "nJ" = (
 /obj/structure/fluff/railing{
 	dir = 4
@@ -632,9 +635,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "sA" = (
-/obj/effect/spawner/lootdrop/bedsheet,
-/obj/structure/bed/pod,
-/obj/effect/decal/cleanable/semen/femcum,
+/obj/structure/bed/old,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "sN" = (
@@ -649,7 +650,7 @@
 /obj/machinery/door/poddoor{
 	id = 455
 	},
-/turf/open/space/basic,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "sZ" = (
 /obj/structure/chair/comfy/beige{
@@ -664,9 +665,8 @@
 /turf/closed/indestructible/fakeglass,
 /area/f13/bunker)
 "th" = (
-/obj/effect/spawner/lootdrop/bedsheet,
-/obj/structure/bed/pod,
 /obj/item/clothing/suit/armor/f13/battlecoat/vault,
+/obj/structure/bed/old,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "tn" = (
@@ -991,12 +991,12 @@
 /area/f13/tunnel)
 "Ca" = (
 /obj/effect/spawner/lootdrop/bedsheet,
-/obj/structure/bed/pod,
 /obj/structure/spacevine{
 	name = "vines"
 	},
 /obj/effect/spawner/lootdrop/f13/armor/tier2,
 /mob/living/simple_animal/hostile/supermutant,
+/obj/structure/bed/old,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "Cm" = (
@@ -1053,7 +1053,6 @@
 /obj/structure/spacevine{
 	name = "vines"
 	},
-/obj/item/dildo/flared/huge,
 /obj/machinery/light/broken{
 	dir = 8
 	},
@@ -1193,10 +1192,6 @@
 "Hb" = (
 /obj/structure/junk/small/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/bunker)
-"HZ" = (
-/obj/structure/sign/poster/contraband/lusty_xenomorph,
-/turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
 "Ic" = (
 /turf/closed/wall/r_wall/rust{
@@ -1411,7 +1406,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "Nj" = (
-/obj/item/storage/toolbox/plastitanium/gold_real,
 /turf/open/floor/mineral/gold,
 /area/f13/caves)
 "Nm" = (
@@ -1471,14 +1465,14 @@
 /obj/structure/chair,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"Pu" = (
-/obj/effect/decal/cleanable/cum,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/bunker)
 "PO" = (
 /mob/living/simple_animal/hostile/venus_human_trap,
 /turf/open/floor/grass,
 /area/f13/bunker)
+"PW" = (
+/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "PY" = (
 /obj/structure/fluff/railing,
 /mob/living/simple_animal/hostile/bloatfly,
@@ -1596,10 +1590,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "TI" = (
-/obj/structure/junk/small/bed,
 /obj/structure/spacevine{
 	name = "vines"
 	},
+/obj/structure/bed/old,
 /turf/open/floor/grass,
 /area/f13/bunker)
 "TM" = (
@@ -1621,6 +1615,16 @@
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
 /obj/machinery/light/fo13colored/Red,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
+"Vi" = (
+/obj/structure/spacevine{
+	name = "vines"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
+"Vp" = (
+/obj/effect/decal/remains/human,
+/turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
 "Vt" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf,
@@ -1717,6 +1721,12 @@
 "XS" = (
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"Yc" = (
+/obj/machinery/computer/shuttle/northbunkerelevator{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
 "Ye" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
@@ -2313,7 +2323,7 @@ XS
 XS
 cf
 Eo
-XS
+PW
 XS
 XS
 Gn
@@ -2485,7 +2495,7 @@ WC
 WC
 WC
 Xm
-mG
+IF
 Ye
 Rx
 Xm
@@ -3607,8 +3617,8 @@ ZX
 ZX
 Kc
 vH
-gl
-gl
+Nj
+Nj
 ZX
 Kc
 ZX
@@ -3665,10 +3675,10 @@ ZX
 ZX
 XS
 XS
-Kc
+mG
 ZX
 Kc
-gl
+Nj
 bR
 Nj
 ZX
@@ -3727,12 +3737,12 @@ ZX
 ZX
 XS
 XS
+Vi
 Kc
 Kc
-Kc
-gl
+Nj
 vH
-gl
+Nj
 ZX
 ZX
 ZX
@@ -3813,7 +3823,7 @@ YT
 YT
 WC
 Xm
-aL
+Ye
 CW
 Xm
 Ye
@@ -3850,7 +3860,7 @@ ZX
 ZX
 XS
 XS
-ZX
+gl
 ZX
 ZX
 ZX
@@ -3876,7 +3886,7 @@ YT
 WC
 Xm
 Go
-Pu
+Ye
 Xm
 wd
 Ye
@@ -3913,7 +3923,7 @@ XS
 od
 XS
 XS
-ZX
+gl
 ZX
 ZX
 ZX
@@ -3974,9 +3984,9 @@ ZX
 XS
 XS
 XS
-XS
-ZX
-ZX
+lq
+gl
+gl
 ZX
 ZX
 ZX
@@ -4108,7 +4118,7 @@ Ye
 wd
 Xm
 XH
-pX
+nB
 St
 St
 Ye
@@ -4217,7 +4227,7 @@ XS
 XS
 ZX
 ZX
-ZX
+gl
 XS
 XS
 XS
@@ -4279,11 +4289,11 @@ ZX
 ZX
 ZX
 ZX
-ZX
+gl
 XS
 fe
-ZX
-ZX
+gl
+gl
 ZX
 ZX
 Xm
@@ -4341,10 +4351,10 @@ ZX
 XS
 ZX
 ZX
-ZX
+gl
 XS
 XS
-ZX
+gl
 ZX
 ZX
 ZX
@@ -4406,7 +4416,7 @@ ZX
 aq
 XS
 XS
-ZX
+gl
 ZX
 ZX
 ZX
@@ -4528,7 +4538,7 @@ ZX
 ZX
 ZX
 XS
-XS
+lq
 XS
 ZX
 ZX
@@ -4854,7 +4864,7 @@ Xm
 Gp
 Ye
 Xm
-HZ
+Xm
 Td
 eT
 Go
@@ -5167,7 +5177,7 @@ Xm
 Xm
 Nb
 Ye
-Ye
+Yc
 YA
 te
 kv
@@ -5229,7 +5239,7 @@ WC
 Xm
 cv
 Ye
-Ko
+Vp
 Qv
 iX
 iX
