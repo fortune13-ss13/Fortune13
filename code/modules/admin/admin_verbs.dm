@@ -741,8 +741,8 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	set name = "Toggle Sleeping"
 
 	if(!check_rights(R_ADMIN))
-		message_admins("[key_name(usr)] tried to use toggle_sleep() without admin perms.")
-		log_admin("[key_name(usr)] tried to use toggle_sleep() without admin perms.")
+		message_admins("[ADMIN_TPMONTY(usr)] tried to use toggle_sleep() without admin perms.")
+		log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use toggle_sleep() without admin perms.")
 		return
 
 	if(perp.IsAdminSleeping())
@@ -764,8 +764,8 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	set name = "Toggle Sleeping Area"
 
 	if(!check_rights(R_ADMIN))
-		message_admins("[key_name(usr)] tried to use toggle_sleep_area() without admin perms.")
-		log_admin("[key_name(usr)] tried to use toggle_sleep_area() without admin perms.")
+		message_admins("[ADMIN_TPMONTY(usr)] tried to use toggle_sleep_area() without admin perms.")
+		log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use toggle_sleep_area() without admin perms.")
 		return
 
 	switch(tgui_alert(usr, "Sleep or unsleep everyone?", "Toggle Sleeping Area", list("Sleep", "Unsleep", "Cancel")))

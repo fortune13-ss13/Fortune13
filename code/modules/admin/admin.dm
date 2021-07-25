@@ -17,8 +17,8 @@
 	set desc="Edit player (respawn, ban, heal, etc)"
 
 	if(!check_rights(R_ADMIN))
-		message_admins("[key_name(usr)] tried to check show_player_panel() without admin perms.")
-		log_admin("[key_name(usr)] tried to check show_player_panel() without admin perms.")
+		message_admins("[ADMIN_TPMONTY(usr)] tried to use show_player_panel() without admin perms.")
+		log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use show_player_panel() without admin perms.")
 		return
 
 	log_admin("[key_name(usr)] checked the individual player panel for [key_name(M)][isobserver(usr)?"":" while in game"].")
@@ -1068,6 +1068,8 @@
 	if(!M)
 		return
 	if(!check_rights(R_ADMIN))
+		message_admins("[ADMIN_TPMONTY(usr)] tried to use cmd_admin_man_up() without admin perms.")
+		log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use cmd_admin_man_up() without admin perms.")
 		return
 
 	to_chat(M, "<span class='warning bold reallybig'>Man up, and deal with it.</span><br><span class='warning big'>Move on.</span>")
@@ -1084,6 +1086,8 @@
 	set name = "Man Up Global"
 
 	if(!check_rights(R_ADMIN))
+		message_admins("[ADMIN_TPMONTY(usr)] tried to use cmd_admin_man_up_global() without admin perms.")
+		log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use cmd_admin_man_up_global() without admin perms.")
 		return
 
 	to_chat(world, "<span class='warning bold reallybig'>Man up, and deal with it.</span><br><span class='warning big'>Move on.</span>")

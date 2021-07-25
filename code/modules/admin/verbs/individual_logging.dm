@@ -3,6 +3,8 @@
 		return
 
 	if(!check_rights(R_ADMIN))
+		message_admins("[ADMIN_TPMONTY(usr)] tried to use show_individual_logging_panel() without admin perms.")
+		log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use show_individual_logging_panel() without admin perms.")
 		return
 
 	var/ntype = text2num(type)
