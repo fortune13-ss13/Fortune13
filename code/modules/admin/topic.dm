@@ -2929,6 +2929,18 @@
 			return
 		GLOB.interviews.ui_interact(usr)
 
+	else if(href_list["sleep"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		var/mob/living/perp = locate(href_list["sleep"]) in GLOB.mob_living_list
+
+		if(QDELETED(perp) || !istype(perp))
+			to_chat(usr, span_warning("Target is no longer valid."))
+			return
+
+		usr.client.holder.toggle_sleep(perp)
+
 
 /datum/admins/proc/HandleCMode()
 	if(!check_rights(R_ADMIN))
