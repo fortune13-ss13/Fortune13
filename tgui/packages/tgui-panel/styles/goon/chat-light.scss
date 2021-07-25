@@ -357,7 +357,7 @@ em {
   font-weight: bold;
 }
 
-.say {
+.say, .emote, .infoplain, .oocplain, .warningplain {
 }
 
 .deadsay {
@@ -431,6 +431,14 @@ em {
   color: #0000ff;
 }
 
+.greenteamradio {
+  color: #00ff00;
+}
+
+.yellowteamradio {
+  color: #d1ba22;
+}
+
 .vaultradio	{
   color: #6eaa2c;
 
@@ -470,10 +478,6 @@ em {
 
 h1.alert, h2.alert {
   color: #000000;
-}
-
-.emote {
-  font-style: italic;
 }
 
 .userdanger {
@@ -527,6 +531,11 @@ h1.alert, h2.alert {
   font-weight: bold;
 }
 
+.minorannounce {
+  font-weight: bold;
+  font-size: 185%;
+}
+
 .greenannounce {
   color: #00ff00;
   font-weight: bold;
@@ -545,6 +554,12 @@ h1.alert, h2.alert {
 }
 
 .tinynotice {
+  color: #000099;
+  font-style: italic;
+  font-size: 85%;
+}
+
+.tinynoticeital {
   color: #000099;
   font-style: italic;
   font-size: 85%;
@@ -913,6 +928,11 @@ h1.alert, h2.alert {
   font-family: "Courier New", cursive, sans-serif;
 }
 
+.tape_recorder {
+  color: #800000;
+  font-family: "Courier New", cursive, sans-serif;
+}
+
 .command_headset {
   font-weight: bold;
   font-size: 160%;
@@ -1044,6 +1064,10 @@ h1.alert, h2.alert {
 .icon {
   height: 1em;
   width: auto;
+}
+
+.bigicon {
+  font-size: 2.5em;
 }
 
 .memo {

@@ -13,7 +13,7 @@
 	supervisors = "the United States Government."
 	selection_color = "#323232"
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 600
+	exp_requirements = 1200
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -35,26 +35,26 @@
 	suit_store =  	/obj/item/gun/ballistic/automatic/assault_carbine
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
-		/obj/item/grenade/flashbang=1,
-		/obj/item/pda=1,
-		/obj/item/ammo_box/magazine/m556/rifle/extended=2,
-		/obj/item/storage/bag/money/small/wastelander=1,
-		/obj/item/kitchen/knife/combat=1
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/pda = 1,
+		/obj/item/ammo_box/magazine/m556/rifle/extended = 2,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/melee/onehanded/knife/survival = 1
 		)
 
 /datum/job/wasteland/enclavesgt
 	title = "Enclave Sergeant"
 	flag = F13USSGT
 	faction = "Enclave"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are in charge of the recruiting for the remnants of the Enclave. You are to recruit all those interested to your cause."
-	forbids = ""
-	enforces = ""
+	forbids = "You are not allowed to have friendly interactions with those outside of the Enclave."
+	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 1200
+	exp_requirements = 2400
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -65,23 +65,21 @@
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/wasteland/enclavesgt
 	backpack = /obj/item/storage/backpack/satchel/enclave
-	head = 			/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	ears = 			/obj/item/radio/headset/headset_enclave
 	glasses = 		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/f13/enclave/peacekeeper
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/x02
+	accessory =     /obj/item/clothing/accessory/ncr/SGT
 	belt = 			/obj/item/storage/belt/military/assault/enclave
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
+	gloves = 		/obj/item/clothing/gloves/combat
 	id = 			/obj/item/card/id/dogtag/enclave
-	suit_store =  	/obj/item/gun/energy/laser/aer12
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/grenade/flashbang=1,
 		/obj/item/pda=1,
-		/obj/item/stock_parts/cell/ammo/mfc=3,
 		/obj/item/storage/bag/money/small/wastelander=1,
-		/obj/item/kitchen/knife/combat=1,
+		/obj/item/melee/onehanded/knife/survival=1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper=1
 		)
 
@@ -96,14 +94,14 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	faction = "Enclave"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
-	forbids = "The Enclave forbids you from leaving the base while still habitable"
-	enforces = ""
+	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
+	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 1400
+	exp_requirements = 2800
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -133,7 +131,7 @@
 		/obj/item/gun/energy/laser/ultra_pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/storage/bag/money/small/wastelander=1,
-		/obj/item/kitchen/knife/combat=1,
+		/obj/item/melee/onehanded/knife/survival=1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science=1
 		)
 
@@ -147,17 +145,17 @@
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
 	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
-	
+
 
 /datum/job/wasteland/enclavelt
 	title = "Enclave Lieutenant"
 	flag = F13USLT
 	faction = "Enclave"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the Lieutenant in charge of commanding the remnants of the Enclave forces in the area. You are to recruit all those interested to your cause."
-	forbids = ""
-	enforces = ""
+	forbids = "You are not allowed to have friendly interactions with those outside of the Enclave."
+	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
 	exp_requirements = 1500
@@ -172,32 +170,41 @@
 	name = "Enclave Lieutenant"
 	jobtype = /datum/job/wasteland/enclavelt
 	backpack = /obj/item/storage/backpack/satchel/enclave
-	head = 			/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
-	ears = 			/obj/item/radio/headset/headset_enclave
-	glasses = 		/obj/item/clothing/glasses/night
-	mask = 			/obj/item/clothing/mask/gas/enclave
-	uniform =		/obj/item/clothing/under/f13/enclave/officer
-	belt = 			/obj/item/storage/belt/military/assault/enclave
-	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
-	id = 			/obj/item/card/id/dogtag/enclave
+	head = /obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+	ears = /obj/item/radio/headset/headset_enclave
+	glasses = /obj/item/clothing/glasses/night
+	mask = /obj/item/clothing/mask/gas/enclave
+	uniform = /obj/item/clothing/under/f13/enclave/officer
+	accessory = /obj/item/clothing/accessory/ncr/LT1
+	belt = /obj/item/storage/belt/military/assault/enclave
+	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
+	gloves = /obj/item/clothing/gloves/combat
+	id = /obj/item/card/id/dogtag/enclave
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=2,
-		/obj/item/grenade/flashbang=1,
-		/obj/item/pda=1,
-		/obj/item/stock_parts/cell/ammo/ec=3,
-		/obj/item/gun/energy/laser/plasma/glock/extended=1,
-		/obj/item/storage/bag/money/small/wastelander=1,
-		/obj/item/kitchen/knife/combat=1
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/pda = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 3,
+		/obj/item/gun/energy/laser/plasma/glock/extended = 1,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
 /datum/outfit/job/wasteland/enclavelt/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
+/datum/outfit/job/wasteland/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
 
 /*
 Coven Stuff
@@ -262,34 +269,40 @@ Great Khan
 	minimal_access = list(ACCESS_KHAN)
 
 	loadout_options = list(
-	///datum/outfit/loadout/pusher,
-	/datum/outfit/loadout/enforcer,
-	/datum/outfit/loadout/brawler)
+		/datum/outfit/loadout/enforcer,
+		/datum/outfit/loadout/brawler,
+		)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+	)
 
 /datum/outfit/job/wasteland/f13pusher
 	name = "Great Khan"
 	jobtype = /datum/job/wasteland/f13pusher
-	id = 		/obj/item/card/id/khantattoo
-	ears = 		/obj/item/radio/headset
-	belt = 		/obj/item/claymore/machete
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/ninemil
+	id = /obj/item/card/id/khantattoo
+	ears = /obj/item/radio/headset
+	belt = /obj/item/melee/onehanded/machete
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/explorer
 	uniform = /obj/item/clothing/under/f13/khan
-
-
-/datum/outfit/job/wasteland/f13pusher/pre_equip(mob/living/carbon/human/H)
-	..()
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/storage/bag/money/small/khan
 	backpack_contents = list(
-		/obj/item/restraints/handcuffs=1, \
-		/obj/item/reagent_containers/pill/patch/jet=2, \
-		/obj/item/reagent_containers/syringe/medx=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1)
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
-	suit_store = pick(
-		/obj/item/gun/ballistic/automatic/pistol/ninemil)
+		/obj/item/restraints/handcuffs = 1,
+		/obj/item/reagent_containers/pill/patch/jet = 2,
+		/obj/item/reagent_containers/syringe/medx = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		)
 	head = /obj/item/clothing/head/helmet/f13/khan
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 
@@ -315,8 +328,8 @@ Great Khan
 	name = "Enforcer"
 	suit_store = /obj/item/gun/ballistic/revolver/caravan_shotgun
 	backpack_contents = list(
-		/obj/item/storage/fancy/ammobox/lethalshot=1, \
-		/obj/item/storage/fancy/ammobox/beanbag=1, \
+		/obj/item/ammo_box/shotgun/buck=1, \
+		/obj/item/ammo_box/shotgun/bean=1, \
 		/obj/item/restraints/legcuffs/bola/tactical=1, \
 		/obj/item/restraints/handcuffs=2)
 
@@ -350,6 +363,19 @@ Raider
 
 	access = list()
 	minimal_access = list()
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13raider,
+			/datum/job/wasteland/f13pusher,
+		),
+		/datum/matchmaking_pref/outlaw = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+	)
 	loadout_options = list(
 	/datum/outfit/loadout/raider_supafly,
 	/datum/outfit/loadout/raider_yankee,
@@ -362,8 +388,10 @@ Raider
 	/datum/outfit/loadout/raider_vault,
 	/datum/outfit/loadout/raider_ncr,
 	/datum/outfit/loadout/raider_legion,
-	/datum/outfit/loadout/raider_tribal
+	/datum/outfit/loadout/raider_tribal,
+	/datum/outfit/loadout/raider_enclave
 	)
+
 
 /datum/outfit/job/wasteland/f13raider
 	name = "Outlaw"
@@ -375,9 +403,18 @@ Raider
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	r_hand = /obj/item/book/granter/trait/selection
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/restraints/handcuffs = 2,
+		/obj/item/melee/onehanded/club = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/storage/bag/money/small/raider = 1,
+		)
+
 
 /datum/outfit/job/wasteland/f13raider/pre_equip(mob/living/carbon/human/H)
-	..()
+	. = ..()
 	uniform = pick(
 		/obj/item/clothing/under/f13/merca, \
 		/obj/item/clothing/under/f13/mercc, \
@@ -411,24 +448,18 @@ Raider
 		/obj/item/clothing/head/helmet/f13/raider/yankee,\
 		/obj/item/clothing/head/helmet/f13/raider/psychotic,\
 		/obj/item/clothing/head/helmet/f13/fiend)
-	r_pocket = /obj/item/flashlight/flare
 	shoes = pick(
 			/obj/item/clothing/shoes/jackboots,\
 			/obj/item/clothing/shoes/f13/raidertreads)
-	gloves = /obj/item/clothing/gloves/f13/handwraps
-	backpack_contents = list(
-		/obj/item/restraints/handcuffs=2, \
-		/obj/item/claymore/machete/pipe=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
-		/obj/item/storage/bag/money/small/raider=1)
 
 	suit_store = pick(
 		/obj/item/gun/ballistic/revolver/detective, \
 		/obj/item/gun/ballistic/rifle/hunting, \
-		/obj/item/gun/ballistic/revolver/zipgun, \
-		/obj/item/gun/ballistic/revolver/pipe_rifle, \
+		/obj/item/gun/ballistic/automatic/hobo/zipgun, \
+		/obj/item/gun/ballistic/revolver/hobo/pepperbox, \
 		/obj/item/gun/ballistic/revolver/caravan_shotgun, \
 		/obj/item/gun/ballistic/revolver/single_shotgun)
+
 
 /datum/outfit/job/wasteland/f13raider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -443,11 +474,11 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider/supafly
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/autopipe=1,
-		/obj/item/ammo_box/magazine/autopipe=3,
-		/obj/item/kitchen/knife/combat=1,
-		/obj/item/storage/box/dice=1,
-		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1)
+		/obj/item/ammo_box/magazine/autopipe = 3,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/storage/box/dice = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
+		)
 
 /datum/outfit/loadout/raider_yankee
 	name = "Yankee"
@@ -467,8 +498,9 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/single_shotgun=1,
 		/obj/item/ammo_box/shotgun/bean,
-		/obj/item/kitchen/knife/butcher=1,
-		/obj/item/grenade/iedcasing=6)
+		/obj/item/melee/onehanded/knife/butcher = 1,
+		/obj/item/grenade/homemade/firebomb = 6,
+		)
 
 /datum/outfit/loadout/raider_sadist
 	name = "Sadist"
@@ -495,12 +527,12 @@ Raider
 	suit = /obj/item/clothing/suit/armor/f13/raider/painspike
 	head = /obj/item/clothing/head/helmet/f13/raider/psychotic
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/caravan_shotgun=1,
-		/obj/item/storage/fancy/ammobox/lethalshot=1,
-		/obj/item/storage/fancy/ammobox/beanbag=1,
-		/obj/item/claymore/machete/pipe/tireiron=1,
-		/obj/item/claymore/machete/pipe/pan=1,
-		/obj/item/grenade/chem_grenade/cleaner=1)
+		/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/ammo_box/shotgun/bean = 1,
+		/obj/item/melee/onehanded/club/tireiron = 1,
+		/obj/item/melee/onehanded/club/fryingpan = 1,
+		/obj/item/grenade/chem_grenade/cleaner = 1,
+		)
 
 
 /datum/outfit/loadout/raider_ncr
@@ -518,8 +550,9 @@ Raider
 	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
-		/obj/item/claymore/machete/gladius=1,
-		/obj/item/storage/backpack/spearquiver=1)
+		/obj/item/melee/onehanded/machete/gladius = 1,
+		/obj/item/storage/backpack/spearquiver = 1,
+		)
 
 /datum/outfit/loadout/raider_sheriff
 	name = "Desperado"
@@ -550,18 +583,31 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/widowmaker=1)
 
-/datum/outfit/loadout/raider_tribal 
+/datum/outfit/loadout/raider_tribal
 	name = "Tribal Outcast"
-	suit = 		/obj/item/clothing/suit/hooded/tribaloutcast
-	uniform = 	/obj/item/clothing/under/f13/exile/tribal
-	shoes = 	/obj/item/clothing/shoes/sandal
-	belt = 		/obj/item/storage/backpack/spearquiver
-	suit_store = /obj/item/claymore/machete/warclub
-	box = 		/obj/item/storage/survivalkit_tribal
-	id = 		/obj/item/card/id/outcasttattoo
+	uniform = /obj/item/clothing/under/f13/exile/tribal
+	suit = /obj/item/clothing/suit/hooded/tribaloutcast
+	suit_store = /obj/item/melee/onehanded/club/warclub
+	shoes = /obj/item/clothing/shoes/sandal
+	belt = /obj/item/storage/backpack/spearquiver
+	box = /obj/item/storage/survivalkit_tribal
+	id = /obj/item/card/id/outcasttattoo
+	back = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
-		/obj/item/clothing/mask/cigarette/pipe=1,
-		/obj/item/kitchen/knife/combat/bone=1)
+		/obj/item/clothing/mask/cigarette/pipe = 1,
+		/obj/item/melee/onehanded/knife/bone = 1,
+		)
+
+/datum/outfit/loadout/raider_enclave
+	name = "Enclave Remnant"
+	r_hand = /obj/item/storage/backpack/satchel/enclave
+	suit = /obj/item/clothing/suit/armor/f13/battlecoat/tan/armored // Tier 4 armor
+	uniform = /obj/item/clothing/under/f13/exile/enclave
+	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
+	id = /obj/item/card/id/rusted/brokenholodog/enclave
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
+		/obj/item/ammo_box/magazine/m45=2)
 
 
 /datum/job/wasteland/f13wastelander
@@ -570,14 +616,41 @@ Raider
 	faction = "Wastelander"
 	total_positions = -1
 	spawn_positions = -1
-	description = "You travelled far to arrive at the ruined town of Pahrump, a bleak paradise far from the troubles of the Mojave Conflict - protected by Red Rock Canyon to the east, free of the many factions vying for control over Nevada. Here in Pahrump, your story and fate is your own."
-	supervisors = "no one"
+	description = "You arrive in Yuma Valley, hoping to escape your past, the war, or perhaps something worse. But you’ve seen the torchlight and heard the bark of the military officers. You haven’t escaped anything. Try to survive, establish your own settlement, make your own legend. Suffer well and die gladly."
+	supervisors = "God"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
 	minimal_access = list()
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13mobboss,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/bounty_hunter = list(
+			/datum/job/wasteland/f13raider,
+		),
+	)
 	loadout_options = list(
 	/datum/outfit/loadout/vault_refugee,
 	/datum/outfit/loadout/salvager,
@@ -585,7 +658,8 @@ Raider
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/scavenger,
 	/datum/outfit/loadout/citizen,
-	/datum/outfit/loadout/ncrcitizen)
+	/datum/outfit/loadout/ncrcitizen,
+	/datum/outfit/loadout/wastelander_desert_ranger)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -594,40 +668,34 @@ Raider
 	id = null
 	ears = null
 	belt = null
+	r_hand = /obj/item/book/granter/trait/selection
+	l_pocket = /obj/item/reagent_containers/food/drinks/flask
+	r_pocket = /obj/item/flashlight/flare
+	belt = /obj/item/melee/onehanded/knife/survival
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak,
+		/obj/item/reagent_containers/pill/radx,
+		/obj/item/storage/bag/money/small/wastelander,
+		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
-	r_hand = /obj/item/book/granter/trait/selection
 	uniform = pick(
 		/obj/item/clothing/under/f13/settler, \
 		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/machinist, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
 	suit = pick(
 		/obj/item/clothing/suit/armor/f13/kit, \
 		/obj/item/clothing/suit/f13/veteran, \
-		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer, \
-		/obj/item/clothing/suit/armor/f13/leatherarmor)
-	l_pocket = 	/obj/item/reagent_containers/food/drinks/flask
-	r_pocket = /obj/item/flashlight/flare
-	belt = 	/obj/item/kitchen/knife/combat/survival
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
-		/obj/item/reagent_containers/pill/radx=1, \
-		/obj/item/storage/bag/money/small/wastelander, \
-		/obj/item/kitchen/knife)
-	suit_store = pick(
-	/obj/item/gun/ballistic/revolver/detective, \
-	/obj/item/gun/ballistic/rifle/hunting, \
-	/obj/item/gun/ballistic/revolver/zipgun, \
-	/obj/item/gun/ballistic/revolver/pipe_rifle)
+		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
-	suit = /obj/item/clothing/suit/apron
+	uniform = /obj/item/clothing/under/f13/machinist
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	head = /obj/item/clothing/head/welding
@@ -700,7 +768,8 @@ Raider
 	glasses = /obj/item/clothing/glasses/welding
 	l_hand = /obj/item/shield/riot/buckler
 	backpack_contents = list(
-		/obj/item/claymore/machete/spatha=1)
+		/obj/item/melee/onehanded/machete/spatha = 1,
+		)
 
 /datum/outfit/loadout/ncrcitizen
 	name = "NCR Citizen"
@@ -708,10 +777,21 @@ Raider
 	shoes = /obj/item/clothing/shoes/f13/tan
 	head = /obj/item/clothing/head/f13/cowboy
 	gloves = /obj/item/clothing/gloves/color/brown
-	l_hand = /obj/item/gun/ballistic/automatic/varmint
+	l_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=2)
 
+/datum/outfit/loadout/wastelander_desert_ranger
+	name = "Desert Ranger Scout"
+	uniform = /obj/item/clothing/under/f13/desert_ranger_scout
+	shoes = /obj/item/clothing/shoes/f13/cowboy
+	head = /obj/item/clothing/head/f13/cowboy
+	gloves = /obj/item/clothing/gloves/color/brown
+	l_hand = /obj/item/gun/ballistic/revolver/colt357
+	backpack_contents = list(
+		/obj/item/ammo_box/a357=2,
+		/obj/item/binoculars=1,
+		/obj/item/radio=1)
 
 /datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
@@ -725,18 +805,17 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 600
 	exp_type = EXP_TYPE_OUTLAW
-	
+
 	outfit = /datum/outfit/job/wasteland/f13enforcer
 
 	access = list(ACCESS_DEN)
 	minimal_access = list(ACCESS_DEN)
 
 	loadout_options = list(
-							/datum/outfit/loadout/mrwhite,
-							/datum/outfit/loadout/hitman,
-							/datum/outfit/loadout/bodyguard)
-
-					
+		/datum/outfit/loadout/mrwhite,
+		/datum/outfit/loadout/hitman,
+		/datum/outfit/loadout/bodyguard,
+		)
 
 
 /datum/outfit/job/wasteland/f13enforcer
@@ -747,7 +826,7 @@ Raider
 	belt = /obj/item/storage/belt/military/assault
 	shoes = /obj/item/clothing/shoes/laceup
 	ears = /obj/item/radio/headset/headset_den
-	l_pocket = /obj/item/switchblade
+	l_pocket = /obj/item/melee/onehanded/knife/switchblade
 	r_pocket = /obj/item/flashlight/seclite
 	uniform = /obj/item/clothing/under/suit/white
 	backpack =	/obj/item/storage/backpack/satchel
@@ -800,11 +879,11 @@ Raider
 	r_hand = /obj/item/gun/ballistic/shotgun/police
 	suit = /obj/item/clothing/suit/armor/vest
 	backpack_contents = list(
-						/obj/item/ammo_box/shotgun/buck=2, \
-						/obj/item/kitchen/knife/combat=1
-							)
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		)
 
-							
+
 
 
 /datum/job/wasteland/f13mobboss
@@ -819,11 +898,22 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 1000
 	exp_type = EXP_TYPE_OUTLAW
-	
+
 	outfit = /datum/outfit/job/wasteland/f13mobboss
 
 	access = list(ACCESS_DEN)
 	minimal_access = list(ACCESS_DEN)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis/f13mayor,
+			/datum/job/oasis/f13sheriff,
+			/datum/job/wasteland/f13detective,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+	)
+
 
 /datum/outfit/job/wasteland/f13mobboss
 	name = "Den Mob Boss"
@@ -833,7 +923,7 @@ Raider
 	belt = /obj/item/storage/belt/military/assault
 	ears = /obj/item/radio/headset/headset_den
 	shoes = /obj/item/clothing/shoes/laceup
-	l_pocket = /obj/item/switchblade
+	l_pocket = /obj/item/melee/onehanded/knife/switchblade
 	r_pocket = /obj/item/flashlight/seclite
 	uniform = /obj/item/clothing/under/suit/white
 	suit = /obj/item/clothing/suit/armor/f13/combat/swat
@@ -847,7 +937,7 @@ Raider
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/ammo_box/magazine/m10mm_p90=2, \
-		/obj/item/storage/bag/money/small/raider/mobboss)	
+		/obj/item/storage/bag/money/small/raider/mobboss)
 
 /datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -865,7 +955,7 @@ Raider
 		GLOB.all_gangs |= DM
 		DM.add_member(H)
 		H.gang = DM
-	
+
 //vigilante
 
 
@@ -873,13 +963,13 @@ Raider
 	title = "Vigilante"
 	flag = F13VIGILANTE
 	faction = "Wastelander"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You have come a long way to reach this god forsaken place... it is now your job to protect its inhabitants from all sorts of injustice. Your moral codex requires you to help anyone in need and to never harm an innocent. Always try to capture and reeducate criminals instead of killing. Do not get involved in the conflicts between the major factions, that is not your fight."
 	supervisors = "your moral code"
 	selection_color = "#76885f"
 	exp_requirements = 3000
-	exp_type = EXP_TYPE_OUTLAW
+	exp_type = EXP_TYPE_FALLOUT
 
 	outfit = /datum/outfit/job/wasteland/f13vigilante
 
@@ -887,7 +977,7 @@ Raider
 							/datum/outfit/loadout/desert_ranger,
 							/datum/outfit/loadout/bounty_hunter,
 							/datum/outfit/loadout/retired_ranger)
-		
+
 
 /datum/outfit/job/wasteland/f13vigilante
 	name = "Vigilante"
@@ -896,7 +986,7 @@ Raider
 	id = /obj/item/card/id/dogtag/vigilante
 	belt = /obj/item/storage/belt/military
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	l_pocket = /obj/item/kitchen/knife/combat
+	l_pocket = /obj/item/melee/onehanded/knife/hunting
 	r_pocket = /obj/item/flashlight/seclite
 	uniform = /obj/item/clothing/under/f13/merca
 	backpack = /obj/item/storage/backpack/satchel/trekker
@@ -927,7 +1017,7 @@ Raider
 	name = "Bounty Hunter"
 	head = /obj/item/clothing/suit/armor/f13/combat/mk2/dark
 	suit = /obj/item/clothing/head/helmet/f13/combat/mk2/dark
-	r_hand = /obj/item/gun/ballistic/automatic/g11/upgraded
+	r_hand = /obj/item/gun/ballistic/automatic/g11
 	backpack_contents = list(
 							/obj/item/ammo_box/magazine/m473=2
 							)
@@ -957,7 +1047,7 @@ Raider
 	id = /obj/item/card/id/dogtag/vigilante
 	belt = /obj/item/storage/belt/military
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	l_pocket = /obj/item/kitchen/knife/combat
+	l_pocket = /obj/item/melee/onehanded/knife/hunting
 	r_pocket = /obj/item/flashlight/seclite
 	uniform = /obj/item/clothing/under/f13/merca
 	backpack = /obj/item/storage/backpack/satchel/trekker

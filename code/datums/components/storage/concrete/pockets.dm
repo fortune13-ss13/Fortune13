@@ -12,7 +12,7 @@
 		else
 			to_chat(user, "<span class='notice'>You discreetly slip [I] into [parent].</span>")
 
-/datum/component/storage/concrete/pockets
+/datum/component/storage/concrete/pockets/huge
 	max_w_class = WEIGHT_CLASS_NORMAL
 
 /datum/component/storage/concrete/pockets/small
@@ -52,11 +52,11 @@
 	. = ..()
 	cant_hold = typecacheof(list(/obj/item/screwdriver/power))
 	can_hold = typecacheof(list(
-		/obj/item/kitchen/knife, /obj/item/switchblade, /obj/item/pen, /obj/item/melee/cultblade/dagger,
+		/obj/item/melee/onehanded/knife, /obj/item/pen, 
 		/obj/item/scalpel, /obj/item/reagent_containers/syringe, /obj/item/dnainjector,
 		/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/dropper,
 		/obj/item/implanter, /obj/item/screwdriver, /obj/item/weldingtool/mini,
-		/obj/item/firing_pin, /*/obj/item/throwing_star/throwingknife,*/ /obj/item/gun/ballistic/revolver/detective,
+		/obj/item/firing_pin, /*/obj/item/throwing_star/throwingknife, obj/item/melee/cultblade/dagger,*/ /obj/item/gun/ballistic/revolver/detective,
 		/obj/item/gun/ballistic/revolver/police, /obj/item/gun/ballistic/revolver/needler
 		))
 

@@ -22,7 +22,7 @@
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 20
 	gold_core_spawnable = HOSTILE_SPAWN
-	faction = list("ghoul")
+	faction = list("hostile")
 	decompose = TRUE
 	sharpness = SHARP_EDGED //They need to cut their finger nails
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
@@ -136,6 +136,14 @@
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+
+/mob/living/simple_animal/hostile/ghoul/glowing/strong // FEV mutation
+	maxHealth = 320
+	health = 320
+	speed = 1.4 // Nyooom
+	melee_damage_lower = 35
+	melee_damage_upper = 35
+	armour_penetration = 0.1
 
 /mob/living/simple_animal/hostile/ghoul/soldier
 	name = "ghoul soldier"

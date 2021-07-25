@@ -99,7 +99,6 @@
 	new /obj/item/screwdriver/brass(src)
 	new /obj/item/wirecutters/brass(src)
 	new /obj/item/wrench/brass(src)
-	new /obj/item/crowbar/brass(src)
 	new /obj/item/weldingtool/experimental/brass(src)
 	new /obj/item/multitool/advanced/brass(src)
 	new /obj/item/stack/cable_coil(src, 30, "yellow")
@@ -199,7 +198,7 @@
 		/obj/item/ammo_casing/shotgun,
 		/obj/item/ammo_box,
 		/obj/item/reagent_containers/food/snacks/donut,
-		/obj/item/kitchen/knife/combat,
+		/obj/item/melee/onehanded/knife/hunting,
 		/obj/item/flashlight/seclite,
 		/obj/item/melee/classic_baton/telescopic,
 		/obj/item/radio,
@@ -414,7 +413,7 @@
 	new /obj/item/reagent_containers/spray/pepper(src)
 	new /obj/item/restraints/handcuffs(src)
 	new /obj/item/melee/classic_baton(src)
-	new /obj/item/kitchen/knife/combat(src)
+	new /obj/item/melee/onehanded/knife/hunting(src)
 	new /obj/item/ammo_box/magazine/m9mmds(src)
 	update_icon()
 
@@ -453,7 +452,6 @@
 		/obj/item/lightreplacer,
 		/obj/item/rcd_ammo,
 		/obj/item/construction,
-		/obj/item/pipe_dispenser,
 		/obj/item/stack/rods,
 		/obj/item/stack/tile/plasteel,
 		/obj/item/grenade/chem_grenade/metalfoam,
@@ -860,6 +858,7 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 7
 
+//Regular Quiver
 /obj/item/storage/belt/tribe_quiver
 	name = "tribal quiver"
 	desc = "A simple leather quiver designed for holding arrows."
@@ -885,6 +884,53 @@
 	new /obj/item/ammo_casing/caseless/arrow(src)
 
 /obj/item/storage/belt/tribe_quiver/AltClick(mob/living/carbon/user)
+	. = ..()
+	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	if(!length(user.get_empty_held_indexes()))
+		to_chat(user, "<span class='warning'>Your hands are full!</span>")
+		return
+	var/obj/item/ammo_casing/caseless/arrow/L = locate() in contents
+	if(L)
+		SEND_SIGNAL(src, COMSIG_TRY_STORAGE_TAKE, L, user)
+		user.put_in_hands(L)
+		to_chat(user, "<span class='notice'>You take \a [L] out of the quiver.</span>")
+		return TRUE
+	var/obj/item/ammo_casing/caseless/W = locate() in contents
+	if(W && contents.len > 0)
+		SEND_SIGNAL(src, COMSIG_TRY_STORAGE_TAKE, W, user)
+		user.put_in_hands(W)
+		to_chat(user, "<span class='notice'>You take \a [W] out of the quiver.</span>")
+	else
+		to_chat(user, "<span class='notice'>There is nothing left in the quiver.</span>")
+	return TRUE
+
+//Bone Arrow Quiver
+/obj/item/storage/belt/tribe_quiver/bone
+	name = "hunters quiver"
+	desc = "A simple leather quiver designed for holding arrows, this one seems to hold deadlier arrows for hunting."
+	icon_state = "tribal_quiver"
+	item_state = "tribal_quiver"
+
+/obj/item/storage/belt/tribe_quiver/bone/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 8
+	STR.can_hold = typecacheof(list(/obj/item/ammo_casing/caseless/arrow))
+	STR.max_w_class = 3
+	STR.max_combined_w_class = 24
+
+/obj/item/storage/belt/tribe_quiver/bone/PopulateContents()
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+	new /obj/item/ammo_casing/caseless/arrow/bone(src)
+
+/obj/item/storage/belt/tribe_quiver/bone/AltClick(mob/living/carbon/user)
 	. = ..()
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return

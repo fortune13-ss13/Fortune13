@@ -1,11 +1,11 @@
 //This is the lowest supported version, anything below this is completely obsolete and the entire savefile will be wiped.
-#define SAVEFILE_VERSION_MIN	18
+#define SAVEFILE_VERSION_MIN	37
 
 //This is the current version, anything below this will attempt to update (if it's not obsolete)
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	37
+#define SAVEFILE_VERSION_MAX	38
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -41,139 +41,17 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 //This only really meant to avoid annoying frequent players
 //if your savefile is 3 months out of date, then 'tough shit'.
 
+
 /datum/preferences/proc/update_preferences(current_version, savefile/S)
 	if(current_version < 37)	//If you remove this, remove force_reset_keybindings() too.
 		force_reset_keybindings_direct(TRUE)
 		addtimer(CALLBACK(src, .proc/force_reset_keybindings), 30)	//No mob available when this is run, timer allows user choice.
 
+
 /datum/preferences/proc/update_character(current_version, savefile/S)
-	if(current_version < 19)
-		pda_style = "mono"
-	if(current_version < 20)
-		pda_color = "#808000"
-	if((current_version < 21) && features["meat_type"] && (features["meat_type"] == null))
-		features["meat_type"] = "Mammalian"
-	if(current_version < 22)
+	if(current_version < 38)
+		UI_style = GLOB.available_ui_styles[1] // Force the Fallout UI once.
 
-		job_preferences = list() //It loaded null from nonexistant savefile field.
-
-		var/job_civilian_high = 0
-		var/job_civilian_med = 0
-		var/job_civilian_low = 0
-
-		var/job_medsci_high = 0
-		var/job_medsci_med = 0
-		var/job_medsci_low = 0
-
-		var/job_engsec_high = 0
-		var/job_engsec_med = 0
-		var/job_engsec_low = 0
-
-		S["job_civilian_high"]	>> job_civilian_high
-		S["job_civilian_med"]	>> job_civilian_med
-		S["job_civilian_low"]	>> job_civilian_low
-		S["job_medsci_high"]	>> job_medsci_high
-		S["job_medsci_med"]		>> job_medsci_med
-		S["job_medsci_low"]		>> job_medsci_low
-		S["job_engsec_high"]	>> job_engsec_high
-		S["job_engsec_med"]		>> job_engsec_med
-		S["job_engsec_low"]		>> job_engsec_low
-
-		//Can't use SSjob here since this happens right away on login
-		for(var/job in subtypesof(/datum/job))
-			var/datum/job/J = job
-			var/new_value
-			var/fval = initial(J.flag)
-			switch(initial(J.department_flag))
-				if(CIVILIAN)
-					if(job_civilian_high & fval)
-						new_value = JP_HIGH
-					else if(job_civilian_med & fval)
-						new_value = JP_MEDIUM
-					else if(job_civilian_low & fval)
-						new_value = JP_LOW
-				if(MEDSCI)
-					if(job_medsci_high & fval)
-						new_value = JP_HIGH
-					else if(job_medsci_med & fval)
-						new_value = JP_MEDIUM
-					else if(job_medsci_low & fval)
-						new_value = JP_LOW
-				if(ENGSEC)
-					if(job_engsec_high & fval)
-						new_value = JP_HIGH
-					else if(job_engsec_med & fval)
-						new_value = JP_MEDIUM
-					else if(job_engsec_low & fval)
-						new_value = JP_LOW
-			if(new_value)
-				job_preferences["[initial(J.title)]"] = new_value
-	else if(current_version < 23) // we are fixing a gamebreaking bug.
-		job_preferences = list() //It loaded null from nonexistant savefile field.
-
-	if(current_version < 25)
-		var/digi
-		S["feature_lizard_legs"] >> digi
-		if(digi == "Digitigrade Legs")
-			WRITE_FILE(S["feature_lizard_legs"], "Digitigrade")
-
-		for(var/V in all_quirks) // quirk migration
-			switch(V)
-				if("Acute hepatic pharmacokinesis")
-					DISABLE_BITFIELD(cit_toggles, PENIS_ENLARGEMENT)
-					DISABLE_BITFIELD(cit_toggles, BREAST_ENLARGEMENT)
-					ENABLE_BITFIELD(cit_toggles,FORCED_FEM)
-					ENABLE_BITFIELD(cit_toggles,FORCED_MASC)
-					all_quirks -= V
-				if("Crocin Immunity")
-					ENABLE_BITFIELD(cit_toggles,NO_APHRO)
-					all_quirks -= V
-				if("Buns of Steel")
-					ENABLE_BITFIELD(cit_toggles,NO_ASS_SLAP)
-					all_quirks -= V
-
-		if(features["meat_type"] == "Inesct")
-			features["meat_type"] = "Insect"
-
-	if(current_version < 27)
-		var/tennis
-		S["feature_balls_shape"] >> tennis
-		if(tennis == "Hidden")
-			features["balls_visibility"] = GEN_VISIBLE_NEVER
-
-	if(current_version < 28)
-		var/hockey
-		S["feature_cock_shape"] >> hockey
-		var/list/malformed_hockeys = list("Taur, Flared" = "Flared", "Taur, Knotted" = "Knotted", "Taur, Tapered" = "Tapered")
-		if(malformed_hockeys[hockey])
-			features["cock_shape"] = malformed_hockeys[hockey]
-			features["cock_taur"] = TRUE
-
-	if(current_version < 30)
-		switch(features["taur"])
-			if("Husky", "Lab", "Shepherd", "Fox", "Wolf")
-				features["taur"] = "Canine"
-			if("Panther", "Tiger")
-				features["taur"] = "Feline"
-			if("Cow")
-				features["taur"] = "Cow (Spotted)"
-
-	if(current_version < 31)
-		S["wing_color"]			>> features["wings_color"]
-		S["horn_color"]			>> features["horns_color"]
-
-	if(current_version < 33)
-		features["flavor_text"] = html_encode(features["flavor_text"])
-		features["silicon_flavor_text"] = html_encode(features["silicon_flavor_text"])
-		features["ooc_notes"] = html_encode(features["ooc_notes"])
-
-	if(current_version < 35)
-		if(S["species"] == "lizard")
-			features["mam_snouts"] = features["snout"]
-
-	if(current_version < 36)
-		left_eye_color = S["eye_color"]
-		right_eye_color = S["eye_color"]
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
@@ -213,7 +91,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["hotkeys"]			>> hotkeys
 	S["chat_on_map"]		>> chat_on_map
 	S["max_chat_length"]	>> max_chat_length
-	S["see_chat_non_mob"] 	>> see_chat_non_mob
+	S["see_chat_non_mob"]	>> see_chat_non_mob
+	READ_FILE(S["see_rc_emotes"] , see_rc_emotes)
 	S["tgui_fancy"]			>> tgui_fancy
 	S["tgui_lock"]			>> tgui_lock
 	S["buttons_locked"]		>> buttons_locked
@@ -256,6 +135,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["damagescreenshake"]	>> damagescreenshake
 	S["widescreenpref"]		>> widescreenpref
 	S["end_of_round_deathmatch"] >> end_of_round_deathmatch
+	READ_FILE(S["matchmaking_prefs"], matchmaking_prefs)
 	S["autostand"]			>> autostand
 	S["cit_toggles"]		>> cit_toggles
 	S["preferred_chaos"]	>> preferred_chaos
@@ -281,6 +161,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	chat_on_map		= sanitize_integer(chat_on_map, 0, 1, initial(chat_on_map))
 	max_chat_length = sanitize_integer(max_chat_length, 1, CHAT_MESSAGE_MAX_LENGTH, initial(max_chat_length))
 	see_chat_non_mob	= sanitize_integer(see_chat_non_mob, 0, 1, initial(see_chat_non_mob))
+	see_rc_emotes = sanitize_integer(see_rc_emotes, FALSE, TRUE, initial(see_rc_emotes))
 	tgui_fancy		= sanitize_integer(tgui_fancy, 0, 1, initial(tgui_fancy))
 	tgui_lock		= sanitize_integer(tgui_lock, 0, 1, initial(tgui_lock))
 	buttons_locked	= sanitize_integer(buttons_locked, 0, 1, initial(buttons_locked))
@@ -305,7 +186,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	screenshake			= sanitize_integer(screenshake, 0, 800, initial(screenshake))
 	damagescreenshake	= sanitize_integer(damagescreenshake, 0, 2, initial(damagescreenshake))
 	widescreenpref		= sanitize_integer(widescreenpref, 0, 1, initial(widescreenpref))
-	end_of_round_deathmatch = sanitize_integer(end_of_round_deathmatch, 0, 1, initial(end_of_round_deathmatch))
+	end_of_round_deathmatch = sanitize_integer(end_of_round_deathmatch, FALSE, TRUE, initial(end_of_round_deathmatch))
 	autostand			= sanitize_integer(autostand, 0, 1, initial(autostand))
 	cit_toggles			= sanitize_integer(cit_toggles, 0, 16777215, initial(cit_toggles))
 	auto_ooc			= sanitize_integer(auto_ooc, 0, 1, initial(auto_ooc))
@@ -376,6 +257,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["chat_on_map"], chat_on_map)
 	WRITE_FILE(S["max_chat_length"], max_chat_length)
 	WRITE_FILE(S["see_chat_non_mob"], see_chat_non_mob)
+	WRITE_FILE(S["see_rc_emotes"], see_rc_emotes)
 	WRITE_FILE(S["tgui_fancy"], tgui_fancy)
 	WRITE_FILE(S["tgui_lock"], tgui_lock)
 	WRITE_FILE(S["buttons_locked"], buttons_locked)
@@ -468,7 +350,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Character
 	S["real_name"]				>> real_name
-	S["nameless"]				>> nameless
 	S["custom_species"]			>> custom_species
 	S["name_is_always_random"]	>> be_random_name
 	S["body_is_always_random"]	>> be_random_body
@@ -627,6 +508,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["special_a"]			>> special_a
 	S["special_l"]			>> special_l
 
+	READ_FILE(S["matchmaking_prefs"], matchmaking_prefs)
+
 	//try to fix any outdated data if necessary
 	//preference updating will handle saving the updated data for us.
 	if(needs_update >= 0)
@@ -646,7 +529,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		if(!custom_names[custom_name_id])
 			custom_names[custom_name_id] = get_default_name(custom_name_id)
 
-	nameless		= sanitize_integer(nameless, 0, 1, initial(nameless))
 	be_random_name	= sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body	= sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
 
@@ -763,6 +645,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	all_quirks = SANITIZE_LIST(all_quirks)
 
+	matchmaking_prefs = sanitize_matchmaking_prefs(matchmaking_prefs)
+
 	cit_character_pref_load(S)
 
 	return 1
@@ -784,7 +668,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Character
 	WRITE_FILE(S["real_name"]				, real_name)
-	WRITE_FILE(S["nameless"]				, nameless)
 	WRITE_FILE(S["custom_species"]			, custom_species)
 	WRITE_FILE(S["name_is_always_random"]	, be_random_name)
 	WRITE_FILE(S["body_is_always_random"]	, be_random_body)
@@ -907,6 +790,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		S["loadout"] << text_to_save
 	else
 		S["loadout"] << "" //empty string to reset the value
+
+	WRITE_FILE(S["matchmaking_prefs"], matchmaking_prefs)
 
 	cit_character_pref_save(S)
 

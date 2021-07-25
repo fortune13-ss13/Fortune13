@@ -24,6 +24,16 @@
 	start_empty = 1
 
 //9mm
+/obj/item/ammo_box/magazine/zipgun
+	name = "Zip gun clip (9mm)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "zip"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 5
+	multiple_sprites = 2
+
+//9mm
 /obj/item/ammo_box/magazine/m9mm
 	name = "9mm pistol magazine (9mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -70,6 +80,7 @@
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 12
 	multiple_sprites = 2
+	caliber = "10mm"
 
 /obj/item/ammo_box/magazine/m10mm_adv/empty
 	start_empty = 1
@@ -142,19 +153,20 @@
 	..()
 	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
 
-/obj/item/ammo_box/magazine/m44
+/obj/item/ammo_box/magazine/automag
 	name = "automag magazine (.44 magnum)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "magnum"
+	ammo_type = /obj/item/ammo_casing/m44
 	max_ammo = 7
-
+	multiple_sprites = 2
 
 //14mm
 /obj/item/ammo_box/magazine/m14mm
 	name = "handgun magazine (14mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50ae"
-	ammo_type = /obj/item/ammo_casing/a127mm
+	ammo_type = /obj/item/ammo_casing/p14mm
 	caliber = "14"
 	max_ammo = 7
 	multiple_sprites = 2
