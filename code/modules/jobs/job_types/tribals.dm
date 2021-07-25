@@ -442,6 +442,7 @@ Hunter
 		/obj/item/binoculars = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1
+		/obj/item/twohanded/spear/bonespear/deathclaw = 1,
 		)
 
 /*
