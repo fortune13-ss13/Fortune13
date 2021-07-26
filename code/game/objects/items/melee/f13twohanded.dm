@@ -30,7 +30,7 @@
 //////////			-bonus damage to grill/window
 
 
-// Fire Axe			Keywords: Damage 25/50, Bonus vs inanimate
+// Fire Axe			Keywords: Damage 25/45, Bonus vs inanimate
 /obj/item/twohanded/fireaxe
 	name = "fire axe"
 	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel."
@@ -51,7 +51,7 @@
 /obj/item/twohanded/fireaxe/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound) //axes are not known for being precision butchering tools
-	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=50, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=45, icon_wielded="[icon_prefix]2")
 
 /obj/item/twohanded/fireaxe/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -82,13 +82,13 @@
 	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=40, icon_wielded="[icon_prefix]2")
 
 
-// Bumper Sword		Keywords: Damage 25/50, Bonus vs inanimate
+// Bumper Sword		Keywords: Damage 25/45, Bonus vs inanimate
 /obj/item/twohanded/fireaxe/bmprsword
 	name = "bumper sword"
 	desc = "It was too big to be called a sword. Massive, thick, heavy, and far too rough. Indeed, it was more like a heap of raw iron."
 	icon_prefix = "bumper"
 	icon_state = "bumper"
-	wound_bonus = 5
+	wound_bonus = null
 	sharpness = SHARP_NONE
 	resistance_flags = null
 
@@ -98,8 +98,7 @@
 // SPEARS //
 ////////////		- Reach
 
-
-// Metal Spear		Keywords: Damage 10/30, Armor-piercing +0.1, Reach
+// Metal Spear		Keywords: Damage 10/30, Reach
 /obj/item/twohanded/spear 
 	name = "spear"
 	desc = "A simple spear with a metal head and wooden shaft."
@@ -110,7 +109,6 @@
 	throwforce = 30
 	throw_speed = 4
 	embedding = list("embed_chance" = 0)
-	armour_penetration = 0.1
 	max_reach = 2
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "impaled", "jabbed", "torn", "gored")
@@ -199,7 +197,7 @@
 	update_icon()
 
 
-// Lance		Keywords: LEGION, Damage 25/40, Armor-piercing +0.1, Reach		
+// Lance		Keywords: LEGION, Damage 25/40, Reach		
 /obj/item/twohanded/spear/lance
 	name = "legion lance"
 	desc = "A long spear made in the Legions war foundries. Useful for fighting tribals and hunting when ammunition is scarce."
@@ -211,7 +209,7 @@
 	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=40, icon_wielded="[icon_prefix]2")
 
 
-// Scrap spear		Keywords: Damage 15/27, Armor-piercing +0.1, Reach
+// Scrap spear		Keywords: Damage 17/28, Reach
 /obj/item/twohanded/spear/scrapspear
 	name = "scrap spear"
 	desc = "Made from two rods, a glass shard and some duct tape. For the modern tribal or the truly desperate."
@@ -220,10 +218,10 @@
 
 /obj/item/twohanded/spear/scrapspear/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=15, force_wielded=27, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=17, force_wielded=28, icon_wielded="[icon_prefix]2")
 
 
-// Bone Spear		Keywords: TRIBAL, Damage 15/30, Armor-piercing +0.25, Reach
+// Bone Spear		Keywords: TRIBAL, Damage 18/30, Armor-piercing +0.2, Reach
 /obj/item/twohanded/spear/bonespear
 	name = "bone spear"
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
@@ -233,7 +231,7 @@
 	force = 15
 	throwforce = 25
 	throw_speed = 4
-	armour_penetration = 0.25
+	armour_penetration = 0.2
 	max_reach = 2
 	embedding = list("embedded_impact_pain_multiplier" = 3)
 	custom_materials = null
@@ -242,7 +240,7 @@
 
 /obj/item/twohanded/spear/bonespear/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=15, force_wielded=30, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=18, force_wielded=30, icon_wielded="[icon_prefix]2")
 
 
 // Deathclaw Spear		Keywords: TRIBAL, Damage 20/45, Armor-piercing +0.3, Reach
@@ -353,6 +351,7 @@
 	desc = "A heavy sledgehammer that lost most of its use besides caving in heads."
 	icon_state = "hammer-sledge"
 	icon_prefix = "hammer-sledge"
+	attack_speed = CLICK_CD_MELEE * 1.2
 	force = 25
 	throwforce = 30
 	slot_flags = ITEM_SLOT_BACK
@@ -400,7 +399,6 @@
 	throwforce = 20
 	throw_speed = 2
 	throw_range = 4
-//	custom_materials = list(MAT_METAL=13000)
 	attack_verb = list("burned", "welded", "cauterized", "melted", "charred")
 	hitsound = "swing_hit"
 	actions_types = list(/datum/action/item_action/toggle_lance)
