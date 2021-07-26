@@ -1,11 +1,11 @@
-// In this document: Axes, Spears, Heavy clubs
-
+// In this document: Axes, Spears, Heavy clubs, Sledgehammers, Advanced twohanded weapons
 
 /obj/item/twohanded // Two handed template. Slower melee speed than onehanders.
-	w_class = WEIGHT_CLASS_BULKY
 	icon = 'icons/fallout/objects/melee/melee.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
+	attack_speed = CLICK_CD_MELEE * 1.1
+	w_class = WEIGHT_CLASS_BULKY
 	var/icon_prefix = null
 	var/wielded = FALSE
 
@@ -574,6 +574,78 @@ obj/item/twohanded/sledgehammer/supersledge/ComponentInitialize()
 			user.dropItemToGround(src, TRUE)
 			user.Knockdown(50)
 		return
+
+// Chainsaw				Keywords: Damage 13/57, Wound bonus, Tool saw-off
+/obj/item/twohanded/chainsaw
+	name = "chainsaw"
+	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
+	icon_state = "chainsaw"
+	item_state = "chainsaw"
+	icon_prefix = "chainsaw"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = null
+	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
+	force = 7
+	wound_bonus = 25
+	throw_speed = 2
+	throw_range = 2
+	throwforce = 10
+	toolspeed = 0.5
+	tool_behaviour = TOOL_SAW
+	sharpness = SHARP_EDGED
+	resistance_flags = FIRE_PROOF
+	hitsound = 'sound/weapons/chainsawhit.ogg'
+	var/on_icon_state = "chainsaw_on"
+	var/off_icon_state = "chainsaw"
+	var/on_item_state = "chainsaw_on"
+	var/off_item_state = "chainsaw"
+	var/weight_class_on = WEIGHT_CLASS_HUGE
+	var/on = FALSE
+	var/force_on = 57
+	var/force_off = 7
+	var/description_on = "<span class ='warning'>You pull the cord, starting up the chainsaw with a roar and letting the blades spin up.</span>"
+	var/description_off = "<span class ='notice'>You press the off button, stopping the noise and the carnage.</span>"
+	var/on_sound = 'sound/weapons/chainsawhit.ogg'
+
+/obj/item/twohanded/chainsaw/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/butchering, 30, 100, 0, 'sound/weapons/chainsawhit.ogg', TRUE)
+	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
+	update_icon()
+
+/obj/item/twohanded/chainsaw/attack_self(mob/user)
+	on = !on
+	if(on)
+		to_chat(user, description_on)
+		icon_state = on_icon_state
+		item_state = on_item_state
+		w_class = weight_class_on
+		force = force_on
+		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
+		playsound(loc, on_sound, 50, TRUE)
+	else
+		to_chat(user, description_off)
+		icon_state = off_icon_state
+		item_state = off_item_state
+		w_class = WEIGHT_CLASS_BULKY
+		force = force_off
+		attack_verb = list("poked", "scraped")
+	add_fingerprint(user)
+
+/obj/item/twohanded/chainsaw/suicide_act(mob/living/carbon/user)
+	if(on)
+		user.visible_message("<span class='suicide'>[user] begins to tear [user.p_their()] head off with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		playsound(src, 'sound/weapons/chainsawhit.ogg', 100, 1)
+		var/obj/item/bodypart/head/myhead = user.get_bodypart(BODY_ZONE_HEAD)
+		if(myhead)
+			myhead.dismember()
+	else
+		user.visible_message("<span class='suicide'>[user] smashes [src] into [user.p_their()] neck, destroying [user.p_their()] esophagus! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		playsound(src, 'sound/weapons/genhit1.ogg', 100, 1)
+	return(BRUTELOSS)
 
 /*
 CODE ARCHIVE 
