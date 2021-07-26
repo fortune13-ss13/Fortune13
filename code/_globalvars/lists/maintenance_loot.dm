@@ -337,7 +337,7 @@ GLOBAL_LIST_INIT(loot_prewar_costume, list(
 	/obj/item/clothing/under/pirate,
 	/obj/item/clothing/suit/pirate,
 	/obj/item/clothing/under/costume/cheongsam,
-	/obj/item/clothing/under/costume/qipao/red
+	/obj/item/clothing/under/costume/qipao/red,
 ))
 
 GLOBAL_LIST_INIT(loot_t1_armor, list(
