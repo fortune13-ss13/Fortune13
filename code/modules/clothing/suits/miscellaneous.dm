@@ -968,7 +968,7 @@
 
 /obj/item/clothing/suit/flakjack
 	name = "flak jacket"
-	desc = "(I) A dilapidated jacket made of ballistic nylon. Smells faintly of napalm."
+	desc = "(II) A dilapidated jacket made of ballistic nylon. Smells faintly of napalm."
 	icon_state = "flakjack"
 	item_state = "redtag"
 	blood_overlay_type = "armor"
