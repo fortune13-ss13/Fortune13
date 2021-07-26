@@ -42,7 +42,6 @@
 			"name" = get_region_accesses_name(i),
 			"accesses" = accesses
 		))
-	///*
 
 	data["regions"] = regions
 	return data
