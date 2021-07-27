@@ -12,10 +12,10 @@
 	return ..()
 
 /datum/wires/taperecorder/interactable(mob/user)
-	. = FALSE
-	var/obj/item/taperecorder/T = holder
-	if(T.panel_open)
-		. = TRUE
+	var/obj/item/taperecorder/recorder = holder
+	if(recorder.panel_open)
+		return TRUE
+	return FALSE
 
 /datum/wires/taperecorder/on_pulse(wire)
 	var/obj/item/taperecorder/T = holder
