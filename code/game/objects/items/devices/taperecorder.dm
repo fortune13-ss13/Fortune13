@@ -45,14 +45,14 @@
 		wires.interact(user)
 
 /obj/item/taperecorder/screwdriver_act(mob/living/user, obj/item/I)
-	if(I.tool_behaviour == TOOL_SCREWDRIVER)
-		I.play_tool_sound(src, 50)
-		if(!panel_open)
-			panel_open = TRUE
-			to_chat(user, "<span class='notice'>You open the maintenance hatch of [src].</span>")
-		else
-			panel_open = FALSE
-			to_chat(user, "<span class='notice'>You close the maintenance hatch of [src].</span>")
+	I.play_tool_sound(src, 50)
+	if(!panel_open)
+		panel_open = TRUE
+		to_chat(user, "<span class='notice'>You open the maintenance hatch of [src].</span>")
+	else
+		panel_open = FALSE
+		to_chat(user, "<span class='notice'>You close the maintenance hatch of [src].</span>")
+	return TRUE
 
 
 /obj/item/taperecorder/proc/eject(mob/user)
