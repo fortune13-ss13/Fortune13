@@ -917,7 +917,7 @@
 
 /obj/item/clothing/under/f13/rag
 	name = "torn rags"
-	desc = "A shirt - or whatever it is, made of ripped cloth.<br>It has soaked in sweat, and has a bad smell.<br>Only the poorest of settlers, mostly the drug addicts, raiders or slaves wear something like that."
+	desc = "Keeps the sand outta yer crack, and not much else."
 	icon_state = "rag"
 	item_state = "lgloves"
 	item_color = "rag"
@@ -925,7 +925,7 @@
 
 /obj/item/clothing/under/f13/tribal
 	name = "male tribal outfit"
-	desc = "A male outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
+	desc = "Clothes made of gecko hide. Oh, so like, this is what that Darwin guy meant by, like, survival of the fittest?"
 	icon_state = "tribal_m"
 	item_state = "lgloves"
 	item_color = "tribal_m"
@@ -933,7 +933,7 @@
 
 /obj/item/clothing/under/f13/female/tribal
 	name = "female tribal outfit"
-	desc = "A female outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
+	desc = "Clothes made of gecko hide. Oh, so like, this is what that Darwin guy meant by, like, survival of the fittest?"
 	icon_state = "tribal_f"
 	item_state = "lgloves"
 	item_color = "tribal_f"
@@ -1027,7 +1027,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
 
 /obj/item/clothing/under/f13/merchant
-	name = "merchant outfit "
+	name = "merchant outfit"
 	desc = "An outfit commonly worn by various wastelanders - mostly wandering traders and merchants on the market.<br>So what do you say if I buy it from you with 10% discount?"
 	icon_state = "merchant"
 	item_state = "brownjsuit"
@@ -1035,7 +1035,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/worn
-	name = "worn outfit "
+	name = "worn outfit"
 	desc = "A worn khaki shirt without any buttons left, and a ragged pair of jeans.<br>It may seem a bad outfit choice at first, yet there are wastelanders out there who can't afford even that."
 	icon_state = "worn"
 	item_state = "brownjsuit"

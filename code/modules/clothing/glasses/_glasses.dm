@@ -392,7 +392,8 @@
 		. += M
 
 /obj/item/clothing/glasses/sunglasses/big
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks flashes."
+	name = terminators
+	desc = "I'll be back."
 	icon_state = "bigsunglasses"
 	item_state = "bigsunglasses"
 
