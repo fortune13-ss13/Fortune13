@@ -474,8 +474,11 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"NCR Combat Medic",
 		"NCR Combat Engineer",
 		"NCR Sergeant",
-	)
-	job_req = list("NCR Colonel", "NCR Captain", "NCR Lieutenant")
+		)
+	job_req = list("NCR Colonel",
+		"NCR Captain",
+		"NCR Lieutenant",
+		)
 
 /obj/machinery/computer/card/legion
 	name = "\improper Legion identification console"
@@ -487,5 +490,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"Recruit Legionnaire",
 		"Prime Legionnaire",
 		"Veteran Legionnaire",
-	)
-	job_req = list("Legate", "Legion Centurion", "Legion Veteran Decanus")
+		)
+	job_req = list("Legate",
+		"Legion Centurion",
+		"Legion Veteran Decanus",
+		)
