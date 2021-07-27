@@ -15,6 +15,9 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	//Jobs that you can choose in ID console.
 	var/list/job_list
 
+	//Assigned_role that can use it. If empty - everyone can.
+	var/list/job_req = list("CentCom Official", "CentCom Commander", "Death")
+
 	var/obj/item/card/id/inserted_scan_id
 	var/obj/item/card/id/inserted_modify_id
 	var/list/region_access = null
@@ -130,6 +133,9 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 			return TRUE
 
 /obj/machinery/computer/card/ui_interact(mob/user)
+	if(LAZYLEN(job_req) && !(user.mind?.assigned_role in job_req))
+		to_chat(user, "<span class='warning'>You have no idea how to use it...</span>")
+		return
 	. = ..()
 	var/list/dat = list()
 
@@ -469,13 +475,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"NCR Combat Engineer",
 		"NCR Sergeant",
 	)
-	var/list/job_req = list("NCR Colonel", "NCR Captain", "NCR Lieutenant")
-
-/obj/machinery/computer/card/ncr/ui_interact(mob/user)
-	if(!(user.mind.assigned_role in job_req))
-		to_chat(user, "<span class='warning'>You have no idea how to use it...</span>")
-		return
-	return ..()
+	job_req = list("NCR Colonel", "NCR Captain", "NCR Lieutenant")
 
 /obj/machinery/computer/card/legion
 	name = "\improper Legion identification console"
@@ -488,10 +488,4 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"Prime Legionnaire",
 		"Veteran Legionnaire",
 	)
-	var/list/job_req = list("Legate", "Legion Centurion", "Legion Veteran Decanus")
-
-/obj/machinery/computer/card/legion/ui_interact(mob/user)
-	if(!(user.mind.assigned_role in job_req))
-		to_chat(user, "<span class='warning'>You have no idea how to use it...</span>")
-		return
-	return ..()
+	job_req = list("Legate", "Legion Centurion", "Legion Veteran Decanus")
