@@ -41,6 +41,10 @@
 		mytape = I
 		to_chat(user, "<span class='notice'>You insert [I] into [src].</span>")
 		update_icon()
+	else if(is_wire_tool(I) && panel_open)
+		wires.interact(user)
+
+/obj/item/taperecorder/screwdriver_act(mob/living/user, obj/item/I)
 	if(I.tool_behaviour == TOOL_SCREWDRIVER)
 		I.play_tool_sound(src, 50)
 		if(!panel_open)
@@ -49,8 +53,6 @@
 		else
 			panel_open = FALSE
 			to_chat(user, "<span class='notice'>You close the maintenance hatch of [src].</span>")
-	else if(is_wire_tool(I) && panel_open)
-		wires.interact(user)
 
 
 /obj/item/taperecorder/proc/eject(mob/user)
