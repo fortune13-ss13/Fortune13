@@ -9,7 +9,7 @@
 		WIRE_RECORD,
 		WIRE_STOP, WIRE_PLAY
 	)
-	..()
+	return ..()
 
 /datum/wires/taperecorder/interactable(mob/user)
 	. = FALSE
