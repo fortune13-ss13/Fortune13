@@ -469,9 +469,9 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"NCR Combat Engineer",
 		"NCR Sergeant",
 	)
+	var/list/job_req = list("NCR Colonel", "NCR Captain", "NCR Lieutenant")
 
 /obj/machinery/computer/card/ncr/ui_interact(mob/user)
-	var/list/job_req = list("NCR Colonel", "NCR Captain", "NCR Lieutenant")
 	if(!(user.mind.assigned_role in job_req))
 		to_chat(user, "<span class='warning'>You have no idea how to use it...</span>")
 		return
@@ -488,9 +488,9 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"Prime Legionnaire",
 		"Veteran Legionnaire",
 	)
+	var/list/job_req = list("Legate", "Legion Centurion", "Legion Veteran Decanus")
 
 /obj/machinery/computer/card/legion/ui_interact(mob/user)
-	var/list/job_req = list("Legate", "Legion Centurion", "Legion Veteran Decanus")
 	if(!(user.mind.assigned_role in job_req))
 		to_chat(user, "<span class='warning'>You have no idea how to use it...</span>")
 		return
