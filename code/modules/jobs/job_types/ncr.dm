@@ -1121,4 +1121,5 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	id = /obj/item/card/id/dogtag/town/ncr
 	l_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=2,
+		)
