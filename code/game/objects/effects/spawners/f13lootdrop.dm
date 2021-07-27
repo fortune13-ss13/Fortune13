@@ -1213,6 +1213,9 @@
 				/obj/effect/spawner/bundle/f13/tribeam
 				)
 
+/obj/effect/spawner/bundle/f13/r84
+	items = /obj/item/gun/ballistic/automatic/r84
+
 /obj/effect/spawner/bundle/f13/bozar
 	name = "bozar and ammo spawner"
 	items = list(
@@ -1423,7 +1426,6 @@
 				/obj/item/trash/f13/tin,
 				/obj/item/trash/f13/dog,
 				/obj/item/trash/f13/dandyapples,
-				/obj/item/weapon/reagent_containers/food/snacks/f13/dog,
 				/obj/item/storage/crayons,
 				/obj/item/stack/packageWrap,
 				/obj/item/storage/box/matches,
