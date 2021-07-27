@@ -18,11 +18,11 @@
 	return FALSE
 
 /datum/wires/taperecorder/on_pulse(wire)
-	var/obj/item/taperecorder/T = holder
+	var/obj/item/taperecorder/recorder = holder
 	switch(wire)
 		if(WIRE_RECORD)
-			T.record()
+			recorder.record()
 		if(WIRE_STOP)
-			T.stop()
+			recorder.stop()
 		if(WIRE_PLAY)
-			T.play()
+			recorder.play()
