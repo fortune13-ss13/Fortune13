@@ -832,6 +832,12 @@
 /obj/structure/spider/stickyweb,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"arh" = (
+/obj/structure/closet,
+/obj/item/card/id/dogtag/legprime,
+/obj/item/card/id/dogtag/legprime,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "ark" = (
 /obj/structure/simple_door/metal,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -3558,6 +3564,16 @@
 	icon_state = "platingdmg2"
 	},
 /area/f13/ncr)
+"bEu" = (
+/obj/machinery/door/unpowered/wooddoor{
+	autoclose = 1;
+	damage_deflection = 28;
+	max_integrity = 400;
+	obj_integrity = 400;
+	req_access_txt = "123"
+	},
+/turf/open/floor/carpet/black,
+/area/f13/legion)
 "bEw" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 4;
@@ -4496,7 +4512,13 @@
 /area/f13/caves)
 "cfp" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/simple_door/wood,
+/obj/machinery/door/unpowered/wooddoor{
+	autoclose = 1;
+	damage_deflection = 28;
+	max_integrity = 400;
+	obj_integrity = 400;
+	req_access_txt = "123"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "cfz" = (
@@ -4532,6 +4554,9 @@
 /area/f13/wasteland)
 "chv" = (
 /obj/structure/closet,
+/obj/item/card/id/dogtag/legrecruit,
+/obj/item/card/id/dogtag/legrecruit,
+/obj/item/card/id/dogtag/legrecruit,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "chO" = (
@@ -9754,7 +9779,13 @@
 "eHQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/oil/slippery,
-/obj/structure/simple_door/wood,
+/obj/machinery/door/unpowered/wooddoor{
+	autoclose = 1;
+	damage_deflection = 28;
+	max_integrity = 400;
+	obj_integrity = 400;
+	req_access_txt = "123"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "eIA" = (
@@ -26570,6 +26601,18 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/building)
+"mtK" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
+/obj/structure/table/wood,
+/obj/item/card/id/dogtag/town/legion,
+/obj/item/card/id/dogtag/town/legion,
+/obj/item/card/id/dogtag/town/legion,
+/obj/item/card/id/dogtag/town/legion,
+/obj/item/card/id/dogtag/town/legion,
+/turf/open/floor/carpet/black,
+/area/f13/legion)
 "mtL" = (
 /obj/effect/spawner/lootdrop/ammo,
 /turf/open/indestructible/ground/outside/desert,
@@ -30576,9 +30619,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "oxA" = (
-/obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/f13Cash/aureus,
+/obj/machinery/computer/card/legion,
 /turf/open/floor/carpet/black,
 /area/f13/legion)
 "oxJ" = (
@@ -32860,7 +32902,13 @@
 /area/f13/building)
 "pBp" = (
 /obj/structure/decoration/rag,
-/obj/structure/simple_door/wood,
+/obj/machinery/door/unpowered/wooddoor{
+	autoclose = 1;
+	damage_deflection = 28;
+	max_integrity = 400;
+	obj_integrity = 400;
+	req_access_txt = "123"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "pBq" = (
@@ -50700,6 +50748,16 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building)
+"xGS" = (
+/obj/machinery/door/unpowered/wooddoor{
+	autoclose = 1;
+	damage_deflection = 28;
+	max_integrity = 400;
+	obj_integrity = 400;
+	req_access_txt = "123"
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "xHc" = (
 /obj/structure/fence{
 	dir = 4
@@ -51985,6 +52043,7 @@
 "yir" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/stack/f13Cash/aureus,
 /turf/open/floor/carpet/black,
 /area/f13/legion)
 "yit" = (
@@ -104781,7 +104840,7 @@ xXm
 jhx
 xXm
 xXm
-dvo
+xGS
 xXm
 vHe
 vwz
@@ -109687,10 +109746,10 @@ uXj
 eXO
 mvv
 mvv
-dvo
+xGS
 xys
 mpu
-fsV
+mtK
 hom
 cRh
 hom
@@ -110975,7 +111034,7 @@ hgM
 hom
 hom
 hom
-jaV
+bEu
 hom
 wSA
 xXq
@@ -112006,7 +112065,7 @@ hom
 hom
 hom
 chv
-chv
+arh
 hom
 gcK
 gcK
