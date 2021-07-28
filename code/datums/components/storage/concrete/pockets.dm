@@ -35,6 +35,78 @@
 	/obj/item/reagent_containers/food/snacks/sugarcookie,
 	/obj/item/key/collar))
 
+/datum/component/storage/concrete/pockets/binoculars
+	max_items = 1
+
+/datum/component/storage/concrete/pockets/binoculars/Initialize()
+	. = ..()
+	can_hold = typecacheof(list(
+	/obj/item/binoculars,
+	))
+
+/datum/component/storage/concrete/pockets/treasurer
+	max_items = 3
+	can_hold = typecacheof(list(
+	/obj/item/storage/bag/money,
+	/obj/item/key,
+	/obj/item/melee/onehanded/knife,
+	))
+
+/datum/component/storage/concrete/pockets/bartender
+	max_items = 2
+	can_hold = typecacheof(list(
+	/obj/item/kitchen,
+	/obj/item/reagent_containers/food/drinks/bottle,
+	/obj/item/gun/ballistic/revolver/detective,
+	))
+
+/datum/component/storage/concrete/pockets/kitchen
+	max_items = 2
+	can_hold = typecacheof(list(
+	/obj/item/kitchen,
+	/obj/item/reagent_containers/food/condiment,
+	))
+
+/datum/component/storage/concrete/pockets/crafter
+	max_items = 2
+	can_hold = typecacheof(list(
+	/obj/item/crowbar,
+	/obj/item/wrench,
+	/obj/item/screwdriver,
+	/obj/item/multitool,
+	/obj/item/wirecutters,
+	))
+
+/datum/component/storage/concrete/pockets/medical
+	max_items = 2
+	can_hold = typecacheof(list(
+		/obj/item/healthanalyzer,
+		/obj/item/reagent_containers/dropper,
+		/obj/item/reagent_containers/glass/bottle,
+		/obj/item/reagent_containers/pill,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/reagent_containers/medspray,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_containers/hypospray,
+		/obj/item/hypospray,
+		/obj/item/clothing/gloves/,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/clothing/mask/breath,
+		/obj/item/surgical_drapes,
+		/obj/item/scalpel,
+		/obj/item/bonesetter,
+		/obj/item/retractor,
+		/obj/item/cautery,
+		/obj/item/hemostat,
+		/obj/item/clothing/neck/stethoscope,
+		/obj/item/clothing/glasses,
+		/obj/item/storage/bag/chemistry,
+		/obj/item/storage/bag/bio,
+		/obj/item/reagent_containers/blood,
+		/obj/item/reagent_containers/chem_pack,
+		))
+	
 /datum/component/storage/concrete/pockets/tiny
 	max_items = 1
 	max_w_class = WEIGHT_CLASS_TINY
