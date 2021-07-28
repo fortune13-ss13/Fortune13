@@ -72,7 +72,7 @@
 /obj/item/clothing/neck/mantle/jay
 	name = "blue silk mantle"
 	desc = "A finely woven and blue dyed mantle, with the emblem of a bird on its back."
-	icon_state = "jay"
+	icon_state = "jaymantle"
 
 /obj/item/clothing/neck/mantle/enclavecommander
 	name = "commanders mantle"
@@ -81,7 +81,7 @@
 
 /obj/item/clothing/neck/mantle/treasurer
 	name = "treasurers mantle"
-	desc = "The grey and black mantle with gold thread trimming shows the wearer is entrusted with matters of money and records. Hidden inner pockets can store money bags and keys safely, and a discrete sheath for a knife for self defence is also attached."
+	desc = "The grey and black mantle with gold thread trimming shows the wearer is entrusted with matters of money and records. Hidden inner pockets can store money, keys and documents safely, and a discrete sheath for a knife for self defence is also attached."
 	icon_state = "treasurer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
 

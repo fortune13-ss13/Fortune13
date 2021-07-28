@@ -45,15 +45,22 @@
 	))
 
 /datum/component/storage/concrete/pockets/treasurer
-	max_items = 3
+	max_items = 4
+
+/datum/component/storage/concrete/pockets/treasurer/Initialize()
+	. = ..()
 	can_hold = typecacheof(list(
-	/obj/item/storage/bag/money,
+	/obj/item/stack/f13Cash,
 	/obj/item/key,
 	/obj/item/melee/onehanded/knife,
+	/obj/item/paper,
 	))
 
 /datum/component/storage/concrete/pockets/bartender
 	max_items = 2
+
+/datum/component/storage/concrete/pockets/bartender/Initialize()
+	. = ..()
 	can_hold = typecacheof(list(
 	/obj/item/kitchen,
 	/obj/item/reagent_containers/food/drinks/bottle,
@@ -62,6 +69,9 @@
 
 /datum/component/storage/concrete/pockets/kitchen
 	max_items = 2
+
+/datum/component/storage/concrete/pockets/kitchen/Initialize()
+	. = ..()
 	can_hold = typecacheof(list(
 	/obj/item/kitchen,
 	/obj/item/reagent_containers/food/condiment,
@@ -69,6 +79,9 @@
 
 /datum/component/storage/concrete/pockets/crafter
 	max_items = 2
+
+/datum/component/storage/concrete/pockets/crafter/Initialize()
+	. = ..()
 	can_hold = typecacheof(list(
 	/obj/item/crowbar,
 	/obj/item/wrench,
@@ -79,6 +92,9 @@
 
 /datum/component/storage/concrete/pockets/medical
 	max_items = 2
+
+/datum/component/storage/concrete/pockets/medical/Initialize()
+	. = ..()
 	can_hold = typecacheof(list(
 		/obj/item/healthanalyzer,
 		/obj/item/reagent_containers/dropper,
