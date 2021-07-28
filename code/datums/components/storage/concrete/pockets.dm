@@ -47,8 +47,8 @@
 	max_items = 4
 
 /datum/component/storage/concrete/pockets/treasurer/Initialize()
-    . = ..()
-    can_hold = GLOB.storage_treasurer_can_hold
+	. = ..()
+	can_hold = GLOB.storage_treasurer_can_hold
 
 
 /datum/component/storage/concrete/pockets/bartender
