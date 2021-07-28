@@ -119,6 +119,10 @@
 	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, moodlet, /datum/mood_event/honk)
 	return ..()
 
+/obj/item/bikehorn/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/squeak, honksounds, 50)
+
 /obj/item/bikehorn/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] solemnly points the horn at [user.p_their()] temple! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	playsound(src, pickweight(honksounds), 50, 1)
