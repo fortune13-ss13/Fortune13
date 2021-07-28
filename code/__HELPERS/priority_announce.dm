@@ -9,23 +9,9 @@
 		announcement += "<h1 class='alert'>Radio Broadcast</h1>"
 		if (title && length(title) > 0)
 			announcement += "<br><h2 class='alert'>Radio Broadcast</h2>"
-	else if(type == "Radio Broadcast")
-		announcement += "<h1 class='alert'>Radio Broadcast</h1>"
-		GLOB.news_network.SubmitArticle(text, "Captain's Announcement", "Wasteland Announcements", null)
-
 	else
-		if(!sender_override)
-			announcement += "<h1 class='alert'>Radio Station Broadcast</h1>"
-		else
-			announcement += "<h1 class='alert'>Radio Broadcast</h1>"
-		if (title && length(title) > 0)
-			announcement += "<br><h2 class='alert'>Radio Broadcast</h2>"
-
-		if(!sender_override)
-			if(title == "")
-				GLOB.news_network.SubmitArticle(text, "Vault-Tec Update", "Wasteland Announcements", null)
-			else
-				GLOB.news_network.SubmitArticle(title + "<br><br>" + text, "Vault-Tec", "Wasteland Announcements", null)
+		announcement += "<h1 class='alert'>Radio Station Broadcast</h1>"
+		GLOB.news_network.SubmitArticle(text, "Captain's Announcement", "Wasteland Announcements", null)
 
 	announcement += "<br><span class='alert'>[html_encode(text)]</span><br>"
 	announcement += "<br>"
