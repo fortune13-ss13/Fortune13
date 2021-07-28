@@ -3,8 +3,8 @@
 /obj/item/clothing/neck/mantle
 	name = "mantle template"
 	desc = " worn over the shoulders, no hood, decorative."
-	icon = 'icons/fallout/clothing/mantle.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/mantles.dmi'
+	icon = 'icons/fallout/clothing/mantles.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothing/mantle.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|ARMS
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
@@ -89,15 +89,15 @@
 	name = "fur pelt"
 	desc = "A pelt made from longhorner fur."
 	icon_state = "peltfur"
-	cold_protection = = CHEST|GROIN|ARMS
-	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)¨
+	cold_protection = CHEST|GROIN|ARMS
+	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/neck/mantle/peltmountain
 	name = "fur pelt"
 	desc = "A pelt made from a mountain bear, brought in from Colorado."
 	icon_state = "peltmountain"
 	cold_protection = CHEST|GROIN|ARMS
-	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)¨
+	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/neck/mantle/ragged
 	name = "ragged mantle"
@@ -109,69 +109,6 @@
 	desc = "Plain and rugged piece of clothing, to make sure your gear don't get soaked through when it rains."
 	icon_state = "poncho"
 	body_parts_covered = CHEST|GROIN|ARMS
-
-/obj/item/clothing/neck/mantle/rangerponcho
-	name = "ranger poncho"
-	desc = "Well made poncho, though it's starting to fray at the edges a little from heavy use."
-	icon_state = "rangerponcho"
-	body_parts_covered = CHEST|GROIN|ARMS
-
-// Aprons	Specialized pockets, small environmental bonus for some
-/obj/item/clothing/neck/apron
-	name = "apron template"
-	icon = 'icons/fallout/clothing/mantle.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/mantles.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS
-	permeability_coefficient = 0.9
-	pocket_storage_component_path = null
-
-/obj/item/clothing/neck/apron/bartender
-	name = "bartenders apron"
-	desc = "A fancy purple apron for a stylish person."
-	icon_state = "apronbartender"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bartender
-
-/obj/item/clothing/neck/apron/medicus
-	name = "medicus apron"
-	desc = "The waxed cotton apron of a Medicus, marked with a red bull insignia."
-	icon_state = "apronmedicus"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/medical
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 20, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/neck/apron/surgical
-	name = "surgical apron"
-	desc = "A sterile blue surgical apron."
-	icon_state = "apronsurgical"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/medical
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 20, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/neck/apron/chef
-	name = "chefs apron"
-	desc = "A white apron for kitchenwork."
-	icon_state = "apronchef"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/kitchen
-
-/obj/item/clothing/neck/apron/labor
-	name = "black apron"
-	desc = "A dark apron for manual labor."
-	icon_state = "apronblack"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/crafter
-
-/obj/item/clothing/neck/apron/labor/forge
-	name = "forgemasters apron"
-	desc = "A heavy leather apron designed for protecting the user when metalforging. The bull insignia marks the wearer as a Forgemaster."
-	icon_state = "apronforge"
-	heat_protection = CHEST|GROIN|LEGS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/crafter
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
-
-/obj/item/clothing/neck/apron/50sapron
-	name = "50s housewife apron"
-	desc = "A cutesy pink checkerboard apron. The pattern is copied from ancient commercial billboards."
-	icon_state = "apron50s"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/kitchen
 
 /*
 Obsolete
