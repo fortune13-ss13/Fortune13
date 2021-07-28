@@ -1,5 +1,5 @@
 
-/proc/priority_announce(text, title = "", type , sender_override)
+/proc/priority_announce(text, title = "",sound = null, type , sender_override)
 	if(!text)
 		return
 
