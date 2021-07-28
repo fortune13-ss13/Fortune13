@@ -62,7 +62,6 @@
 		// main interface
 		if("main")
 			state = STATE_DEFAULT
-			playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 		if("login")
 			var/mob/M = usr
 
@@ -74,19 +73,14 @@
 					auth_id = "[I.registered_name] ([I.assignment])"
 					if((ACCESS_CAPTAIN in I.access))
 						authenticated = 2
-					playsound(src, 'sound/machines/terminal_on.ogg', 50, FALSE)
 				if(obj_flags & EMAGGED)
 					authenticated = 2
 					auth_id = "Unknown"
 					to_chat(M, "<span class='warning'>[src] lets out a quiet alarm as its login is overridden.</span>")
-					playsound(src, 'sound/machines/terminal_on.ogg', 50, FALSE)
-					playsound(src, 'sound/machines/terminal_alert.ogg', 25, FALSE)
 					if(prob(25))
 						for(var/mob/living/silicon/ai/AI in active_ais())
-							SEND_SOUND(AI, sound('sound/machines/terminal_alert.ogg', volume = 10)) //Very quiet for balance reasons
 		if("logout")
 			authenticated = 0
-			playsound(src, 'sound/machines/terminal_off.ogg', 50, FALSE)
 
 		if("swipeidseclevel")
 			if(authenticated==2)
@@ -111,7 +105,6 @@
 						security_level_cd = world.time + 15 SECONDS
 						if(GLOB.security_level != old_level)
 							to_chat(usr, "<span class='notice'>Authorization confirmed. Modifying security level.</span>")
-							playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 							//Only notify people if an actual change happened
 							var/security_level = NUM2SECLEVEL(GLOB.security_level)
 							log_game("[key_name(usr)] has changed the security level to [security_level] with [src] at [AREACOORD(usr)].")
@@ -120,12 +113,10 @@
 						tmp_alertlevel = 0
 					else
 						to_chat(usr, "<span class='warning'>You are not authorized to do this!</span>")
-						playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 						tmp_alertlevel = 0
 					state = STATE_DEFAULT
 				else
 					to_chat(usr, "<span class='warning'>You need to swipe your ID!</span>")
-					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 
 		if("announce")
 			if(authenticated)
@@ -136,13 +127,11 @@
 				var/dest = href_list["cross_dest"]
 				if(!checkCCcooldown())
 					to_chat(usr, "<span class='warning'>Arrays recycling. Please stand by.</span>")
-					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 					return
 				var/warning = dest == "all" ? "Please choose a message to transmit to allied stations." : "Please choose a message to transmit to [dest] sector station."
 				var/input = stripped_multiline_input(usr, "[warning]  Please be aware that this process is very expensive, and abuse will lead to... termination.", "Send a message to an allied station.", "")
 				if(!input || !(usr in view(1,src)) || !checkCCcooldown())
 					return
-				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 				if(dest == "all")
 					send2otherserver("[station_name()]", input,"Comms_Console")
 				else
@@ -283,7 +272,6 @@
 		// Status display stuff
 		if("setstat")
 			if(authenticated==2)
-				playsound(src, "terminal_type", 50, FALSE)
 				switch(href_list["statdisp"])
 					if("message")
 						post_status("message", stat_msg1, stat_msg2)
@@ -310,12 +298,9 @@
 				var/input = stripped_input(usr, "Please choose a message to transmit to CentCom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to CentCom.", "")
 				if(!input || !(usr in view(1,src)) || !checkCCcooldown())
 					return
-				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 				CentCom_announce(input, usr)
 				to_chat(usr, "<span class='notice'>Message transmitted to Central Command.</span>")
 				for(var/client/X in GLOB.admins)
-					if(X.prefs.toggles & SOUND_ADMINHELP)
-						SEND_SOUND(X, sound('sound/effects/printer.ogg'))
 					window_flash(X, ignorepref = FALSE)
 				usr.log_talk(input, LOG_SAY, tag="CentCom announcement")
 				deadchat_broadcast("<span class='deadsay'><span class='name'>[usr.real_name]</span> has messaged CentCom, \"[input]\" at <span class='name'>[get_area_name(usr, TRUE)]</span>.</span>", usr)
@@ -326,17 +311,13 @@
 			if((authenticated==2) && (obj_flags & EMAGGED))
 				if(!checkCCcooldown())
 					to_chat(usr, "<span class='warning'>Arrays recycling. Please stand by.</span>")
-					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 					return
 				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
 				if(!input || !(usr in view(1,src)) || !checkCCcooldown())
 					return
-				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 				Syndicate_announce(input, usr)
 				to_chat(usr, "<span class='danger'>SYSERR @l(19833)of(transmit.dm): !@$ MESSAGE TRANSMITTED TO SYNDICATE COMMAND.</span>")
 				for(var/client/X in GLOB.admins)
-					if(X.prefs.toggles & SOUND_ADMINHELP)
-						SEND_SOUND(X, sound('sound/effects/printer.ogg'))
 					window_flash(X, ignorepref = FALSE)
 				usr.log_talk(input, LOG_SAY, tag="Syndicate announcement")
 				deadchat_broadcast("<span class='deadsay'><span class='name'>[usr.real_name]</span> has messaged the Syndicate, \"[input]\" at <span class='name'>[get_area_name(usr, TRUE)]</span>.</span>", usr)
@@ -345,7 +326,6 @@
 		if("RestoreBackup")
 			if(authenticated==2)
 				to_chat(usr, "<span class='notice'>Backup routing data restored!</span>")
-				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 				obj_flags &= ~EMAGGED
 				updateDialog()
 
@@ -468,7 +448,6 @@
 	if(authenticated == 1)
 		authenticated = 2
 	to_chat(user, "<span class='danger'>You scramble the communication routing circuits!</span>")
-	playsound(src, 'sound/machines/terminal_alert.ogg', 50, FALSE)
 	return TRUE
 
 /obj/machinery/computer/communications/ui_interact(mob/user)
@@ -512,16 +491,13 @@
 				dat += "<BR>\[ <A HREF='?src=[REF(src)];operation=login'>Log In</A> \]"
 		if(STATE_CALLSHUTTLE)
 			dat += get_call_shuttle_form()
-			playsound(src, 'sound/machines/terminal_prompt.ogg', 50, FALSE)
 		if(STATE_CANCELSHUTTLE)
 			dat += get_cancel_shuttle_form()
-			playsound(src, 'sound/machines/terminal_prompt.ogg', 50, FALSE)
 		if(STATE_MESSAGELIST)
 			dat += "Messages:"
 			for(var/i in 1 to messages.len)
 				var/datum/comm_message/M = messages[i]
 				dat += "<BR><A HREF='?src=[REF(src)];operation=viewmessage;message-num=[i]'>[M.title]</A>"
-			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 		if(STATE_VIEWMESSAGE)
 			if (currmsg)
 				dat += "<B>[currmsg.title]</B><BR><BR>[currmsg.content]"
@@ -555,7 +531,6 @@
 			dat += " <A HREF='?src=[REF(src)];operation=setstat;statdisp=alert;alert=redalert'>Red Alert</A> |"
 			dat += " <A HREF='?src=[REF(src)];operation=setstat;statdisp=alert;alert=lockdown'>Lockdown</A> |"
 			dat += " <A HREF='?src=[REF(src)];operation=setstat;statdisp=alert;alert=biohazard'>Biohazard</A> \]<BR><HR>"
-			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 		if(STATE_ALERT_LEVEL)
 			dat += "Current alert level: [NUM2SECLEVEL(GLOB.security_level)]<BR>"
 			if(GLOB.security_level == SEC_LEVEL_DELTA)
@@ -569,7 +544,6 @@
 			dat += "Confirm the change to: [NUM2SECLEVEL(tmp_alertlevel)]<BR>"
 			dat += "<A HREF='?src=[REF(src)];operation=swipeidseclevel'>Swipe ID</A> to confirm change.<BR>"
 		if(STATE_TOGGLE_EMERGENCY)
-			playsound(src, 'sound/machines/terminal_prompt.ogg', 50, FALSE)
 			if(GLOB.emergency_access == 1)
 				dat += "<b>Emergency Maintenance Access is currently <font color='red'>ENABLED</font></b>"
 				dat += "<BR>Restore maintenance access restrictions? <BR>\[ <A HREF='?src=[REF(src)];operation=disableemergency'>OK</A> | <A HREF='?src=[REF(src)];operation=viewmessage'>Cancel</A> \]"
