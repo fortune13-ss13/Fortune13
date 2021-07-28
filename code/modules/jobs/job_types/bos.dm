@@ -80,9 +80,10 @@ Elder
 	suit_store =	/obj/item/gun/energy/laser/laer
 	neck = /obj/item/clothing/neck/cloak/bos/right
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/kitchen/knife/combat=1,
-		/obj/item/gun/ballistic/automatic/pistol/n99=1)
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		)
 
 /*
 Head Paladin
@@ -146,10 +147,10 @@ Head Paladin
 	id = 			/obj/item/card/id/dogtag
 	neck = 			/obj/item/clothing/neck/cloak/bos/paladin
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1,
-		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/m10mm_adv/simple=2,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=1
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
 		)
 
 /datum/outfit/loadout/sentstand
@@ -234,8 +235,8 @@ Head Scribe
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=3,
+		/obj/item/melee/onehanded/knife/survival = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
 		)
 
 /datum/outfit/loadout/hsstand
@@ -288,7 +289,6 @@ Head Knight
 		return
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/bos/f13knightcap
 	name = "Head Knight"
@@ -306,8 +306,8 @@ Head Knight
 	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
 	id =			/obj/item/card/id/dogtag
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=1
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
 		)
 
 /datum/outfit/loadout/capstand
@@ -360,6 +360,17 @@ Star Paladin
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13paladin,
+		),
+	)
 
 /datum/outfit/job/bos/f13seniorpaladin/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -385,10 +396,10 @@ Star Paladin
 	neck = /obj/item/clothing/neck/cloak/bos/paladin
 
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/kitchen/knife/combat=1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=1
+		/obj/item/gun/energy/laser/plasma/pistol = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
 	)
 
 /datum/outfit/loadout/spaladina
@@ -439,6 +450,20 @@ Paladin
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13initiate,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13seniorpaladin,
+		),
+	)
 
 /datum/outfit/job/bos/f13paladin/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -462,7 +487,7 @@ Paladin
 	belt = 			/obj/item/storage/belt/military
 	neck = /obj/item/clothing/neck/cloak/bos/paladin
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1,
+		/obj/item/melee/onehanded/knife/hunting=1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=1
 		)
 
@@ -524,6 +549,18 @@ Senior Scribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13scribe,
+		),
+	)
+
 
 /datum/outfit/job/bos/f13seniorscribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -546,11 +583,12 @@ Senior Scribe
 	id = 			/obj/item/card/id/dogtag
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/kitchen/knife/combat=1,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
-		/obj/item/reagent_containers/hypospray/CMO=1)
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/melee/onehanded/knife/survival = 1,
+		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/hypospray/CMO = 1,
+		)
 
 /*
 Scribe
@@ -579,6 +617,20 @@ Scribe
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13initiate,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13seniorscribe,
+		),
+	)
 
 /datum/outfit/job/bos/f13scribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -599,7 +651,7 @@ Scribe
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/kitchen/knife/combat=1,
+		/obj/item/melee/onehanded/knife/survival=1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
 		)
@@ -627,7 +679,7 @@ Scribe
 Senior Knight
 */
 
-datum/job/bos/f13seniorknight
+/datum/job/bos/f13seniorknight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
 	faction = "BOS"
@@ -649,6 +701,17 @@ datum/job/bos/f13seniorknight
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13knight,
+		),
+	)
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -666,7 +729,7 @@ datum/job/bos/f13seniorknight
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat/survival=1,
+		/obj/item/melee/onehanded/knife/hunting=1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=1
 		)
 	
@@ -715,6 +778,20 @@ Knight
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/bos/f13initiate,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13seniorknight,
+		),
+	)
 
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
@@ -730,7 +807,7 @@ Knight
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat/survival=1,
+		/obj/item/melee/onehanded/knife/hunting=1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=1
 		)
 
@@ -793,6 +870,18 @@ Initiate
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/bos,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/bos/f13knight,
+			/datum/job/bos/f13scribe,
+		),
+	)
 
 /datum/outfit/job/bos/f13initiate
 	name = "Initiate"
@@ -803,7 +892,8 @@ Initiate
 	shoes = 		/obj/item/clothing/shoes/combat/swat
 	gloves = 		/obj/item/clothing/gloves/combat
 	backpack_contents = list(
-			/obj/item/kitchen/knife/combat/survival=1,)
+		/obj/item/melee/onehanded/knife/survival = 1,
+		)
 
 /datum/outfit/job/bos/f13initiate/post_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -887,7 +977,7 @@ Off-Duty
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1,
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/encryptionkey/headset_bos=1,
-		/obj/item/kitchen/knife/combat=1
+		/obj/item/melee/onehanded/knife/survival=1
 		)
 
 /datum/outfit/loadout/offa

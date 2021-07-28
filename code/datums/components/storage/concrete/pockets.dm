@@ -52,12 +52,13 @@
 	. = ..()
 	cant_hold = typecacheof(list(/obj/item/screwdriver/power))
 	can_hold = typecacheof(list(
-		/obj/item/kitchen/knife, /obj/item/switchblade, /obj/item/pen, /obj/item/melee/cultblade/dagger,
+		/obj/item/melee/onehanded/knife, /obj/item/pen, 
 		/obj/item/scalpel, /obj/item/reagent_containers/syringe, /obj/item/dnainjector,
 		/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/dropper,
 		/obj/item/implanter, /obj/item/screwdriver, /obj/item/weldingtool/mini,
-		/obj/item/firing_pin, /*/obj/item/throwing_star/throwingknife,*/ /obj/item/gun/ballistic/revolver/detective,
-		/obj/item/gun/ballistic/revolver/police, /obj/item/gun/ballistic/revolver/needler
+		/obj/item/firing_pin,
+		/obj/item/gun/ballistic/revolver/detective,
+		/obj/item/gun/ballistic/revolver/hobo/knifegun,
 		))
 
 /datum/component/storage/concrete/pockets/pocketprotector

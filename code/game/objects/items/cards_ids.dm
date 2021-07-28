@@ -921,6 +921,18 @@
 	assignment = "citizenship permit"
 	access = list(ACCESS_BAR)
 
+/obj/item/card/id/dogtag/town/ncr
+	name = "NCR citizenship permit"
+	desc = "A permit identifying the holder as a citizen of New Californian Republic."
+	assignment = "NCR Citizen"
+	access = list()
+
+/obj/item/card/id/dogtag/town/legion
+	name = "Legion citizenship permit"
+	desc = "A permit identifying the holder as a citizen of Caesar's Legion."
+	assignment = "Legion Citizen"
+	access = list()
+
 /obj/item/card/id/dogtag/town/mafia
 	name = "citizenship permit"
 	desc = "A permit identifying the holder as a citizen of a nearby town."
@@ -998,11 +1010,11 @@
 	desc = "A dog tag that demands respect from all those subordinate to it. This one belongs to an NCR colonel."
 	icon_state = "ncrdogtagcaptain"
 
-/obj/item/card/id/dogtag/legfollower
-	name = "follower medallion"
-	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a camp follower."
+/obj/item/card/id/dogtag/legforgemaster
+	name = "forgemasters' medallion"
+	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to the Forgemaster."
 	icon_state = "legionmedallionrecruit"
-	assignment = "follower medallion"
+	assignment = "forgmaster medallion"
 
 /obj/item/card/id/dogtag/legauxilia
 	name = "auxilia medallion"

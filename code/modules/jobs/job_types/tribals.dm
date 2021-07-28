@@ -106,6 +106,11 @@ Tribal Shaman
 		/datum/outfit/loadout/invoker, //Red shaman
 		/datum/outfit/loadout/ascetic, //Blue shaman
 	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/tribal/f13druid,
+		),
+	)
 
 /datum/outfit/job/tribal/f13shaman/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -170,6 +175,17 @@ Tribal Head Hunter
 	outfit = /datum/outfit/job/tribal/f13Hhunter
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/tribal/f13hunter,
+		),
+	)
 
 /datum/outfit/job/tribal/f13Hhunter/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -213,6 +229,21 @@ Druid
 	outfit = /datum/outfit/job/tribal/f13druid
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/tribal/f13villager,
+			/datum/job/tribal/f13spiritpledged,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/tribal/f13shaman,
+		),
+	)
 
 /datum/outfit/job/tribal/f13druid/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -232,7 +263,7 @@ Druid
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/mortar=1,
 		/obj/item/pestle=1,
-		/obj/item/kitchen/knife/ritualdagger=1,
+		/obj/item/melee/onehanded/knife/ritualdagger=1,
 		/obj/item/reagent_containers/glass/primitive_chem_isolator=1,
 		/obj/item/reagent_containers/pill/patch/healpoultice=2)
 
@@ -263,8 +294,23 @@ Villager
 		/datum/outfit/loadout/mender,	//Ritual dagger, Improvized gauze, Healing powders, Mortar
 		/datum/outfit/loadout/craftsman, //Crude tools
 	)
-
-/datum/job/tribals/f13villager/after_spawn(mob/living/carbon/human/H, mob/M)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/tribal/f13villager,
+			/datum/job/tribal/f13spiritpledged,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/tribal/f13druid,
+			/datum/job/tribal/f13villager,
+			/datum/job/tribal/f13hunter,
+		),
+	)
 
 /datum/outfit/job/tribal/f13villager
 	name = "Villager"
@@ -281,10 +327,10 @@ Villager
 /datum/outfit/loadout/gatherer
 	name = "Gatherer"
 	backpack_contents = list(
-		/obj/item/twohanded/spear/bonespear=1,
-		/obj/item/kitchen/knife/combat/bone=1,
-		/obj/item/reagent_containers/pill/patch/healingpowder=1
-	)
+		/obj/item/twohanded/spear/bonespear = 1,
+		/obj/item/melee/onehanded/knife/bone = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
+		)
 
 /datum/outfit/loadout/gardener
 	name = "Gardener"
@@ -298,12 +344,12 @@ Villager
 /datum/outfit/loadout/mender
 	name = "Mender"
 	backpack_contents = list(
-		/obj/item/kitchen/knife/ritualdagger=1,
-		/obj/item/stack/medical/gauze/improvised=1,
-		/obj/item/reagent_containers/pill/patch/healingpowder=2,
-		/obj/item/reagent_containers/glass/mortar=1,
-		/obj/item/pestle=1
-	)
+		/obj/item/melee/onehanded/knife/ritualdagger = 1,
+		/obj/item/stack/medical/gauze/improvised = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
+		/obj/item/reagent_containers/glass/mortar = 1,
+		/obj/item/pestle=1,
+		)
 
 /datum/outfit/loadout/craftsman
 	name = "Craftsman"
@@ -341,6 +387,21 @@ Hunter
 		/datum/outfit/loadout/ranged, //Quick Cloak, Bow and quiver, Bone knife, Healing powder
 		/datum/outfit/loadout/melee, //Deathclaw Bone Spear, Bone knife, Healing powder
 	)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/tribal/f13villager,
+			/datum/job/tribal/f13spiritpledged,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/tribal/f13Hhunter,
+		),
+	)
 
 /datum/outfit/job/tribal/f13hunter/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -366,24 +427,23 @@ Hunter
 /datum/outfit/loadout/ranged
 	name = "Marksman"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/tribalbow=1,
-		/obj/item/clothing/suit/armor/f13/lightcloak=1,
-		/obj/item/storage/belt/tribe_quiver/bone=1,
-		/obj/item/kitchen/knife/combat/bone=1,
-		/obj/item/restraints/legcuffs/bola=2,
-		/obj/item/binoculars=1,
-		/obj/item/reagent_containers/pill/patch/healingpowder=1
-	)
+		/obj/item/gun/ballistic/automatic/tribalbow = 1,
+		/obj/item/storage/belt/tribe_quiver/bone = 1,
+		/obj/item/melee/onehanded/knife/bone = 1,
+		/obj/item/restraints/legcuffs/bola = 2,
+		/obj/item/binoculars = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
+		)
 
 /datum/outfit/loadout/melee
 	name = "Frontline"
 	backpack_contents = list(
-		/obj/item/twohanded/spear/bonespear/deathclaw=1,
-		/obj/item/kitchen/knife/combat/bone=1,
-		/obj/item/binoculars=1,
-		/obj/item/restraints/legcuffs/bola/tactical=1,
-		/obj/item/reagent_containers/pill/patch/healingpowder=1
-	)
+		/obj/item/melee/onehanded/knife/bone = 1,
+		/obj/item/binoculars = 1,
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
+		/obj/item/twohanded/spear/bonespear/deathclaw = 1,
+		)
 
 /*
 Spirit-Pledged
@@ -403,6 +463,16 @@ Spirit-Pledged
 
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/tribal,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/tribal/f13druid,
+			/datum/job/tribal/f13villager,
+			/datum/job/tribal/f13hunter,
+		),
+	)
 
 /datum/outfit/job/tribal/f13spiritpledged
 	name = "Spirit-Pledged"
