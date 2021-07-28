@@ -694,7 +694,7 @@
 
 /obj/item/clothing/head/f13/cowboy
 	name = "cowboy hat"
-	desc = "I've never seen so many men wasted so badly."
+	desc = "(II) I've never seen so many men wasted so badly."
 	icon_state = "cowboy"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
