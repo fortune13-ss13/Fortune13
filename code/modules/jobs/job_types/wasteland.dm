@@ -1103,7 +1103,7 @@ Radio Host
 	id = /obj/item/card/id/radiohost
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/laceup
-	l_pocket = /obj/item/switchblade
+	l_pocket = /obj/item/melee/onehanded/knife/switchblade
 	r_pocket = /obj/item/flashlight/seclite
 	uniform = /obj/item/clothing/under/suit/white
 	backpack =	/obj/item/storage/backpack/satchel
