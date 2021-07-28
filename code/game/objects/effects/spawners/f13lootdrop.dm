@@ -1624,13 +1624,11 @@
 	loot = list(
 				/obj/item/stack/rods/ten = 3,
 				/obj/item/stack/sheet/metal/ten = 5,
-//				/obj/item/stack/sheet/cardboard/fifty = 1,
 				/obj/item/stack/sheet/cardboard/twenty = 1,
 //				/obj/item/stack/sheet/glass/ten = 2,
 				/obj/item/stack/sheet/metal/five = 2,
 				/obj/item/stack/sheet/plasteel/five = 1,
 				/obj/item/stack/sheet/plastic/five = 4,
-//				/obj/item/stack/sheet/paperframes/twenty = 1,
 				/obj/item/stack/sheet/cloth/ten = 1,
 				/obj/item/stack/crafting/metalparts/five = 4,
 				/obj/item/stack/crafting/goodparts/three = 2

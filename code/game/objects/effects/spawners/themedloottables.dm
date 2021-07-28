@@ -2,7 +2,7 @@
 /// Themes loot spawners ///
 ////////////////////////////	-mix of crafting materials, guns, ammo, junk, sorted into themes. The sub-lists are further down in the document.
 
-/obj/effect/spawner/lootdrop/wastelootpoor
+/obj/effect/spawner/lootdrop/waste_loot_poor
 	name = "wasteloot poor"
 	loot = list(
 		/obj/effect/spawner/lootdrop/f13/junkspawners = 60,
@@ -454,26 +454,28 @@
 
 /obj/effect/spawner/bundle/weapon/lasmusket
 	name = "laskmusket and ammo spawner"
-	items = list(/obj/item/gun/ballistic/rifle/hobo/lasmusket,
-				/obj/item/ammo_box/lasmusket,
-				)
+	items = list(
+		/obj/item/gun/ballistic/rifle/hobo/lasmusket,
+		/obj/item/ammo_box/lasmusket,
+		)
 
 /obj/effect/spawner/bundle/weapon/piperifle
 	name = "piperifle and ammo spawner"
-	items = list(/obj/item/gun/ballistic/revolver/hobo/piperifle,
-				/obj/item/ammo_box/a556/sport/improvised,
-				)
+	items = list(
+		/obj/item/gun/ballistic/revolver/hobo/piperifle,
+		/obj/item/ammo_box/a556/sport/improvised,
+		)
 
 /obj/effect/spawner/bundle/weapon/pepperbox
 	name = "pepperbox gun spawner"
 	items = list(
-				/obj/item/gun/ballistic/revolver/hobo/pepperbox,
-				/obj/item/ammo_box/c10mm/improvised,
-				)
+		/obj/item/gun/ballistic/revolver/hobo/pepperbox,
+		/obj/item/ammo_box/c10mm/improvised,
+		)
 
 /obj/effect/spawner/bundle/weapon/worn10mmsmg
 	name = "worn 10mm SMG and ammo spawner"
 	items = list(
-				/obj/item/gun/ballistic/automatic/smg/smg10mm/worn,
-				/obj/item/ammo_box/magazine/m10mm_adv/empty
-				)
+		/obj/item/gun/ballistic/automatic/smg/smg10mm/worn,
+		/obj/item/ammo_box/magazine/m10mm_adv/empty,
+		)
