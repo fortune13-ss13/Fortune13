@@ -31,14 +31,6 @@
 	require_user_hands = 1
 	needs_physical_contact = 1
 
-/datum/interaction/kiss
-	command = "kiss"
-	description = "Kiss them, you fool."
-	simple_message = "USER kisses TARGET."
-	write_log_user = "kissed"
-	write_log_target = "was kissed by"
-	needs_physical_contact = 1
-
 /datum/interaction/hug
 	command = "hug"
 	description = "Hug them."
