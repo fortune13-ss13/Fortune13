@@ -897,7 +897,6 @@
 	item_state = "badge-deputy"
 	access = list(ACCESS_BAR, ACCESS_GATEWAY)
 
-
 /obj/item/card/id/radiohost
 	name = "Radio Host's Card"
 	desc = "A identification card that seems to slot into some sort of console"
@@ -929,6 +928,18 @@
 	item_state = "card-doctor"
 	assignment = "citizenship permit"
 	access = list(ACCESS_BAR)
+
+/obj/item/card/id/dogtag/town/ncr
+	name = "NCR citizenship permit"
+	desc = "A permit identifying the holder as a citizen of New Californian Republic."
+	assignment = "NCR Citizen"
+	access = list()
+
+/obj/item/card/id/dogtag/town/legion
+	name = "Legion citizenship permit"
+	desc = "A permit identifying the holder as a citizen of Caesar's Legion."
+	assignment = "Legion Citizen"
+	access = list()
 
 /obj/item/card/id/dogtag/town/mafia
 	name = "citizenship permit"
@@ -1007,11 +1018,11 @@
 	desc = "A dog tag that demands respect from all those subordinate to it. This one belongs to an NCR colonel."
 	icon_state = "ncrdogtagcaptain"
 
-/obj/item/card/id/dogtag/legfollower
-	name = "follower medallion"
-	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a camp follower."
+/obj/item/card/id/dogtag/legforgemaster
+	name = "forgemasters' medallion"
+	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to the Forgemaster."
 	icon_state = "legionmedallionrecruit"
-	assignment = "follower medallion"
+	assignment = "forgmaster medallion"
 
 /obj/item/card/id/dogtag/legauxilia
 	name = "auxilia medallion"
@@ -1127,6 +1138,10 @@
 	icon_state = "brokenholodog"
 	item_state = "brokenholodog"
 	uses_overlays = FALSE
+
+/obj/item/card/id/rusted/brokenholodog/enclave
+	name = "malfunctioning holotag"
+	desc = "A would-be advanced holographic dogtag, if it was working. Kept as a reminder to something."
 
 /obj/item/card/id/dentattoo
 	name = "Den Gang tattoo"
