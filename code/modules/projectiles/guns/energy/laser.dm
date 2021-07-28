@@ -52,11 +52,6 @@
 	use_cyborg_cell = TRUE
 	selfcharge = EGUN_NO_SELFCHARGE
 
-/obj/item/gun/energy/laser/scatter
-	name = "scatter laser gun"
-	desc = "A laser gun equipped with a refraction kit that spreads bolts."
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter, /obj/item/ammo_casing/energy/laser)
-
 //Laser Cannon
 /obj/item/gun/energy/lasercannon
 	name = "accelerator laser cannon"

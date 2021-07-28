@@ -791,7 +791,7 @@ ATTACHMENTS
 	. = ..()
 	if(gun_light)
 		var/state = "[gunlight_state][gun_light.on? "_on":""]"	//Generic state.
-		if(gun_light.icon_state in icon_states('icons/fallout/objects/guns/attachments.dmi'))	//Snowflake state?
+		if(gun_light.icon_state in icon_states('icons/fallout/objects/guns/attachments.dmi'))	//Snowflake state? Obsolete ?
 			state = gun_light.icon_state
 		flashlight_overlay = mutable_appearance('icons/fallout/objects/guns/attachments.dmi', state)
 		flashlight_overlay.pixel_x = flight_x_offset
@@ -801,7 +801,7 @@ ATTACHMENTS
 		flashlight_overlay = null
 
 	if(bayonet)
-		if(bayonet.icon_state in icon_states('icons/fallout/objects/guns/attachments.dmi'))		//Snowflake state?
+		if(bayonet.icon_state in icon_states('icons/fallout/objects/guns/attachments.dmi'))		//Snowflake state? Obsolete ?
 			knife_overlay = bayonet.icon_state
 		var/icon/bayonet_icons = 'icons/fallout/objects/guns/attachments.dmi'
 		knife_overlay = mutable_appearance(bayonet_icons, bayonet_state)

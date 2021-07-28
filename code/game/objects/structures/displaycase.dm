@@ -96,7 +96,7 @@
 		I = icon('icons/obj/stationobjs.dmi',"glassboxb0")
 	if(showpiece)
 		var/icon/S = getFlatIcon(showpiece)
-		S.Scale(17,17)
+		S.Scale(17,17)	// Runtime. Cannot execute null.Scale() .  Obsolete ?
 		I.Blend(S,ICON_UNDERLAY,8,8)
 	src.icon = I
 	return

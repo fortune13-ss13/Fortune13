@@ -359,7 +359,7 @@
 		var/icon_file = initial(item.icon)
 		var/icon_state = initial(item.icon_state)
 		var/icon/I
-		var/icon_states_list = icon_states(icon_file)
+		var/icon_states_list = icon_states(icon_file) // Bad Icon runtime on this line. Obsolete ?
 		if(icon_state in icon_states_list)
 			I = icon(icon_file, icon_state, SOUTH)
 			var/c = initial(item.color)
@@ -442,7 +442,7 @@
 			var/obj/machinery/computer/C = item
 			var/screen = initial(C.icon_screen)
 			var/keyboard = initial(C.icon_keyboard)
-			var/all_states = icon_states(icon_file)
+			var/all_states = icon_states(icon_file) // Bad Icon runtime on this line. Obsolete ?
 			if (screen && (screen in all_states))
 				I.Blend(icon(icon_file, screen, SOUTH), ICON_OVERLAY)
 			if (keyboard && (keyboard in all_states))
@@ -474,7 +474,7 @@
 					world.log << "MISSING ICON FOR [initial(I.name)] IN [O.type] OF [j]"
 					continue
 				var/icon_state = initial(I.icon_state)
-				if(isnull(icon_state) || !(icon_state in icon_states(icon_file)))
+				if(isnull(icon_state) || !(icon_state in icon_states(icon_file))) // Bad Icon runtime on this line. Obsolete ?
 					world.log << "MISSING ICON STATE[isnull(icon_state) ? null : " "][icon_state] FOR [itemtype]"
 					continue
 				var/c = initial(I.color)
