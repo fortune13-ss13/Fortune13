@@ -13,10 +13,6 @@
 	cold_protection = null
 	permeability_coefficient = 0.9
 
-/obj/item/clothing/neck/cloak/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	return(OXYLOSS)
-
 /obj/item/clothing/neck/mantle/gecko
 	name = "gecko skin mantle"
 	desc = "Made from tanned young gecko hides, too thin to be useful for armor. The small claws are still attached."

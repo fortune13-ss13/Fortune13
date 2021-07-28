@@ -54,27 +54,3 @@
 	desc = "A cutesy pink checkerboard apron. The pattern is inspired by ancient commercial billboards. Some kitchen equipment can be stored in its pocket."
 	icon_state = "housewife"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/kitchen
-
-/*
-Obsolete
-/obj/item/clothing/neck/cloak
-
-/obj/item/clothing/suit/poncho
-	name = "poncho"
-	desc = "(I) Your classic, non-racist poncho."
-	icon_state = "classicponcho"
-	item_state = "classicponcho"
-	permeability_coefficient = 0.8
-
-/obj/item/clothing/suit/poncho/green
-	name = "green poncho"
-	desc = "(I) Your classic, non-racist poncho. This one is green."
-	icon_state = "greenponcho"
-	item_state = "greenponcho"
-
-/obj/item/clothing/suit/poncho/red
-	name = "red poncho"
-	desc = "(I) Your classic, non-racist poncho. This one is red."
-	icon_state = "redponcho"
-	item_state = "redponcho"
-*/
