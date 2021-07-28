@@ -4264,6 +4264,12 @@
 /obj/structure/decoration/rag,
 /turf/closed/wall/f13/wood,
 /area/f13/legion)
+"bWe" = (
+/obj/structure/frame/machine,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
+/area/f13/followers)
 "bWg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -19788,7 +19794,7 @@
 /area/f13/caves)
 "jdN" = (
 /obj/machinery/door/airlock/medical{
-	name = "Clinic";
+	name = "Botany";
 	req_one_access_txt = "124"
 	},
 /turf/open/floor/f13{
@@ -24283,14 +24289,8 @@
 /turf/closed/indestructible/riveted,
 /area/f13/tcoms)
 "lju" = (
-/obj/machinery/light/floor,
-/obj/structure/ladder/unbreakable{
-	height = 2;
-	id = "followerladder"
-	},
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
+/obj/structure/sign/departments/medbay/alt,
+/turf/closed/wall/f13/supermart,
 /area/f13/followers)
 "ljy" = (
 /obj/structure/rack,
@@ -27967,10 +27967,7 @@
 /area/f13/building)
 "nel" = (
 /obj/machinery/light,
-/obj/machinery/hydroponics/soil/pot,
-/obj/structure/flora/ausbushes/genericbush{
-	pixel_y = 2
-	},
+/obj/item/kirbyplants/random,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -35163,6 +35160,9 @@
 /area/f13/legion)
 "qBK" = (
 /obj/structure/table/reinforced,
+/obj/structure/decoration/smokeold{
+	pixel_y = 32
+	},
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -39274,8 +39274,8 @@
 /turf/open/floor/wood/f13/carpet,
 /area/f13/building)
 "syi" = (
-/obj/structure/grille/indestructable,
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -41061,8 +41061,13 @@
 	},
 /area/f13/ncr)
 "toM" = (
-/obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/f13/supermart,
+/obj/machinery/door/airlock/medical{
+	name = "Clinic";
+	req_one_access_txt = "124"
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
 /area/f13/followers)
 "toR" = (
 /obj/structure/flora/ausbushes/genericbush,
@@ -41094,12 +41099,13 @@
 	},
 /area/f13/wasteland)
 "tpk" = (
-/obj/machinery/door/airlock/medical{
-	name = "Clinic";
-	req_one_access_txt = "124"
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "followerladder"
 	},
+/obj/machinery/light/floor,
 /turf/open/floor/f13{
-	icon_state = "freezerfloor"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "tpo" = (
@@ -41950,8 +41956,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/building)
 "tKI" = (
-/obj/structure/grille/indestructable,
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/f13{
 	icon_state = "greendirtyfull"
 	},
@@ -50627,7 +50633,7 @@
 /area/f13/building)
 "xBz" = (
 /obj/machinery/door/airlock/medical{
-	name = "Clinic";
+	name = "Operating Room";
 	req_one_access_txt = "124"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -87412,7 +87418,7 @@ lMJ
 qsX
 bau
 xBz
-urw
+lju
 toM
 urw
 urw
@@ -87669,10 +87675,10 @@ urw
 kAA
 swl
 swl
-swl
+urw
 tpk
-lju
-dit
+urw
+dCV
 dCV
 dCV
 dCV
@@ -87926,11 +87932,11 @@ urw
 qEs
 swl
 jmn
-swl
 urw
 urw
-dit
+urw
 dCV
+uqa
 uqa
 uqa
 uqa
@@ -88183,12 +88189,12 @@ urw
 qHZ
 swl
 swl
-swl
+bWe
 dit
 dCV
 dCV
-dCV
 uqa
+cbr
 aBH
 mfD
 mfD
@@ -88445,7 +88451,7 @@ dit
 dCV
 uqa
 uqa
-uqa
+cbr
 bpD
 fyf
 fyf
