@@ -73,7 +73,7 @@ SUBSYSTEM_DEF(shuttle)
 		if(!P.contains)
 			continue
 		supply_packs[P.type] = P
-/* Warnings for lacking docking points disabled for now. Causes error message each time the server loads, annoying.
+// Warnings for lacking docking points can't be commented out without causing linter stop. Obsolete ?
 	initial_load()
 
 	if(!arrivals)
@@ -86,7 +86,6 @@ SUBSYSTEM_DEF(shuttle)
 		WARNING("No /obj/docking_port/mobile/supply placed on the map!")
 		realtimeofstart = world.realtime
 	return ..()
-*/
 
 /datum/controller/subsystem/shuttle/proc/initial_load()
 	for(var/s in stationary)
