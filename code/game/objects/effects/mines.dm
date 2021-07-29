@@ -68,11 +68,12 @@
 		return
 
 	to_chat(user, "<span class='notice'>You start arming the [src]...</span>")
-	if(do_after(user, arming_time, target = src))
-		new mine_type(plantspot)
-		to_chat(user, "<span class='notice'>You plant and arm the [src].</span>")
-		log_combat(user, src, "planted and armed")
-		qdel(src)
+	if(!do_after(user, arming_time, target = src))
+		return
+	new mine_type(plantspot)
+	to_chat(user, "<span class='notice'>You plant and arm the [src].</span>")
+	log_combat(user, src, "planted and armed")
+	qdel(src)
 
 /obj/effect/mine
 	name = "dummy mine"
