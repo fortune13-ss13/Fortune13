@@ -25,7 +25,7 @@
 	name = "deployable sledgehammer smart mine"
 	desc = "An unarmed smart heavy stun mine designed to be hard to disarm."
 	mine_type = /obj/effect/mine/stun/smart/heavy
-	arming_time = 50
+	arming_time = 5 SECONDS
 
 /obj/item/deployablemine/shrapnel
 	name = "deployable Sharpnel  mine"
