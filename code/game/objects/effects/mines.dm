@@ -3,7 +3,7 @@
 	desc = "An unarmed landmine. It can be planted to arm it."
 	icon_state = "uglymine"
 	var/mine_type = /obj/effect/mine
-	var/arming_time = 30
+	var/arming_time = 3 SECONDS
 
 /obj/item/deployablemine/stun
 	desc = "An unarmed stun mine. It can be planted to arm it."
