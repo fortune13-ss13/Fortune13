@@ -84,7 +84,7 @@
 	icon_state = "uglymine"
 	var/triggered = FALSE
 	var/smartmine = 0
-	var/disarm_time = 200
+	var/disarm_time = 20 SECONDS
 	var/disarm_product = /obj/item/deployablemine // ie what drops when the mine is disarmed
 
 /obj/effect/mine/attackby(obj/I, mob/user, params)
