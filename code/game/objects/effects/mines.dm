@@ -28,8 +28,8 @@
 	arming_time = 5 SECONDS
 
 /obj/item/deployablemine/shrapnel
-	name = "deployable Sharpnel  mine"
-	desc = "An unarmed sharpnel  mine designed to spray lead everywhere and  be hard to disarm."
+	name = "deployable shrapnel mine"
+	desc = "An unarmed shrapnel mine designed to spray lead everywhere and be hard to disarm."
 	mine_type = /obj/effect/mine/shrapnel
 	arming_time = 5 SECONDS
 
@@ -52,25 +52,20 @@
 	desc = "An unarmed mine that releases N2O into the air when triggered. Nighty Night!"
 	mine_type = /obj/effect/mine/gas/n2o
 
-/obj/item/deployablemine/afterattack(atom/plantspot, mob/user, proximity)
+/obj/item/deployablemine/afterattack(atom/plant_spot, mob/user, proximity)
+	. = ..()
 	if(!proximity)
 		return
-
-	if(!istype(plantspot,/turf/open)) // you can't plant a mine inside a wall or on a mob
+	if(!isturf(plant_spot))
 		return
-
-	if(isspaceturf(plantspot))
-		to_chat(user, "<span class='warning'>you cannot plant a mine in space!</span>")
-		return
-
-	if((istype(plantspot,/turf/open/lava)) || (istype(plantspot,/turf/open/chasm)))
+	var/turf/plant_turf = plant_spot
+	if(!plant_turf.can_plant_mine)
 		to_chat(user, "<span class='warning'>You can't plant the mine here!</span>")
 		return
-
 	to_chat(user, "<span class='notice'>You start arming the [src]...</span>")
-	if(!do_after(user, arming_time, target = src))
+	if(!do_after(user, arming_time, target = plant_turf))
 		return
-	new mine_type(plantspot)
+	new mine_type(plant_turf)
 	to_chat(user, "<span class='notice'>You plant and arm the [src].</span>")
 	log_combat(user, src, "planted and armed")
 	qdel(src)
@@ -82,10 +77,11 @@
 	anchored = TRUE
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "uglymine"
+	/// We manually check to see if we've been triggered in case multiple atoms cross us in the time between the mine being triggered and it actually deleting, to avoid a race condition with multiple detonations
 	var/triggered = FALSE
-	var/smartmine = 0
+	var/smart_mine = FALSE
 	var/disarm_time = 20 SECONDS
-	var/disarm_product = /obj/item/deployablemine // ie what drops when the mine is disarmed
+	var/disarm_product = /obj/item/deployablemine // The item dropped on disarm.
 
 /obj/effect/mine/attackby(obj/I, mob/user, params)
 	if(istype(I, /obj/item/multitool))
@@ -94,6 +90,8 @@
 			to_chat(user, "<span class='notice'>You disarm the [src].</span>")
 			new disarm_product(src.loc)
 			qdel(src)
+			return
+	return ..()
 
 /obj/effect/mine/proc/mineEffect(mob/victim)
 	to_chat(victim, "<span class='danger'>*click*</span>")
@@ -102,6 +100,7 @@
 	if(!isturf(loc) || AM.throwing || (AM.movement_type & (FLYING | FLOATING)) || !AM.has_gravity())
 		return
 	. = ..()
+
 	if(ismob(AM))
 		checksmartmine(AM)
 	else
@@ -109,9 +108,12 @@
 
 /obj/effect/mine/proc/checksmartmine(mob/target)
 	if(target)
-		if(!(target && HAS_TRAIT(target, TRAIT_MINDSHIELD)))
-			triggermine(target)
-		if(smartmine == 0 || istype(target.get_item_by_slot(ITEM_SLOT_HEAD), /obj/item/clothing/head/foilhat)) //tinfoil hat prevents detection of implants
+		if(smart_mine) // Smart mine
+			if(!HAS_TRAIT(target, TRAIT_MINDSHIELD)) // Target doesn't have a mindshield
+				triggermine(target)
+			else if(istype(target.get_item_by_slot(ITEM_SLOT_HEAD), /obj/item/clothing/head/foilhat)) // Has mindshield AND tinfoil hat
+				triggermine(target)
+		else // Dumb mine
 			triggermine(target)
 
 /obj/effect/mine/proc/triggermine(mob/victim)
@@ -122,7 +124,7 @@
 	s.set_up(3, 1, src)
 	s.start()
 	mineEffect(victim)
-	triggered = 1
+	triggered = TRUE
 	SEND_SIGNAL(src, COMSIG_MINE_TRIGGERED, victim)
 	qdel(src)
 
@@ -130,25 +132,35 @@
 	. = ..()
 	triggermine()
 
+/* Explosive Mines */
 /obj/effect/mine/explosive
 	name = "explosive mine"
+	disarm_product = /obj/item/deployablemine/explosive
+	disarm_time = 30
 	var/range_devastation = 0
 	var/range_heavy = 1
 	var/range_light = 2
 	var/range_flash = 3
-	disarm_product = /obj/item/deployablemine/explosive
-	disarm_time = 30
 
+/obj/effect/mine/explosive/mineEffect(mob/victim)
+	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
+
+/* Stun Mines */
 /obj/effect/mine/stun
 	name = "stun mine"
+	disarm_product = /obj/item/deployablemine/stun
 	var/stun_time = 150
 	var/damage = 0
-	disarm_product = /obj/item/deployablemine/stun
+
+/obj/effect/mine/stun/mineEffect(mob/living/victim)
+	if(isliving(victim))
+		victim.adjustStaminaLoss(stun_time)
+		victim.adjustBruteLoss(damage)
 
 /obj/effect/mine/stun/smart
 	name = "smart stun mine"
 	desc = "An advanced mine with IFF features, capable of ignoring people with mindshield implants."
-	smartmine = 1
+	smart_mine = TRUE
 	disarm_time = 250
 	disarm_product = /obj/item/deployablemine/smartstun
 
@@ -164,27 +176,25 @@
 	damage = 40
 	disarm_product = /obj/item/deployablemine/heavy
 
-
-
-/obj/effect/mine/stun/mineEffect(mob/living/victim)
-	if(isliving(victim))
-		victim.adjustStaminaLoss(stun_time)
-		victim.adjustBruteLoss(damage)
-
+/* Shrapnel Mines */
 /obj/effect/mine/shrapnel
 	name = "shrapnel mine"
+	disarm_time = 30
+	disarm_product = /obj/item/deployablemine/shrapnel
 	var/shrapnel_type = /obj/item/projectile/bullet/shrapnel
 	var/shrapnel_magnitude = 3
-	disarm_time = 30
-	disarm_product = /obj/item/deployablemine/sharpnel
+	var/explosive = TRUE
 
 /obj/effect/mine/shrapnel/mineEffect(mob/victim)
 	AddComponent(/datum/component/pellet_cloud, projectile_type=shrapnel_type, magnitude=shrapnel_magnitude)
+	if(explosive)
+		explosion(loc, 0, 0, 2, 2)
 
 /obj/effect/mine/shrapnel/sting
 	name = "stinger mine"
 	shrapnel_type = /obj/item/projectile/bullet/pellet/stingball
 
+/* Meme mine */
 /obj/effect/mine/kickmine
 	name = "kick mine"
 
@@ -193,31 +203,35 @@
 		to_chat(victim, "<span class='userdanger'>You have been kicked FOR NO REISIN!</span>")
 		qdel(victim.client)
 
-
+/* Gas Mines */
 /obj/effect/mine/gas
 	name = "oxygen mine"
+	disarm_product = /obj/item/deployablemine/gas
 	var/gas_amount = 360
 	var/gas_type = "o2"
-	disarm_product = /obj/item/deployablemine/gas
 
 /obj/effect/mine/gas/mineEffect(mob/victim)
 	atmos_spawn_air("[gas_type]=[gas_amount]")
 
-
 /obj/effect/mine/gas/plasma
-	name = "incendiary mine"
+	name = "incidiery mine"
 	gas_type = "plasma"
 	disarm_product = /obj/item/deployablemine/plasma
 
-
 /obj/effect/mine/gas/n2o
-	name = "knockout mine"
+	name = "\improper N2O mine"
 	gas_type = "n2o"
 	disarm_product = /obj/item/deployablemine/sleepy
 
+/* Sound mines */
+/obj/effect/mine/sound
+	name = "interesting mine"
+	var/sound = 'sound/effects/snap.ogg'
 
+/obj/effect/mine/sound/mineEffect(mob/victim)
+	playsound(loc, sound, 100, 1)
 
-
+/* Pickups */
 /obj/effect/mine/pickup
 	name = "pickup"
 	desc = "pick me up"
