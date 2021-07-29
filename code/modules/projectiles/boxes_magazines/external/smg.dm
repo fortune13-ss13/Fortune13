@@ -13,7 +13,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/cg45/empty
-	start_empty = 1
+	start_empty = TRUE
 	
 /obj/item/ammo_box/magazine/greasegun
 	name = "Grease gun magazine (.45)"
@@ -35,7 +35,7 @@
 	max_ammo = 20
 
 /obj/item/ammo_box/magazine/uzim9mm/rockwell/empty
-	start_empty = 1
+	start_empty = TRUE
 
 /obj/item/ammo_box/magazine/uzim9mm
 	name = "Uzi magazine (9mm)"
