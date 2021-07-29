@@ -154,10 +154,11 @@
 /datum/crafting_recipe/explosivemine
 	name = "explosive Mine"
 	result = /obj/item/deployablemine/explosive
-	reqs = list(/obj/item/grenade/homemade/firebomb = 1,
-				/obj/item/stack/tile = 1,
-				/obj/item/stack/ore/blackpowder     = 3
-				)
+	reqs = list(
+		/obj/item/grenade/homemade/firebomb = 1,
+		/obj/item/stack/tile = 1,
+		/obj/item/stack/ore/blackpowder = 3,
+		)
 	time = 15
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
