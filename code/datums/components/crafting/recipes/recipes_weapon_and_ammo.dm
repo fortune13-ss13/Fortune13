@@ -140,7 +140,7 @@
 
 /datum/crafting_recipe/shrapnelmine
 	name = "Shrapnel Mine"
-	result = /obj/item/deployablemine/shrapnel
+	result = /obj/item/deployablemine/sharpnel
 	reqs = list(/obj/item/grenade/homemade/firebomb = 1,
 				/obj/item/stack/tile = 1,
 				/obj/item/ammo_casing/a22 = 5
@@ -163,6 +163,18 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	always_availible = FALSE
+
+
+/datum/crafting_recipe/lance
+	name = "Explosive Spear (Grenade)"
+	result = /obj/item/twohanded/spear
+	reqs = list(/obj/item/twohanded/spear = 1,
+				/obj/item/grenade = 1)
+	parts = list(/obj/item/twohanded/spear = 1,
+				/obj/item/grenade = 1)
+	time = 15
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
 
 /////////////////////////
 ///POWER CELL RECYCLING//

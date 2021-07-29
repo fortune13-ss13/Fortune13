@@ -771,7 +771,6 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/shrapnelmine,/datum/crafting_recipe/explosivemine)
 
-
 /*
 /obj/item/book/granter/crafting_recipe/blueprint/fnfal
 	name = "fn fal blueprint"
