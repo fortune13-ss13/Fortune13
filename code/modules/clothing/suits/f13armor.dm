@@ -622,7 +622,7 @@
 	desc = "(IV) A robust cloak made from layered gecko skin patched with various bits of leather from dogs and other animals, able to absorb more force than one would expect from leather."
 	icon = 'icons/fallout/objects/clothing/suits.dmi'
 	icon_state = "armor_tribaloutcast"
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit.dmi'
 	item_state = "armor_tribaloutcast"
 	armor = list("tier" = 4, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
 	strip_delay = 40
@@ -634,7 +634,7 @@
 	desc = "(IV) Thick layered leather, patched together."
 	icon = 'icons/fallout/objects/clothing/hats.dmi'
 	icon_state = "hood_tribaloutcast"
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/head.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	item_state = "hood_tribaloutcast"
 	armor = list("tier" = 4, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR

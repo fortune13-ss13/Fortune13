@@ -42,7 +42,7 @@
 	..()
 	new /obj/item/radio/headset/headset_med(src)
 	new /obj/item/defibrillator/loaded(src)
-	new /obj/item/clothing/gloves/color/latex/nitrile(src)
+	new /obj/item/clothing/gloves/color/latex(src)
 	new /obj/item/storage/belt/medical(src)
 	new /obj/item/clothing/glasses/hud/health(src)
 	return
@@ -54,12 +54,7 @@
 
 /obj/structure/closet/secure_closet/CMO/PopulateContents()
 	..()
-	new /obj/item/clothing/neck/cloak/cmo(src)
-	new /obj/item/clothing/head/beret/cmo(src)
 	new /obj/item/storage/backpack/duffelbag/med(src)
-	new /obj/item/clothing/suit/bio_suit/cmo(src)
-	new /obj/item/clothing/head/bio_hood/cmo(src)
-	new /obj/item/clothing/suit/toggle/labcoat/cmo(src)
 	new /obj/item/clothing/under/rank/medical/chief_medical_officer(src)
 	new /obj/item/clothing/under/rank/medical/chief_medical_officer/skirt(src)
 	new /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck(src)
@@ -81,8 +76,7 @@
 	new /obj/item/circuitboard/machine/techfab/department/medical(src)
 	new /obj/item/storage/photo_album/CMO(src)
 	new	/obj/item/storage/lockbox/medal/medical(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/cmo(src)
-	new /obj/item/clothing/head/beret/cmo/blue(src)
+
 
 /obj/structure/closet/secure_closet/animal
 	name = "animal control"

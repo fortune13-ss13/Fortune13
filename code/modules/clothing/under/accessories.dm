@@ -92,12 +92,6 @@
 	icon_state = "sheepskin_vest"
 	item_state = "sheepskin_vest"
 
-/obj/item/clothing/accessory/maidapron
-	name = "maid apron"
-	desc = "The best part of a maid costume."
-	icon_state = "maidapron"
-	item_state = "maidapron"
-	minimize_when_attached = FALSE
 
 //////////
 //Medals//

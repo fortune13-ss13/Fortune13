@@ -201,10 +201,10 @@ Practitioner
 	name = "Emergency Physician"
 	suit = 		/obj/item/clothing/suit/toggle/labcoat/f13/followers
 	mask = 		/obj/item/clothing/mask/surgical
-	gloves = 	/obj/item/clothing/gloves/color/latex/nitrile
+	gloves = 	/obj/item/clothing/gloves/color/latex
 	glasses = 	/obj/item/clothing/glasses/hud/health
 	backpack_contents = list(
-		/obj/item/clothing/suit/apron/surgical=1,
+		/obj/item/clothing/suit/hooded/surgical=1,
 		/obj/item/reagent_containers/medspray/synthflesh=1,
 		/obj/item/healthanalyzer/advanced=1,)
 
@@ -303,7 +303,7 @@ Follower Volunteer
 
 /datum/outfit/loadout/volunteer_mechanic
 	name = "Mechanic"
-	suit = 		/obj/item/clothing/suit/apron
+	neck = 		/obj/item/clothing/neck/apron/labor
 	head = 		/obj/item/clothing/head/hardhat/orange
 	belt = 		/obj/item/storage/belt/utility/full
 	gloves = 	/obj/item/clothing/gloves/color/yellow

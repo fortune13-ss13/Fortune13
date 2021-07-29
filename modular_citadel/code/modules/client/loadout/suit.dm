@@ -3,26 +3,6 @@
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
 	slot = SLOT_WEAR_SUIT
 
-/datum/gear/suit/poncho
-	name = "Poncho"
-	path = /obj/item/clothing/suit/poncho
-	cost = 2
-
-/datum/gear/suit/ponchogreen
-	name = "Green poncho"
-	path = /obj/item/clothing/suit/poncho/green
-	cost = 2
-
-/datum/gear/suit/ponchored
-	name = "Red poncho"
-	path = /obj/item/clothing/suit/poncho/red
-	cost = 2
-
-/datum/gear/suit/redhood
-	name = "Red cloak"
-	path = /obj/item/clothing/suit/hooded/cloak/david
-	cost = 3
-
 /datum/gear/suit/jacketbomber
 	name = "Bomber jacket"
 	path = /obj/item/clothing/suit/jacket
@@ -34,12 +14,6 @@
 	path = /obj/item/clothing/suit/bomber
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 3
-
-/datum/gear/suit/jacketflannelblack // all of these are reskins of bomber jackets but with the vibe to make you look like a true lumberjack
-	name = "Black flannel jacket"
-	path = /obj/item/clothing/suit/jacket/flannel
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 2
 
 /datum/gear/suit/jacketflannelred
 	name = "Red flannel jacket"
@@ -70,12 +44,6 @@
 	path = /obj/item/clothing/suit/jacket/leather/overcoat
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 3
-
-/datum/gear/suit/jacketpuffer
-	name = "Puffer jacket"
-	path = /obj/item/clothing/suit/jacket/puffer
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 2
 
 /datum/gear/suit/vestpuffer
 	name = "Puffer vest"
@@ -113,22 +81,8 @@
 	name = "Red Christmas Coat"
 	path = /obj/item/clothing/suit/hooded/wintercoat/christmascoatr
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-
-/datum/gear/suit/christmascoatg
-	name = "Green Christmas Coat"
-	path = /obj/item/clothing/suit/hooded/wintercoat/christmascoatg
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-
-/datum/gear/suit/christmascoatrg
-	name = "Red and Green Christmas Coat"
-	path = /obj/item/clothing/suit/hooded/wintercoat/christmascoatrg
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
 */
 
-/datum/gear/suit/samurai
-	name = "Samurai Outfit"
-	path = /obj/item/clothing/suit/samurai
-	cost = 3
 // BEGIN_INTERNALS
 // END_INTERNALS
 // BEGIN_FILE_DIR

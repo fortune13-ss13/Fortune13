@@ -656,11 +656,6 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 
-/obj/item/clothing/under/maid/Initialize()
-	. = ..()
-	var/obj/item/clothing/accessory/maidapron/A = new (src)
-	attach_accessory(A)
-
 /obj/item/clothing/under/draculass
 	name = "draculass coat"
 	desc = "A dress inspired by the ancient \"Victorian\" era."

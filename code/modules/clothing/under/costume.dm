@@ -125,11 +125,6 @@
 	can_adjust = FALSE
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
-/obj/item/clothing/under/costume/maid/Initialize()
-	. = ..()
-	var/obj/item/clothing/accessory/maidapron/A = new (src)
-	attach_accessory(A)
-
 /obj/item/clothing/under/costume/singer
 	desc = "Just looking at this makes you want to sing."
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
@@ -355,3 +350,12 @@
 	name = "Sakura Kimono'"
 	icon_state = "sakura_kimono"
 	item_state = "sakura_kimono"
+
+/* CODE ARCHIVE
+
+TO ATTACH ACCESSORY EXAMPLE
+/obj/item/clothing/under/costume/maid/Initialize()
+	. = ..()
+	var/obj/item/clothing/accessory/maidapron/A = new (src)
+	attach_accessory(A)
+*/

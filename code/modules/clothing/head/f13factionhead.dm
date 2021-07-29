@@ -227,7 +227,7 @@
 	name = "legion helmet template"
 	desc = "should not exist."
 	icon = 'icons/fallout/objects/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/head.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
 	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
@@ -371,7 +371,7 @@
 	name = "servant headwear"
 	desc = "A simple uncoloured linen cloth wrapped around the head, the mark of a servant slave trained in household work."
 	icon = 'icons/fallout/objects/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/head.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "legion-servant"
 	item_state = "legion-servant"
 	flags_inv = HIDEEARS|HIDEFACE
@@ -381,7 +381,7 @@
 	name = "auxilia headwear"
 	desc = "A soft red cap with a black band, used by female Auxilia outside camp."
 	icon = 'icons/fallout/objects/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/head.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "legion-aux"
 	item_state = "legion-aux"
 	flags_inv = HIDEEARS|HIDEFACE
@@ -391,7 +391,7 @@
 	name = "Legion combat helmet"
 	desc = "(V) An old military grade pre-war helmet, repainted to the colour scheme of Caesar's Legion."
 	icon = 'icons/fallout/objects/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/head.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "legion-combat"
 	item_state = "legion-combat"
 
@@ -399,7 +399,7 @@
 	name = "reinforced Legion combat helmet"
 	desc = "(VI) A pre-war helmet in good condition, made from advanced materialas and paintend in the colors of Caesar's Legion."
 	icon = 'icons/fallout/objects/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/head.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "legion-combat2"
 	item_state = "legion-combat2"
 

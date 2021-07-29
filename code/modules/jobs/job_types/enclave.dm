@@ -92,8 +92,8 @@ PEACEKEEPERS
 
 /datum/outfit/loadout/captain
 	name = "Captain"
-	neck =			/obj/item/clothing/neck/cloak/enclavecaptain
-	suit_store =	/obj/item/gun/energy/laser/plasma/glock
+	neck = /obj/item/clothing/neck/mantle/commander
+	suit_store = /obj/item/gun/energy/laser/plasma/glock
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc=2,
 		/obj/item/stock_parts/cell/ammo/ec=2)

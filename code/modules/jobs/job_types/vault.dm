@@ -59,19 +59,19 @@ Overseer
 
 	implants = list(/obj/item/implant/mindshield)
 
-	id = 			/obj/item/card/id/gold
-	uniform = 		/obj/item/clothing/under/f13/vault13
-	shoes = 		/obj/item/clothing/shoes/jackboots
-	glasses = 		/obj/item/clothing/glasses/sunglasses
-	ears = 			/obj/item/radio/headset/headset_overseer
-	neck = 			/obj/item/clothing/neck/cloak/overseer
-	backpack = 		/obj/item/storage/backpack/satchel/leather
+	id = /obj/item/card/id/gold
+	uniform = /obj/item/clothing/under/f13/vault13
+	shoes = /obj/item/clothing/shoes/jackboots
+	glasses = /obj/item/clothing/glasses/sunglasses
+	ears = /obj/item/radio/headset/headset_overseer
+	neck = /obj/item/clothing/neck/mantle/overseer
+	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/storage/box/ids = 1,
-
 		/obj/item/gun/ballistic/automatic/pistol/n99/executive = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
-		/obj/item/crowbar = 1)
+		/obj/item/crowbar = 1,
+		)
 
 /*
 Head of Security

@@ -150,6 +150,7 @@ GLOBAL_LIST_INIT(storage_bartender_can_hold, typecacheof(list(
 	/obj/item/kitchen,
 	/obj/item/reagent_containers/food/drinks/bottle,
 	/obj/item/gun/ballistic/revolver/detective,
+	/obj/item/gun/ballistic/revolver/m29/snub,
 	)))
 
 GLOBAL_LIST_INIT(storage_kitchen_can_hold, typecacheof(list(
@@ -168,7 +169,7 @@ GLOBAL_LIST_INIT(storage_crafter_can_hold, typecacheof(list(
 GLOBAL_LIST_INIT(storage_medical_can_hold, typecacheof(list(
 	/obj/item/clothing/mask/surgical,
 	/obj/item/clothing/gloves/color/latex,
-	/obj/item/clothing/gloves/f13/crudemedical,
+	/obj/item/clothing/gloves/legion/crude_medical,
 	/obj/item/healthanalyzer,
 	/obj/item/reagent_containers/dropper,
 	/obj/item/reagent_containers/glass/bottle,

@@ -904,7 +904,7 @@ commented out pending rework*/
 	id = /obj/item/card/id/dogtag/legforgemaster
 	glasses = /obj/item/clothing/glasses/welding
 	belt = /obj/item/storage/belt/utility/waster/forgemaster
-	suit = /obj/item/clothing/suit/armor/f13/legion/forgemaster
+	neck = /obj/item/clothing/neck/apron/labor/forge
 	gloves = /obj/item/clothing/gloves/legion/forgemaster
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	backpack_contents = list(
@@ -989,7 +989,7 @@ commented out pending rework*/
 
 /datum/outfit/loadout/auxassist
 	name = "Treasurer"
-	neck = /obj/item/clothing/neck/cloak/treasurer
+	neck = /obj/item/clothing/neck/mantle/treasurer
 	backpack_contents = list(
 		/obj/item/folder/red = 1,
 		/obj/item/paper/natural = 2,
@@ -1001,8 +1001,8 @@ commented out pending rework*/
 
 /datum/outfit/loadout/auxmedicus
 	name = "Medicus (Surgeon)"
-	suit = /obj/item/clothing/suit/armor/f13/medicus
-	gloves = /obj/item/clothing/gloves/f13/crudemedical
+	neck = /obj/item/clothing/neck/apron/medicus
+	gloves = /obj/item/clothing/gloves/legion/crude_medical
 	belt = /obj/item/storage/belt/medical/legion
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
@@ -1063,7 +1063,7 @@ commented out pending rework*/
 	name = "Servant"
 	head = /obj/item/clothing/head/f13/legion/servant
 	uniform	= /obj/item/clothing/under/f13/campfollowermale
-	gloves = /obj/item/clothing/gloves/f13/crudemedical
+	gloves = /obj/item/clothing/gloves/legion/crude_medical
 	shoes =	/obj/item/clothing/shoes/roman
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(

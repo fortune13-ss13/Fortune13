@@ -325,13 +325,6 @@ obj/item/clothing/neck/neckerchief
 	item_color = "cptpatriotscarf"
 	desc = "A stylish scarf. This one has a camoflage pattern popularized during the great war."
 
-/obj/item/clothing/neck/corditeclamp
-	name = "Cordite Clamps Y-72"
-	desc = "People say having a glass jaw is a bad thing but when that jaw is a RobCo alloy-infused combat facial prosthetic made for the U.S army and the American Elite, they are inclined to think twice about throwing a punch. At least a bare fisted one."
-	icon_state = "corditeclamps"
-	item_color = "corditeclamps"
-	item_state = "corditeclamps"
-
 /obj/item/clothing/neck/jamrock
 	name = "Eldritch Tie"
 	desc = "The necktie is adorned with a garish pattern. It's disturbingly vivid. Somehow you feel as if it would be wrong to ever take it off. It's your friend now. You will betray it if you change it for some boring scarf."
@@ -339,11 +332,3 @@ obj/item/clothing/neck/neckerchief
 	item_color = "eldritch_tie"
 	item_state = "eldritch_tie"
 	w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/clothing/neck/cloak/enclavecaptain
-	name = "captains cloak"
-	desc = "A fine cloak marking the wearer as a Captain of the Enclave."
-	icon_state = "cloak_enclave"
-	item_state = "cloak_enclave"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS

@@ -188,9 +188,9 @@
 /datum/outfit/cat_butcher
 	name = "Cat Butcher Uniform"
 	uniform = /obj/item/clothing/under/rank/medical/doctor/green
-	suit = /obj/item/clothing/suit/apron/surgical
+	suit = /obj/item/clothing/suit/hooded/surgical
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	gloves = /obj/item/clothing/gloves/color/latex
 	ears = /obj/item/radio/headset
 	back = /obj/item/storage/backpack/satchel/med
 	id = /obj/item/card/id

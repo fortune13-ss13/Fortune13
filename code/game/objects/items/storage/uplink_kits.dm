@@ -294,7 +294,6 @@
 
 /obj/item/storage/box/syndie_kit/chameleon/PopulateContents()
 	new /obj/item/clothing/under/chameleon/syndicate(src)
-	new /obj/item/clothing/suit/chameleon/syndicate(src)
 	new /obj/item/clothing/gloves/chameleon/insulated/syndicate(src)
 	new /obj/item/clothing/shoes/chameleon/syndicate(src)
 	new /obj/item/clothing/glasses/chameleon/syndicate(src)
@@ -304,7 +303,6 @@
 	new /obj/item/radio/headset/chameleon/syndicate(src)
 	new /obj/item/stamp/chameleon/syndicate(src)
 	new /obj/item/pda/chameleon/syndicate(src)
-	new /obj/item/clothing/neck/cloak/chameleon/syndicate(src)
 
 //5*(2*4) = 5*8 = 45, 45 damage if you hit one person with all 5 stars.
 //Not counting the damage it will do while embedded (2*4 = 8, at 15% chance)

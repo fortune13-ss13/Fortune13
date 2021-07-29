@@ -555,30 +555,10 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
 
-/datum/crafting_recipe/mantle
-	name = "Hide mantle"
-	result = /obj/item/clothing/suit/f13/mantle_liz
-	reqs = list(/obj/item/stack/sheet/leather = 3,
-				/obj/item/stack/sheet/hay = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
-
-/datum/crafting_recipe/poncho
-	name = "Poncho"
-	result = /obj/item/clothing/suit/poncho
-	reqs = list(/obj/item/stack/sheet/cloth = 3,
-				/obj/item/stack/sheet/hay = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
-
 /datum/crafting_recipe/sombrero
 	name = "Sombrero"
 	result = /obj/item/clothing/head/sombrero
-	reqs = list(/obj/item/stack/sheet/hay = 4)
+	reqs = list(/obj/item/stack/sheet/hay = 4,)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
@@ -592,7 +572,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
 
-/datum/crafting_recipe/cloak
+/datum/crafting_recipe/tailor/cloak
 	name = "Brown cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/desert
 	reqs = list(/obj/item/stack/sheet/leather = 3)
@@ -600,10 +580,73 @@
 	time = 25
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
+// Mantles and aprons
+
+
+/datum/crafting_recipe/tailor/peltfur
+	name = "Fur pelt"
+	result = /obj/item/clothing/neck/mantle/peltfur
+	reqs = list(/obj/item/stack/sheet/leather = 4,)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+/datum/crafting_recipe/tailor/peltfur
+	name = "Gecko mantle"
+	result = /obj/item/clothing/neck/mantle/gecko
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+/datum/crafting_recipe/tailor/raggedmantle
+	name = "Ragged mantle"
+	result = /obj/item/clothing/neck/mantle/ragged
+	reqs = list(/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/sheet/hay = 2,)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+/datum/crafting_recipe/tailor/cloakbrown
+	name = "Brown mantle"
+	result = /obj/item/clothing/neck/mantle/brown
+	time = 50
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/leather = 2,)
+
+/datum/crafting_recipe/tailor/cloakgray
+	name = "Gray mantle"
+	result = /obj/item/clothing/neck/mantle/gray
+	time = 50
+	reqs = list(/obj/item/stack/sheet/cloth = 4,)
+
+/datum/crafting_recipe/tailor/raggedmantle
+	name = "Ragged mantle"
+	result = /obj/item/clothing/neck/mantle/ragged
+	reqs = list(/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/sheet/hay = 2,)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
+
+/datum/crafting_recipe/tailor/poncho
+	name = "Poncho"
+	result = /obj/item/clothing/neck/mantle/poncho
+	reqs = list(/obj/item/stack/sheet/cloth = 3,
+				/obj/item/stack/sheet/hay = 2,)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_WASTELAND
 
 //General clothing
 
-/datum/crafting_recipe/jeans
+/datum/crafting_recipe/tailor/jeans
 	name = "Denim Disasterpiece"
 	result = /obj/item/clothing/under/pants/youngfolksjeans
 	reqs = list(/obj/item/stack/sheet/cloth = 2)

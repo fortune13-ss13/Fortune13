@@ -604,7 +604,7 @@ Mayor
 	name = "Diner"
 	glasses = /obj/item/clothing/glasses/orange
 	uniform = /obj/item/clothing/under/f13/brahminf
-	suit = /obj/item/clothing/suit/apron/chef
+	neck = /obj/item/clothing/neck/apron/chef
 	gloves = /obj/item/clothing/gloves/color/white
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
 
@@ -673,7 +673,7 @@ Mayor
 /datum/outfit/loadout/bum
 	name = "Bum"
 	mask = /obj/item/clothing/mask/facewrap
-	suit = /obj/item/clothing/suit/poncho
+	neck = /obj/item/clothing/neck/mantle/poncho
 	uniform = /obj/item/clothing/under/f13/rag
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/f13/rag

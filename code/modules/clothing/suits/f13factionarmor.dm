@@ -169,7 +169,7 @@
 	name = "legion armor template"
 	desc = "should not exist. Bugreport."
 	icon = 'icons/fallout/objects/clothing/suits.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit.dmi'
 	icon_state = "legrecruit"
 	item_state = "legarmor"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
@@ -179,24 +179,6 @@
 /obj/item/clothing/suit/armor/f13/legion/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
-
-
-/obj/item/clothing/suit/armor/f13/legion/forgemaster
-	name = "forgemaster apron"
-	desc = "A heavy leather apron designed for protecting the user when metalforging. The bull insignia marks the wearer as a Forgemaster."
-	icon = 'icons/fallout/objects/clothing/suits.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
-	icon_state = "legion-opifex"
-	item_state = "legion-opifex"
-	blood_overlay_type = "armor"
-	allowed = list(
-		/obj/item/crowbar,
-		/obj/item/screwdriver,
-		/obj/item/weldingtool,
-		/obj/item/wirecutters,
-		/obj/item/wrench,
-		/obj/item/twohanded,
-		)
 
 /obj/item/clothing/suit/armor/f13/legion/recruit
 	name = "legion recruit armor"
@@ -293,7 +275,7 @@
 	name = "Legion combat armor"
 	desc = "(V) Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
 	icon = 'icons/fallout/objects/clothing/suits.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit.dmi'
 	icon_state = "legion-combat"
 	item_state = "legion-combat"
 
@@ -301,36 +283,17 @@
 	name = "reinforced Legion combat armor"
 	desc = "(VI) Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
 	icon = 'icons/fallout/objects/clothing/suits.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit.dmi'
 	icon_state = "legion-combat2"
 	item_state = "legion-combat2"
-
-/obj/item/clothing/suit/armor/f13/medicus
-	name = "medicus apron"
-	desc = "The waxed cotton apron of a Medicus, marked with a red bull insignia."
-	icon = 'icons/fallout/objects/clothing/suits.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
-	icon_state = "legion-medicus"
-	item_state = "legion-medicus"
-	armor = list("energy" = 0, "bomb" = 0, "bio" = 20, "rad" = 0, "fire" = 0, "acid" = 0)
-	allowed = list(/obj/item/scalpel, /obj/item/surgical_drapes, /obj/item/cautery, /obj/item/hemostat, /obj/item/retractor)
 
 /obj/item/clothing/suit/armor/f13/slavelabor
 	name = "old leather strips"
 	desc = "Worn leather strips, used as makeshift protection from chafing and sharp stones by labor slaves."
 	icon = 'icons/fallout/objects/clothing/suits.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit.dmi'
 	icon_state = "legion-slaveleather"
 	item_state = "legion-slaveleather"
-
-/obj/item/clothing/neck/cloak/treasurer
-	name = "treasurers cloak"
-	desc = "The grey and black cloak with gold thread trimming shows the wearer is entrusted with matters of money and records."
-	icon = 'icons/obj/clothing/cloaks.dmi'
-	icon_state = "legtrescloak"
-	item_state = "legtrescloak"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /*
 /obj/item/clothing/suit/armor/f13/legion/recruit/scout
@@ -358,7 +321,7 @@
 	icon_state = "vest-utility"
 	item_state = "vest-utility"
 	icon = 'icons/fallout/objects/clothing/suits.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit.dmi'
 	armor = list("tier" = 2, "energy" = 5, "bomb" = 10, "bio" = 10, "rad" = 20, "fire" = 30, "acid" = 0)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 

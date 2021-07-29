@@ -679,7 +679,7 @@
 	desc = "Fine handcrafted tribal clothing, now torn and faded. A simple lointcloth that comes with a piece of cloth to cover the chest with as well."
 	icon = 'icons/fallout/objects/clothing/uniforms.dmi'
 	icon_state = "clothing_tribalout"
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/uniform.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
 	item_state = "clothing_tribalout"
 	can_adjust = TRUE
 

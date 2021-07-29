@@ -100,13 +100,7 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
-/obj/item/clothing/gloves/f13/crudemedical
-	name = "crude medical gloves"
-	desc = "Cotton gloves waxed to prevent the blood from soaking through immediatly. Better than nothing."
-	icon_state = "offwhite"
-	item_state = "offwhite"
-	siemens_coefficient = 0.5
-	permeability_coefficient = 0.1
+
 
 /obj/item/clothing/gloves/f13/mutant
 	name = "mutant bracers"
@@ -133,9 +127,9 @@
 
 /obj/item/clothing/gloves/legion
 	name = "leather gloves"
-	desc = "Fingerless leather gloves to improve grip worn by legionaires."
-	icon = 'icons/fallout/objects/clothing/gloves.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/hands.dmi'
+	desc = "Fingerless leather gloves that has become a popular style with legionaires."
+	icon = 'icons/fallout/clothing/gloves.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
 	icon_state = "legion-fingerless"
 	item_state = "legion-fingerless"
 	item_color = null	//So they don't wash.
@@ -171,3 +165,11 @@
 	item_state = "legion-legate"
 	transfer_prints = FALSE
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 35, "energy" = 20, "bomb" = 35, "bio" = 35, "rad" = 35, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/gloves/legion/crude_medical
+	name = "crude medical gloves"
+	desc = "Cotton gloves waxed to prevent the blood from soaking through immediatly. Better than nothing."
+	icon_state = "offwhite"
+	item_state = "offwhite"
+	siemens_coefficient = 0.5
+	permeability_coefficient = 0.1

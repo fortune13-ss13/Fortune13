@@ -6,8 +6,6 @@
 	..()
 	new /obj/item/clothing/neck/petcollar(src) //I considered removing the pet stuff too but eh, who knows. We might get Renault back. Plus I guess you could use that collar for... other means. Aren't you supposed to be guarding the disk?
 	new /obj/item/pet_carrier(src)
-	new /obj/item/clothing/suit/armor/vest/capcarapace(src)
-	new /obj/item/clothing/suit/armor/vest/capcarapace/alt(src)
 	new /obj/item/clothing/head/crown/fancy(src)
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
@@ -24,19 +22,15 @@
 	icon_state = "hop"
 /obj/structure/closet/secure_closet/hop/PopulateContents()
 	..()
-	new /obj/item/clothing/neck/cloak/hop(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel/whimsy(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel/skirt(src)
-	new /obj/item/clothing/head/hopcap(src)
-	new /obj/item/clothing/head/hopcap/beret(src)
 	new /obj/item/cartridge/hop(src)
 	new /obj/item/radio/headset/heads/hop(src)
 	new /obj/item/clothing/shoes/sneakers/brown(src)
 	new /obj/item/storage/box/ids(src)
 	new /obj/item/storage/box/ids(src)
 	new /obj/item/megaphone/command(src)
-	new /obj/item/clothing/suit/armor/vest/alt(src)
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/restraints/handcuffs/cable/zipties(src)
@@ -46,8 +40,7 @@
 	new /obj/item/door_remote/civillian(src)
 	new /obj/item/circuitboard/machine/techfab/department/service(src)
 	new /obj/item/storage/photo_album/HoP(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/hop(src)
-	new /obj/item/clothing/head/hopcap/beret/white(src)
+
 
 /obj/structure/closet/secure_closet/hos
 	name = "\proper head of security's locker"
@@ -55,14 +48,11 @@
 	icon_state = "hos"
 /obj/structure/closet/secure_closet/hos/PopulateContents()
 	..()
-	new /obj/item/clothing/neck/cloak/hos(src)
 	new /obj/item/cartridge/hos(src)
 	new /obj/item/radio/headset/heads/hos(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/parade/female(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/parade(src)
 	new /obj/item/clothing/under/rank/security/officer/blueshirt/seccorp/hoscorp(src)
-	new /obj/item/clothing/suit/armor/vest/leather(src)
-	new /obj/item/clothing/suit/armor/hos(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
@@ -92,11 +82,6 @@
 /obj/structure/closet/secure_closet/warden/PopulateContents()
 	..()
 	new /obj/item/radio/headset/headset_sec(src)
-	new /obj/item/clothing/suit/armor/vest/warden(src)
-	new /obj/item/clothing/head/warden(src)
-	new /obj/item/clothing/head/warden/drill(src)
-	new /obj/item/clothing/head/beret/sec/navywarden(src)
-	new /obj/item/clothing/suit/armor/vest/warden/alt(src)
 	new /obj/item/clothing/under/rank/security/officer/blueshirt/seccorp/wardencorp(src)
 	new /obj/item/clothing/under/rank/security/warden/formal(src)
 	new /obj/item/clothing/under/rank/security/warden/skirt(src)
@@ -164,7 +149,6 @@
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/reagent_containers/spray/pepper(src)
-	new /obj/item/clothing/suit/armor/vest/det_suit(src)
 	new /obj/item/storage/belt/holster/full(src)
 	new /obj/item/pinpointer/crew(src)
 
@@ -247,9 +231,7 @@
 /obj/structure/closet/secure_closet/tac/PopulateContents()
 	..()
 	new /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator(src)
-	new /obj/item/clothing/head/helmet/alt(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
-	new /obj/item/clothing/suit/armor/bulletproof(src)
 
 /obj/structure/closet/secure_closet/lethalshots
 	name = "lethal ammunition and riot staves"
@@ -269,7 +251,6 @@
 
 /obj/structure/closet/secure_closet/labor_camp_security/PopulateContents()
 	..()
-	new /obj/item/clothing/suit/armor/vest(src)
 	new /obj/item/clothing/head/helmet/sec(src)
 	new /obj/item/clothing/under/rank/security/officer(src)
 	new /obj/item/clothing/under/rank/security/officer/skirt(src)

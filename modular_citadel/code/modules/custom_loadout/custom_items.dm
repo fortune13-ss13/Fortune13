@@ -3,71 +3,6 @@
 // Unless there's a digitigrade version make sure you add mutantrace_variation = NONE to all clothing/under and shoes - Pooj
 // Digitigrade stuff is uniform_digi.dmi and digishoes.dmi in icons/mob
 
-/obj/item/clothing/neck/cloak/inferno
-	name = "Kiara's Cloak"
-	desc = "The design on this seems a little too familiar."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "infcloak"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "infcloak"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-
-/obj/item/clothing/neck/petcollar/inferno
-	name = "Kiara's Collar"
-	desc = "A soft black collar that seems to stretch to fit whoever wears it."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "infcollar"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "infcollar"
-	tagname = null
-
-/obj/item/clothing/accessory/medal/steele
-	name = "Insignia Of Steele"
-	desc = "An intricate pendant given to those who help a key member of the Steele Corporation."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "steele"
-	medaltype = "medal-silver"
-
-/obj/item/toy/darksabre
-	name = "Kiara's Sabre"
-	desc = "This blade looks as dangerous as its owner."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "darksabre"
-	item_state = "darksabre"
-	lefthand_file = 'modular_citadel/icons/mob/inhands/stunsword_left.dmi'
-	righthand_file = 'modular_citadel/icons/mob/inhands/stunsword_right.dmi'
-	attack_verb = list("attacked", "struck", "hit")
-
-/obj/item/toy/darksabre/get_belt_overlay()
-	return mutable_appearance('icons/obj/custom.dmi', "darksheath-darksabre")
-
-/obj/item/toy/darksabre/get_worn_belt_overlay(icon_file)
-	return mutable_appearance(icon_file, "darksheath-darksabre")
-
-/obj/item/storage/belt/sabre/darksabre
-	name = "Ornate Sheathe"
-	desc = "An ornate and rather sinister looking sabre sheathe."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "darksheath"
-	item_state = "darksheath"
-	fitting_swords = list(/obj/item/toy/darksabre)
-	starting_sword = /obj/item/toy/darksabre
-
-/obj/item/clothing/suit/armor/vest/darkcarapace
-	name = "Dark Armor"
-	desc = "A dark, non-functional piece of armor sporting a red and black finish."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "darkcarapace"
-	item_state = "darkcarapace"
-	blood_overlay_type = "armor"
-	dog_fashion = /datum/dog_fashion/back
-	mutantrace_variation = NONE
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
 
 /obj/item/lighter/gold
 	name = "engraved zippo"
@@ -119,15 +54,6 @@
 	resistance_flags = FLAMMABLE
 	squeak_override = list('sound/items/bikehorn.ogg'= 1)
 
-/obj/item/clothing/neck/cloak/carrot
-	name = "carrot cloak"
-	desc = "A cloak in the shape and color of a carrot!"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "carrotcloak"
-	item_state = "carrotcloak"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/storage/backpack/satchel/carrot
 	name = "carrot satchel"
@@ -148,16 +74,6 @@
 	attack_verb = list("slapped")
 	resistance_flags = FLAMMABLE
 	squeak_override = list('sound/misc/server-ready.ogg'= 1)
-
-/obj/item/clothing/neck/cloak/festive
-	name = "Celebratory Cloak of Morozko"
-	desc = " It probably will protect from snow, charcoal or elves."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "festive"
-	item_state = "festive"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/mask/luchador/zigfie
 	name = "Alboroto Rosa mask"
@@ -296,16 +212,6 @@
 /obj/item/clothing/neck/petcollar/naomi
 	name = "worn pet collar"
 	desc = "A pet collar that looks well used."
-
-/obj/item/clothing/neck/cloak/green
-	name = "Generic Green Cloak"
-	desc = "This cloak doesn't seem too special."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "wintergreencloak"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "wintergreencloak"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/head/paperhat
 	name = "paperhat"
@@ -532,12 +438,6 @@
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("Goodboye" = "fritz", "Badboye" = "fritz_bad")
 	mutantrace_variation = NONE
-
-/obj/item/clothing/neck/cloak/polychromic/polyce
-	name = "polychromic embroidered cloak"
-	desc = "A fancy cloak embroidered with polychromatic thread in a pattern that reminds one of the wielders of unlimited power."
-	icon_state = "polyce"
-	poly_colors = list("#808080", "#8CC6FF", "#FF3535")
 
 /obj/item/clothing/under/custom/customskirt
 	name = "unzipped atmos skirt"

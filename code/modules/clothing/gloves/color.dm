@@ -221,10 +221,11 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 50)
 
 /obj/item/clothing/gloves/color/latex
-	name = "latex gloves"
-	desc = "Cheap sterile gloves made from latex."
-	icon_state = "latex"
-	item_state = "lgloves"
+	name = "sterile gloves"
+	desc = "Sterile gloves made from some rubbery plastic, likely recycled a dozen times."
+	icon = 'icons/fallout/clothing/gloves.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
+	icon_state = "surgery"
 	siemens_coefficient = 0.3
 	permeability_coefficient = 0.01
 	transfer_prints = TRUE
@@ -233,15 +234,12 @@
 /obj/item/clothing/gloves/color/latex/nitrile
 	name = "nitrile gloves"
 	desc = "Pricy sterile gloves that are stronger than latex."
-	icon_state = "nitrile"
-	item_state = "nitrilegloves"
 	transfer_prints = FALSE
 
 /obj/item/clothing/gloves/color/latex/nitrile/infiltrator
 	name = "insidious combat gloves"
 	desc = "Specialized combat gloves for carrying people around."
-	icon_state = "infiltrator"
-	item_state = "infiltrator"
+	icon_state = "offwhite"
 	siemens_coefficient = 0
 	permeability_coefficient = 0.3
 	resistance_flags = FIRE_PROOF | ACID_PROOF

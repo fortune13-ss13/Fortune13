@@ -113,7 +113,7 @@
 	name = "roman sandals"
 	desc = "Sandals with buckled leather straps on it."
 	icon = 'icons/fallout/objects/clothing/shoes.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/feet.dmi'
 	icon_state = "legion-sandals"
 	item_state = "legion-sandals"
 	strip_delay = 100
@@ -125,7 +125,7 @@
 	name = "pelt boots"
 	desc = "These boots are made from tanned hide and lined with soft long horner wool. A fashion from wealthy tribes that has spread. "
 	icon = 'icons/fallout/objects/clothing/shoes.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/feet.dmi'
 	icon_state = "legion-pelt"
 	item_state = "legion-pelt"
 	cold_protection = FEET
@@ -136,7 +136,7 @@
 	name = "plated war boots"
 	desc = "A pair of leather boots reinforced with hardened toe caps and shin guards, usually recycled old workboot steel caps taken from rotted old boots and glued to new ones."
 	icon = 'icons/fallout/objects/clothing/shoes.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/feet.dmi'
 	icon_state = "legion-war"
 	item_state = "legion-war"
 	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
@@ -145,7 +145,7 @@
 	name = "heavy metal boots"
 	desc = "A pair of heavy leather boots with bronzed metal leg guards added. These belong to a Legate of Caesar's Legion."
 	icon = 'icons/fallout/objects/clothing/shoes.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/feet.dmi'
 	icon_state = "legion-legate"
 	item_state = "legion-legate"
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)

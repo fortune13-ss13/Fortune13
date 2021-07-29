@@ -107,8 +107,7 @@
 	name = "waiter costume spawner"
 	items = list(
 		/obj/item/clothing/under/suit/waiter,
-		/obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears,
-		/obj/item/clothing/suit/apron)
+		/obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears,)
 
 /obj/effect/spawner/bundle/costume/pirate
 	name = "pirate costume spawner"

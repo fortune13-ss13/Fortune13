@@ -3,6 +3,14 @@
 	subcategory = LOADOUT_SUBCATEGORY_NECK_GENERAL
 	slot = SLOT_NECK
 
+/datum/gear/neck/poncho
+	name = "Poncho"
+	path = /obj/item/clothing/neck/mantle/poncho
+
+/datum/gear/neck/housewife
+	name = "50s housewife style apron"
+	path = /obj/item/clothing/neck/apron/housewife
+
 /datum/gear/neck/blacktie
 	name = "Black tie"
 	subcategory = LOADOUT_SUBCATEGORY_NECK_TIE

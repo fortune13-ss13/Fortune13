@@ -704,11 +704,9 @@
 
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe/PopulateContents() // Doesn't contain a PDA, for isolation reasons.
 	new /obj/item/clothing/under/chameleon(src)
-	new /obj/item/clothing/suit/chameleon(src)
 	new /obj/item/clothing/gloves/chameleon(src)
 	new /obj/item/clothing/shoes/chameleon(src)
 	new /obj/item/clothing/glasses/chameleon(src)
 	new /obj/item/clothing/head/chameleon(src)
 	new /obj/item/clothing/mask/chameleon(src)
 	new /obj/item/storage/backpack/chameleon(src)
-	new /obj/item/clothing/neck/cloak/chameleon(src)

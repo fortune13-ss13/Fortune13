@@ -37,7 +37,7 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	deathsound = 'sound/magic/demon_dies.ogg'
 	deathmessage = "begins to shudder as it becomes transparent..."
-	loot_drop = /obj/item/clothing/neck/cloak/herald_cloak
+	loot_drop = /obj/item/clothing/neck/mantle/brown
 	crate_type = /obj/structure/closet/crate/necropolis/tendril/magic
 	can_talk = 1
 
@@ -242,22 +242,22 @@
 	. = ..()
 	firer.forceMove(get_turf(src))
 
-//Herald's loot: Cloak of the Prophet
+//Herald's loot: Mantle of the Prophet
 
-/obj/item/clothing/neck/cloak/herald_cloak
-	name = "cloak of the prophet"
+/obj/item/clothing/neck/mantle/herald
+	name = "mantle of the prophet"
 	desc = "A cloak which protects you from the heresy of the world."
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
-	icon_state = "herald_cloak"
+	icon_state = "sheetgondola"
 	body_parts_covered = CHEST|GROIN|ARMS
 	var/hit_reaction_chance = 10
 
-/obj/item/clothing/neck/cloak/herald_cloak/proc/reactionshot(mob/living/carbon/owner)
+/obj/item/clothing/neck/mantle/herald/proc/reactionshot(mob/living/carbon/owner)
 	var/static/list/directional_shot_angles = list(0, 45, 90, 135, 180, 225, 270, 315)
 	for(var/i in directional_shot_angles)
 		shoot_projectile(get_turf(owner), i, owner)
 
-/obj/item/clothing/neck/cloak/herald_cloak/proc/shoot_projectile(turf/marker, set_angle, mob/living/carbon/owner)
+/obj/item/clothing/neck/mantle/herald/proc/shoot_projectile(turf/marker, set_angle, mob/living/carbon/owner)
 	var/turf/startloc = get_turf(owner)
 	var/obj/item/projectile/herald/H = null
 	H = new /obj/item/projectile/herald(startloc)
@@ -265,7 +265,7 @@
 	H.firer = owner
 	H.fire(set_angle)
 
-/obj/item/clothing/neck/cloak/herald_cloak/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/neck/mantle/herald/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	. = ..()
 	if(rand(1,100) > hit_reaction_chance)
 		return

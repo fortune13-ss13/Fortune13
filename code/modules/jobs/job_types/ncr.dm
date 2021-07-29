@@ -485,7 +485,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	suit = /obj/item/clothing/suit/toggle/armor/f13/rangerrecon
 	belt = /obj/item/storage/belt/military/reconbandolier
 	head = /obj/item/clothing/head/beret/ncr_recon_ranger
-	neck = /obj/item/clothing/neck/cloak/ranger
+	neck = /obj/item/clothing/neck/mantle/ranger
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308 = 3,
@@ -498,7 +498,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	name = "Trail Ranger"
 	suit = /obj/item/clothing/suit/armor/f13/trailranger
 	belt = /obj/item/storage/belt/military/NCR_Bandolier
-	neck = /obj/item/clothing/neck/cloak/ranger
+	neck = /obj/item/clothing/neck/mantle/ranger
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 3,
@@ -744,7 +744,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/reinforced
 	head = /obj/item/clothing/head/f13/ncr/steelpot_med
 	mask = /obj/item/clothing/mask/surgical
-	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	gloves = /obj/item/clothing/gloves/color/latex
 	accessory = /obj/item/clothing/accessory/armband/med/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/m1n
 	backpack_contents = list(
@@ -926,7 +926,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 	head = /obj/item/clothing/head/beret/ncr/ncr_medic
 	neck = /obj/item/storage/belt/holster/legholster
 	glasses = /obj/item/clothing/glasses/hud/health/f13
-	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	gloves = /obj/item/clothing/gloves/color/latex
 	ears = /obj/item/radio/headset/headset_ncr_com
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/labcoat
 	belt = /obj/item/storage/belt/military/assault/ncr
