@@ -221,14 +221,16 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 
 ///Returns the client runechat visible messages preference according to the message type.
 /atom/proc/runechat_prefs_check(mob/target, visible_message_flags = NONE)
-	if(!target.client?.prefs.chat_on_map || !target.client.prefs.see_chat_non_mob)
+	if(!target.client?.prefs)
+		return FALSE
+	if(!target.client.prefs.chat_on_map || !target.client.prefs.see_chat_non_mob)
 		return FALSE
 	if(visible_message_flags & EMOTE_MESSAGE && !target.client.prefs.see_rc_emotes)
 		return FALSE
 	return TRUE
 
 /mob/runechat_prefs_check(mob/target, visible_message_flags = NONE)
-	if(!target.client?.prefs.chat_on_map)
+	if(!target.client?.prefs?.chat_on_map)
 		return FALSE
 	if(visible_message_flags & EMOTE_MESSAGE && !target.client.prefs.see_rc_emotes)
 		return FALSE
@@ -1082,6 +1084,15 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	for(var/obj/item/I in held_items)
 		if(I.item_flags & SLOWS_WHILE_IN_HAND)
 			. += I.slowdown
+
+
+/mob/proc/set_stat(new_stat)
+	if(new_stat == stat)
+		return
+	SEND_SIGNAL(src, COMSIG_MOB_STATCHANGE, new_stat)
+	. = stat
+	stat = new_stat
+
 
 /**
  * Mostly called by doUnEquip()

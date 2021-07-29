@@ -78,7 +78,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	//character preferences
 	var/real_name						//our character's name
-	var/nameless = FALSE				//whether or not our character is nameless
 	var/be_random_name = 0				//whether we'll have a random name every round
 	var/be_random_body = 0				//whether we'll have a random body every round
 	var/gender = MALE					//gender of character (well duh)
@@ -258,6 +257,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/special_a = 5
 	var/special_l = 5
 
+	/// Associative list: matchmaking_prefs[/datum/matchmaking_pref subtype] -> number of desired matches
+	var/list/matchmaking_prefs = list()
+
 
 /datum/preferences/New(client/C)
 	parent = C
@@ -342,20 +344,35 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
 			dat += "<center><h2>S.P.E.C.I.A.L</h2>"
 			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"
+			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 			dat += "<h2>Identity</h2>"
-			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(jobban_isbanned(user, "appearance"))
 				dat += "<b>You are banned from using custom names and appearances. You can continue to adjust your characters, but you will be randomised once you join the game.</b><br>"
 			dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=name;task=random'>Random Name</A> "
 			dat += "<b>Always Random Name:</b><a style='display:block;width:30px' href='?_src_=prefs;preference=name'>[be_random_name ? "Yes" : "No"]</a><BR>"
 
-			dat += "<b>[nameless ? "Default designation" : "Name"]:</b> "
+			dat += "<b>Name:</b> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
-			//dat += "<a href='?_src_=prefs;preference=nameless'>Be nameless: [nameless ? "Yes" : "No"]</a><BR>"
-			nameless = FALSE
 
 			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender;task=input'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
 			dat += "<b>Age:</b> <a style='display:block;width:30px' href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+			dat += "</td>"
+
+			dat +="<td width='300px' height='300px' valign='top'>"
+			dat += "<h2>Matchmaking preferences:</h2>"
+			if(SSmatchmaking.initialized)
+				for(var/datum/matchmaking_pref/match_pref as anything in SSmatchmaking.all_match_types)
+					var/max_matches = initial(match_pref.max_matches)
+					if(!max_matches)
+						continue // Disabled.
+					var/current_value = clamp((matchmaking_prefs[match_pref] || 0), 0, max_matches)
+					var/set_name = !current_value ? "Disabled" : (max_matches == 1 ? "Enabled" : "[current_value]")
+					dat += "<b>[initial(match_pref.pref_text)]:</b> <a href='?_src_=prefs;preference=set_matchmaking_pref;matchmake_type=[match_pref]'>[set_name]</a><br>"
+			else
+				dat += "<b>Loading matchmaking preferences...</b><br>"
+				dat += "<b>Refresh once the game has finished setting up...</b><br>"
+			dat += "</td>"
+
 /*
 			dat += "<b>Special Names:</b><BR>"
 			var/old_group
@@ -392,8 +409,9 @@ Records disabled until a use for them is found
 			else
 				dat += "[TextPreview(medical_records)]...<BR>"
 			dat += "<br><b>Hide ckey: <a href='?_src_=prefs;preference=hide_ckey;task=input'>[hide_ckey ? "Enabled" : "Disabled"]</b></a><br>"
-			dat += "</tr></table>"
 */
+			dat += "</tr></table>"
+
 
 		//Character Appearance
 		if(2)
@@ -686,6 +704,7 @@ Records disabled until a use for them is found
 				dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"Enabled":"Disabled"]</a><br>"
 				dat += "<br>"
 				dat += "<b>Combo HUD Lighting:</b> <a href = '?_src_=prefs;preference=combohud_lighting'>[(toggles & COMBOHUD_LIGHTING)?"Full-bright":"No Change"]</a><br>"
+				dat += "<b>Split Admin Tabs:</b> <a href = '?_src_=prefs;preference=toggle_split_admin_tabs'>[(toggles & SPLIT_ADMIN_TABS)?"Enabled":"Disabled"]</a><br>"
 				dat += "</td>"
 
 			dat +="<td width='300px' height='300px' valign='top'>"
@@ -1316,7 +1335,7 @@ Records disabled until a use for them is found
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(href_list["jobbancheck"])
-		var/datum/DBQuery/query_get_jobban = SSdbcore.NewQuery(
+		var/datum/db_query/query_get_jobban = SSdbcore.NewQuery(
 			"SELECT reason, bantime, duration, expiration_time, IFNULL((SELECT byond_key FROM [format_table_name("player")] WHERE [format_table_name("player")].ckey = [format_table_name("ban")].a_ckey), a_ckey) FROM [format_table_name("ban")] WHERE ckey = :ckey AND (bantype = 'JOB_PERMABAN'  OR (bantype = 'JOB_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned) AND job = :job",
 			list("ckey" = user.ckey, "job" = href_list["jobbancheck"])
 		)
@@ -1418,6 +1437,9 @@ Records disabled until a use for them is found
 			switch(href_list["preference"])
 				if("name")
 					real_name = pref_species.random_name(gender,1)
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 				if("age")
 					age = rand(AGE_MIN, AGE_MAX)
 				if("hair")
@@ -1535,6 +1557,9 @@ Records disabled until a use for them is found
 						new_name = reject_bad_name(new_name)
 						if(new_name)
 							real_name = new_name
+							if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+								var/mob/dead/new_player/player_mob = parent.mob
+								player_mob.new_player_panel()
 						else
 							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 
@@ -2326,6 +2351,23 @@ Records disabled until a use for them is found
 					user.client.change_view(CONFIG_GET(string/default_view))
 				if("end_of_round_deathmatch")
 					end_of_round_deathmatch = !end_of_round_deathmatch
+				if("set_matchmaking_pref")
+					var/datum/matchmaking_pref/matchmake_type = text2path(href_list["matchmake_type"])
+					if(matchmake_type in SSmatchmaking?.all_match_types)
+						var/max_matches = initial(matchmake_type.max_matches)
+						if(max_matches == 1)
+							if(matchmaking_prefs[matchmake_type])
+								matchmaking_prefs -= matchmake_type
+							else
+								matchmaking_prefs[matchmake_type] = TRUE
+						else if(max_matches)
+							var/current_value = clamp((matchmaking_prefs[matchmake_type] || 0), 0, max_matches)
+							var/desired_matches = input(user, "Set the amount", "[initial(matchmake_type.pref_text)]", current_value)  as null|num
+							if (!isnull(desired_matches))
+								if(desired_matches == 0)
+									matchmaking_prefs -= matchmake_type
+								else
+									matchmaking_prefs[matchmake_type] = clamp(desired_matches, 1, max_matches)
 				if("autostand")
 					autostand = !autostand
 				if("auto_ooc")
@@ -2346,8 +2388,6 @@ Records disabled until a use for them is found
 							damagescreenshake = 0
 						else
 							damagescreenshake = 1
-				if("nameless")
-					nameless = !nameless
 				//END CITADEL EDIT
 				if("publicity")
 					if(unlock_content)
@@ -2458,6 +2498,8 @@ Records disabled until a use for them is found
 					toggles ^= ANNOUNCE_LOGIN
 				if("combohud_lighting")
 					toggles ^= COMBOHUD_LIGHTING
+				if("toggle_split_admin_tabs")
+					toggles ^= SPLIT_ADMIN_TABS
 
 				if("be_special")
 					var/be_special_type = href_list["be_special_type"]
@@ -2468,6 +2510,9 @@ Records disabled until a use for them is found
 
 				if("name")
 					be_random_name = !be_random_name
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 
 				if("all")
 					be_random_body = !be_random_body
@@ -2595,6 +2640,9 @@ Records disabled until a use for them is found
 						random_character()
 						real_name = random_unique_name(gender)
 						save_character()
+					if(isnewplayer(parent.mob)) // Update the player panel with the new name.
+						var/mob/dead/new_player/player_mob = parent.mob
+						player_mob.new_player_panel()
 
 				if("tab")
 					if (href_list["tab"])
@@ -2650,9 +2698,8 @@ Records disabled until a use for them is found
 			else if(firstspace == name_length)
 				real_name += "[pick(GLOB.last_names)]"
 
-	character.real_name = nameless ? "[real_name] #[rand(10000, 99999)]" : real_name
+	character.real_name = real_name
 	character.name = character.real_name
-	character.nameless = nameless
 	character.custom_species = custom_species
 
 	character.gender = gender
@@ -2707,7 +2754,6 @@ Records disabled until a use for them is found
 	if(chosen_limb_id && (chosen_limb_id in character.dna.species.allowed_limb_ids))
 		character.dna.species.mutant_bodyparts["limbs_id"] = chosen_limb_id
 	character.dna.real_name = character.real_name
-	character.dna.nameless = character.nameless
 	character.dna.custom_species = character.custom_species
 
 	if((parent && parent.can_have_part("meat_type")) || pref_species.mutant_bodyparts["meat_type"])

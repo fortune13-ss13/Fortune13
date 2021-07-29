@@ -80,10 +80,13 @@
 
 /obj/item/clothing/head/helmet/f13/raider/arclight
 	name = "arclight raider helmet"
-	desc = "(IV) An intimidating visor, however its eye protection qualities are compromised."
+	desc = "(III) Welding mask with rare polarizing glass thats somehow still in working order. A treasured item in the wasteland."
 	icon_state = "arclight"
 	item_state = "arclight"
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	armor = list("tier" = 3, "energy" = 25, "bomb" = 30, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	flash_protect = 2
+	tint = 0.5
 
 /obj/item/clothing/head/helmet/f13/raider/arclight/Initialize()
 	. = ..()
@@ -248,14 +251,14 @@
 
 /obj/item/clothing/head/helmet/f13/legion/prime
 	name = "legion prime helmet"
-	desc = "(IV) A helmet from reinforced leather witha red peak."
+	desc = "(IV) A helmet from reinforced leather with a red peak."
 	item_state = "legion-prime"
 	icon_state = "legion-prime"
 	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
-	name = "slave master helmet"
-	desc = "(IV) The unique helmet used by the disciplinary corps of the Legion."
+	name = "slavemaster helmet"
+	desc = "(IV) The distinct helmet used by slavemasters."
 	icon_state = "legion-slavemaster"
 	item_state = "legion-slavemaster"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
@@ -296,14 +299,14 @@
 
 /obj/item/clothing/head/helmet/f13/legion/recruit/decan
 	name = "legion recruit decanus helmet"
-	desc = "(VI) This reinforced leather helmet has a plume of black and dark red feathers."
+	desc = "(V) This reinforced leather helmet has a plume of black and dark red feathers."
 	icon_state = "legion-decrec"
 	item_state = "legion-decrec"
 	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
-	desc = "(VI) This reinforced leather helmet with a red peak has a plume of black feathers."
+	desc = "(V) This reinforced leather helmet with a red peak has a plume of black feathers."
 	item_state = "legion-decprime"
 	icon_state = "legion-decprime"
 	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
@@ -678,7 +681,16 @@
 	item_state = "desert_ranger"
 
 
-
+/obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert/whiskey
+	name = "weathered ranger helmet"
+	desc = "(II) A well-used desert ranger helmet passed down through generations. Though this one's stripped of night vision and it's kevlar lining, it's even more lightweight."
+	lighting_alpha = null
+	darkness_view = null
+	flash_protect = 0
+	resistance_flags = null
+	armor = list("tier" = 2, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 0)
+	
+	
 /obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
 	name = "reclaimed desert ranger gear"
 	desc = "(IV) A refurbished and personalized set of pre-unification desert ranger gear."
