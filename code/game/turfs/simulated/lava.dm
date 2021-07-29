@@ -17,6 +17,8 @@
 	clawfootstep = FOOTSTEP_LAVA
 	heavyfootstep = FOOTSTEP_LAVA
 
+can_plant_mine = FALSE
+
 /turf/open/lava/ex_act(severity, target)
 	contents_explosion(severity, target)
 
