@@ -31,7 +31,7 @@
 	name = "deployable Sharpnel  mine"
 	desc = "An unarmed sharpnel  mine designed to spray lead everywhere and  be hard to disarm."
 	mine_type = /obj/effect/mine/shrapnel
-	arming_time = 50
+	arming_time = 5 SECONDS
 
 /obj/item/deployablemine/explosive
 	mine_type = /obj/effect/mine/explosive
