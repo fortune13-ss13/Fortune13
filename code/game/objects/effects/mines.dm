@@ -18,7 +18,7 @@
 	name = "deployable rapid smart mine"
 	desc = "An unarmed smart stun mine designed to be rapidly placeable."
 	mine_type = /obj/effect/mine/stun/smart/adv
-	arming_time = 10
+	arming_time = 1 SECONDS
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/deployablemine/heavy
