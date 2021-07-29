@@ -1110,6 +1110,7 @@ Radio Host
 	satchel = 	/obj/item/storage/backpack/satchel
 	gloves = /obj/item/clothing/gloves/color/white
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=3, \
-		/obj/item/restraints/handcuffs=1, \
-		/obj/item/storage/bag/money/small/settler=1)
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/restraints/handcuffs = 1,
+		/obj/item/storage/bag/money/small/settler = 1,
+		)
