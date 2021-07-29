@@ -159,7 +159,7 @@
 		/obj/item/stack/tile = 1,
 		/obj/item/stack/ore/blackpowder = 3,
 		)
-	time = 15
+	time = 1.5 SECONDS
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	always_availible = FALSE
