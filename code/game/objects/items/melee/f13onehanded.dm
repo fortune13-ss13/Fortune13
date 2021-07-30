@@ -101,7 +101,7 @@
 
 ////////////
 // KNIVES //
-////////////			-small AP bonus, 24-31 damage
+////////////		-small AP bonus, 24-31 damage
 
 /obj/item/melee/onehanded/knife
 	name = "knife template"
@@ -271,8 +271,9 @@
 
 ///////////
 // CLUBS //
-///////////			- stamina damage, 26-30 damage
+///////////		- stamina damage, 26-30 damage
 
+// Pipe
 /obj/item/melee/onehanded/club
 	name = "pipe"
 	desc = "A piece of rusted metal pipe, good for smashing heads. "
@@ -292,6 +293,7 @@
 		return
 	M.apply_damage(10, STAMINA, null, 0)
 
+// War Club
 /obj/item/melee/onehanded/club/warclub
 	name = "war club"
 	desc = "A simple carved wooden club with turquoise inlays."
@@ -308,6 +310,7 @@
 		return
 	M.apply_damage(20, STAMINA, null, 0)
 
+// Tire Iron
 /obj/item/melee/onehanded/club/tireiron
 	name = "tire iron"
 	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
@@ -322,11 +325,12 @@
 	icon_state = "flag-ncr"
 	item_state = "flag-ncr"
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = null 
 	force = 26
 	block_chance = 30
 	attack_verb = list("smacked", "thwacked", "democratized", "freedomed")
 
+// Classic Baton
 /obj/item/melee/classic_baton
 	name = "wooden baton"
 	desc = "A wooden truncheon for beating criminal scum."
@@ -557,12 +561,15 @@
 
 ///////////////////
 // GLOVE WEAPONS //
-///////////////////			-faster attack speed
+///////////////////		-faster attack speed
 
-
+ 
 /obj/item/melee/unarmed
 	name = "glove weapon template"
 	desc = "should not be here"
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	attack_speed = CLICK_CD_MELEE * 0.9
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_SMALL
@@ -622,7 +629,7 @@
 	to_chat(usr, "<span class='notice'>[src] is ready to be worn on another hand.</span>")
 
 
-// Brass knuckles					Keywords: Damage 23
+// Brass knuckles	Keywords: Damage 23
 /obj/item/melee/unarmed/brass
 	name = "brass knuckles"
 	desc = "Hardened knuckle grip that is actually made out of steel. They protect your hand, and do more damage, in unarmed combat."
@@ -632,7 +639,7 @@
 	force = 23
 
 
-// Spiked knuckles					Keywords: Damage 24
+// Spiked knuckles	Keywords: Damage 24
 /obj/item/melee/unarmed/brass/spiked
 	name = "spiked knuckes"
 	desc = "Unlike normal brass knuckles, these have a metal plate across the knuckles with four spikes on, one for each knuckle. So not only does the victim feel the force of the punch, but also the devastating effects of spikes being driven in."
@@ -641,7 +648,7 @@
 	force = 24
 
 
-// Sappers							Keywords: Damage 26
+// Sappers			Keywords: Damage 26
 /obj/item/melee/unarmed/sappers
 	name = "sappers"
 	desc = "Lead filled gloves which are ideal for beating the crap out of opponents."
@@ -651,7 +658,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 
-// Tiger claws						Keywords: Damage 28, Pointy
+// Tiger claws		Keywords: Damage 28, Pointy
 /obj/item/melee/unarmed/tigerclaw
 	name = "tiger claws"
 	desc = "Gloves with short claws built into the palms."
@@ -664,7 +671,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 
-// Lacerator						Keywords: Damage 27, Edged, Wound bonus
+// Lacerator		Keywords: Damage 27, Edged, Wound bonus
 /obj/item/melee/unarmed/lacerator
 	name = "lacerator"
 	desc = "Leather gloves with razor blades built into the back of the hand."
@@ -678,7 +685,7 @@
 	bare_wound_bonus = 5
 
 
-// Mace Glove						Keywords: Damage 30
+// Mace Glove		Keywords: Damage 30
 /obj/item/melee/unarmed/maceglove
 	name = "mace glove"
 	desc = "Weighted metal gloves that are covered in spikes.  Don't expect to grab things with this."
@@ -689,7 +696,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 
 
-// Punch Dagger						Keywords: Damage 29, Pointy
+// Punch Dagger		Keywords: Damage 29, Pointy
 /obj/item/melee/unarmed/punchdagger
 	name = "punch dagger"
 	desc = "A dagger designed to be gripped in the user�s fist with the blade protruding between the middle and ring fingers, to increase the penetration of a punch."
@@ -701,14 +708,14 @@
 	sharpness = SHARP_POINTY
 
 
-// Deathclaw Gauntlet				Keywords: Damage 30, AP 1
+// Deathclaw Gauntlet	Keywords: Damage 28, AP 1
 /obj/item/melee/unarmed/deathclawgauntlet
 	name = "deathclaw gauntlet"
 	desc = "The severed hand of a mighty Deathclaw, cured, hollowed out, and given a harness to turn it into the deadliest gauntlet the wastes have ever seen."
 	icon_state = "deathclaw_g"
 	item_state = "deathclaw_g"
-	force = 30
-	armour_penetration = 1 //there is no such thing as armor to the claws of death
+	force = 28
+	armour_penetration = 1
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
@@ -722,18 +729,7 @@
 ///////////		-generally max 24 damage
 
 
-// obsolete
-/obj/item/melee/onehanded/knife/butcher
-	name = "butcher's cleaver"
-	desc = "Keep hackin' and whackin' and smackin'."
-	icon_state = "knife_butcher"
-	item_state = "knife_butcher"
-	w_class = WEIGHT_CLASS_NORMAL
-	force = 24
-	armour_penetration = 0
-	custom_materials = list(/datum/material/iron=8000)
-	attack_verb = list("cleaved", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-
+// Frying pan
 /obj/item/melee/onehanded/club/fryingpan
 	name = "frying pan"
 	desc = "An ancient cast iron frying pan.<br>It's heavy, but fairly useful if you need to keep the mutants away, and don't have a better weapon around."
@@ -745,6 +741,7 @@
 	throwforce = 20
 	hitsound = 'sound/f13weapons/pan.ogg'
 
+// Entrenching tool P81
 /obj/item/shovel/trench
 	name = "p81 entrenching tool"
 	desc = "The 'Pattern 2281' Entrenching Tool is a new piece of infantry equipment given in limited quantity to infantry troops. An extremely robust shovel with a serrated edge for chopping wood."
@@ -760,6 +757,7 @@
 	attack_verb = list("cleaved", "chopped", "sliced", "slashed")
 	sharpness = SHARP_EDGED
 
+// Hatchet
 /obj/item/hatchet
 	name = "hatchet"
 	desc = "Simple small metal axehead on a handle made from wood or some other hard material."
@@ -793,3 +791,22 @@
 // Crowbar				Force 15
 // Kitchen knife		Force 15
 // Rolling pin			Force x
+
+
+/*
+CODE ARCHIVE MELEE
+
+CODE FOR BLEEDING STACK
+/obj/item/kitchen/knife/bloodletter/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(!isliving(target) || !proximity_flag)
+		return
+	var/mob/living/M = target
+	if(!(M.mob_biotypes & MOB_ORGANIC))
+		return
+	var/datum/status_effect/stacking/saw_bleed/bloodletting/B = M.has_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting)
+	if(!B)
+		M.apply_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting, bleed_stacks_per_hit)
+	else
+		B.add_stacks(bleed_stacks_per_hit)
+*/
