@@ -22,17 +22,17 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
-	damage = 33
-	armour_penetration = 0.2
-	wound_bonus = 18
-	bare_wound_bonus = -18
+	damage = 31
+	armour_penetration = 0.1
+	wound_bonus = 15
+	bare_wound_bonus = -15
 
 /obj/item/projectile/bullet/a556/ap
 	name = "5.56 AP bullet"
-	damage = 26
-	armour_penetration = 0.4
-	wound_bonus = 9
-	bare_wound_bonus = -9
+	damage = 24
+	armour_penetration = 0.3
+	wound_bonus = 8
+	bare_wound_bonus = -8
 
 /obj/item/projectile/bullet/a556/jhp
 	name = "5.56 JHP bullet"
@@ -44,7 +44,7 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 /obj/item/projectile/bullet/a556/match
 	name = "5.56 match bullet"
 	damage = 33
-	armour_penetration = 0.22
+	armour_penetration = 0.12
 	wound_bonus = 16
 	bare_wound_bonus = -16
 	var/extra_speed = 200
@@ -53,8 +53,8 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 	name = ".223 FMJ bullet"
 	damage = 30
 	armour_penetration = 0.1
-	wound_bonus = 18
-	bare_wound_bonus = -18
+	wound_bonus = 12
+	bare_wound_bonus = -12
 
 /obj/item/projectile/bullet/a556/simple //for simple mobs, separate to allow balancing
 	name = "5.56 bullet"
@@ -69,15 +69,15 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 
 /obj/item/projectile/bullet/a762
 	name = "7.62 FMJ bullet"
-	damage = 39
-	armour_penetration = 0.25
+	damage = 34
+	armour_penetration = 0.2
 	wound_bonus = 20
 	bare_wound_bonus = -20
 
 /obj/item/projectile/bullet/a762/ap
 	name = "7.62 AP bullet"
-	damage = 31
-	armour_penetration = 0.45
+	damage = 29
+	armour_penetration = 0.4
 	wound_bonus = 10
 	bare_wound_bonus = -10
 
@@ -97,7 +97,7 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 //.308 Winchester
 /obj/item/projectile/bullet/a762/sport 
 	name = ".308 bullet"
-	damage = 39
+	damage = 35
 	armour_penetration = 0.15
 
 /obj/item/projectile/bullet/a762/sport/simple //for simple mobs, separate to allow balancing
@@ -109,8 +109,8 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 /////////			-Very heavy rifle round.
 
 /obj/item/projectile/bullet/a50MG
-	damage = 55
-	armour_penetration = 0.85
+	damage = 48
+	armour_penetration = 0.7
 	pixels_per_second = 4000
 
 /obj/item/projectile/bullet/a50MG/incendiary
@@ -140,8 +140,8 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 
 /obj/item/projectile/bullet/a473
 	name = "4.73 FMJ bullet"
-	damage = 31
-	armour_penetration = 0.25
+	damage = 30
+	armour_penetration = 0.15
 	wound_bonus = 10
 	bare_wound_bonus = -10
 
@@ -167,6 +167,6 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 /////////////////////////			- Gauss rifle
 
 /obj/item/projectile/bullet/c2mm
-	damage = 45
+	damage = 40
 	armour_penetration = 0.85
 	pixels_per_second = TILES_TO_PIXELS(100)

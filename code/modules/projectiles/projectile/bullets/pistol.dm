@@ -53,7 +53,7 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 //////////
 // 9 MM //
-//////////				-Light round, allround
+//////////			-Light round, allround
 
 /obj/item/projectile/bullet/c9mm
 	name = "9mm FMJ bullet"
@@ -87,7 +87,7 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 ///////////
 // 10 MM //
-///////////				-Medium round, AP focus
+///////////			-Medium round, AP focus
 
 /obj/item/projectile/bullet/c10mm
 	name = "10mm FMJ bullet"
@@ -112,7 +112,7 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 /////////////
 // .45 ACP //
-/////////////			-Medium round, damage focus
+/////////////		-Medium round, damage focus
 
 /obj/item/projectile/bullet/c45
 	name = ".45 FMJ bullet"
@@ -140,7 +140,7 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 /obj/item/projectile/bullet/a357
 	name = ".357 FMJ bullet"
-	damage = 36
+	damage = 34
 	armour_penetration = 0.15
 	wound_bonus = 14
 	bare_wound_bonus = -14
@@ -166,8 +166,8 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 /obj/item/projectile/bullet/m44
 	name = ".44 FMJ bullet"
-	damage = 38
-	armour_penetration = 0.2
+	damage = 36
+	armour_penetration = 0.15
 	wound_bonus = 20
 	bare_wound_bonus = -20
 
@@ -192,26 +192,26 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 ////////////
 // .45-70 //
-////////////			-Heavy round, AP focus
+////////////		-Heavy round, AP focus
 
 /obj/item/projectile/bullet/c4570
 	name = ".45-70 FMJ bullet"
-	damage = 42
-	armour_penetration = 0.3
-	wound_bonus = 24
-	bare_wound_bonus = -24
+	damage = 38
+	armour_penetration = 0.2
+	wound_bonus = 20
+	bare_wound_bonus = -20
 
 /obj/item/projectile/bullet/c4570/jhp
 	name = ".45-70 JHP bullet"
 	damage = 49
-	armour_penetration = 0.1
+	armour_penetration = 0
 	wound_bonus = -36
 	bare_wound_bonus = 36
 
 /obj/item/projectile/bullet/c4570/swc
 	name = ".45-70 SWC bullet"
 	damage = 42
-	armour_penetration = 0.2
+	armour_penetration = 0.1
 	wound_bonus = 36
 	bare_wound_bonus = 36
 
@@ -228,21 +228,21 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 ///////////
 // 14 MM //
-///////////				-Heavy round, damage focus
+///////////			-Heavy round, damage focus
 
 /obj/item/projectile/bullet/mm14
 	name = "14mm FMJ bullet"
-	damage = 44
-	armour_penetration = 0.2
+	damage = 42
+	armour_penetration = 0.1
 	wound_bonus = 28
 	bare_wound_bonus = -28
 
 /obj/item/projectile/bullet/mm14/jhp
 	name = "14mm JHP bullet"
-	damage = 54
+	damage = 52
 	armour_penetration = 0
-	wound_bonus = -42
-	bare_wound_bonus = 42
+	wound_bonus = -36
+	bare_wound_bonus = 36
 
 
 //////////////////////
@@ -266,7 +266,7 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 /////////////
 // NEEDLER //
-/////////////			- AP focus
+/////////////		- AP focus
 
 /obj/item/projectile/bullet/needle
 	name = "needle"
