@@ -444,6 +444,7 @@
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	icon_state = "protonaxe"
 	icon_state_on = "protonaxe_on"
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = null
 	force = 20
 	force_on = 32
