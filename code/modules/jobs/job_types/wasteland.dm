@@ -396,7 +396,6 @@ Raider
 	/datum/outfit/loadout/raider_ncr,
 	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/raider_tribal,
-	/datum/outfit/loadout/raider_enclave
 	)
 
 
@@ -605,17 +604,6 @@ Raider
 		/obj/item/melee/onehanded/knife/bone = 1,
 		)
 
-/datum/outfit/loadout/raider_enclave
-	name = "Enclave Remnant"
-	r_hand = /obj/item/storage/backpack/satchel/enclave
-	suit = /obj/item/clothing/suit/armor/f13/battlecoat/tan/armored // Tier 4 armor
-	uniform = /obj/item/clothing/under/f13/exile/enclave
-	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
-	id = /obj/item/card/id/rusted/brokenholodog/enclave
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
-		/obj/item/ammo_box/magazine/m45=2)
-
 
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
@@ -673,7 +661,7 @@ Raider
 	ears = null
 	belt = null
 	r_hand = /obj/item/book/granter/trait/selection
-	l_pocket = /obj/item/reagent_containers/food/drinks/flask
+	l_pocket = /obj/item/storage/bag/money/small/wastelander
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/melee/onehanded/knife/survival
 	backpack = /obj/item/storage/backpack/satchel/explorer
@@ -682,7 +670,6 @@ Raider
 		/obj/item/reagent_containers/hypospray/medipen/stimpak,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak,
 		/obj/item/reagent_containers/pill/radx,
-		/obj/item/storage/bag/money/small/wastelander,
 		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
@@ -770,6 +757,7 @@ Raider
 	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/welding
+	id = /obj/item/card/id/dogtag/town/legion
 	l_hand = /obj/item/shield/riot/buckler
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1,
@@ -781,6 +769,7 @@ Raider
 	shoes = /obj/item/clothing/shoes/f13/tan
 	head = /obj/item/clothing/head/f13/cowboy
 	gloves = /obj/item/clothing/gloves/color/brown
+	id = /obj/item/card/id/dogtag/town/ncr
 	l_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=2)
