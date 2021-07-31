@@ -169,7 +169,7 @@ GLOBAL_LIST_INIT(storage_crafter_can_hold, typecacheof(list(
 GLOBAL_LIST_INIT(storage_medical_can_hold, typecacheof(list(
 	/obj/item/clothing/mask/surgical,
 	/obj/item/clothing/gloves/color/latex,
-	/obj/item/clothing/gloves/legion/crude_medical,
+	/obj/item/clothing/gloves/f13/crudemedical,
 	/obj/item/healthanalyzer,
 	/obj/item/reagent_containers/dropper,
 	/obj/item/reagent_containers/glass/bottle,
