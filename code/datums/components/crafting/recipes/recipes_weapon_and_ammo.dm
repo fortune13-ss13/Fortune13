@@ -89,7 +89,7 @@
 	name = "Compressed Gunpowder"
 	result = /obj/item/stack/ore/blackpowder
 	time = 5
-	reqs = list(/datum/reagent/blackpowder = 50)
+	reqs = list(/datum/reagent/blackpowder = 30)
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 

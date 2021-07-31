@@ -75,7 +75,7 @@
 	merge_type = /obj/item/stack/crafting/powder
 
 GLOBAL_LIST_INIT(powder_recipes, list ( \
-	new/datum/stack_recipe("Scavenge blackpowder", /obj/item/reagent_containers/glass/bottle/blackpowder, 100),\
+	new/datum/stack_recipe("Scavenge blackpowder", /obj/item/reagent_containers/glass/bottle/blackpowder, 50),\
 ))
 
 ///obj/item/stack/crafting/powder/Initialize(mapload, new_amount, merge = TRUE)
