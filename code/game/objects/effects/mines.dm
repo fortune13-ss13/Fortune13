@@ -174,7 +174,7 @@
 /obj/effect/mine/stun/smart/heavy
 	name = "sledgehammer smart mine"
 	disarm_time = 350
-	stun_time = 230
+	stun_time = 23 SECONDS
 	damage = 40
 	disarm_product = /obj/item/deployablemine/heavy
 
