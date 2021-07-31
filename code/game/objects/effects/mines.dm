@@ -98,7 +98,7 @@
 /obj/effect/mine/proc/mineEffect(mob/victim)
 	to_chat(victim, "<span class='danger'>*click*</span>")
 
-/obj/effect/mine/Crossed(atom/movable/AM as mob|obj)
+/obj/effect/mine/Crossed(atom/movable/AM)
 	if(!isturf(loc) || AM.throwing || (AM.movement_type & (FLYING | FLOATING)) || !AM.has_gravity())
 		return
 	. = ..()
