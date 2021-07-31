@@ -1,3 +1,5 @@
+//Code improvements from https://github.com/vlggms/fortune13/pull/5
+
 /obj/item/deployablemine
 	name = "deployable mine"
 	desc = "An unarmed landmine. It can be planted to arm it."
