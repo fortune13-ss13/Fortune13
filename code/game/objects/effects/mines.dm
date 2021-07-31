@@ -11,7 +11,7 @@
 	desc = "An unarmed stun mine. It can be planted to arm it."
 	mine_type = /obj/effect/mine/stun
 
-/obj/item/deployablemine/smartstun
+/obj/item/deployable_mine/smart_stun
 	name = "deployable smart mine"
 	desc = "An unarmed smart stun mine. It can be planted to arm it."
 	mine_type = /obj/effect/mine/stun/smart
