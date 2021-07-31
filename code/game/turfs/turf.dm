@@ -49,7 +49,7 @@
 	var/base_opacity = FALSE
 	///Lazylist of movable atoms providing opacity sources.
 	var/list/atom/movable/opacity_sources
-///If a landmine can be planted on the turf.
+	///If a landmine can be planted on the turf.
 	var/can_plant_mine = FALSE
 
 /turf/vv_edit_var(var_name, var_value)
