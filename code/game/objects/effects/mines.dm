@@ -163,7 +163,7 @@
 	name = "smart stun mine"
 	desc = "An advanced mine with IFF features, capable of ignoring people with mindshield implants."
 	smart_mine = TRUE
-	disarm_time = 250
+	disarm_time = 25 SECONDS
 	disarm_product = /obj/item/deployablemine/smartstun
 
 /obj/effect/mine/stun/smart/adv
