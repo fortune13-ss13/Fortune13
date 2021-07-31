@@ -216,7 +216,7 @@
 	atmos_spawn_air("[gas_type]=[gas_amount]")
 
 /obj/effect/mine/gas/plasma
-	name = "incidiery mine"
+	name = "incendiary mine"
 	gas_type = "plasma"
 	disarm_product = /obj/item/deployablemine/plasma
 
