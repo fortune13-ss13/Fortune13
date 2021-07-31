@@ -56,7 +56,7 @@
 
 /obj/item/deployablemine/afterattack(atom/plant_spot, mob/user, proximity)
 	. = ..()
-	if(!proximity)
+	if(!proximity || !mine_type)
 		return
 	if(!isturf(plant_spot))
 		return
