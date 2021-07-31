@@ -138,7 +138,7 @@
 /obj/effect/mine/explosive
 	name = "explosive mine"
 	disarm_product = /obj/item/deployablemine/explosive
-	disarm_time = 30
+	disarm_time = 3 SECONDS
 	var/range_devastation = 0
 	var/range_heavy = 1
 	var/range_light = 2
