@@ -1742,7 +1742,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "seduction"
 	glass_icon_state = "between_the_sheets"
 	glass_name = "Between the Sheets"
-	glass_desc = "Follower's of the Apocalypse are forbidden to drink this on duty. Doesn't stop them, though."
+	glass_desc = "The glass has a label on it, reminding Followers of the Apocaylpse about their no-promiscuity policy. That will inevitably be ignored."
 
 /datum/reagent/consumable/ethanol/between_the_sheets/on_mob_life(mob/living/L)
 	..()
