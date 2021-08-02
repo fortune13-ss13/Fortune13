@@ -178,7 +178,6 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 	pass_flags = LETPASSTHROW
 	climbable = TRUE
 	smooth = SMOOTH_TRUE
-	bar_material = METAL
 
 /obj/structure/barricade/concrete/attackby(obj/item/I, mob/user)
 	if(istype(I,/obj/item/stack/sheet/mineral/concrete))
@@ -217,5 +216,3 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 	sheet_type = null
 	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall/f13/store/constructed, /turf/closed/wall)
 
-//TODO LIST
-// - Tweak values! Might need some help for this one...
