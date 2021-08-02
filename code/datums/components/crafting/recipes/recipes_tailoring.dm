@@ -484,23 +484,6 @@
 
 //CLOTHING//
 
-/datum/crafting_recipe/tailor/mantlebrown
-	name = "Brown Mantle"
-	result = /obj/item/clothing/neck/mantle/brown
-	time = 50
-	reqs = list(
-		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/stack/sheet/leather = 2,
-	)
-
-/datum/crafting_recipe/tailor/mantlegray
-	name = "Gray Mantle"
-	result = /obj/item/clothing/neck/mantle/gray
-	time = 50
-	reqs = list(
-		/obj/item/stack/sheet/cloth = 3,
-		/obj/item/stack/sheet/leather = 1,
-	)
 
 /datum/crafting_recipe/tailor/ncruniform
 	name = "NCR Uniform"
@@ -939,7 +922,6 @@
 	time = 50
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/durathread_helmet
 	name = "Makeshift Helmet"
 	result = /obj/item/clothing/head/helmet/durathread
@@ -948,7 +930,6 @@
 	time = 40
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/fannypack
 	name = "Fannypack"
 	result = /obj/item/storage/belt/fannypack
@@ -957,7 +938,6 @@
 	time = 20
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 //f13 additions
 /datum/crafting_recipe/metalarmor
 	name = "metal armor"
@@ -969,8 +949,6 @@
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
-
 /datum/crafting_recipe/Imetalarmor
 	name = "improved metal armor"
 	result = /obj/item/clothing/suit/armor/f13/ibmetalarmor
@@ -982,7 +960,6 @@
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/IImetalarmor
 	name = "upgrading metal armor"
 	result = /obj/item/clothing/suit/armor/f13/ibmetalarmor
@@ -993,9 +970,7 @@
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 //Tribal armors
-
 /datum/crafting_recipe/tribalgeckoarmor
 	name = "Gecko Armor"
 	result = /obj/item/clothing/suit/armor/f13/tribal
@@ -1018,7 +993,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/supafly_reinforced
 	name = "reinforced supafly armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/supafly
@@ -1029,7 +1003,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/yankeehelm_reinforced
 	name = "reinforced yankee helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/yankee/
@@ -1040,7 +1013,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/yankee_reinforced
 	name = "reinforced yankee armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/yankee
@@ -1051,7 +1023,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/blasterhelm_reinforced
 	name = "reinforced blaster helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/blastmaster
@@ -1062,7 +1033,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/blaster_reinforced
 	name = "reinforced blaster armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/blastmaster
@@ -1073,7 +1043,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/sadisthelm_reinforced
 	name = "reinforced sadist helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/arclight
@@ -1084,7 +1053,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/sadist_reinforced
 	name = "reinforced sadist armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/sadist
@@ -1095,7 +1063,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/fiendshelm_reinforced
 	name = "reinforced fiend helmet"
 	result = /obj/item/clothing/head/helmet/f13/fiend_reinforced
@@ -1106,7 +1073,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/badlands_reinforced
 	name = "reinforced badlands armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/badlands
@@ -1117,7 +1083,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/painspikehelm_reinforced
 	name = "reinforced painspike helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/psychotic
@@ -1128,7 +1093,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/painspike_reinforced
 	name = "reinforced painspike armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/painspike
@@ -1139,7 +1103,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/iconoclast_reinforced
 	name = "reinforced iconoclast armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/iconoclast
@@ -1150,7 +1113,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/ncrexile_reinforced
 	name = "reinforced NCR deserter armor"
 	result = /obj/item/clothing/suit/armor/f13/exile/r/ncr
@@ -1161,7 +1123,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/legion_reinforced
 	name = "reinforced punished Legion armor"
 	result = /obj/item/clothing/suit/armor/f13/exile/r/legion
@@ -1172,7 +1133,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/bos_reinforced
 	name = "reinforced BoS exile armor"
 	result = /obj/item/clothing/suit/armor/f13/exile/r/bos
