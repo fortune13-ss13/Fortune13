@@ -114,7 +114,7 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 	var/location = get_turf(holder.my_atom)
 	for(var/i in 1 to multiplier)
 		new /obj/item/stack/sheet/mineral/concrete(location)
- //Makes one concrete sheet
+//Makes one concrete sheet
 
 /datum/material/concrete
 	name = "concrete"
