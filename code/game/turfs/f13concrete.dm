@@ -78,7 +78,7 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 	name = "Concrete Shake"
 	id = "concrete_shake"
 	results = list(/datum/reagent/consumable/concreteshake = 5)
-	required_reagents = list(/datum/reagent/consumable/milk = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/cement = 1, /datum/reagent/consumable/ice = 1, /datum/reagent/consumable/cream = 1)
+	required_reagents = list(/datum/reagent/consumable/milk = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/cement = 1, /datum/reagent/consumable/ice = 1, /datum/reagent/consumable/cream = 1,)
 
 /datum/reagent/consumable/concreteshake
 	name = "Concrete Shake"
