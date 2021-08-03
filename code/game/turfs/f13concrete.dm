@@ -18,7 +18,7 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 	name = "calcium carbonate"
 	id = "calciumcarbonate"
 	results = list(/datum/reagent/calciumcarbonate = 5)
-	required_reagents = list(/datum/reagent/consumable/milk = 1, /datum/reagent/carbon = 1, /datum/reagent/oxygen = 3)
+	required_reagents = list(/datum/reagent/consumable/milk = 1, /datum/reagent/carbon = 1, /datum/reagent/oxygen = 3,)
 	required_temp = 375
 
 /datum/reagent/calciumcarbonate
