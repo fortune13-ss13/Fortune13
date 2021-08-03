@@ -167,7 +167,7 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 	explosion_block = 2
 	smooth = SMOOTH_TRUE
 	sheet_type = /obj/item/stack/sheet/mineral/concrete
-	canSmoothWith = list(/turf/closed/wall/f13/supermart, /turf/closed/wall/mineral/concrete, /turf/closed/wall)
+	canSmoothWith = list(/turf/closed/wall/f13/supermart, /turf/closed/wall/mineral/concrete, /turf/closed/wall,)
 
 /obj/structure/barricade/concrete
 	name = "concrete barricade"
@@ -217,4 +217,3 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 	girder_type = /obj/structure/barricade/concrete
 	sheet_type = null
 	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall/f13/store/constructed, /turf/closed/wall)
-
