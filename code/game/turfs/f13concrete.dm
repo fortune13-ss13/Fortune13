@@ -216,4 +216,4 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 	smooth = SMOOTH_TRUE
 	girder_type = /obj/structure/barricade/concrete
 	sheet_type = null
-	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall/f13/store/constructed, /turf/closed/wall)
+	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall/f13/store/constructed, /turf/closed/wall,)
