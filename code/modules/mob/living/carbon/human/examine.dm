@@ -86,7 +86,7 @@
 		. += "[t_He] [t_has] [wear_mask.get_examine_string(user)] on [t_his] face."
 
 	if(wear_neck && !(SLOT_NECK in obscured))
-		. += "[t_He] [t_is] wearing [wear_neck.get_examine_string(user)] around [t_his] neck."
+		. += "[t_He] [t_is] wearing [wear_neck.get_examine_string(user)]"
 
 	//eyes
 	if(!(SLOT_GLASSES in obscured))
@@ -368,7 +368,7 @@
 				msg += "[t_He] [t_is] barely conscious.\n"
 		if(getorgan(/obj/item/organ/brain))
 			if(!key)
-				msg += "<span class='deadsay'>[t_He] [t_is] totally catatonic. The stresses of life in deep-space must have been too much for [t_him]. Any recovery is unlikely.</span>\n"
+				msg += "<span class='deadsay'>[t_He] [t_is] totally catatonic. The stresses of the Wasteland must have been too much for [t_him]. Any recovery is unlikely.</span>\n"
 			else if(!client)
 				msg += "[t_He] [t_has] a blank, absent-minded stare and appears completely unresponsive to anything. [t_He] may snap out of it soon.\n"
 
