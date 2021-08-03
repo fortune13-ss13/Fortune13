@@ -144,7 +144,7 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 	//	disasemblable = 0
 	girder_type = 0
 	sheet_type = null
-	canSmoothWith = list(/turf/closed/wall/f13/supermart, /turf/closed/wall/mineral/concrete, /turf/closed/wall)
+	canSmoothWith = list(/turf/closed/wall/f13/supermart, /turf/closed/wall/mineral/concrete, /turf/closed/wall,)
 
 /turf/closed/wall/f13/tunnel
 	name = "utility tunnel wall"
