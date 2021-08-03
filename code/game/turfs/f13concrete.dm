@@ -55,7 +55,7 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 	name = "cement"
 	id = "cement"
 	results = list(/datum/reagent/cement = 10)
-	required_reagents = list(/datum/reagent/calciumcarbonate = 6, /datum/reagent/silicon = 3, /datum/reagent/iron = 1)
+	required_reagents = list(/datum/reagent/calciumcarbonate = 6, /datum/reagent/silicon = 3, /datum/reagent/iron = 1,)
 	required_temp = 750 //Apparently cement clinker needs a ton of heat to be made. Adjust this maybe?
 
 /datum/reagent/cement
