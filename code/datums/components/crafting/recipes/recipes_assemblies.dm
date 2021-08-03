@@ -214,3 +214,4 @@
 	time = 80
 	subcategory = CAT_FARMING
 	category = CAT_MISC
+
