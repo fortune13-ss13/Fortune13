@@ -32,6 +32,7 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 	singular_name = "limestone chunk"
 	layer = LOW_ITEM_LAYER
 	novariants = FALSE
+	merge_type = /obj/item/stack/sheet/mineral/limestone
 	grind_results = list(/datum/reagent/calciumcarbonate = 20)
 
 /obj/item/stack/sheet/mineral/limestone/fifty
