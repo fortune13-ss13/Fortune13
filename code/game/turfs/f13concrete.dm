@@ -109,7 +109,7 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 /datum/chemical_reaction/concrete
 	name = "concrete"
 	id = "concrete"
-	required_reagents = list(/datum/reagent/cement = 1, /datum/reagent/water = 2, /datum/reagent/silicon = 7)
+	required_reagents = list(/datum/reagent/cement = 1, /datum/reagent/water = 2, /datum/reagent/silicon = 7,)
 
 /datum/chemical_reaction/concrete/on_reaction(datum/reagents/holder, multiplier)
 	var/location = get_turf(holder.my_atom)
