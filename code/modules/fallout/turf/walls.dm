@@ -115,7 +115,7 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 	baseturfs = /turf/open/indestructible/ground/outside/ruins
 	girder_type = 0
 	sheet_type = null
-	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall/f13/store/constructed, /turf/closed/wall)
+	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall/f13/store/constructed, /turf/closed/wall,)
 
 /turf/closed/wall/f13/tentwall
 	name = "tent wall"
