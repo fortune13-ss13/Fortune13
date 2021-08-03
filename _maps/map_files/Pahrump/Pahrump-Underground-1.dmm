@@ -2057,9 +2057,9 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
 "bOu" = (
-/obj/machinery/microwave/stove,
+/obj/structure/closet/crate/freezer,
 /turf/open/floor/f13{
-	icon_state = "bar"
+	icon_state = "whitegreenrustychess"
 	},
 /area/f13/followers)
 "bOJ" = (
@@ -2197,10 +2197,9 @@
 	},
 /area/f13/bunker)
 "bWf" = (
-/obj/structure/chair/f13chair1{
-	dir = 4
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
 	},
-/turf/open/floor/wood/wood_tiled,
 /area/f13/followers)
 "bWi" = (
 /obj/structure/junk/small/bed2,
@@ -3946,6 +3945,12 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/tunnel)
+"dsv" = (
+/obj/structure/closet/fridge/standard,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
 "dsx" = (
 /obj/structure/chair/office/light{
 	dir = 8
@@ -4986,6 +4991,12 @@
 	},
 /turf/open/floor/wood/f13/old,
 /area/f13/caves)
+"egT" = (
+/obj/machinery/processor,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
 "ehc" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
@@ -5014,6 +5025,14 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/tunnel)
+"ehN" = (
+/obj/structure/table,
+/obj/item/kitchen/knife,
+/obj/item/kitchen/rollingpin,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
 "ehY" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -6855,9 +6874,12 @@
 	},
 /area/f13/bunker)
 "fGW" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/condiment/peppermill,
-/turf/open/floor/wood/wood_tiled,
+/obj/structure/simple_door/bunker{
+	name = "Meat Locker"
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
 /area/f13/followers)
 "fGZ" = (
 /obj/item/instrument/harmonica,
@@ -7995,10 +8017,13 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "gzU" = (
-/obj/machinery/light{
-	pixel_x = -16
+/obj/structure/kitchenspike,
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/open/floor/wood/wood_tiled,
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
 /area/f13/followers)
 "gAp" = (
 /obj/structure/curtain{
@@ -8051,8 +8076,18 @@
 /area/f13/bunker)
 "gBv" = (
 /obj/structure/table,
-/obj/machinery/light,
-/turf/open/floor/wood/wood_tiled,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
+"gBH" = (
+/obj/structure/closet/fridge,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
 /area/f13/followers)
 "gBM" = (
 /obj/structure/bed/mattress{
@@ -12598,6 +12633,15 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/clinic)
+"jPT" = (
+/obj/structure/chair/f13chair1{
+	dir = 8
+	},
+/obj/structure/sign/poster/contraband/smoke{
+	pixel_y = -32
+	},
+/turf/open/floor/wood/wood_tiled,
+/area/f13/followers)
 "jQp" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -13094,10 +13138,16 @@
 	},
 /area/f13/brotherhood/operations)
 "kjW" = (
-/obj/structure/chair/stool/retro/backed{
-	dir = 1
+/obj/structure/table,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
+/obj/machinery/chem_dispenser/drinks,
+/turf/open/floor/f13{
+	icon_state = "bar"
 	},
-/turf/open/floor/wood/wood_tiled,
 /area/f13/followers)
 "kkg" = (
 /obj/structure/sign/poster/contraband/donut_corp{
@@ -16085,6 +16135,13 @@
 "mDq" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/building)
+"mDt" = (
+/obj/structure/chair/f13chair1{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/open/floor/wood/wood_tiled,
+/area/f13/followers)
 "mDK" = (
 /obj/structure/sign/poster/official/obey{
 	pixel_y = -32
@@ -16224,9 +16281,10 @@
 	},
 /area/f13/bunker)
 "mIA" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/condiment/saltshaker,
-/turf/open/floor/wood/wood_tiled,
+/obj/machinery/microwave/stove,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
 /area/f13/followers)
 "mII" = (
 /obj/structure/flora/junglebush/c,
@@ -17119,16 +17177,8 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "npc" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/drinks/drinkingglass,
-/obj/item/reagent_containers/food/drinks/drinkingglass,
-/obj/item/reagent_containers/food/drinks/drinkingglass,
-/obj/item/reagent_containers/food/drinks/drinkingglass,
-/obj/item/reagent_containers/food/drinks/drinkingglass,
-/obj/machinery/chem_dispenser/drinks,
-/turf/open/floor/f13{
-	icon_state = "bar"
-	},
+/obj/structure/chair/stool/retro/black,
+/turf/open/floor/wood/wood_tiled,
 /area/f13/followers)
 "npi" = (
 /obj/structure/table/optable/abductor,
@@ -18330,11 +18380,18 @@
 	},
 /area/f13/brotherhood/medical)
 "ofx" = (
-/obj/structure/sign/poster/contraband/smoke{
-	pixel_x = -32
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/food/condiment/peppermill{
+	pixel_x = 2;
+	pixel_y = 3
 	},
-/obj/item/kirbyplants/random,
-/turf/open/floor/wood/wood_tiled,
+/obj/item/reagent_containers/food/condiment/saltshaker{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
 /area/f13/followers)
 "ofI" = (
 /obj/structure/chair/stool/retro/black,
@@ -18771,21 +18828,9 @@
 /turf/open/floor/carpet/black,
 /area/f13/building)
 "ozn" = (
-/obj/structure/closet/fridge,
-/obj/item/storage/fancy/egg_box,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/enzyme,
-/obj/item/reagent_containers/glass/bowl,
-/obj/item/reagent_containers/glass/bowl,
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/rice,
-/obj/item/reagent_containers/food/condiment/sugar,
-/obj/item/reagent_containers/food/condiment/yeast,
-/obj/item/reagent_containers/food/condiment/ketchup,
-/obj/item/reagent_containers/food/condiment/mayonnaise,
+/obj/structure/kitchenspike,
 /turf/open/floor/f13{
-	icon_state = "bar"
+	icon_state = "whitegreenrustychess"
 	},
 /area/f13/followers)
 "ozN" = (
@@ -19792,10 +19837,13 @@
 	},
 /area/f13/bunker)
 "pjR" = (
-/obj/structure/chair/f13chair1{
+/obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/wood/wood_tiled,
+/obj/structure/closet/fridge/meat,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
 /area/f13/followers)
 "pkj" = (
 /obj/structure/cable{
@@ -20621,6 +20669,13 @@
 	icon_state = "bluerustysolid"
 	},
 /area/f13/den)
+"pPL" = (
+/obj/machinery/deepfryer,
+/obj/structure/table,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
 "pPS" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt{
@@ -21636,6 +21691,14 @@
 /mob/living/simple_animal/hostile/supermutant/meleemutant,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"qBy" = (
+/obj/structure/table,
+/obj/item/clothing/suit/apron/chef,
+/obj/item/clothing/head/chefhat,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
 "qBQ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -22759,7 +22822,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/deepfryer,
 /turf/open/floor/f13{
 	icon_state = "bar"
 	},
@@ -23034,6 +23096,21 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/tunnel)
+"rvv" = (
+/obj/structure/closet/fridge,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/rice,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/mayonnaise,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
 "rvI" = (
 /obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/wood/f13/oak,
@@ -26824,6 +26901,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet,
 /area/f13/den)
+"uyh" = (
+/obj/structure/table,
+/obj/machinery/light,
+/turf/open/floor/f13{
+	icon_state = "bar"
+	},
+/area/f13/followers)
 "uyl" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "boscheckpointreactor";
@@ -62537,13 +62621,13 @@ eLE
 eLE
 eLE
 eLE
-uoO
-uoO
-aoj
-aoj
-aoj
-uoO
-uoO
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
+eLE
 uoO
 uoO
 uoO
@@ -62793,13 +62877,13 @@ rbg
 rbg
 rbg
 rbg
-eLE
-eLE
-eLE
-eLE
-eLE
-eLE
-eLE
+uoO
+rbg
+rbg
+rbg
+rbg
+rbg
+rbg
 eLE
 eLE
 eLE
@@ -63051,15 +63135,15 @@ uwt
 vBT
 rbg
 uoO
+rbg
+bOu
+bWf
+bWf
+bWf
+rbg
 uoO
 uoO
 uoO
-uoO
-uoO
-aoj
-aoj
-aoj
-aoj
 aoj
 uoO
 uoO
@@ -63308,15 +63392,15 @@ uyC
 vQn
 rbg
 uoO
+rbg
+bOu
+bWf
+gzU
+ozn
+rbg
 uoO
 uoO
 uoO
-uoO
-uoO
-aoj
-aoj
-aoj
-aoj
 aoj
 aoj
 uoO
@@ -63567,13 +63651,13 @@ rbg
 rbg
 rbg
 rbg
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fGW
+rbg
+rbg
+rbg
+rbg
+rbg
+rbg
 uoO
 uoO
 uoO
@@ -63824,13 +63908,13 @@ rbg
 tJD
 vPv
 rbg
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+rRP
+gBv
+pjR
+gBv
+rvv
+gBv
+rbg
 uoO
 uoO
 uoO
@@ -64081,13 +64165,13 @@ uDa
 utd
 utd
 rbg
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+rRP
+rRP
+rRP
+rRP
+rRP
+gBH
+rbg
 uoO
 aoj
 aoj
@@ -64338,13 +64422,13 @@ rbg
 rbg
 rbg
 rbg
+rRP
+mIA
+pPL
+ehN
+rRP
+uyh
 rbg
-rbg
-rbg
-rbg
-rbg
-rbg
-uoO
 uoO
 uoO
 uoO
@@ -64595,13 +64679,13 @@ uDa
 utd
 utd
 rbg
-ozn
 rRP
-eJq
+mIA
+qBy
 kjW
-ofx
+rRP
+egT
 rbg
-uoO
 uoO
 uoO
 aoj
@@ -64854,11 +64938,11 @@ vPv
 rbg
 rno
 rRP
-eJq
-kjW
-gzU
+rRP
+rRP
+rRP
+dsv
 rbg
-uoO
 uoO
 uoO
 aoj
@@ -65109,13 +65193,13 @@ rbg
 rbg
 rbg
 rbg
-bOu
+eJq
+ofx
+eJq
+eJq
 rRP
 eJq
-kjW
-rBX
-tlZ
-uoO
+rbg
 uoO
 uoO
 uoO
@@ -65367,12 +65451,12 @@ ufQ
 ufQ
 pOz
 npc
-rRP
-rRP
+npc
+npc
+npc
 rBX
 rBX
 rbg
-uoO
 uoO
 uoO
 uoO
@@ -65627,9 +65711,9 @@ rBX
 rBX
 rBX
 rBX
-bWf
+rBX
+mDt
 rbg
-uoO
 uoO
 uoO
 uoO
@@ -65881,12 +65965,12 @@ jQs
 ufQ
 pOz
 uLi
-fGW
+nWK
 lcF
 rBX
-gBv
+rBX
+nWK
 rbg
-uoO
 uoO
 uoO
 uoO
@@ -66138,12 +66222,12 @@ hOB
 ufQ
 pOz
 xtg
-mIA
+nWK
 fns
 rBX
-pjR
+rBX
+jPT
 rbg
-uoO
 uoO
 uoO
 uoO
@@ -66398,7 +66482,7 @@ rbg
 rbg
 rbg
 rbg
-rbg
+tlZ
 rbg
 rbg
 wOS
