@@ -11,27 +11,33 @@
 	path = /obj/item/clothing/mask/fakemoustache
 	cost = 2
 
-/datum/gear/clothing/mask/bandana/red
-	name = "red bandana"
+/datum/gear/mask/bandana/red
+	name = "Red bandana"
 	path = /obj/item/clothing/mask/bandana/red
-
-/datum/gear/clothing/mask/bandana/blue
-	name = "blue bandana"
+	cost = 2
+	
+/datum/gear/mask/bandana/blue
+	name = "Blue bandana"
 	path = /obj/item/clothing/mask/bandana/blue
+	cost = 2
 
-/datum/gear/clothing/mask/bandana/green
-	name = "green bandana"
+/datum/gear/mask/bandana/green
+	name = "Green bandana"
 	path = /obj/item/clothing/mask/bandana/green
+	cost = 2
 
-/datum/gear/clothing/mask/bandana/gold
-	name = "gold bandana"
+/datum/gear/mask/bandana/gold
+	name = "Gold bandana"
 	path = /obj/item/clothing/mask/bandana/gold
+	cost = 2
 
-/datum/gear/clothing/mask/bandana/black
-	name = "black bandana"
+/datum/gear/mask/bandana/black
+	name = "Black bandana"
 	path = /obj/item/clothing/mask/bandana/black
+	cost = 2
 
-/datum/gear/clothing/mask/bandana/skull
-	name = "skull bandana"
+/datum/gear/mask/bandana/skull
+	name = "Skull bandana"
 	path = /obj/item/clothing/mask/bandana/skull
+	cost = 2
 
