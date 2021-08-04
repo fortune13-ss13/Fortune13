@@ -1030,5 +1030,5 @@
 	name = "Rotgut"
 	id = /datum/reagent/consumable/ethanol/rotgut
 	results = list(/datum/reagent/consumable/ethanol/rotgut = 5)
-	required_reagents = list(/datum/reagent/space_cleaner = 1, /datum/reagent/consumable/ethanol/whiskey = 2, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/ethanol = 1)
+	required_reagents = list(/datum/reagent/space_cleaner = 1, /datum/reagent/consumable/ethanol/whiskey = 2, /datum/reagent/oil = 1, /datum/reagent/consumable/ethanol = 1)
 
