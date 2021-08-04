@@ -139,7 +139,7 @@
 	var/list/loots = list(
 						/obj/item/stack/crafting/metalparts/five = 30,
 						/obj/item/stack/crafting/goodparts/five = 30,
-						/obj/item/stack/sheet/mineral/limestone/twenty = 10,
+						/obj/item/stack/sheet/mineral/limestone/ten = 10,
 						/obj/item/stack/ore/blackpowder/twenty = 10,
 						/obj/effect/spawner/lootdrop/f13/armor/random_high = 3,
 						/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high = 3

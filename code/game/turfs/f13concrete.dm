@@ -120,7 +120,9 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 /datum/material/concrete
 	name = "concrete"
 	desc = "Concrete"
-	color = "#A49483"
+	color = "#b9b4ab"
+	integrity_modifier = 1.1
+	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/concrete
 
 /obj/item/stack/sheet/mineral/concrete
@@ -129,8 +131,10 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 	singular_name = "concrete"
 	layer = LOW_ITEM_LAYER
 	novariants = FALSE
+	custom_materials = list(/datum/material/concrete=MINERAL_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/sheet/mineral/concrete
 	walltype = /turf/closed/wall/mineral/concrete
+	material_type = /datum/material/concrete
 
 /obj/item/stack/sheet/mineral/concrete/fifty
 	amount = 50
