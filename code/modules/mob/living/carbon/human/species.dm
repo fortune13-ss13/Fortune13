@@ -1539,7 +1539,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 		target.visible_message(\
 			"<span class='danger'>\The [user] bonks [user == target ? "[user.p_them()]self" : "\the [target]"] on the head!</span>",\
-			"<span class='notice'>[user] slaps you in the face! </span>",\
+			"<span class='notice'>[user] bonks you on the head! </span>",\
 			"You hear a bonk.", target = user, target_message = "<span class='notice'>You bonk [user == target ? "yourself" : "\the [target]"] on the head! </span>")
 		user.do_attack_animation(target, ATTACK_EFFECT_FACE_SLAP)
 		user.adjustStaminaLossBuffered(3)
