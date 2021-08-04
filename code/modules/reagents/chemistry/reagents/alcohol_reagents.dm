@@ -2218,7 +2218,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	
 /datum/reagent/consumable/ethanol/rotgut
 	name = "Rotgut"
-	description = " "The folks out west started outfitting their vehicles with rot gut engines to get around. A waste of a tasty drink if you ask me"
+	description = "The folks out west started outfitting their vehicles with rot gut engines to get around. A waste of a tasty drink if you ask me"
 	boozepwr = 200 //strong enough to kill you, and second only to bacchus blessing
 	quality = DRINK_VERYGOOD
 	taste_description = "noxious fumes, burning pain, and a hint of sweetness"
