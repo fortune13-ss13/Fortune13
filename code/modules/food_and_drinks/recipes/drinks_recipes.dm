@@ -1025,3 +1025,10 @@
 	id = /datum/reagent/consumable/ethanol/nukashine
 	results = list(/datum/reagent/consumable/ethanol/nukashine = 2)
 	required_reagents = list(/datum/reagent/consumable/nuka_cola = 1, /datum/reagent/consumable/ethanol/beer = 1)
+	
+/datum/chemical_reaction/rotgut
+	name = "Rotgut"
+	/datum/reagent/consumable/ethanol/rotgut
+	results = list(/datum/reagent/consumable/ethanol/nukashine = 5)
+	required_reagents = list(/datum/reagent/space_cleaner = 1, /datum/reagent/consumable/ethanol/whiskey = 2, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/ethanol = 1)
+
