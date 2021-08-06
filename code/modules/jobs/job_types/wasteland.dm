@@ -396,6 +396,7 @@ Raider
 	/datum/outfit/loadout/raider_ncr,
 	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/raider_tribal,
+	/datum/outfit/loadout/raider_enclave
 	)
 
 
@@ -604,6 +605,18 @@ Raider
 	backpack_contents = list(
 		/obj/item/clothing/mask/cigarette/pipe = 1,
 		/obj/item/melee/onehanded/knife/bone = 1,
+		)
+
+/datum/outfit/loadout/raider_enclave
+    name = "Patriot"
+	r_hand = /obj/item/storage/backpack/satchel/enclave
+	suit = /obj/item/clothing/suit/armor/f13/battlecoat/tan/armored // Tier 4 armor
+	uniform = /obj/item/clothing/under/f13/exile/enclave
+	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
+	id = /obj/item/card/id/rusted/brokenholodog/enclave
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
+		/obj/item/ammo_box/magazine/m45=2
 		)
 
 
