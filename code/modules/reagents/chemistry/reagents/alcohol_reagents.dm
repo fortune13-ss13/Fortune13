@@ -80,7 +80,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	return ..()
 
 /datum/reagent/consumable/ethanol/beer
-	name = "Beer"
+	name = "Regular Beer"
 	description = "An alcoholic beverage brewed since ancient times on Old Earth. Still popular today."
 	color = "#664300" // rgb: 102, 67, 0
 	nutriment_factor = 1 * REAGENTS_METABOLISM
@@ -454,7 +454,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#3E1B00"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Rum and Coke"
-	glass_desc = "The classic go-to of space-fratboys."
+	glass_desc = "The classic go-to of fratboys."
 	pH = 4
 
 /datum/reagent/consumable/ethanol/cuba_libre
@@ -999,7 +999,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a poor excuse for alcohol"
 	glass_icon_state = "grogglass"
 	glass_name = "Grog"
-	glass_desc = "A fine and cepa drink for Space."
+	glass_desc = "A fine and cepa drink for wastelanders."
 
 /datum/reagent/consumable/ethanol/aloe
 	name = "Aloe"
@@ -1044,7 +1044,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "stomach acid"
 	glass_icon_state = "acidspitglass"
 	glass_name = "Acid Spit"
-	glass_desc = "A drink from Nanotrasen. Made from live aliens."
+	glass_desc = "A drink from Vault-tec. Made from live aliens."
 
 /datum/reagent/consumable/ethanol/amasec
 	name = "Amasec"
@@ -1234,7 +1234,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "da bomb"
 	glass_icon_state = "atomicbombglass"
 	glass_name = "Atomic Bomb"
-	glass_desc = "Nanotrasen cannot take legal responsibility for your actions after imbibing."
+	glass_desc = "Vault-tec cannot take legal responsibility for your actions after imbibing."
 	value = REAGENT_VALUE_RARE
 
 /datum/reagent/consumable/ethanol/atomicbomb/on_mob_life(mob/living/carbon/M)
@@ -1742,7 +1742,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "seduction"
 	glass_icon_state = "between_the_sheets"
 	glass_name = "Between the Sheets"
-	glass_desc = "The only drink that comes with a label reminding you of Nanotrasen's zero-tolerance promiscuity policy."
+	glass_desc = "The glass has a label on it, reminding Followers of the Apocaylpse about their no-promiscuity policy. That will inevitably be ignored."
 
 /datum/reagent/consumable/ethanol/between_the_sheets/on_mob_life(mob/living/L)
 	..()
@@ -2215,6 +2215,17 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.set_drugginess(50)
 	M.adjustStaminaLoss(-2)
 	return ..()
+	
+/datum/reagent/consumable/ethanol/rotgut
+	name = "Rotgut"
+	description = "The folks out west started outfitting their vehicles with rot gut engines to get around. A waste of a tasty drink if you ask me"
+	boozepwr = 200 //strong enough to kill you, and second only to bacchus blessing
+	quality = DRINK_VERYGOOD
+	taste_description = "noxious fumes, burning pain, and a hint of sweetness"
+	glass_icon_state = "whiskeyglass" //iirc there should be a sprite now
+	glass_name = "glass of Rotgut"
+	glass_desc = "cleaning fluid or tasty drink, you decide."
+	value = REAGENT_VALUE_UNCOMMON
 
 ////////////////////
 //Race-Base-Drinks//

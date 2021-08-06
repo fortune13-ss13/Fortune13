@@ -178,7 +178,7 @@
 	reqs = list(/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/metal = 10)
-	tools = list(TOOL_WELDER, TOOL_WORKBENCH)
+	tools = list(TOOL_WELDER)
 	time = 80
 	subcategory = CAT_FARMING
 	category = CAT_MISC
@@ -201,5 +201,16 @@
 	reqs = list(/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/cloth = 3)
 	tools = list(TOOL_WORKBENCH)
+	subcategory = CAT_FARMING
+	category = CAT_MISC
+
+/datum/crafting_recipe/beartrap
+	name = "Bear trap"
+	result = /obj/item/restraints/legcuffs/beartrap
+	reqs = list(/obj/item/stack/crafting/metalparts = 10,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/crafting = 2,) //For the mechanism of the bear trap, crafting parts are needed.
+	tools = list(TOOL_WORKBENCH)
+	time = 80
 	subcategory = CAT_FARMING
 	category = CAT_MISC

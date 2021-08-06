@@ -748,6 +748,16 @@
 	armor = list("tier" = 3, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 
+/obj/item/clothing/head/helmet/f13/wastewarhat
+	name = "warrior helmet"
+	desc = "(III) It might have been a cooking pot once, now its a helmet, with a piece of cloth covering the neck from the sun."
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	icon_state = "wastewar"
+	item_state = "wastewar"
+	armor = list("tier" = 3, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEHAIR
+
 /obj/item/clothing/head/helmet/f13/hoodedmask
 	name = "hooded mask"
 	desc = "(III) A gask mask with the addition of a hood."
@@ -857,8 +867,8 @@
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/degancustom
 	name = "reclaimed ranger-hunter combat helmet"
 	desc = "A reclaimed Ranger-Hunter centurion helmet, carefully and lovingly restored to working condition with a sniper's veil wrapped around the neck. 'DE OPPRESSO LIBER' is stenciled on the front."
-	icon_state = "foxranger"
-	item_state = "foxranger"
+	icon_state = "elite_riot"
+	item_state = "elite_riot"
 	actions_types = list(/datum/action/item_action/toggle)
 	toggle_message = "You put the sniper's veil on"
 	alt_toggle_message = "You take the sniper's veil off"
