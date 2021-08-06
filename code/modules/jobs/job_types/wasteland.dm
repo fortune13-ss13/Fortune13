@@ -606,7 +606,7 @@ Raider
 		/obj/item/clothing/mask/cigarette/pipe = 1,
 		/obj/item/melee/onehanded/knife/bone = 1,
 		)
-	/datum/outfit/loadout/raider_enclave
+/datum/outfit/loadout/raider_enclave
 	name = "Patriot"
 	r_hand = /obj/item/storage/backpack/satchel/enclave
 	suit = /obj/item/clothing/suit/armor/f13/battlecoat/tan/armored // Tier 4 armor
