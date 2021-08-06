@@ -1071,3 +1071,10 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	icon_state = "mutie_metal_armour_mk2"
 	item_state = "mutie_metal_armour_mk2"
 	armor = list("tier" = 6, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 40, "fire" = 30, "acid" = 20)
+
+/obj/item/clothing/suit/armor/f13/jurycoat
+	name = "Jury Duster"
+	desc = "(IV) A reinforced Jury duster modified with lightweight titanium plating and thick bighorner leather."
+	icon_state = "armored_jury_duster_renegade"
+	item state = "armored_jury_duster_renegade"
+	armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
