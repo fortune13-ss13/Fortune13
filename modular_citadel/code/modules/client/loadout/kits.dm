@@ -40,3 +40,12 @@
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/clothing/shoes/combat(src)
 	new /obj/item/clothing/gloves/combat(src)
+
+//Carbkatsu - Carbour
+/obj/item/storage/box/large/custom_kit/carbour/PopulateContents()
+	new /obj/item/clothing/under/f13/exile/tribal(src)
+	new /obj/item/clothing/suit/hooded/tribaloutcast(src)
+	new /obj/item/clothing/shoes/sandal(src)
+	new /obj/item/storage/backpack/spearquiver(src)
+	new /obj/item/card/id/outcasttattoo(src)
+	new /obj/item/twohanded/spear/bonespear(src)
