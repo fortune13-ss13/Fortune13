@@ -7,7 +7,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 
 /obj/item/clothing/shoes/f13/enclave/serviceboots
-	name = "enclave service boots"
+	name = "patriot service boots"
 	desc = "(III)Tall shiny boots with kevlar layers."
 	icon_state = "boots_enclave"
 	item_state = "boots_enclave"

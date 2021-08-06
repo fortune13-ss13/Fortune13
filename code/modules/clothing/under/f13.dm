@@ -684,7 +684,7 @@
 	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/exile/enclave
-	name = "disheveled peacekeeper uniform"
+	name = "disheveled patriot uniform"
 	desc = "Khaki standard issue uniform over a black turtleneck. This one seems to be damaged."
 	icon_state = "enclave_uniformexile"
 	item_state = "enclave_uniformexile"
