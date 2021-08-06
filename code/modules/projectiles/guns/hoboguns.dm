@@ -140,6 +140,7 @@
 	item_state = "shotgunbat"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
+	untinkerable = TRUE
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
 	force = 26 //Good club
 	fire_delay = 0.5

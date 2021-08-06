@@ -110,7 +110,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 0.5
-	extra_damage = 2
 	force = 20
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual/simple
 	sawn_desc = "Short and concealable, terribly uncomfortable to fire, but worse on the other end."
@@ -146,7 +145,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	extra_damage = 1
 	fire_delay = 0.5
 	force = 20
 	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
@@ -198,7 +196,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/police
 	sawn_desc = "Portable but with a poor recoil managment."
 	w_class = WEIGHT_CLASS_NORMAL
-	extra_damage = 1
+	extra_damage = 0
 	recoil = 0.5
 	var/stock = FALSE
 	can_flashlight = TRUE
@@ -275,7 +273,7 @@
 			select = 0
 			burst_size = 1
 			spread = 2
-			extra_damage = 2
+			extra_damage = 1
 			to_chat(user, "<span class='notice'>You go back to firing the shotgun one round at a time.</span>")
 
 
@@ -319,7 +317,7 @@
 	icon_state = "shotgunlever"
 	item_state = "shotgunlever"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/trench
-	extra_damage = 2
+	extra_damage = 1
 	fire_delay = 7
 	recoil = 0.5
 	w_class = WEIGHT_CLASS_NORMAL
@@ -391,6 +389,7 @@
 	icon_state = "shotgunriot"
 	item_state = "shotgunriot" 
 	w_class = WEIGHT_CLASS_BULKY
+	untinkerable = TRUE
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	fire_delay = 6
 	burst_size = 1
