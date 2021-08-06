@@ -48,3 +48,8 @@
 	name = "Degan's Belongings"
 	path = /obj/item/storage/box/large/custom_kit/degan
 	ckeywhitelist = list("kuusday")
+
+/datum/gear/donator/kits/carbour
+	name = "Carbour's Belongings"
+	path = /obj/item/storage/box/large/custom_kit/carbour
+	ckeywhitelist = list("resigned")
