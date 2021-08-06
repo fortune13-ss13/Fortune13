@@ -5863,6 +5863,18 @@
 	name = "Strong Door"
 	},
 /area/f13/bunker)
+"eYx" = (
+/obj/structure/handrail/g_central{
+	pixel_y = -16
+	},
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/floor/f13{
+	icon_state = "greenrustyfull"
+	},
+/area/f13/tunnel)
 "eYR" = (
 /obj/structure/chair/bench,
 /turf/open/indestructible/ground/inside/mountain,
@@ -10281,6 +10293,10 @@
 /obj/structure/wreck/trash/machinepile{
 	pixel_x = -17
 	},
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "iox" = (
@@ -11540,13 +11556,11 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/tunnel)
 "jlh" = (
-/mob/living/simple_animal/hostile/wolf/playable/rottweiler{
-	desc = "The Rottweiler is a robust dog breed of great strength descended from the mastiffs.This one smells of beans and sunflowers.";
-	dir = 8;
-	faction = list("neutral");
-	name = "Sunflower"
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/water,
 /area/f13/tunnel)
 "jll" = (
 /obj/machinery/telecomms/hub/preset,
@@ -12583,6 +12597,10 @@
 	pixel_y = -16
 	},
 /obj/item/storage/trash_stack,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -14924,7 +14942,9 @@
 /area/f13/bunker)
 "lUq" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
 /turf/open/water,
 /area/f13/tunnel)
 "lUC" = (
@@ -16671,6 +16691,12 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/brotherhood/medical)
+"ngT" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/tunnel)
 "nha" = (
 /obj/structure/light_construct,
 /turf/open/floor/plasteel/f13,
@@ -22449,6 +22475,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "reddirtyfull"
 	},
+/area/f13/tunnel)
+"rmW" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
+/turf/open/water,
 /area/f13/tunnel)
 "rno" = (
 /obj/machinery/light{
@@ -28876,6 +28908,13 @@
 /obj/structure/table,
 /turf/open/floor/carpet,
 /area/f13/ncr)
+"wTM" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4
+	},
+/turf/open/water,
+/area/f13/tunnel)
 "wUv" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/indestructible/ground/inside/mountain,
@@ -29977,6 +30016,17 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/bunker)
+"ydJ" = (
+/mob/living/simple_animal/hostile/wolf/alpha{
+	desc = "The Rottweiler is a robust dog breed of great strength descended from the mastiffs.This one smells of beans and sunflowers.";
+	faction = list("neutral");
+	icon_dead = "rottweiler_dead";
+	icon_living = "rottweiler";
+	icon_state = "rottweiler";
+	name = "Sunflower"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "ydP" = (
 /obj/structure/handrail/g_central{
 	pixel_y = -16
@@ -54365,7 +54415,7 @@ tur
 kaF
 weW
 weW
-miI
+saC
 tur
 eLE
 eLE
@@ -55647,10 +55697,10 @@ uoO
 uoO
 uoO
 tur
-jKM
+eYx
 weW
 weW
-wmT
+luk
 tur
 eLE
 vuv
@@ -58725,7 +58775,7 @@ weW
 weW
 wWB
 nBk
-nBk
+ngT
 nBk
 miI
 miI
@@ -60264,7 +60314,7 @@ fmO
 lnr
 lnr
 fmO
-nuA
+lUq
 nuA
 fmO
 fmO
@@ -60542,7 +60592,7 @@ weW
 weW
 weW
 wWB
-miI
+saC
 tur
 tur
 tur
@@ -60799,14 +60849,14 @@ nuA
 nuA
 nuA
 nuA
-lUq
+nuA
 weW
 mNE
+rmW
 weW
 weW
 weW
-weW
-weW
+rmW
 weW
 weW
 weW
@@ -61056,7 +61106,7 @@ nuA
 nuA
 nuA
 nuA
-lUq
+nuA
 weW
 mNE
 weW
@@ -61571,7 +61621,7 @@ ixo
 weW
 wWB
 miI
-miI
+saC
 tur
 tur
 tur
@@ -64119,7 +64169,7 @@ lnr
 fmO
 lnr
 lnr
-nuA
+lUq
 nuA
 lnr
 fmO
@@ -65680,7 +65730,7 @@ uUc
 lPe
 aCE
 fmO
-mst
+uSI
 wWB
 miI
 miI
@@ -67479,7 +67529,7 @@ uUc
 lPs
 aCE
 fmO
-mst
+uSI
 wWB
 miI
 miI
@@ -69002,7 +69052,7 @@ lnr
 fne
 lnr
 lnr
-nuA
+wTM
 nuA
 onY
 lnr
@@ -69518,7 +69568,7 @@ weW
 weW
 weW
 weW
-weW
+kve
 wWB
 nuA
 nuA
@@ -73376,7 +73426,7 @@ jaf
 xrJ
 lnr
 lnr
-jlh
+fmO
 fmO
 lnr
 lnr
@@ -73633,7 +73683,7 @@ jak
 jej
 uFm
 fmO
-lnr
+ydJ
 fmO
 lnr
 lnr
@@ -74137,7 +74187,7 @@ xVz
 xVz
 uoO
 ljx
-weW
+jlh
 weW
 lnr
 fmO
@@ -75165,7 +75215,7 @@ xVz
 xVz
 uoO
 ljx
-weW
+jlh
 weW
 weW
 lnr
@@ -75426,7 +75476,7 @@ oPs
 weW
 weW
 weW
-lnr
+fne
 lnr
 lnr
 kZR
