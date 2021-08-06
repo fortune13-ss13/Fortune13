@@ -50,4 +50,3 @@
 	new /obj/item/twohanded/spear/bonespear(src)
 	new /obj/item/warpaint_bowl(src)
 	new	/obj/item/card/id/outcasttattoo(src)
-	
