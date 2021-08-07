@@ -402,5 +402,7 @@
 // BETA // Obsolete
 /obj/item/gun/ballistic/shotgun/shotttesting
 	name = "shotgun"
+	icon_state = "shotgunpolice"
+	item_state = "shotgunpolice"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal/test
 	extra_damage = 7
