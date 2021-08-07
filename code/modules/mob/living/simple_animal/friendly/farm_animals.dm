@@ -726,7 +726,7 @@ obj/item/brahmincollar
 
 /datum/component/storage/concrete/brahminbag
 	max_w_class = WEIGHT_CLASS_HUGE //Allows the storage of shotguns and other two handed items.
-	max_combined_w_class = 50 // ten less than two duffelbags!
+	max_combined_w_class = 35
 	max_items = 30
 	drop_all_on_destroy = TRUE
 	allow_big_nesting = TRUE
