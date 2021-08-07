@@ -929,8 +929,7 @@ datum/job/wasteland/f13dendoctor
 	ears = /obj/item/radio/headset/headset_den
 	r_pocket = /obj/item/flashlight/seclite
 	uniform = /obj/item/clothing/under/suit/white
-	backpack =	/obj/item/storage/backpack/satchel
-	satchel =  /obj/item/storage/backpack/satchel
+	backpack =	/obj/item/storage/backpack/medic
 	gloves =  /obj/item/clothing/gloves/color/white
 	head = /obj/item/clothing/head/beret/durathread
 	mask =  /obj/item/clothing/mask/bandana/durathread
