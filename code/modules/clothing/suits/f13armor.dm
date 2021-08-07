@@ -1073,8 +1073,10 @@ obj/item/clothing/suit/armor/f13/exile/cust0m
 	armor = list("tier" = 6, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 40, "fire" = 30, "acid" = 20)
 
 /obj/item/clothing/suit/armor/f13/jurycoat
-	name = "Jury Duster"
-	desc = "(IV) A reinforced Jury duster modified with lightweight titanium plating and thick bighorner leather."
-	icon_state = "armored_jury_duster_renegade"
-	item state = "armored_jury_duster_renegade"
-	armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+    name = "Jury Duster"
+    desc = "(IV) A reinforced Jury duster modified with lightweight titanium plating and thick bighorner leather."
+    icon = 'icons/fallout/objects/clothing/suits.dmi'
+    mob_overlay_icon = 'icons/fallout/onmob/clothing/suit.dmi'
+    icon_state = "armored_jury_duster_renegade"
+    item_state = "armored_jury_duster_renegade"
+    armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
