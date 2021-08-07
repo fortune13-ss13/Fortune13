@@ -1388,7 +1388,7 @@
 	pixel_x = -12
 	},
 /turf/open/indestructible/ground/inside/dirt,
-/area/f13/village)
+/area/f13/wasteland)
 "aEi" = (
 /obj/structure/simple_door/bunker/glass,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -4318,7 +4318,7 @@
 "bYN" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/indestructible/ground/inside/dirt,
-/area/f13/village)
+/area/f13/wasteland)
 "bYU" = (
 /obj/structure/chair/left{
 	dir = 1
@@ -18288,6 +18288,10 @@
 "ipB" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#d8b1b1"
+	},
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
 	},
@@ -25333,9 +25337,12 @@
 	},
 /area/f13/caves)
 "lrE" = (
-/obj/machinery/door/unpowered/wooddoor,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/obj/machinery/door/airlock/grunge{
+	name = "Prison Management";
+	req_access_txt = "121"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
@@ -26711,7 +26718,7 @@
 /obj/item/seeds/soya,
 /obj/item/seeds/soya,
 /turf/open/indestructible/ground/inside/dirt,
-/area/f13/village)
+/area/f13/wasteland)
 "lZA" = (
 /obj/structure/sign/poster/contraband/missing_gloves{
 	pixel_y = 32
@@ -28462,9 +28469,10 @@
 	},
 /area/f13/wasteland)
 "mTl" = (
-/obj/effect/turf_decal,
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor5"
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/ash{
+	pixel_x = -11;
+	pixel_y = -7
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
@@ -35583,7 +35591,7 @@
 "qpa" = (
 /obj/structure/reagent_dispensers/compostbin,
 /turf/open/indestructible/ground/inside/dirt,
-/area/f13/village)
+/area/f13/wasteland)
 "qpH" = (
 /obj/effect/turf_decal/arrows{
 	dir = 4;
@@ -39905,11 +39913,13 @@
 	},
 /area/f13/building)
 "ste" = (
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor2"
+/obj/machinery/light/small{
+	dir = 1
 	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/ncr)
+/turf/open/floor/f13/wood{
+	icon_state = "housewood4-broken"
+	},
+/area/f13/village)
 "sto" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
@@ -40998,7 +41008,7 @@
 "sSV" = (
 /obj/machinery/seed_extractor,
 /turf/open/indestructible/ground/inside/dirt,
-/area/f13/village)
+/area/f13/wasteland)
 "sTa" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft2"
@@ -41577,9 +41587,8 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "thI" = (
-/obj/structure/fence,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/village)
+/turf/open/indestructible/ground/inside/dirt,
+/area/f13/wasteland)
 "thO" = (
 /obj/structure/chair/left{
 	dir = 4
@@ -45261,16 +45270,12 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "uOi" = (
-/obj/effect/turf_decal/arrows{
-	dir = 1;
-	pixel_y = -7
+/mob/living/simple_animal/hostile/handy,
+/obj/machinery/light/small,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
 	},
-/obj/effect/decal/cleanable/oil,
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/ncr)
+/area/f13/village)
 "uOr" = (
 /obj/structure/table/wood,
 /obj/item/assembly/signaler/advanced,
@@ -49938,10 +49943,10 @@
 	},
 /area/f13/tunnel)
 "wTN" = (
-/obj/structure/fence{
-	dir = 4
+/obj/machinery/light/small,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
 	},
-/turf/open/indestructible/ground/outside/desert,
 /area/f13/village)
 "wTX" = (
 /obj/structure/dresser,
@@ -50410,11 +50415,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood)
 "xdE" = (
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor5"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/ncr)
+/obj/effect/decal/cleanable/blood,
+/obj/structure/barricade/wooden,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "xdG" = (
 /obj/structure/stalkeregg,
 /turf/open/indestructible/ground/inside/mountain,
@@ -52070,10 +52074,6 @@
 "xQz" = (
 /turf/open/floor/wood/cold,
 /area/f13/building)
-"xRe" = (
-/obj/structure/fence/corner,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/village)
 "xRf" = (
 /obj/item/bedsheet{
 	icon_state = "sheetcmo"
@@ -55625,7 +55625,7 @@ ykI
 oNm
 mRH
 pwG
-wPt
+uOi
 gjP
 fyf
 fyf
@@ -56392,7 +56392,7 @@ gcK
 gcK
 fyf
 gjP
-qMi
+ste
 pJd
 sru
 pJd
@@ -56653,7 +56653,7 @@ pJd
 wPt
 pJd
 sru
-pJd
+wTN
 gjP
 fyf
 fyf
@@ -57420,9 +57420,9 @@ fyf
 fyf
 fyf
 gjP
+gwJ
 pJd
-pJd
-pJd
+sGY
 pJd
 pJd
 gjP
@@ -58463,7 +58463,7 @@ erY
 koD
 cpK
 gcK
-ggK
+wnA
 ggK
 ggK
 gcK
@@ -58720,10 +58720,10 @@ erY
 koD
 cpK
 wnA
+wnA
 ggK
-dcY
 ggK
-ggK
+wnA
 gcK
 cpK
 unI
@@ -58961,12 +58961,12 @@ fyf
 fyf
 fyf
 fyf
-wTN
+thG
 qpa
-vPY
+thI
 aEf
-vPY
-wTN
+thI
+thG
 fyf
 fyf
 rsE
@@ -58980,7 +58980,7 @@ gcK
 gcK
 gcK
 ggK
-ggK
+wnA
 wnA
 cpK
 unI
@@ -59218,12 +59218,12 @@ fyf
 bBK
 fyf
 pis
-wTN
-vPY
+thG
+thI
 bYN
 bYN
-vPY
-wTN
+thI
+thG
 fyf
 fyf
 bBK
@@ -59475,12 +59475,12 @@ fyf
 fyf
 fyf
 fyf
-wTN
+thG
 sSV
-vPY
-vPY
-vPY
-wTN
+thI
+thI
+thI
+thG
 fyf
 fyf
 fyf
@@ -59732,12 +59732,12 @@ fyf
 fyf
 fyf
 fyf
-wTN
-vPY
+thG
+thI
 bYN
 bYN
-vPY
-wTN
+thI
+thG
 fyf
 fyf
 fyf
@@ -59989,12 +59989,12 @@ gcK
 fyf
 fyf
 fyf
-wTN
+thG
 lZx
-vPY
-vPY
-vPY
-wTN
+thI
+thI
+thI
+thG
 fyf
 fyf
 fyf
@@ -60246,12 +60246,12 @@ gcK
 gcK
 fyf
 fyf
-wTN
-vPY
+thG
+thI
 bYN
 bYN
-vPY
-wTN
+thI
+thG
 fyf
 fyf
 fyf
@@ -60503,12 +60503,12 @@ gcK
 gcK
 gcK
 fyf
-wTN
-vPY
-vPY
-vPY
-vPY
-wTN
+thG
+thI
+thI
+thI
+thI
+thG
 fyf
 fyf
 fyf
@@ -60760,12 +60760,12 @@ gcK
 gcK
 gcK
 fyf
-xRe
-thI
-thI
-thI
-thI
-xRe
+vxC
+uxC
+uxC
+uxC
+uxC
+vxC
 fyf
 pis
 fyf
@@ -63056,7 +63056,7 @@ xdt
 xEc
 xEc
 bnc
-uOi
+hBh
 hBh
 hBh
 nnA
@@ -63311,11 +63311,11 @@ xdt
 xdt
 xdt
 iul
-ste
+xEc
 iul
 iul
 bUy
-xdE
+xEc
 xEc
 eGM
 xdt
@@ -63565,7 +63565,7 @@ koD
 uaf
 xdt
 stE
-xEc
+mTl
 cuj
 xEc
 iul
@@ -63603,7 +63603,7 @@ erY
 koD
 cpK
 gcK
-ijw
+xdE
 ggK
 uAs
 ggK
@@ -63823,7 +63823,7 @@ drk
 xdt
 yiR
 dJU
-mTl
+cuj
 xEc
 iul
 xEc
@@ -63860,7 +63860,7 @@ erY
 koD
 cpK
 wnA
-ggK
+wnA
 ggK
 ggK
 nHC
@@ -64117,7 +64117,7 @@ erY
 koD
 cpK
 gcK
-ggK
+wnA
 gAk
 ggK
 ggK
@@ -64598,7 +64598,7 @@ liP
 dkg
 cpK
 cpK
-cpK
+aND
 xdt
 soJ
 riz
