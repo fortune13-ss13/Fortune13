@@ -10404,11 +10404,10 @@
 	},
 /area/f13/ncr)
 "eQd" = (
-/obj/machinery/door/airlock/hatch{
-	name = "NCR War Room";
-	req_access_txt = "121"
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
 "eQn" = (
 /obj/machinery/computer/operating,
@@ -14251,6 +14250,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibleg"
 	},
+/obj/item/soap/deluxe,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "gzQ" = (
@@ -20470,6 +20470,11 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/city)
+"jiG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/ncr)
 "jiJ" = (
 /obj/structure/car/rubbish2,
 /turf/open/indestructible/ground/outside/dirt{
@@ -25364,10 +25369,7 @@
 	name = "NCR Command Quarters";
 	req_access_txt = "121"
 	},
-/turf/closed/wall/f13/store{
-	desc = "A pre-War wall made of solid concrete.";
-	name = "concrete wall"
-	},
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
 "lsn" = (
 /obj/machinery/vending/hydronutrients,
@@ -29275,6 +29277,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_tiled,
 /area/f13/building)
+"nnK" = (
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/ncr)
 "nnP" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -29456,14 +29464,6 @@
 /obj/item/clothing/glasses/regular,
 /turf/open/floor/wood/f13/oak,
 /area/f13/bar)
-"nss" = (
-/obj/machinery/door/unpowered/wooddoor{
-	desc = "Carved into the door are the words "STAY OUT", the Sergeants clearly love their privacy..";
-	name = "Sergeant";
-	req_access_txt = "121"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/ncr)
 "nsE" = (
 /turf/closed/indestructible/fakeglass,
 /area/f13/building)
@@ -41643,7 +41643,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/ncr)
 "tjs" = (
 /obj/effect/decal/cleanable/robot_debris,
@@ -43031,6 +43033,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/building)
+"tPJ" = (
+/obj/machinery/light/small,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/ncr)
 "tPY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/prewar/poster81{
@@ -43148,6 +43156,9 @@
 "tSl" = (
 /obj/structure/toilet{
 	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -46422,7 +46433,9 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/ncr)
 "vnR" = (
 /obj/structure/flora/rock/pile/largejungle,
@@ -49383,11 +49396,11 @@
 /area/f13/building)
 "wJZ" = (
 /obj/machinery/door/unpowered/wooddoor{
-	desc = "Carved into the door are the words "STAY OUT", the Sergeants clearly love their privacy..";
+	desc = "Carved into the door are the words STAY OUT, the Sergeants clearly love their privacy..";
 	name = "Sergeant";
 	req_access_txt = "121"
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
 "wKa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -55844,7 +55857,7 @@ xdt
 xdt
 xdt
 xdt
-eQd
+tre
 nBn
 xdt
 xdt
@@ -56083,7 +56096,7 @@ jkr
 xnt
 jkr
 xEc
-xnt
+jiG
 lrE
 iav
 ioP
@@ -56594,7 +56607,7 @@ apw
 diF
 dNU
 emU
-xEc
+eQd
 eTx
 xdt
 geM
@@ -57133,7 +57146,7 @@ iul
 xEc
 xdt
 xdt
-nss
+wJZ
 xdt
 xdt
 xdt
@@ -58167,7 +58180,7 @@ qUZ
 xdt
 xdt
 teH
-xEc
+aAr
 wAb
 xdt
 ktB
@@ -58424,7 +58437,7 @@ mAk
 rlX
 xdt
 teH
-xEc
+aAr
 wCH
 xdt
 ktB
@@ -58681,7 +58694,7 @@ wRD
 xdt
 xdt
 tfx
-xEc
+aAr
 wAb
 xdt
 ktB
@@ -58939,7 +58952,7 @@ xdt
 xdt
 tjh
 vnI
-xEc
+tPJ
 xdt
 ktB
 gcK
@@ -59194,9 +59207,9 @@ kyT
 qUZ
 xdt
 xdt
-toE
+nnK
 vqc
-toE
+nnK
 xdt
 ktB
 gcK
