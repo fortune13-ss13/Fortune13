@@ -679,7 +679,7 @@ Raider
                             /obj/item/toy/crayon/spraycan = 1,
                             /obj/item/cultivator = 1,
                             /obj/item/reagent_containers/glass/bucket = 1,
-                            /obj/item/storage/bag/plants/portaseeder=1)
+                            /obj/item/storage/bag/plants/portaseeder = 1,)
 
 /datum/outfit/loadout/medic
 	name = "Wasteland Doctor"
