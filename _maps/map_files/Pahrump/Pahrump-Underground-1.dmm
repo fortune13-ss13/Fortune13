@@ -6186,12 +6186,6 @@
 /obj/structure/sign/warning,
 /turf/closed/wall/f13/ruins,
 /area/f13/tunnel)
-"efr" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "rock2"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "egc" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser,
@@ -6323,9 +6317,11 @@
 /area/f13/brotherhood/mining)
 "eku" = (
 /obj/structure/flora/tree/jungle{
-	icon_state = "tree6"
+	desc = "Rumor has it that, as long as this tree stands firm, so too will the town of Oasis.";
+	name = "\improper Oasis Oak";
+	pixel_x = -45
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "ekK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6464,12 +6460,6 @@
 	icon_state = "rockfloor2"
 	},
 /area/f13/den)
-"eom" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassb1"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "eoy" = (
 /turf/closed/wall/f13/ruins,
 /area/f13/tunnel)
@@ -6604,13 +6594,11 @@
 	},
 /area/f13/bunker)
 "euv" = (
-/obj/structure/flora/junglebush{
-	icon_state = "grassb3"
-	},
+/obj/structure/flora/grass/jungle/b,
 /obj/structure/handrail/g_central{
 	pixel_y = -16
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "euF" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6637,9 +6625,8 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "euZ" = (
-/obj/structure/flora/junglebush{
-	icon_state = "rock5"
-	},
+/obj/structure/flora/ausbushes/leafybush,
+/obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/handrail/g_central{
 	pixel_y = -16
 	},
@@ -6647,7 +6634,7 @@
 	dir = 4;
 	pixel_x = 20
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "evn" = (
 /obj/effect/decal/cleanable/glass,
@@ -7565,14 +7552,6 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/followers)
-"faK" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassb2"
-	},
-/turf/open/indestructible/ground/inside/mountain{
-	icon_state = "rockfloor2"
-	},
-/area/f13/den)
 "faR" = (
 /obj/structure/simple_door/metal/ventilation,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9913,14 +9892,16 @@
 	},
 /area/f13/den)
 "gzm" = (
-/obj/structure/flora/junglebush{
-	icon_state = "grassb1"
+/obj/structure/flora/ausbushes/reedbush,
+/obj/structure/handrail/g_central{
+	dir = 1;
+	pixel_y = 23
 	},
 /obj/structure/handrail/g_central{
 	dir = 4;
 	pixel_x = 20
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "gzD" = (
 /obj/structure/table,
@@ -10065,13 +10046,6 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/floor/wood/f13,
-/area/f13/den)
-"gDr" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassa"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "gDU" = (
 /obj/structure/table,
@@ -10248,27 +10222,21 @@
 	},
 /area/f13/clinic)
 "gJd" = (
-/obj/structure/flora/junglebush{
-	icon_state = "rock2"
-	},
+/obj/structure/flora/ausbushes/leafybush,
+/obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/handrail/g_central{
 	dir = 8;
 	pixel_x = -20
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "gJn" = (
-/obj/structure/flora/junglebush{
-	icon_state = "grassb2"
-	},
-/obj/structure/flora/ausbushes/ywflowers{
-	icon_state = "ywflowers_4"
-	},
+/obj/structure/flora/grass/jungle,
 /obj/structure/handrail/g_central{
 	dir = 4;
 	pixel_x = 20
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "gJq" = (
 /obj/structure/handrail/g_central{
@@ -10699,14 +10667,16 @@
 	},
 /area/f13/den)
 "gVR" = (
-/obj/structure/flora/junglebush{
-	icon_state = "grassb"
+/obj/structure/flora/junglebush/c,
+/obj/structure/handrail/g_central{
+	dir = 1;
+	pixel_y = 23
 	},
 /obj/structure/handrail/g_central{
 	dir = 8;
 	pixel_x = -20
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "gVV" = (
 /obj/machinery/telecomms/broadcaster/preset_left,
@@ -12421,15 +12391,6 @@
 /obj/structure/barricade/wooden,
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
-"iBW" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "busha2"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "iCh" = (
 /obj/effect/landmark/start/f13/headscribe,
 /obj/effect/decal/cleanable/dirt,
@@ -15296,12 +15257,6 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/brotherhood/operations)
-"lpR" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "rock1"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "lpY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/autoname{
@@ -15600,15 +15555,6 @@
 	icon_state = "rampdowntop"
 	},
 /area/f13/brotherhood/operations)
-"lFM" = (
-/obj/structure/flora/junglebush/c{
-	icon_state = "rock2"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "lFR" = (
 /obj/machinery/light{
 	dir = 4
@@ -16286,12 +16232,6 @@
 	},
 /turf/open/water,
 /area/f13/tunnel)
-"muc" = (
-/obj/structure/flora/junglebush/c{
-	icon_state = "grassb2"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "mui" = (
 /obj/structure/table/wood,
 /obj/item/documents{
@@ -18319,14 +18259,6 @@
 /obj/effect/spawner/lootdrop/food,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
-"nZr" = (
-/obj/structure/handrail/g_central{
-	pixel_y = -16
-	},
-/turf/open/floor/f13{
-	icon_state = "greenrustyfull"
-	},
-/area/f13/den)
 "oaF" = (
 /obj/structure/wreck/car/bike,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
@@ -18770,12 +18702,6 @@
 	icon_state = "neutralrusty"
 	},
 /area/f13/den)
-"orM" = (
-/obj/structure/flora/junglebush/c{
-	icon_state = "grassb1"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "osd" = (
 /obj/effect/decal/remains/human,
 /turf/open/indestructible/ground/inside/mountain,
@@ -18903,12 +18829,6 @@
 /obj/item/flashlight/lamp/green,
 /turf/open/floor/carpet/black,
 /area/f13/building)
-"ozn" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassb3"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "ozS" = (
 /obj/structure/rack,
 /obj/item/trash/f13/mre,
@@ -22450,12 +22370,6 @@
 	icon_state = "darkyellowfull"
 	},
 /area/f13/brotherhood/operations)
-"rno" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassb"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "rnI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/radio/intercom{
@@ -22537,12 +22451,6 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
-"rqt" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "rock3"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "rrh" = (
 /obj/structure/table/optable,
 /obj/machinery/iv_drip{
@@ -23814,12 +23722,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/clinic)
-"syv" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassa5"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "syU" = (
 /obj/structure/dresser,
 /obj/machinery/light{
@@ -23908,12 +23810,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/brotherhood/operations)
-"sEd" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassb4"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "sEQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/blue,
@@ -23995,13 +23891,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/clinic)
-"sMc" = (
-/obj/machinery/hydroponics/soil,
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassb4"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "sMl" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/f13{
@@ -24348,12 +24237,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/brotherhood/mining)
-"tcC" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "rock5"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "tda" = (
 /turf/open/floor/carpet,
 /area/f13/den)
@@ -24482,12 +24365,6 @@
 	icon_state = "bluerustysolid"
 	},
 /area/f13/brotherhood/operations)
-"tie" = (
-/obj/structure/flora/junglebush/b{
-	icon_state = "grassb5"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "tiw" = (
 /mob/living/simple_animal/hostile/raider/ranged{
 	desc = "Another murderer churned out by the wastes, this one seems slightly more disciplined.";
@@ -26664,12 +26541,7 @@
 	},
 /area/f13/tunnel)
 "vkj" = (
-/obj/structure/flora/junglebush{
-	icon_state = "rock3"
-	},
-/obj/structure/flora/ausbushes/ywflowers{
-	icon_state = "ywflowers_2"
-	},
+/obj/structure/flora/ausbushes/reedbush,
 /obj/structure/handrail/g_central{
 	pixel_y = -16
 	},
@@ -26677,7 +26549,7 @@
 	dir = 8;
 	pixel_x = -20
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/water,
 /area/f13/den)
 "vkp" = (
 /obj/structure/punching_bag,
@@ -27423,12 +27295,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/clinic)
-"wci" = (
-/obj/structure/flora/junglebush{
-	icon_state = "grassb3"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/den)
 "wcr" = (
 /obj/structure/barricade/bars,
 /obj/effect/decal/cleanable/dirt,
@@ -52716,7 +52582,7 @@ gzU
 gMw
 gWt
 xOn
-iBW
+dUO
 xOn
 xOn
 lCp
@@ -52979,7 +52845,7 @@ giA
 dUO
 fmX
 dUp
-syv
+dUO
 iBa
 uoO
 eLE
@@ -53236,8 +53102,8 @@ kZW
 dUO
 eLy
 dUO
-sEd
-tcC
+dUO
+dUO
 uoO
 uoO
 uoO
@@ -53494,7 +53360,7 @@ eZn
 fmX
 qYy
 giA
-tie
+dUO
 uoO
 uoO
 uoO
@@ -53747,8 +53613,8 @@ dUO
 dUO
 giA
 uEi
-lFM
-orM
+dUO
+dUO
 qYX
 fmX
 dUO
@@ -54004,7 +53870,7 @@ ccw
 eOc
 fmX
 dUO
-muc
+dUO
 giA
 dUO
 dUO
@@ -55034,8 +54900,8 @@ dUO
 fhG
 dUO
 gWk
-rno
-sMc
+dUO
+gWk
 uoO
 eLE
 eLE
@@ -55282,16 +55148,16 @@ fUv
 wYo
 dFm
 dMN
-efr
-eom
+dUO
+dUO
 hdu
 eLy
 dUO
 dUO
 giA
 dUO
-ozn
-rqt
+dUO
+dUO
 iBa
 uoO
 eLE
@@ -55539,13 +55405,13 @@ fUv
 wYo
 dFm
 dFm
-gDr
+dUO
 dUO
 giA
 dUO
 dUO
-faK
-lpR
+dUO
+dUO
 fob
 oBD
 uoO
@@ -60420,7 +60286,7 @@ ajL
 lWO
 fLW
 ekg
-nZr
+vgV
 gVR
 gJd
 vkj
@@ -60677,8 +60543,8 @@ ajL
 lWO
 fLW
 fIf
-nZr
-wci
+vgV
+dyx
 eku
 euv
 fIf
@@ -60934,7 +60800,7 @@ ajL
 eld
 fLW
 fIf
-nZr
+vgV
 gzm
 gJn
 euZ
