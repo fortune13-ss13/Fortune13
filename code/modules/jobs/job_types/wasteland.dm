@@ -936,7 +936,6 @@ datum/job/wasteland/f13dendoctor
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/healthanalyzer=1, \
-		/obj/item/restraints/handcuffs=1, \
 		/obj/item/storage/bag/money/small/wastelander)
 
 /datum/outfit/job/wasteland/f13dendoctor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
