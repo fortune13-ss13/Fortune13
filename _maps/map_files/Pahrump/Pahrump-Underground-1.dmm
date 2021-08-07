@@ -1068,15 +1068,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
-"aNQ" = (
-/obj/structure/flora/junglebush{
-	icon_state = "rock3"
-	},
-/obj/structure/flora/ausbushes/ywflowers{
-	icon_state = "ywflowers_2"
-	},
-/turf/open/indestructible/ground/outside/water,
-/area/f13/den)
 "aNY" = (
 /obj/structure/closet/wardrobe/white/medical,
 /turf/open/floor/plasteel/f13{
@@ -3209,8 +3200,9 @@
 	height = 1;
 	id = "oasis"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
-	icon_state = "greenrustyfull"
+	icon_state = "greenrusty"
 	},
 /area/f13/tunnel)
 "coQ" = (
@@ -3225,12 +3217,10 @@
 	},
 /area/f13/clinic)
 "cpO" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/handrail/g_central{
-	dir = 8;
-	pixel_x = -20
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "greenrusty"
 	},
-/turf/open/indestructible/ground/outside/water,
 /area/f13/tunnel)
 "cqg" = (
 /obj/effect/decal/cleanable/dirt{
@@ -3242,12 +3232,11 @@
 	},
 /area/f13/brotherhood/operations)
 "cql" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/handrail/g_central{
-	dir = 4;
-	pixel_x = 20
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "greenrusty"
 	},
-/turf/open/indestructible/ground/outside/water,
 /area/f13/tunnel)
 "cqs" = (
 /obj/effect/decal/cleanable/dirt{
@@ -3259,11 +3248,15 @@
 	},
 /area/f13/den)
 "cqC" = (
-/obj/structure/lattice/catwalk,
 /obj/machinery/light/small{
+	brightness = 3;
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/water,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "greenrusty"
+	},
 /area/f13/den)
 "cqI" = (
 /obj/effect/spawner/lootdrop/trash,
@@ -3933,6 +3926,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/brotherhood/leisure)
+"cLR" = (
+/obj/structure/handrail/g_central{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/open/water,
+/area/f13/tunnel)
 "cLS" = (
 /obj/effect/decal/remains{
 	icon_state = "remains"
@@ -3952,8 +3952,10 @@
 	id = "dengate2";
 	name = "den gate"
 	},
-/obj/structure/lattice/catwalk,
-/turf/open/indestructible/ground/outside/water,
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "greenrusty"
+	},
 /area/f13/den)
 "cMF" = (
 /obj/machinery/shower{
@@ -4286,8 +4288,7 @@
 	dir = 1
 	},
 /turf/open/floor/f13{
-	dir = 8;
-	icon_state = "greenrustycorner"
+	icon_state = "greenrusty"
 	},
 /area/f13/den)
 "cXx" = (
@@ -5018,6 +5019,12 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/followers)
+"dwn" = (
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "greenrusty"
+	},
+/area/f13/tunnel)
 "dwv" = (
 /obj/structure/lattice{
 	density = 1
@@ -5535,8 +5542,11 @@
 	id = "dengate";
 	name = "den gate"
 	},
-/obj/structure/lattice/catwalk,
-/turf/open/indestructible/ground/outside/water,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "greenrusty"
+	},
 /area/f13/den)
 "dKS" = (
 /obj/machinery/button/door{
@@ -6266,6 +6276,13 @@
 /obj/effect/mine/stun,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"ejv" = (
+/obj/structure/handrail/g_central{
+	dir = 8;
+	pixel_x = -20
+	},
+/turf/open/water,
+/area/f13/tunnel)
 "ejM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/autoname{
@@ -6308,7 +6325,7 @@
 /obj/structure/flora/tree/jungle{
 	icon_state = "tree6"
 	},
-/turf/open/indestructible/ground/outside/water,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "ekK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6590,7 +6607,10 @@
 /obj/structure/flora/junglebush{
 	icon_state = "grassb3"
 	},
-/turf/open/indestructible/ground/outside/water,
+/obj/structure/handrail/g_central{
+	pixel_y = -16
+	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "euF" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6620,7 +6640,14 @@
 /obj/structure/flora/junglebush{
 	icon_state = "rock5"
 	},
-/turf/open/indestructible/ground/outside/water,
+/obj/structure/handrail/g_central{
+	pixel_y = -16
+	},
+/obj/structure/handrail/g_central{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "evn" = (
 /obj/effect/decal/cleanable/glass,
@@ -6891,10 +6918,14 @@
 	},
 /area/f13/den)
 "eFi" = (
-/obj/structure/lattice/catwalk,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/water,
-/area/f13/den)
+/turf/open/floor/f13{
+	icon_state = "greenrustyfull"
+	},
+/area/f13/tunnel)
 "eFq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -7983,9 +8014,10 @@
 "fpD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
-	dir = 4;
-	icon_state = "greenrustycorner"
+	dir = 1;
+	icon_state = "greenrusty"
 	},
 /area/f13/den)
 "fpJ" = (
@@ -9884,7 +9916,11 @@
 /obj/structure/flora/junglebush{
 	icon_state = "grassb1"
 	},
-/turf/open/indestructible/ground/outside/water,
+/obj/structure/handrail/g_central{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "gzD" = (
 /obj/structure/table,
@@ -10215,7 +10251,11 @@
 /obj/structure/flora/junglebush{
 	icon_state = "rock2"
 	},
-/turf/open/indestructible/ground/outside/water,
+/obj/structure/handrail/g_central{
+	dir = 8;
+	pixel_x = -20
+	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "gJn" = (
 /obj/structure/flora/junglebush{
@@ -10224,7 +10264,11 @@
 /obj/structure/flora/ausbushes/ywflowers{
 	icon_state = "ywflowers_4"
 	},
-/turf/open/indestructible/ground/outside/water,
+/obj/structure/handrail/g_central{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "gJq" = (
 /obj/structure/handrail/g_central{
@@ -10658,7 +10702,11 @@
 /obj/structure/flora/junglebush{
 	icon_state = "grassb"
 	},
-/turf/open/indestructible/ground/outside/water,
+/obj/structure/handrail/g_central{
+	dir = 8;
+	pixel_x = -20
+	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/den)
 "gVV" = (
 /obj/machinery/telecomms/broadcaster/preset_left,
@@ -14063,6 +14111,12 @@
 	icon_state = "purplefull"
 	},
 /area/f13/clinic)
+"kiE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	icon_state = "greenrustyfullgreencorner"
+	},
+/area/f13/den)
 "kiM" = (
 /obj/structure/wreck/trash/machinepile,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
@@ -15060,6 +15114,12 @@
 /obj/effect/spawner/lootdrop/f13/traitbooks,
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
+"liz" = (
+/obj/structure/simple_door/metal/barred,
+/obj/structure/lattice/catwalk,
+/obj/structure/lattice/catwalk,
+/turf/open/water,
+/area/f13/tunnel)
 "liD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/gibs,
@@ -17124,12 +17184,8 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "nhu" = (
-/obj/machinery/light/small{
-	dir = 8;
-	light_color = "#d8b1b1"
-	},
 /turf/open/floor/f13{
-	icon_state = "greenrustyfull"
+	icon_state = "greenrustycorner"
 	},
 /area/f13/tunnel)
 "nhz" = (
@@ -17593,6 +17649,17 @@
 	icon_state = "bluemark"
 	},
 /area/f13/bunker)
+"nDf" = (
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#d8b1b1"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "greenrusty"
+	},
+/area/f13/tunnel)
 "nEg" = (
 /obj/structure/chair/f13foldupchair{
 	dir = 1
@@ -18251,6 +18318,14 @@
 /obj/effect/spawner/lootdrop/druggie_pill,
 /obj/effect/spawner/lootdrop/food,
 /turf/open/indestructible/ground/inside/mountain,
+/area/f13/den)
+"nZr" = (
+/obj/structure/handrail/g_central{
+	pixel_y = -16
+	},
+/turf/open/floor/f13{
+	icon_state = "greenrustyfull"
+	},
 /area/f13/den)
 "oaF" = (
 /obj/structure/wreck/car/bike,
@@ -20743,6 +20818,11 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/brotherhood/medical)
+"qaK" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/simple_door/metal/barred,
+/turf/open/water,
+/area/f13/tunnel)
 "qbc" = (
 /obj/structure/filingcabinet{
 	pixel_x = 10
@@ -22174,7 +22254,7 @@
 	dir = 1
 	},
 /turf/open/floor/f13{
-	icon_state = "greenrustycorner"
+	icon_state = "greenrusty"
 	},
 /area/f13/den)
 "rdF" = (
@@ -24314,6 +24394,16 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/brotherhood/medical)
+"tee" = (
+/obj/structure/handrail/g_central{
+	dir = 4;
+	pixel_x = 20
+	},
+/obj/structure/handrail/g_central{
+	pixel_y = -16
+	},
+/turf/open/water,
+/area/f13/tunnel)
 "tem" = (
 /obj/structure/table{
 	layer = 2.9
@@ -25742,6 +25832,17 @@
 	},
 /turf/closed/wall/f13/supermart,
 /area/f13/followers)
+"uty" = (
+/obj/structure/handrail/g_central{
+	dir = 4;
+	pixel_x = 20
+	},
+/obj/structure/handrail/g_central{
+	dir = 1;
+	pixel_y = 23
+	},
+/turf/open/water,
+/area/f13/tunnel)
 "utP" = (
 /obj/item/reagent_containers/food/snacks/f13/deathclawegg,
 /turf/open/indestructible/ground/inside/mountain,
@@ -25833,6 +25934,16 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/den)
+"uyS" = (
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#d8b1b1"
+	},
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "greenrusty"
+	},
+/area/f13/tunnel)
 "uyV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/fakelattice,
@@ -26552,6 +26663,22 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/tunnel)
+"vkj" = (
+/obj/structure/flora/junglebush{
+	icon_state = "rock3"
+	},
+/obj/structure/flora/ausbushes/ywflowers{
+	icon_state = "ywflowers_2"
+	},
+/obj/structure/handrail/g_central{
+	pixel_y = -16
+	},
+/obj/structure/handrail/g_central{
+	dir = 8;
+	pixel_x = -20
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/den)
 "vkp" = (
 /obj/structure/punching_bag,
 /turf/open/indestructible/ground/inside/subway,
@@ -26800,6 +26927,13 @@
 	},
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices1st)
+"vxE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "greenrustycorner"
+	},
+/area/f13/tunnel)
 "vxF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -26941,8 +27075,11 @@
 /turf/closed/wall/rust,
 /area/f13/den)
 "vIQ" = (
-/obj/structure/lattice/catwalk,
-/turf/open/indestructible/ground/outside/water,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "greenrusty"
+	},
 /area/f13/tunnel)
 "vJv" = (
 /obj/structure/reagent_dispensers/barrel/old,
@@ -27286,6 +27423,12 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/clinic)
+"wci" = (
+/obj/structure/flora/junglebush{
+	icon_state = "grassb3"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/den)
 "wcr" = (
 /obj/structure/barricade/bars,
 /obj/effect/decal/cleanable/dirt,
@@ -53581,7 +53724,7 @@ lnr
 lnr
 tur
 miI
-weW
+cLR
 weW
 tur
 kUN
@@ -53838,7 +53981,7 @@ lnr
 lnr
 rzg
 miI
-weW
+mQi
 weW
 tur
 kUN
@@ -54095,7 +54238,7 @@ uoO
 lnr
 rzg
 miI
-weW
+mQi
 weW
 tur
 kUN
@@ -54352,7 +54495,7 @@ uoO
 uoO
 rzg
 miI
-weW
+mQi
 weW
 tur
 kUN
@@ -54608,9 +54751,9 @@ uoO
 uoO
 uoO
 tur
-miI
-weW
-weW
+tur
+liz
+tur
 tur
 kUN
 cfs
@@ -54857,17 +55000,17 @@ tur
 miI
 weW
 fdp
-miI
+wWF
 tur
 uoO
 uoO
 uoO
 uoO
 uoO
+uoO
 tur
-miI
-weW
-weW
+nuA
+tur
 tur
 kUN
 ccw
@@ -55112,8 +55255,8 @@ uoO
 uoO
 tur
 miI
-weW
-weW
+mst
+wWB
 miI
 tur
 uoO
@@ -55121,10 +55264,10 @@ uoO
 uoO
 uoO
 uoO
+uoO
 tur
-uwC
-weW
-weW
+nuA
+tur
 tur
 kUN
 dYt
@@ -55368,20 +55511,20 @@ uoO
 uoO
 uoO
 tur
-miI
+wWF
+mst
 weW
-weW
-miI
+wWF
 tur
 uoO
 uoO
 uoO
 uoO
 uoO
+uoO
 tur
-miI
-weW
-weW
+nuA
+tur
 tur
 kUN
 rcz
@@ -55625,20 +55768,20 @@ uoO
 uoO
 uoO
 tur
-uwC
+eFi
 weW
-weW
-miI
+wWB
+wWF
 tur
+uoO
+uoO
+uoO
+uoO
+uoO
+uoO
 tur
+nuA
 tur
-tur
-tur
-tur
-tur
-miI
-weW
-weW
 tur
 kUN
 chl
@@ -55883,19 +56026,19 @@ uoO
 uoO
 tur
 miI
-weW
-weW
+uty
+tee
 miI
-miI
-miI
-nhu
-miI
-miI
-nhu
-miI
-miI
-weW
-weW
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+tur
+qaK
+tur
 tur
 kUN
 kUN
@@ -55903,8 +56046,8 @@ kUN
 kUN
 kUN
 cVP
-ehc
-dmZ
+vgV
+cBZ
 dyx
 fUv
 wYo
@@ -56139,29 +56282,29 @@ uoO
 uoO
 uoO
 tur
-miI
+nhu
 cpO
 cpO
 vIQ
 vIQ
-vIQ
-vIQ
-vIQ
-vIQ
+cpO
+uyS
+cpO
+cpO
+nDf
 vIQ
 vIQ
 vIQ
 cpO
 cpO
-vIQ
 dKq
-gkm
+fis
 cqC
-gkm
+eay
 cMl
-gkm
-gkm
-gkm
+kiE
+fIf
+cBZ
 dyx
 fUv
 wYo
@@ -56397,28 +56540,28 @@ uoO
 uoO
 tur
 coP
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-gkm
-gkm
-gkm
-eFi
-gkm
-gkm
-gkm
-gkm
+miI
+wWF
+wWF
+wWF
+wWF
+miI
+wWF
+miI
+miI
+wWF
+wWF
+miI
+miI
+wWF
+fIf
+vgV
+fIf
+vgV
+vgV
+fIf
+vgV
+cBZ
 dyx
 fUv
 wYo
@@ -56653,29 +56796,29 @@ uoO
 uoO
 uoO
 tur
-miI
+vxE
+cql
+dwn
+dwn
+dwn
+dwn
 cql
 cql
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-vIQ
-gkm
-gkm
-gkm
-gkm
-gkm
-gkm
-gkm
-gkm
+cql
+dwn
+dwn
+dwn
+cql
+cql
+cql
+eeT
+ehc
+eeT
+eeT
+ehc
+dzl
+vgV
+cBZ
 dyx
 fUv
 wYo
@@ -56911,8 +57054,8 @@ uoO
 uoO
 tur
 miI
-weW
-weW
+ejv
+ejv
 tur
 tur
 tur
@@ -56931,7 +57074,7 @@ dYy
 dYy
 kUN
 rcZ
-fis
+fIf
 fpD
 dyx
 fUv
@@ -57167,7 +57310,7 @@ uoO
 uoO
 uoO
 tur
-uwC
+eFi
 weW
 weW
 tur
@@ -57424,7 +57567,7 @@ uoO
 uoO
 uoO
 tur
-miI
+wWF
 weW
 weW
 tur
@@ -57938,7 +58081,7 @@ uoO
 uoO
 tur
 miI
-miI
+wWF
 weW
 weW
 tur
@@ -60277,10 +60420,10 @@ ajL
 lWO
 fLW
 ekg
-vgV
+nZr
 gVR
 gJd
-aNQ
+vkj
 vgV
 cAV
 dyx
@@ -60534,8 +60677,8 @@ ajL
 lWO
 fLW
 fIf
-vgV
-euv
+nZr
+wci
 eku
 euv
 fIf
@@ -60791,7 +60934,7 @@ ajL
 eld
 fLW
 fIf
-vgV
+nZr
 gzm
 gJn
 euZ
