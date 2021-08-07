@@ -677,7 +677,7 @@ Raider
                             /obj/item/stack/sheet/mineral/wood = 50,
                             /obj/item/pickaxe/mini=1,
                             /obj/item/toy/crayon/spraycan = 1,
-                            /obj/item/cultivator=1,
+                            /obj/item/cultivator = 1,
                             /obj/item/reagent_containers/glass/bucket=1,
                             /obj/item/storage/bag/plants/portaseeder=1)
 
