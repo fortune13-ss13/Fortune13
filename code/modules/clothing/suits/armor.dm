@@ -394,7 +394,7 @@
 // Armor covering much of the body gives more defense vs acid, fire, bio in general and vice versa.
 
 /*
- Suits. 0-10 in its primary value, slowdown 0, various utility
+Suits. 0-10 in its primary value, slowdown 0, various utility
 /obj/item/clothing/suit
 	name = "suit template"
 	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
