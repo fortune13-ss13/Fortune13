@@ -22480,6 +22480,9 @@
 "keb" = (
 /obj/structure/barricade/bars,
 /obj/structure/window/fulltile/wood,
+/obj/structure/curtain{
+	color = "#845f58"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "kek" = (
@@ -26784,12 +26787,12 @@
 	},
 /area/f13/building)
 "mlD" = (
-/obj/structure/curtain{
-	color = "#845f58";
-	pixel_y = -32
-	},
+/obj/effect/landmark/start/f13/mayor,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/obj/structure/chair/office/dark{
+	dir = 1
 	},
 /turf/open/floor/wood/f13/carpet,
 /area/f13/building)
@@ -31967,6 +31970,7 @@
 /area/f13/village)
 "oSi" = (
 /obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/drinks/bottle/whiskey,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
@@ -34336,14 +34340,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
-"pSu" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/turf/open/floor/wood/f13/carpet,
-/area/f13/building)
 "pSC" = (
 /obj/structure/table/wood,
 /turf/open/indestructible/ground/outside/dirt,
@@ -36351,16 +36347,6 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/city)
-"qOe" = (
-/obj/structure/table/wood/fancy,
-/obj/machinery/computer/terminal{
-	termtag = "Business"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/turf/open/floor/wood/f13/carpet,
-/area/f13/building)
 "qOf" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -37513,16 +37499,10 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "roX" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
-	pixel_x = -6
-	},
-/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
-	pixel_x = 4
-	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/structure/chair/office/dark,
 /turf/open/floor/wood/f13/carpet,
 /area/f13/building)
 "rpf" = (
@@ -42446,7 +42426,10 @@
 /turf/open/indestructible,
 /area/f13/tcoms)
 "tDP" = (
-/obj/effect/landmark/start/f13/mayor,
+/obj/structure/table/wood/fancy,
+/obj/machinery/computer/terminal{
+	termtag = "Business"
+	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
@@ -43223,8 +43206,11 @@
 /area/f13/wasteland)
 "tVQ" = (
 /obj/structure/table/wood/fancy,
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = 4
 	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -44688,28 +44674,7 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/bar)
 "uBC" = (
-/obj/structure/table,
-/obj/machinery/button/door{
-	id = "frontgateshut";
-	name = "gate shutters";
-	pixel_x = -5;
-	pixel_y = 7
-	},
-/obj/machinery/button/door{
-	id = "interiorgate";
-	name = "Interior door button";
-	pixel_x = 6;
-	pixel_y = 7
-	},
-/obj/machinery/button/door{
-	id = "exteriorgate";
-	name = "Exterior door button";
-	pixel_x = 6;
-	pixel_y = -1
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
+/obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "uBE" = (
@@ -45069,10 +45034,6 @@
 /area/f13/wasteland)
 "uKe" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/structure/closet/crate/bin,
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "uKq" = (
@@ -45440,13 +45401,13 @@
 	},
 /area/f13/village)
 "uSz" = (
-/obj/structure/chair/office/dark{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/obj/item/kirbyplants{
+	icon_state = "plant-22"
+	},
+/turf/open/floor/wood/f13/carpet,
 /area/f13/building)
 "uSC" = (
 /obj/structure/table/wood,
@@ -50220,6 +50181,27 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/village)
+"wZI" = (
+/obj/machinery/button/door{
+	id = "exteriorgate";
+	name = "Exterior door button";
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/obj/machinery/button/door{
+	id = "interiorgate";
+	name = "Interior door button";
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/machinery/button/door{
+	id = "frontgateshut";
+	name = "gate shutters";
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/turf/closed/wall/r_wall/rust,
+/area/f13/building)
 "wZT" = (
 /obj/effect/landmark/start/f13/auxilia,
 /turf/open/floor/f13{
@@ -50816,6 +50798,16 @@
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
 	},
+/area/f13/building)
+"xmd" = (
+/obj/structure/table/wood/fancy,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/turf/open/floor/wood/f13/carpet,
 /area/f13/building)
 "xmr" = (
 /obj/structure/simple_door/house,
@@ -82358,7 +82350,7 @@ mvv
 bpD
 uIa
 xpU
-uSz
+xpU
 etg
 dCV
 uqa
@@ -83131,7 +83123,7 @@ uIa
 uKe
 xpU
 xpU
-dCV
+wZI
 oaI
 igz
 fiy
@@ -88245,7 +88237,7 @@ eOd
 cYG
 iTE
 dCV
-gBh
+uSz
 pnQ
 toR
 gBh
@@ -88503,9 +88495,9 @@ cYG
 iRH
 dCV
 gBh
-pSu
+roX
 oSi
-mlD
+gBh
 keb
 fyf
 xaE
@@ -88760,7 +88752,7 @@ wrP
 cYG
 kHg
 gBh
-qOe
+roX
 tDP
 mlD
 keb
@@ -89019,7 +89011,7 @@ dCV
 gBh
 roX
 tVQ
-mlD
+xmd
 keb
 xaE
 fyf
@@ -89273,10 +89265,10 @@ cYG
 cYG
 jeq
 dCV
-gBh
+uSz
 rtX
 uQx
-gBh
+uSz
 dCV
 bBK
 fyf
