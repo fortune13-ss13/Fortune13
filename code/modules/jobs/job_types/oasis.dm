@@ -153,7 +153,7 @@ Mayor
 	exp_type = EXP_TYPE_OASIS
 	exp_requirements = 600
 
-loadout_options = list(
+	loadout_options = list(
 	/datum/outfit/loadout/frontierjustice,
 	/datum/outfit/loadout/police,
 	/datum/outfit/loadout/pmc,)
