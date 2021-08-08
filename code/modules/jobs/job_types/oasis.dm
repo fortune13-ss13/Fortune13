@@ -154,7 +154,7 @@ Mayor
 	exp_requirements = 600
 
 loadout_options = list(
-	/datum/outfit/loadout/frontier,
+	/datum/outfit/loadout/frontierjustice,
 	/datum/outfit/loadout/police,
 	/datum/outfit/loadout/pmc,)
 
@@ -174,26 +174,27 @@ loadout_options = list(
 	name = "Deputy"
 	jobtype = /datum/job/oasis/f13deputy
 
-	ears = 			/obj/item/radio/headset/headset_town
-	id =            /obj/item/card/id/dogtag/deputy
+	ears = /obj/item/radio/headset/headset_town
+	id = /obj/item/card/id/dogtag/deputy
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
-	head =	/obj/item/clothing/head/f13/town/deputy
-	shoes = 		/obj/item/clothing/shoes/f13/explorer
+	head = /obj/item/clothing/head/f13/town/deputy
+	shoes = /obj/item/clothing/shoes/f13/explorer
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/storage/belt/holster,
 		)
 		
-/datum/outfit/loadout/frontier
+/datum/outfit/loadout/frontierjustice
 	name = "Frontier Justice"
-	suit = 			/obj/item/clothing/suit/armor/f13/town/deputy
-	head =	/obj/item/clothing/head/f13/town/dep
-	r_hand = /obj/item/gun/ballistic/rifle/repeater/trailuty
+	suit = /obj/item/clothing/suit/armor/f13/town/deputy
+	head = /obj/item/clothing/head/f13/town/dep
+	r_hand = obj/item/gun/ballistic/rifle/repeater/trailuty
 	belt = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/bowie = 1,
@@ -204,8 +205,8 @@ loadout_options = list(
 /datum/outfit/loadout/police
 	name = "Oasis PD"
 	uniform = /obj/item/clothing/under/f13/police
-	suit = 	/obj/item/clothing/suit/armor/bulletproof
-	head =	/obj/item/clothing/head/f13/police
+	suit = /obj/item/clothing/suit/armor/bulletproof
+	head = /obj/item/clothing/head/f13/police
 	r_hand = /obj/item/gun/ballistic/shotgun/police
 	belt = /obj/item/gun/ballistic/revolver/police
 	shoes = obj/item/clothing/shoes/combat
@@ -218,8 +219,8 @@ loadout_options = list(
 /datum/outfit/loadout/pmc
 	name = "Private Contractor"
 	uniform = /obj/item/clothing/under/f13/combat/militia
-	suit = 	/obj/item/clothing/suit/armor/vest/alt
-	head =	/obj/item/clothing/head/soft/f13/utility/olive
+	suit = /obj/item/clothing/suit/armor/vest/alt
+	head = /obj/item/clothing/head/soft/f13/utility/olive
 	r_hand = /obj/item/gun/ballistic/automatic/smg/greasegun
 	belt = /obj/item/gun/ballistic/automatic/pistol/m1911/compact
 	shoes = /obj/item/clothing/shoes/jackboots
