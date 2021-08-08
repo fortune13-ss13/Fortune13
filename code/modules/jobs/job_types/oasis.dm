@@ -193,7 +193,7 @@ Mayor
 /datum/outfit/loadout/frontierjustice
 	name = "Frontier Justice"
 	suit = /obj/item/clothing/suit/armor/f13/town/deputy
-	head = /obj/item/clothing/head/f13/town/dep
+	head = /obj/item/clothing/head/f13/town/deputy
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
 	belt = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
