@@ -194,7 +194,7 @@ Mayor
 	name = "Frontier Justice"
 	suit = /obj/item/clothing/suit/armor/f13/town/deputy
 	head = /obj/item/clothing/head/f13/town/dep
-	r_hand = /obj/item/gun/ballistic/rifle/repeater/trailuty
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
 	belt = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/bowie = 1,
