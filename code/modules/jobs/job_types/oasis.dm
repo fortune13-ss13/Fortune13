@@ -153,6 +153,11 @@ Mayor
 	exp_type = EXP_TYPE_OASIS
 	exp_requirements = 600
 
+loadout_options = list(
+	/datum/outfit/loadout/frontier,
+	/datum/outfit/loadout/police,
+	/datum/outfit/loadout/pmc,)
+
 	outfit = /datum/outfit/job/den/f13deputy
 	access = list(ACCESS_BAR, ACCESS_GATEWAY)
 	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY)
@@ -176,18 +181,55 @@ Mayor
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
-	suit = 			/obj/item/clothing/suit/armor/f13/town/deputy
 	head =	/obj/item/clothing/head/f13/town/deputy
-	belt = /obj/item/gun/ballistic/revolver/colt357
 	shoes = 		/obj/item/clothing/shoes/f13/explorer
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 2,
-		/obj/item/ammo_box/tube/m44 = 2,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		)
-
+		
+/datum/outfit/loadout/frontier
+	name = "Frontier Justice"
+	suit = 			/obj/item/clothing/suit/armor/f13/town/deputy
+	head =	/obj/item/clothing/head/f13/town/dep
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/trailuty
+	belt = /obj/item/gun/ballistic/revolver/m29
+	backpack_contents = list(
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/ammo_box/tube/m44 = 2,
+		/obj/item/ammo_box/m44 = 2,
+		)
+		
+/datum/outfit/loadout/police
+	name = "Oasis PD"
+	uniform = /obj/item/clothing/under/f13/police
+	suit = 	/obj/item/clothing/suit/armor/bulletproof
+	head =	/obj/item/clothing/head/f13/police
+	r_hand = /obj/item/gun/ballistic/shotgun/police
+	belt = /obj/item/gun/ballistic/revolver/police
+	shoes = obj/item/clothing/shoes/combat
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/bean = 1,
+		/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/ammo_box/c38 = 2,
+		)
+		
+/datum/outfit/loadout/pmc
+	name = "Private Contractor"
+	uniform = /obj/item/clothing/under/f13/combat/militia
+	suit = 	/obj/item/clothing/suit/armor/vest/alt
+	head =	/obj/item/clothing/head/soft/f13/utility/olive
+	r_hand = /obj/item/gun/ballistic/automatic/smg/greasegun
+	belt = /obj/item/gun/ballistic/automatic/pistol/m1911/compact
+	shoes = /obj/item/clothing/shoes/jackboots
+	backpack_contents = list(
+		/obj/item/clothing/head/helmet = 1,
+		/obj/item/ammo_box/magazine/m45 = 1,
+		/obj/item/ammo_box/magazine/greasegun = 1,
+		)
+	
+	
 /datum/outfit/job/den/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
