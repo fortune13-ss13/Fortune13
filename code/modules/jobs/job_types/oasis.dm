@@ -221,7 +221,7 @@ Mayor
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	head = /obj/item/clothing/head/soft/f13/utility/olive
 	r_hand = /obj/item/gun/ballistic/automatic/smg/smg10mm/worn
-	belt = obj/item/melee/onehanded/knife/switchblade
+	belt = /obj/item/melee/onehanded/knife/switchblade
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(
 		/obj/item/clothing/head/helmet = 1,
