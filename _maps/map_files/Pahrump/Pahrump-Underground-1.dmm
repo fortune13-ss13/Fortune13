@@ -208,16 +208,6 @@
 "aix" = (
 /turf/closed/indestructible/f13/matrix,
 /area/f13/brotherhood/leisure)
-"aiQ" = (
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_x = 16
-	},
-/turf/open/indestructible/ground/outside/water{
-	desc = "Deep, filtered pool water.";
-	name = "pool water"
-	},
-/area/f13/brotherhood/leisure)
 "aiV" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -262,12 +252,6 @@
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/radiation)
-"ajU" = (
-/turf/open/indestructible/ground/outside/water{
-	desc = "Deep, filtered pool water.";
-	name = "pool water"
-	},
-/area/f13/brotherhood/leisure)
 "ajZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/broken{
@@ -461,11 +445,8 @@
 /area/f13/bunker)
 "aqD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/water{
-	desc = "Deep, filtered pool water.";
-	name = "pool water"
-	},
-/area/f13/brotherhood/leisure)
+/turf/closed/indestructible/opshuttle,
+/area/f13/brotherhood)
 "aqW" = (
 /obj/structure/barricade/bars{
 	max_integrity = 9999
@@ -1251,13 +1232,6 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker)
-"aQe" = (
-/obj/structure/curtain{
-	color = "#5c131b"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/brotherhood/leisure)
 "aQg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
@@ -4135,6 +4109,9 @@
 	dir = 1
 	},
 /obj/structure/decoration/vent,
+/obj/structure/curtain{
+	open = 0
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/brotherhood/leisure)
 "cEi" = (
@@ -66322,9 +66299,9 @@ eLE
 (138,1,1) = {"
 eLE
 uoO
-xBs
-xBs
-xBs
+uoO
+uoO
+uoO
 xBs
 xBs
 xBs
@@ -66579,10 +66556,10 @@ eLE
 (139,1,1) = {"
 eLE
 uoO
+uoO
+uoO
+uoO
 xBs
-lpY
-lpY
-lpY
 lpY
 lpY
 lpY
@@ -66836,11 +66813,11 @@ eLE
 (140,1,1) = {"
 eLE
 uoO
+uoO
+uoO
+uoO
 xBs
-lpY
-aiQ
-ajU
-aQe
+cIG
 dKn
 dKk
 lpY
@@ -67094,10 +67071,10 @@ eLE
 eLE
 uoO
 xBs
-lpY
-ajU
+xBs
+xBs
 aqD
-aQe
+cIG
 dKn
 dKo
 cEb
