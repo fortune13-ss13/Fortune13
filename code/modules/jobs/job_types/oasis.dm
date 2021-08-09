@@ -213,6 +213,7 @@ Mayor
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/c38 = 3,
+		/obj/item/melee/classic_baton = 1,
 		)
 		
 /datum/outfit/loadout/pmc
