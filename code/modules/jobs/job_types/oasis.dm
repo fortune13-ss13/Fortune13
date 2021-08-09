@@ -181,7 +181,6 @@ Mayor
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
-	head = /obj/item/clothing/head/f13/town/deputy
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	backpack_contents = list(
@@ -221,13 +220,12 @@ Mayor
 	uniform = /obj/item/clothing/under/f13/combat/militia
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	head = /obj/item/clothing/head/soft/f13/utility/olive
-	r_hand = /obj/item/gun/ballistic/automatic/smg/greasegun
-	belt = /obj/item/gun/ballistic/automatic/pistol/m1911/compact
+	r_hand = /obj/item/gun/ballistic/automatic/smg/smg10mm/worn
+	belt = obj/item/melee/onehanded/knife/switchblade
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(
 		/obj/item/clothing/head/helmet = 1,
-		/obj/item/ammo_box/magazine/m45 = 1,
-		/obj/item/ammo_box/magazine/greasegun = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 1,
 		)
 	
 	
