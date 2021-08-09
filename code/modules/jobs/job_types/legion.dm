@@ -950,7 +950,7 @@ commented out pending rework*/
 		/obj/item/stack/sheet/leather/twenty = 1,
 		/obj/item/stack/sheet/cloth/thirty = 1,
 		/obj/item/stack/sheet/prewar = 1,
-		/obj/item/weldingtool/largetank = 1,
+		/obj/item/weldingtool = 1,
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
