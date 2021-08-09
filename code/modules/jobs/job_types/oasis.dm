@@ -187,7 +187,7 @@ Mayor
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/storage/belt/holster,
+		/obj/item/storage/belt/holster = 1,
 		)
 		
 /datum/outfit/loadout/frontierjustice
@@ -213,7 +213,7 @@ Mayor
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/ammo_box/c38 = 2,
+		/obj/item/ammo_box/c38 = 3,
 		)
 		
 /datum/outfit/loadout/pmc
