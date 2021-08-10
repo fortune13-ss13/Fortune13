@@ -8458,9 +8458,11 @@
 	},
 /area/f13/clinic)
 "flC" = (
-/obj/structure/chair/wood{
-	dir = 4
+/obj/structure/handrail/g_central{
+	dir = 1;
+	pixel_y = 23
 	},
+/obj/item/kirbyplants/random,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "flG" = (
@@ -10060,7 +10062,11 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "ggG" = (
-/obj/structure/window/fulltile/ruins,
+/obj/structure/handrail/g_central{
+	dir = 1;
+	pixel_y = 23
+	},
+/obj/structure/chair/wood,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "ggH" = (
@@ -11037,11 +11043,11 @@
 	},
 /area/f13/brotherhood/operations)
 "gMZ" = (
-/obj/structure/chair/wood{
-	dir = 4
+/obj/structure/handrail/g_central{
+	dir = 1;
+	pixel_y = 23
 	},
-/obj/structure/destructible/tribal_torch/wall/lit,
-/turf/open/floor/wood/f13/oak,
+/turf/closed/wall/r_wall/rust,
 /area/f13/den)
 "gNa" = (
 /obj/machinery/light{
@@ -13461,8 +13467,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/operations)
 "iMa" = (
-/obj/structure/table/booth,
-/obj/structure/destructible/tribal_torch/wall/lit{
+/obj/structure/chair/wood{
 	dir = 4
 	},
 /turf/open/floor/wood/f13/oak,
@@ -16671,11 +16676,10 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
 "lMp" = (
-/obj/structure/handrail/g_central{
-	dir = 1;
-	pixel_y = 23
+/obj/structure/chair/wood{
+	dir = 4
 	},
-/obj/item/kirbyplants/random,
+/obj/structure/destructible/tribal_torch/wall/lit,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "lMs" = (
@@ -20897,11 +20901,10 @@
 	},
 /area/f13/brotherhood/rnd)
 "oYU" = (
-/obj/structure/handrail/g_central{
-	dir = 1;
-	pixel_y = 23
+/obj/structure/table/booth,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4
 	},
-/obj/structure/chair/wood,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "oZd" = (
@@ -22235,6 +22238,16 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/caves)
+"pUU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkrustysolid"
+	},
+/area/f13/den)
 "pVA" = (
 /obj/machinery/conveyor/auto{
 	dir = 1
@@ -23182,7 +23195,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "qDc" = (
-/obj/structure/table/booth,
+/obj/structure/window/fulltile/ruins,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "qDR" = (
@@ -26209,6 +26222,11 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker)
+"thn" = (
+/obj/structure/simple_door/glass,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/f13/oak,
+/area/f13/den)
 "tht" = (
 /mob/living/simple_animal/hostile/radscorpion,
 /turf/open/indestructible/ground/inside/mountain,
@@ -26353,10 +26371,6 @@
 	dir = 4
 	},
 /obj/structure/chair/stool/retro/black,
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 1;
-	pixel_y = 12
-	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkrustysolid"
 	},
@@ -28031,7 +28045,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/bunker)
 "uUB" = (
-/obj/structure/simple_door/glass,
+/obj/structure/table/booth,
 /turf/open/floor/wood/f13/oak,
 /area/f13/den)
 "uVp" = (
@@ -60309,9 +60323,9 @@ esc
 fUv
 fUv
 fUv
+esc
+esc
 fUv
-esc
-esc
 sPK
 gkm
 qfj
@@ -60565,10 +60579,10 @@ ccw
 ccw
 dyx
 fUv
-fUv
 esc
 mZU
-gMZ
+lMp
+kUN
 kUN
 gmI
 kUN
@@ -60822,11 +60836,11 @@ hjc
 ccw
 dyx
 fUv
-fUv
-lMp
+flC
 pjR
+uUB
 qDc
-ggG
+jIs
 psU
 pCO
 fuE
@@ -61079,11 +61093,11 @@ hjW
 ccw
 dyx
 fUv
-fUv
 mZU
 efa
 rRP
-ggG
+qDc
+jIs
 psU
 tJD
 uas
@@ -61336,11 +61350,11 @@ ewc
 ccw
 dyx
 fUv
-fUv
 mZU
 efa
 efa
-uUB
+thn
+fVm
 psU
 nNH
 uwt
@@ -61593,11 +61607,11 @@ etd
 ite
 dyx
 fUv
-fUv
 mZU
-flC
+iMa
 efa
-ggG
+qDc
+jIs
 psU
 nQd
 fVm
@@ -61850,11 +61864,11 @@ vgV
 dmS
 dyx
 fUv
-fUv
-oYU
-iMa
-bMt
 ggG
+oYU
+bMt
+qDc
+jIs
 tKj
 tUT
 uuq
@@ -62107,11 +62121,11 @@ vgV
 cAV
 dyx
 fUv
+gMZ
 kUN
 kUN
 kUN
-kUN
-kUN
+pUU
 tnm
 voL
 fVm
