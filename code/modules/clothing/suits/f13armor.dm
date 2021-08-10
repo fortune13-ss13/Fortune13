@@ -741,8 +741,8 @@
 /obj/item/clothing/suit/armor/f13/battlecoat/vault
 	name = "command coat"
 	desc = "(III) A heavy pre-war bomber coat, dyed blue with the number '113' embroidered on the back. Most often worn by leaders, such as the Overseer."
-	icon_state = "vault_commandcoat"
-	item_state = "vault_commandcoat"
+	icon_state = "maxson_battlecoat"
+	item_state = "maxson_battlecoat"
 	armor = list("tier" = 3)
 
 /obj/item/clothing/suit/armor/f13/battlecoat/vault/overseer
