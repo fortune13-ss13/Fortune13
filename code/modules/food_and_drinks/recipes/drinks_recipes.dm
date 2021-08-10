@@ -1054,7 +1054,7 @@
 	name = "Nuka Love"
 	id = /datum/reagent/consumable/ethanol/nukalove
 	results = list(/datum/reagent/consumable/ethanol/nukalove = 2)
-	required_reagents = list(/datum/reagent/consumable/nukacherry = 1, /datum/chemical_reaction/nukaquartz = 1)
+	required_reagents = list(/datum/reagent/consumable/nukacherry = 1, /datum/reagent/consumable/nukaquartz = 1)
 	
 /datum/chemical_reaction/nukaquantum
 	name = "Nuka Quantum"
