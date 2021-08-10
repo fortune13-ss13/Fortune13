@@ -180,7 +180,7 @@ Mayor
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/melee/onehanded/knife/hunting = 1
+	r_hand = /obj/item/melee/onehanded/knife/hunting
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	backpack_contents = list(
