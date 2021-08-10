@@ -1040,8 +1040,8 @@
 	
 /datum/chemical_reaction/nukaquartz
 	name = "Nuka Quartz"
-	id = /datum/reagent/consumable/ethanol/nukaquartz
-	results = list(/datum/reagent/consumable/ethanol/nukaquartz = 3)
+	id = /datum/reagent/consumable/nukaquartz
+	results = list(/datum/reagent/consumable/nukaquartz = 3)
 	required_reagents = list(/datum/reagent/consumable/nuka_cola = 1, /datum/reagent/silicon = 1, /datum/reagent/consumable/sugar = 1)
 	
 /datum/chemical_reaction/nukacherry
