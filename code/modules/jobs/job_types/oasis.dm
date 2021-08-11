@@ -741,7 +741,8 @@ Mayor
 	suit = /obj/item/clothing/suit/f13/cowboybvest
 	uniform = /obj/item/clothing/under/f13/bartenderalt
 	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack_contents = list(/obj/item/storage/box/matches = 1, /obj/item/storage/fancy/cigarettes/cigars = 1,
+	backpack_contents = list(/obj/item/storage/box/matches = 1,
+	/obj/item/storage/fancy/cigarettes/cigars = 1,
 	/obj/item/gun/ballistic/revolver/widowmaker = 1,
 	/obj/item/ammo_box/shotgun/improvised = 2
 	)
