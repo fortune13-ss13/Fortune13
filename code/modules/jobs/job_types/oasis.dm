@@ -744,7 +744,7 @@ Mayor
 	backpack_contents = list(/obj/item/storage/box/matches = 1,
 	/obj/item/storage/fancy/cigarettes/cigars = 1,
 	/obj/item/gun/ballistic/revolver/widowmaker = 1,
-	/obj/item/ammo_box/shotgun/improvised = 2
+	/obj/item/ammo_box/shotgun/improvised = 2,
 	)
 
 /datum/outfit/loadout/hombre
@@ -781,9 +781,8 @@ Mayor
 	/obj/item/clothing/gloves/evening = 1,
 	/obj/item/clothing/gloves/color/white = 1,
 	/obj/item/melee/unarmed/brass = 1,
+	)
 	
-	
-
 /*----------------------------------------------------------------
 --							Detective							--
 ----------------------------------------------------------------*/
