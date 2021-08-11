@@ -703,10 +703,11 @@ Mayor
 	name = "Provisioner"
 	neck = /obj/item/clothing/neck/scarf/cptpatriot
 	suit = /obj/item/clothing/suit/jacket/miljacket
+	neck = /obj/item/clothing/ears/headphones
 	uniform = /obj/item/clothing/under/f13/merca
 	gloves = /obj/item/clothing/gloves/f13/leather
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
 	/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 	/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 	)
@@ -764,6 +765,7 @@ Mayor
 	r_hand = /obj/item/storage/briefcase
 	backpack_contents = list(/obj/item/pen = 1,
 	/obj/item/clipboard = 1,
+	/obj/item/paper_bin/bundlenatural = 1,
 	/obj/item/clothing/under/suit/black/skirt = 1,
 	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
 	/obj/item/ammo_box/magazine/m22 = 2,
