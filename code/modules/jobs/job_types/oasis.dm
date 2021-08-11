@@ -764,6 +764,7 @@ Mayor
 	r_hand = /obj/item/storage/briefcase
 	backpack_contents = list(/obj/item/pen = 1,
 	/obj/item/clipboard = 1,
+	/obj/item/clothing/under/suit/black/skirt = 1,
 	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
 	/obj/item/ammo_box/magazine/m22 = 2,
 	)
