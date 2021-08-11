@@ -752,7 +752,7 @@ Mayor
 	head = /obj/item/clothing/head/f13/cowboy
 	suit = /obj/item/clothing/suit/f13/duster
 	uniform = /obj/item/clothing/under/f13/cowboyb
-	r_hand = obj/item/gun/ballistic/rifle/hunting
+	r_hand = /obj/item/gun/ballistic/rifle/hunting
 	gloves = /obj/item/clothing/gloves/f13/leather
 	shoes = /obj/item/clothing/shoes/f13/cowboy
 	backpack_contents = list(/obj/item/ammo_box/a308 = 2,
