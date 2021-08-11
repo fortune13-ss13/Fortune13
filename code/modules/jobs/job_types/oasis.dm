@@ -730,7 +730,7 @@ Mayor
 	suit = /obj/item/clothing/under/sailordress
 	gloves = /obj/item/clothing/gloves/f13/lace
 	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/champagne
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/champagne = 1,
 	/obj/item/gun/ballistic/revolver/police = 1,
 	/obj/item/ammo_box/c38 = 2,
 	)
