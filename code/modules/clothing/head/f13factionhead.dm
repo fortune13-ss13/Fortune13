@@ -783,14 +783,27 @@
 	desc = "(IV) A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
 	icon_state = "khan"
 	item_state = "khan"
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
-	strip_delay = 20
+	strip_delay = 20 
 
 /obj/item/clothing/head/helmet/f13/khan/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+/obj/item/clothing/head/helmet/f13/khan/fullhelm
+	name = "Great Khan full helmet"
+	desc = "(IV) A Khan helmet with bigger horns and a pair of polarizing goggles."
+	icon_state = "khanhelmet"
+	item_state = "khanhelmet"
+	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	darkness_view = 12
+	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
+	glass_colour_type = /datum/client_colour/glass_colour/lightorange
 
 //Wayfarer
 /obj/item/clothing/head/helmet/f13/deathskull
@@ -955,19 +968,7 @@
 					playsound(src.loc, "[active_sound]", 100, 0, 4)
 					sleep(15)
 
-/obj/item/clothing/head/helmet/f13/khan/fullhelm
-	name = "Great Khan full helmet"
-	desc = "(IV) A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
-	icon_state = "khanhelmet"
-	item_state = "khanhelmet"
-	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	strip_delay = 20
 
-/obj/item/clothing/head/helmet/f13/khan/fullhelm/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
 
 //Enclave / Remnant
 /obj/item/clothing/head/donor/enclave

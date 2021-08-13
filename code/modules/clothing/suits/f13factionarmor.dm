@@ -627,6 +627,8 @@
 /obj/item/clothing/suit/armor/khan_jacket
 	name = "khan armored jacket"
 	desc = "(IV) The symbol of the greatest pushers."
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	icon_state = "khan_jacket"
 	item_state = "khan_jacket"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
