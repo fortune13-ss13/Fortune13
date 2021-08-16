@@ -46,7 +46,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	var/obj/item/heirloom_type
 	switch(quirk_holder.mind.assigned_role)
 		if("Scribe")
-			heirloom_type = pick(/obj/item/trash/f13/electronic/toaster, /obj/item/screwdriver/crude
+			heirloom_type = pick(/obj/item/trash/f13/electronic/toaster, /obj/item/screwdriver/crude)
 		if("Sheriff")
 			heirloom_type = /obj/item/clothing/accessory/medal
 		if("Shopkeeper")
