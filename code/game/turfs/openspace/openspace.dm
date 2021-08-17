@@ -21,6 +21,9 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	var/can_cover_up = TRUE
 	var/can_build_on = TRUE
 
+/turf/open/transparent/openspace/outside
+	sunlight_state = SUNLIGHT_SOURCE
+
 /turf/open/transparent/openspace/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
@@ -137,3 +140,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 
 /turf/open/transparent/openspace/icemoon/can_zFall(atom/movable/A, levels = 1, turf/target)
 	return TRUE
+
+
+/turf/open/transparent/openspace/outside
+	sunlight_state = SUNLIGHT_SOURCE
