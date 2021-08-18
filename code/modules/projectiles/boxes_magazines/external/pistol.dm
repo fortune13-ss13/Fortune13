@@ -161,6 +161,11 @@
 	max_ammo = 7
 	multiple_sprites = 2
 
+/obj/item/ammo_box/magazine/automag/ap
+	name = "automag AP magazine (.44 magnum)"
+	ammo_type = /obj/item/ammo_casing/m44/ap
+	special_ammo = TRUE
+
 //14mm
 /obj/item/ammo_box/magazine/m14mm
 	name = "handgun magazine (14mm)"

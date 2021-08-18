@@ -165,6 +165,10 @@
 	item_state = "chicom_armor"
 	armor = list("tier" = 4, "energy" = 40, "bomb" = 60, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 10)
 
+/obj/item/clothing/suit/armor/f13/combat/chinese/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/suit/armor/f13/combatrusted
 	name = "rusted combat armor"
 	desc = "(V) An old military grade pre war combat armor. This set has seen better days, weathered by time. The composite plates look sound and intact still."

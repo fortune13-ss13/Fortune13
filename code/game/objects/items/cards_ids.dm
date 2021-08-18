@@ -906,12 +906,22 @@
 			update_label()
 	return ..()
 
+/obj/item/card/id/dogtag/deputy/talon
+	name = "dogtags"
+	desc = "Given to every recruit that joins Talon."
+	icon_state = "talon"
+
 /obj/item/card/id/dogtag/sheriff
 	name = "sheriff's badge"
 	desc = "A golden Sheriff's badge."
 	assignment = "badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
+
+/obj/item/card/id/dogtag/sheriff/talon
+	name = "dogtags"
+	desc = "Custom made silver dogtags, the commander wearering it spent some money on it."
+	icon_state = "talon_command"
 
 /obj/item/card/id/dogtag/town
 	name = "citizenship permit"

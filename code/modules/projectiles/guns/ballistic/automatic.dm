@@ -407,6 +407,7 @@
 	name = "Ppsh-41"
 	desc = "An extremely fast firing, inaccurate submachine gun from World War 2. Low muzzle velocity. Uses 9mm rounds."
 	icon_state = "pps"
+	item_state = "pps"
 	slowdown = 0.3
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/pps9mm
