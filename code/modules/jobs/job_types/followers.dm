@@ -389,3 +389,4 @@ Follower Volunteer
 		/obj/item/ammo_box/shotgun/buck = 1,
 	)
 */
+
