@@ -654,7 +654,6 @@
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/m2flamethrowertank = 1,
 		)
-*/
 
 // MILITARY POLICE
 

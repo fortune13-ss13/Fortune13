@@ -1,5 +1,4 @@
-/*
-BoS access:
+/*BoS access:
 Main doors: ACCESS_CAPTAIN 20
 
 
@@ -1051,4 +1050,3 @@ Off-Duty
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/sentinel=1
 		)*/
-/*
