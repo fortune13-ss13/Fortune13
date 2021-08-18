@@ -1,19 +1,3 @@
-/*
-NCR Design notes:
-Standard issue stuff to keep the theme visually and gameplay and avoid watering down.
-Gloves		Officers - Leather glovesl, fingerless leather gloves for sergeants. Bayonet standard issue knife. Sidearms mostly for officers, 9mm is the standard. MP gets nonstandard pot helm, the exception to prove the rule.
-			NCOs -		Fingerless gloves
-			Rest -		No gloves
-Knives		Army -		Bayonet
-			Ranger -	Bowie knife
-Money		Commanding Officer (LT and CAP) - "small" money bag
-			Officers and Rangers - /obj/item/storage/bag/money/small/ncrofficers
-			Rest - /obj/item/storage/bag/money/small/ncrenlisted
-Sidearm		Officers & a few specialists - 9mm pistol
-Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
-			Don't use Greaseguns, Lever shotguns, Police shotguns, Berettas, Hunting knives
-*/
-
 /datum/job/ncr //do NOT use this for anything, it's just to store faction datums
 	department_flag = NCR
 	selection_color = "#ffeeaa"
@@ -218,7 +202,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		)
 
 
-// LIEUTENANT
+/* LIEUTENANT
 
 /datum/job/ncr/f13lieutenant
 	title = "NCR Lieutenant"
@@ -347,6 +331,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
 
+*/
 
 ///////////////
 /// Rangers ///
@@ -583,7 +568,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		)
 
 
-// COMBAT ENGINEER
+/* COMBAT ENGINEER
 
 /datum/job/ncr/f13combatengineer
 	title = "NCR Combat Engineer"
@@ -672,7 +657,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/m2flamethrowertank = 1,
 		)
-
+*/
 
 // MILITARY POLICE
 
@@ -894,7 +879,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 /// Logistics ///
 /////////////////
 
-// MEDICAL OFFICER
+/* MEDICAL OFFICER
 
 /datum/job/ncr/f13medicalofficer
 	title = "NCR Medical Officer"
@@ -1104,6 +1089,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		)
 
+*/
 // NCR Citizen
 // Really only used for ID console
 /datum/job/ncr/f13ncrcitizen

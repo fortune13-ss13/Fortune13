@@ -415,7 +415,7 @@
 //THE GRAVEYARD
 //IF PUT BACK INTO USE, PLEASE FILE IT BACK SOMEWHERE ABOVE
 
-/*
+
 
 /obj/item/clothing/suit/armored/medium/lawcoat/mayor
 	name = "mayor trenchcoat"
@@ -444,4 +444,3 @@
 	icon_state = "armor_enclave_officer"
 	item_state = "armor_enclave_officer"
 	armor = list("melee" = 60, "bullet" = 45, "energy" = 40, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
-*/

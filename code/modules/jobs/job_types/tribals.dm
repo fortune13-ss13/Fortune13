@@ -1,3 +1,4 @@
+/*
 /datum/job/tribals //do NOT use this for anything, it's just to store faction datums
 	department_flag = TRIBAL
 	selection_color = "#ffeeaa"
@@ -81,9 +82,9 @@ Tribal Chief
 		/obj/item/flashlight/lantern = 1,
 	)
 
-/*
+
 Tribal Shaman
-*/
+
 /datum/job/tribal/f13shaman
 	title = "Shaman"
 	flag = F13SHAMAN
@@ -523,3 +524,4 @@ Guardian
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/flashlight/flare/torch=1,
 		/obj/item/restraints/legcuffs/bola/tactical=1)
+*/

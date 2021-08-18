@@ -1,7 +1,7 @@
 /*
 BoS access:
 Main doors: ACCESS_CAPTAIN 20
-*/
+
 
 /datum/job/bos //do NOT use this for anything, it's just to store faction datums.
 	department_flag = BOS
@@ -1050,4 +1050,5 @@ Off-Duty
 	name = "Sentinel"
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/sentinel=1
-		)
+		)*/
+		

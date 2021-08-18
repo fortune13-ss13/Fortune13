@@ -208,7 +208,7 @@
 
 /*
 Great Khan
-*/
+
 
 /datum/job/wasteland/f13pusher
 	title = "Great Khan"
@@ -298,7 +298,7 @@ Great Khan
 	backpack_contents = list(
 		/obj/item/twohanded/baseball/spiked=1, \
 		/obj/item/reagent_containers/pill/patch/healpoultice=2)
-
+*/
 /*
 Raider
 */
@@ -323,12 +323,6 @@ Raider
 	access = list()
 	minimal_access = list()
 	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/wasteland/f13pusher,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/wasteland/f13pusher,
-		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13raider,
 		),
@@ -598,7 +592,6 @@ Raider
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13wastelander,
-			/datum/job/wasteland/f13mobboss,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/wasteland/f13wastelander,
@@ -762,6 +755,7 @@ Raider
 		/obj/item/ammo_box/a357=2,
 		/obj/item/binoculars=1,
 		/obj/item/radio=1)
+/*
 
 /datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
@@ -840,7 +834,6 @@ Raider
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		)
-
 
 
 
@@ -1001,7 +994,7 @@ datum/job/wasteland/f13dendoctor
 						/obj/item/reagent_containers/glass/beaker/large=2 \
 						)
 
-
+*/
 
 //vigilante
 
@@ -1010,8 +1003,8 @@ datum/job/wasteland/f13dendoctor
 	title = "Vigilante"
 	flag = F13VIGILANTE
 	faction = "Wastelander"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You have come a long way to reach this god forsaken place... it is now your job to protect its inhabitants from all sorts of injustice. Your moral codex requires you to help anyone in need and to never harm an innocent. Always try to capture and reeducate criminals instead of killing. Do not get involved in the conflicts between the major factions, that is not your fight."
 	supervisors = "your moral code"
 	selection_color = "#76885f"
