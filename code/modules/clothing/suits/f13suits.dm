@@ -261,6 +261,8 @@
 /obj/item/clothing/suit/toggle/labcoat/f13/khan/battlecoat
 	name = "Great Khan battle coat"
 	desc = "(V) A dark red leather coat lined with a patchwork of metal plates and padding on the inside. The back is dominated by a burning skull adorned with a horned helmet; the symbol of the Khans."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "khan_battlecoat"
 	item_state = "khan_battlecoat"
 	armor = list("tier" = 5, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
