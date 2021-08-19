@@ -602,6 +602,29 @@
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
 //Oasis/Town
+/obj/item/clothing/suit/hooded/alderman
+	name = "aldermans raincoat"
+	desc = "(IV) A pre-war high-quality raincoat, reinforced by precious kevlar lining. The yellow color makes the Alderman visible while he keeps dry"
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	icon_state = "alderman"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	item_state = "alderman"
+	armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+	strip_delay = 40
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/alderman
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+
+/obj/item/clothing/head/hooded/cloakhood/alderman
+	name = "patched leather hood"
+	desc = "(IV) Thick layered leather, patched together."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	icon_state = "hood_alderman"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	item_state = "hood_alderman"
+	armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+
+
 /obj/item/clothing/suit/armor/f13/town
 	name = "town trenchcoat"
 	desc = "(III) A non-descript black trenchcoat."
