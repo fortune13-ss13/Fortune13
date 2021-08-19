@@ -731,14 +731,14 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 // Oasis
 
 /obj/effect/landmark/start/f13/mayor
-	name = "Mayor"
+	name = "Alderman"
 
 /obj/effect/landmark/start/f13/sheriff
-	name = "Sheriff"
+	name = "Talon Commander"
 	icon_state = "Sheriff"
 
 /obj/effect/landmark/start/f13/deputy
-	name = "Deputy"
+	name = "Talon Mercenary"
 
 /obj/effect/landmark/start/f13/farmer
 	name = "Farmer"
@@ -811,19 +811,19 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 // Enclave
 /obj/effect/landmark/start/f13/usspy
-	name = "Enclave Private"
+	name = "Enclave Soldier"
 
 /obj/effect/landmark/start/f13/uslt
-	name = "Enclave Lieutenant"
+	name = "Enclave Officer"
 
 /obj/effect/landmark/start/f13/ussgt
-	name = "Enclave Sergeant"
+	name = "Enclave Armored Infantry"
 
 /obj/effect/landmark/start/f13/uscommander
 	name = "US Commander"
 
 /obj/effect/landmark/start/f13/usmedic
-	name = "US Medic"
+	name = "Intel Officer"
 
 /obj/effect/landmark/start/f13/usprivate
 	name = "US Private"

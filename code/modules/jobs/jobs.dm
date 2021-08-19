@@ -53,7 +53,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Head Paladin",
 	"Head Knight",
 
-	"Enclave Lieutenant",
+	"Enclave Officer",
 
 	"NCR Captain",
 	"NCR Lieutenant",
@@ -65,7 +65,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Overseer",
 	"Chief of Security",
 
-	"Mayor",
+	"Alderman",
 	"Talon Commander",
 
 	"Chief",
@@ -108,7 +108,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Auxilia",
 "Legion Slave",
 
-"Mayor",
+"Alderman",
 "Talon Commander",
 "Talon Mercenary",
 "Shopkeeper",
@@ -150,7 +150,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 ))
 
 GLOBAL_LIST_INIT(oasis_positions, list(
-	"Mayor",
+	"Alderman",
 	"Talon Commander",
 	"Doctor",
 	"Citizen",
@@ -229,10 +229,11 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
-	"Enclave Private",
-	"Enclave Sergeant",
+	"Enclave Soldier",
+	"Enclave Armored Infantry",
 	"Enclave Scientist",
-	"Enclave Lieutenant",
+	"Intel Officer",
+	"Enclave Officer",
 ))
 
 GLOBAL_LIST_INIT(security_positions, list(

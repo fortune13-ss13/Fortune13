@@ -11,11 +11,6 @@
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-
 /datum/outfit/job/enclave
 	id =	/obj/item/card/id/dogtag/enclave
 	ears =	/obj/item/radio/headset/headset_enclave
@@ -45,7 +40,7 @@
 
 /datum/outfit/job/enclave/officer
 	name =	"Enclave Officer"
-	jobtype =	/datum/job/wasteland/enclavelt
+	jobtype =	/datum/job/enclave/officer
 	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
 	glasses = /obj/item/clothing/glasses/night
 	mask =	/obj/item/clothing/mask/gas/enclave
@@ -99,8 +94,8 @@
 
 /datum/outfit/job/enclave/armor
 	name = "Enclave Armored Infantry"
-	jobtype = /datum/job/wasteland/enclavesgt
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/enclave/x02helmet
+	jobtype = /datum/job/enclave/armor
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	mask =	/obj/item/clothing/mask/gas/enclave
 	glasses =	/obj/item/clothing/glasses/night
 	neck =	/obj/item/storage/belt/holster/legholster
@@ -186,7 +181,7 @@
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
-	outfit = /datum/outfit/job/wasteland/enclavesci
+	outfit = /datum/outfit/job/enclave/scientist
 
 /datum/outfit/job/enclave/scientist
 	name =	"Enclave Scientist"

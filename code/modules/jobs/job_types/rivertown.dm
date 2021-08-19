@@ -11,7 +11,7 @@ Detective : 4 ACCESS_FORENSICS_LOCKERS
 here's a tip, go search DEFINES/access.dm
 */
 
-/*
+
 
 // ALDERMAN
 
@@ -39,7 +39,7 @@ here's a tip, go search DEFINES/access.dm
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
+		//	/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -100,7 +100,7 @@ datum/job/oasis/f13sheriff
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
+		//	/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -226,7 +226,7 @@ datum/job/oasis/f13sheriff
 		/obj/item/ammo_box/magazine/m762 = 2,
 		)
 /*--------------------------------------------------------------*/
-
+/*
 /datum/job/oasis/f13farmer
 	title = "Farmer"
 	flag = F13FARMER

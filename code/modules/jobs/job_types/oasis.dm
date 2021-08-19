@@ -13,7 +13,7 @@ here's a tip, go search DEFINES/access.dm
 
 /*
 Mayor
-*/
+
 
 /datum/job/oasis
 	exp_type = EXP_TYPE_OASIS
@@ -234,7 +234,7 @@ Mayor
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /*--------------------------------------------------------------*/
-
+*/
 /*
 /datum/job/oasis/f13farmer
 	title = "Farmer"
