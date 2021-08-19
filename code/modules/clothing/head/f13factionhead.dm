@@ -970,6 +970,35 @@
 
 
 
+//Talon
+/obj/item/clothing/head/helmet/f13/mercenary
+	name = "steel helmet"
+	desc = "(V) A green steel helmet."
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	icon_state = "merc"
+	item_state = "merc"
+	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
+
+/obj/item/clothing/head/helmet/f13/mercenary/cover
+	desc = "(V) A green steel helmet with camouflage helmet cover."
+	icon_state = "merc_cover"
+	item_state = "merc_cover"
+
+/obj/item/clothing/head/helmet/f13/mercenary/heavy
+	desc = "(VI) A green steel helmet with a thick faceplate, it can be pushed back on the head to make breathing and speaking easier."
+	icon_state = "merc_heavy"
+	item_state = "merc_heavy"
+	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/head/helmet/f13/mercenary/heavy/attack_self(mob/user)
+	weldingvisortoggle(user)
+	icon_state = "merc_heavyup"
+	item_state = "merc_heavyup"
+	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
+
+
 //Enclave / Remnant
 /obj/item/clothing/head/donor/enclave
 	name = "enclave forge cap"

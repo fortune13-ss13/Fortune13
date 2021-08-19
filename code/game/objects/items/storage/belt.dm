@@ -926,6 +926,14 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 7
 
+/obj/item/storage/belt/military/NCR_Bandolier/ammobandolier
+	name = "ammunition bandolier"
+	desc = "No-nonsense bandolier for small items."
+	icon = 'icons/fallout/clothing/belts.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	icon_state = "talon_bandolier"
+	item_state = "talon_bandolier"
+
 //Regular Quiver
 /obj/item/storage/belt/tribe_quiver
 	name = "tribal quiver"

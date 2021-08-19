@@ -188,6 +188,12 @@ Civilian round				=	-10% damage. AP reduced by 50%
 /obj/item/projectile/bullet/m44/simple //for simple mobs, separate to allow balancing
 	name = ".44 bullet"
 
+/obj/item/projectile/bullet/m44/ap
+	name = ".44 AP bullet"
+	damage = 36
+	armour_penetration = 0.3
+	wound_bonus = 20
+	bare_wound_bonus = -20
 
 
 ////////////
