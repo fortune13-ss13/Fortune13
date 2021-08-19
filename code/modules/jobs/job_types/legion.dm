@@ -1154,8 +1154,8 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	title = "Legion Venator"
 	flag = F13VENATOR
 	faction = "Legion"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are the Venator -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is special operations, not fighting alongside the hordes of the Legion."
 	supervisors = "the Centurion"
 	selection_color = "#ffdddd"
