@@ -5,8 +5,8 @@
 	title = "Enclave Private"
 	flag = F13USPRIVATE
 	faction = "Enclave"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are an undercover operative for the remnants of the Enclave. You are to remain concealed and attempt to present the Enclave in a positive light to the population of the wasteland unless overt action is absolutely necessary."
 	forbids = ""
 	enforces = ""
@@ -47,8 +47,8 @@
 	title = "Enclave Sergeant"
 	flag = F13USSGT
 	faction = "Enclave"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are in charge of the recruiting for the remnants of the Enclave. You are to recruit all those interested to your cause."
 	forbids = "You are not allowed to have friendly interactions with those outside of the Enclave."
 	enforces = "You must maintain the secrecy of organization."
@@ -94,8 +94,8 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	faction = "Enclave"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
 	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
 	enforces = "You must maintain the secrecy of organization."
@@ -151,8 +151,8 @@
 	title = "Enclave Lieutenant"
 	flag = F13USLT
 	faction = "Enclave"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are the Lieutenant in charge of commanding the remnants of the Enclave forces in the area. You are to recruit all those interested to your cause."
 	forbids = "You are not allowed to have friendly interactions with those outside of the Enclave."
 	enforces = "You must maintain the secrecy of organization."
@@ -208,7 +208,7 @@
 
 /*
 Great Khan
-*/
+
 
 /datum/job/wasteland/f13pusher
 	title = "Great Khan"
@@ -298,7 +298,7 @@ Great Khan
 	backpack_contents = list(
 		/obj/item/twohanded/baseball/spiked=1, \
 		/obj/item/reagent_containers/pill/patch/healpoultice=2)
-
+*/
 /*
 Raider
 */
@@ -323,12 +323,6 @@ Raider
 	access = list()
 	minimal_access = list()
 	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/wasteland/f13pusher,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/wasteland/f13pusher,
-		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13raider,
 		),
@@ -598,7 +592,6 @@ Raider
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13wastelander,
-			/datum/job/wasteland/f13mobboss,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/wasteland/f13wastelander,
@@ -762,6 +755,7 @@ Raider
 		/obj/item/ammo_box/a357=2,
 		/obj/item/binoculars=1,
 		/obj/item/radio=1)
+/*
 
 /datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
@@ -840,7 +834,6 @@ Raider
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		)
-
 
 
 
@@ -1001,7 +994,7 @@ datum/job/wasteland/f13dendoctor
 						/obj/item/reagent_containers/glass/beaker/large=2 \
 						)
 
-
+*/
 
 //vigilante
 
@@ -1010,8 +1003,8 @@ datum/job/wasteland/f13dendoctor
 	title = "Vigilante"
 	flag = F13VIGILANTE
 	faction = "Wastelander"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You have come a long way to reach this god forsaken place... it is now your job to protect its inhabitants from all sorts of injustice. Your moral codex requires you to help anyone in need and to never harm an innocent. Always try to capture and reeducate criminals instead of killing. Do not get involved in the conflicts between the major factions, that is not your fight."
 	supervisors = "your moral code"
 	selection_color = "#76885f"
