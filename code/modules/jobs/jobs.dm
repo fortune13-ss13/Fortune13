@@ -66,7 +66,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Chief of Security",
 
 	"Mayor",
-	"Sheriff",
+	"Talon Commander",
 
 	"Chief",
 	"Shaman",
@@ -109,8 +109,8 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Slave",
 
 "Mayor",
-"Sheriff",
-"Deputy",
+"Talon Commander",
+"Talon Mercenary",
 "Shopkeeper",
 "Doctor",
 "Prospector",
@@ -151,13 +151,13 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 
 GLOBAL_LIST_INIT(oasis_positions, list(
 	"Mayor",
-	"Sheriff",
+	"Talon Commander",
 	"Doctor",
 	"Citizen",
-	"Deputy",
+	"Talon Mercenary",
 	"Shopkeeper",
-	"Farmer",
-	"Prospector",
+//	"Farmer",
+//	"Prospector",
 	"Detective",
 	"Preacher",
 	"Barkeep",
@@ -179,7 +179,7 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Veteran Legionnaire",
 	"Prime Legionnaire",
 	"Recruit Legionnaire",
-	"Legion Forgemaster",
+//	"Legion Forgemaster",
 	"Legion Slavemaster",
 	"Legion Auxilia",
 	"Legion Slave",
@@ -218,12 +218,12 @@ GLOBAL_LIST_INIT(vault_positions, list(
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
-	"Den Mob Boss",
-	"Den Mob Enforcer",
-	"Den Doctor",
+//	"Den Mob Boss",
+//	"Den Mob Enforcer",
+//	"Den Doctor",
 	"Outlaw",
-	"Great Khan",
-	"Faithful",
+//	"Great Khan",
+//	"Faithful",
 	"Vigilante",
 	"Wastelander",
 ))
@@ -265,12 +265,13 @@ GLOBAL_LIST_INIT(followers_positions, list(
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
-	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
-	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
+	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#808080"),
+//	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#ffeeee"),
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
-	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
+//	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),
+	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#005eff"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -283,18 +284,13 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SECURITY = list("titles" = security_positions),
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
-
-	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
+	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | oasis_positions | legion_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
 
 	EXP_TYPE_OUTLAW = list("titles" = list("Outlaw")),
-	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),
 	EXP_TYPE_OASIS = list("titles" = oasis_positions ),
 	EXP_TYPE_LEGION = list("titles" = legion_positions),
-	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_VAULT = list("titles" = vault_positions),
 	EXP_TYPE_WASTELAND = list("titles" = wasteland_positions),
-	EXP_TYPE_TRIBAL = list("titles" = tribal_positions),
-	EXP_TYPE_FOLLOWERS = list("titles" = followers_positions),
 	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),

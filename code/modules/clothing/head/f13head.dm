@@ -692,6 +692,24 @@
 	flags_inv = HIDEHAIR
 	armor = list("tier" = 3)
 
+/obj/item/clothing/head/fedora/mobster
+	name = "fedora"
+	desc = "(IV) Under this stylish hat, a hardened kevlar skullcap is hidden."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "detectivealt"
+	item_state = "detectivealt"
+	armor = list("tier" = 4, "linemelee" = 0, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+
+/obj/item/clothing/head/f13/purple/mobster
+	name = "top hat"
+	desc = "(IV) Under this stylish hat, a hardened kevlar skullcap is hidden."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "gamblerboss"
+	item_state = "gamblerboss"
+	armor = list("tier" = 4, "linemelee" = 0, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+
 /obj/item/clothing/head/f13/cowboy
 	name = "cowboy hat"
 	desc = "(II) I've never seen so many men wasted so badly."

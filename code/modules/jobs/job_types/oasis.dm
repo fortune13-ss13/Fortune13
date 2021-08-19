@@ -40,7 +40,6 @@ Mayor
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -75,7 +74,7 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13sheriff
-	title = "Sheriff"
+	title = "Talon Commander"
 	flag = F13SHERIFF
 	department_flag = DEP_OASIS
 	head_announce = list("Security")
@@ -97,7 +96,6 @@ Mayor
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -140,7 +138,7 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13deputy
-	title = "Deputy"
+	title = "Talon Mercenary"
 	flag = F13DEPUTY
 	department_flag = DEP_OASIS
 	faction = "Town"
@@ -237,6 +235,7 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
+/*
 /datum/job/oasis/f13farmer
 	title = "Farmer"
 	flag = F13FARMER
@@ -352,14 +351,14 @@ Mayor
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /*--------------------------------------------------------------*/
-
+*/
 /datum/job/oasis/f13dendoc
 	title = "Doctor"
 	flag = F13DENDOC
 	department_flag = DEP_OASIS
 	faction = "Town"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "law and order"
 	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
@@ -807,7 +806,6 @@ Mayor
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/wasteland/f13wastelander,
 			/datum/job/wasteland/f13detective,
-			/datum/job/wasteland/f13mobboss,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/wasteland/f13wastelander,

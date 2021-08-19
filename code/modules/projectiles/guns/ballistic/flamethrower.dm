@@ -15,6 +15,14 @@
 	var/overheat_max = 4
 	var/heat_diffusion = 1
 
+/obj/item/m2flamethrowertank/salvagedflamer
+	name = "salvaged flamer tank"
+	desc = "Rusty, jury-rigged flamer setup, using parts scavenged from a M2 flamethrower."
+	icon = 'icons/fallout/objects/guns/flamethrower.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/weapons/special_backsprites.dmi'
+	item_state = "salvage_flamethrower_back"
+	overheat_max = 3
+
 /obj/item/m2flamethrowertank/Initialize()
 	. = ..()
 	gun = new(src)
@@ -94,6 +102,7 @@
 	name = "\improper M2 Flamethrower"
 	desc = "A pre-war M2 Flamethrower, commonly found in National Guard armoies. This one has NCR armory markings and is issued to combat engineers."
 	icon = 'icons/obj/guns/flamethrower.dmi'
+	icon = 'icons/fallout/objects/guns/flamethrower.dmi'
 	icon_state = "m2_flamethrower_on"
 	item_state = "m2flamethrower"
 	flags_1 = CONDUCT_1
