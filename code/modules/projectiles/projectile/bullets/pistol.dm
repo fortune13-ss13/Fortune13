@@ -227,15 +227,34 @@ Civilian round				=	-10% damage. AP reduced by 50%
 
 
 ///////////
-// 14 MM //
+// 12.7 MM //
 ///////////				-Heavy round, damage focus
+
+/obj/item/projectile/bullet/mm127
+	name = "12.7mm FMJ bullet"
+	damage = 40
+	armour_penetration = 0.2
+	wound_bonus = 28
+	bare_wound_bonus = -28
+
+/obj/item/projectile/bullet/mm127/jhp
+	name = "12.7mm JHP bullet"
+	damage = 49
+	armour_penetration = 0
+	wound_bonus = -35
+	bare_wound_bonus = 35
+
+
+///////////
+// 14 MM //
+///////////				-Heavy round, damage focus, even more than 12.7
 
 /obj/item/projectile/bullet/mm14
 	name = "14mm FMJ bullet"
 	damage = 43
 	armour_penetration = 0.2
-	wound_bonus = 28
-	bare_wound_bonus = -28
+	wound_bonus = 24
+	bare_wound_bonus = -24
 
 /obj/item/projectile/bullet/mm14/jhp
 	name = "14mm JHP bullet"

@@ -107,3 +107,15 @@
 
 /obj/item/ammo_box/magazine/m10mm_p90/empty
 	start_empty = 1
+
+/obj/item/ammo_box/magazine/m127mm_smg
+	name = "toploader magazine (12.7mm)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "12.7mm"
+	ammo_type = /obj/item/ammo_casing/c127mm
+	caliber = "127mm"
+	max_ammo = 20
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m10mm_p90/empty
+	start_empty = 1

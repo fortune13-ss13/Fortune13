@@ -24,6 +24,19 @@
 ---Fallout 13---
 */
 
+//.22
+/obj/item/ammo_box/magazine/m22/rifle
+	name = "rifle magazine (.22lr)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "rifle22"
+	ammo_type = /obj/item/ammo_casing/a22
+	caliber = ".22lr"
+	max_ammo = 25
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m22/rifle/empty
+	start_empty = 1
+
 /obj/item/ammo_box/magazine/autopipe
 	name = "pipe rifle ammo belt (.357)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -74,6 +87,40 @@
 /obj/item/ammo_box/magazine/m556/rifle/extended/empty
 	start_empty = 1
 
+/obj/item/ammo_box/magazine/m762x39/rifle
+	name = "rifle magazine (7.62x39mm)"
+	icon_state = "762x39-r20"
+	caliber = "a762x39"
+	max_ammo = 20
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m762x39/rifle/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/m762x39/rifle/small
+	name = "small rifle magazine (7.62x39mm)"
+	icon_state = "762x39-r10"
+	max_ammo = 10
+
+/obj/item/ammo_box/magazine/m762x39/rifle/small/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/m762x39/rifle/assault
+	name = "rifle magazine (7.62x39mm)"
+	icon_state = "762x39-r30"
+	max_ammo = 30
+
+/obj/item/ammo_box/magazine/m762x39/rifle/assault/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/m762x39/rifle/extended
+	name = "extended rifle magazine (7.62x39mm)"
+	icon_state = "762x39-r50"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/m762x39/rifle/extended/empty
+	start_empty = 1
+
 /obj/item/ammo_box/magazine/garand308
 	name = "en-bloc clip (7.62x51mm)"
 	icon_state = "enbloc-8"
@@ -99,18 +146,18 @@
 	start_empty = 1
 
 /obj/item/ammo_box/magazine/sks
-	name = "7.62mm clip (SKS)"
-	icon_state = "enbloc-10"
-	ammo_type = /obj/item/ammo_casing/a762
-	caliber = "a762"
+	name = "7.62x39mm clip (SKS)"
+	icon_state = "762x39-10"
+	ammo_type = /obj/item/ammo_casing/a762x39
+	caliber = "a762x39"
 	max_ammo = 10
 
 /obj/item/ammo_box/magazine/sks/update_icon()
 	..()
 	if (ammo_count() >= 10)
-		icon_state = "enbloc-10"
+		icon_state = "762x39-10"
 	else
-		icon_state = "enbloc-[ammo_count()]"
+		icon_state = "762x39-[ammo_count()]"
 
 /obj/item/ammo_box/magazine/sks/empty
 	start_empty = 1

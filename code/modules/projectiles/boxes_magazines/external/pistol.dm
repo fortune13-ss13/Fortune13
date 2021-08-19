@@ -23,6 +23,40 @@
 /obj/item/ammo_box/magazine/m22/empty
 	start_empty = 1
 
+//.38
+/obj/item/ammo_box/magazine/m38
+	name = "handgun magazine (.38)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "38mag"
+	ammo_type = /obj/item/ammo_casing/c38
+	caliber = ".38"
+	max_ammo = 7
+	multiple_sprites = 1
+
+/obj/item/ammo_box/magazine/m38/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/m38/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
+
+	//.38
+/obj/item/ammo_box/magazine/m38/small
+	name = "compact handgun magazine (.38)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "38magsmall"
+	ammo_type = /obj/item/ammo_casing/c38
+	caliber = ".38"
+	max_ammo = 6
+	multiple_sprites = 1
+
+/obj/item/ammo_box/magazine/m38/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/m38/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
+
 //9mm
 /obj/item/ammo_box/magazine/zipgun
 	name = "Zip gun clip (9mm)"
@@ -160,6 +194,23 @@
 	ammo_type = /obj/item/ammo_casing/m44
 	max_ammo = 7
 	multiple_sprites = 2
+
+	//12.7mm
+/obj/item/ammo_box/magazine/m127mm
+	name = "handgun magazine (12.7mm)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "pistol127mm"
+	ammo_type = /obj/item/ammo_casing/c127mm
+	caliber = "127mm"
+	max_ammo = 7
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m127mm/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/m127mm/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
 
 //14mm
 /obj/item/ammo_box/magazine/m14mm

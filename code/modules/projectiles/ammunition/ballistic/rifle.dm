@@ -23,6 +23,26 @@
 	name = "7.62 match bullet casing"
 	projectile_type = /obj/item/projectile/bullet/a762/match
 
+// 7.62x39mm
+/obj/item/ammo_casing/a762x39
+	name = "7.62x39 FMJ bullet casing"
+	desc = "A 7.62x39 FMJ bullet casing."
+	icon_state = "762x39-casing"
+	caliber = "a762x39"
+	projectile_type = /obj/item/projectile/bullet/a762x39
+
+/obj/item/ammo_casing/a762x39/ap
+	name = "7.62x39 AP bullet casing"
+	projectile_type = /obj/item/projectile/bullet/a762x39/ap
+
+/obj/item/ammo_casing/a762x39/jhp
+	name = "7.62x39 JHP bullet casing"
+	projectile_type = /obj/item/projectile/bullet/a762x39/jhp
+
+/obj/item/ammo_casing/a762x39/match
+	name = "7.62x39 match bullet casing"
+	projectile_type = /obj/item/projectile/bullet/a762x39/match
+
 // 5.56mm
 /obj/item/ammo_casing/a556
 	name = "5.56mm FMJ bullet casing"

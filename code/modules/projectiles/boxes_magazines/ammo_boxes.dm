@@ -312,6 +312,33 @@
 	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)	
 	icon_state = "improvshotbag"
 
+//7.62x39
+/obj/item/ammo_box/a762x39
+	name = "ammo box (7.62x39 FMJ)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "762x39box"
+	multiple_sprites = 2
+	caliber = "a762x39"
+	ammo_type = /obj/item/ammo_casing/a762x39
+	max_ammo = 40
+	w_class = WEIGHT_CLASS_NORMAL
+	custom_materials = list(/datum/material/iron = 20000, /datum/material/blackpowder = 1000)
+
+/obj/item/ammo_box/a762x39/jhp
+	name = "ammo box (7.62x39 JHP)"
+	ammo_type = /obj/item/ammo_casing/a762x39/jhp
+	custom_materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 1000)
+
+/obj/item/ammo_box/a762x39/ap
+	name = "ammo box (7.62x39 AP)"
+	ammo_type = /obj/item/ammo_casing/a762x39/ap
+	custom_materials = list(/datum/material/iron = 24000, /datum/material/titanium = 4000, /datum/material/blackpowder = 1000)
+
+/obj/item/ammo_box/a762x39/match
+	name = "ammo box (7.62x39 match)"
+	ammo_type = /obj/item/ammo_casing/a762x39/match
+	custom_materials = list(/datum/material/iron = 28000, /datum/material/blackpowder = 2500)
+
 
 //7.62x51, .308 Winchester
 /obj/item/ammo_box/a308box
@@ -352,7 +379,7 @@
 	custom_materials = list(/datum/material/iron = 28000, /datum/material/blackpowder = 2500)
 
 
-//.50 MG and 14mm
+//.50 MG, 12.7mm and 14mm
 /obj/item/ammo_box/a50MGbox
 	name = "ammo box (.50 MG)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -363,6 +390,22 @@
 	max_ammo = 25
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron = 20000, /datum/material/blackpowder = 1500)
+
+/obj/item/ammo_box/mm127
+	name = "ammo box (12.7mm FMJ)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "127mmbox"
+	multiple_sprites = 2
+	caliber = "12.7"
+	ammo_type = /obj/item/ammo_casing/c127mm
+	max_ammo = 40
+	w_class = WEIGHT_CLASS_NORMAL
+	custom_materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 1500)
+
+/obj/item/ammo_box/mm127/jhp
+	name = "ammo box (12.7mm JHP)"
+	ammo_type = /obj/item/ammo_casing/c127mm/jhp
+	custom_materials = list(/datum/material/iron = 14000)
 
 /obj/item/ammo_box/m14mm
 	name = "ammo box (14mm)"

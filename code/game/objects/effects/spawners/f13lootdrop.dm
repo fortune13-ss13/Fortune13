@@ -762,6 +762,13 @@
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
+/obj/effect/spawner/bundle/f13/ruger1022
+	name = "Ruger 10/22 and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/ruger,
+				/obj/item/ammo_box/magazine/m22/rifle
+				)
+
 /obj/effect/spawner/bundle/f13/pistol22
 	name = ".22 pistol and ammo spawner"
 	items = list(
@@ -878,7 +885,8 @@
 	name = "tier 3 gun"
 	loot = list(/obj/effect/spawner/bundle/f13/mosin,
 				/obj/effect/spawner/bundle/f13/widowmaker,
-				/obj/effect/spawner/bundle/f13/autopipe
+				/obj/effect/spawner/bundle/f13/autopipe,
+				/obj/effect/spawner/bundle/f13/ruger1022
 				)
 
 /obj/effect/spawner/bundle/f13/widowmaker
@@ -1093,6 +1101,55 @@
 				/obj/item/stock_parts/cell/ammo/mfc
 	)
 
+ /obj/effect/spawner/bundle/f13/sks
+	name = "SKS and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/m1garand/sks,
+				/obj/item/ammo_box/magazine/sks/empty
+				)
+
+ /obj/effect/spawner/bundle/f13/handmade
+	name = "handmade rifle and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/handmade,
+				/obj/item/ammo_box/magazine/m762x39/rifle/empty
+				)
+
+/obj/effect/spawner/bundle/f13/ak74
+	name = "AK-74 and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/ak74,
+				/obj/item/ammo_box/magazine/m556/rifle/empty
+				)
+
+/obj/effect/spawner/bundle/f13/ak15
+	name = "AK-15 and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/ak15,
+				/obj/item/ammo_box/magazine/m762x39/rifle/empty
+				)
+
+/obj/effect/spawner/bundle/f13/ak308
+	name = "AK-308 and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/ak308,
+				/obj/item/ammo_box/magazine/m762/empty
+				)
+
+/obj/effect/spawner/bundle/f13/an94
+	name = "AN-94 and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/an94,
+				/obj/item/ammo_box/magazine/m556/rifle/empty
+				)
+
+/obj/effect/spawner/bundle/f13/rpk
+	name = "RPK and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/rpk,
+				/obj/item/ammo_box/magazine/m762x39/rifle/extended/empty
+				)
+
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 //TIER 5 GUN
 	name = "tier 5 gun"
@@ -1133,7 +1190,8 @@
 				/obj/effect/spawner/bundle/f13/deagle,
 				/obj/effect/spawner/bundle/f13/mk23,
 				/obj/effect/spawner/bundle/f13/revolverm29,
-				/obj/effect/spawner/bundle/f13/needler
+				/obj/effect/spawner/bundle/f13/needler,
+				/obj/effect/spawner/bundle/f13/handmade
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier8
@@ -1146,7 +1204,8 @@
 				/obj/effect/spawner/bundle/f13/mp5,
 				/obj/effect/spawner/bundle/f13/citykiller,
 				/obj/effect/spawner/bundle/f13/brushgun,
-				/obj/effect/spawner/bundle/f13/infiltrator
+				/obj/effect/spawner/bundle/f13/infiltrator,
+				/obj/effect/spawner/bundle/f13/ak74
 				)
 
 /obj/effect/spawner/bundle/f13/mp5
@@ -1171,7 +1230,8 @@
 				/obj/effect/spawner/bundle/f13/riotshotgun,
 				/obj/effect/spawner/bundle/f13/aer12,
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
-				/obj/effect/spawner/bundle/f13/hunting
+				/obj/effect/spawner/bundle/f13/hunting,
+				/obj/effect/spawner/bundle/f13/ak15
 				)
 
 /obj/effect/spawner/bundle/f13/guns/p90
@@ -1321,7 +1381,8 @@
 				/obj/item/ammo_box/shotgun/slug,
 				/obj/item/ammo_box/c38,
 				/obj/item/ammo_box/magazine/m10mm_adv/simple,
-				/obj/item/ammo_box/magazine/m556/rifle/small
+				/obj/item/ammo_box/magazine/m556/rifle/small,
+				/obj/item/ammo_box/magazine/sks
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2
@@ -1339,7 +1400,8 @@
 				/obj/item/ammo_box/m44,
 				/obj/item/ammo_box/tube/a357,
 				/obj/item/ammo_box/a357,
-				/obj/item/ammo_box/magazine/m556/rifle/small
+				/obj/item/ammo_box/magazine/m556/rifle/small,
+				/obj/item/ammo_box/magazine/m762x39/rifle/small
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2/Initialize(mapload) //on mapload, pick how many shit to spawn
@@ -1378,7 +1440,8 @@
 				/obj/item/ammo_box/tube/c4570,
 				/obj/item/ammo_box/a50MG,
 				/obj/item/ammo_box/a762/doublestacked,
-				/obj/item/stock_parts/cell/ammo/mfc
+				/obj/item/stock_parts/cell/ammo/mfc,
+				/obj/item/ammo_box/magazine/m762x39/rifle
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier4/Initialize(mapload) //on mapload, pick how many shit to spawn
@@ -1394,7 +1457,8 @@
 				/obj/item/ammo_box/a50MG/incendiary,
 				/obj/item/ammo_box/magazine/m556/rifle/extended,
 				/obj/item/ammo_box/magazine/m762/ext,
-				/obj/item/ammo_box/magazine/d12g
+				/obj/item/ammo_box/magazine/d12g,
+				/obj/item/ammo_box/magazine/m762x39/rifle/assault
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5/Initialize(mapload) //on mapload, pick how many shit to spawn
@@ -1798,6 +1862,7 @@
 		/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
 		/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
+		/obj/item/book/granter/crafting_recipe/blueprint/handmaderifle
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintHigh

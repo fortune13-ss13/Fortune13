@@ -509,6 +509,30 @@
 //SEMI-AUTO RIFLES//
 ////////////////////
 
+//Ruger 10/22			Keywords: .22, Semi-auto, 25 round magazine, Small scope, Damage +5, Penetration +0.05
+/obj/item/gun/ballistic/automatic/ruger
+	name = "Ruger 10/22"
+	desc = "A popular semi-auto plinking rifle using .22 Long Rifle, once ubiquitous in American rural households."
+	icon_state = "Ruger_rifle"
+	item_state = "Ruger_rifle"
+	slowdown = 0.2
+	mag_type = /obj/item/ammo_box/magazine/m22/rifle
+	fire_delay = 3
+	burst_size = 1
+	spread = 0
+	extra_damage = 5
+	extra_penetration = 0.05
+	can_attachments = TRUE
+	can_automatic = TRUE
+	semi_auto = TRUE
+	automatic_burst_overlay = FALSE
+	can_scope = TRUE
+	zoomable = FALSE
+	can_bayonet = FALSE
+	can_suppress = FALSE
+	fire_sound = 'sound/f13weapons/qsp.ogg'
+
+
 //Service rifle			Keywords: NCR, 5.56mm, Semi-auto, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/service
 	name = "service rifle"
@@ -607,6 +631,64 @@
 	suppressor_x_offset = 31
 	suppressor_y_offset = 15
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
+
+
+	//AK-74			Keywords: 5.56mm, Semi-auto, 20 (10-50) round magazine
+/obj/item/gun/ballistic/automatic/ak74
+	name = "AK-74"
+	desc = "A common variant of the AK-47 platform using a smaller cartridge for better accuracy and recoil.  This one has been rechambered for 5.56x45mm ammunition."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "AK-74"
+	item_state = "AK-74"
+	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	fire_delay = 4
+	burst_size = 1
+	spread = 12
+	can_suppress = TRUE
+	can_scope = TRUE
+	zoomable = FALSE
+	can_attachments = TRUE
+	can_automatic = TRUE
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 24
+	knife_y_offset = 21
+	scope_state = "lasmusket_scope"
+	scope_x_offset = 4
+	scope_y_offset = 11
+	suppressor_state = "rifle_suppressor"
+	suppressor_x_offset = 27
+	suppressor_y_offset = 28
+	fire_sound = 'sound/f13weapons/ServiceRifle.ogg'
+
+
+	//AKM			Keywords: 7.62x39mm, Semi-auto, 20 (10-50) round magazine
+/obj/item/gun/ballistic/automatic/handmade
+	name = "handmade rifle"
+	desc = "A well-designed rifle based off the old pre-war AKM, chambered for 7.62x39"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "handmade_rifle"
+	item_state = "handmade_rifle"
+	init_mag_type = /obj/item/ammo_box/magazine/m762x39/rifle
+	fire_delay = 6
+	burst_size = 1
+	spread = 16
+	recoil = 0.15
+	can_suppress = FALSE
+	can_scope = FALSE
+	zoomable = FALSE
+	can_attachments = TRUE
+	can_automatic = TRUE
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 22
+	knife_y_offset = 12
+	can_automatic = TRUE
+	fire_sound = 'sound/weapons/garandshot.ogg'
 
 
 //Colt Rangemaster				Keywords: 7.62mm, Semi-auto, 10/20 round magazine
@@ -717,17 +799,17 @@
 	can_scope = FALSE
 
 
-//SKS				Keywords: LEGION, .308, Semi-auto, 10 rounds internal, Penetration +0.1
+//SKS				Keywords: LEGION, 7.62x39mm, Semi-auto, 10 rounds internal, Penetration +0.1
 /obj/item/gun/ballistic/automatic/m1garand/sks
 	name = "SKS"
-	desc = "Old hunting rifle taken from disovered stockpiles and refurbished in Phoenix workshops. The standard heavy rifle of the Legion, still rare. .308, semi-auto only, internal magazine."
+	desc = "Old hunting rifle taken from disovered stockpiles and refurbished in Phoenix workshops. The standard heavy rifle of the Legion, still rare. 7.62x39mm, semi-auto only, internal magazine."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "sks"
 	item_state = "sks"
 	mag_type = /obj/item/ammo_box/magazine/sks
-	fire_delay = 6
+	fire_delay = 4
 	extra_penetration = 0.1
 	bayonet_state = "bayonet"
 	knife_x_offset = 24
@@ -736,6 +818,38 @@
 	scope_x_offset = 4
 	scope_y_offset = 12
 	auto_eject_sound = 'sound/weapons/magout.ogg'
+	fire_sound = 'sound/weapons/garandshot.ogg'
+
+
+//AK-308				Keywords: 7.62mm, Semi-auto, 10/20 round magazine, Flashlight
+/obj/item/gun/ballistic/automatic/ak308
+	name = "AK-308"
+	desc = "A variant of the AK-12/15 chambered to fit 7.62 NATO and reinforced to fire with increased pressure.  From Russia with love."
+	icon_state = "AK-308"
+	item_state = "AK-308"
+	mag_type = /obj/item/ammo_box/magazine/m762
+	fire_delay = 3.5
+	spread = 12
+	recoil = 0.25
+	can_attachments = TRUE
+	can_automatic = TRUE
+	can_scope = TRUE
+	scope_state = "thick_scope"
+	scope_x_offset = 4
+	scope_y_offset = 11
+	can_suppress = TRUE
+	suppressor_state = "rifle_suppressor"
+	suppressor_x_offset = 26
+	suppressor_y_offset = 28
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 24
+	knife_y_offset = 21
+	can_flashlight = TRUE
+	gunlight_state = "flightangle"
+	flight_x_offset = 21
+	flight_y_offset = 21
+	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
@@ -911,6 +1025,101 @@
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 
 
+	//AN-94			Keywords: 5.56mm, Automatic, 30 (10-50) round magazine, Flashlight, Penetration +0.1
+/obj/item/gun/ballistic/automatic/an94
+	name = "AN-94"
+	desc = "A highly sought-after assault rifle with a rapid-fire, highly accurate two-shot burst.  Rechambered to fit 5.45x45mm."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "AN-94"
+	item_state = "AN-94"
+	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/assault
+	fire_delay = 3
+	burst_shot_delay = 1
+	burst_size = 2
+	spread = 2
+	extra_penetration = 0.1
+	can_suppress = TRUE
+	can_scope = TRUE
+	zoomable = FALSE
+	can_attachments = FALSE
+	can_bayonet = TRUE
+	can_flashlight = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 24
+	knife_y_offset = 21
+	scope_state = "lasmusket_scope"
+	scope_x_offset = 4
+	scope_y_offset = 11
+	suppressor_state = "rifle_suppressor"
+	suppressor_x_offset = 27
+	suppressor_y_offset = 28
+	gunlight_state = "flightangle"
+	flight_x_offset = 21
+	flight_y_offset = 21
+	fire_sound = 'sound/f13weapons/ServiceRifle.ogg'
+
+/obj/item/gun/ballistic/automatic/AN94/compact/AltClick(mob/user)
+	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	toggle_stock(user)
+
+/obj/item/gun/ballistic/automatic/AN94/compact/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Alt-click to toggle the stock.</span>"
+
+/obj/item/gun/ballistic/automatic/AN94/compact/proc/toggle_stock(mob/living/user)
+	stock = !stock
+	if(stock)
+		w_class = WEIGHT_CLASS_BULKY
+		to_chat(user, "You unfold the stock.")
+		spread = 2
+	else
+		w_class = WEIGHT_CLASS_NORMAL
+		to_chat(user, "You fold the stock.")
+		recoil = 0.5
+		spread = 5
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/AN94/compact/update_icon_state()
+	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][stock ? "" : "-f"]"
+
+
+//AK-15				Keywords: 7.62x39mm, Automatic, 30 (10-50) round magazine, Flashlight, Penetration +0.05
+/obj/item/gun/ballistic/automatic/ak15
+	name = "AK-15"
+	desc = "A highly flexible and capable assault rifle in service in Russia up to the outbreak of the Great War.  Chambered in 7.62x39mm."
+	icon_state = "AK-15"
+	item_state = "AK-15"
+	mag_type = /obj/item/ammo_box/magazine/m762x39/rifle/assault
+	fire_delay = 3
+	burst_shot_delay = 3
+	burst_size = 2
+	spread = 10
+	extra_penetration = 0.05
+	recoil = 0.15
+	can_attachments = TRUE
+	can_scope = TRUE
+	scope_state = "thick_scope"
+	scope_x_offset = 4
+	scope_y_offset = 11
+	can_suppress = TRUE
+	suppressor_state = "rifle_suppressor"
+	suppressor_x_offset = 26
+	suppressor_y_offset = 28
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 24
+	knife_y_offset = 21
+	can_flashlight = TRUE
+	gunlight_state = "flightangle"
+	flight_x_offset = 21
+	flight_y_offset = 21
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/weapons/garandshot.ogg'
+
+
 //FN-FAL				Keywords: 7.62mm, Automatic, 10/20 round magazine NOT CANON
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
@@ -1028,6 +1237,43 @@
 			spread = 14
 			extra_damage = -6
 			recoil = 0.5
+			to_chat(user, "<span class='notice'>You switch to full auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
+
+
+//RPK Light machinegun				Keywords: 7.62x39mm, Automatic, 50 rounds, Damage decrease (bullethose)
+/obj/item/gun/ballistic/automatic/rpk
+	name = "RPK"
+	desc = "A bottom-fed light machinegun from a distant land and time, it is chambered in 7.62x39mm."
+	icon_state = "RPK"
+	item_state = "RPK"
+	slowdown = 1
+	mag_type = /obj/item/ammo_box/magazine/m762x39/rifle/extended
+	burst_size = 1
+	fire_delay = 4
+	burst_shot_delay = 3
+	can_attachments = FALSE
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
+
+/obj/item/gun/ballistic/automatic/rpk/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select += 1
+			burst_size = 2
+			spread = 8
+			extra_damage = -2
+			recoil = 0.25
+			to_chat(user, "<span class='notice'>You switch to burst fire.</span>")
+		if(1)
+			select = 0
+			burst_size = 5
+			spread = 14
+			extra_damage = -5
+			recoil = 0.75
 			to_chat(user, "<span class='notice'>You switch to full auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()

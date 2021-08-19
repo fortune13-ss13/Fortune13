@@ -410,7 +410,21 @@
 	subcategory = CAT_WEAPON
 	always_availible = FALSE
 
-
+//handmade rifle
+/datum/crafting_recipe/handmaderifle
+	name = "Handmade Rifle 7.62x39mm"
+	result = /obj/item/gun/ballistic/automatic/handmade
+	reqs = list(/obj/item/stack/sheet/metal = 10,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/goodparts = 3
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_availible = FALSE
 
 //rangemaster
 /datum/crafting_recipe/rangemaster
