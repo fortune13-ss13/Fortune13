@@ -1059,33 +1059,7 @@
 	flight_x_offset = 21
 	flight_y_offset = 21
 	fire_sound = 'sound/f13weapons/ServiceRifle.ogg'
-	var/stock = FALSE
-
-/obj/item/gun/ballistic/automatic/AN94/compact/AltClick(mob/user)
-	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
-		return
-	toggle_stock(user)
-
-/obj/item/gun/ballistic/automatic/AN94/compact/examine(mob/user)
-	. = ..()
-	. += "<span class='notice'>Alt-click to toggle the stock.</span>"
-
-/obj/item/gun/ballistic/automatic/AN94/compact/proc/toggle_stock(mob/living/user)
-	stock = !stock
-	if(stock)
-		w_class = WEIGHT_CLASS_BULKY
-		to_chat(user, "You unfold the stock.")
-		spread = 2
-	else
-		w_class = WEIGHT_CLASS_NORMAL
-		to_chat(user, "You fold the stock.")
-		recoil = 0.5
-		spread = 5
-	update_icon()
-
-/obj/item/gun/ballistic/automatic/AN94/compact/update_icon_state()
-	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][stock ? "" : "-f"]"
-
+	
 
 //AK-15				Keywords: 7.62x39mm, Automatic, 30 (10-50) round magazine, Flashlight, Penetration +0.05
 /obj/item/gun/ballistic/automatic/ak15
