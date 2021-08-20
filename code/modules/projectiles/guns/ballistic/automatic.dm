@@ -1059,6 +1059,7 @@
 	flight_x_offset = 21
 	flight_y_offset = 21
 	fire_sound = 'sound/f13weapons/ServiceRifle.ogg'
+	var/stock = FALSE
 
 /obj/item/gun/ballistic/automatic/AN94/compact/AltClick(mob/user)
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
