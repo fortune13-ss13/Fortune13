@@ -218,7 +218,7 @@
 
 //Intelligence Officer
 /datum/job/enclave/intel
-	title = "Intel Officer"
+	title = "Intelligence Officer"
 	flag = F13USMEDIC
 	faction = "Enclave"
 	total_positions = 1

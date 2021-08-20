@@ -1,7 +1,7 @@
 /datum/job/wasteland
 	department_flag = WASTELAND
 
-/*
+
 /datum/outfit/job/wasteland
 	backpack =	/obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
@@ -50,6 +50,7 @@
 	ears = /obj/item/radio/headset/headset_den
 	r_pocket = /obj/item/flashlight/lantern
 	uniform = /obj/item/clothing/under/f13/raider_leather
+	shoes = null
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
@@ -125,8 +126,8 @@
 	flag = F13ENFORCER
 	faction = "Wastelander"
 	social_faction = "Raiders"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 2
+	spawn_positions = 2
 	description = "Hand-picked by the Boss, your job is to make sure he is respected, and alive."
 	supervisors = "The Boss."
 	selection_color = "#ff4747"
@@ -145,6 +146,8 @@
 /datum/outfit/job/wasteland/f13enforcer
 	name = "Raider Enforcer"
 	jobtype = /datum/job/wasteland/f13enforcer
+	uniform = null
+	shoes = null
 	belt = /obj/item/storage/belt/military/assault
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
@@ -198,7 +201,7 @@
 /datum/outfit/loadout/strongman
 	name = "Strongman"
 	uniform = /obj/item/clothing/under/pants/f13/warboy
-	head = /obj/item/clothing/head/helmet/f13/deathskull
+	head = /obj/item/clothing/head/helmet/skull
 	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/flashlight/lantern
@@ -217,8 +220,8 @@ datum/job/wasteland/f13dendoctor
 	flag = F13DENDOCTOR
 	faction = "Wastelander"
 	social_faction = "Raiders"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "Maybe you have read some medical books, maybe you can't read and just have plenty of hands-on experience. Either way, you are what passes for a doctor amongst raiders."
 	supervisors = "The Boss."
 	selection_color = "#ff4747"
@@ -294,10 +297,10 @@ datum/job/wasteland/f13dendoctor
 	minimal_access = list()
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/wasteland/f13pusher,
+			//datum/job/wasteland/f13pusher,
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/wasteland/f13pusher,
+			//datum/job/wasteland/f13pusher,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13raider,
@@ -318,7 +321,6 @@ datum/job/wasteland/f13dendoctor
 	/datum/outfit/loadout/raider_blast,
 	/datum/outfit/loadout/raider_sadist,
 	/datum/outfit/loadout/raider_painspike,
-	/datum/outfit/loadout/raider_badlands,
 	)
 
 
@@ -416,7 +418,7 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/reagent_containers/hypospray/medipen/psycho = 1,
 		)
 
-
+/*
 // WASTELANDER
 
 /datum/job/wasteland/f13wastelander

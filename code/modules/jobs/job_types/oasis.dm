@@ -351,7 +351,7 @@ Mayor
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /*--------------------------------------------------------------*/
-*/
+
 /datum/job/oasis/f13dendoc
 	title = "Doctor"
 	flag = F13DENDOC
@@ -402,6 +402,88 @@ Mayor
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 /*--------------------------------------------------------------*/
 
+/datum/job/oasis/f13barkeep
+	title = "Barkeep"
+	flag = F13BARKEEP
+	department_flag = DEP_OASIS
+	faction = "Town"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "Oasis Government & Police Department"
+	description = "As the innkeeper, you are responsible for comfort and full bellies in town. Hidden safely away behind the town walls, you are free to refine your skills without always watching your back. As a citizen of the town you must follow its laws. However the inn is your private business, and you decide who is allowed to dine or reside in your hospitality."
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/den/f13barkeep
+
+	loadout_options = list(
+	/datum/outfit/loadout/rugged,
+	/datum/outfit/loadout/frontier,
+	/datum/outfit/loadout/richmantender,
+	/datum/outfit/loadout/diner)
+
+	access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+
+/datum/outfit/job/den/f13barkeep
+	name = "Barkeep"
+	jobtype = /datum/job/oasis/f13barkeep
+
+	uniform = /obj/item/clothing/under/f13/bartenderalt
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_town
+	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
+	shoes = /obj/item/clothing/shoes/workboots/mining
+	backpack = /obj/item/storage/backpack/satchel/leather
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/ammo_box/shotgun/bean = 2
+		)
+
+/datum/outfit/loadout/rugged
+	name = "Rugged"
+	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
+	uniform = /obj/item/clothing/under/f13/cowboyb
+	suit = /obj/item/clothing/suit/f13/cowboybvest
+	gloves = /obj/item/clothing/gloves/color/brown
+	shoes = /obj/item/clothing/shoes/f13/brownie
+
+/datum/outfit/loadout/frontier
+	name = "Frontier"
+	head = /obj/item/clothing/head/bowler
+	mask = /obj/item/clothing/mask/fakemoustache
+	uniform = /obj/item/clothing/under/f13/westender
+	suit = /obj/item/clothing/suit/f13/westender
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/fancy
+
+/datum/outfit/loadout/richmantender
+	name = "Fancy"
+	head = /obj/item/clothing/head/fedora
+	glasses = /obj/item/clothing/glasses/sunglasses
+	uniform = /obj/item/clothing/under/rank/bartender
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	neck = /obj/item/clothing/neck/tie/black
+
+/datum/outfit/loadout/diner
+	name = "Diner"
+	glasses = /obj/item/clothing/glasses/orange
+	uniform = /obj/item/clothing/under/f13/brahminf
+	neck = /obj/item/clothing/neck/apron/chef
+	gloves = /obj/item/clothing/gloves/color/white
+	shoes = /obj/item/clothing/shoes/f13/military/ncr
+
+
+*/
 /datum/job/oasis/f13preacher
 	title = "Preacher"
 	flag = F13PREACHER
@@ -568,86 +650,6 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/datum/job/oasis/f13barkeep
-	title = "Barkeep"
-	flag = F13BARKEEP
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "Oasis Government & Police Department"
-	description = "As the innkeeper, you are responsible for comfort and full bellies in town. Hidden safely away behind the town walls, you are free to refine your skills without always watching your back. As a citizen of the town you must follow its laws. However the inn is your private business, and you decide who is allowed to dine or reside in your hospitality."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13barkeep
-
-	loadout_options = list(
-	/datum/outfit/loadout/rugged,
-	/datum/outfit/loadout/frontier,
-	/datum/outfit/loadout/richmantender,
-	/datum/outfit/loadout/diner)
-
-	access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13barkeep
-	name = "Barkeep"
-	jobtype = /datum/job/oasis/f13barkeep
-
-	uniform = /obj/item/clothing/under/f13/bartenderalt
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town
-	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	shoes = /obj/item/clothing/shoes/workboots/mining
-	backpack = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/ammo_box/shotgun/bean = 2
-		)
-
-/datum/outfit/loadout/rugged
-	name = "Rugged"
-	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
-	uniform = /obj/item/clothing/under/f13/cowboyb
-	suit = /obj/item/clothing/suit/f13/cowboybvest
-	gloves = /obj/item/clothing/gloves/color/brown
-	shoes = /obj/item/clothing/shoes/f13/brownie
-
-/datum/outfit/loadout/frontier
-	name = "Frontier"
-	head = /obj/item/clothing/head/bowler
-	mask = /obj/item/clothing/mask/fakemoustache
-	uniform = /obj/item/clothing/under/f13/westender
-	suit = /obj/item/clothing/suit/f13/westender
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/f13/fancy
-
-/datum/outfit/loadout/richmantender
-	name = "Fancy"
-	head = /obj/item/clothing/head/fedora
-	glasses = /obj/item/clothing/glasses/sunglasses
-	uniform = /obj/item/clothing/under/rank/bartender
-	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	neck = /obj/item/clothing/neck/tie/black
-
-/datum/outfit/loadout/diner
-	name = "Diner"
-	glasses = /obj/item/clothing/glasses/orange
-	uniform = /obj/item/clothing/under/f13/brahminf
-	neck = /obj/item/clothing/neck/apron/chef
-	gloves = /obj/item/clothing/gloves/color/white
-	shoes = /obj/item/clothing/shoes/f13/military/ncr
-
 /*--------------------------------------------------------------*/
 /datum/job/oasis/f13settler
 	title = "Citizen"
@@ -781,7 +783,8 @@ Mayor
 	/obj/item/clothing/gloves/color/white = 1,
 	/obj/item/melee/unarmed/brass = 1,
 	)
-	
+
+/*
 /*----------------------------------------------------------------
 --							Detective							--
 ----------------------------------------------------------------*/
@@ -838,7 +841,7 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/*
+
 /datum/job/oasis/f13banker
 	title = "Banker"
 	flag = F13BANKER

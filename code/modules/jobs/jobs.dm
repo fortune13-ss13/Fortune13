@@ -48,15 +48,15 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 	))
 
 GLOBAL_LIST_INIT(command_positions, list(
-	"Elder",
-	"Head Scribe",
+//	"Elder",
+//	"Head Scribe",
 	"Head Paladin",
-	"Head Knight",
+//	"Head Knight",
 
 	"Enclave Officer",
 
-	"NCR Captain",
-	"NCR Lieutenant",
+//	"NCR Captain",
+//	"NCR Lieutenant",
 
 	"Legate",
 	"Legion Centurion",
@@ -68,13 +68,13 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Alderman",
 	"Talon Commander",
 
-	"Chief",
-	"Shaman",
-	"Head Hunter",
+//	"Chief",
+//	"Shaman",
+//	"Head Hunter",
 
-	"Followers Administrator",
+//	"Followers Administrator",
 
-	"Den Mob Boss",
+	"Raider Boss",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -158,7 +158,7 @@ GLOBAL_LIST_INIT(oasis_positions, list(
 	"Shopkeeper",
 //	"Farmer",
 //	"Prospector",
-	"Detective",
+//	"Detective",
 	"Preacher",
 	"Barkeep",
 ))
@@ -218,13 +218,13 @@ GLOBAL_LIST_INIT(vault_positions, list(
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
-//	"Den Mob Boss",
-//	"Den Mob Enforcer",
-//	"Den Doctor",
-	"Outlaw",
+	"Raider Boss",
+	"Raider Enforcer",
+	"Street Doc",
+	"Raider",
 //	"Great Khan",
 //	"Faithful",
-	"Vigilante",
+//	"Vigilante",
 	"Wastelander",
 ))
 
@@ -232,7 +232,7 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Soldier",
 	"Enclave Armored Infantry",
 	"Enclave Scientist",
-	"Intel Officer",
+	"Intelligence Officer",
 	"Enclave Officer",
 ))
 
@@ -246,21 +246,21 @@ GLOBAL_LIST_INIT(silicon_positions, list(
 
 GLOBAL_LIST_INIT(tribal_positions, list(
 	"Chief",
-	"Shaman",
-	"Head Hunter",
-	"Druid",
-	"Villager",
-	"Hunter",
-	"Spirit-Pledged",
-	"Guardian",
+//	"Shaman",
+//	"Head Hunter",
+//	"Druid",
+//	"Villager",
+//	"Hunter",
+//	"Spirit-Pledged",
+//	"Guardian",
 ))
 
 GLOBAL_LIST_INIT(followers_positions, list(
-	"Followers Administrator",
-	"Followers Doctor",
-	"Followers Guard",
-	"Followers Volunteer",
-	"Followers Scientist",
+//	"Followers Administrator",
+//	"Followers Doctor",
+//	"Followers Guard",
+//	"Followers Volunteer",
+//	"Followers Scientist",
 ))
 
 // job categories for rendering the late join menu

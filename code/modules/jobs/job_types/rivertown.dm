@@ -226,6 +226,122 @@ datum/job/oasis/f13sheriff
 		/obj/item/ammo_box/magazine/m762 = 2,
 		)
 /*--------------------------------------------------------------*/
+
+/datum/job/oasis/f13dendoc
+	title = "Doctor"
+	flag = F13DENDOC
+	department_flag = DEP_OASIS
+	faction = "Town"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the town Alderman"
+	description = "Handy with a scalpel and chemistry beakers, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/den/f13dendoc
+	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+
+/datum/outfit/job/den/f13dendoc
+	name = "Doctor"
+	jobtype = /datum/job/oasis/f13dendoc
+	chemwhiz = TRUE
+	uniform = /obj/item/clothing/under/f13/doctor
+	ears = /obj/item/radio/headset/headset_town
+	neck = /obj/item/clothing/neck/stethoscope
+	suit = /obj/item/clothing/suit/toggle/labcoat
+	backpack = /obj/item/storage/backpack/satchel/med
+	satchel = /obj/item/storage/backpack/satchel/med
+	shoes = /obj/item/clothing/shoes/f13/brownie
+	id = /obj/item/card/id/dendoctor
+	l_pocket = /obj/item/storage/bag/money/small/settler
+	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
+		/obj/item/storage/firstaid/regular,
+		/obj/item/clothing/accessory/armband/medblue  \
+		)
+/datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+
+/datum/job/oasis/f13barkeep
+	title = "Barkeep"
+	flag = F13BARKEEP
+	department_flag = DEP_OASIS
+	faction = "Town"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "Alderman"
+	description = "As the innkeeper, you are responsible for comfort and full bellies in town. Hidden safely away behind the town walls, you are free to refine your skills without always watching your back. As a citizen of the town you must follow its laws. However the inn is your private business, and you decide who is allowed to dine or reside in your hospitality."
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/den/f13barkeep
+
+	loadout_options = list(
+	/datum/outfit/loadout/frontier,
+	/datum/outfit/loadout/richmantender,
+	/datum/outfit/loadout/diner)
+
+	access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+
+/datum/outfit/job/den/f13barkeep
+	name = "Barkeep"
+	jobtype = /datum/job/oasis/f13barkeep
+	uniform = /obj/item/clothing/under/f13/bartenderalt
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_town
+	backpack = /obj/item/storage/backpack/satchel/leather
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/ammo_box/shotgun/bean = 1,
+		/obj/item/gun/ballistic/revolver/widowmaker = 1,
+		)
+
+/datum/outfit/loadout/frontier
+	name = "Frontier"
+	head = /obj/item/clothing/head/bowler
+	mask = /obj/item/clothing/mask/fakemoustache
+	uniform = /obj/item/clothing/under/f13/westender
+	suit = /obj/item/clothing/suit/f13/westender
+	neck = /obj/item/clothing/neck/apron/labor
+	gloves = /obj/item/clothing/gloves/f13/leather
+	shoes = /obj/item/clothing/shoes/f13/fancy
+
+/datum/outfit/loadout/richmantender
+	name = "Fancy"
+	head = /obj/item/clothing/head/fedora
+	glasses = /obj/item/clothing/glasses/monocle
+	uniform = /obj/item/clothing/under/rank/bartender
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	neck = /obj/item/clothing/neck/tie/black
+
+/datum/outfit/loadout/diner
+	name = "Diner"
+	uniform = /obj/item/clothing/neck/apron/bartender
+	neck = /obj/item/clothing/under/rank/bartender/purple
+	shoes = /obj/item/clothing/shoes/laceup
+
 /*
 /datum/job/oasis/f13farmer
 	title = "Farmer"
@@ -343,54 +459,7 @@ datum/job/oasis/f13sheriff
 
 /*--------------------------------------------------------------*/
 
-/datum/job/oasis/f13dendoc
-	title = "Doctor"
-	flag = F13DENDOC
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "law and order"
-	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
-	selection_color = "#dcba97"
 
-	outfit = /datum/outfit/job/den/f13dendoc
-	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13dendoc
-	name = "Doctor"
-	jobtype = /datum/job/oasis/f13dendoc
-	chemwhiz = TRUE
-	uniform = /obj/item/clothing/under/f13/medic
-	glasses = /obj/item/clothing/glasses/hud/health
-	ears = /obj/item/radio/headset/headset_town
-	neck = /obj/item/clothing/neck/stethoscope
-	suit = /obj/item/clothing/suit/toggle/labcoat
-	backpack = /obj/item/storage/backpack/medic
-	satchel = /obj/item/storage/backpack/satchel/med
-	shoes = /obj/item/clothing/shoes/sneakers/white
-	id = /obj/item/card/id/dendoctor
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
-		/obj/item/storage/firstaid/regular,
-		/obj/item/clothing/accessory/armband/medblue  \
-		)
-/datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13preacher
@@ -558,74 +627,7 @@ datum/job/oasis/f13sheriff
 
 /*--------------------------------------------------------------*/
 
-/datum/job/oasis/f13barkeep
-	title = "Barkeep"
-	flag = F13BARKEEP
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "Alderman"
-	description = "As the innkeeper, you are responsible for comfort and full bellies in town. Hidden safely away behind the town walls, you are free to refine your skills without always watching your back. As a citizen of the town you must follow its laws. However the inn is your private business, and you decide who is allowed to dine or reside in your hospitality."
-	selection_color = "#dcba97"
 
-	outfit = /datum/outfit/job/den/f13barkeep
-
-	loadout_options = list(
-	/datum/outfit/loadout/frontier,
-	/datum/outfit/loadout/richmantender,
-	/datum/outfit/loadout/diner)
-
-	access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13barkeep
-	name = "Barkeep"
-	jobtype = /datum/job/oasis/f13barkeep
-
-	uniform = /obj/item/clothing/under/f13/bartenderalt
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town
-	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	shoes = /obj/item/clothing/shoes/workboots/mining
-	backpack = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/ammo_box/shotgun/bean = 2
-		)
-
-/datum/outfit/loadout/frontier
-	name = "Frontier"
-	head = /obj/item/clothing/head/bowler
-	mask = /obj/item/clothing/mask/fakemoustache
-	uniform = /obj/item/clothing/under/f13/westender
-	suit = /obj/item/clothing/suit/f13/westender
-	neck = /obj/item/clothing/neck/apron/labor
-	gloves = /obj/item/clothing/gloves/f13/leather
-	shoes = /obj/item/clothing/shoes/f13/fancy
-
-/datum/outfit/loadout/richmantender
-	name = "Fancy"
-	head = /obj/item/clothing/head/fedora
-	glasses = /obj/item/clothing/glasses/monocle
-	uniform = /obj/item/clothing/under/rank/bartender
-	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	neck = /obj/item/clothing/neck/tie/black
-
-/datum/outfit/loadout/diner
-	name = "Diner"
-	uniform = /obj/item/clothing/neck/apron/bartender
-	neck = /obj/item/clothing/under/rank/bartender/purple
-	shoes = /obj/item/clothing/shoes/laceup
 				
 
 /*--------------------------------------------------------------*/

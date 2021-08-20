@@ -779,7 +779,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Wastelander"
 
 /obj/effect/landmark/start/f13/raider
-	name = "Outlaw"
+	name = "Raider"
 	icon_state = "Raider"
 
 /obj/effect/landmark/start/f13/pusher
@@ -787,14 +787,14 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Pusher"
 
 /obj/effect/landmark/start/f13/enforcer
-	name = "Den Mob Enforcer"
+	name = "Raider Enforcer"
 	icon_state = "Enforcer"
 
 /obj/effect/landmark/start/f13/dendoctor
-	name = "Den Doctor"
+	name = "Street Doc"
 	
 /obj/effect/landmark/start/f13/mobboss
-	name = "Den Mob Boss"
+	name = "Raider Boss"
 	icon_state = "Boss"
 
 /obj/effect/landmark/start/f13/preacher
@@ -823,7 +823,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "US Commander"
 
 /obj/effect/landmark/start/f13/usmedic
-	name = "Intel Officer"
+	name = "Intelligence Officer"
 
 /obj/effect/landmark/start/f13/usprivate
 	name = "US Private"

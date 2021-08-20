@@ -440,10 +440,6 @@
 /area/f13/village)
 "bO" = (
 /obj/structure/filingcabinet/chestdrawer,
-/obj/item/toy/figure/detective{
-	pixel_x = -4;
-	pixel_y = 11
-	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
@@ -719,8 +715,8 @@
 /area/f13/bunker)
 "db" = (
 /obj/structure/bed,
-/obj/item/bedsheet/black,
 /obj/effect/landmark/start/f13/usspy,
+/obj/item/bedsheet/patriot,
 /turf/open/floor/carpet/black,
 /area/f13/bunker)
 "de" = (
@@ -1072,7 +1068,6 @@
 /area/f13/building)
 "eu" = (
 /obj/machinery/light,
-/obj/effect/landmark/start/f13/raider,
 /turf/open/floor/f13,
 /area/f13/building)
 "ew" = (
@@ -1392,7 +1387,6 @@
 /area/f13/building)
 "fK" = (
 /obj/structure/chair/wood,
-/obj/effect/landmark/start/f13/detective,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
@@ -2046,6 +2040,11 @@
 "ih" = (
 /turf/open/indestructible/ground/outside/river,
 /area/f13/wasteland)
+"ij" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/dendoctor,
+/turf/open/floor/f13,
+/area/f13/building)
 "il" = (
 /obj/machinery/autolathe/ammo,
 /turf/open/floor/wood/f13/oak,
@@ -2492,7 +2491,6 @@
 /area/f13/vault)
 "jN" = (
 /obj/structure/closet/fridge/standard,
-/obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
@@ -4726,6 +4724,11 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/bunker)
+"uj" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/ingredients/american,
+/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
+/area/f13/bunker)
 "un" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5388,9 +5391,6 @@
 /obj/item/storage/briefcase,
 /obj/item/taperecorder,
 /obj/item/tape,
-/obj/item/tape,
-/obj/item/tape,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,
 /obj/item/storage/box/handcuffs,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
@@ -5590,7 +5590,7 @@
 /obj/structure/chair/wood/modern{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/raider,
+/obj/effect/landmark/start/f13/enforcer,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
 	},
@@ -5691,7 +5691,7 @@
 /area/f13/wasteland)
 "yT" = (
 /obj/structure/bed,
-/obj/item/bedsheet/black,
+/obj/item/bedsheet/patriot,
 /turf/open/floor/carpet/black,
 /area/f13/bunker)
 "yU" = (
@@ -5969,6 +5969,13 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/caves)
+"zV" = (
+/obj/structure/chair/wood/modern{
+	dir = 4
+	},
+/obj/effect/landmark/start/f13/raider,
+/turf/open/floor/wood/f13/oak,
+/area/f13/building)
 "zW" = (
 /obj/structure/fence/handrail_corner{
 	dir = 4;
@@ -6499,15 +6506,6 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
-"Ci" = (
-/obj/item/clothing/suit/toggle/labcoat/scribecoat,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/survival_pod,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/bunker)
 "Ck" = (
 /turf/open/floor/plasteel/vault{
 	dir = 5
@@ -8719,6 +8717,7 @@
 /obj/structure/chair/wood/modern{
 	dir = 4
 	},
+/obj/effect/landmark/start/f13/mobboss,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "LU" = (
@@ -8754,6 +8753,13 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"Mc" = (
+/obj/structure/chair/wood/modern{
+	dir = 1
+	},
+/obj/effect/landmark/start/f13/raider,
+/turf/open/floor/wood/f13/oak,
+/area/f13/building)
 "Md" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -9422,6 +9428,7 @@
 "Ph" = (
 /obj/structure/chair/wood/modern,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/raider,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "Pi" = (
@@ -9824,7 +9831,7 @@
 /obj/structure/chair/wood/modern{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/raider,
+/obj/effect/landmark/start/f13/enforcer,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "QY" = (
@@ -9985,7 +9992,6 @@
 "Rx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/toggle/labcoat/scribecoat,
 /obj/structure/table/survival_pod,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -19447,7 +19453,7 @@ XQ
 Za
 jN
 sS
-SQ
+uj
 jK
 en
 FL
@@ -20251,7 +20257,7 @@ Bh
 ak
 TC
 Rx
-Ci
+Rx
 TC
 TC
 Za
@@ -25065,7 +25071,7 @@ TX
 UE
 xO
 TX
-Hv
+FB
 TX
 QH
 mJ
@@ -30254,7 +30260,7 @@ TX
 NT
 Cg
 zO
-zO
+zV
 TX
 QH
 mP
@@ -30579,7 +30585,7 @@ TX
 Ph
 vx
 vx
-TA
+Mc
 UW
 mP
 ih
@@ -31222,7 +31228,7 @@ cA
 eB
 Bm
 TX
-aF
+wy
 TX
 xO
 TX
@@ -32841,7 +32847,7 @@ QH
 QH
 QH
 Bg
-Wg
+ij
 Ii
 eu
 QH
