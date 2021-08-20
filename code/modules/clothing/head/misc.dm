@@ -315,7 +315,9 @@
 /obj/item/clothing/head/scarecrow_hat
 	name = "scarecrow hat"
 	desc = "A simple straw hat."
-	icon_state = "scarecrow_hat"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "scarecrow_hat" 
 
 /obj/item/clothing/head/lobsterhat
 	name = "foam lobster head"

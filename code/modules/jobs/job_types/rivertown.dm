@@ -71,7 +71,8 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/megaphone = 1,
 		)
 
-/*--------------------------------------------------------------*/
+
+// Talon Commander
 
 datum/job/oasis/f13sheriff
 	title = "Talon Commander"
@@ -151,7 +152,7 @@ datum/job/oasis/f13sheriff
 		)
 
 
-/*--------------------------------------------------------------*/
+// Talon Mercenary
 
 /datum/job/oasis/f13deputy
 	title = "Talon Mercenary"
@@ -226,7 +227,10 @@ datum/job/oasis/f13sheriff
 		/obj/item/gun/ballistic/automatic/slr = 1,
 		/obj/item/ammo_box/magazine/m762 = 2,
 		)
-/*--------------------------------------------------------------*/
+
+
+
+// Doctor
 
 /datum/job/oasis/f13dendoc
 	title = "Doctor"
@@ -238,10 +242,15 @@ datum/job/oasis/f13sheriff
 	supervisors = "the town Alderman"
 	description = "Handy with a scalpel and chemistry beakers, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
-
 	outfit = /datum/outfit/job/den/f13dendoc
 	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
 	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
+
+	loadout_options = list(
+	/datum/outfit/loadout/physician,
+	/datum/outfit/loadout/nurse,
+	)
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis,
@@ -257,14 +266,14 @@ datum/job/oasis/f13sheriff
 	chemwhiz = TRUE
 	uniform = /obj/item/clothing/under/f13/doctor
 	ears = /obj/item/radio/headset/headset_town
-	neck = /obj/item/clothing/neck/stethoscope
+
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	backpack = /obj/item/storage/backpack/satchel/med
 	satchel = /obj/item/storage/backpack/satchel/med
-	shoes = /obj/item/clothing/shoes/f13/brownie
+	shoes = null
 	id = /obj/item/card/id/dendoctor
 	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
+	r_pocket = /obj/item/flashlight
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/storage/firstaid/regular,
@@ -275,6 +284,28 @@ datum/job/oasis/f13sheriff
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+
+/datum/outfit/loadout/physician
+	name = "Physician"
+	neck = /obj/item/clothing/neck/stethoscope
+	shoes = /obj/item/clothing/shoes/f13/brownie
+	backpack_contents = list(
+		/obj/item/pen/fountain = 1,
+		)
+
+
+/datum/outfit/loadout/nurse
+	name = "Nurse"
+	head = /obj/item/clothing/head/f13/nursehat
+	uniform = /obj/item/clothing/under/rank/medical/doctor/nurse
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	backpack_contents = list(
+		/obj/item/toy/plush/snakeplushie = 1,
+		)
+
+
+
+// Barkeep
 
 /datum/job/oasis/f13barkeep
 	title = "Barkeep"
@@ -314,8 +345,6 @@ datum/job/oasis/f13sheriff
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/ammo_box/shotgun/bean = 1,
-		/obj/item/gun/ballistic/revolver/widowmaker = 1,
 		)
 
 /datum/outfit/loadout/frontier
@@ -327,6 +356,10 @@ datum/job/oasis/f13sheriff
 	neck = /obj/item/clothing/neck/apron/labor
 	gloves = /obj/item/clothing/gloves/f13/leather
 	shoes = /obj/item/clothing/shoes/f13/fancy
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/bean = 1,
+		/obj/item/gun/ballistic/revolver/widowmaker = 1,
+		)
 
 /datum/outfit/loadout/richmantender
 	name = "Fancy"
@@ -336,146 +369,45 @@ datum/job/oasis/f13sheriff
 	suit = /obj/item/clothing/suit/toggle/lawyer/black
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	neck = /obj/item/clothing/neck/tie/black
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
+		/obj/item/ammo_box/magazine/m22 = 1,
+		)
 
 /datum/outfit/loadout/diner
 	name = "Diner"
 	uniform = /obj/item/clothing/neck/apron/bartender
 	neck = /obj/item/clothing/under/rank/bartender/purple
 	shoes = /obj/item/clothing/shoes/laceup
-
-/*
-/datum/job/oasis/f13farmer
-	title = "Farmer"
-	flag = F13FARMER
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "Oasis Government & Police Department"
-	description = "Growing up in the Oasis, you have an endless love for the sacred Oak, for nowhere in the valley is the soil as fertile, the bounty as rich. Behind the safety of the walls, you grow crops, medicines, and raise livestock. The community depends on you, you are a manifestation of the Oak’s will."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13farmer
-
-	access = list(ACCESS_BAR,  ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_BAR,  ACCESS_KITCHEN)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13farmer
-	name = "Farmer"
-	jobtype = /datum/job/oasis/f13farmer
-
-	id = /obj/item/card/id/dogtag/town
-	ears = 			/obj/item/radio/headset/headset_town
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
-	belt = /obj/item/storage/bag/plants
 	backpack_contents = list(
-		/obj/item/cultivator=1, \
-		/obj/item/hatchet=1,
-		/obj/item/shovel/spade=1, \
-		/obj/item/gun/ballistic/automatic/pistol/n99, \
-		/obj/item/ammo_box/magazine/m10mm_adv/simple=2)
-	shoes = 		/obj/item/clothing/shoes/workboots
-
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/settler, \
-		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/lumberjack, \
-		/obj/item/clothing/under/f13/roving)
-
-/*--------------------------------------------------------------*/
-
-/datum/job/oasis/f13prospector
-	title = "Prospector"
-	flag = F13PROSPECTOR
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "Alderman"
-	description = "Prospecting is a complicated business, some call it scrounging or looting, but there is more to it than sifting through rubble - few can boast the skills you possess in mining and delving through the ruins of the fallen empire. Not many survive this line of business, and the pay has always been uncertain, but perhaps today you'll strike gold."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13prospector
-
-	access = list(ACCESS_BAR, ACCESS_MINING)
-	minimal_access = list(ACCESS_BAR, ACCESS_MINING)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13prospector
-	name = "Prospector"
-	jobtype = /datum/job/oasis/f13prospector
-
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town
-	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast/
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/pickaxe
-	belt = /obj/item/storage/bag/ore
-	shoes = /obj/item/clothing/shoes/workboots
-	backpack_contents = list(
-		/obj/item/mining_scanner,
-		/obj/item/shovel,
-		/obj/item/melee/onehanded/knife/hunting,
-		/obj/item/gun/ballistic/automatic/pistol/n99,
-		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
+		/obj/item/gun/ballistic/revolver/detective = 1,
+		/obj/item/ammo_box/c38 = 1,
 		)
 
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/roving, \
-		/obj/item/clothing/under/f13/cowboyt)
 
-/datum/outfit/job/den/f13prospector/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
+// Citizen
 
-/*--------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------*/
-
-/datum/job/oasis/f13preacher
-	title = "Preacher"
-	flag = F13PREACHER
-	department_head = list("Captain")
+/datum/job/oasis/f13settler
+	title = "Citizen"
+	flag = F13SETTLER
 	department_flag = DEP_OASIS
-	head_announce = list("Security")
 	faction = "Town"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Alderman"
-	description = "This settlement is full of sinners and lost souls, provide comfort or abuse your position as your faith and morals dictate."
+	total_positions = 8
+	spawn_positions = 8
+	supervisors = "Rivertown Alderman"
+	description = "You are a citizen living in Rivertown, it's your home, so act accordingly and keep it as clean and safe as you can."
 	selection_color = "#dcba97"
-	outfit = /datum/outfit/job/den/f13preacher
+
+	outfit = /datum/outfit/job/den/f13settler
+
+	loadout_options = list(
+		/datum/outfit/loadout/provisioner,
+		/datum/outfit/loadout/bum,
+		/datum/outfit/loadout/properlady,
+		/datum/outfit/loadout/propergent,
+		/datum/outfit/loadout/singer,
+		/datum/outfit/loadout/prospector,
+	)
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
 	matchmaking_allowed = list(
@@ -487,11 +419,195 @@ datum/job/oasis/f13sheriff
 		),
 	)
 
-/datum/job/oasis/f13preacher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+
+/datum/outfit/job/den/f13settler
+	name = "Citizen"
+	jobtype = /datum/job/oasis/f13settler
+	ears = /obj/item/radio/headset/headset_town
+	belt = null
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_town
+	uniform = /obj/item/clothing/under/f13/settler
+	shoes = null
+	backpack = /obj/item/storage/backpack/satchel/explorer
+	r_pocket = /obj/item/flashlight/flare
+	r_hand = /obj/item/book/granter/trait/selection
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/settler = 1,
+
+		)
+
+/datum/outfit/loadout/provisioner
+	name = "Provisioner"
+	neck = /obj/item/clothing/neck/scarf/cptpatriot
+	suit = /obj/item/clothing/suit/jacket/miljacket
+	uniform = /obj/item/clothing/under/f13/merca
+	gloves = /obj/item/clothing/gloves/f13/leather
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
+		/obj/item/clothing/ears/headphones = 1,
+		/obj/item/shovel = 1,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		)
+
+/datum/outfit/loadout/bum
+	name = "Bum"
+	mask = /obj/item/clothing/mask/facewrap
+	neck = /obj/item/clothing/neck/mantle/poncho
+	uniform = /obj/item/clothing/under/f13/rag
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	shoes = /obj/item/clothing/shoes/f13/rag
+	backpack_contents = list(
+		/obj/item/storage/bag/trash = 1, 
+		/obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,
+		/obj/item/gun/ballistic/automatic/hobo/zipgun = 1,
+		/obj/item/twohanded/spear/scrapspear = 1,
+		/obj/item/ammo_box/magazine/zipgun = 1,
+		)
+
+/datum/outfit/loadout/properlady
+	name = "Proper Lady"
+	head = /obj/item/clothing/head/beret/black
+	suit = /obj/item/clothing/under/sailordress
+	gloves = /obj/item/clothing/gloves/f13/lace
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/bottle/champagne = 1,
+		/obj/item/gun/ballistic/revolver/police = 1,
+		/obj/item/ammo_box/c38 = 2,
+		)
+
+/datum/outfit/loadout/propergent
+	name = "Respectable Gent"
+	head = /obj/item/clothing/head/f13/beaver
+	suit = /obj/item/clothing/suit/f13/cowboybvest
+	uniform = /obj/item/clothing/under/f13/bartenderalt
+	shoes = /obj/item/clothing/shoes/f13/tan
+	backpack_contents = list(
+		/obj/item/storage/box/matches = 1,
+		/obj/item/storage/fancy/cigarettes/cigars = 1,
+		/obj/item/gun/ballistic/revolver/hobo/knifegun = 1,
+		/obj/item/ammo_box/m44 = 1,
+		)
+
+/datum/outfit/loadout/singer
+	name = "Saloon Singer"
+	shoes = /obj/item/clothing/shoes/laceup
+	gloves = /obj/item/clothing/gloves/ring/silver
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/classdress = 1,
+		/obj/item/clothing/under/suit/black_really = 1,
+		/obj/item/clothing/gloves/evening = 1,
+		/obj/item/clothing/gloves/color/white = 1,
+		/obj/item/melee/onehanded/knife/switchblade = 1,
+		)
+
+/datum/outfit/loadout/prospector
+	name = "Prospector"
+	head = /obj/item/clothing/head/scarecrow_hat
+	glasses = /obj/item/clothing/glasses/welding
+	uniform = /obj/item/clothing/under/f13/lumberjack
+	suit = /obj/item/clothing/suit/armor/f13/utilityvest
+	belt = /obj/item/storage/bag/ore
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/workboots
+	r_pocket = /obj/item/flashlight
+	backpack_contents = list(
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/gun/ballistic/rifle/hunting = 1,
+		/obj/item/ammo_box/a308 = 2,
+		/obj/item/mining_scanner = 1,
+		/obj/item/pickaxe/mini = 1,
+		)
+
+
+/*--------------------------------------------------------------*/
+
+/datum/job/oasis/f13shopkeeper
+	title = "Shopkeeper"
+	flag = F13SHOPKEEPER
+	department_flag = DEP_OASIS
+	faction = "Town"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "free hand of the market"
+	description = "The greed of the United States survived better than its people. You are an organ of this greed. Ensure its continuation."
+	selection_color = "#dcba97"
+	exp_requirements = 600
+
+	outfit = /datum/outfit/job/den/f13shopkeeper
+	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+
+/datum/outfit/job/den/f13shopkeeper
+	name = "Shopkeeper"
+	jobtype = /datum/job/oasis/f13shopkeeper
+
+	id = /obj/item/card/id/dogtag/town
+	uniform = /obj/item/clothing/under/f13/roving
+	ears = /obj/item/radio/headset/headset_town
+	backpack = /obj/item/storage/backpack
+	satchel = /obj/item/storage/backpack/satchel
+	duffelbag = /obj/item/storage/backpack/duffelbag
+	l_pocket = /obj/item/storage/bag/money/small/den
+	r_pocket = /obj/item/flashlight/lantern
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	backpack_contents = list()
+
+/datum/outfit/job/den/f13shopkeeper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
+
+/datum/outfit/job/den/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+/datum/job/oasis/f13preacher
+	title = "Preacher"
+	flag = F13PREACHER
+	department_head = list("Captain")
+	department_flag = DEP_OASIS
+	head_announce = list("Security")
+	faction = "Town"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "Oasis Government & Police Department"
+	description = "You have finished your long pilgrimage to the fabled oasis. You have restored the chapel and cleared weeds from the grove, and it is now your duty to restore faith to this empty land. Remember that the Oak is the most holy living relic in this valley, protect it at all costs."
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/den/f13preacher
+
+	loadout_options = list(
+		/datum/outfit/loadout/standardpreacher, //Robes, Book
+		/datum/outfit/loadout/atompreacher, //Atoms Judgement, Followers Robes
+	)
+
+	access = list(ACCESS_BAR)
+	minimal_access = list(ACCESS_BAR)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
 
 
 /datum/outfit/loadout/atompreacher
@@ -626,203 +742,6 @@ datum/job/oasis/f13sheriff
 		/obj/item/storage/fancy/candle_box, \
 		/obj/item/storage/bag/money/small/settler)
 
-/*--------------------------------------------------------------*/
-
-
-				
-
-/*--------------------------------------------------------------*/
-/datum/job/oasis/f13settler
-	title = "Citizen"
-	flag = F13SETTLER
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 8
-	spawn_positions = 8
-	supervisors = "Oasis Government & Police Department"
-	description = "You are a citizen living in the Town of Oasis - as the name suggests, it is a somewhat safe place amidst the chaos of the continent. Treat it as such, be sure to follow the laws of the land and do not associate with those who have a tendency not to, or you are likely to face exile. Remember that Oasis is your home, and that you should not be leaving to explore the Wastes."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13settler
-
-	loadout_options = list(
-		/datum/outfit/loadout/provisioner,
-		/datum/outfit/loadout/bum,
-		/datum/outfit/loadout/properlady,
-		/datum/outfit/loadout/propergent,
-		/datum/outfit/loadout/hombre,
-	)
-	access = list(ACCESS_BAR)
-	minimal_access = list(ACCESS_BAR)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-
-/datum/outfit/job/den/f13settler
-	name = "Citizen"
-	jobtype = /datum/job/oasis/f13settler
-	ears = /obj/item/radio/headset/headset_town
-	belt = null
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town
-	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/jackboots
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/book/granter/trait/selection
-	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/melee/onehanded/knife/hunting = 1,
-		)
-
-/datum/outfit/loadout/provisioner
-	name = "Provisioner"
-	neck = /obj/item/clothing/neck/scarf/cptpatriot
-	suit = /obj/item/clothing/suit/jacket/miljacket
-	neck = /obj/item/clothing/ears/headphones
-	uniform = /obj/item/clothing/under/f13/merca
-	gloves = /obj/item/clothing/gloves/f13/leather
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
-	/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
-	/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
-	)
-
-/datum/outfit/loadout/bum
-	name = "Bum"
-	mask = /obj/item/clothing/mask/facewrap
-	neck = /obj/item/clothing/neck/mantle/poncho
-	uniform = /obj/item/clothing/under/f13/rag
-	gloves = /obj/item/clothing/gloves/f13/handwraps
-	shoes = /obj/item/clothing/shoes/f13/rag
-	backpack_contents = list(/obj/item/storage/bag/trash = 1, /obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,
-	/obj/item/gun/ballistic/automatic/hobo/zipgun = 1,
-	/obj/item/twohanded/spear/scrapspear = 1,
-	)
-
-/datum/outfit/loadout/properlady
-	name = "Proper Lady"
-	head = /obj/item/clothing/head/beret/black
-	suit = /obj/item/clothing/under/sailordress
-	gloves = /obj/item/clothing/gloves/f13/lace
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/champagne = 1,
-	/obj/item/gun/ballistic/revolver/police = 1,
-	/obj/item/ammo_box/c38 = 2,
-	)
-
-/datum/outfit/loadout/propergent
-	name = "Respectable Gent"
-	head = /obj/item/clothing/head/f13/beaver
-	suit = /obj/item/clothing/suit/f13/cowboybvest
-	uniform = /obj/item/clothing/under/f13/bartenderalt
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack_contents = list(/obj/item/storage/box/matches = 1,
-	/obj/item/storage/fancy/cigarettes/cigars = 1,
-	/obj/item/gun/ballistic/revolver/widowmaker = 1,
-	/obj/item/ammo_box/shotgun/improvised = 2,
-	)
-
-/datum/outfit/loadout/hombre
-	name = "Hombre"
-	head = /obj/item/clothing/head/f13/cowboy
-	suit = /obj/item/clothing/suit/f13/duster
-	uniform = /obj/item/clothing/under/f13/cowboyb
-	r_hand = /obj/item/gun/ballistic/rifle/hunting
-	gloves = /obj/item/clothing/gloves/f13/leather
-	shoes = /obj/item/clothing/shoes/f13/cowboy
-	backpack_contents = list(/obj/item/ammo_box/a308 = 2,
-	)
-	
-/datum/outfit/loadout/secretary 
-	name = "Secretary"
-	uniform = /obj/item/clothing/under/suit/black
-	glasses = /obj/item/clothing/glasses/regular/hipster
-	shoes = /obj/item/clothing/shoes/laceup
-	r_hand = /obj/item/storage/briefcase
-	backpack_contents = list(/obj/item/pen = 1,
-	/obj/item/clipboard = 1,
-	/obj/item/paper_bin/bundlenatural = 1,
-	/obj/item/clothing/under/suit/black/skirt = 1,
-	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
-	/obj/item/ammo_box/magazine/m22 = 2,
-	)
-	///placeholder until a proper secretary role is added
-	
-/datum/outfit/loadout/singer
-	name = "Saloon Singer"
-	shoes = /obj/item/clothing/shoes/laceup
-	backpack_contents = list(/obj/item/clothing/under/f13/classdress = 1,
-	/obj/item/clothing/under/suit/black_really = 1,
-	/obj/item/clothing/gloves/evening = 1,
-	/obj/item/clothing/gloves/color/white = 1,
-	/obj/item/melee/unarmed/brass = 1,
-	)
-	
-
-
-
-/*--------------------------------------------------------------*/
-
-/datum/job/oasis/f13shopkeeper
-	title = "Shopkeeper"
-	flag = F13SHOPKEEPER
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "free hand of the market"
-	description = "The greed of the United States survived better than its people. You are an organ of this greed. Ensure its continuation."
-	selection_color = "#dcba97"
-	exp_requirements = 600
-
-	outfit = /datum/outfit/job/den/f13shopkeeper
-	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
-	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13shopkeeper
-	name = "Shopkeeper"
-	jobtype = /datum/job/oasis/f13shopkeeper
-
-	id = /obj/item/card/id/dogtag/town
-	uniform = /obj/item/clothing/under/f13/roving
-	ears = /obj/item/radio/headset/headset_town
-	backpack = /obj/item/storage/backpack
-	satchel = /obj/item/storage/backpack/satchel
-	duffelbag = /obj/item/storage/backpack/duffelbag
-	gloves = /obj/item/clothing/gloves/fingerless
-	l_pocket = /obj/item/storage/bag/money/small/den
-	r_pocket = /obj/item/flashlight/flare
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	backpack_contents = list()
-
-/datum/outfit/job/den/f13shopkeeper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
-
-/datum/outfit/job/den/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-*/
 
 /*
 /datum/job/oasis/f13banker
@@ -889,17 +808,4 @@ datum/job/oasis/f13sheriff
 	/obj/item/storage/box/matches=1,
 	/obj/item/gun/ballistic/automatic/smg/mini_uzi=1
 	)
-
-/datum/outfit/loadout/investor
-	name = "Investor"
-	glasses = /obj/item/clothing/glasses/sunglasses
-	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	uniform = /obj/item/clothing/under/f13/bennys
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/laceup
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/colt357=1,
-		/obj/item/storage/fancy/cigarettes/cigpack_bigboss=1,
-		/obj/item/storage/box/matches=1
-		)
 */
