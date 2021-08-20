@@ -59,7 +59,7 @@ here's a tip, go search DEFINES/access.dm
 	satchel = /obj/item/storage/backpack/satchel/leather
 	neck = /obj/item/storage/belt/holster
 	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight
+	r_pocket = /obj/item/flashlight/lantern
 	belt = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	shoes = /obj/item/clothing/shoes/f13/tan
 	uniform = /obj/item/clothing/under/f13/gentlesuit
@@ -68,6 +68,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/storage/box/citizenship_permits = 1,
 		/obj/item/ammo_box/magazine/m9mmds = 1,
 		/obj/item/pen/fountain/captain = 1,
+		/obj/item/megaphone = 1,
 		)
 
 /*--------------------------------------------------------------*/
