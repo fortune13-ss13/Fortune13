@@ -308,9 +308,6 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/bunker)
-"bh" = (
-/turf/closed/mineral/random/low_chance,
-/area/f13/vault)
 "bj" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -367,6 +364,10 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/bunker)
+"bu" = (
+/obj/effect/landmark/start/f13/vaultsecurityofficer,
+/turf/open/floor/plasteel/dark,
+/area/f13/vault)
 "bv" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2489,6 +2490,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
+"jM" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Enclave Airlock";
+	req_access_txt = "134"
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "dark"
+	},
+/area/f13/bunker)
 "jN" = (
 /obj/structure/closet/fridge/standard,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -2740,6 +2750,12 @@
 "kZ" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault)
+"la" = (
+/obj/effect/landmark/start/f13/vaultengineer,
+/turf/open/floor/plasteel/darkpurple/side{
+	dir = 1
+	},
 /area/f13/vault)
 "lf" = (
 /obj/structure/table/wood,
@@ -6067,8 +6083,11 @@
 /area/f13/caves)
 "An" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/hatch,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/airlock/hatch{
+	name = "Enclave Airlock";
+	req_access_txt = "134"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -7460,6 +7479,14 @@
 /obj/structure/barricade/wooden/strong,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"GK" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#e8eaff"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault)
 "GL" = (
 /obj/item/radio/intercom{
 	frequency = 1361;
@@ -7887,10 +7914,6 @@
 /area/f13/vault)
 "Is" = (
 /obj/structure/table,
-/obj/machinery/light{
-	dir = 8;
-	light_color = "#e8eaff"
-	},
 /obj/item/clothing/neck/stethoscope,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
@@ -8814,6 +8837,13 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/bunker)
+"Mt" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/effect/landmark/start/f13/vaultdweller,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/vault)
 "Mu" = (
 /obj/structure/sign/poster/official/science{
 	pixel_y = 32
@@ -9106,7 +9136,10 @@
 	},
 /area/f13/bunker)
 "NN" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	name = "Enclave Airlock";
+	req_access_txt = "134"
+	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluechess"
 	},
@@ -10767,7 +10800,10 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
 "Uv" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	name = "Enclave Airlock";
+	req_access_txt = "134"
+	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -11231,9 +11267,12 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/caves)
 "We" = (
-/obj/machinery/door/airlock/hatch,
 /obj/machinery/door/poddoor/shutters/old/preopen{
 	id = "bos"
+	},
+/obj/machinery/door/airlock/hatch{
+	name = "Enclave Airlock";
+	req_access_txt = "134"
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
@@ -11625,6 +11664,7 @@
 	dir = 1;
 	light_color = "#706891"
 	},
+/obj/effect/landmark/start/f13/vaultengineer,
 /turf/open/floor/plasteel/darkpurple/side{
 	dir = 1
 	},
@@ -12184,6 +12224,15 @@
 	icon_state = "2-i"
 	},
 /area/f13/vault)
+"ZZ" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Enclave Airlock";
+	req_access_txt = "134"
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorgrime"
+	},
+/area/f13/bunker)
 
 (1,1,1) = {"
 mJ
@@ -16869,8 +16918,8 @@ Za
 Za
 Za
 Za
-Ju
-Ju
+jM
+jM
 Za
 Za
 YG
@@ -18007,7 +18056,7 @@ en
 en
 aj
 en
-jb
+ZZ
 cA
 cA
 cA
@@ -18169,7 +18218,7 @@ en
 en
 aj
 en
-jb
+ZZ
 cA
 cA
 cA
@@ -18974,7 +19023,7 @@ OF
 Lq
 kP
 kP
-Ju
+jM
 Id
 eh
 AE
@@ -19136,7 +19185,7 @@ kP
 kP
 kP
 Ev
-Ju
+jM
 Id
 cT
 da
@@ -19293,10 +19342,10 @@ Za
 Hf
 Hf
 Hf
-jb
+ZZ
 Za
 Hf
-jb
+ZZ
 Hf
 Za
 Id
@@ -27755,7 +27804,7 @@ Gy
 HX
 ZY
 PR
-Qi
+bu
 ZY
 JS
 JS
@@ -29867,7 +29916,7 @@ Ta
 ZY
 ZY
 ZC
-kZ
+GK
 ZC
 NY
 ZY
@@ -30022,7 +30071,7 @@ QV
 Ta
 Ta
 My
-My
+Mt
 My
 Ta
 Ta
@@ -33426,7 +33475,7 @@ He
 ZY
 ZY
 WA
-WV
+la
 gy
 GS
 Qi
@@ -35353,7 +35402,7 @@ mJ
 "}
 (144,1,1) = {"
 mJ
-bh
+ZY
 ZY
 ZY
 ZY
@@ -35515,7 +35564,7 @@ mJ
 "}
 (145,1,1) = {"
 mJ
-bh
+ZY
 ZY
 ZY
 ZY
@@ -35677,7 +35726,7 @@ mJ
 "}
 (146,1,1) = {"
 mJ
-bh
+ZY
 ZY
 ZY
 ZY
