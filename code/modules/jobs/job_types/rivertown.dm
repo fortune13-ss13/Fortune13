@@ -587,8 +587,8 @@ datum/job/oasis/f13sheriff
 	faction = "Town"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Oasis Government & Police Department"
-	description = "You have finished your long pilgrimage to the fabled oasis. You have restored the chapel and cleared weeds from the grove, and it is now your duty to restore faith to this empty land. Remember that the Oak is the most holy living relic in this valley, protect it at all costs."
+	supervisors = "Rivertown Alderman in theory, but you true master is far above them."
+	description = "There are many lost souls in this wasteland, comfort them or condemn them as your conscience and faith demands."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13preacher
@@ -609,21 +609,41 @@ datum/job/oasis/f13sheriff
 		),
 	)
 
+/datum/outfit/job/den/f13preacher
+	name = "Preacher"
+	jobtype = /datum/job/oasis/f13preacher
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_town
+	belt = null
+	uniform = /obj/item/clothing/under/f13/chaplain
+	backpack_contents = list()
+	shoes =	null
+	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/flask=1, \
+		/obj/item/storage/fancy/candle_box, \
+		/obj/item/storage/bag/money/small/settler)
+
 
 /datum/outfit/loadout/atompreacher
 	name = "Atom's Devout"
 	l_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
+	shoes = /obj/item/clothing/shoes/f13/rag
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	uniform = /obj/item/clothing/under/f13/atombeliever
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/atombeliever=1,
-		/obj/item/clothing/under/f13/atomfaithful=3,
-		/obj/item/clothing/head/helmet/f13/atombeliever=1
+		/obj/item/clothing/under/f13/atomfaithful = 2,
+		/obj/item/clothing/head/helmet/f13/atombeliever = 1,
 		)
 
 /datum/outfit/loadout/standardpreacher
-	name = "Protector of the Faith"
-	l_hand = /obj/item/nullrod
+	name =	"Preacher"
+	r_hand =	/obj/item/gun/ballistic/revolver/hobo/pepperbox
+	shoes =	/obj/item/clothing/shoes/f13/fancy
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2
+		/obj/item/ammo_box/c10mm/improvised = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/camera/spooky = 1,
 		)
 
 /datum/job/oasis/f13preacher/after_spawn(mob/living/H, mob/M)
@@ -661,18 +681,8 @@ datum/job/oasis/f13sheriff
 			B.name = pick("The Holy Bible","The Dead Sea Scrolls")
 		if("buddhism")
 			B.name = "The Sutras"
-		if("clownism","honkmother","honk","honkism","comedy")
-			B.name = pick("The Holy Joke Book", "Just a Prank", "Hymns to the Honkmother")
-		if("chaos")
-			B.name = "The Book of Lorgar"
-		if("cthulhu")
-			B.name = "The Necronomicon"
 		if("hinduism")
 			B.name = "The Vedas"
-		if("homosexuality")
-			B.name = pick("Guys Gone Wild","Coming Out of The Closet")
-		if("imperium")
-			B.name = "Uplifting Primer"
 		if("islam")
 			B.name = "Quran"
 		if("judaism")
@@ -682,14 +692,8 @@ datum/job/oasis/f13sheriff
 		if("lol", "wtf", "gay", "penis", "ass", "poo", "badmin", "shitmin", "deadmin", "cock", "cocks", "meme", "memes")
 			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition","F.A.T.A.L. Rulebook")
 			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 100) // starts off dumb as fuck
-		if("monkeyism","apism","gorillism","primatism")
-			B.name = pick("Going Bananas", "Bananas Out For Harambe")
 		if("mormonism")
 			B.name = "The Book of Mormon"
-		if("pastafarianism")
-			B.name = "The Gospel of the Flying Spaghetti Monster"
-		if("rastafarianism","rasta")
-			B.name = "The Holy Piby"
 		if("satanism")
 			B.name = "The Unholy Bible"
 		if("science")
@@ -700,12 +704,6 @@ datum/job/oasis/f13sheriff
 			B.name = "The Tenets of Servicia"
 			B.deity_name = pick("Servicia", "Space Bacchus", "Space Dionysus")
 			B.desc = "Happy, Full, Clean. Live it and give it."
-		if("subgenius")
-			B.name = "Book of the SubGenius"
-		if("toolboxia","greytide")
-			B.name = pick("Toolbox Manifesto","iGlove Assistants")
-		if("weeaboo","kawaii")
-			B.name = pick("Fanfiction Compendium","Japanese for Dummies","The Manganomicon","Establishing Your O.T.P")
 		else
 			B.name = "The Holy Book of [new_religion]"
 
@@ -717,30 +715,6 @@ datum/job/oasis/f13sheriff
 
 	SSblackbox.record_feedback("text", "religion_name", 1, "[new_religion]", 1)
 	SSblackbox.record_feedback("text", "religion_deity", 1, "[new_deity]", 1)
-
-
-/datum/outfit/job/den/f13preacher
-	name = "Preacher"
-	jobtype = /datum/job/oasis/f13preacher
-
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town
-	belt = null
-	uniform = /obj/item/clothing/under/f13/chaplain
-	backpack_contents = list(/obj/item/camera/spooky = 1)
-	backpack = /obj/item/storage/backpack/cultpack
-	satchel = /obj/item/storage/backpack/cultpack
-	gloves =		/obj/item/clothing/gloves/fingerless
-	shoes = 		/obj/item/clothing/shoes/jackboots
-	backpack = 		/obj/item/storage/backpack/cultpack
-	satchel = 		/obj/item/storage/backpack/cultpack
-	r_hand = 		/obj/item/gun/ballistic/revolver/m29
-	r_pocket = /obj/item/flashlight/flare
-	backpack_contents = list(
-		/obj/item/ammo_box/m44=2, \
-		/obj/item/reagent_containers/food/drinks/flask=1, \
-		/obj/item/storage/fancy/candle_box, \
-		/obj/item/storage/bag/money/small/settler)
 
 
 /*
