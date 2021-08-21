@@ -97,7 +97,6 @@
 	jobtype = /datum/job/enclave/armor
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	mask =	/obj/item/clothing/mask/gas/enclave
-	glasses =	/obj/item/clothing/glasses/night
 	neck =	/obj/item/storage/belt/holster/legholster/enclavesig
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/power_armor/x02
@@ -230,6 +229,7 @@
 	jobtype =	/datum/job/enclave/intel
 	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
 	mask =	/obj/item/clothing/mask/gas/enclave
+	glasses = /obj/item/clothing/glasses/night/polarizing
 	uniform =	/obj/item/clothing/under/f13/enclave/intel
 	suit =	/obj/item/clothing/suit/armor/bulletproof
 	suit_store =	/obj/item/gun/ballistic/revolver/needler
