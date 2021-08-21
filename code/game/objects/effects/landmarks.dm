@@ -732,13 +732,15 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/mayor
 	name = "Alderman"
+	icon_state = "Elder"
 
 /obj/effect/landmark/start/f13/sheriff
 	name = "Talon Commander"
-	icon_state = "Sheriff"
+	icon_state = "NCR Lieutenant"
 
 /obj/effect/landmark/start/f13/deputy
 	name = "Talon Mercenary"
+	icon_state = "NCR Sergeant"
 
 /obj/effect/landmark/start/f13/farmer
 	name = "Farmer"
@@ -752,6 +754,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/dendoc
 	name = "Doctor"
+	icon_state = "Chief Medical Officer"
 
 /obj/effect/landmark/start/f13/shopkeeper
 	name = "Shopkeeper"
@@ -772,7 +775,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/vigilante
 	name = "Vigilante"
-	icon_state = "Wastelander"
+	icon_state = "Scribe"
 
 /obj/effect/landmark/start/f13/wastelander
 	name = "Wastelander"
@@ -792,7 +795,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/dendoctor
 	name = "Street Doc"
-	
+	icon_state = "Pusher"
+
 /obj/effect/landmark/start/f13/mobboss
 	name = "Raider Boss"
 	icon_state = "Boss"
@@ -812,24 +816,29 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 // Enclave
 /obj/effect/landmark/start/f13/usspy
 	name = "Enclave Soldier"
+	icon_state = "Initiate"
 
 /obj/effect/landmark/start/f13/uslt
 	name = "Enclave Officer"
+	icon_state = "Paladin"
 
 /obj/effect/landmark/start/f13/ussgt
 	name = "Enclave Armored Infantry"
+	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/uscommander
 	name = "US Commander"
 
 /obj/effect/landmark/start/f13/usmedic
 	name = "Intelligence Officer"
+	icon_state = "Head of Security"
 
 /obj/effect/landmark/start/f13/usprivate
 	name = "US Private"
 
 /obj/effect/landmark/start/f13/usscientist
 	name = "Enclave Scientist"
+	icon_state = "Chemist"
 
 /obj/effect/landmark/start/f13/usengineer
 	name = "US Engineer"

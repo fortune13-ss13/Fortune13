@@ -622,10 +622,12 @@
 	item_state = "50shairband"
 
 /obj/item/clothing/head/f13/nursehat
-	name = "nursehat"
+	name = "nurse hat"
 	desc = "White cloth headdress for nurses"
-	icon_state = "nursehat"
-	item_state = "nursehat"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "nurse"
+	item_state = "nurse"
 
 /obj/item/clothing/head/f13/beaver
 	name = "beaverkin"

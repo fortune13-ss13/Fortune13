@@ -111,7 +111,7 @@
 	icon_state = "paramedic_skirt"
 
 /obj/item/clothing/under/rank/medical/doctor/nurse
-	desc = "It's a jumpsuit commonly worn by nursing staff in the medical department."
+	desc = "A clean light blue dress worn by nurses."
 	name = "nurse's suit"
 	icon_state = "nursesuit"
 	item_state = "w_suit"
