@@ -693,5 +693,5 @@
 
 /obj/machinery/autolathe/army
 	name = "army style autolathe"
-	icon = 'icons/fallout/furniture/stationary.dmi'
-	desc = "Old but well maintained autolathe."
+	icon = 'icons/fallout/machines/autolathe_army.dmi'
+	desc = "Old but well maintained military-grade autolathe."

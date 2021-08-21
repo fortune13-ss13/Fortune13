@@ -494,6 +494,37 @@
 
 //Ranks
 
+// ENCLAVE
+
+/obj/item/clothing/accessory/enclave
+	name = "Major rank pin"
+	desc = "Rank pips shows the wearer is a major, the lowest command rank in charge of US military outposts."
+	icon_state = "captainrank"
+	item_color = "captainrank"
+	minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/enclave/lt
+	name = "Lieutenant rank pin"
+	desc = "The pips of a US Army Intelligence officer."
+	icon_state = "firstlieutenantrank"
+	item_color = "firstlieutenantrank"
+	minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/enclave/sgt
+	name = "Gunnery Sergeant rank pin"
+	desc = "The pips of a specialist in the Reconstituted US Army."
+	icon_state = "secondlieutenantrank"
+	item_color = "secondlieutenantrank"
+	minimize_when_attached = TRUE
+
+/obj/item/clothing/accessory/enclave/soldier
+	name = "Private rank pin"
+	desc = "US Army soldiers wear this proudly."
+	icon_state = "ncrenlisted"
+	item_color = "ncrenlisted"
+	minimize_when_attached = TRUE
+
+
 /obj/item/clothing/accessory/ncr
 	name = "(O-6) Colonel rank pin"
 	desc = "An officer holding the rank of Colonel should wear these."
