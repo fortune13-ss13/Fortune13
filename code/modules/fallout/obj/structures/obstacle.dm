@@ -12,7 +12,7 @@
 //small junk = Slows movement, worthless for cover, cleaned with soap etc. Having difficulty making the slowdown work =(
 
 /obj/structure/junk
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'icons/fallout/furniture/ruined.dmi'
 	obj_integrity = 100
 	max_integrity = 100
 	anchored = 1
@@ -44,6 +44,16 @@
 	name = "decayed locker"
 	desc = "Broken, rusted junk."
 	icon_state = "junk_locker"
+
+/obj/structure/junk/disco
+	name = "broken disco ball"
+	desc = "Remains of something fun."
+	icon_state = "junk_disco"
+
+/obj/structure/junk/jukebox
+	name = "ruined jukebox"
+	desc = "Remains of something fun."
+	icon_state = "junk_jukebox"
 
 /obj/structure/junk/cabinet
 	name = "old rotting furniture"
@@ -99,8 +109,45 @@
 /obj/structure/junk/small/bench
 	name = "rotting planks"
 	desc = "Remains of small furniture"
-	icon_state = "rubbish_bench"
+	icon_state = "junk_bench"
 	slowdown = 6
+
+/obj/structure/junk/small/toilet
+	name = "non-functional toilet"
+	desc = "Busted up toilet"
+	icon_state = "toilet_broken"
+
+/obj/structure/junk/small/urinal
+	name = "non-functional urinal"
+	desc = "Clogged urinal"
+	icon_state = "urinal_broken"
+
+/obj/structure/junk/small/shower
+	name = "rusted shower"
+	desc = "The pipes are filled with air and dust now."
+	icon_state = "shower_broken"
+
+/obj/structure/junk/small/mirror
+	name = "shattered mirror"
+	desc = "Each shard reflects the world around it, under the layers of dust."
+	icon_state = "mirror_broken"
+
+/obj/structure/junk/small/curtain
+	name = "rotting shower curtain"
+	desc = "Covered in mold and grime."
+	icon_state = "curtain_broken"
+
+/obj/structure/junk/small/sink
+	name = "broken sink"
+	desc = "The cracked bowl is filled with dried up indescribable sludge."
+	icon_state = "sink_broken"
+
+/obj/structure/junk/small/telescreen
+	name = "smashed telescreen"
+	desc = "The most modern television set available once. Now smashed and useless."
+	icon_state = "telescreen_broken"
+
+
 
 //Barricades/cover
 

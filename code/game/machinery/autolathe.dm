@@ -690,3 +690,8 @@
 	basic = 1
 	intermediate = 1
 	advanced = 1
+
+/obj/machinery/autolathe/army
+	name = "army style autolathe"
+	icon = 'icons/fallout/machines/autolathe_army.dmi'
+	desc = "Old but well maintained military-grade autolathe."

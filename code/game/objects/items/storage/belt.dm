@@ -787,6 +787,13 @@
 	icon_state = "holster_leg"
 	item_state = "holster_leg"
 
+/obj/item/storage/belt/holster/legholster/enclavesig/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
+	new /obj/item/ammo_box/magazine/m9mm(src)
+	new /obj/item/ammo_box/magazine/m9mm(src)
+
+
+
 /obj/item/storage/belt/fannypack
 	name = "fannypack"
 	desc = "A dorky fannypack for keeping small items in."

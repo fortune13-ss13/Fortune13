@@ -6,7 +6,7 @@
 	department_flag = ENCLAVE
 	selection_color = "#aaaaf7"
 	forbids = "Enclave crimes: Fraternizing with outsiders beyond what is absolutly necessary. Aiding Brotherhood members in any way no matter how small."
-	enforces = "Enclave rules: Stay in uniform. Act mature and respectful. Obey orders and always remember you are fighting for the only true legitimate power in this land of savages. Wearing gasmasks outside the compound is encouraged but not required."
+	enforces = "Enclave rules: Stay in uniform. Act mature and respectful. Obey orders and always remember you are representing the only true legitimate power in this land of savages. Wearing gasmasks outside the compound is encouraged but not required."
 	objectivesList = list("Department of Defense advisory: Collect resources and produce more Patribots, attrition is depleting our reserves.","Department of Defense advisory: Establish checkpoints to show presence, they must not forget who is the legitimate goverment.", "Science Divison advisory: Capture human subjects for experiments, alive. We have some new neurotoxin grenades we wish to do final tests with before field deployment.")
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -46,7 +46,7 @@
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster
 	uniform =	/obj/item/clothing/under/f13/enclave_officer
-	accessory =	/obj/item/clothing/accessory/ncr/LT1
+	accessory =	/obj/item/clothing/accessory/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave/officercoat
 	gloves =	/obj/item/clothing/gloves/combat
 
@@ -97,19 +97,15 @@
 	jobtype = /datum/job/enclave/armor
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	mask =	/obj/item/clothing/mask/gas/enclave
-	glasses =	/obj/item/clothing/glasses/night
-	neck =	/obj/item/storage/belt/holster/legholster
-	uniform =	/obj/item/clothing/under/f13/enclave/peacekeeper
+	neck =	/obj/item/storage/belt/holster/legholster/enclavesig
+	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/power_armor/x02
-	accessory =	/obj/item/clothing/accessory/ncr/SGT
+	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	gloves =	/obj/item/clothing/gloves/combat
-
+	backpack = /obj/item/minigunpack
 	backpack_contents = list(
-		/obj/item/minigunpack = 1,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/gun/ballistic/automatic/pistol/sig = 1,
-		/obj/item/ammo_box/magazine/m9mm = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/flashbang = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
@@ -147,18 +143,17 @@
 	jobtype =	/datum/job/enclave/soldier
 	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
 	mask =	/obj/item/clothing/mask/gas/enclave
-	neck =	/obj/item/storage/belt/holster/legholster
-	uniform =	/obj/item/clothing/under/f13/enclave/peacekeeper
-	suit =	/obj/item/clothing/suit/armor/f13/enclave/armorvest
+	neck =	/obj/item/storage/belt/holster/legholster/enclavesig
+	uniform =	/obj/item/clothing/under/f13/enclave
+	suit =	/obj/item/clothing/suit/armor/f13/enclave
+	accessory =	/obj/item/clothing/accessory/enclave/soldier
 	suit_store =  	/obj/item/gun/ballistic/automatic/assault_carbine
 
 	backpack_contents = list(
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/gun/ballistic/automatic/pistol/sig = 1,
-		/obj/item/ammo_box/magazine/m9mm = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/flashbang = 1,
-		/obj/item/ammo_box/magazine/m556/rifle/extended = 2,
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		)
 
@@ -226,14 +221,19 @@
 	description = "Analyze and gather data, help the Science officers keep the compound running. Secondary duty: support the troops with paramedic duties, scouting. "
 	supervisors = "The Officer first, Scientists second. The regular soldiers have no authority over you."
 
+	outfit = /datum/outfit/job/enclave/intel
+
+
 /datum/outfit/job/enclave/intel
 	name =	"Intelligence Officer"
 	jobtype =	/datum/job/enclave/intel
 	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
 	mask =	/obj/item/clothing/mask/gas/enclave
+	glasses = /obj/item/clothing/glasses/night/polarizing
 	uniform =	/obj/item/clothing/under/f13/enclave/intel
 	suit =	/obj/item/clothing/suit/armor/bulletproof
 	suit_store =	/obj/item/gun/ballistic/revolver/needler
+	accessory =	/obj/item/clothing/accessory/enclave/lt
 	backpack_contents = list(
 		/obj/item/ammo_box/needle = 1,
 		/obj/item/storage/firstaid/regular = 1,

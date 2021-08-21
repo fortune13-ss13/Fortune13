@@ -602,25 +602,27 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
-	armor_block_threshold = 0.35
+	armor_block_threshold = 0.25
 	melee_block_threshold = 35
 	armor_block_chance = 70
 	deflection_chance = 10
 	armor = list("tier" = 11, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0, "wound" = 70)
 
-/obj/item/clothing/suit/armor/f13/enclave/armorvest
+/obj/item/clothing/suit/armor/f13/enclave
 	name = "armored vest"
-	desc = "(VI) Efficient prewar design issued to Enclave personell."
+	desc = "(V) Efficient prewar design issued to Enclave personell."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "armor_enclave_peacekeeper"
 	item_state = "armor_enclave_peacekeeper"
-	armor = list("tier" = 6)
+	armor = list("tier" = 5, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 10, "fire" = 30, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/enclave/officercoat
 	name = "armored coat"
-	desc = "(VII) Premium prewar armor fitted into a coat for Enclave officers."
+	desc = "(VI) Premium prewar military armor worn under a coat for Enclave officers."
 	icon_state = "armor_enclave_officer"
 	item_state = "armor_enclave_officer"
-	armor = list("tier" = 7)
+	armor = list("tier" = 6, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 10, "fire" = 30, "acid" = 0)
 
 //Generic Tribal - For Wayfarer specific, see f13factionhead.dm
 //Trying generic tribal armor stats for this one for now.

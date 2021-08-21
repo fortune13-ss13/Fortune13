@@ -9,7 +9,16 @@
 /obj/item/clothing/under/f13/female
 	fitted = FEMALE_UNIFORM_TOP
 
+
 //ENCLAVE PEACEKEEPERS
+
+/obj/item/clothing/under/f13/enclave
+	name = "US Army peacekeeper uniform"
+	desc = "Khaki standard issue uniform over a black turtleneck."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "uniform_enclave_peacekeeper"
+	item_state = "uniform_enclave_peacekeeper"
 
 /obj/item/clothing/under/f13/enclave/science
 	name = "science officer uniform"
@@ -18,26 +27,19 @@
 	item_state = "uniform_enclave_science"
 	armor = list("tier" = 1, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
 
-/obj/item/clothing/under/f13/enclave/peacekeeper
-	name = "peacekeeper uniform"
-	desc = "(II)Khaki standard issue uniform over a black turtleneck."
-	icon_state = "uniform_enclave_peacekeeper"
-	item_state = "uniform_enclave_peacekeeper"
-	armor = list("tier" = 2)
-
 /obj/item/clothing/under/f13/enclave/officer
 	name = "officer uniform"
-	desc = "(II)Khaki officers uniform with gold trimming over a black turtleneck."
+	desc = "Khaki officers uniform with gold trimming over a black turtleneck."
 	icon_state = "uniform_enclave_officer"
 	item_state = "uniform_enclave_officer"
-	armor = list("tier" = 2)
 
 /obj/item/clothing/under/f13/enclave/intel
 	name = "intel officer uniform"
-	desc = "(III)Dark pants and turtleneck with hidden kevlar layers, since intel officers often wear no proper armor."
+	desc = "(II)Dark pants and turtleneck with hidden kevlar layers, since intel officers often carry light armor."
 	icon_state = "uniform_enclave_intel"
 	item_state = "uniform_enclave_intel"
-	armor = list("tier" = 3)
+	armor = list("tier" = 2)
+
 
 //Vault
 
