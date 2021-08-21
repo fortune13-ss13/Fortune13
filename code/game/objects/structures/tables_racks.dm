@@ -649,8 +649,8 @@
  */
 /obj/structure/rack
 	name = "rack"
-	desc = "Different from the Middle Ages version."
-	icon = 'icons/obj/objects.dmi'
+	desc = "Cheap storage option."
+	icon = 'icons/fallout/furniture/stationary.dmi'
 	icon_state = "rack"
 	layer = TABLE_LAYER
 	density = TRUE
@@ -720,6 +720,12 @@
 				playsound(loc, 'sound/weapons/tap.ogg', 50, 1)
 		if(BURN)
 			playsound(loc, 'sound/items/welder.ogg', 40, 1)
+
+/obj/structure/rack/steel
+	name = "steel rack"
+	desc = "Durable storage option."
+	icon = 'icons/fallout/furniture/stationary.dmi'
+	icon_state = "rack_metal"
 
 /*
  * Rack destruction
