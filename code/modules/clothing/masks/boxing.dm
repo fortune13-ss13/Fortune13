@@ -12,6 +12,10 @@
 /obj/item/clothing/mask/balaclava/attack_self(mob/user)
 	adjustmask(user)
 
+/obj/item/clothing/mask/balaclava/merc
+	desc = "keeps you warm and makes it harder for witnesses to tell who did what."
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/mask.dmi'
+
 /obj/item/clothing/mask/balaclava/breath
 	name = "breathaclava"
 	clothing_flags = ALLOWINTERNALS

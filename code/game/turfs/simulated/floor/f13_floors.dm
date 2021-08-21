@@ -156,6 +156,9 @@
 		if(icon_state == "oakfloor1")
 			icon_state = "oakfloor[rand(1,4)]"
 
+/turf/open/floor/wood/f13/oak/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
 /turf/open/floor/wood/f13/housewoodbroken
 	icon_state = "housewood1-broken"
 
@@ -268,7 +271,28 @@
 	icon_state = "housewood_stage_bottom_right"
 
 //WOOD FLOOR FOR BRIDGES ETC, OUTDOORS
+/turf/open/floor/wood/f13/stage_tl/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_t/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_l/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_bl/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
 /turf/open/floor/wood/f13/stage_b/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_tr/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_r/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_br/outdoors
 	sunlight_state = SUNLIGHT_SOURCE
 
 #define SHROOM_SPAWN	1

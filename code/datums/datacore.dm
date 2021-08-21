@@ -139,9 +139,6 @@
 		if(rank in GLOB.legion_positions)
 			leg[name] = rank
 			department = 1
-		if(rank in GLOB.ncr_positions)
-			ncr[name] = rank
-			department = 1
 		if(rank in GLOB.followers_positions)
 			flw[name] = rank
 			department = 1

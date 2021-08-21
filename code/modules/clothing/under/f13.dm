@@ -145,6 +145,14 @@
 
 //Settlers
 
+/obj/item/clothing/under/f13/talonuniform
+	name = "camouflage clothing"
+	desc = "Inspired by pre-war hunting clothing, this rugged uniform is popular with mercenaries."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "merc_camo"
+	item_state = "merc_camo"
+
 /obj/item/clothing/under/f13/brahminm
 	name = "brahmin skin outfit"
 	desc = "A basic outfit consisting of a white shirt and patched trousers with Y-shaped suspenders"

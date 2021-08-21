@@ -292,6 +292,9 @@
 	automatic_burst_overlay = FALSE
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 
+//Automag Talon		Keywords: .44 Magnum, Semi-auto, Long barrel, 7 rounds, Heavy. Special modifiers: bullet speed +300
+/obj/item/gun/ballistic/automatic/pistol/automag/talon
+	mag_type = /obj/item/ammo_box/magazine/automag/ap
 
 //14mm Pistol		Keywords: 14mm, Semi-auto, 7 rounds, Heavy
 /obj/item/gun/ballistic/automatic/pistol/pistol14

@@ -1,385 +1,248 @@
-//It looks like var/faction controls what becomes visible on setup. Should likely be fixed or something, but I'm not doing it.
+/////////////
+// ENCLAVE //
+/////////////
+
 /datum/job/enclave
 	department_flag = ENCLAVE
 	selection_color = "#aaaaf7"
-	forbids = "Enclave taboos: Female front line soldiers. Fraternizing with outsiders beyond what is absolutly necessary. Aiding Brotherhood members in any way no matter how small."
+	forbids = "Enclave crimes: Fraternizing with outsiders beyond what is absolutly necessary. Aiding Brotherhood members in any way no matter how small."
 	enforces = "Enclave rules: Stay in uniform. Act mature and respectful. Obey orders and always remember you are fighting for the only true legitimate power in this land of savages. Wearing gasmasks outside the compound is encouraged but not required."
 	objectivesList = list("Department of Defense advisory: Collect resources and produce more Patribots, attrition is depleting our reserves.","Department of Defense advisory: Establish checkpoints to show presence, they must not forget who is the legitimate goverment.", "Science Divison advisory: Capture human subjects for experiments, alive. We have some new neurotoxin grenades we wish to do final tests with before field deployment.")
-
-/* COMMENTED OUT FOR NOW
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
 
 /datum/outfit/job/enclave
-	id = null
-	ears = 			/obj/item/radio/headset/headset_enclave
-	box = 			/obj/item/storage/survivalkit_aid
-
-/datum/outfit/job/enclave/peacekeeper
-	id = 			/obj/item/card/id/dogtag/enclave/trooper
-	mask =			/obj/item/clothing/mask/gas/enclave
-	neck =			/obj/item/storage/belt/holster/legholster
-	backpack = 		/obj/item/storage/backpack/enclave
-	satchel = 		/obj/item/storage/backpack/satchel/enclave
-	belt = 			/obj/item/storage/belt/military/assault/enclave
-	uniform = 		/obj/item/clothing/under/f13/enclave/peacekeeper
-	r_pocket =		/obj/item/flashlight/seclite
-	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
-	gloves =		/obj/item/clothing/gloves/f13/military
-
-/datum/outfit/job/enclave/noncombat
-	id = 			/obj/item/card/id/dogtag/enclave/noncombatant
-	backpack = 		/obj/item/storage/backpack/satchel/enclave
-	satchel = 		/obj/item/storage/backpack/satchel/enclave
-	belt = 			/obj/item/storage/belt/military/assault/enclave
-	uniform = 		/obj/item/clothing/under/f13/enclave/science
-	r_pocket =		/obj/item/flashlight/seclite
-	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
-
-/datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-
-/datum/outfit/job/enclave/peacekeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	if(H.gender == FEMALE)
-		H.gender = MALE
-		H.real_name = random_unique_name(MALE)
-		H.name = H.real_name
-		if(H.wear_id)
-			var/obj/item/card/id/dogtag/L = H.wear_id
-			L.registered_name = H.name
-			L.update_label()
+	id =	/obj/item/card/id/dogtag/enclave
+	ears =	/obj/item/radio/headset/headset_enclave
+	box =	/obj/item/storage/survivalkit_aid
+	backpack =	/obj/item/storage/backpack/enclave
+	satchel =	/obj/item/storage/backpack/satchel/enclave
+	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
+	belt =	/obj/item/storage/belt/military/assault/enclave
+	r_pocket =	/obj/item/flashlight/seclite
+	l_pocket =	/obj/item/melee/onehanded/knife/survival
 
 
-PEACEKEEPERS
+// OFFICER
 
-
-//Peacekeeper Officer
-/datum/job/enclave/peacekeeper/officer
+/datum/job/enclave/officer
 	title = "Enclave Officer"
-	flag = ENCLAVEOFFICER
+	flag = F13USLT
 	faction = "Enclave"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are an experienced officer in charge of the local Enclave compound. You have ultimate authority but do not micromanage when not needed, and make sure any executions have a witness and documentation to avoid being court martialed."
-	supervisors = "the US goverment."
-	display_order = JOB_DISPLAY_ORDER_DECAN
-	outfit = /datum/outfit/job/enclave/peacekeeper/officer
+	description = "You are the officer in charge of commanding the remnants of the Enclave forces in the area."
+	supervisors = "the United States Government."
+	selection_color = "#323232"
+	exp_requirements = 300
+	exp_type = EXP_TYPE_ENCLAVE
+	outfit = /datum/outfit/job/enclave/officer
 
-	loadout_options = list(
-	/datum/outfit/loadout/captain, //head honcho
-	/datum/outfit/loadout/lieutenant //tear gas grenade
-	)
+/datum/outfit/job/enclave/officer
+	name =	"Enclave Officer"
+	jobtype =	/datum/job/enclave/officer
+	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+	glasses = /obj/item/clothing/glasses/night
+	mask =	/obj/item/clothing/mask/gas/enclave
+	neck =	/obj/item/storage/belt/holster/legholster
+	uniform =	/obj/item/clothing/under/f13/enclave_officer
+	accessory =	/obj/item/clothing/accessory/ncr/LT1
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/officercoat
+	gloves =	/obj/item/clothing/gloves/combat
 
-/datum/outfit/job/enclave/peacekeeper/officer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 3,
+		/obj/item/gun/energy/laser/plasma/glock/extended = 1,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		)
+
+/datum/outfit/job/enclave/officer/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
-/datum/outfit/job/enclave/peacekeeper/officer
-	name = "Officer"
-	jobtype =		/datum/job/enclave/peacekeeper/officer
-	id = 			/obj/item/card/id/dogtag/enclave/officer
-	head =			/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
-	uniform = 		/obj/item/clothing/under/f13/enclave/officer
-	suit = 			/obj/item/clothing/suit/armor/f13/enclave/officercoat
-	backpack_contents = list(
-		/obj/item/storage/bag/money/small/legofficers=1)
-
-/datum/outfit/loadout/captain
-	name = "Captain"
-	suit_store =	/obj/item/gun/energy/laser/plasma/glock
-	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/stock_parts/cell/ammo/ec=2)
-
-/datum/outfit/loadout/lieutenant
-	name = "Lieutenant"
-	uniform = 		/obj/item/clothing/under/f13/enclave_officer
-	backpack_contents = list(
-		/obj/item/grenade/chem_grenade/teargas=1,
-		/obj/item/gun/energy/laser/plasma/glock=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/stock_parts/cell/ammo/ec=2)
-
-//Peacekeeper Trooper
-/datum/job/enclave/peacekeeper/trooper
-	title = "Peacekeeper Trooper"
-	flag = ENCLAVETROOPER
-	faction = "Enclave"
-	total_positions = 5
-	spawn_positions = 5
-	description = "Obey your officer, the lance corporal and defend the United States against all foes, foreign and domestic. "
-	supervisors = "Officer first, then Lance Corporals. Scientists and Intel officers has any say over you."
-	display_order = JOB_DISPLAY_ORDER_DECANREC
-	outfit = /datum/outfit/job/enclave/peacekeeper/trooper
-
-	loadout_options = list(
-	/datum/outfit/loadout/lancecorporal, //NCO with NVG and long range stuff
-	/datum/outfit/loadout/armored, //power armor
-	)
-
-/datum/outfit/job/enclave/peacekeeper/trooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/wasteland/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
+
+
+// ARMORED INFANTRY
+
+/datum/job/enclave/armor
+	title = "Enclave Armored Infantry"
+	flag = F13USSGT
+	faction = "Enclave"
+	total_positions = 1
+	spawn_positions = 1
+	description = "Entrusted with the now rare advanced heavy weapons, your nation relies on you doing your job and carrying out the orders of your officer."
+	supervisors = "the United States Government."
+	selection_color = "#323232"
+	exp_requirements = 300
+	exp_type = EXP_TYPE_ENCLAVE
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
+
+	outfit = /datum/outfit/job/enclave/armor
+
+/datum/outfit/job/enclave/armor
+	name = "Enclave Armored Infantry"
+	jobtype = /datum/job/enclave/armor
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
+	mask =	/obj/item/clothing/mask/gas/enclave
+	glasses =	/obj/item/clothing/glasses/night
+	neck =	/obj/item/storage/belt/holster/legholster
+	uniform =	/obj/item/clothing/under/f13/enclave/peacekeeper
+	suit =	/obj/item/clothing/suit/armor/f13/power_armor/x02
+	accessory =	/obj/item/clothing/accessory/ncr/SGT
+	belt =	/obj/item/storage/belt/military/assault/enclave
+	gloves =	/obj/item/clothing/gloves/combat
+
+	backpack_contents = list(
+		/obj/item/minigunpack = 1,
+		/obj/item/grenade/smokebomb = 1,
+		/obj/item/gun/ballistic/automatic/pistol/sig = 1,
+		/obj/item/ammo_box/magazine/m9mm = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		)
+
+/datum/outfit/job/enclave/armor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
-/datum/outfit/job/enclave/peacekeeper/trooper
-	name = "Peacekeeper"
-	jobtype = /datum/job/enclave/peacekeeper/trooper
-	head = 			/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/sig=1,
-		/obj/item/ammo_box/magazine/m9mm=1,
-		/obj/item/ammo_box/a762=3)
 
-/datum/outfit/loadout/lancecorporal
-	name = "Lance Corporal"
-	glasses = 		/obj/item/clothing/glasses/night
-	suit = 			/obj/item/clothing/suit/armor/f13/enclave/armorvest
-	suit_store =	/obj/item/gun/ballistic/automatic/slr
-	backpack_contents = list(
-		/obj/item/grenade/smokebomb=1,
-		/obj/item/ammo_box/magazine/m762=2)
+// PRIVATE
 
-/datum/outfit/loadout/armored
-	name = "Armored Infantry"
-	head = 			/obj/item/clothing/head/helmet/f13/power_armor/enclave/x02helmet
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/x02
-	backpack_contents = list(
-		/obj/item/minigunpack=1)
-
-//PatriBots - planned 2 slot robots, Peacekeeper module with shotgun and Worker module for building stuff.
-
-//NON-COMBATANTS
-
-//Science Officer
-/datum/job/enclave/noncombat/science
-	title = "Science Officer"
-	flag = ENCLAVESCIENCE
+/datum/job/enclave/soldier
+	title = "Enclave Soldier"
+	flag = F13USPRIVATE
 	faction = "Enclave"
-	total_positions = 2
-	spawn_positions = 2
-	description = "Responsible for logistics, surgeries, manufacturing, experiments. May not leave the compound perimeter without express orders from the Officer."
-	supervisors = "The peacekeeper Officer."
-	display_order = JOB_DISPLAY_ORDER_AUXILIA
+	total_positions = 4
+	spawn_positions = 4
+	description = "You are a member of a dying breed, true Americans, but you will do what you can to help revitalize the nation, and protect her from all enemies, foreign and domestic."
+	supervisors = "the United States Government."
+	selection_color = "#323232"
+	exp_type = EXP_TYPE_FALLOUT
+	exp_requirements = 120
 
-/datum/outfit/job/enclave/noncombat/science
-	name = "Science Officer"
-	jobtype = /datum/job/enclave/noncombat/science
-	head = 			/obj/item/clothing/head/helmet/f13/helmet/enclave/science
-	uniform = 		/obj/item/clothing/under/f13/enclave/science
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
+
+	outfit = /datum/outfit/job/enclave/soldier
+
+/datum/outfit/job/enclave/soldier
+	name =	"Enclave Soldier"
+	jobtype =	/datum/job/enclave/soldier
+	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
+	mask =	/obj/item/clothing/mask/gas/enclave
+	neck =	/obj/item/storage/belt/holster/legholster
+	uniform =	/obj/item/clothing/under/f13/enclave/peacekeeper
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/armorvest
+	suit_store =  	/obj/item/gun/ballistic/automatic/assault_carbine
+
 	backpack_contents = list(
-		/obj/item/reagent_containers/spray/pepper=1)
+		/obj/item/grenade/smokebomb = 1,
+		/obj/item/gun/ballistic/automatic/pistol/sig = 1,
+		/obj/item/ammo_box/magazine/m9mm = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/ammo_box/magazine/m556/rifle/extended = 2,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		)
 
-/datum/outfit/job/enclave/noncombat/science/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+
+// SCIENTIST
+
+/datum/job/enclave/scientist
+	title = "Enclave Scientist"
+	flag = F13USSCIENTIST
+	faction = "Enclave"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
+	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
+	enforces = "You must maintain the secrecy of organization."
+	supervisors = "the United States Government."
+	selection_color = "#323232"
+	exp_requirements = 600
+	exp_type = EXP_TYPE_FALLOUT
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
+
+	outfit = /datum/outfit/job/enclave/scientist
+
+/datum/outfit/job/enclave/scientist
+	name =	"Enclave Scientist"
+	jobtype =	/datum/job/enclave/scientist
+	head =	/obj/item/clothing/head/helmet/f13/envirosuit
+	glasses =	/obj/item/clothing/glasses/meson
+	mask =	/obj/item/clothing/mask/breath/medical
+	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
+	uniform =	/obj/item/clothing/under/f13/enclave/science
+	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
+	belt =	/obj/item/storage/belt/medical
+	suit_store =	/obj/item/tank/internals/oxygen
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/grenade/chem_grenade/cleaner = 1,
+		/obj/item/gun/energy/laser/ultra_pistol = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
+		)
+
+/datum/outfit/job/enclave/scientist/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) //enclave scientists can do pretty much everything.
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)          //ditto
-	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)    //ditto
+	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
+	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
 
 
 //Intelligence Officer
-/datum/job/enclave/noncombat/intel
-	title = "Intel Officer"
-	flag = ENCLAVEINTEL
+/datum/job/enclave/intel
+	title = "Intelligence Officer"
+	flag = F13USMEDIC
 	faction = "Enclave"
 	total_positions = 1
 	spawn_positions = 1
 	description = "Analyze and gather data, help the Science officers keep the compound running. Secondary duty: support the troops with paramedic duties, scouting. "
-	supervisors = "The peacekeeper Officer first, Scienctists second. Troopers have no authority over you."
-	display_order = JOB_DISPLAY_ORDER_AUXILIA
+	supervisors = "The Officer first, Scientists second. The regular soldiers have no authority over you."
 
-/datum/outfit/job/enclave/noncombat/intel
-	name = "Intelligence Officer"
-	jobtype = /datum/job/enclave/noncombat/intel
-	head = 			/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
-	mask =			/obj/item/clothing/mask/gas/enclave
-	uniform = 		/obj/item/clothing/under/f13/enclave/intel
+/datum/outfit/job/enclave/intel
+	name =	"Intelligence Officer"
+	jobtype =	/datum/job/enclave/intel
+	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
+	mask =	/obj/item/clothing/mask/gas/enclave
+	uniform =	/obj/item/clothing/under/f13/enclave/intel
+	suit =	/obj/item/clothing/suit/armor/bulletproof
 	suit_store =	/obj/item/gun/ballistic/revolver/needler
 	backpack_contents = list(
-					/obj/item/ammo_box/needle=1,
-					/obj/item/storage/firstaid/regular=1)
+		/obj/item/ammo_box/needle = 1,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/reagent_containers/spray/pepper = 1,
+		)
 
-/datum/outfit/job/enclave/noncombat/intel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/enclave/intel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
-
-//OLD STUFF, WEST COAST?
-
-/datum/outfit/job/enclave/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
-
-/datum/outfit/job/enclave/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
-
-
-//Commander
-
-/datum/job/enclave/f13uscommander
-	title = "US Commander"
-	flag = F13USCOMMANDER
-	department_flag = ENCLAVE
-	//
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the US Government"
-	selection_color = "#aaaaf7"
-
-	outfit = /datum/outfit/job/enclave/f13uscommander
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/enclave/f13uscommander
-	name = "US Commander"
-	jobtype = /datum/job/enclave/f13uscommander
-
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-
-//Medic
-
-/datum/job/enclave/f13usmedic
-	title = "US Medic"
-	flag = F13USMEDIC
-	department_flag = ENCLAVE
-	//
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the commander"
-	selection_color = "#ccccff"
-
-	outfit = /datum/outfit/job/enclave/f13usmedic
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/enclave/f13usmedic
-	name = "US Medic"
-	jobtype = /datum/job/enclave/f13usmedic
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-
-
-//Private
-
-/datum/job/enclave/f13usprivate
-	title = "US Private"
-	flag = F13USPRIVATE
-	department_flag = ENCLAVE
-	//
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the commander"
-	selection_color = "#ccccff"
-
-	outfit = /datum/outfit/job/enclave/f13usprivate
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/enclave/f13usprivate
-	name = "US Private"
-	jobtype = /datum/job/enclave/f13usprivate
-
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-
-//Scientist
-
-/datum/job/enclave/f13usscientist
-	title = "US Scientist"
-	flag = F13USSCIENTIST
-	department_flag = ENCLAVE
-	//
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the commander"
-	selection_color = "#ccccff"
-
-	outfit = /datum/outfit/job/enclave/f13usscientist
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/enclave/f13usscientist
-	name = "US Scientist"
-	jobtype = /datum/job/enclave/f13usscientist
-
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-
-
-//Engineer
-
-/datum/job/enclave/f13usengineer
-	title = "US Engineer"
-	flag = F13USENGINEER
-	department_flag = ENCLAVE
-	//
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the commander"
-	selection_color = "#ccccff"
-
-	outfit = /datum/outfit/job/enclave/f13usengineer
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/enclave/f13usengineer
-	name = "US Engineer"
-	jobtype = /datum/job/enclave/f13usengineer
-
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-
-
-//Colonist
-
-/datum/job/enclave/f13uscolonist
-	title = "US Colonist"
-	flag = F13USCOLONIST
-	department_flag = ENCLAVE
-	//
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "the commander"
-	selection_color = "#ccccff"
-
-	outfit = /datum/outfit/job/enclave/f13uscolonist
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/enclave/f13uscolonist
-	name = "US Colonist"
-	jobtype = /datum/job/enclave/f13uscolonist
-
-	id = /obj/item/card/id/gold
-	uniform =  /obj/item/clothing/under/rank/captain
-*/
+	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)

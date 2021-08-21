@@ -13,7 +13,7 @@ here's a tip, go search DEFINES/access.dm
 
 /*
 Mayor
-*/
+
 
 /datum/job/oasis
 	exp_type = EXP_TYPE_OASIS
@@ -40,7 +40,6 @@ Mayor
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -75,7 +74,7 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13sheriff
-	title = "Sheriff"
+	title = "Talon Commander"
 	flag = F13SHERIFF
 	department_flag = DEP_OASIS
 	head_announce = list("Security")
@@ -97,7 +96,6 @@ Mayor
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -140,7 +138,7 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13deputy
-	title = "Deputy"
+	title = "Talon Mercenary"
 	flag = F13DEPUTY
 	department_flag = DEP_OASIS
 	faction = "Town"
@@ -236,7 +234,8 @@ Mayor
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /*--------------------------------------------------------------*/
-
+*/
+/*
 /datum/job/oasis/f13farmer
 	title = "Farmer"
 	flag = F13FARMER
@@ -358,8 +357,8 @@ Mayor
 	flag = F13DENDOC
 	department_flag = DEP_OASIS
 	faction = "Town"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "law and order"
 	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
@@ -403,6 +402,88 @@ Mayor
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 /*--------------------------------------------------------------*/
 
+/datum/job/oasis/f13barkeep
+	title = "Barkeep"
+	flag = F13BARKEEP
+	department_flag = DEP_OASIS
+	faction = "Town"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "Oasis Government & Police Department"
+	description = "As the innkeeper, you are responsible for comfort and full bellies in town. Hidden safely away behind the town walls, you are free to refine your skills without always watching your back. As a citizen of the town you must follow its laws. However the inn is your private business, and you decide who is allowed to dine or reside in your hospitality."
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/den/f13barkeep
+
+	loadout_options = list(
+	/datum/outfit/loadout/rugged,
+	/datum/outfit/loadout/frontier,
+	/datum/outfit/loadout/richmantender,
+	/datum/outfit/loadout/diner)
+
+	access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+
+/datum/outfit/job/den/f13barkeep
+	name = "Barkeep"
+	jobtype = /datum/job/oasis/f13barkeep
+
+	uniform = /obj/item/clothing/under/f13/bartenderalt
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_town
+	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
+	shoes = /obj/item/clothing/shoes/workboots/mining
+	backpack = /obj/item/storage/backpack/satchel/leather
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/ammo_box/shotgun/bean = 2
+		)
+
+/datum/outfit/loadout/rugged
+	name = "Rugged"
+	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
+	uniform = /obj/item/clothing/under/f13/cowboyb
+	suit = /obj/item/clothing/suit/f13/cowboybvest
+	gloves = /obj/item/clothing/gloves/color/brown
+	shoes = /obj/item/clothing/shoes/f13/brownie
+
+/datum/outfit/loadout/frontier
+	name = "Frontier"
+	head = /obj/item/clothing/head/bowler
+	mask = /obj/item/clothing/mask/fakemoustache
+	uniform = /obj/item/clothing/under/f13/westender
+	suit = /obj/item/clothing/suit/f13/westender
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/fancy
+
+/datum/outfit/loadout/richmantender
+	name = "Fancy"
+	head = /obj/item/clothing/head/fedora
+	glasses = /obj/item/clothing/glasses/sunglasses
+	uniform = /obj/item/clothing/under/rank/bartender
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	neck = /obj/item/clothing/neck/tie/black
+
+/datum/outfit/loadout/diner
+	name = "Diner"
+	glasses = /obj/item/clothing/glasses/orange
+	uniform = /obj/item/clothing/under/f13/brahminf
+	neck = /obj/item/clothing/neck/apron/chef
+	gloves = /obj/item/clothing/gloves/color/white
+	shoes = /obj/item/clothing/shoes/f13/military/ncr
+
+
+*/
 /datum/job/oasis/f13preacher
 	title = "Preacher"
 	flag = F13PREACHER
@@ -569,86 +650,6 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/datum/job/oasis/f13barkeep
-	title = "Barkeep"
-	flag = F13BARKEEP
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "Oasis Government & Police Department"
-	description = "As the innkeeper, you are responsible for comfort and full bellies in town. Hidden safely away behind the town walls, you are free to refine your skills without always watching your back. As a citizen of the town you must follow its laws. However the inn is your private business, and you decide who is allowed to dine or reside in your hospitality."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13barkeep
-
-	loadout_options = list(
-	/datum/outfit/loadout/rugged,
-	/datum/outfit/loadout/frontier,
-	/datum/outfit/loadout/richmantender,
-	/datum/outfit/loadout/diner)
-
-	access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13barkeep
-	name = "Barkeep"
-	jobtype = /datum/job/oasis/f13barkeep
-
-	uniform = /obj/item/clothing/under/f13/bartenderalt
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town
-	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	shoes = /obj/item/clothing/shoes/workboots/mining
-	backpack = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/ammo_box/shotgun/bean = 2
-		)
-
-/datum/outfit/loadout/rugged
-	name = "Rugged"
-	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
-	uniform = /obj/item/clothing/under/f13/cowboyb
-	suit = /obj/item/clothing/suit/f13/cowboybvest
-	gloves = /obj/item/clothing/gloves/color/brown
-	shoes = /obj/item/clothing/shoes/f13/brownie
-
-/datum/outfit/loadout/frontier
-	name = "Frontier"
-	head = /obj/item/clothing/head/bowler
-	mask = /obj/item/clothing/mask/fakemoustache
-	uniform = /obj/item/clothing/under/f13/westender
-	suit = /obj/item/clothing/suit/f13/westender
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/f13/fancy
-
-/datum/outfit/loadout/richmantender
-	name = "Fancy"
-	head = /obj/item/clothing/head/fedora
-	glasses = /obj/item/clothing/glasses/sunglasses
-	uniform = /obj/item/clothing/under/rank/bartender
-	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	neck = /obj/item/clothing/neck/tie/black
-
-/datum/outfit/loadout/diner
-	name = "Diner"
-	glasses = /obj/item/clothing/glasses/orange
-	uniform = /obj/item/clothing/under/f13/brahminf
-	neck = /obj/item/clothing/neck/apron/chef
-	gloves = /obj/item/clothing/gloves/color/white
-	shoes = /obj/item/clothing/shoes/f13/military/ncr
-
 /*--------------------------------------------------------------*/
 /datum/job/oasis/f13settler
 	title = "Citizen"
@@ -697,19 +698,20 @@ Mayor
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
-		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		)
-
 
 /datum/outfit/loadout/provisioner
 	name = "Provisioner"
 	neck = /obj/item/clothing/neck/scarf/cptpatriot
 	suit = /obj/item/clothing/suit/jacket/miljacket
+	neck = /obj/item/clothing/ears/headphones
 	uniform = /obj/item/clothing/under/f13/merca
 	gloves = /obj/item/clothing/gloves/f13/leather
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1)
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
+	/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+	/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
+	)
 
 /datum/outfit/loadout/bum
 	name = "Bum"
@@ -718,7 +720,10 @@ Mayor
 	uniform = /obj/item/clothing/under/f13/rag
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/f13/rag
-	backpack_contents = list(/obj/item/storage/bag/trash = 1, /obj/item/reagent_containers/food/drinks/bottle/whiskey = 1)
+	backpack_contents = list(/obj/item/storage/bag/trash = 1, /obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,
+	/obj/item/gun/ballistic/automatic/hobo/zipgun = 1,
+	/obj/item/twohanded/spear/scrapspear = 1,
+	)
 
 /datum/outfit/loadout/properlady
 	name = "Proper Lady"
@@ -726,7 +731,10 @@ Mayor
 	suit = /obj/item/clothing/under/sailordress
 	gloves = /obj/item/clothing/gloves/f13/lace
 	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/wine = 1)
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/champagne = 1,
+	/obj/item/gun/ballistic/revolver/police = 1,
+	/obj/item/ammo_box/c38 = 2,
+	)
 
 /datum/outfit/loadout/propergent
 	name = "Respectable Gent"
@@ -734,18 +742,49 @@ Mayor
 	suit = /obj/item/clothing/suit/f13/cowboybvest
 	uniform = /obj/item/clothing/under/f13/bartenderalt
 	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack_contents = list(/obj/item/storage/box/matches = 1, /obj/item/storage/fancy/cigarettes/cigars = 1)
+	backpack_contents = list(/obj/item/storage/box/matches = 1,
+	/obj/item/storage/fancy/cigarettes/cigars = 1,
+	/obj/item/gun/ballistic/revolver/widowmaker = 1,
+	/obj/item/ammo_box/shotgun/improvised = 2,
+	)
 
 /datum/outfit/loadout/hombre
 	name = "Hombre"
 	head = /obj/item/clothing/head/f13/cowboy
 	suit = /obj/item/clothing/suit/f13/duster
 	uniform = /obj/item/clothing/under/f13/cowboyb
+	r_hand = /obj/item/gun/ballistic/rifle/hunting
 	gloves = /obj/item/clothing/gloves/f13/leather
 	shoes = /obj/item/clothing/shoes/f13/cowboy
-	backpack_contents = list()
+	backpack_contents = list(/obj/item/ammo_box/a308 = 2,
+	)
+	
+/datum/outfit/loadout/secretary 
+	name = "Secretary"
+	uniform = /obj/item/clothing/under/suit/black
+	glasses = /obj/item/clothing/glasses/regular/hipster
+	shoes = /obj/item/clothing/shoes/laceup
+	r_hand = /obj/item/storage/briefcase
+	backpack_contents = list(/obj/item/pen = 1,
+	/obj/item/clipboard = 1,
+	/obj/item/paper_bin/bundlenatural = 1,
+	/obj/item/clothing/under/suit/black/skirt = 1,
+	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
+	/obj/item/ammo_box/magazine/m22 = 2,
+	)
+	///placeholder until a proper secretary role is added
+	
+/datum/outfit/loadout/singer
+	name = "Saloon Singer"
+	shoes = /obj/item/clothing/shoes/laceup
+	backpack_contents = list(/obj/item/clothing/under/f13/classdress = 1,
+	/obj/item/clothing/under/suit/black_really = 1,
+	/obj/item/clothing/gloves/evening = 1,
+	/obj/item/clothing/gloves/color/white = 1,
+	/obj/item/melee/unarmed/brass = 1,
+	)
 
-
+/*
 /*----------------------------------------------------------------
 --							Detective							--
 ----------------------------------------------------------------*/
@@ -770,7 +809,6 @@ Mayor
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/wasteland/f13wastelander,
 			/datum/job/wasteland/f13detective,
-			/datum/job/wasteland/f13mobboss,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/wasteland/f13wastelander,
@@ -803,7 +841,7 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/*
+
 /datum/job/oasis/f13banker
 	title = "Banker"
 	flag = F13BANKER

@@ -906,12 +906,22 @@
 			update_label()
 	return ..()
 
+/obj/item/card/id/dogtag/deputy/talon
+	name = "dogtags"
+	desc = "Given to every recruit that joins Talon."
+	icon_state = "talon"
+
 /obj/item/card/id/dogtag/sheriff
 	name = "sheriff's badge"
 	desc = "A golden Sheriff's badge."
 	assignment = "badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
+
+/obj/item/card/id/dogtag/sheriff/talon
+	name = "dogtags"
+	desc = "Custom made silver dogtags, the commander wearering it spent some money on it."
+	icon_state = "talon_command"
 
 /obj/item/card/id/dogtag/town
 	name = "citizenship permit"
@@ -1200,6 +1210,11 @@
 	assignment = "mayoral permit"
 	uses_overlays = FALSE
 
+/obj/item/card/id/silver/mayor/alderman
+	name = "Aldermans silver watch"
+	desc = "A pocket watch in silver, engraved with the names of previous Aldermen, the current owners one at the bottom in tiny text."
+	icon_state = "alderman"
+
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"
 	desc = "A plastic-sealed name badge certifying the medical expertise of its holder."
@@ -1228,26 +1243,11 @@
 
 //ENCLAVE ID
 
-/obj/item/card/id/dogtag/enclave/officer
-	name = "US officer dogtags"
-	desc = "Worn by Enclave officers."
-	icon_state = "enclaveofficer"
-	item_state = "card-id_leg"
-	assignment = "US dogtags"
-	access = list(ACCESS_ENCLAVE)
 
-/obj/item/card/id/dogtag/enclave/trooper
-	name = "US dogtags"
-	desc = "Worn by Enclave officers."
-	icon_state = "enclavetrooper"
-	item_state = "card-id_leg"
-	assignment = "US dogtags"
-	access = list(ACCESS_ENCLAVE)
-
-/obj/item/card/id/dogtag/enclave/noncombatant
+/obj/item/card/id/dogtag/enclave
 	name = "US identity card"
 	desc = "Issued to Enclave citizens with photo and fingerprint."
-	icon_state = "enclavenoncombat"
+	icon_state = "enclave"
 	item_state = "card-id_leg"
 	assignment = "US dogtags"
 	access = list(ACCESS_ENCLAVE)
