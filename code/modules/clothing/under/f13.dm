@@ -35,10 +35,9 @@
 
 /obj/item/clothing/under/f13/enclave/intel
 	name = "intel officer uniform"
-	desc = "(II)Dark pants and turtleneck with hidden kevlar layers, since intel officers often carry light armor."
+	desc = "Dark pants and turtleneck with hidden kevlar layers, since intel officers often carry light armor."
 	icon_state = "uniform_enclave_intel"
 	item_state = "uniform_enclave_intel"
-	armor = list("tier" = 2)
 
 
 //Vault
