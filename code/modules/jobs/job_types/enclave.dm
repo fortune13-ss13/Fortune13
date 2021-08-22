@@ -112,8 +112,8 @@
     title = "Enclave Corporal"
     flag = F13USCORPORAL
     faction = "Enclave"
-    total_positions = 3
-    spawn_positions = 3
+    total_positions = 0
+    spawn_positions = 0
     description = "You are a member of a dying breed, true Americans, but you will do what you can to help revitalize the nation, and protect her from all enemies, foreign and domestic."
     supervisors = "You report to the Sergeants directly."
     selection_color = "#323232"
