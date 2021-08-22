@@ -150,7 +150,6 @@
 #define F13USCOLONIST	(1<<5)
 #define F13USLT			(1<<6)
 #define F13USSGT		(1<<7)
-#define F13USCORPORAL   (1<<8)
 
 #define TRIBAL			(1<<10)
 
