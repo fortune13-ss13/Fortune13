@@ -610,12 +610,12 @@
 
 /obj/item/clothing/suit/armor/f13/enclave
 	name = "armored vest"
-	desc = "(V) Efficient prewar design issued to Enclave personell."
+	desc = "(III) Efficient prewar design issued to Enclave personnel."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "armor_enclave_peacekeeper"
 	item_state = "armor_enclave_peacekeeper"
-	armor = list("tier" = 5, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 10, "fire" = 30, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/enclave/officercoat
 	name = "armored coat"
