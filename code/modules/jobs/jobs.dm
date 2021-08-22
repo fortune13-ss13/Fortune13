@@ -229,11 +229,11 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
-	"Enclave Soldier",
+	"Enclave Private",
 	"Enclave Armored Infantry",
 	"Enclave Scientist",
+	"Enclave Corporal",
 	"Intelligence Officer",
-	"Enclave Officer",
 ))
 
 GLOBAL_LIST_INIT(security_positions, list(
