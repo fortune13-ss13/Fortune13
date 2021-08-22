@@ -203,7 +203,7 @@
 	name = "empty 20rd rifle magazine (7.62x39mm)"
 	id = "m762x39_rifle"
 	materials = list(/datum/material/iron = 6000)
-	/obj/item/ammo_box/magazine/m762x39/rifle/empty
+	build_path = /obj/item/ammo_box/magazine/m762x39/rifle/empty
 	category = list("initial", "Basic Magazines")
 
 /datum/design/ammolathe/m10mm_adv_ext
@@ -577,7 +577,7 @@
 	name = "empty 30rd rifle magazine (7.62x39mm)"
 	id = "m762x39_rifleassault"
 	materials = list(/datum/material/iron = 10000)
-	/obj/item/ammo_box/magazine/m762x39/rifle/assault/empty
+	build_path = /obj/item/ammo_box/magazine/m762x39/rifle/assault/empty
 	category = list("initial", "Advanced Magazines")
 
 /datum/design/ammolathe/m473
