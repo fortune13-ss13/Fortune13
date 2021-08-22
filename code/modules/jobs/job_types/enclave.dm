@@ -22,10 +22,10 @@
 	r_pocket =	/obj/item/flashlight/seclite
 	l_pocket =	/obj/item/melee/onehanded/knife/bayonet
 
-// ARMORED INFANTRY (Sergeant)
+// SERGEANT
 
 /datum/job/enclave/armor
-    title = "Enclave Armored Infantry"
+    title = "Enclave Sergeant"
     flag = F13USSGT
     faction = "Enclave"
     total_positions = 2
@@ -106,7 +106,7 @@
         /obj/item/storage/bag/money/small/wastelander = 1,
         )
 
-// CORPORAL (note this will need further implementation in jobs.dm & elsewhere, I dunno how to do that.)
+// CORPORAL
 
 /datum/job/enclave/corporal
     title = "Enclave Corporal"
@@ -214,8 +214,8 @@
     faction = "Enclave"
     total_positions = 1
     spawn_positions = 1
-    description = "Analyze and gather data, help the Science officers keep the compound running. Secondary duty: support the troops with paramedic duties, scouting. "
-    supervisors = "the United States Government."
+    description = "Analyze and gather data, help the Scientists keep the compound running. Support active troops with paramedic duties aswell as scouting if called upon. "
+    supervisors = "First the Sergeants, and second the Scientists"
     selection_color = "#323232"
     exp_type = EXP_TYPE_ENCLAVE
     exp_requirements = 200
