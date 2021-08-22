@@ -45,7 +45,7 @@
     jobtype = /datum/job/enclave/armor
     head =    /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
     mask =    /obj/item/clothing/mask/gas/enclave
-    neck =    /obj/item/storage/belt/holster/legholster/enclavesig
+    neck =    /obj/item/storage/belt/holster/legholster
     uniform =    /obj/item/clothing/under/f13/enclave
     suit =    /obj/item/clothing/suit/armor/f13/power_armor/x02
     accessory =    /obj/item/clothing/accessory/enclave/sgt
@@ -90,7 +90,7 @@
     jobtype =    /datum/job/enclave/soldier
     head =    /obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
     mask =    /obj/item/clothing/mask/gas/enclave
-    neck =    /obj/item/storage/belt/holster/legholster/enclavesig
+    neck =    /obj/item/storage/belt/holster/legholster
     uniform =    /obj/item/clothing/under/f13/enclave
     suit =    /obj/item/clothing/suit/armor/f13/enclave
     accessory =    /obj/item/clothing/accessory/enclave/soldier
@@ -130,7 +130,7 @@
     jobtype =    /datum/job/enclave/corporal
     head =    /obj/item/clothing/head/helmet/f13/combat
     mask =    /obj/item/clothing/mask/gas/enclave
-    neck =    /obj/item/storage/belt/holster/legholster/enclavesig
+    neck =    /obj/item/storage/belt/holster/legholster
     uniform =    /obj/item/clothing/under/f13/enclave
     suit =    /obj/item/clothing/suit/armored/medium/combat
     accessory = /obj/item/clothing/accessory/ncr/CPL
