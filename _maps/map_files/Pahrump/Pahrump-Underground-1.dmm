@@ -2175,13 +2175,6 @@
 /obj/item/gun/ballistic/shotgun/police,
 /turf/open/floor/carpet/black,
 /area/f13/vault)
-"it" = (
-/obj/structure/table/survival_pod,
-/obj/item/integrated_circuit_printer,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/enclave)
 "iu" = (
 /obj/structure/decoration/rag,
 /obj/structure/barricade/wooden/strong,
@@ -2253,14 +2246,6 @@
 "iJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/black,
-/area/f13/enclave)
-"iK" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/survival_pod,
-/obj/machinery/rnd/production/circuit_imprinter,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
 /area/f13/enclave)
 "iM" = (
 /obj/structure/lattice/catwalk,
@@ -2900,6 +2885,14 @@
 /obj/structure/simple_door/interior,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"lh" = (
+/obj/structure/table/survival_pod,
+/obj/machinery/rnd/production/circuit_imprinter,
+/turf/open/floor/plasteel/f13{
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "titanium"
+	},
+/area/f13/enclave)
 "lj" = (
 /obj/machinery/light{
 	dir = 8;
@@ -3444,13 +3437,6 @@
 	},
 /obj/machinery/light/floor,
 /turf/open/floor/plating/tunnel,
-/area/f13/enclave)
-"ns" = (
-/obj/structure/table/survival_pod,
-/obj/machinery/rnd/destructive_analyzer,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
 /area/f13/enclave)
 "nt" = (
 /obj/machinery/microwave/stove,
@@ -4087,6 +4073,7 @@
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = 30
 	},
+/obj/machinery/workbench/advanced,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -4221,7 +4208,7 @@
 /area/f13/building)
 "qG" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/autolathe/army,
+/obj/machinery/autolathe/ammo,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -5537,13 +5524,6 @@
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
-	},
-/area/f13/enclave)
-"wr" = (
-/obj/structure/table/survival_pod,
-/obj/machinery/rnd/production/protolathe,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
 	},
 /area/f13/enclave)
 "wt" = (
@@ -10343,7 +10323,8 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Qu" = (
-/obj/machinery/workbench/advanced,
+/obj/structure/table/survival_pod,
+/obj/machinery/autolathe/army,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -11710,6 +11691,7 @@
 /area/f13/enclave)
 "VE" = (
 /obj/structure/table/survival_pod,
+/obj/item/integrated_circuit_printer,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -12403,6 +12385,7 @@
 /obj/structure/fence/handrail{
 	pixel_y = 23
 	},
+/obj/machinery/autolathe/army,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -18358,8 +18341,8 @@ uL
 Jh
 EB
 uL
-wr
-ns
+Fs
+Fs
 Fu
 uL
 Vz
@@ -19007,8 +18990,8 @@ Qw
 lw
 uL
 nh
-iK
-it
+Fu
+Fs
 uL
 Vz
 Wy
@@ -20140,7 +20123,7 @@ Hy
 Za
 VI
 Vz
-VE
+lh
 VE
 Qu
 Vp
