@@ -234,7 +234,7 @@
     uniform =    /obj/item/clothing/under/f13/enclave/intel
     suit =    /obj/item/clothing/suit/armored/medium/combat
     suit_store =    /obj/item/gun/ballistic/revolver/needler
-    accessory =   /obj/item/clothing/accessory/ncr/CPL
+    accessory =   /obj/item/clothing/accessory/ncr/SPC
     gloves =    /obj/item/clothing/gloves/rifleman
     backpack_contents = list(
         /obj/item/ammo_box/needle = 2,
