@@ -182,6 +182,7 @@
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	uniform =	/obj/item/clothing/under/f13/enclave/science
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
+    accessory = /obj/item/clothing/accessory/armband/science
 	belt =	/obj/item/storage/belt/medical
 	suit_store =	/obj/item/tank/internals/oxygen
 
