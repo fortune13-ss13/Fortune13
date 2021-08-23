@@ -264,8 +264,8 @@
 	icon_state = "engieband"
 
 /obj/item/clothing/accessory/armband/science
-	name = "science guard armband"
-	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is purple."
+	name = "science armband"
+	desc = "An armband, worn by the post's military science detachment to display which department they're assigned to. This one is purple."
 	icon_state = "rndband"
 
 /obj/item/clothing/accessory/armband/hydro
