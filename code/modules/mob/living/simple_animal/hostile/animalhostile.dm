@@ -38,49 +38,14 @@ General thoughts: More traits possible to add? Like resists to energy weapons/ba
 to produce smoke or slow down victims? Stuff like that added to a couple would be fun.
 */
 
-/mob/living/simple_animal/hostile
-	icon = 'icons/fallout/mob/hostile_east.dmi'
-
-/mob/living/simple_animal/hostile/radroacheast
+/mob/living/simple_animal/hostile/radroach/east
 	name = "Radroach"
-	desc = "A large insect that finds its way everywhere."
-	icon = 'icons/fallout/mob/hostile_general.dmi'
-	icon_state = "radroach"
-	icon_living = "radroach"
-	icon_dead = "radroach_dead"
-	icon_gib = "gib"
-	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	speak_chance = 0
-	turns_per_move = 5
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/radroach_meat = 2, /obj/item/stack/sheet/sinew = 1)
-	butcher_results = list(/obj/item/stack/sheet/animalhide/chitin = 1)
-	butcher_difficulty = 1.5
-	response_help_simple = "pets"
-	response_disarm_simple = "gently pushes aside"
-	response_harm_simple = "hits"
-	speed = 1.5
-	maxHealth = 40
-	health = 40
-	harm_intent_damage = 8
-	obj_damage = 20
-	melee_damage_lower = 10
-	melee_damage_upper = 10
-	attack_verb_simple = "nips"
-	attack_sound = 'sound/creatures/radroach_attack.ogg'
-	speak_emote = list("skitters")
-	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	faction = list("gecko")
-	a_intent = INTENT_HARM
-	gold_core_spawnable = HOSTILE_SPAWN
-
-	aggrosound = list('sound/creatures/radroach_chitter.ogg',)
-	idlesound = list('sound/f13npc/roach/idle1.ogg', 'sound/f13npc/roach/idle2.ogg', 'sound/f13npc/roach/idle3.ogg',)
-	death_sound = 'sound/f13npc/roach/roach_death.ogg'
+	icon = 'icons/fallout/mobs/hostile_general.dmi'
 
 /mob/living/simple_animal/hostile/ghoulrotter
 	name = "rotting ghoul"
 	desc = "A bloated ghoul that has lost its mind and become aggressive."
-	icon = 'icons/fallout/mob/hostile_feralghoul.dmi'
+	icon = 'icons/fallout/mobs/hostile_feralghoul.dmi'
 	icon_state = "ghoulrotter"
 	icon_living = "ghoulrotter"
 	icon_dead = "ghoulrotter_dead"
@@ -114,55 +79,30 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	idlesound = list('sound/f13npc/ghoul/idle.ogg')
 	death_sound = 'sound/f13npc/ghoul/ghoul_death.ogg'
 
-//Would love to have bloatfly shoot weak projectiles, weak power. Erase this comment when fixed.
-/mob/living/simple_animal/hostile/bloatflyeast
+
+/mob/living/simple_animal/hostile/bloatfly/east
 	name = "bloatfly"
 	desc = "A common pest resembling an oversized blow-fly. Can attack at a distance."
-	icon = 'icons/fallout/mob/hostile_general.dmi'
-	icon_state = "bloatfly"
-	icon_living = "bloatfly"
-	icon_dead = "bloatfly_dead"
-	icon_gib = null
-	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	speak_chance = 0
-	turns_per_move = 5
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/bloatfly_meat = 2, /obj/item/stack/sheet/sinew = 1)
-	butcher_results = list(/obj/item/stack/sheet/animalhide/chitin = 1)
-	butcher_difficulty = 1.5
-	response_help_simple = "pets"
-	response_disarm_simple = "gently pushes aside"
-	response_harm_simple = "bites"
-	emote_taunt = list("growls")
-	taunt_chance = 30
-	speed = -1
-	maxHealth = 40
-	health = 40
-	harm_intent_damage = 8
-	obj_damage = 15
-	melee_damage_lower = 5
-	melee_damage_upper = 8
-	attack_verb_simple = "bites"
-	attack_sound = 'sound/creatures/bloatfly_attack.ogg'
-	speak_emote = list("chitters")
-	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	icon = 'icons/fallout/mobs/hostile_general.dmi'
 	faction = list("gecko")
-	gold_core_spawnable = HOSTILE_SPAWN
-	a_intent = INTENT_HARM
-	blood_volume = 0
+	minimum_distance = 2
+	retreat_distance = 2
+	obj_damage = 0
+	ranged = 1
+	ranged_cooldown_time = 30
+	projectiletype = /obj/item/projectile/neurotox2
+	projectilesound = 'sound/f13npc/centaur/spit.ogg'
 
-/mob/living/simple_animal/hostile/bloatflynew/bullet_act(obj/item/projectile/Proj)
-	if(!Proj)
-		return
-	if(prob(50))
-		return ..()
-	else
-		visible_message("<span class='danger'>[src] dodges [Proj]!</span>")
-		return 0
+/obj/item/projectile/neurotox2
+	name = "spit"
+	damage = 12
+	icon_state = "toxin"
+
 
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"
 	desc = "A large mutated rat-mole hybrid that finds its way everywhere. Common in caves and underground areas."
-	icon = 'icons/fallout/mob/hostile_general.dmi'
+	icon = 'icons/fallout/mobs/hostile_general.dmi'
 	icon_state = "mole_rat"
 	icon_living = "mole_rat"
 	icon_dead = "mole_rat_dead"
@@ -201,30 +141,41 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/mirelurk
 	name = "mirelurk"
 	desc = "A giant mutated crustacean with a rock-hard exo-skeleton and a endless hunger."
-	icon = 'icons/fallout/mob/hostile_east.dmi'
+	icon = 'icons/fallout/mobs/animals/mirelurk.dmi'
 	icon_state = "mirelurk"
 	icon_living = "mirelurk"
 	icon_dead = "mirelurk_d"
 	speed = 1
 	icon_gib = "gib"
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 2, /obj/item/stack/sheet/sinew = 1)
-	maxHealth = 200
-	health = 200
-	melee_damage_lower = 15
+	maxHealth = 190
+	health = 190
+	melee_damage_lower = 18
 	melee_damage_upper = 35
 	gold_core_spawnable = HOSTILE_SPAWN
 	blood_volume = 0
 
+/mob/living/simple_animal/hostile/mirelurk/ancient
+	name = "ancient mirelurk"
+	desc = "A giant mutated crustacean, this one is scarred and looks ancient, larger than its younger kin."
+	icon_state = "mirelurk_ancient"
+	icon_living = "mirelurk_ancient"
+	speed = 0.9
+	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 3, /obj/item/stack/sheet/sinew = 1)
+	maxHealth = 280
+	health = 280
+	melee_damage_lower = 23
+	melee_damage_upper = 40
+	gold_core_spawnable = HOSTILE_SPAWN
+
 /mob/living/simple_animal/hostile/mirelurk/baby
 	name = "mirelurk baby"
 	desc = "A neophyte mirelurk baby, mostly harmless."
-	icon = 'icons/fallout/mob/hostile_east.dmi'
 	icon_state = "mirelurkbaby"
 	icon_living = "mirelurkbaby"
 	icon_dead = "mirelurkbaby_d"
-	icon_gib = "gib"
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 1)
-	speed = 1
+	speed = 1.1
 	maxHealth = 50
 	health = 50
 	melee_damage_lower = 5
@@ -249,7 +200,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/skolf
 	name = "skull wolf"
 	desc = "Half rotted by radiation, blind, hunting by smell and sound."
-	icon = 'icons/fallout/mob/hostile_east.dmi'
+	icon = 'icons/fallout/mobs/hostile_east.dmi'
 	icon_state = "skolf"
 	icon_living = "skolf"
 	icon_dead = "skolf_dead"
@@ -264,9 +215,9 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	faction = list("hostile", "wolf")
 	environment_smash = 0
 	guaranteed_butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, /obj/item/reagent_containers/food/snacks/meat/slab/wolf = 1,/obj/item/stack/sheet/bone = 1)
-	melee_damage_lower = 20
-	melee_damage_upper = 25
-	aggro_vision_range = 15
+	melee_damage_lower = 14
+	melee_damage_upper = 23
+	aggro_vision_range = 12
 	attack_verb_simple = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 2
@@ -284,7 +235,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/radscorpioneast
 	name = "Radscorpion"
 	desc = "A mutated arthropod with an armored carapace and a powerful sting."
-	icon = 'icons/fallout/mob/hostile_general.dmi'
+	icon = 'icons/fallout/mobs/hostile_general.dmi'
 	icon_state = "radscorpion_blue"
 	icon_living = "radscorpion_blue"
 	icon_dead = "radscorpion_blue_dead"
@@ -333,7 +284,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/giantanteast
 	name = "Giant Ant"
 	desc = "A large mutated insect that finds its way everywhere."
-	icon = 'icons/fallout/mob/hostile_general.dmi'
+	icon = 'icons/fallout/mobs/hostile_general.dmi'
 	icon_state = "ant"
 	icon_living = "ant"
 	icon_dead = "ant_dead"
@@ -375,45 +326,42 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	summon_backup(10)
 
 
-/mob/living/simple_animal/hostile/yaoguai
-	name = "Yao Guai"
-	desc = "Radiation has caused the brown bear to lose its pelt, grow large with ulcers and a rage fueled by agony. The chinese name for them has stuck."
-	icon = 'icons/fallout/mob/mob_32x64.dmi'
+/mob/living/simple_animal/hostile/deathclaw/yaoguai
+	name = "yao guai"
+	desc = "Huge hulking beast, a bear thats irradiated and insane, half blind with bleeding ulcers all over."
+	icon = 'icons/fallout/mobs/animals/yaoguai.dmi'
 	icon_state = "yaoguai"
 	icon_living = "yaoguai"
 	icon_dead = "yaoguai_dead"
-	icon_gib = null
-	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	speak_chance = 0
-	turns_per_move = 5
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/bone = 2)
-	butcher_results = list(/obj/item/clothing/head/f13/stalkerpelt = 1)
-	butcher_difficulty = 3
-	response_help_simple = "pets"
-	response_disarm_simple = "gently pushes aside"
-	response_harm_simple = "bites"
-	emote_taunt = list("growls")
-	taunt_chance = 30
-	speed = 1
-	maxHealth = 350
-	health = 350
-	harm_intent_damage = 8
-	obj_damage = 15
-	melee_damage_lower = 20
-	melee_damage_upper = 45
-	attack_verb_simple = "bites"
-	attack_sound = 'sound/creatures/nightstalker_bite.ogg'
-	speak_emote = list("growls")
-	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	faction = list("gecko")
-	gold_core_spawnable = HOSTILE_SPAWN
-	a_intent = INTENT_HARM
+	icon_gib = "yaoguai_dead"
+	speak = list("ROAR!","Rawr!","Grrrowl!","Growl!")
+	emote_taunt = list("stares blindly", "sniffs the air")
+	speed = 0
+	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/bear = 4,
+							/obj/item/clothing/head/bearpelt = 1,
+							/obj/item/stack/sheet/bone = 4)
+	maxHealth = 500
+	health = 500
+	armour_penetration = 0.6
+	melee_damage_lower = 60
+	melee_damage_upper = 70
+	attack_verb_simple = "claws"
+	faction = list("deathclaw")
+	wound_bonus = -2
+	bare_wound_bonus = 5 
+	sharpness = SHARP_EDGED
+	emote_taunt_sound = list('sound/f13npc/deathclaw/taunt.ogg')
+	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
+	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
+	death_sound = 'sound/f13npc/deathclaw/death.ogg'
+
+
 
 //Want to make these cause like 100 rads or so per bite plus their damage, maybe a little less. Instead of toxins. Remove comment if able to solve it.
 /mob/living/simple_animal/hostile/aradnid
 	name = "aradnid"
 	desc = "Deeply disturbing creature, they can only consume radiated meat and drag their prey to contaminated areas to tenderize them."
-	icon = 'icons/fallout/mob/hostile_east.dmi'
+	icon = 'icons/fallout/mobs/hostile_east.dmi'
 	icon_state = "aradnid"
 	icon_living = "aradnid"
 	icon_dead = "aradnid_dead"
@@ -423,7 +371,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	speak_chance = 5
 	turns_per_move = 5
 	see_in_dark = 10
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/reagent_containers/food/snacks/spiderleg = 8)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/reagent_containers/food/snacks/spiderleg = 4)
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
@@ -442,24 +390,22 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
 	unique_name = 1
-	gold_core_spawnable = HOSTILE_SPAWN
-	see_in_dark = 4
+	see_in_dark = 6
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	footstep_type = FOOTSTEP_MOB_CLAW
 	has_field_of_vision = FALSE // 360° vision.
 
-/* Radiation injection non functional right now
 /mob/living/simple_animal/hostile/aradnid/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-			M.radiation += 100
-*/
+		H.reagents.add_reagent(/datum/reagent/radium, 10)
+
 
 /mob/living/simple_animal/hostile/centaur
 	name = "Centaur"
 	desc = "The result of infection by FEV gone horribly wrong."
-	icon = 'icons/fallout/mob/hostile_general.dmi'
+	icon = 'icons/fallout/mobs/hostile_general.dmi'
 	icon_state = "centaur"
 	icon_living = "centaur"
 	icon_dead = "centaur_d"
@@ -505,11 +451,11 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	name = "spit"
 	damage = 30
 	icon_state = "toxin"
-
+/*
 /mob/living/simple_animal/hostile/scolopendra
 	name = "Scolopendra"
 	desc = "The clicking of chitin and multitudes of legs is all you hear before the huge centipede rushes in to catch its prey."
-	icon = 'icons/fallout/mob/mob_32x64.dmi'
+	icon = 'icons/fallout/mobs/animals/scolopendra.dmi'
 	icon_state = "scolopendra"
 	icon_living = "scolopendra"
 	icon_dead = "scolopendra_dead"
@@ -546,3 +492,4 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.reagents.add_reagent(/datum/reagent/toxin, 20)
+*/
