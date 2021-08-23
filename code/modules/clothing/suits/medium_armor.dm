@@ -54,11 +54,11 @@
 
 // Combat armor
 /obj/item/clothing/suit/armored/medium/combat
-	name = "combat armor"
-	desc = "Military grade pre-war combat armor."
+    name = "combat armor"
+	desc = "(V) Military grade pre-war U.S Army combat armor."
 	icon_state = "combat_armor"
 	item_state = "combat_armor"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 30, "bio" = 10, "rad" = 20, "fire" = 25, "acid" = 10)
 
 //recipe any combat armor + duster
 /obj/item/clothing/suit/armored/medium/combat/duster
