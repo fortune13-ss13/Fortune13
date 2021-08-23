@@ -38,10 +38,6 @@ General thoughts: More traits possible to add? Like resists to energy weapons/ba
 to produce smoke or slow down victims? Stuff like that added to a couple would be fun.
 */
 
-/mob/living/simple_animal/hostile
-	icon = 'icons/fallout/mobs/hostile_east.dmi'
-
-
 /mob/living/simple_animal/hostile/radroach/east
 	name = "Radroach"
 	icon = 'icons/fallout/mobs/hostile_general.dmi'
@@ -162,8 +158,8 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/mirelurk/ancient
 	name = "ancient mirelurk"
 	desc = "A giant mutated crustacean, this one is scarred and looks ancient, larger than its younger kin."
-	icon_state = "mirelurkancient"
-	icon_living = "mirelurkancient"
+	icon_state = "mirelurk_ancient"
+	icon_living = "mirelurk_ancient"
 	speed = 0.9
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 3, /obj/item/stack/sheet/sinew = 1)
 	maxHealth = 280
@@ -330,33 +326,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	summon_backup(10)
 
 
-/mob/living/simple_animal/hostile/yaoguai
-	name = "Yao Guai"
-	desc = "Radiation has caused the brown bear to lose its pelt, grow large with ulcers and a rage fueled by agony. The chinese name for them has stuck."
-	icon = 'icons/fallout/mobs/animals/yaoguai.dmi'
-	icon_state = "yaoguai"
-	icon_living = "yaoguai"
-	icon_dead = "yaoguai_dead"
-	icon_gib = null
-	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	speak_chance = 0
-	turns_per_move = 5
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/bone = 2)
-	butcher_results = list(/obj/item/clothing/head/f13/stalkerpelt = 1)
-	butcher_difficulty = 3
-	response_help_simple = "pets"
-	response_disarm_simple = "gently pushes aside"
-	response_harm_simple = "bites"
-	emote_taunt = list("growls")
-	taunt_chance = 30
-	speed = 1
-	maxHealth = 350
-	health = 350
-	harm_intent_damage = 8
-	obj_damage = 15
-	melee_damage_lower = 20
-	melee_damage_upper = 45
-
 /mob/living/simple_animal/hostile/deathclaw/yaoguai
 	name = "yao guai"
 	desc = "Huge hulking beast, a bear thats irradiated and insane, half blind with bleeding ulcers all over."
@@ -367,13 +336,12 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	icon_gib = "yaoguai_dead"
 	speak = list("ROAR!","Rawr!","Grrrowl!","Growl!")
 	emote_taunt = list("stares blindly", "sniffs the air")
-	speed = -1
+	speed = 0
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/bear = 4,
 							/obj/item/clothing/head/bearpelt = 1,
 							/obj/item/stack/sheet/bone = 4)
-	maxHealth = 750
-	health = 750
-	obj_damage = 200
+	maxHealth = 500
+	health = 500
 	armour_penetration = 0.6
 	melee_damage_lower = 60
 	melee_damage_upper = 70

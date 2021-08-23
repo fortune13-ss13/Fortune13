@@ -77,15 +77,16 @@
 
 /obj/effect/decal/cleanable/blood/gibs/old
 	name = "old rotting gibs"
-	desc = "Space Jesus, why didn't anyone clean this up?  It smells terrible."
+	desc = "Whatever it was, it died a long time ago. Smells of old rot."
 	bloodiness = 0
 
+/*
 /obj/effect/decal/cleanable/blood/gibs/old/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
 	setDir(pick(GLOB.cardinals))
 	icon_state += "-old"
 	update_icon()
-
+*/
 /obj/effect/decal/cleanable/blood/drip
 	name = "drips of blood"
 	desc = "It's gooey."
