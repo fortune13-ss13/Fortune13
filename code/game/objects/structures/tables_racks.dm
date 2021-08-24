@@ -245,6 +245,14 @@
 	material_flags = MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	buildstack = null //No buildstack, so generate from mat datums
 
+/obj/structure/table/single
+	icon = 'icons/fallout/furniture/tables.dmi'
+	icon_state = "metal_square"
+	smooth = FALSE
+
+/obj/structure/table/single/round
+	icon_state = "metal_round"
+
 ///Table on wheels
 /obj/structure/table/rolling
 	name = "Rolling table"

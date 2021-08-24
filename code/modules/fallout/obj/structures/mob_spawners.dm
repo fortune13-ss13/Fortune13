@@ -142,7 +142,7 @@
 /obj/structure/nest/radroach
 	name = "radroach nest"
 	max_mobs = 2
-	mob_types = list(/mob/living/simple_animal/hostile/radroach = 1)
+	mob_types = list(/mob/living/simple_animal/hostile/radroach/east = 2)
 
 /obj/structure/nest/fireant
 	name = "fireant nest"
@@ -151,10 +151,10 @@
 					/mob/living/simple_animal/hostile/giantant = 1)
 
 /obj/structure/nest/wanamingo
-	name = "wanamingo nest"
+	name = "yaoguai"
 	spawn_time = 40 SECONDS
 	max_mobs = 2
-	mob_types = list(/mob/living/simple_animal/hostile/alien = 1)
+	mob_types = list(/mob/living/simple_animal/hostile/deathclaw/yaoguai = 1)
 
 /obj/structure/nest/molerat
 	name = "molerat nest"
@@ -166,5 +166,5 @@
 	name = "mirelurk nest"
 	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/mirelurk = 2,
-					/mob/living/simple_animal/hostile/mirelurk/hunter = 1,
+					/mob/living/simple_animal/hostile/mirelurk/ancient = 1,
 					/mob/living/simple_animal/hostile/mirelurk/baby = 5)
