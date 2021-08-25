@@ -147,7 +147,7 @@
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave
 	accessory =	/obj/item/clothing/accessory/enclave/soldier
-	suit_store =  	/obj/item/gun/ballistic/automatic/assault_carbine
+	suit_store =	/obj/item/gun/ballistic/automatic/assault_carbine
 
 	backpack_contents = list(
 		/obj/item/grenade/smokebomb = 1,
