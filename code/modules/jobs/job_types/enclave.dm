@@ -104,6 +104,7 @@
 	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	gloves =	/obj/item/gun/ballistic/revolver/ballisticfist
+	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
 	suit_store = /obj/item/gun/energy/laser/plasma
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 1,
@@ -159,7 +160,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		)
 
-// SERGEANT
+// CORPORAL
 
 /datum/job/enclave/corporal
 	title = "Enclave Corporal"
@@ -185,6 +186,8 @@
 	neck =	/obj/item/storage/belt/holster/legholster
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/combat
+	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
+	gloves =	/obj/item/clothing/gloves/rifleman
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
