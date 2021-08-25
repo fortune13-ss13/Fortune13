@@ -823,14 +823,18 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Paladin"
 
 /obj/effect/landmark/start/f13/ussgt
-	name = "Enclave Armored Infantry"
+	name = "Enclave Sergeant"
 	icon_state = "Knight"
+
+/obj/effect/landmark/start/f13/uscorporal
+	name = "Enclave Corporal"
+	icon_state = "Initiate Knight"
 
 /obj/effect/landmark/start/f13/uscommander
 	name = "US Commander"
 
 /obj/effect/landmark/start/f13/usmedic
-	name = "Intelligence Officer"
+	name = "Intelligence Specialist"
 	icon_state = "Head of Security"
 
 /obj/effect/landmark/start/f13/usprivate
