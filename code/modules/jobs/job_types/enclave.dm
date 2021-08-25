@@ -180,7 +180,7 @@
 /datum/outfit/job/enclave/corporal
 	name = "Enclave Corporal"
 	jobtype = /datum/job/enclave/corporal
-	head =	/obj/item/clothing/suit/armor/f13/combat
+	head =	/obj/item/clothing/head/helmet/f13/combat
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster
 	uniform =	/obj/item/clothing/under/f13/enclave
