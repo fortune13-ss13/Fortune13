@@ -104,6 +104,7 @@
 	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	gloves =	/obj/item/gun/ballistic/revolver/ballisticfist
+	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
 	suit_store = /obj/item/gun/energy/laser/plasma
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 1,
