@@ -18,7 +18,7 @@
 	backpack =	/obj/item/storage/backpack/enclave
 	satchel =	/obj/item/storage/backpack/satchel/enclave
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	shoes =	/obj/item/clothing/gloves/rifleman
+	gloves =	/obj/item/clothing/gloves/rifleman
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	r_pocket =	/obj/item/flashlight/seclite
 	l_pocket =	/obj/item/melee/onehanded/knife/bayonet
@@ -165,8 +165,8 @@
 	title = "Enclave Corporal"
 	flag = F13USCORPORAL
 	faction = "Enclave"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are a member of a dying breed, true Americans, but you will do what you can to help revitalize the nation, and protect her from all enemies, foreign and domestic."
 	supervisors = "You report to the Sergeants directly."
 	selection_color = "#323232"
@@ -180,7 +180,7 @@
 /datum/outfit/job/enclave/corporal
 	name = "Enclave Corporal"
 	jobtype = /datum/job/enclave/corporal
-	head =	/obj/item/clothing/suit/armor/f13/combat
+	head =	/obj/item/clothing/head/helmet/f13/combat
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster
 	uniform =	/obj/item/clothing/under/f13/enclave
