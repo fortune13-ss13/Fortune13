@@ -8,9 +8,11 @@
 
 /obj/item/clothing/shoes/f13/enclave/serviceboots
 	name = "enclave service boots"
-	desc = "(III)Tall shiny boots with kevlar layers."
+	desc = "(I)Tall shiny boots with kevlar layers."
 	icon_state = "boots_enclave"
 	item_state = "boots_enclave"
+	clothing_flags = NOSLIP
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
 /obj/item/clothing/shoes/f13/rag
 	name = "footcloths"
