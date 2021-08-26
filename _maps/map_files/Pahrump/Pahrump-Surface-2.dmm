@@ -966,7 +966,7 @@
 /obj/item/advanced_crafting_components/alloys,
 /obj/item/stack/crafting/armor_plate,
 /obj/item/stack/crafting/armor_plate,
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "aSa" = (
 /obj/structure/table/wood,
@@ -1669,6 +1669,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
+"bEQ" = (
+/mob/living/simple_animal/hostile/aradnid,
+/turf/open/floor/plating/rust,
+/area/f13/radiation)
 "bEU" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
@@ -3052,6 +3056,9 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
+"dhQ" = (
+/turf/open/floor/plating/rust,
+/area/f13/radiation)
 "dij" = (
 /obj/structure/chair{
 	dir = 8
@@ -9014,7 +9021,7 @@
 "jkX" = (
 /obj/structure/rack/steel,
 /obj/item/geiger_counter,
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "jlx" = (
 /obj/structure/flora/grass/wasteland{
@@ -14165,7 +14172,7 @@
 /obj/item/crafting/fuse,
 /obj/item/crafting/fuse,
 /obj/item/crafting/sensor,
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "pih" = (
 /obj/effect/decal/cleanable/blood/old{
@@ -14781,7 +14788,7 @@
 /obj/item/twohanded/fireaxe{
 	pixel_y = 28
 	},
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "pVi" = (
 /obj/structure/chair{
@@ -14940,6 +14947,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building)
+"qci" = (
+/obj/structure/spider/stickyweb,
+/turf/open/floor/plating/rust,
+/area/f13/radiation)
 "qcr" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -15403,7 +15414,7 @@
 /obj/item/stack/sheet/mineral/gold{
 	amount = 5
 	},
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "qzc" = (
 /obj/machinery/light/small{
@@ -18296,7 +18307,7 @@
 	pixel_y = 28
 	},
 /obj/structure/nest/radroach,
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "tFA" = (
 /obj/structure/closet/cardboard,
@@ -19607,7 +19618,7 @@
 /area/f13/building)
 "uZi" = (
 /mob/living/simple_animal/hostile/radroach/east,
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "uZn" = (
 /obj/structure/fence/corner{
@@ -22134,7 +22145,7 @@
 "xTE" = (
 /obj/item/stack/sheet/lead/twenty,
 /obj/structure/closet/crate,
-/turf/open/floor/mineral/uranium/dusty,
+/turf/open/floor/plating/rust,
 /area/f13/radiation)
 "xTJ" = (
 /obj/structure/grille,
@@ -26298,14 +26309,14 @@ cCZ
 (25,1,1) = {"
 cCZ
 wIa
+dhQ
+dhQ
+dhQ
+dhQ
+dhQ
 kVf
-kVf
-kVf
-kVf
-kVf
-kVf
-kVf
-kVf
+dhQ
+dhQ
 uZi
 wIa
 tIM
@@ -26460,7 +26471,7 @@ cCZ
 (26,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 wIa
 wIa
 wIa
@@ -26468,7 +26479,7 @@ wIa
 wIa
 wIa
 wIa
-kVf
+dhQ
 wIa
 tIM
 tIM
@@ -26630,7 +26641,7 @@ wIa
 wIa
 wIa
 wIa
-kVf
+dhQ
 wIa
 wIa
 wIa
@@ -26949,9 +26960,9 @@ wIa
 scj
 hSS
 kVf
-kVf
-ooo
-kVf
+dhQ
+bEQ
+dhQ
 wIa
 wIa
 hQQ
@@ -27108,7 +27119,7 @@ cCZ
 (30,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 wIa
 wIa
 xTE
@@ -27116,9 +27127,9 @@ aRC
 qyW
 wIa
 wIa
-kVf
-kVf
-kVf
+dhQ
+dhQ
+dhQ
 wIa
 afx
 uaX
@@ -27270,7 +27281,7 @@ cCZ
 (31,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 wIa
 wIa
 wIa
@@ -27432,7 +27443,7 @@ cCZ
 (32,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 wIa
 hBY
 hBY
@@ -27921,8 +27932,8 @@ wIa
 kVf
 wIa
 wIa
-ooo
-kVf
+bEQ
+dhQ
 efw
 hnE
 wIa
@@ -28084,8 +28095,8 @@ kVf
 wIa
 wIa
 eBd
-kVf
-kVf
+dhQ
+dhQ
 scj
 kVf
 kVf
@@ -28242,11 +28253,11 @@ cCZ
 (37,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 wIa
 wIa
 lCM
-kVf
+dhQ
 cqG
 hSS
 vUc
@@ -28404,12 +28415,12 @@ cCZ
 (38,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 wIa
 wIa
 tSZ
-kVf
-kVf
+dhQ
+dhQ
 hQQ
 wIa
 kVf
@@ -28566,7 +28577,7 @@ cCZ
 (39,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 wIa
 wIa
 wIa
@@ -28899,7 +28910,7 @@ wIa
 hBY
 hBY
 wIa
-kVf
+dhQ
 wIa
 hBY
 hBY
@@ -29052,16 +29063,16 @@ cCZ
 (42,1,1) = {"
 cCZ
 wIa
-kVf
-kVf
-kVf
+dhQ
+dhQ
+dhQ
 kVf
 kVf
 wIa
 hBY
 hBY
 wIa
-kVf
+dhQ
 wIa
 wIa
 wIa
@@ -29226,8 +29237,8 @@ wIa
 hQQ
 kVf
 dLT
-kVf
-kVf
+dhQ
+dhQ
 liY
 uOD
 ltr
@@ -29376,7 +29387,7 @@ cCZ
 (44,1,1) = {"
 cCZ
 wIa
-hSS
+qci
 avk
 pve
 wIa
@@ -29542,7 +29553,7 @@ hSS
 qDq
 oKd
 wIa
-kVf
+dhQ
 wIa
 hBY
 hBY
@@ -29700,16 +29711,16 @@ cCZ
 (46,1,1) = {"
 cCZ
 wIa
-hSS
-hSS
+qci
+qci
 olV
 wIa
-kVf
+dhQ
 wIa
 hBY
 wIa
 wIa
-kVf
+dhQ
 wIa
 hBY
 dXn
@@ -29863,15 +29874,15 @@ cCZ
 cCZ
 wIa
 wIa
-hSS
+qci
 wIa
 wIa
-kVf
+dhQ
 wIa
 hBY
 wIa
 kVf
-kVf
+dhQ
 wIa
 hBY
 dXn
@@ -30187,8 +30198,8 @@ cCZ
 cCZ
 wIa
 kVf
-kVf
-kVf
+dhQ
+dhQ
 kVf
 kVf
 wIa
@@ -30357,7 +30368,7 @@ wIa
 hBY
 wIa
 kVf
-kVf
+dhQ
 uZi
 wIa
 dXn
@@ -30520,7 +30531,7 @@ wIa
 wIa
 wIa
 wIa
-kVf
+dhQ
 wIa
 dXn
 sBi
@@ -30672,9 +30683,9 @@ cCZ
 (52,1,1) = {"
 cCZ
 wIa
-kVf
-kVf
-kVf
+dhQ
+dhQ
+dhQ
 kVf
 hSS
 hSS
@@ -30841,7 +30852,7 @@ vUc
 wIa
 wIa
 wIa
-kVf
+dhQ
 wIa
 wIa
 scj
@@ -31003,7 +31014,7 @@ wIa
 wIa
 wIa
 wIa
-kVf
+dhQ
 wIa
 wIa
 kVf
@@ -31158,14 +31169,14 @@ cCZ
 (55,1,1) = {"
 cCZ
 wIa
-kVf
-kVf
+dhQ
+dhQ
 hQQ
 hnE
 hSS
 jrq
 wIa
-kVf
+dhQ
 wIa
 wIa
 hQQ
@@ -31322,15 +31333,15 @@ cCZ
 wIa
 ooo
 cqG
-kVf
+dhQ
 scj
-kVf
+dhQ
 cqG
 wIa
 kVf
 wIa
 wIa
-kVf
+dhQ
 wIa
 dXn
 tDt
@@ -31483,8 +31494,8 @@ cCZ
 cCZ
 wIa
 nxe
-kVf
-kVf
+dhQ
+dhQ
 cqG
 ooo
 lCM
@@ -31492,7 +31503,7 @@ wIa
 kVf
 wIa
 wIa
-kVf
+dhQ
 wIa
 dXn
 mvl
@@ -31647,14 +31658,14 @@ wIa
 siv
 cqG
 kVf
-kVf
+dhQ
 giA
 pve
 wIa
 kVf
 wIa
 wIa
-kVf
+dhQ
 wIa
 dXn
 kUA
@@ -31968,13 +31979,13 @@ cCZ
 (60,1,1) = {"
 cCZ
 wIa
-kVf
+dhQ
 uZi
-kVf
+dhQ
 uZi
 uZi
-kVf
-kVf
+dhQ
+dhQ
 kVf
 wIa
 wIa
@@ -32295,14 +32306,14 @@ wIa
 kVf
 hQQ
 kVf
-kVf
-kVf
+dhQ
+dhQ
 kVf
 hQQ
 kVf
-kVf
-kVf
-kVf
+dhQ
+dhQ
+dhQ
 wIa
 cCZ
 tIM
