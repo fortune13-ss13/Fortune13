@@ -958,6 +958,14 @@
 	item_color = "settler"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
+/obj/item/clothing/under/f13/bosremnant
+	name = "old battledress uniform"
+	desc = "An old and slightly worn version of the Battledress Uniform issued to members of the Brotherhood of Steel."
+	icon_state = "bdu"
+	item_state = "xenos_suit"
+	item_color = "bdu"
+	can_adjust = TRUE
+
 /obj/item/clothing/under/f13/brahmin //Male version
 	name = "male brahmin-skin outfit"
 	desc = "A basic male outfit consisting of a white shirt and patched trousers with Y-shaped suspenders."
