@@ -383,6 +383,7 @@ Raider
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/scavenger,
 	/datum/outfit/loadout/settler,
+	/datum/outfit/loadout/bosremnant,
 	/datum/outfit/loadout/warrior,)
 	//datum/outfit/loadout/wastelander_desert_ranger)
 
@@ -409,6 +410,7 @@ Raider
 	..()
 	uniform = pick(
 		/obj/item/clothing/under/f13/settler, \
+		/obj/item/clothing/under/f13/bosremnant, \
 		/obj/item/clothing/under/f13/brahminm, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
@@ -452,6 +454,18 @@ Raider
 		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket = 1,
 		/obj/item/storage/bag/plants/portaseeder = 1,
+		)
+
+/datum/outfit/loadout/bosremnant
+	name = "Brotherhood Remnant"
+	uniform = /obj/item/clothing/under/f13/bosremnant
+	id = /obj/item/card/id/rusted/brokenholodog
+	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
+	shoes = /obj/item/clothing/shoes/combat/swat
+	l_hand = /obj/item/gun/energy/laser/wattz
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ec = 3,
+		/obj/item/reagent_containers/food/snacks/f13/mre = 1,
 		)
 
 /datum/outfit/loadout/medic
