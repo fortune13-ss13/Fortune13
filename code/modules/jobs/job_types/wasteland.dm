@@ -383,6 +383,7 @@ Raider
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/scavenger,
 	/datum/outfit/loadout/settler,
+	/datum/outfit/loadout/bosremnant,
 	/datum/outfit/loadout/warrior,)
 	//datum/outfit/loadout/wastelander_desert_ranger)
 
