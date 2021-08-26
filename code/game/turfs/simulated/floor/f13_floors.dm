@@ -613,7 +613,7 @@
 
 // DANGEROUS OR UNUSUAL FLOORs
 
-/obj/item/stack/sheet/mineral/uranium/dusty
+/turf/open/floor/mineral/uranium/dusty
 	name = "rusty plating covered in suspicious dust"
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "plating_rust"
