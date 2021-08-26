@@ -295,9 +295,7 @@
 /area/f13/radiation
 	name = "Radiation"
 	icon_state = "radiation"
-//	ambience_area =  list('sound/f13ambience/wasteland.ogg')
-//	ambientmusic = list('sound/f13music/fo2_wasteland.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_world.ogg','sound/misc/null.ogg')
-	ambientsounds = list('sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/rattlesnake_3.ogg')
+	ambientsounds = list('sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/wasteland.ogg','sound/f13ambience/drops.ogg', 'sound/hallucinations/wail.ogg')
 	environment = 19
 	grow_chance = 5
 
@@ -470,17 +468,6 @@
 	name = "Brotherhood of Steel Mining"//Brother Hood
 	icon_state = "brotherhoodmining"
 
-/area/f13/enclave
-	name = "Enclave"
-	icon_state = "enclave"
-//	ambience_area =  list('sound/f13ambience/enclave_vault.ogg')
-//	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
-	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
-	'sound/f13ambience/ambigen_13.ogg','sound/f13ambience/ambigen_14.ogg','sound/ambience/signal.ogg','sound/f13ambience/enclave_vault.ogg')
-	blob_allowed = 0
-	environment = 6
-	grow_chance = 5
-
 /area/f13/ahs
 	name = "Adepts of Hubology Studies"
 	icon_state = "ahs"
@@ -525,3 +512,75 @@
 	blob_allowed = 0
 	environment = 5
 	grow_chance = 5
+
+/area/f13/enclave
+	name = "Enclave"
+	icon_state = "enclave"
+//	ambience_area =  list('sound/f13ambience/enclave_vault.ogg')
+//	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
+	'sound/f13ambience/ambigen_13.ogg','sound/f13ambience/ambigen_14.ogg','sound/ambience/signal.ogg','sound/f13ambience/enclave_vault.ogg')
+	blob_allowed = 0
+	environment = 6
+	grow_chance = 5
+
+/area/f13/enclave/hq
+	name = "Enclave Command Centre"
+	icon_state = "enclavehq"
+	ambientsounds = list('sound/ambience/ambitech.ogg','sound/ambience/ambitech2.ogg','sound/f13ambience/ambigen_12.ogg', 'sound/f13ambience/enclave_vault.ogg', \
+	'sound/ambience/ambitech3.ogg','sound/f13ambience/ambigen_14.ogg','sound/ambience/signal.ogg','sound/f13/broadcast.ogg')
+
+/area/f13/forest/animals
+	name = "Animals"
+	icon_state = "animals"
+	ambientsounds = list('sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg','sound/f13ambience/bird_3.ogg','sound/f13ambience/bird_4.ogg','sound/f13ambience/bird_5.ogg', \
+	'sound/f13ambience/bird_6.ogg','sound/f13ambience/bird_7.ogg','sound/f13ambience/bird_8.ogg', \
+	'sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/rattlesnake_3.ogg')
+	outdoors = 0
+	environment = 15
+	grow_chance = 10
+
+/area/f13/city/town
+	name = "Rivertown"
+	icon_state = "town"
+	outdoors = 0
+
+/area/f13/clinic/river
+	name = "Rivertown clinic"
+	icon_state = "townclinic"
+
+/area/f13/bar/river
+	name = "Rivertown Bar"
+	icon_state = "townbar"
+
+/area/f13/building/outlaw
+	name = "Outlaws camp"
+	icon_state = "outlawsindoor"
+	ambientsounds = list('sound/f13ambience/ambigen_1.ogg','sound/f13ambience/ambigen_2.ogg','sound/f13ambience/dog_distant_1.ogg','sound/f13ambience/dog_distant_2.ogg','sound/f13ambience/dog_distant_3.ogg', \
+	'sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
+
+/area/f13/raiders/outlaws
+	name = "Outlaws"
+	icon_state = "outlaws"
+
+/area/f13/wasteland/river
+	name = "River"
+	icon_state = "river"
+//	ambience_area =  list('sound/f13ambience/wasteland.ogg')
+//	ambientmusic = list('sound/f13music/fo2_wasteland.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_world.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13effects/thunder_distant_1.ogg','sound/f13effects/thunder_distant_2.ogg','sound/ambience/seag3.ogg', \
+	'sound/ambience/seag2.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg', \
+	'sound/f13ambience/bird_3.ogg','sound/weather/ashstorm/outside/weak_start.ogg')
+
+/area/f13/office/talon
+	name = "Talon"
+	icon_state = "talon"
+
+
+/* Monster wails
+'sound/hallucinations/far_noise.ogg',
+'sound/hallucinations/veryfar_noise.ogg',
+
+
+'sound/lavaland/cursed_slot_machine_jackpot.ogg'
+*/

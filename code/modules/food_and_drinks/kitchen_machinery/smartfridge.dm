@@ -589,6 +589,36 @@
 	if(istype(O, /obj/item/reagent_containers/glass) || istype(O, /obj/item/reagent_containers/food/drinks) || istype(O, /obj/item/reagent_containers/food/condiment))
 		return TRUE
 
+// Chemistry rack
+/obj/machinery/smartfridge/bottlerack/chemical
+	name = "chemistry rack"
+	desc = "A handy way to keep all your bottles of weird chemicals sorted."
+	chance_initial_contents = list(
+		/obj/item/reagent_containers/glass/bottle/capsaicin = 1,
+		/obj/item/reagent_containers/glass/bottle/venom = 1,
+		/obj/item/reagent_containers/glass/bottle/charcoal = 3,
+		/obj/item/reagent_containers/glass/bottle/chloralhydrate = 1,
+		/obj/item/reagent_containers/glass/bottle/ethanol = 2,
+		/obj/item/reagent_containers/glass/bottle/bromine = 2,
+		/obj/item/reagent_containers/glass/bottle/iodine = 2,
+		/obj/item/reagent_containers/glass/bottle/sacid = 2,
+		/obj/item/reagent_containers/glass/bottle/mercury = 2,
+		/obj/item/reagent_containers/glass/bottle/radium = 2,
+		/obj/item/reagent_containers/glass/bottle/potassium = 2,
+		/obj/item/reagent_containers/glass/bottle/chlorine = 2,
+		/obj/item/reagent_containers/glass/bottle/sulfur = 2,
+		/obj/item/reagent_containers/glass/bottle/phosphorus = 2,
+		/obj/item/reagent_containers/glass/bottle/silicon = 2,
+		/obj/item/reagent_containers/glass/bottle/aluminium = 2,
+		/obj/item/reagent_containers/glass/bottle/fluorine = 2,
+		/obj/item/reagent_containers/glass/bottle/sodium = 3,
+		/obj/item/reagent_containers/glass/bottle/hydrogen = 4,
+		/obj/item/reagent_containers/glass/bottle/lithium = 2,
+		/obj/item/reagent_containers/glass/bottle/carbon = 4,
+		/obj/item/reagent_containers/glass/bottle/nitrogen = 4,
+		/obj/item/reagent_containers/glass/bottle/oxygen = 4,
+		/obj/item/reagent_containers/food/condiment/sugar = 2)
+
 // -------------------------
 //  Gardentool Rack
 // -------------------------
@@ -652,7 +682,7 @@
 	max_n_of_items = 100
 
 /obj/machinery/smartfridge/bottlerack/alchemy_rack/accept_check(obj/item/O)
-	if(istype(O, /obj/item/reagent_containers/pill/patch/healingpowder) || istype(O, /obj/item/reagent_containers/glass/bottle/primitive) || istype(O, /obj/item/reagent_containers/pill/patch/healpoultice))
+	if(istype(O, /obj/item/reagent_containers/pill/patch/healingpowder) || istype(O, /obj/item/reagent_containers/glass/bottle/primitive) || istype(O, /obj/item/reagent_containers/pill/patch/bitterdrink) || istype(O, /obj/item/reagent_containers/pill/patch/healpoultice))
 		return TRUE
 	return FALSE
 // -------------------------
@@ -673,13 +703,13 @@
 /obj/machinery/smartfridge/bottlerack/lootshelf
 	chance_initial_contents = list(
 		/obj/item/reagent_containers/food/drinks/bottle/lemonjuice = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/limejuice = 3,
-		/obj/item/reagent_containers/food/drinks/bottle/tomatojuice = 4,
+		/obj/item/reagent_containers/food/drinks/bottle/limejuice = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/tomatojuice = 3,
 		/obj/item/reagent_containers/food/drinks/bottle/orangejuice = 2,
 		/obj/item/reagent_containers/food/drinks/soda_cans/tonic = 3,
 		/obj/item/reagent_containers/food/drinks/soda_cans/sodawater = 2,
 		/obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 4,
+		/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 2,
 		/obj/item/reagent_containers/food/drinks/bottle/bawls = 3,
 		/obj/item/reagent_containers/food/drinks/bottle/vim = 3,
 		/obj/item/reagent_containers/food/drinks/bottle/sunset = 3)
@@ -691,14 +721,14 @@
 
 /obj/machinery/smartfridge/bottlerack/lootshelf/cans
 	chance_initial_contents = list(
-		/obj/item/reagent_containers/food/drinks/bottle/instacoffee = 5,
-		/obj/item/reagent_containers/food/drinks/bottle/instatea = 4,
-		/obj/item/reagent_containers/food/drinks/bottle/instacocoa = 4,
-		/obj/item/reagent_containers/food/drinks/soda_cans/cream = 3,
-		/obj/item/reagent_containers/food/snacks/f13/canned/porknbeans = 3,
+		/obj/item/reagent_containers/food/drinks/bottle/instacoffee = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/instatea = 2,
+		/obj/item/reagent_containers/food/drinks/bottle/instacocoa = 2,
+		/obj/item/reagent_containers/food/drinks/soda_cans/cream = 2,
+		/obj/item/reagent_containers/food/snacks/f13/canned/porknbeans =2,
 		/obj/item/reagent_containers/food/snacks/f13/canned/borscht = 1,
-		/obj/item/reagent_containers/food/snacks/f13/canned/dog = 3,
-		/obj/item/reagent_containers/food/snacks/beans = 3,)
+		/obj/item/reagent_containers/food/snacks/f13/canned/dog = 1,
+		/obj/item/reagent_containers/food/snacks/beans = 2,)
 
 ///booze
 

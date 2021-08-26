@@ -3,7 +3,7 @@
 
 /obj/machinery/reagentgrinder
 	name = "\improper All-In-One Grinder"
-	desc = "From BlenderTech. Will It Blend? Let's test it out!"
+	desc = "The Kitchenmaster 50. Will It Blend? Let's test it out!"
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "juicer1"
 	layer = BELOW_OBJ_LAYER
@@ -319,3 +319,15 @@
 			beaker.reagents.remove_reagent(/datum/reagent/consumable/sugar, amount)
 			beaker.reagents.remove_reagent(/datum/reagent/consumable/ethanol/moonshine, amount)
 			beaker.reagents.add_reagent(/datum/reagent/moonsugar, amount*2)
+
+
+/obj/machinery/reagentgrinder/industrial
+	name = "industrial grinder"
+	desc = "Heavy duty grinder, can grind most things."
+	icon = 'icons/fallout/machines/industrialgrinder.dmi'
+
+/obj/machinery/reagentgrinder/industrial/Initialize()
+	. = ..()
+	holdingitems = list()
+	beaker = new /obj/item/reagent_containers/glass/bucket/plastic(src)
+	beaker.desc += " May contain blended dust. Don't breathe this in!"

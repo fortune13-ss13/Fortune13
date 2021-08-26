@@ -609,3 +609,16 @@
 /turf/open/floor/circuit/f13_red/off
 	icon_state = "rcircuitoff1"
 	on = FALSE
+
+
+// DANGEROUS OR UNUSUAL FLOORs
+
+/turf/open/floor/plasteel/f13/radioactive
+	name = "rusty plating covered in dust"
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "plating_rust"
+/*
+/turf/open/floor/plasteel/f13/radioactive/Initialize()
+	. = ..()
+	AddComponent(/datum/component/radioactive, var/amount / 60, var/source, 0)
+*/

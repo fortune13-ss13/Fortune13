@@ -704,10 +704,10 @@
 /mob/living/simple_animal/hostile/mirelurk/hunter
 	name = "mirelurk hunter"
 	desc = "A giant mutated crustacean, with a hardened exoskeleton. Its appearance makes you shudder in fear. This one has giant, razor sharp claw pincers."
-	icon_state = "mirelurkhunter"
-	icon_living = "mirelurkhunter"
+	icon_state = "mirelurk"
+	icon_living = "mirelurk"
+	icon_dead = "mirelurk_d"
 	speed = 1
-	icon_dead = "mirelurkhunter_d"
 	icon_gib = "gib"
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 4, /obj/item/stack/sheet/sinew = 2)
 	maxHealth = 250

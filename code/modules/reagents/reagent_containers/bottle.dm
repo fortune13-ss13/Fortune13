@@ -318,24 +318,28 @@
 //Oldstation.dmm chemical storage bottles
 
 /obj/item/reagent_containers/glass/bottle/hydrogen
-	name = "hydrogen bottle"
-	list_reagents = list(/datum/reagent/hydrogen = 30)
+	name = "hydrogen gas flask"
+	icon_state = "gasbottle"
+	list_reagents = list(/datum/reagent/hydrogen = 50)
 
 /obj/item/reagent_containers/glass/bottle/lithium
 	name = "lithium bottle"
 	list_reagents = list(/datum/reagent/lithium = 30)
 
 /obj/item/reagent_containers/glass/bottle/carbon
-	name = "carbon bottle"
-	list_reagents = list(/datum/reagent/carbon = 30)
+	name = "carbon powder jar"
+	icon_state = "vapour"
+	list_reagents = list(/datum/reagent/carbon = 50)
 
 /obj/item/reagent_containers/glass/bottle/nitrogen
-	name = "nitrogen bottle"
-	list_reagents = list(/datum/reagent/nitrogen = 30)
+	name = "nitrogen gas flask"
+	icon_state = "gasbottle"
+	list_reagents = list(/datum/reagent/nitrogen = 50)
 
 /obj/item/reagent_containers/glass/bottle/oxygen
-	name = "oxygen bottle"
-	list_reagents = list(/datum/reagent/oxygen = 30)
+	name = "oxygen gas flask"
+	icon_state = "gasbottle"
+	list_reagents = list(/datum/reagent/oxygen = 50)
 
 /obj/item/reagent_containers/glass/bottle/fluorine
 	name = "fluorine bottle"
@@ -346,7 +350,8 @@
 	list_reagents = list(/datum/reagent/sodium = 30)
 
 /obj/item/reagent_containers/glass/bottle/aluminium
-	name = "aluminium bottle"
+	name = "aluminium filings jar"
+	icon_state = "vapour"
 	list_reagents = list(/datum/reagent/aluminium = 30)
 
 /obj/item/reagent_containers/glass/bottle/silicon
@@ -354,8 +359,9 @@
 	list_reagents = list(/datum/reagent/silicon = 30)
 
 /obj/item/reagent_containers/glass/bottle/phosphorus
-	name = "phosphorus bottle"
-	list_reagents = list(/datum/reagent/phosphorus = 30)
+	name = "phosphorus dust jar"
+	icon_state = "vapour"
+	list_reagents = list(/datum/reagent/phosphorus = 50)
 
 /obj/item/reagent_containers/glass/bottle/sulfur
 	name = "sulfur bottle"
@@ -370,12 +376,14 @@
 	list_reagents = list(/datum/reagent/potassium = 30)
 
 /obj/item/reagent_containers/glass/bottle/iron
-	name = "iron bottle"
-	list_reagents = list(/datum/reagent/iron = 30)
+	name = "iron filings bottle"
+	icon_state = "vapour"
+	list_reagents = list(/datum/reagent/iron = 50)
 
 /obj/item/reagent_containers/glass/bottle/copper
-	name = "copper bottle"
-	list_reagents = list(/datum/reagent/copper = 30)
+	name = "copper filings jar"
+	icon_state = "vapour"
+	list_reagents = list(/datum/reagent/copper = 50)
 
 /obj/item/reagent_containers/glass/bottle/mercury
 	name = "mercury bottle"
@@ -390,8 +398,10 @@
 	list_reagents = list(/datum/reagent/water = 30)
 
 /obj/item/reagent_containers/glass/bottle/ethanol
-	name = "ethanol bottle"
-	list_reagents = list(/datum/reagent/consumable/ethanol = 30)
+	name = "medical ethanol bottle"
+	icon = 'icons/obj/drinks.dmi'
+	icon_state = "whitebottle"
+	list_reagents = list(/datum/reagent/consumable/ethanol = 60)
 
 /obj/item/reagent_containers/glass/bottle/sugar
 	name = "sugar bottle"
