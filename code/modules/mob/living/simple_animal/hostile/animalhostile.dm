@@ -391,6 +391,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
 	unique_name = 1
+	see_in_dark = 6
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	footstep_type = FOOTSTEP_MOB_CLAW
 	has_field_of_vision = FALSE // 360° vision.

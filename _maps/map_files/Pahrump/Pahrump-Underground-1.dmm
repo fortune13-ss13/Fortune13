@@ -4186,6 +4186,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/vault)
+"qD" = (
+/obj/effect/landmark/start/f13/ussgt,
+/turf/open/floor/plasteel/f13{
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "titanium"
+	},
+/area/f13/enclave)
 "qE" = (
 /obj/structure/chair/f13foldupchair{
 	desc = "A folding chair, missing half the seat, probably for dropping something through it.";
@@ -4603,6 +4610,11 @@
 /obj/item/kitchen/knife/butcher,
 /turf/open/floor/plasteel/freezer,
 /area/f13/building)
+"sn" = (
+/obj/structure/rack,
+/obj/item/clothing/under/f13/vault/vcity/skirt,
+/turf/open/floor/wood,
+/area/f13/vault)
 "sp" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -4848,6 +4860,8 @@
 /area/f13/enclave/hq)
 "tr" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
+/obj/item/clothing/under/f13/vault,
+/obj/item/clothing/under/f13/vault/vcity/skirt,
 /turf/open/floor/wood,
 /area/f13/vault)
 "ts" = (
@@ -5563,6 +5577,11 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
+"wA" = (
+/obj/structure/chair/stool/retro,
+/obj/effect/landmark/start/f13/vaultengineer,
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/f13/vault)
 "wB" = (
 /obj/structure/simple_door/interior,
 /obj/effect/decal/cleanable/dirt{
@@ -5786,6 +5805,12 @@
 /obj/structure/table/wood,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"xF" = (
+/obj/structure/rack,
+/obj/item/clothing/under/f13/vault,
+/obj/item/clothing/under/f13/vault/vcity/skirt,
+/turf/open/floor/wood,
+/area/f13/vault)
 "xG" = (
 /obj/structure/stone_tile/cracked,
 /turf/open/indestructible/ground/inside/mountain,
@@ -5892,6 +5917,13 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"yd" = (
+/obj/effect/landmark/start/f13/uscorporal,
+/turf/open/floor/plasteel/f13{
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "titanium"
+	},
+/area/f13/enclave)
 "ye" = (
 /obj/structure/wreck/trash/machinepiletwo,
 /turf/open/indestructible/ground/inside/mountain,
@@ -7586,6 +7618,10 @@
 	dir = 8
 	},
 /area/f13/caves)
+"Fn" = (
+/obj/effect/landmark/start/f13/vaultengineer,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/vault)
 "Fo" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -8915,6 +8951,13 @@
 /obj/structure/stone_tile/slab,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"KM" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/effect/landmark/start/f13/vaultengineer,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/vault)
 "KN" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
@@ -9056,6 +9099,12 @@
 	icon_state = "grass2"
 	},
 /area/f13/vault)
+"Ln" = (
+/obj/effect/landmark/start/f13/usmedic,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
+/area/f13/enclave)
 "Lo" = (
 /obj/effect/decal/cleanable/oil,
 /obj/machinery/power/port_gen/pacman/super,
@@ -9958,7 +10007,7 @@
 /area/f13/vault)
 "OZ" = (
 /obj/machinery/vending/snack/green{
-	name = "\Genuine American Snacks Machine";
+	name = "Genuine American Snacks Machine";
 	pixel_x = 5;
 	product_ads = "The healthiest!;Award-winning chocolate bars!;Mmm! So good!;Oh my god it's so juicy!;Have a snack.;Snacks are good for you!;Have some more snacks!;Best quality snacks straight from America.;We love chocolate!;Try our new jerky!";
 	products = list(/obj/item/reagent_containers/food/snacks/candy = 1, /obj/item/reagent_containers/food/snacks/chocolatebar = 0, /obj/item/reagent_containers/food/snacks/chips = 0, /obj/item/reagent_containers/food/snacks/sosjerky = 1, /obj/item/reagent_containers/food/snacks/no_raisin = 0, /obj/item/reagent_containers/food/snacks/cheesiehonkers = 0, /obj/item/reagent_containers/food/snacks/cornchips = 2, /obj/item/reagent_containers/food/snacks/energybar = 0)
@@ -11327,7 +11376,7 @@
 	light_color = "#c1caff"
 	},
 /obj/machinery/vending/cigarette{
-	name = "\Patriotic Smokes";
+	name = "Patriotic Smokes";
 	pixel_x = 4;
 	premium = list(/obj/item/storage/fancy/cigarettes/cigpack_robustgold = 3, /obj/item/storage/fancy/cigarettes/cigars = 1);
 	product_ads = "Probably not bad for you!;Don't believe the scientists!;It's good for you!;Don't quit, buy more!;Smoke!;Nicotine heaven.;Best cigarettes since Washington.;Award-winning cigs.";
@@ -11408,6 +11457,7 @@
 /obj/structure/chair{
 	dir = 1
 	},
+/obj/effect/landmark/start/f13/vaultengineer,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "UH" = (
@@ -18666,7 +18716,7 @@ Fu
 uL
 Yr
 Wy
-Wy
+yd
 Kk
 Kk
 Wy
@@ -18828,7 +18878,7 @@ Fs
 uL
 Aj
 Wy
-Wy
+qD
 Kk
 Kk
 Wy
@@ -31023,7 +31073,7 @@ ZY
 ZY
 Td
 Ta
-RU
+KM
 RU
 Ta
 KX
@@ -32151,7 +32201,7 @@ ZY
 ZY
 ph
 vc
-VZ
+wA
 VZ
 VZ
 GL
@@ -32159,7 +32209,7 @@ Ta
 Ta
 Ta
 Ta
-Ta
+Fn
 Ta
 ah
 WD
@@ -33603,7 +33653,7 @@ mJ
 ZY
 aD
 Ug
-bB
+xF
 ZY
 Xn
 ZY
@@ -35545,7 +35595,7 @@ mJ
 (141,1,1) = {"
 mJ
 ZY
-bB
+sn
 Ug
 aD
 ZY

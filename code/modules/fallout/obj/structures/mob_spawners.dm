@@ -151,10 +151,10 @@
 					/mob/living/simple_animal/hostile/giantant = 1)
 
 /obj/structure/nest/wanamingo
-	name = "wanamingo nest"
+	name = "yaoguai"
 	spawn_time = 40 SECONDS
 	max_mobs = 2
-	mob_types = list(/mob/living/simple_animal/hostile/alien = 1)
+	mob_types = list(/mob/living/simple_animal/hostile/deathclaw/yaoguai = 1)
 
 /obj/structure/nest/molerat
 	name = "molerat nest"
