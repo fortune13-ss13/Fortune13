@@ -409,6 +409,7 @@ Raider
 	..()
 	uniform = pick(
 		/obj/item/clothing/under/f13/settler, \
+		/obj/item/clothing/under/f13/bosremnant, \
 		/obj/item/clothing/under/f13/brahminm, \
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
@@ -463,7 +464,7 @@ Raider
 	l_hand = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 3,
-		/obj/item/storage/bag/plants/portaseeder = 1,
+		/obj/item/reagent_containers/food/snacks/f13/mre = 1,
 		)
 
 /datum/outfit/loadout/medic
