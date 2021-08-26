@@ -268,8 +268,8 @@
 	faction = "Enclave"
 	total_positions = 1
 	spawn_positions = 1
-	description = "Analyze and gather data, help the Science officers keep the compound running. Secondary duty: support the troops with paramedic duties, scouting. "
-	supervisors = "The Officer first, Scientists second. The regular soldiers have no authority over you."
+	description = "You are a US Secret Service Operative broadly tasked with ensuring the continued existence of your current post, you're free to assist the scientists, go completely undercover within another organisation, or simply act as a Paramedic for local forces."
+	supervisors = "The United States Secret Service"
 
 	outfit = /datum/outfit/job/enclave/intel
 
@@ -278,14 +278,14 @@
 	name =	"Intelligence Specialist"
 	jobtype =	/datum/job/enclave/intel
 	head =	/obj/item/clothing/head/helmet/riot/vaultsec
-	mask =	/obj/item/clothing/mask/gas/enclave
+	mask =	/obj/item/clothing/mask/infiltrator
 	glasses = /obj/item/clothing/glasses/night/polarizing
 	uniform =	/obj/item/clothing/under/f13/enclave/intel
 	suit =	/obj/item/clothing/suit/armor/f13/combat/swat
-	suit_store =	/obj/item/gun/ballistic/revolver/needler
+	suit_store =	/obj/item/gun/ballistic/automatic/pistol/n99/enclave
 	accessory =	/obj/item/clothing/accessory/ncr/SPC
 	backpack_contents = list(
-		/obj/item/ammo_box/needle = 3,
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/intel = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		)
