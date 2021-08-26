@@ -322,6 +322,7 @@ datum/job/wasteland/f13dendoctor
 	/datum/outfit/loadout/raider_blast,
 	/datum/outfit/loadout/raider_sadist,
 	/datum/outfit/loadout/raider_painspike,
+	/datum/outfit/loadout/raider_extribal,
 	)
 
 
@@ -417,6 +418,21 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/ammo_box/a308 = 3,
 		/obj/item/twohanded/baseball/golfclub = 1,
 		/obj/item/reagent_containers/hypospray/medipen/psycho = 1,
+		)
+
+/datum/outfit/loadout/raider_extribal
+	name = "Tribal Outcast"
+	uniform = /obj/item/clothing/under/f13/exile/tribal
+	suit = /obj/item/clothing/suit/hooded/tribaloutcast
+	suit_store = /obj/item/melee/onehanded/club/warclub
+	shoes = /obj/item/clothing/shoes/sandal
+	belt = /obj/item/storage/backpack/spearquiver
+	box = /obj/item/storage/survivalkit_tribal
+	id = /obj/item/card/id/outcasttattoo
+	back = /obj/item/storage/backpack/satchel/explorer
+	backpack_contents = list(
+		/obj/item/clothing/mask/cigarette/pipe = 1,
+		/obj/item/melee/onehanded/knife/bone = 1,
 		)
 
 /*
