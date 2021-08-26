@@ -457,7 +457,7 @@ Raider
 
 /datum/outfit/loadout/bosremnant
 	name = "Brotherhood Remnant"
-	uniform = /obj/item/clothing/under/f13/bdu
+	uniform = /obj/item/clothing/under/f13/bosremnant
 	id = /obj/item/card/id/rusted/brokenholodog
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
 	shoes = /obj/item/clothing/shoes/combat/swat
@@ -465,6 +465,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 3,
 		/obj/item/reagent_containers/food/snacks/f13/mre = 1,
+		/obj/item/clothing/under/f13/bdu = 1,
 		)
 
 /datum/outfit/loadout/medic
