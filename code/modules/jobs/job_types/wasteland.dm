@@ -466,7 +466,6 @@ Raider
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 3,
 		/obj/item/reagent_containers/food/snacks/f13/mre = 1,
-		/obj/item/clothing/under/f13/bdu = 1,
 		)
 
 /datum/outfit/loadout/medic
