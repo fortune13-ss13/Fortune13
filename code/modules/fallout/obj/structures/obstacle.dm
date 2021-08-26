@@ -160,6 +160,23 @@
 	max_integrity = 100
 
 
+/obj/structure/barricade/old_locked_door
+	name = "old locked door"
+	desc = "Key long lost, lock rusted shut. Apply violence to gain entry."
+	icon = 'icons/fallout/structures/barricades.dmi'
+	icon_state = "locked"
+	opacity = TRUE
+
+/obj/structure/barricade/jammed_door
+	name = "old locked door"
+	desc = "Heavy doors jammed halfway open. Squeeze past or apply plenty of violence."
+	icon = 'icons/fallout/structures/barricades.dmi'
+	icon_state = "jammed"
+	obj_integrity = 400
+	max_integrity = 400
+	climbable = TRUE
+
+
 /////BARRICADE TYPES///////
 
 /obj/structure/barricade/wooden
@@ -219,6 +236,8 @@
 	else
 		return ..()
 
+
+
 /obj/structure/barricade/wooden/strong
 	name = "strong wooden barricade"
 	desc = "This space is blocked off by a strong wooden barricade."
@@ -249,6 +268,9 @@
 	climbable = TRUE
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/obj/structure/barricade/sandbags, /turf/closed/wall, /turf/closed/wall/r_wall, /obj/structure/falsewall, /obj/structure/falsewall/reinforced, /turf/closed/wall/rust, /turf/closed/wall/r_wall/rust, /obj/structure/barricade/security)
+
+
+
 
 #undef SINGLE
 #undef VERTICAL

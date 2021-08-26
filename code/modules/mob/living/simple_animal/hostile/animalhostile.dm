@@ -160,7 +160,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	desc = "A giant mutated crustacean, this one is scarred and looks ancient, larger than its younger kin."
 	icon_state = "mirelurk_ancient"
 	icon_living = "mirelurk_ancient"
-	speed = 0.9
+	speed = 1.2
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 3, /obj/item/stack/sheet/sinew = 1)
 	maxHealth = 280
 	health = 280
@@ -175,7 +175,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	icon_living = "mirelurkbaby"
 	icon_dead = "mirelurkbaby_d"
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 1)
-	speed = 1.1
+	speed = 0.9
 	maxHealth = 50
 	health = 50
 	melee_damage_lower = 5
@@ -221,7 +221,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	attack_verb_simple = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 2
-	speed = 2.5
+	speed = -1.5
 	emote_taunt_sound = list('sound/f13npc/dog/dog_charge1.ogg', 'sound/f13npc/dog/dog_charge2.ogg', 'sound/f13npc/dog/dog_charge3.ogg', 'sound/f13npc/dog/dog_charge4.ogg', 'sound/f13npc/dog/dog_charge5.ogg', 'sound/f13npc/dog/dog_charge6.ogg', 'sound/f13npc/dog/dog_charge7.ogg',)
 	emote_taunt = list("growls", "barks", "snarls")
 	taunt_chance = 30
@@ -378,6 +378,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
+	speed = -0.5
 	maxHealth = 150
 	health = 150
 	obj_damage = 60
@@ -390,7 +391,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
 	unique_name = 1
-	see_in_dark = 6
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	footstep_type = FOOTSTEP_MOB_CLAW
 	has_field_of_vision = FALSE // 360° vision.

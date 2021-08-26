@@ -140,9 +140,9 @@
 					/mob/living/simple_animal/hostile/radscorpion/black = 1)
 
 /obj/structure/nest/radroach
-	name = "radroach nest"
+	name = "radroach infestation"
 	max_mobs = 2
-	mob_types = list(/mob/living/simple_animal/hostile/radroach = 1)
+	mob_types = list(/mob/living/simple_animal/hostile/radroach/east = 10)
 
 /obj/structure/nest/fireant
 	name = "fireant nest"
@@ -166,5 +166,16 @@
 	name = "mirelurk nest"
 	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/mirelurk = 2,
-					/mob/living/simple_animal/hostile/mirelurk/hunter = 1,
+					/mob/living/simple_animal/hostile/mirelurk/ancient = 1,
 					/mob/living/simple_animal/hostile/mirelurk/baby = 5)
+
+/obj/structure/nest/yaoguai
+	name = "yaoguai lair"
+	spawn_time = 40 SECONDS
+	max_mobs = 2
+	mob_types = list(/mob/living/simple_animal/hostile/deathclaw/yaoguai = 2)
+
+/obj/structure/nest/aradnid
+	name = "aradnid infestation"
+	max_mobs = 2
+	mob_types = list(/mob/living/simple_animal/hostile/aradnid = 4)

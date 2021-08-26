@@ -283,9 +283,9 @@
 	list_reagents = list(/datum/reagent/medicine/synthflesh = 50)
 
 /obj/item/reagent_containers/glass/bucket
-	name = "bucket"
+	name = "metal bucket"
 	desc = "It's a bucket."
-	icon = 'icons/obj/janitor.dmi'
+	icon = 'icons/fallout/objects/containers.dmi'
 	icon_state = "bucket"
 	item_state = "bucket"
 	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
@@ -294,7 +294,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	amount_per_transfer_from_this = 20
 	possible_transfer_amounts = list(5,10,15,20,25,30,50,70)
-	volume = 70
+	volume = 100
 	flags_inv = HIDEHAIR
 	slot_flags = ITEM_SLOT_HEAD
 	resistance_flags = NONE
@@ -359,6 +359,16 @@
 	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 2)
 	slot_flags = NONE
 	item_flags = NO_MAT_REDEMPTION
+	volume = 90
+
+/obj/item/reagent_containers/glass/bucket/plastic
+	name = "bucket"
+	desc = "It's a bucket."
+	icon_state = "bucket_plastic"
+	item_state = "bucket"
+	custom_materials = list(/datum/material/plastic=200)
+	possible_transfer_amounts = list(10,20,30,60,120)
+	volume = 120
 
 /obj/item/reagent_containers/glass/beaker/waterbottle
 	name = "bottle of water"

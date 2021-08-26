@@ -66,6 +66,7 @@
 
 /obj/item/ingot/silver
 	custom_materials = list(/datum/material/silver=12000)
+	grind_results = list(/datum/reagent/silver = 120)
 
 /obj/item/ingot/titanium
 	custom_materials = list(/datum/material/titanium=12000)
@@ -78,6 +79,10 @@
 
 /obj/item/ingot/bronze
 	custom_materials = list(/datum/material/bronze=12000)
+
+/obj/item/ingot/bronze/copper
+	custom_materials = list(/datum/material/bronze=1)
+	grind_results = list(/datum/reagent/copper = 120)
 
 /obj/item/ingot/ratvar
 	custom_materials = list(/datum/material/brass=12000)
