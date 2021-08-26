@@ -454,6 +454,18 @@ Raider
 		/obj/item/storage/bag/plants/portaseeder = 1,
 		)
 
+/datum/outfit/loadout/bosremnant
+	name = "Brotherhood Remnant"
+	uniform = /obj/item/clothing/under/f13/bdu
+	id = /obj/item/card/id/rusted/brokenholodog
+	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
+	shoes = /obj/item/clothing/shoes/combat/swat
+	l_hand = /obj/item/gun/energy/laser/wattz
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ec = 3,
+		/obj/item/storage/bag/plants/portaseeder = 1,
+		)
+
 /datum/outfit/loadout/medic
 	name = "Wasteland Doctor"
 	uniform = /obj/item/clothing/under/f13/follower
