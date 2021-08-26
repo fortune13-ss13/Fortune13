@@ -613,12 +613,8 @@
 
 // DANGEROUS OR UNUSUAL FLOORs
 
-/turf/open/floor/plasteel/f13/radioactive
-	name = "rusty plating covered in dust"
+/obj/item/stack/sheet/mineral/uranium/dusty
+	name = "rusty plating covered in suspicious dust"
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "plating_rust"
-/*
-/turf/open/floor/plasteel/f13/radioactive/Initialize()
-	. = ..()
-	AddComponent(/datum/component/radioactive, var/amount / 60, var/source, 0)
-*/
+

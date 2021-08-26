@@ -3,7 +3,7 @@
 	name = "large phial of smelling salts"
 	desc = "A large glass phial of pungent smelling salts, used to revive those who have fainted.<br>It is bound in cord marking the colors of Caesars Legion,"
 	w_class = WEIGHT_CLASS_NORMAL
-	icon = 'icons/obj/fallout/smelling_salts.dmi'
+	icon = 'icons/fallout/objects/medicine/primitivedefib.dmi'
 	icon_state = "smelling_salts_legion"
 	var/charges = 20
 	var/in_use = FALSE
