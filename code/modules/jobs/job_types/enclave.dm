@@ -111,6 +111,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
 		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/storage/box/mre/menu3 = 1,
 		)
 
 /datum/outfit/job/enclave/armor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -158,6 +159,7 @@
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/stock_parts/cell/ammo/ec = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/storage/box/mre/menu2 = 1,
 		)
 
 // CORPORAL
@@ -198,6 +200,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/storage/box/mre/menu4 = 1,
 		)
 
 /datum/outfit/job/enclave/armor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -247,6 +250,7 @@
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
+		/obj/item/storage/box/mre/menu3 = 1,
 		)
 
 /datum/outfit/job/enclave/scientist/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -288,6 +292,7 @@
 		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/intel = 1,
 		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/storage/box/mre/menu2 = 1,
 		)
 
 /datum/outfit/job/enclave/intel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
