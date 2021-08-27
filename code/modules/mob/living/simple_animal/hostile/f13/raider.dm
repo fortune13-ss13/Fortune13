@@ -133,11 +133,6 @@
 	icon_state = "skulls"
 	icon_living = "skulls"
 	loot = list(/obj/effect/mob_spawn/human/corpse/skulls, /obj/item/melee/onehanded/knife/hunting, /obj/item/crafting/wonderglue)
-	skin_tone = pick("latino", "mediterranean")
-	var/hair_color = random_hair_shade()
-	var/facial_hair_color = random_hair_shade()
-	var/left_eye_color = random_dark_shade()
-	var/right_eye_color = random_dark_shade()
 
 /mob/living/simple_animal/hostile/raider/ranged/skull
 	name = "Skulls member"
@@ -145,10 +140,6 @@
 	icon_state = "skullsmember"
 	icon_living = "skullsmember"
 	loot = list(/obj/effect/mob_spawn/human/corpse/skullsmember, /obj/item/gun/ballistic/revolver/police, /obj/item/ammo_box/c38)
-	hair_color = random_hair_shade()
-	facial_hair_color = random_hair_shade()
-	left_eye_color = random_dark_shade()
-	right_eye_color = random_dark_shade()
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/skull
 	name = "Esteban the Killer"
@@ -156,7 +147,4 @@
 	icon_state = "skullsboss"
 	icon_living = "skullsboss"
 	loot = list(/obj/effect/mob_spawn/human/corpse/skullsboss, /obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/mask/cigarette/cigar/havana)
-	hair_color = random_hair_shade()
-	facial_hair_color = random_hair_shade()
-	left_eye_color = random_dark_shade()
-	right_eye_color = random_dark_shade()
+
