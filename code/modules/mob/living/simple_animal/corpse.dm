@@ -280,3 +280,32 @@ obj/effect/mob_spawn/human/corpse/raiderbossalt
 	name = "Chinese Remnant Assault Corpse"
 	suit = /obj/item/clothing/suit/armor/f13/combat/chinese
 	belt = /obj/item/storage/belt/military/alt
+
+
+// Skulls
+/obj/effect/mob_spawn/human/corpse/skulls
+	name = "Skull hangaround corpse"
+	uniform = /obj/item/clothing/under/pants/f13/warboy
+	suit = /obj/item/clothing/suit/armor/f13/leather_jacket
+	shoes = /obj/item/clothing/shoes/sneakers/brown
+	head = /obj/item/clothing/head/helmet/skull
+	hair_style = "Bald"
+	facial_hair_style = "Shaved"
+
+/obj/effect/mob_spawn/human/corpse/skullsmember
+	name = "Skull member corpse"
+	uniform = /obj/item/clothing/under/jabroni
+	suit = /obj/item/clothing/suit/armor/f13/leather_jacket
+	shoes = /obj/item/clothing/shoes/f13/cowboy
+	head = /obj/item/clothing/head/helmet/skull
+	hair_style = "Bald"
+	facial_hair_style = "Shaved"
+
+/obj/effect/mob_spawn/human/corpse/skullsboss
+	name = "Esteban the Killed"
+	uniform = /obj/item/clothing/under/f13/ravenharness
+	suit = /obj/item/clothing/suit/armor/f13/metalarmor/reinforced
+	shoes = /obj/item/clothing/shoes/f13/cowboy
+	mask = /obj/item/clothing/mask/bandana/skull
+	hair_style = "Bald"
+	facial_hair_style = "Shaved"

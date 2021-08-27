@@ -101,7 +101,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/mob/living/simple_animal/hostile/ghoul,
+/mob/living/simple_animal/hostile/ghoulrotter,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "afx" = (
@@ -1312,7 +1312,7 @@
 	},
 /area/f13/building)
 "bkU" = (
-/mob/living/simple_animal/hostile/raider/ranged,
+/mob/living/simple_animal/hostile/raider/skull,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "bkY" = (
@@ -6159,7 +6159,7 @@
 /turf/closed/wall/mineral/brick,
 /area/f13/bar/river)
 "fXC" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
+/mob/living/simple_animal/hostile/ghoulrotter,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -6220,8 +6220,8 @@
 /area/f13/building)
 "fZD" = (
 /obj/structure/table,
-/obj/machinery/chem_dispenser/drinks/beer{
-	dir = 4
+/obj/item/export/bottle/rum{
+	pixel_y = 7
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/raiders)
@@ -6647,7 +6647,7 @@
 /area/f13/caves)
 "gwh" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/raider/ranged/boss,
+/mob/living/simple_animal/hostile/raider/ranged/boss/skull,
 /turf/open/floor/wood/f13/oak/outdoors,
 /area/f13/wasteland/river)
 "gxl" = (
@@ -8520,7 +8520,7 @@
 	},
 /area/f13/bunker)
 "ipD" = (
-/mob/living/simple_animal/hostile/raider,
+/mob/living/simple_animal/hostile/raider/ranged/skull,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
@@ -9475,6 +9475,7 @@
 "jwO" = (
 /obj/structure/cross,
 /obj/effect/mob_spawn/human/corpse/raider/tribal,
+/obj/effect/decal/remains/human,
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaltopborderbottom1"
 	},
@@ -10337,11 +10338,18 @@
 /turf/closed/wall/f13/supermart,
 /area/f13/forest/animals)
 "kwk" = (
-/mob/living/simple_animal/hostile/ghoul,
-/turf/open/floor/plasteel/f13{
-	icon_state = "whitebluerustychess"
+/obj/structure/window/fulltile/house{
+	dir = 2;
+	icon_state = "ruinswindow"
 	},
-/area/f13/building)
+/obj/structure/decoration/rag{
+	icon_state = "skulls";
+	name = "human skulls";
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/turf/open/floor/wood/f13/oak,
+/area/f13/raiders)
 "kwD" = (
 /obj/structure/wreck/trash/three_barrels,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -10631,6 +10639,12 @@
 "kLa" = (
 /turf/closed/wall/f13/supermart,
 /area/f13/wasteland)
+"kMl" = (
+/mob/living/simple_animal/hostile/ghoulrotter,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building)
 "kNx" = (
 /obj/structure/wreck/trash/five_tires{
 	pixel_x = 3;
@@ -11923,7 +11937,6 @@
 /area/f13/wasteland/river)
 "mdv" = (
 /obj/machinery/light/small/broken,
-/mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/wood/f13/oakbroken4,
 /area/f13/building)
 "mdD" = (
@@ -12954,7 +12967,7 @@
 /area/f13/forest/animals)
 "nqR" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/ghoul,
+/mob/living/simple_animal/hostile/radroach/east,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "nrs" = (
@@ -13982,6 +13995,7 @@
 "ovJ" = (
 /obj/structure/decoration/rag{
 	icon_state = "skulls";
+	name = "human skulls";
 	pixel_x = 6;
 	pixel_y = 2
 	},
@@ -16058,11 +16072,11 @@
 /area/f13/building/outlaw)
 "qLU" = (
 /obj/structure/table,
-/obj/machinery/chem_dispenser/drinks{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/item/storage/fancy/cigarettes/cigars/havana{
+	pixel_y = 10
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/raiders)
@@ -16289,6 +16303,7 @@
 	},
 /area/f13/forest)
 "rdD" = (
+/mob/living/simple_animal/hostile/bloatfly/east,
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaloutermain2left"
 	},
@@ -17781,7 +17796,7 @@
 "sIt" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/generic,
-/mob/living/simple_animal/hostile/ghoul,
+/mob/living/simple_animal/hostile/ghoulrotter,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "sIG" = (
@@ -19465,7 +19480,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/radroach,
+/mob/living/simple_animal/hostile/radroach/east,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "unu" = (
@@ -19484,7 +19499,7 @@
 	},
 /area/f13/forest/animals)
 "uoo" = (
-/mob/living/simple_animal/hostile/raider,
+/mob/living/simple_animal/hostile/raider/skull,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -22780,6 +22795,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
+"xVq" = (
+/mob/living/simple_animal/hostile/raider/ranged/skull,
+/turf/open/floor/wood/f13/oak,
+/area/f13/raiders)
 "xVt" = (
 /obj/structure/table,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
@@ -25080,7 +25099,7 @@ ssP
 eCz
 amY
 eCz
-bkU
+xVq
 vUc
 qWx
 tFZ
@@ -25402,7 +25421,7 @@ ple
 aMr
 ssP
 wcQ
-vqL
+bkU
 llP
 rGM
 vqL
@@ -26701,7 +26720,7 @@ knf
 vqL
 fel
 kol
-vqL
+bkU
 fel
 tFZ
 uot
@@ -27014,7 +27033,7 @@ fZD
 qLU
 eWm
 vqL
-tFZ
+ovJ
 fJS
 oue
 qes
@@ -27979,7 +27998,7 @@ wzC
 mZQ
 gwh
 mZQ
-tSZ
+kwk
 ipp
 vZW
 vUc
@@ -28324,7 +28343,7 @@ gcN
 afq
 oxN
 mpG
-kwk
+rNI
 rNI
 reK
 fhS
@@ -29922,7 +29941,7 @@ oXT
 oXT
 qvQ
 gSw
-uMi
+gSw
 vHM
 jIr
 vHM
@@ -29943,7 +29962,7 @@ vnN
 tFA
 gOr
 wnw
-eIY
+kMl
 tZx
 pLG
 pZt
@@ -30100,7 +30119,7 @@ shP
 vHM
 gOr
 orW
-eIY
+kMl
 pLG
 czY
 gOr
@@ -30246,7 +30265,7 @@ oXT
 oXT
 oXT
 qvQ
-gSw
+uMi
 wiN
 pfS
 sSd
@@ -31396,7 +31415,7 @@ vHM
 vHM
 gOr
 pLG
-eIY
+kMl
 pLG
 sAM
 pLG
