@@ -75,6 +75,16 @@
 	suppressor_y_offset = 15
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 
+//Enclave Intel N99
+/obj/item/gun/ballistic/automatic/pistol/n99/enclave
+	name = "N99 Pistol"
+	desc = "A pre-war N99 10mm pistol, this one in particular looks as if it was in service with, and issued to the US Military at some point"
+	icon_state = "n99"
+	burst_size = 2
+	semi_auto = FALSE
+	can_automatic = FALSE
+
+
 //the Executive							Keywords: UNIQUE, 10mm, Automatic, 12/24 round magazine. Special modifiers: damage +4
 /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	name = "the Executive"
