@@ -133,7 +133,7 @@
 	supervisors = "The Corporals, alongside the Sergeants."
 	selection_color = "#323232"
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 120
+	exp_requirements = 0
 
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -171,7 +171,7 @@
 	description = "You are a member of a dying breed, true Americans, but you will do what you can to help revitalize the nation, and protect her from all enemies, foreign and domestic."
 	supervisors = "You report to the Sergeants directly."
 	selection_color = "#323232"
-	exp_requirements = 150
+	exp_requirements = 0
 	exp_type = EXP_TYPE_ENCLAVE
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
@@ -220,7 +220,7 @@
 	enforces = "You must maintain the secrecy of organization."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 200
+	exp_requirements = 0
 	exp_type = EXP_TYPE_ENCLAVE
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)

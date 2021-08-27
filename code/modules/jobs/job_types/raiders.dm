@@ -131,7 +131,7 @@
 	description = "Hand-picked by the Boss, your job is to make sure he is respected, and alive."
 	supervisors = "The Boss."
 	selection_color = "#ff4747"
-	exp_requirements = 120
+	exp_requirements = 0
 	exp_type = EXP_TYPE_OUTLAW
 	outfit = /datum/outfit/job/wasteland/f13enforcer
 	access = list(ACCESS_DEN)
@@ -225,7 +225,7 @@ datum/job/wasteland/f13dendoctor
 	description = "Maybe you have read some medical books, maybe you can't read and just have plenty of hands-on experience. Either way, you are what passes for a doctor amongst raiders."
 	supervisors = "The Boss."
 	selection_color = "#ff4747"
-	exp_requirements = 60
+	exp_requirements = 0
 	exp_type = EXP_TYPE_OUTLAW
 	outfit = /datum/outfit/job/wasteland/f13dendoctor
 	access = list(ACCESS_DEN)
@@ -290,7 +290,7 @@ datum/job/wasteland/f13dendoctor
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
 	supervisors = "Your desire to make things interesting and fun"
 	selection_color = "#ff4747"
-	exp_requirements = 60
+	exp_requirements = 0
 	exp_type = EXP_TYPE_WASTELAND
 	outfit = /datum/outfit/job/wasteland/f13raider
 

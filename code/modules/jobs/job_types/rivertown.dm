@@ -85,7 +85,7 @@ datum/job/oasis/f13sheriff
 	supervisors = "Talon HQ and the Alderman"
 	description = "The townies hired you to defend their dirty hovel, and so you will. You know the company lives and dies by its reputation, and so do you, so your boys are gonna bury any fool who tries to muscle their way in."
 	selection_color = "#d7b088"
-	exp_requirements = 600
+	exp_requirements = 60
 
 	loadout_options = list(
 	/datum/outfit/loadout/cleaner,
@@ -166,7 +166,7 @@ datum/job/oasis/f13sheriff
 	selection_color = "#dcba97"
 	exp_requirements = 12
 	exp_type = EXP_TYPE_OASIS
-	exp_requirements = 600
+	exp_requirements = 0
 
 	loadout_options = list(
 	/datum/outfit/loadout/grunt,
