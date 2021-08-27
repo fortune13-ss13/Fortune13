@@ -1,25 +1,42 @@
 //Fallout 13 barrels directory
 
 /obj/structure/reagent_dispensers/barrel
-	name = "barrel"
-	desc = "A metal container with something in it.<br>By the looks of it, it was manufactured recently."
+	name = "water barrel"
+	desc = "A metal barrel someone filled with water. It's not fresh but its drinkable."
 	icon = 'icons/fallout/trash.dmi'
 	icon_state = "single"
 	tank_volume = 500
-	reagent_id = /datum/reagent/mutationtoxin
+	reagent_id = /datum/reagent/water
 //	self_weight = 200
+
+/obj/structure/reagent_dispensers/barrel
+
 
 /obj/structure/reagent_dispensers/barrel/dangerous
 	name = "waste barrel"
 	desc = "A rather odd-looking metal barrel, made of strange metal that somehow hasn't rusted after all this time.<br>There is a strange label on it, but you can't quite make it out..."
 	icon_state = "dangerous"
-	tank_volume = 500
-	reagent_id = /datum/reagent/radium
+	tank_volume = 300
 	light_color = LIGHT_COLOR_GREEN
-	light_power = 3
-	light_range = 2
+	light_power = 1
+	light_range = 1
 //	self_weight = 200
 
+/obj/structure/reagent_dispensers/barrel/dangerous/Initialize()
+	. = ..()
+	reagent_id = pick(GLOB.hazard_reagents)
+
+GLOBAL_LIST_INIT(hazard_reagents, typecacheof(list(
+	/datum/reagent/radium,
+	/datum/reagent/toxin/acid,
+	/datum/reagent/toxin/plantbgone,
+	/datum/reagent/mercury,
+	/datum/reagent/toxin/acid/fluacid,
+	/datum/reagent/toxin/leadacetate,
+	)))
+
+
+/*
 /obj/structure/reagent_dispensers/barrel/dangerous/Initialize()
 	. = ..()
 //	AddComponent(/datum/component/radioactive, 100, src, 0, TRUE, TRUE) //half-life of 0 because we keep on going.
@@ -28,6 +45,7 @@
 /obj/structure/reagent_dispensers/barrel/dangerous/Destroy()
 	STOP_PROCESSING(SSradiation,src)
 	..()
+*/
 
 //Bing bang boom done
 /obj/structure/reagent_dispensers/barrel/dangerous/process()
@@ -135,10 +153,10 @@ obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile
 //	self_weight = 600
 
 /obj/structure/reagent_dispensers/barrel/four
-	name = "four old barrels"
-	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
+	name = "oil barrels"
+	desc = "Ancient containers with a thick black liquid inside."
 	icon_state = "four_b"
 	tank_volume = 800
-	reagent_id = /datum/reagent/radium
+	reagent_id = /datum/reagent/oil
 	anchored = 1
 //	self_weight = 60
