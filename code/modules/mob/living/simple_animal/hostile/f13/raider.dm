@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/raider
 	name = "Raider"
 	desc = "Another murderer churned out by the wastes."
-	icon = 'icons/mob/wastemobs.dmi'
+	icon = 'icons/fallout/mobs/npc/raiders.dmi'
 	icon_state = "raidermelee"
 	icon_living = "raidermelee"
 	icon_dead = "raidermelee_dead"
@@ -125,3 +125,26 @@
 	..()
 	summon_backup(15)
 	say("KILL 'EM, FELLAS!")
+
+// Skulls
+/mob/living/simple_animal/hostile/raider/skull
+	name = "Skulls hangaround"
+	desc = "Want to join the gang but haven't killed anyone yet, sniffs glue in their spare time. You might be their ticket in."
+	icon_state = "skulls"
+	icon_living = "skulls"
+	loot = list(/obj/effect/mob_spawn/human/corpse/skulls, /obj/item/melee/onehanded/knife/hunting, /obj/item/crafting/wonderglue)
+
+/mob/living/simple_animal/hostile/raider/ranged/skull
+	name = "Skulls member"
+	desc = "Full member of the gang called the Skulls. Permanent state of aggression due to glue sniffing and head trauma."
+	icon_state = "skullsmember"
+	icon_living = "skullsmember"
+	loot = list(/obj/effect/mob_spawn/human/corpse/skullsmember, /obj/item/gun/ballistic/revolver/police, /obj/item/ammo_box/c38)
+
+/mob/living/simple_animal/hostile/raider/ranged/boss/skull
+	name = "Esteban the Killer"
+	desc = "Leader of the independent gang called the Skulls. Got a macho image and low impulse control."
+	icon_state = "skullsboss"
+	icon_living = "skullsboss"
+	loot = list(/obj/effect/mob_spawn/human/corpse/skullsboss, /obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/mask/cigarette/cigar/havana)
+

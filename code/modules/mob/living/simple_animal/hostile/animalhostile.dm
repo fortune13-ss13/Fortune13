@@ -41,10 +41,11 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/radroach/east
 	name = "Radroach"
 	icon = 'icons/fallout/mobs/hostile_general.dmi'
+	faction = list("gecko")
 
 /mob/living/simple_animal/hostile/ghoulrotter
 	name = "rotting ghoul"
-	desc = "A bloated ghoul that has lost its mind and become aggressive."
+	desc = "A ancient bloated ghoul that has lost its mind and become aggressive."
 	icon = 'icons/fallout/mobs/hostile_feralghoul.dmi'
 	icon_state = "ghoulrotter"
 	icon_living = "ghoulrotter"
@@ -53,24 +54,23 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	robust_searching = 1
 	turns_per_move = 5
 	speak_emote = list("growls")
-	emote_see = list("screeches")
+	emote_see = list("gurgles")
 	a_intent = INTENT_HARM
-	maxHealth = 80
-	health = 80
-	speed = 2.5
+	maxHealth = 120
+	health = 120
+	speed = 3
 	harm_intent_damage = 8
 	melee_damage_lower = 15
 	melee_damage_upper = 20
-	attack_verb_simple = "claw"
+	attack_verb_simple = "gnaws"
 	attack_sound = 'sound/hallucinations/growl1.ogg'
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 20
 	gold_core_spawnable = HOSTILE_SPAWN
 	faction = list("ghoul")
 	decompose = TRUE
-	sharpness = SHARP_EDGED //They need to cut their finger nails
+	sharpness = SHARP_NONE
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
-							/obj/item/stack/sheet/animalhide/human = 1,
 							/obj/item/stack/sheet/bone = 1)
 	emote_taunt_sound = list('sound/f13npc/ghoul/taunt.ogg')
 	emote_taunt = list("gurgles", "stares")
@@ -346,7 +346,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	melee_damage_lower = 60
 	melee_damage_upper = 70
 	attack_verb_simple = "claws"
-	faction = list("deathclaw")
+	faction = list("hostile", "wolf")
 	wound_bonus = -2
 	bare_wound_bonus = 5 
 	sharpness = SHARP_EDGED
