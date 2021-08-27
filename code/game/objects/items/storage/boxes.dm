@@ -1231,7 +1231,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/reagent_containers/food/snacks/breadslice/creamcheese(src)
 	new /obj/item/reagent_containers/food/condiment/pack/ketchup(src)
 	new /obj/item/reagent_containers/food/snacks/chocolatebar(src)
-	new /obj/item/tank/internals/emergency_oxygen(src)
+	new /obj/item/reagent_containers/pill/buffout(src)
 
 /obj/item/storage/box/mre/menu2
 	name = "\improper Enclave MRE Ration Kit Menu 2"
@@ -1246,7 +1246,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/reagent_containers/food/snacks/meat/cutlet/plain(src)
 	new /obj/item/reagent_containers/food/snacks/fries(src)
 	new /obj/item/reagent_containers/food/snacks/chocolatebar(src)
-	new /obj/item/tank/internals/emergency_oxygen(src)
+	new /obj/item/reagent_containers/pill/buffout(src)
 
 /obj/item/storage/box/mre/menu3
 	name = "\improper Enclave MRE Ration Kit Menu 3"
@@ -1261,7 +1261,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/reagent_containers/food/snacks/cubannachos(src)
 	new /obj/item/reagent_containers/food/snacks/grown/chili(src)
 	new /obj/item/reagent_containers/food/drinks/coffee/type2(src)
-	new /obj/item/tank/internals/emergency_oxygen(src)
+	new /obj/item/reagent_containers/pill/buffout(src)
 
 /obj/item/storage/box/mre/menu4
 	name = "\improper Enclave MRE Ration Kit Menu 4"
@@ -1279,7 +1279,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/reagent_containers/food/snacks/burger/tofu(src)
 	new /obj/item/reagent_containers/food/snacks/salad/fruit(src)
 	new /obj/item/reagent_containers/food/snacks/cracker(src)
-	new /obj/item/tank/internals/emergency_oxygen(src)
+	new /obj/item/reagent_containers/pill/buffout(src)
 
 //Where do I put this?
 /obj/item/secbat
