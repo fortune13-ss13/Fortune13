@@ -228,6 +228,16 @@
 	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SAND
 	clawfootstep = FOOTSTEP_SAND
+	var/dug = FALSE				//FALSE = has not yet been dug, TRUE = has already been dug
+	var/pit_sand = 1
+	var/storedindex = 0			//amount of stored items
+	var/mob/living/gravebody	//is there a body in the pit?
+	var/obj/structure/closet/crate/coffin/gravecoffin //or maybe a coffin?
+	var/obj/salvage //or salvage
+	var/pitcontents = list()
+	var/obj/dugpit/mypit
+	var/unburylevel = 0
+
 
 /turf/open/indestructible/ground/outside/dirt/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return //same thing here, dirt absorbs the liquid... :(
