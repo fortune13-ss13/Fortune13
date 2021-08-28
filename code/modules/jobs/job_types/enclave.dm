@@ -264,6 +264,60 @@
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
 	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
 
+// RESEARCH DIRECTOR
+
+/datum/job/enclave/scientist
+	title = "Research Director"
+	flag = F13USHEADSCIENTIST
+	faction = "Enclave"
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the Research Director, the FOB is established to aid you, alongside your science team in any form of research you dictate & you have effective control of all Enclave forces in the region as a result."
+	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
+	enforces = "You must maintain the secrecy of organization."
+	supervisors = "the United States Government."
+	selection_color = "#323232"
+	exp_requirements = 0
+	exp_type = EXP_TYPE_ENCLAVE
+	access = list(ACCESS_ENCLAVE)
+	minimal_access = list(ACCESS_ENCLAVE)
+
+	outfit = /datum/outfit/job/enclave/headscientist
+
+/datum/outfit/job/enclave/headscientist
+	name =	"Research Director"
+	jobtype =	/datum/job/enclave/headscientist
+	head =	/obj/item/clothing/head/helmet/f13/envirosuit
+	glasses =	/obj/item/clothing/glasses/hud/health/night
+	mask =	/obj/item/clothing/mask/breath/medical
+	neck =	/obj/item/storage/belt/holster/legholster
+	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
+	uniform =	/obj/item/clothing/under/f13/enclave_officer
+	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
+	accessory =	/obj/item/clothing/accessory/armband/science
+	belt =	/obj/item/storage/belt/medical
+	suit_store =	/obj/item/tank/internals/oxygen
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/gun/energy/laser/plasma/glock/extended = 1, = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/clothing/head/helmet/f13/helmet/enclave/officer = 1,
+		/obj/item/storage/box/mre/menu2 = 1,
+		)
+
+/datum/outfit/job/enclave/scientist/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
+	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
+	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
+
 
 //INTELLIGENCE SPECIALIST
 /datum/job/enclave/intel
