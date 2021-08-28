@@ -142,7 +142,7 @@
 
 #define ENCLAVE			(1<<9)
 
-#define F13USCOMMANDER	(1<<0)
+#define F13USOFFICER	(1<<0)
 #define F13USMEDIC		(1<<1)
 #define F13USPRIVATE	(1<<2)
 #define F13USSCIENTIST	(1<<3)
@@ -151,6 +151,7 @@
 #define F13USLT			(1<<6)
 #define F13USSGT		(1<<7)
 #define F13USCORPORAL	(1<<8)
+#define F13USHEADSCIENTIST	(1<<9)
 
 #define TRIBAL			(1<<10)
 
