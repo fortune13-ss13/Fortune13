@@ -125,7 +125,7 @@
 // PRIVATE
 
 /datum/job/enclave/soldier
-	title = "Enclave Soldier"
+	title = "Enclave Private"
 	flag = F13USPRIVATE
 	faction = "Enclave"
 	total_positions = 4
@@ -142,7 +142,7 @@
 	outfit = /datum/outfit/job/enclave/soldier
 
 /datum/outfit/job/enclave/soldier
-	name =	"Enclave Soldier"
+	name =	"Enclave Private"
 	jobtype =	/datum/job/enclave/soldier
 	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
 	mask =	/obj/item/clothing/mask/gas/enclave
@@ -216,8 +216,8 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	faction = "Enclave"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
 	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
 	enforces = "You must maintain the secrecy of organization."
