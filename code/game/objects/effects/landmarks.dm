@@ -815,7 +815,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 // Enclave
 /obj/effect/landmark/start/f13/usspy
-	name = "Enclave Soldier"
+	name = "Enclave Private"
 	icon_state = "Initiate"
 
 /obj/effect/landmark/start/f13/uslt
@@ -843,6 +843,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/usscientist
 	name = "Enclave Scientist"
 	icon_state = "Chemist"
+
+/obj/effect/landmark/start/f13/usheadscientist
+	name = "Research Director"
+	icon_state = "Research Director"
 
 /obj/effect/landmark/start/f13/usengineer
 	name = "US Engineer"
