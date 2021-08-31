@@ -129,7 +129,7 @@
 // Skulls
 /mob/living/simple_animal/hostile/raider/skull
 	name = "Skulls hangaround"
-	desc = "Want to join the gang but haven't killed anyone yet, sniffs glue in their spare time. You might be their ticket in."
+	desc = "Want to join the gang but haven't killed enough people yet, sniffs glue in their spare time. You might be their ticket in."
 	icon_state = "skulls"
 	icon_living = "skulls"
 	loot = list(/obj/effect/mob_spawn/human/corpse/skulls, /obj/item/melee/onehanded/knife/hunting, /obj/item/crafting/wonderglue)
@@ -139,7 +139,9 @@
 	desc = "Full member of the gang called the Skulls. Permanent state of aggression due to glue sniffing and head trauma."
 	icon_state = "skullsmember"
 	icon_living = "skullsmember"
-	loot = list(/obj/effect/mob_spawn/human/corpse/skullsmember, /obj/item/gun/ballistic/revolver/police, /obj/item/ammo_box/c38)
+	loot = list(/obj/effect/mob_spawn/human/corpse/skullsmember, /obj/item/gun/ballistic/revolver/colt6520, /obj/item/ammo_box/c10mm/improvised)
+	projectiletype = /obj/item/projectile/bullet/c10mm/ap
+	projectilesound = 'sound/f13weapons/10mm_fire_02.ogg'
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/skull
 	name = "Esteban the Killer"
