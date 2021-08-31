@@ -1,260 +1,86 @@
-/datum/job/wasteland
+/datum/job/raider
 	department_flag = WASTELAND
+	access = list(ACCESS_DEN)
+	minimal_access = list(ACCESS_DEN)
+	exp_type = EXP_TYPE_OUTLAW
+	faction = "Wastelander"
+	social_faction = "Raiders"
+	exp_requirements = 0
+	selection_color = "#ff4747"
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/raider,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/raider/bandit,
+			/datum/job/raider/psycho,
+			/datum/job/raider/tribal,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/raider/boss_bandit,
+			/datum/job/raider/boss_psycho,
+			/datum/job/raider/boss_tribal,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/raider/bandit,
+			/datum/job/raider/psycho,
+			/datum/job/raider/tribal,
+		),
+		/datum/matchmaking_pref/outlaw = list(
+			//datum/job/raider,
+		),
+		/datum/matchmaking_pref/bounty_hunter = list(
+			//datum/job/raider,
+		),
+	)
 
-/datum/outfit/job/wasteland
+/datum/outfit/job/raider
 	backpack =	/obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	ears = /obj/item/radio/headset/headset_den
 	id = /obj/item/card/id/dentattoo
-
-
-// RAIDER BOSS
-
-/datum/job/wasteland/f13mobboss
-	title = "Raider Boss"
-	flag = F13MOBBOSS
-	faction = "Wastelander"
-	social_faction = "Raiders"
-	total_positions = 1
-	spawn_positions = 1
-	description = "Raiders are a rough crowd to say the least, and only exceptionally strong or ruthless individuals can rise to positions of authority amongst them. Don't expect blind obedience, and watch out for knives entering your back if you ever show weakness."
-	supervisors = "No one. Might makes right."
-	selection_color = "#ff4747"
-	exp_requirements = 300
-	exp_type = EXP_TYPE_OUTLAW
-	outfit = /datum/outfit/job/wasteland/f13mobboss
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
-
-	loadout_options = list(
-		/datum/outfit/loadout/pyro,
-		/datum/outfit/loadout/gambler,
-		/datum/outfit/loadout/king,
-		)
-
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis/f13mayor,
-			/datum/job/oasis/f13sheriff,
-		),
-		/datum/matchmaking_pref/patron = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-	)
-
-/datum/outfit/job/wasteland/f13mobboss
-	name = "Raider Boss"
-	jobtype = /datum/job/wasteland/f13mobboss
-	id = /obj/item/card/id/dentattoo
-	ears = /obj/item/radio/headset/headset_den
-	r_pocket = /obj/item/flashlight/lantern
-	uniform = /obj/item/clothing/under/f13/raider_leather
-	shoes = null
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
-		/obj/item/restraints/handcuffs=1, \
-		/obj/item/storage/bag/money/small/raider/mobboss = 1,)
-
-/datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H)
-	..()
-	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-
-/datum/outfit/job/wasteland/f13mobboss/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-
-	if(!H.gang)
-		var/datum/gang/denmob/DM = GLOB.denmob
-		GLOB.all_gangs |= DM
-		DM.add_member(H)
-		H.gang = DM
-
-/datum/outfit/loadout/pyro
-	name = "Burn Baby"
-	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
-	suit = /obj/item/clothing/suit/armor/f13/sulphitearmor
-	shoes = /obj/item/clothing/shoes/f13/military/plated
-	gloves = /obj/item/clothing/gloves/f13/leather
 	belt = /obj/item/storage/belt/military/assault
-	backpack_contents = list(
-		/obj/item/twohanded/fireaxe = 1,
-		/obj/item/m2flamethrowertank/salvagedflamer = 1,
-		/obj/item/reagent_containers/pill/patch/jet = 2,
-		)
-
-/datum/outfit/loadout/king
-	name = "Raider King"
-	r_hand = /obj/item/gun/ballistic/automatic/hobo/destroyer
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor/reinforced
-	uniform = /obj/item/clothing/under/f13/bennys
-	belt = /obj/item/storage/belt/champion
-	head = /obj/item/clothing/head/helmet/f13/raidermetal
-	shoes = /obj/item/clothing/shoes/jackboots
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/greasegun = 2,
-		/obj/item/melee/onehanded/machete/scrapsabre = 1,
-		)
-
-/datum/outfit/loadout/gambler
-	name = "The Gambler"
-	l_hand = /obj/item/clothing/gloves/ring/diamond
-	suit = /obj/item/clothing/suit/armor/bulletproof
-	uniform = /obj/item/clothing/under/f13/bartenderalt
-	head = /obj/item/clothing/head/f13/purple/mobster
-	shoes = /obj/item/clothing/shoes/laceup
-	belt = /obj/item/storage/belt/grenade
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/pistol14/compact = 1,
-		/obj/item/ammo_box/magazine/m14mm = 3,
-		/obj/item/storage/belt/holster = 1,
-		/obj/item/gun/ballistic/revolver/hobo/knifegun = 1,
-		/obj/item/grenade/frag = 1,
-		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/toy/cards/deck = 1,
-		/obj/item/melee/onehanded/knife/switchblade = 1,
-		)
-
-
-// RAIDER ENFORCER
-
-/datum/job/wasteland/f13enforcer
-	title = "Raider Enforcer"
-	flag = F13ENFORCER
-	faction = "Wastelander"
-	social_faction = "Raiders"
-	total_positions = 2
-	spawn_positions = 2
-	description = "Hand-picked by the Boss, your job is to make sure he is respected, and alive."
-	supervisors = "The Boss."
-	selection_color = "#ff4747"
-	exp_requirements = 0
-	exp_type = EXP_TYPE_OUTLAW
-	outfit = /datum/outfit/job/wasteland/f13enforcer
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
-
-	loadout_options = list(
-		/datum/outfit/loadout/killer,
-		/datum/outfit/loadout/bodyguard,
-		/datum/outfit/loadout/strongman,
-		)
-
-/datum/outfit/job/wasteland/f13enforcer
-	name = "Raider Enforcer"
-	jobtype = /datum/job/wasteland/f13enforcer
-	uniform = null
-	shoes = null
-	belt = /obj/item/storage/belt/military/assault
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
-		/obj/item/restraints/handcuffs=1, \
-		/obj/item/storage/bag/money/small/wastelander)
-
-/datum/outfit/job/wasteland/f13enforcer/pre_equip(mob/living/carbon/human/H)
-	..()
-	r_hand = /obj/item/book/granter/trait/selection
-
-/datum/outfit/job/wasteland/f13enforcer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-
-	if(!H.gang)
-		var/datum/gang/denmob/DM = GLOB.denmob
-		GLOB.all_gangs |= DM
-		DM.add_member(H)
-		H.gang = DM
-
-/datum/outfit/loadout/killer
-	name = "Killer"
-	head = /obj/item/clothing/head/helmet/f13/fiend
-	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
-	uniform = /obj/item/clothing/under/jabroni
-	suit = /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
-	mask = /obj/item/clothing/mask/bandana/skull
-	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/f13/leather
-	shoes = /obj/item/clothing/shoes/jackboots
-	r_pocket = /obj/item/flashlight/seclite
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm = 2,
-		/obj/item/twohanded/baseball/golfclub/louisville = 1,
-		)
-
-/datum/outfit/loadout/bodyguard
-	name = "Bodyguard"
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor
-	uniform = /obj/item/clothing/under/f13/merccharm
-	head = /obj/item/clothing/head/helmet/f13/raider/arclight
-	shoes = /obj/item/clothing/shoes/f13/military/leather
-	l_pocket = /obj/item/melee/onehanded/knife/hunting
-	r_pocket = /obj/item/flashlight
-	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 2,
-		)
-
-/datum/outfit/loadout/strongman
-	name = "Strongman"
-	uniform = /obj/item/clothing/under/pants/f13/warboy
-	head = /obj/item/clothing/head/helmet/skull
-	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
-	shoes = /obj/item/clothing/shoes/f13/military/plated
-	r_pocket = /obj/item/flashlight/lantern
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 2,
-		/obj/item/ammo_box/c38box = 1,
-		/obj/item/reagent_containers/pill/patch/turbo = 1,
-		)
 
 
 
 // STREET DOC
 
-datum/job/wasteland/f13dendoctor
+/datum/job/raider/streetdoc
 	title = "Street Doc"
 	flag = F13DENDOCTOR
 	faction = "Wastelander"
 	social_faction = "Raiders"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "Maybe you have read some medical books, maybe you can't read and just have plenty of hands-on experience. Either way, you are what passes for a doctor amongst raiders."
 	supervisors = "The Boss."
-	selection_color = "#ff4747"
-	exp_requirements = 0
-	exp_type = EXP_TYPE_OUTLAW
-	outfit = /datum/outfit/job/wasteland/f13dendoctor
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
+	outfit = /datum/outfit/job/raider/streetdoc
 
-/datum/outfit/job/wasteland/f13dendoctor
+/datum/outfit/job/raider/streetdoc
 	name = "Street Doc"
-	jobtype = /datum/job/wasteland/f13dendoctor
+	jobtype = /datum/job/raider/streetdoc
 	mask = /obj/item/clothing/mask/gas
 	belt = /obj/item/storage/belt/medical
 	neck =	/obj/item/clothing/neck/apron/labor
 	shoes = /obj/item/clothing/shoes/winterboots
-	r_pocket = /obj/item/flashlight/lantern
+	r_pocket = /obj/item/flashlight
 	uniform = /obj/item/clothing/under/f13/mercc
+	r_hand = /obj/item/twohanded/chainsaw
 	gloves =  /obj/item/clothing/gloves/f13/crudemedical
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/smg/rockwell = 1,
+		/obj/item/ammo_box/magazine/uzim9mm/rockwell = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/healthanalyzer = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/grenade/chem_grenade = 1,
-		/obj/item/twohanded/chainsaw = 1,
 		)
-
 
 /datum/outfit/job/wasteland/f13dendoctor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
@@ -265,151 +91,184 @@ datum/job/wasteland/f13dendoctor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 
-/datum/outfit/job/wasteland/f13dendoctor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
 
-	if(!H.gang)
-		var/datum/gang/denmob/DM = GLOB.denmob
-		GLOB.all_gangs |= DM
-		DM.add_member(H)
-		H.gang = DM
+// -------------------------------------- THE BANDITS ------------------------------------------- // 
+// The strongest gang, evolved from salvagers who banded together for mutual protection and merged
+// with small gangs for protection. Their leader is called the Raider King, first jokingly, but it
+// hasstuck, and it marks their position as the senior gang leader in the region.
 
 
+// RAIDER BOSS
 
-// RAIDER
+/datum/job/raider/boss_bandit
+	title = "Raider Boss"
+	flag = F13MOBBOSS
+	total_positions = 1
+	spawn_positions = 1
+	description = "Raiders are a rough crowd to say the least, and only exceptionally strong or ruthless individuals can rise to positions of authority amongst them. Don't expect blind obedience, and watch out for knives entering your back if you ever show weakness."
+	supervisors = "No one. Might makes right."
+	exp_requirements = 180
+	outfit = /datum/outfit/job/raider/boss_bandit
+	loadout_options = list(
+		/datum/outfit/loadout/destroyer,
+		/datum/outfit/loadout/goldenone,
+		)
 
-/datum/job/wasteland/f13raider
-	title = "Raider"
-	flag = F13RAIDER
-	faction = "Wastelander"
-	social_faction = "Raiders"
-	total_positions = 8
-	spawn_positions = 8
-	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
-	supervisors = "Your desire to make things interesting and fun"
-	selection_color = "#ff4747"
-	exp_requirements = 0
-	exp_type = EXP_TYPE_WASTELAND
-	outfit = /datum/outfit/job/wasteland/f13raider
-
-	access = list()
-	minimal_access = list()
 	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			//datum/job/wasteland/f13pusher,
-		),
 		/datum/matchmaking_pref/rival = list(
-			//datum/job/wasteland/f13pusher,
+			/datum/job/raider/boss_psycho,
+			/datum/job/raider/boss_tribal,
 		),
 		/datum/matchmaking_pref/patron = list(
-			/datum/job/wasteland/f13raider,
+			/datum/job/raider/bandit,
 		),
-		/datum/matchmaking_pref/protegee = list(
-			/datum/job/wasteland/f13raider,
-		),
-		/datum/matchmaking_pref/outlaw = list(
-			/datum/job/wasteland/f13raider,
-		),
-		/datum/matchmaking_pref/bounty_hunter = list(
-			/datum/job/wasteland/f13raider,
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/raider/enforcer_bandit,
+			/datum/job/raider/streetdoc,
 		),
 	)
-	loadout_options = list(
-	/datum/outfit/loadout/raider_supafly,
-	/datum/outfit/loadout/raider_yankee,
-	/datum/outfit/loadout/raider_blast,
-	/datum/outfit/loadout/raider_sadist,
-	/datum/outfit/loadout/raider_painspike,
-	/datum/outfit/loadout/raider_extribal,
-	)
 
-
-/datum/outfit/job/wasteland/f13raider
-	name = "Raider"
-	jobtype = /datum/job/wasteland/f13raider
-	belt = null
-	r_hand = /obj/item/book/granter/trait/selection
-	gloves = /obj/item/clothing/gloves/f13/handwraps
-	r_pocket = /obj/item/flashlight/flare
+/datum/outfit/job/raider/boss_bandit
+	name = "Raider Boss"
+	jobtype = /datum/job/raider/boss_bandit
+	suit = /obj/item/clothing/suit/armor/raider/leadcoat
+	belt = /obj/item/storage/belt/champion
+	neck = /obj/item/clothing/neck/necklace/dope
+	r_pocket = /obj/item/flashlight
+	head = /obj/item/clothing/head/helmet/raider/king
+	uniform = /obj/item/clothing/under/f13/raider_leather
+	shoes = /obj/item/clothing/shoes/f13/military
 	backpack_contents = list(
-		/obj/item/restraints/handcuffs = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/storage/bag/money/small/raider = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/storage/bag/money/small/raider/mobboss = 1,)
+
+/datum/outfit/job/raider/boss_bandit/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+
+/datum/outfit/loadout/destroyer
+	name = "Destroyer"
+	r_hand = /obj/item/gun/ballistic/automatic/hobo/destroyer
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/greasegun = 2,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
-/datum/outfit/job/wasteland/f13raider/pre_equip(mob/living/carbon/human/H)
-	. = ..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/merca, \
-		/obj/item/clothing/under/f13/mercc, \
-		/obj/item/clothing/under/f13/raider_leather, \
-		/obj/item/clothing/under/f13/raiderrags, \
-		/obj/item/clothing/under/pants/f13/ghoul, \
-		/obj/item/clothing/under/jabroni)
-	shoes = pick(
-		/obj/item/clothing/shoes/jackboots,\
-		/obj/item/clothing/shoes/f13/raidertreads)
-
-/datum/outfit/job/wasteland/f13raider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-
-	H.social_faction = "Raiders"
-	add_verb(H, /mob/living/proc/creategang)
-
-/datum/outfit/loadout/raider_supafly
-	name = "Supa-fly"
-	suit = /obj/item/clothing/suit/armor/f13/raider/supafly
-	head = /obj/item/clothing/head/helmet/f13/raider/supafly
+/datum/outfit/loadout/goldenone
+	name = "Golden One"
+	r_hand = /obj/item/gun/ballistic/automatic/marksman/sniper/gold
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/autopipe = 1,
-		/obj/item/gun/ballistic/automatic/autopipe = 1,
+		/obj/item/ammo_box/magazine/w308 = 2,
+		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
+		/obj/item/ammo_box/magazine/m14mm = 1,
+		/obj/item/melee/onehanded/machete/scrapsabre = 1,
+		)
+
+
+// RAIDER ENFORCER
+
+/datum/job/raider/enforcer_bandit
+	title = "Raider Bodyguard"
+	flag = F13ENFORCER
+	description = "Hand-picked by the King to keep him in power, and alive."
+	supervisors = "The King."
+	total_positions = 2
+	spawn_positions = 2
+	outfit = /datum/outfit/job/raider/enforcer_bandit
+	loadout_options = list(
+		/datum/outfit/loadout/professional,
+		/datum/outfit/loadout/hiredgun,
+		)
+
+/datum/outfit/job/raider/bandit/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_NICE_SHOT, src)
+
+/datum/outfit/job/raider/enforcer_bandit
+	name = "Raider Enforcer"
+	jobtype = /datum/job/raider/enforcer_bandit
+	uniform = /obj/item/clothing/under/f13/merccharm
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	gloves = /obj/item/clothing/gloves/fingerless
+	r_pocket = /obj/item/flashlight
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/storage/bag/money/small/wastelander)
+
+/datum/outfit/loadout/professional
+	name = "Professional"
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	suit = /obj/item/clothing/suit/armor/f13/metalarmor
+	head = /obj/item/clothing/head/helmet/f13/raider/arclight
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		)
+
+/datum/outfit/loadout/hiredgun
+	name = "Hired Gun"
+	head = /obj/item/clothing/head/helmet/raider/pilot
+	suit = /obj/item/clothing/suit/armor/raider/king
+	mask = /obj/item/clothing/mask/bandana/skull
+	gloves = /obj/item/clothing/gloves/f13/leather
+	r_hand =	/obj/item/gun/ballistic/revolver/revolver45/gunslinger
+	l_hand =	/obj/item/gun/ballistic/revolver/revolver45/gunslinger
+	backpack_contents = list(
+		/obj/item/ammo_box/a45lcbox = 1,
+		/obj/item/melee/onehanded/knife/trench = 1,
+		)
+
+
+// RAIDER - BANDIT
+/datum/job/raider/bandit
+	title = "Raider Bandit"
+	flag = F13RAIDER
+	total_positions = 6
+	spawn_positions = 6
+	description = "With a flexible conscience and long experience in salvaging and stealing, you know how to look out for number one, and that it's better to be one of the wolves than the sheep."
+	supervisors = "The King, obviously, and his Bodyguards."
+	selection_color = "#ff4747"
+	outfit = /datum/outfit/job/raider/bandit
+	loadout_options = list(
+		/datum/outfit/loadout/supafly,
+		/datum/outfit/loadout/painspike,
+		)
+
+/datum/outfit/job/raider/bandit/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lance)
+
+
+/datum/outfit/job/raider/bandit
+	name =	"Raider Bandit"
+	jobtype =	/datum/job/raider/bandit
+	uniform =	/obj/item/clothing/under/f13/raider_leather
+	shoes =	/obj/item/clothing/shoes/f13/military/leather
+	glasses = /obj/item/clothing/glasses/welding
+	gloves = /obj/item/clothing/gloves/fingerless
+	r_pocket =	/obj/item/flashlight
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/weldingtool/crude = 1,
+		)
+
+/datum/outfit/loadout/supafly
+	name = "Supa-fly"
+	suit = /obj/item/clothing/suit/armor/raider/rebel
+	head = /obj/item/clothing/head/helmet/f13/raider/supafly
+	r_hand = /obj/item/gun/ballistic/automatic/autopipe
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/autopipe = 2,
 		/obj/item/melee/onehanded/club/tireiron = 1,
 		/obj/item/storage/box/dice = 1,
-		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
 		)
 
-/datum/outfit/loadout/raider_yankee
-	name = "Yankee"
-	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
-	head = /obj/item/clothing/head/helmet/f13/raider/yankee
-	uniform = /obj/item/clothing/under/f13/batter
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/single_shotgun = 1,
-		/obj/item/ammo_box/shotgun/improvised = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/molotov = 1,
-		/obj/item/reagent_containers/glass/bottle/napalm = 1,
-		/obj/item/lighter/greyscale = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/rotgut = 1,
-		)
-
-/datum/outfit/loadout/raider_blast
-	name = "Blastmaster"
-	suit = /obj/item/clothing/suit/armor/f13/raider/blastmaster
-	head = /obj/item/clothing/head/helmet/f13/raider/blastmaster
-	backpack_contents = list(
-		/obj/item/gun/ballistic/rifle/mosin = 1,
-		/obj/item/ammo_box/a762 = 2,
-		/obj/item/kitchen/knife/butcher = 1,
-		/obj/item/grenade/homemade/firebomb = 3,
-		/obj/item/grenade/homemade/coffeepotbomb = 2,
-		)
-
-/datum/outfit/loadout/raider_sadist
-	name = "Sadist"
-	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
-	head = /obj/item/clothing/head/helmet/f13/raider/wastehound
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/colt6520 = 1,
-		/obj/item/ammo_box/l10mm = 1,
-		/obj/item/twohanded/spear = 1,
-		/obj/item/reagent_containers/pill/patch/turbo = 1,
-		)
-
-/datum/outfit/loadout/raider_painspike
+/datum/outfit/loadout/painspike
 	name = "Painspike"
 	suit = /obj/item/clothing/suit/armor/f13/raider/painspike
 	head = /obj/item/clothing/head/helmet/f13/raider/psychotic
@@ -417,22 +276,352 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/gun/ballistic/rifle/hunting/obrez = 1,
 		/obj/item/ammo_box/a308 = 3,
 		/obj/item/twohanded/baseball/golfclub = 1,
-		/obj/item/reagent_containers/hypospray/medipen/psycho = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/molotov = 1,
+		/obj/item/reagent_containers/glass/bottle/napalm = 1,
+		/obj/item/lighter/greyscale = 1,
 		)
 
-/datum/outfit/loadout/raider_extribal
-	name = "Tribal Outcast"
-	uniform = /obj/item/clothing/under/f13/exile/tribal
-	suit = /obj/item/clothing/suit/hooded/tribaloutcast
-	suit_store = /obj/item/melee/onehanded/club/warclub
-	shoes = /obj/item/clothing/shoes/sandal
-	belt = /obj/item/storage/backpack/spearquiver
-	box = /obj/item/storage/survivalkit_tribal
-	id = /obj/item/card/id/outcasttattoo
-	back = /obj/item/storage/backpack/satchel/explorer
+
+
+// --------------------------------------- THE PSYCHOS ----------------------------------------------- // 
+// Drug makers, junkies, and lost souls, these brain damaged lunatics are brutal but somehow manage to 
+// co-exist with the other two partners in the coalition. The Bishop keeps them together with a mix of 
+// vague religion and threats, and manufacturing drugs is what brings in the caps.
+
+/datum/job/raider/boss_psycho
+	title = "Raider Bishop"
+	faction = "Wastelander"
+	flag = RAIDERBISHOP
+	social_faction = "Raiders"
+	total_positions = 1
+	spawn_positions = 1
+	description = "Psychos are a rough crowd to say the least, and while they are united by some coked out religious traditions, just because they call their their leader the Bishop don't expect the gang to be choir boys. Try to outcrazy your men or rule with fear, either way, you are smart enough to know you need to stay on top or die, either from traitors or the other gangs."
+	supervisors = "No one. Might makes right."
+	selection_color = "#ff4747"
+	exp_requirements = 120
+	outfit = /datum/outfit/job/raider/boss_psycho
+	loadout_options = list(
+		/datum/outfit/loadout/pyro,
+		/datum/outfit/loadout/judgement,
+		)
+
+/datum/outfit/job/raider/boss_psycho
+	name =	"Raider Bishop"
+	jobtype =	/datum/job/raider/boss_psycho
+	head =	/obj/item/clothing/head/helmet/raider/bishop
+	suit =	/obj/item/clothing/suit/armor/f13/sulphitearmor
+	gloves =	/obj/item/clothing/gloves/f13/leather
+	r_pocket =	/obj/item/flashlight/flare
+	uniform =	/obj/item/clothing/under/f13/chaplain
+	shoes =	/obj/item/clothing/shoes/f13/military/plated
 	backpack_contents = list(
-		/obj/item/clothing/mask/cigarette/pipe = 1,
-		/obj/item/melee/onehanded/knife/bone = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/reagent_containers/pill/patch/turbo = 2,
+		/obj/item/flashlight/flare = 1,
+		/obj/item/storage/bag/money/small/raider/mobboss = 1,
+		/obj/item/storage/book/bible = 1,
+		)
+
+/datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+
+/datum/outfit/loadout/pyro
+	name = "Pyro"
+	r_hand = /obj/item/twohanded/fireaxe
+	backpack_contents = list(
+		/obj/item/m2flamethrowertank/salvagedflamer = 1,
+		/obj/item/reagent_containers/pill/patch/jet = 1,
+		/obj/item/ammo_box/jerrycan = 1,
+		)
+
+/datum/outfit/loadout/judgement
+	name = "Judgement"
+	r_hand = /obj/item/twohanded/sledgehammer/rockethammer
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
+		/obj/item/ammo_box/magazine/m44 = 2,
+		)
+
+
+// ENFORCER = STRONGMAN
+/datum/job/raider/enforcer_psycho
+	title = "Strongman Enforcer"
+	flag = RAIDERSTRONGMAN
+	total_positions = 2
+	spawn_positions = 2
+	description = "Perhaps you have visions from God, perhaps you just know to bet on a winning horse, either way you are the Bishops personal guards."
+	supervisors = "The Bishop."
+	selection_color = "#ff4747"
+	outfit = /datum/outfit/job/raider/enforcer_psycho
+	loadout_options = list(
+		/datum/outfit/loadout/batter,	// Shotgun bat, Smoke grenades
+		/datum/outfit/loadout/smiley,	// Bola, Mace glove, .44 snubnose
+		)
+
+/datum/outfit/job/raider/enforcer_psycho/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_NOSLIPALL, src)
+
+/datum/outfit/job/raider/enforcer_psycho
+	name =	"Strongman Enforcer"
+	jobtype =	/datum/job/raider/enforcer_psycho
+	head =	/obj/item/clothing/head/helmet/raider/wastehound
+	uniform =	/obj/item/clothing/under/jabroni
+	suit =	/obj/item/clothing/suit/armor/raider/slammer
+	gloves =	/obj/item/clothing/gloves/f13/handwraps
+	shoes =	/obj/item/clothing/shoes/f13/raidertreads
+	r_pocket =	/obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/turbo = 1,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		)
+
+/datum/outfit/loadout/batter
+	name = "Batter"
+	head =	/obj/item/clothing/head/helmet/raider/wastehound
+	r_hand = /obj/item/gun/ballistic/revolver/single_shotgun
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/improvised = 2,
+		/obj/item/grenade/smokebomb = 2,
+		/obj/item/clothing/mask/gas = 1,
+		)
+
+/datum/outfit/loadout/smiley
+	name =	"Smiley"
+	head =	/obj/item/clothing/head/helmet/raider/smiley
+	mask =	/obj/item/clothing/mask/whitefacemakeup
+	r_hand =	/obj/item/melee/unarmed/maceglove
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/m29/snub = 1,
+		/obj/item/ammo_box/m44box = 2,
+		/obj/item/reagent_containers/hypospray/medipen/psycho = 1,
+		/obj/item/restraints/legcuffs/bola = 1,
+		/obj/item/grenade/chem_grenade/cleaner = 1,
+		)
+
+
+// RAIDER - PSYCHO
+/datum/job/raider/psycho
+	title = "Raider Psycho"
+	flag = RAIDERTRIBAL
+	total_positions = 6
+	spawn_positions = 6
+	description = "You are are one of the Psychos, rejects united by their common faith and fondness of heavy drug use and its manufacturing."
+	supervisors = "The bishop and his strongmen."
+	selection_color = "#ff4747"
+	outfit = /datum/outfit/job/raider/psycho
+	loadout_options = list(
+		/datum/outfit/loadout/blastmaster,
+		/datum/outfit/loadout/warrior,
+		)
+
+/datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+
+/datum/outfit/job/raider/psycho
+	name =	"Raider Psycho"
+	jobtype =	/datum/job/raider/psycho
+	uniform =	/obj/item/clothing/under/f13/raiderharness
+	gloves =	/obj/item/clothing/gloves/f13/handwraps
+	shoes =	null
+	r_pocket =	/obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		)
+
+/datum/outfit/loadout/blastmaster
+	name =	"Blastmaster"
+	head =	/obj/item/clothing/head/helmet/f13/raider/eyebot
+	suit =	/obj/item/clothing/suit/armor/raider/iconoclast
+	r_hand =	/obj/item/grenade/homemade/firebomb
+	shoes =	/obj/item/clothing/shoes/f13/raidertreads
+	backpack_contents = list(
+		/obj/item/gun/ballistic/rifle/mosin = 1,
+		/obj/item/ammo_box/a762 = 2,
+		/obj/item/kitchen/knife/butcher = 1,
+		/obj/item/grenade/homemade/firebomb = 2,
+		/obj/item/grenade/homemade/coffeepotbomb = 2,
+		/obj/item/reagent_containers/pill/patch/jet = 1,
+		)
+
+/datum/outfit/loadout/warrior
+	name =	"Warrior"
+	head =	/obj/item/clothing/head/helmet/raider/warrior
+	suit =	/obj/item/clothing/suit/armor/raider
+	r_hand =	/obj/item/melee/onehanded/machete/scrapsabre
+	l_hand =	/obj/item/shield/riot/buckler/stop
+	shoes = 	/obj/item/clothing/shoes/f13/rag
+	backpack_contents = list(
+		/obj/item/reagent_containers/syringe/medx = 1,
+		/obj/item/gun/ballistic/revolver/police = 1,
+		/obj/item/ammo_box/c38box/improvised = 1,
+		)
+
+
+// --------------------------------------- THE TRIBE ----------------------------------------------- // 
+// A tribe forced into the coaliton by the other two gangs who wanted their gunsmiths and their women,
+//but the tribe was too strong to be enslaved. A compromise was made, and the tribe may grumble as they
+// provide guns and brothels, but they love the share of caps that come their way, and the new security.
+
+// BOSS = CHIEFTAIN 
+/datum/job/raider/boss_tribal
+	title = "Raider Chieftain"
+	flag = RAIDERCHIEFTAIN
+	total_positions = 1
+	spawn_positions = 1
+	description = "You lead the tribe, a tough job as the weakest of the three gangs, and with least respect. You know the others need your gunsmiths and desire your women, but if bartering fails, your berserkers are fearsome warriors. Even a molerat can sever a jugular when cornered...."
+	supervisors = "No one, but you must maintain the approval of your blood kin and the respect of the other two gang leaders if possible."
+	selection_color = "#ff4747"
+	exp_requirements = 120
+	outfit = /datum/outfit/job/raider/boss_tribal
+
+/datum/outfit/job/raider/boss_tribal/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
+	ADD_TRAIT(H, TRAIT_TRIBAL, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+
+/datum/outfit/job/raider/boss_tribal
+	name =	"Raider Chieftain"
+	jobtype =	/datum/job/raider/boss_tribal
+	head =	/obj/item/clothing/head/helmet/raider/chieftain
+	r_pocket =	/obj/item/flashlight/lantern
+	uniform =	/obj/item/clothing/under/f13/merca
+	shoes =	/obj/item/clothing/shoes/f13/peltboots
+	suit =	/obj/item/clothing/suit/hooded/tribal/chief
+	r_hand =	/obj/item/gun/ballistic/revolver/winchesterrebored
+	gloves =	/obj/item/clothing/gloves/ring/diamond
+	box = /obj/item/storage/survivalkit_tribal/chief
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/storage/bag/money/small/raider/mobboss = 1,
+		/obj/item/ammo_box/a50MG/improvised = 1,
+		/obj/item/gun/ballistic/revolver/hobo/knifegun = 1,
+		/obj/item/toy/cards/deck = 1,)
+
+
+// ENFORCER = BERSERKER
+/datum/job/raider/enforcer_tribal
+	title = "Berserker Enforcer"
+	flag = RAIDERBERSERKER
+	total_positions = 2
+	spawn_positions = 2
+	description = "The chieftain is your close kin and it's your purpose in life to make sure they remain respected, and alive. It is custom for warriors of the tribe to sniff the rage powder before battle, and to ritualistically consume the cooked flesh of their killed foe."
+	supervisors = "The Chieftain."
+	selection_color = "#ff4747"
+	outfit = /datum/outfit/job/raider/enforcer_tribal
+	loadout_options = list(
+		/datum/outfit/loadout/brawler,	// 2 x Knuckleguns
+		/datum/outfit/loadout/laser,	// Laser Musket, Trench knife
+		)
+
+/datum/outfit/job/raider/enforcer_tribal/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_BERSERKER, src)
+	ADD_TRAIT(H, TRAIT_TRIBAL, src)
+	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
+
+/datum/outfit/job/raider/enforcer_tribal
+	name = "Raider Berserker"
+	jobtype = /datum/job/raider/enforcer_tribal
+	uniform = /obj/item/clothing/under/pants/f13/warboy
+	shoes =	/obj/item/clothing/shoes/f13/peltboots
+	box = /obj/item/storage/survivalkit_tribal
+	r_pocket = /obj/item/flashlight/lantern
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 2,
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		/obj/item/storage/backpack/spearquiver = 1,
+		)
+
+/datum/outfit/loadout/brawler
+	name = "Brawler"
+	head = /obj/item/clothing/head/helmet/raider/berserker
+	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
+	r_hand = /obj/item/gun/ballistic/revolver/hobo/knucklegun
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,
+		/obj/item/ammo_box/c38box = 1,
+		)
+
+/datum/outfit/loadout/laser
+	name =	"Laser"
+	head =	/obj/item/clothing/head/helmet/raider/berserkeralt
+	suit =	/obj/item/clothing/suit/armor/raider/bone
+	r_hand = /obj/item/gun/ballistic/rifle/hobo/lasmusket
+	backpack_contents = list(
+		/obj/item/ammo_box/lasmusket = 1,
+		/obj/item/melee/onehanded/machete = 1,
+		)
+
+
+// RAIDER - TRIBAL
+/datum/job/raider/tribal
+	title = "Raider Tribal"
+	flag = RAIDERTRIBAL
+	total_positions = 6
+	spawn_positions = 6
+	description = "You are a member of the tribe, bound by blood to a tough life in the wastes, but at least you have many brothers and sisters. Men and women are expected to work hard, whether it be hunting and fighting, or working in the brothel and gathering food. Those who do not work do not eat."
+	supervisors = "The chieftain and berserkers first, the other bosses and enforcers second."
+	selection_color = "#ff4747"
+	outfit = /datum/outfit/job/raider/tribal
+	loadout_options = list(
+		/datum/outfit/loadout/forager,
+		/datum/outfit/loadout/hunter,
+		)
+
+/datum/outfit/job/raider/tribal/pre_equip(mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
+	ADD_TRAIT(H, TRAIT_TRIBAL, src)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/zipgun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/pepperbox)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/piperifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/autopiperifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/shotgunbat)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/knucklegun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/knifegun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/lasmusket)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/plasmamusket)
+
+
+/datum/outfit/job/raider/tribal
+	name =	"Raider Tribal"
+	jobtype =	/datum/job/raider/tribal
+	uniform =	/obj/item/clothing/under/f13/exile/tribal
+	shoes =	/obj/item/clothing/shoes/f13/peltboots
+	r_pocket =	/obj/item/flashlight/lantern
+	box =	/obj/item/storage/survivalkit_tribal
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/wastelander = 1,
+		)
+
+/datum/outfit/loadout/forager
+	name =	"Forager"
+	suit =	/obj/item/clothing/suit/hooded/tribaloutcast
+	r_hand =	/obj/item/melee/unarmed/tigerclaw
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/hobo/zipgun = 1,
+		/obj/item/ammo_box/c9mm = 1,
+		/obj/item/kitchen/knife = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
+		)
+
+/datum/outfit/loadout/hunter
+	name = "Hunter"
+	head =	/obj/item/clothing/head/helmet/raider
+	suit =	/obj/item/clothing/suit/armor/raider/tribal/ragged
+	r_hand =	/obj/item/gun/ballistic/revolver/hobo/pepperbox
+	backpack_contents = list(
+		/obj/item/ammo_box/c10mm = 1,
+		/obj/item/melee/onehanded/club/warclub = 1,
 		)
 
 /*

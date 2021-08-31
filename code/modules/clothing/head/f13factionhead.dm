@@ -47,6 +47,55 @@
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))*/
 
+
+
+
+//Enclave / Remnant
+/obj/item/clothing/head/donor/enclave
+	name = "enclave forge cap"
+	desc = "(III) A resistant, black forage cap issued to Enclave soldiers."
+	icon_state = "enclave_cap"
+	item_state = "enclave_cap"
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/combat/enclave
+	name = "enclave combat helmet"
+	desc = "(VI) An intimidating helmet that is issued with it's corresponding suit."
+	icon_state = "enclave_new"
+	item_state = "enclave_new"
+	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
+/obj/item/clothing/head/helmet/f13/combat/remnant
+	name = "remnant combat helmet"
+	desc = "(VI) A dark helmet with yellow lenses, used commonly in espionage or shadow ops."
+	icon_state = "remnant_helmet"
+	item_state = "remnant_helmet"
+	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
+/obj/item/clothing/head/helmet/f13/envirosuit
+	name = "enclave envirosuit hood"
+	icon_state = "envirohead"
+	item_state = "envirohead"
+	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
+	clothing_flags = THICKMATERIAL
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+
+/obj/item/clothing/head/soft/f13/enclave
+	name = "officer hat"
+	desc = "(I) A standard-issue Enclave officer's cap."
+	icon_state = "enclave"
+	item_color = "enclave"
+
+
+
+
+
+
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
 	name = "base raider helmet"
@@ -972,72 +1021,3 @@
 
 
 
-//Talon
-/obj/item/clothing/head/helmet/f13/mercenary
-	name = "steel helmet"
-	desc = "(V) A green steel helmet."
-	icon = 'icons/fallout/clothing/helmets.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
-	icon_state = "merc"
-	item_state = "merc"
-	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
-
-/obj/item/clothing/head/helmet/f13/mercenary/cover
-	desc = "(V) A green steel helmet with camouflage helmet cover."
-	icon_state = "merc_cover"
-	item_state = "merc_cover"
-
-/obj/item/clothing/head/helmet/f13/mercenary/heavy
-	desc = "(VI) A green steel helmet with a thick faceplate, it can be pushed back on the head to make breathing and speaking easier."
-	icon_state = "merc_heavy"
-	item_state = "merc_heavy"
-	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
-	actions_types = list(/datum/action/item_action/toggle)
-
-/obj/item/clothing/head/helmet/f13/mercenary/heavy/attack_self(mob/user)
-	weldingvisortoggle(user)
-	icon_state = "merc_heavyup"
-	item_state = "merc_heavyup"
-	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
-
-
-//Enclave / Remnant
-/obj/item/clothing/head/donor/enclave
-	name = "enclave forge cap"
-	desc = "(III) A resistant, black forage cap issued to Enclave soldiers."
-	icon_state = "enclave_cap"
-	item_state = "enclave_cap"
-	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
-
-/obj/item/clothing/head/helmet/f13/combat/enclave
-	name = "enclave combat helmet"
-	desc = "(VI) An intimidating helmet that is issued with it's corresponding suit."
-	icon_state = "enclave_new"
-	item_state = "enclave_new"
-	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
-
-/obj/item/clothing/head/helmet/f13/combat/remnant
-	name = "remnant combat helmet"
-	desc = "(VI) A dark helmet with yellow lenses, used commonly in espionage or shadow ops."
-	icon_state = "remnant_helmet"
-	item_state = "remnant_helmet"
-	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
-
-/obj/item/clothing/head/helmet/f13/envirosuit
-	name = "enclave envirosuit hood"
-	icon_state = "envirohead"
-	item_state = "envirohead"
-	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
-	clothing_flags = THICKMATERIAL
-	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
-	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
-	strip_delay = 60
-	equip_delay_other = 60
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
-
-/obj/item/clothing/head/soft/f13/enclave
-	name = "officer hat"
-	desc = "(I) A standard-issue Enclave officer's cap."
-	icon_state = "enclave"
-	item_color = "enclave"

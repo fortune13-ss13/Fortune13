@@ -276,8 +276,8 @@
 	desc = "A snubnose variant of the commonplace .44 magnum. An excellent holdout weapon for self defense."
 	icon_state = "m29_snub"
 	w_class = WEIGHT_CLASS_SMALL
-	extra_damage = -2
-	spread = 3
+	extra_damage = -1
+	spread = 2
 
 
 //.44 single action		 			Keywords: .44, Single action, 6 rounds cylinder, Long barrel

@@ -760,7 +760,7 @@
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/gold
 	name = "golden sniper rifle"
-	desc = "A DKS 501, chambered in .308 Winchester. This one has a gold trim and the words 'Old Cassius' engraved into the stock."
+	desc = "A DKS 501, chambered in .308 Winchester. This one has a gold trim and the words 'Hail to the King' engraved into the stock."
 	icon_state = "gold_sniper"
 	item_state = "gold_sniper"
 

@@ -383,8 +383,7 @@ Raider
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/scavenger,
 	/datum/outfit/loadout/settler,
-	/datum/outfit/loadout/bosremnant,
-	/datum/outfit/loadout/warrior,)
+	/datum/outfit/loadout/bosremnant,)
 	//datum/outfit/loadout/wastelander_desert_ranger)
 
 /datum/outfit/job/wasteland/f13wastelander
@@ -513,17 +512,7 @@ Raider
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple=2)
 
-/datum/outfit/loadout/warrior
-	name = "Wasteland Warrior"
-	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/f13/raidertreads
-	suit = /obj/item/clothing/suit/armor/light/wastewar
-	head = /obj/item/clothing/head/helmet/f13/wastewarhat
-	glasses = /obj/item/clothing/glasses/welding
-	l_hand = /obj/item/shield/riot/buckler/stop
-	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/scrapsabre = 1,
-		)
+
 /*
 /datum/outfit/loadout/ncrcitizen
 	name = "NCR Citizen"
@@ -650,72 +639,7 @@ Raider
 		/obj/item/reagent_containers/pill/patch/turbo = 1,
 		)
 
-/datum/job/wasteland/f13mobboss
-	title = "Den Mob Boss"
-	flag = F13MOBBOSS
-	faction = "Wastelander"
-	social_faction = "Raiders"
-	total_positions = 1
-	spawn_positions = 1
-	description = "The mob rules in Yuma, and you're on top. Keeping the loose association of Khans, outlaws, and other no-goods together you maintain order in The Den by force. Ensure that all inhabitants of the Den obey their rules, and spread your influence over the wasteland. Be careful though - even your own men can't be trusted."
-	supervisors = "Whatever god you pray to. Sky's the limit!"
-	selection_color = "#ff4747"
-	exp_requirements = 1000
-	exp_type = EXP_TYPE_OUTLAW
 
-	outfit = /datum/outfit/job/wasteland/f13mobboss
-
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
-
-	loadout_options = list(
-		/datum/outfit/loadout/mafiosoboss,
-		/datum/outfit/loadout/khanboss,
-		/datum/outfit/loadout/gamblerboss,
-		)
-
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis/f13mayor,
-			/datum/job/oasis/f13sheriff,
-			/datum/job/wasteland/f13detective,
-		),
-		/datum/matchmaking_pref/patron = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-	)
-
-/datum/outfit/job/wasteland/f13mobboss
-	name = "Den Mob Boss"
-	jobtype = /datum/job/wasteland/f13mobboss
-	id = /obj/item/card/id/dentattoo
-	belt = /obj/item/storage/belt/military/assault
-	ears = /obj/item/radio/headset/headset_den
-	r_pocket = /obj/item/flashlight/seclite
-	uniform = /obj/item/clothing/under/suit/white
-	backpack =	/obj/item/storage/backpack/satchel
-	satchel = 	/obj/item/storage/backpack/satchel
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
-		/obj/item/restraints/handcuffs=1, \
-		/obj/item/storage/bag/money/small/raider/mobboss)
-
-/datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H)
-	..()
-	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-
-/datum/outfit/job/wasteland/f13mobboss/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-
-	if(!H.gang)
-		var/datum/gang/denmob/DM = GLOB.denmob
-		GLOB.all_gangs |= DM
-		DM.add_member(H)
-		H.gang = DM
 
 /datum/outfit/loadout/khanboss
 	name = "Great Khan Boss"
@@ -739,22 +663,6 @@ Raider
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/tommygunm45 = 1,
 		/obj/item/melee/onehanded/knife/switchblade = 1,
-		)
-
-/datum/outfit/loadout/gamblerboss
-	name = "Gambler Boss"
-	l_hand = /obj/item/clothing/gloves/ring/diamond
-	suit = /obj/item/clothing/suit/armor/bulletproof
-	uniform = /obj/item/clothing/under/f13/bartenderalt
-	head = /obj/item/clothing/head/f13/purple/mobster
-	shoes = /obj/item/clothing/shoes/jackboots
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/pistol14/compact = 1,
-		/obj/item/ammo_box/magazine/m14mm = 3,
-		/obj/item/storage/belt/holster = 1,
-		/obj/item/grenade/frag = 1,
-		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/toy/cards/deck = 1,
 		)
 
 
