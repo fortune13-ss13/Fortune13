@@ -464,8 +464,9 @@ Raider
 	shoes = /obj/item/clothing/shoes/combat/swat
 	l_hand = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec = 3,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/reagent_containers/food/snacks/f13/mre = 1,
+		/obj/item/radio/headset/headset_bos = 1,
 		)
 
 /datum/outfit/loadout/medic

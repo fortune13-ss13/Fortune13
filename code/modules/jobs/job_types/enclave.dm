@@ -289,7 +289,8 @@
 	suit_store =	/obj/item/gun/ballistic/automatic/pistol/n99/enclave
 	accessory =	/obj/item/clothing/accessory/ncr/SPC
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
+		/obj/item/ammo_box/magazine/m10mm_adv = 3,
+		/obj/item/suppressor = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/intel = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/storage/box/mre/menu2 = 1,
