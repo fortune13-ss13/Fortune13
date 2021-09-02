@@ -94,7 +94,7 @@
 	outfit = /datum/outfit/job/enclave/armor
 
 /datum/outfit/job/enclave/armor
-	name = "Enclave Armored Infantry"
+	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/armor
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	mask =	/obj/item/clothing/mask/gas/enclave
@@ -125,7 +125,7 @@
 // PRIVATE
 
 /datum/job/enclave/soldier
-	title = "Enclave Soldier"
+	title = "Enclave Private"
 	flag = F13USPRIVATE
 	faction = "Enclave"
 	total_positions = 4
@@ -142,7 +142,7 @@
 	outfit = /datum/outfit/job/enclave/soldier
 
 /datum/outfit/job/enclave/soldier
-	name =	"Enclave Soldier"
+	name =	"Enclave Private"
 	jobtype =	/datum/job/enclave/soldier
 	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
 	mask =	/obj/item/clothing/mask/gas/enclave
@@ -150,7 +150,7 @@
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave
 	accessory =	/obj/item/clothing/accessory/enclave/soldier
-	suit_store =	/obj/item/gun/ballistic/automatic/assault_rifle
+	suit_store =	/obj/item/gun/ballistic/automatic/assault_carbine
 
 	backpack_contents = list(
 		/obj/item/grenade/smokebomb = 1,
@@ -168,8 +168,8 @@
 	title = "Enclave Corporal"
 	flag = F13USCORPORAL
 	faction = "Enclave"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are a member of a dying breed, true Americans, but you will do what you can to help revitalize the nation, and protect her from all enemies, foreign and domestic."
 	supervisors = "You report to the Sergeants directly."
 	selection_color = "#323232"
@@ -192,7 +192,7 @@
 	gloves =	/obj/item/clothing/gloves/rifleman
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
 	belt =	/obj/item/storage/belt/military/assault/enclave
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
+	suit_store = /obj/item/gun/ballistic/automatic/xl70e3
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 1,
@@ -216,8 +216,8 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	faction = "Enclave"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
 	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
 	enforces = "You must maintain the secrecy of organization."
@@ -270,8 +270,8 @@
 	title = "Intelligence Specialist"
 	flag = F13USMEDIC
 	faction = "Enclave"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are a US Secret Service Operative broadly tasked with ensuring the continued existence of your current post, you're free to assist the scientists, go completely undercover within another organisation, or simply act as a Paramedic for local forces."
 	supervisors = "The United States Secret Service"
 
