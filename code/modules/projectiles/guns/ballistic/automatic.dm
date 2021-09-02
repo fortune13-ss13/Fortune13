@@ -1175,6 +1175,7 @@
 	suppressor_x_offset = 31
 	suppressor_y_offset = 15
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
+	untinkerable = TRUE
 
 
 // BETA STUFF // =Obsolete
