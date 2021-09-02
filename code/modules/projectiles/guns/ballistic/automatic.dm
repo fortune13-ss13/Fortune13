@@ -1151,20 +1151,30 @@
 	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
 
 /obj/item/gun/ballistic/automatic/xl70e3
-	name = "xl70e3"
+	name = "XL70E3"
 	desc = "This was an experimental weapon at the time of the war. Manufactured, primarily, from high-strength polymers, the weapon is almost indestructible. It's light, fast firing, accurate, and can be broken down without the use of any tools. Chamebered in 5.56mm."
 	icon_state = "xl70e3"
 	item_state = "xl70e3"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 2
+	extra_damage = 3
+	fire_delay = 4
 	burst_shot_delay = 2
 	spawnwithmagazine = TRUE
 	spread = 4
-	can_attachments = TRUE
+	can_attachments = FALSE
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
+	can_bayonet = TRUE
+	bayonet_state = "rifles"
+	knife_x_offset = 22
+	knife_y_offset = 12
+	can_suppress = TRUE
+	suppressor_state = "suppressor"
+	suppressor_x_offset = 31
+	suppressor_y_offset = 15
+	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 
 
 // BETA STUFF // =Obsolete
