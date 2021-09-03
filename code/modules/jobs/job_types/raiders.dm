@@ -132,7 +132,6 @@
 	name = "Raider Boss"
 	jobtype = /datum/job/raider/boss_bandit
 	suit = /obj/item/clothing/suit/armor/raider/leadcoat
-	belt = /obj/item/storage/belt/champion
 	neck = /obj/item/clothing/neck/necklace/dope
 	r_pocket = /obj/item/flashlight
 	head = /obj/item/clothing/head/helmet/raider/king
@@ -348,7 +347,7 @@
 
 // ENFORCER = STRONGMAN
 /datum/job/raider/enforcer_psycho
-	title = "Strongman Enforcer"
+	title = "Raider Strongman"
 	flag = RAIDERSTRONGMAN
 	total_positions = 2
 	spawn_positions = 2
@@ -368,7 +367,7 @@
 	ADD_TRAIT(H, TRAIT_NOSLIPALL, src)
 
 /datum/outfit/job/raider/enforcer_psycho
-	name =	"Strongman Enforcer"
+	name =	"Raider Strongman"
 	jobtype =	/datum/job/raider/enforcer_psycho
 	head =	/obj/item/clothing/head/helmet/raider/wastehound
 	uniform =	/obj/item/clothing/under/jabroni
@@ -381,14 +380,19 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		)
 
-/datum/outfit/loadout/batter
-	name = "Batter"
-	head =	/obj/item/clothing/head/helmet/raider/wastehound
-	r_hand = /obj/item/gun/ballistic/revolver/single_shotgun
+/datum/outfit/loadout/blastmaster
+	name =	"Blastmaster"
+	head =	/obj/item/clothing/head/helmet/f13/raider/eyebot
+	suit =	/obj/item/clothing/suit/armor/raider/iconoclast
+	r_hand =	/obj/item/grenade/homemade/firebomb
+	shoes =	/obj/item/clothing/shoes/f13/raidertreads
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/improvised = 2,
-		/obj/item/grenade/smokebomb = 2,
-		/obj/item/clothing/mask/gas = 1,
+		/obj/item/gun/ballistic/rifle/mosin = 1,
+		/obj/item/ammo_box/a762 = 2,
+		/obj/item/kitchen/knife/butcher = 1,
+		/obj/item/grenade/homemade/firebomb = 2,
+		/obj/item/grenade/homemade/coffeepotbomb = 2,
+		/obj/item/reagent_containers/pill/patch/jet = 1,
 		)
 
 /datum/outfit/loadout/smiley
@@ -430,25 +434,20 @@
 	jobtype =	/datum/job/raider/psycho
 	uniform =	/obj/item/clothing/under/f13/raiderharness
 	gloves =	/obj/item/clothing/gloves/f13/handwraps
-	shoes =	null
+	shoes = 	/obj/item/clothing/shoes/f13/rag
 	r_pocket =	/obj/item/flashlight/flare
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		)
 
-/datum/outfit/loadout/blastmaster
-	name =	"Blastmaster"
-	head =	/obj/item/clothing/head/helmet/f13/raider/eyebot
-	suit =	/obj/item/clothing/suit/armor/raider/iconoclast
-	r_hand =	/obj/item/grenade/homemade/firebomb
-	shoes =	/obj/item/clothing/shoes/f13/raidertreads
+/datum/outfit/loadout/batter
+	name = "Batter"
+	head =	/obj/item/clothing/head/helmet/raider/wastehound
+	suit =	/obj/item/clothing/suit/armor/raider/slammer
+	r_hand = /obj/item/gun/ballistic/revolver/single_shotgun
 	backpack_contents = list(
-		/obj/item/gun/ballistic/rifle/mosin = 1,
-		/obj/item/ammo_box/a762 = 2,
-		/obj/item/kitchen/knife/butcher = 1,
-		/obj/item/grenade/homemade/firebomb = 2,
-		/obj/item/grenade/homemade/coffeepotbomb = 2,
-		/obj/item/reagent_containers/pill/patch/jet = 1,
+		/obj/item/ammo_box/shotgun/improvised = 2,
+		/obj/item/grenade/smokebomb = 1,
 		)
 
 /datum/outfit/loadout/warrior
@@ -457,7 +456,6 @@
 	suit =	/obj/item/clothing/suit/armor/raider
 	r_hand =	/obj/item/melee/onehanded/machete/scrapsabre
 	l_hand =	/obj/item/shield/riot/buckler/stop
-	shoes = 	/obj/item/clothing/shoes/f13/rag
 	backpack_contents = list(
 		/obj/item/reagent_containers/syringe/medx = 1,
 		/obj/item/gun/ballistic/revolver/police = 1,
@@ -482,6 +480,11 @@
 	exp_requirements = 120
 	outfit = /datum/outfit/job/raider/boss_tribal
 
+	loadout_options = list(
+		/datum/outfit/loadout/insect,
+		/datum/outfit/loadout/cavebear,
+		)
+
 /datum/outfit/job/raider/boss_tribal/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
@@ -491,25 +494,41 @@
 /datum/outfit/job/raider/boss_tribal
 	name =	"Raider Chieftain"
 	jobtype =	/datum/job/raider/boss_tribal
-	head =	/obj/item/clothing/head/helmet/raider/chieftain
 	r_pocket =	/obj/item/flashlight/lantern
 	uniform =	/obj/item/clothing/under/f13/merca
 	shoes =	/obj/item/clothing/shoes/f13/peltboots
-	suit =	/obj/item/clothing/suit/hooded/tribal/chief
-	r_hand =	/obj/item/gun/ballistic/revolver/winchesterrebored
-	gloves =	/obj/item/clothing/gloves/ring/diamond
+	gloves =	/obj/item/clothing/gloves/ring
 	box = /obj/item/storage/survivalkit_tribal/chief
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/storage/bag/money/small/raider/mobboss = 1,
-		/obj/item/ammo_box/a50MG/improvised = 1,
+		)
+
+/datum/outfit/loadout/insect
+	name =	"Lord of Flies"
+	head = /obj/item/clothing/head/helmet/f13/raider/supafly
+	suit =	/obj/item/clothing/suit/armor/f13/chitinarmor
+	r_hand = /obj/item/gun/ballistic/automatic/hobo/destroyer
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/greasegun = 2,
+		/obj/item/ammo_box/a762 = 2,
 		/obj/item/gun/ballistic/revolver/hobo/knifegun = 1,
-		/obj/item/toy/cards/deck = 1,)
+		)
+
+/datum/outfit/loadout/cavebear
+	name =	"Lord of Bears"
+	head =	/obj/item/clothing/head/helmet/raider/cavebear
+	suit =	/obj/item/clothing/suit/armor/raider/bone
+	r_hand =	/obj/item/gun/ballistic/revolver/winchesterrebored
+	backpack_contents = list(
+		/obj/item/ammo_box/a50MG/improvised = 1,
+		/obj/item/melee/onehanded/club/warclub = 1
+		)
 
 
 // ENFORCER = BERSERKER
 /datum/job/raider/enforcer_tribal
-	title = "Berserker Enforcer"
+	title = "Raider Berserker"
 	flag = RAIDERBERSERKER
 	total_positions = 2
 	spawn_positions = 2

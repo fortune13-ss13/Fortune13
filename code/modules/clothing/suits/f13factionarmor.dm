@@ -822,9 +822,10 @@
 
 /obj/item/clothing/suit/armor/raider/iconoclast
 	name = "iconoclast raider armor"
-	desc = "(III) A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
+	desc = "(IV) A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 30, "acid" = 30)
 
 /obj/item/clothing/suit/armor/raider/leadcoat
 	name = "lead plated coat"
@@ -836,10 +837,10 @@
 
 /obj/item/clothing/suit/armor/raider/slammer
 	name = "slammer raider armor"
-	desc = "(IV) Crude armor made from tires and dirty thick layers of clothing and metal bits."
+	desc = "(III) Crude armor made from tires and dirty thick layers of clothing and metal bits."
 	icon_state = "slam"
 	item_state = "slam"
-	armor = list("tier" = 4, "energy" = 15, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 30, "acid" = 30)
+	armor = list("tier" = 3, "energy" = 15, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 30, "acid" = 30)
 	flags_inv = HIDEJUMPSUIT
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'

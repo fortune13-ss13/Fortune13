@@ -52,14 +52,21 @@
 	icon_state = "warrior"
 	item_state = "warrior"
 
-/obj/item/clothing/head/helmet/raider/chieftain
-	name = "top hat"
-	desc = "(IV) Under this stylish hat, a hardened steel skullcap is hidden."
-	icon_state = "chieftain"
-	item_state = "chieftain"
+
+/obj/item/clothing/head/helmet/raider/cavebear
+	name = "bear pelt"
+	desc = "(IV) The pelt of a Yao Guai, made into a helmet by adding bone and metal."
+	icon_state = "bearpelt"
+	item_state = "bearpelt"
+	visor_flags_inv = HIDEEARS
 	armor = list("tier" = 4, "linemelee" = 0, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
-	dynamic_hair_suffix = ""
-	flags_inv = HIDEEARS
+
+/obj/item/clothing/head/helmet/raider/cavebear/attack_self(mob/user)
+	weldingvisortoggle(user)
+	icon_state = "bearpelt_alt"
+	item_state = "bearpelt_alt"
+	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	armor = list("tier" = 4, "linemelee" = 0, "energy" = 25, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 25, "acid" = 10)
 
 /obj/item/clothing/head/helmet/raider/berserker
 	name = "berserker helm"
@@ -162,20 +169,14 @@
 	armor = list("tier" = 5, "energy" = 35, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
-
 /obj/item/clothing/head/helmet/raider/king
-	name = "raider king helmet"
-	desc = "(IV) Comes with a crown and a pair of polarizing goggles."
-	icon_state = "king"
-	item_state = "king"
+	name = "raider king hat"
+	desc = "(IV) A kevlar skull cap under a fancy top hat."
+	icon_state = "tophat"
+	item_state = "tophat"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	darkness_view = 12
-	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
-	glass_colour_type = /datum/client_colour/glass_colour/lightorange
-
-
+	dynamic_hair_suffix = ""
+	flags_inv = HIDEEARS
 
 
 

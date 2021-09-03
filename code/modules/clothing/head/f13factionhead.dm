@@ -118,12 +118,13 @@
 
 /obj/item/clothing/head/helmet/f13/raider/wastehound
 	name = "wastehound raider helmet"
-	desc = "(IV) A sack hood made out of a suspicious leather with tufts of hair sticking out. This mask would make Leatherface proud."
+	desc = "(III) A sack hood made out of a suspicious leather with tufts of hair sticking out. This mask would make Leatherface proud."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "raider-wastehound"
 	item_state = "raider-wastehound"
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	armor = list("tier" = 3, "energy" = 25, "bomb" = 30, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/wastehound/Initialize() //HQ parts reinforcement
 	. = ..()
@@ -131,11 +132,10 @@
 
 /obj/item/clothing/head/helmet/f13/raider/arclight
 	name = "arclight raider helmet"
-	desc = "(III) Welding mask with rare polarizing glass thats somehow still in working order. A treasured item in the wasteland."
+	desc = "(IV) Welding mask with rare polarizing glass thats somehow still in working order. A treasured item in the wasteland."
 	icon_state = "arclight"
 	item_state = "arclight"
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
-	armor = list("tier" = 3, "energy" = 25, "bomb" = 30, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 	flash_protect = 2
 	tint = 0.5
 
