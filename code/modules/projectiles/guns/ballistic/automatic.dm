@@ -795,7 +795,7 @@
 	spread = 8
 	recoil = 0.1
 	can_attachments = TRUE
-	can_bayonet = FALSE
+	can_bayonet = TRUE
 	bayonet_state = "rifles"
 	knife_x_offset = 23
 	knife_y_offset = 11
@@ -896,6 +896,10 @@
 	spread = 9
 	recoil = 0.1
 	can_attachments = TRUE
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 22
+	knife_y_offset = 21
 	can_scope = TRUE
 	scope_state = "scope_short"
 	scope_x_offset = 4
