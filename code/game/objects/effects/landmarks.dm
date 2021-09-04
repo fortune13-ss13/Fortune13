@@ -607,39 +607,39 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	icon_state = "Pusher"
 
 
-/obj/effect/landmark/start/raiderking
+/obj/effect/landmark/start/f13/raiderking
 	name = "Raider Boss"
 	icon_state = "raiderking"
 
-/obj/effect/landmark/start/raiderbodyguard
+/obj/effect/landmark/start/f13/raiderbodyguard
 	name = "Raider Bodyguard"
 	icon_state = "raiderbodyguard"
 
-/obj/effect/landmark/start/raiderbandit
+/obj/effect/landmark/start/f13/raiderbandit
 	name = "Raider Bandit"
 	icon_state = "raiderbandit"
 
-/obj/effect/landmark/start/raiderbishop
+/obj/effect/landmark/start/f13/raiderbishop
 	name = "Raider Bishop"
 	icon_state = "raiderbishop"
 
-/obj/effect/landmark/start/raiderstrongman
+/obj/effect/landmark/start/f13/raiderstrongman
 	name = "Raider Strongman"
 	icon_state = "raiderstrongman"
 
-/obj/effect/landmark/start/raiderpsycho
+/obj/effect/landmark/start/f13/raiderpsycho
 	name = "Raider Psycho"
 	icon_state = "raiderpsycho"
 
-/obj/effect/landmark/start/raiderchieftain
+/obj/effect/landmark/start/f13/raiderchieftain
 	name = "Raider Chieftain"
 	icon_state = "raiderchieftain"
 
-/obj/effect/landmark/start/raiderberserker
+/obj/effect/landmark/start/f13/raiderberserker
 	name = "Raider Berserker"
 	icon_state = "raiderberserker"
 
-/obj/effect/landmark/start/raidertribal
+/obj/effect/landmark/start/f13/raidertribal
 	name = "Raider Tribal"
 	icon_state = "raidertribal"
 

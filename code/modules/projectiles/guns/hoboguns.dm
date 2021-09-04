@@ -201,6 +201,7 @@
 	fire_delay = 8
 	burst_shot_delay = 5
 	spread = 24
+	recoil = 0.25
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 
 /obj/item/gun/ballistic/automatic/autopipe/update_icon_state()

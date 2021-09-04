@@ -862,6 +862,8 @@
 /obj/item/clothing/suit/armor/raider/bone
 	name = "bone armor"
 	desc = "(IV) Armor made from bone tied together by leather strips. Animal bones? Who knows."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "bone"
 	item_state = "bone"
 	armor = list("tier" = 4, "energy" = 15, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 30, "acid" = 30)

@@ -34,7 +34,7 @@
 
 /obj/item/clothing/head/helmet/raider
 	name = "fiend helmet"
-	desc = "(III) A leather cap cobbled together with a brahmin skull, for that angry tribal look."
+	desc = "(III) A leather cap cobbled together with a goat skull, for that angry tribal look."
 	icon_state = "fiend"
 	item_state = "fiend"
 	icon = 'icons/fallout/clothing/helmets.dmi'
@@ -52,6 +52,11 @@
 	icon_state = "warrior"
 	item_state = "warrior"
 
+/obj/item/clothing/head/helmet/raider/weld
+	name = "raider improvised helmet"
+	desc = "(III) A old welding mask, without its dark glass and various additions and decorations."
+	icon_state = "raiderweld"
+	item_state = "raiderweld"
 
 /obj/item/clothing/head/helmet/raider/cavebear
 	name = "bear pelt"
@@ -60,12 +65,16 @@
 	item_state = "bearpelt"
 	visor_flags_inv = HIDEEARS
 	armor = list("tier" = 4, "linemelee" = 0, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	actions_types = list(/datum/action/item_action/toggle)
 
 /obj/item/clothing/head/helmet/raider/cavebear/attack_self(mob/user)
 	weldingvisortoggle(user)
+
+/obj/item/clothing/head/helmet/raider/cavebear/up
 	icon_state = "bearpelt_alt"
 	item_state = "bearpelt_alt"
-	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
 	armor = list("tier" = 4, "linemelee" = 0, "energy" = 25, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 25, "acid" = 10)
 
 /obj/item/clothing/head/helmet/raider/berserker
@@ -125,7 +134,7 @@
 
 /obj/item/clothing/head/helmet/raider/firefighter
 	name = "firefighter raider helmet"
-	desc = "(IV) A thick helmet, comes with a breathing mask."
+	desc = "(V) A thick helmet, comes with a breathing mask."
 	icon_state = "firefighter"
 	item_state = "firefighter"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE
