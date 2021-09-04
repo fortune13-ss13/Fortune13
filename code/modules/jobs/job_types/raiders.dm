@@ -150,6 +150,7 @@
 /datum/outfit/job/raider/boss_bandit
 	name = "Raider Boss"
 	jobtype = /datum/job/raider/boss_bandit
+	glasses = /obj/item/clothing/glasses/night/polarizing
 	suit = /obj/item/clothing/suit/armor/raider/leadcoat
 	r_pocket = /obj/item/flashlight
 	head = /obj/item/clothing/head/helmet/raider/king
