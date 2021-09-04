@@ -327,7 +327,7 @@
 	name =	"Raider Bishop"
 	jobtype =	/datum/job/raider/boss_psycho
 	head =	/obj/item/clothing/head/helmet/raider/firefighter
-	suit =	/obj/item/clothing/suit/armor/f13/sulphitearmor
+	suit =	/obj/item/clothing/suit/armor/f13/sulphitearmor/bishop
 	gloves =	/obj/item/clothing/gloves/f13/leather
 	r_pocket =	/obj/item/flashlight/flare
 	uniform =	/obj/item/clothing/under/f13/chaplain

@@ -692,12 +692,17 @@
 
 /obj/item/clothing/suit/armor/f13/sulphitearmor
 	name = "sulphite armor"
-	desc = "(VI) A combination of what seems to be raider metal armor with a jerry-rigged flame-exhaust system and ceramic plating."
+	desc = "(VI) A combination of what seems to be raider metal armor with a jury-rigged flame-exhaust system and ceramic plating."
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "sulphite"
 	item_state = "sulphite"
 	armor = list("tier" = 6, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
+
+/obj/item/clothing/suit/armor/f13/sulphitearmor/bishop
+	desc = "(VI) Once a firemans suit, now with added metal plating, a useless engine on the back, and a cross showing the wearer got extra protection from the Lord."
+	icon_state = "bishop"
+	item_state = "bishop"
 
 /obj/item/clothing/suit/toggle/armor
 	body_parts_covered = CHEST|GROIN
