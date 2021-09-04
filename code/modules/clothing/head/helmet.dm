@@ -1,138 +1,237 @@
-/obj/item/clothing/head/helmet
-	name = "helmet"
-	desc = "Standard Security gear. Protects the head from impacts."
-	icon_state = "helmet"
-	item_state = "helmet"
-	armor = list("tier" = 4, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
-	flags_inv = HIDEEARS
-	cold_protection = HEAD
-	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
-	strip_delay = 60
-	resistance_flags = NONE
+// ------------------------------------ MERCENARY ----------------------------------------- //
+
+/obj/item/clothing/head/helmet/steel
+	name = "steel helmet"
+	desc = "(V) A green steel helmet."
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	icon_state = "merc"
+	item_state = "merc"
+	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
+
+/obj/item/clothing/head/helmet/steel/cover
+	desc = "(V) A green steel helmet with camouflage helmet cover."
+	icon_state = "merc_cover"
+	item_state = "merc_cover"
+
+/obj/item/clothing/head/helmet/steel/heavy
+	desc = "(VI) A green steel helmet with a thick faceplate, it can be pushed back on the head to make breathing and speaking easier."
+	icon_state = "merc_heavy"
+	item_state = "merc_heavy"
+	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/head/helmet/steel/heavy/attack_self(mob/user)
+	weldingvisortoggle(user)
+	icon_state = "merc_heavyup"
+	item_state = "merc_heavyup"
+	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
+
+
+
+
+// ----------------------------------- RAIDER COALITIION ----------------------------------------- //
+
+/obj/item/clothing/head/helmet/raider
+	name = "fiend helmet"
+	desc = "(III) A leather cap cobbled together with a goat skull, for that angry tribal look."
+	icon_state = "fiend"
+	item_state = "fiend"
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	armor = list("tier" = 3, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 0, "fire" = 30, "acid" = 30)
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/helmet/raider/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/head/helmet/raider/warrior
+	name = "warrior helmet"
+	desc = "(III) It might have been a cooking pot once, now its a helmet, with a piece of cloth covering the neck from the sun."
+	icon_state = "warrior"
+	item_state = "warrior"
+
+/obj/item/clothing/head/helmet/raider/weld
+	name = "raider improvised helmet"
+	desc = "(III) A old welding mask, without its dark glass and various additions and decorations."
+	icon_state = "raiderweld"
+	item_state = "raiderweld"
+
+/obj/item/clothing/head/helmet/raider/cavebear
+	name = "bear pelt"
+	desc = "(IV) The pelt of a Yao Guai, made into a helmet by adding bone and metal."
+	icon_state = "bearpelt"
+	item_state = "bearpelt"
+	visor_flags_inv = HIDEEARS
+	armor = list("tier" = 4, "linemelee" = 0, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/head/helmet/raider/cavebear/attack_self(mob/user)
+	weldingvisortoggle(user)
+
+/obj/item/clothing/head/helmet/raider/cavebear/up
+	icon_state = "bearpelt_alt"
+	item_state = "bearpelt_alt"
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	armor = list("tier" = 4, "linemelee" = 0, "energy" = 25, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 25, "acid" = 10)
+
+/obj/item/clothing/head/helmet/raider/berserker
+	name = "berserker helm"
+	desc = "(IV) The head of a skull wolf mounted on a hardened leather helmet to avoid the ghosts of their enemies being able to see their face and give them the evil eye as they die."
+	icon_state = "berserker"
+	item_state = "berserker"
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 20, "bio" = 25, "rad" = 15, "fire" = 25, "acid" = 25)
+
+/obj/item/clothing/head/helmet/raider/berserkeralt
+	name = "berserker iron mask"
+	desc = "(IV) A mask of iron to conceal the wearers face and protect them from the spirits of their enemies haunting them."
+	icon_state = "berserker_alt"
+	item_state = "berserker_alt"
+
+/obj/item/clothing/head/helmet/raider/pilot
+	name = "pilot hood"
+	desc = "(IV) Leather hood with lead inserts, once issued to the Zeppelin Corps."
+	icon_state = "pilot"
+	item_state = "pilot"
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 20, "bio" = 25, "rad" = 70, "fire" = 25, "acid" = 25)
+
+/obj/item/clothing/head/helmet/raider/smiley
+	name = "smiley helmet"
+	desc = "(IV) Tufts of orange polyester wool are glued to the sides of this rough metal helmet."
+	icon_state = "smiley"
+	item_state = "smiley"
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 20, "bio" = 25, "rad" = 15, "fire" = 25, "acid" = 25)
+
+/obj/item/clothing/head/helmet/raider/wastehound
+	name = "wastehound raider helmet"
+	desc = "(IV) A sack hood made out of a suspicious leather with tufts of hair sticking out. This mask would make Leatherface proud."
+	icon_state = "wastehound"
+	item_state = "wastehound"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	armor = list("tier" = 3, "energy" = 15, "bomb" = 20, "bio" = 25, "rad" = 15, "fire" = 25, "acid" = 25)
+
+/obj/item/clothing/head/helmet/raider/arclight
+	name = "arclight raider helmet"
+	desc = "(IV) Welding mask with rare polarizing glass thats somehow still in working order. A treasured item in the wasteland."
+	icon_state = "arclight"
+	item_state = "arclight"
+	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flash_protect = 2
+	tint = 0.5
+	armor = list("tier" = 4, "energy" = 30, "bomb" = 40, "bio" = 50, "rad" = 30, "fire" = 50, "acid" = 50)
+
+/obj/item/clothing/head/helmet/raider/arclight/attack_self(mob/user)
+	weldingvisortoggle(user)
+	icon_state = "arclight_up"
+	item_state = "arclight_up"
+	visor_flags_inv = HIDEEARS
+	flash_protect = 0
+	tint = 0
+	dynamic_hair_suffix = ""
+	armor = list("tier" = 3, "energy" = 15, "bomb" = 20, "bio" = 25, "rad" = 15, "fire" = 25, "acid" = 25)
+
+/obj/item/clothing/head/helmet/raider/firefighter
+	name = "firefighter raider helmet"
+	desc = "(V) A thick helmet, comes with a breathing mask."
+	icon_state = "firefighter"
+	item_state = "firefighter"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | ALLOWINTERNALS
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
+
+/obj/item/clothing/head/helmet/raider/psychotic
+	name = "psycho-tic raider helmet"
+	desc = "(III) A leather skullcap with tufts of hair sticking from each side."
+	icon_state = "psychotic"
+	item_state = "psychotic"
 	flags_cover = HEADCOVERSEYES
-	flags_inv = HIDEHAIR
-	var/list/protected_zones = list(BODY_ZONE_HEAD)
-	var/durability_threshold = 0
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 
-	dog_fashion = /datum/dog_fashion/head/helmet
+/obj/item/clothing/head/helmet/raider/bishop
+	name = "metal raider helmet"
+	desc = "(V) A metal helmet, rusty and awful."
+	icon_state = "raidermetal"
+	item_state = "raidermetal"
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 20, "acid" = 0)
 
-	var/can_flashlight = FALSE //if a flashlight can be mounted. if it has a flashlight and this is false, it is permanently attached.
-	var/obj/item/flashlight/seclite/attached_light
-	var/datum/action/item_action/toggle_helmet_flashlight/alight
+/obj/item/clothing/head/helmet/f13/raidermetal
+	name = "metal raider helmet"
+	desc = "(V) A metal helmet, rusty and awful."
+	icon_state = "raidermetal"
+	item_state = "raidermetal"
+	can_toggle = TRUE
 
+	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
+	strip_delay = 80
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
-/obj/item/clothing/head/helmet/Initialize()
-	. = ..()
-	if(attached_light)
-		alight = new(src)
-	var/round_armor = round((armor.linemelee + armor.linebullet + armor.linelaser) / 3)
-	if((durability_threshold <= 0) && round_armor > 30) // Weak armor, meh.
-		var/tier_ar = round(round_armor / 10) // Tier 7 would be 200/100 = 20, Tier 11 = 40
-		durability_threshold = tier_ar
+/obj/item/clothing/head/helmet/f13/raidercombathelmet
+	name = "combat raider helmet"
+	desc = "(V) A combat helmet modified with metal plating"
+	icon_state = "raider_combat_helmet"
+	item_state = "raider_combat_helmet"
+	armor = list("tier" = 5, "energy" = 35, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 65, "acid" = 30)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
-
-/obj/item/clothing/head/helmet/Destroy()
-	var/obj/item/flashlight/seclite/old_light = set_attached_light(null)
-	if(old_light)
-		qdel(old_light)
-	return ..()
-
-
-/obj/item/clothing/head/helmet/examine(mob/user)
-	. = ..()
-	if(attached_light)
-		. += "It has \a [attached_light] [can_flashlight ? "" : "permanently "]mounted on it."
-		if(can_flashlight)
-			. += "<span class='info'>[attached_light] looks like it can be <b>unscrewed</b> from [src].</span>"
-	else if(can_flashlight)
-		. += "It has a mounting point for a <b>seclite</b>."
-	. += "The helmet is at [armor_durability] durability and is providing [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
-	if(durability_threshold > 0)
-		. += "Additionally, any attack below [durability_threshold] force will not damage its durability."
+/obj/item/clothing/head/helmet/raider/king
+	name = "raider king hat"
+	desc = "(IV) A kevlar skull cap under a fancy top hat."
+	icon_state = "tophat"
+	item_state = "tophat"
+	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	dynamic_hair_suffix = ""
+	flags_inv = HIDEEARS
 
 
-/obj/item/clothing/head/helmet/handle_atom_del(atom/A)
-	if(A == attached_light)
-		set_attached_light(null)
-		update_helmlight()
-		update_icon()
-		QDEL_NULL(alight)
-		qdel(A)
-	return ..()
+
+// ------------------------------------ ENCLAVE ----------------------------------------- //
+
+/obj/item/clothing/head/helmet/f13/helmet/enclave/science
+	name = "science beret"
+	desc = "(I) Blue beret signifying the wearer is a Science Officer of the Enclave."
+	icon_state = "hat_enclave_science"
+	item_state = "hat_enclave_science"
+	flags_inv = HIDEEARS|HIDEFACE
+	flags_cover = null
+	dynamic_hair_suffix = ""
+	armor = list("tier" = 1)
+
+/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
+	name = "intel beret"
+	desc = "(III) Dark beret issued to Intelligence Officers of the Enclave."
+	icon_state = "hat_enclave_intel"
+	item_state = "hat_enclave_intel"
+	flags_inv = HIDEEARS|HIDEFACE
+	flags_cover = null
+	armor = list("tier" = 3)
+
+/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
+	name = "peacekeeper cap"
+	desc = "(IV) Reinforced field cap issued to the soldiers of the Enclave."
+	icon_state = "hat_enclave_peacekeeper"
+	item_state = "hat_enclave_peacekeeper"
+	flags_inv = HIDEEARS|HIDEHAIR
+	strip_delay = 50
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	armor = list("tier" = 4)
+
+/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+	name = "enclave officer hat"
+	desc = "(VII) Wheeled hat with a cap made of light-weight alloys beneath."
+	icon_state = "hat_enclave_officer"
+	item_state = "hat_enclave_officer"
+	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30) // On par with BoS Knight
 
 
-///Called when attached_light value changes.
-/obj/item/clothing/head/helmet/proc/set_attached_light(obj/item/flashlight/seclite/new_attached_light)
-	if(attached_light == new_attached_light)
-		return
-	. = attached_light
-	attached_light = new_attached_light
-	if(attached_light)
-		attached_light.set_light_flags(attached_light.light_flags | LIGHT_ATTACHED)
-		if(attached_light.loc != src)
-			attached_light.forceMove(src)
-	else if(.)
-		var/obj/item/flashlight/seclite/old_attached_light = .
-		old_attached_light.set_light_flags(old_attached_light.light_flags & ~LIGHT_ATTACHED)
-		if(old_attached_light.loc == src)
-			old_attached_light.forceMove(get_turf(src))
 
 
-/obj/item/clothing/head/helmet/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
-	var/AP_mod = armour_penetration * (damage * 1.5) // So, 100% AP bullet with 20 damage will be considered as 50 damage.
-	if((damage + AP_mod) < durability_threshold)
-		return ..()
-	if(def_zone in protected_zones)
-		damage_armor()
-	. = ..()
-
-/obj/item/clothing/head/helmet/proc/use_kit(obj/item/I, mob/user)
-	var/obj/item/repair_kit/kit = I
-	while(armor_durability<100)
-		if(do_after(user, 10))
-			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability+1] durability.")
-			if(kit.uses_left>1)
-				kit.uses_left -= 1
-				fix_armor()
-			else
-				fix_armor()
-				qdel(kit)
-				break
-
-/obj/item/clothing/head/helmet/proc/damage_armor()
-	if(armor.linebullet>0 && armor.linelaser>0 && armor.linemelee>0 && armor_durability>0)
-		armor_durability -= 1
-		armor = armor.modifyRating(linemelee = -1, linebullet = -1, linelaser = -1)
-
-/obj/item/clothing/head/helmet/proc/fix_armor()
-	if(armor_durability<100)
-		armor = armor.modifyRating(linemelee = 1, linebullet = 1, linelaser = 1)
-		armor_durability += 1
-
-/obj/item/clothing/head/helmet/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))
-
-/obj/item/clothing/head/helmet/sec
-	can_flashlight = TRUE
-
-/obj/item/clothing/head/helmet/sec/attackby(obj/item/I, mob/user, params)
-	if(issignaler(I))
-		var/obj/item/assembly/signaler/S = I
-		if(attached_light) //Has a flashlight. Player must remove it, else it will be lost forever.
-			to_chat(user, "<span class='warning'>The mounted flashlight is in the way, remove it first!</span>")
-			return
-
-		if(S.secured)
-			qdel(S)
-			var/obj/item/bot_assembly/secbot/A = new
-			user.put_in_hands(A)
-			to_chat(user, "<span class='notice'>You add the signaler to the helmet.</span>")
-			qdel(src)
-			return
-	return ..()
+// ------------------------------------ LEGACY HELMETS ----------------------------------------- //
 
 /obj/item/clothing/head/helmet/alt
 	name = "bulletproof helmet"
@@ -147,13 +246,6 @@
 	name = "degrading helmet"
 	desc = "Standard issue security helmet. Due to degradation the helmet's visor obstructs the users ability to see long distances."
 	tint = 2
-
-/obj/item/clothing/head/helmet/blueshirt
-	name = "blue helmet"
-	desc = "A reliable, blue tinted helmet reminding you that you <i>still</i> owe that engineer a beer."
-	icon_state = "blueshift"
-	item_state = "blueshift"
-	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/head/helmet/riot
 	name = "riot helmet"
@@ -248,32 +340,6 @@
 	strip_delay = 80
 	dog_fashion = null
 
-/obj/item/clothing/head/helmet/roman
-	name = "\improper Roman helmet"
-	desc = "(III*) An ancient helmet made of bronze and leather."
-	flags_inv = HIDEEARS|HIDEHAIR
-	flags_cover = HEADCOVERSEYES
-	armor = list("tier" = 3, "linemelee" = 20, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
-	resistance_flags = FIRE_PROOF
-	icon_state = "roman"
-	item_state = "roman"
-	strip_delay = 100
-	dog_fashion = null
-
-/obj/item/clothing/head/helmet/roman/fake
-	desc = "(I) An ancient helmet made of plastic and leather."
-	armor = list("tier" = 1, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/head/helmet/roman/legionnaire
-	name = "\improper Roman legionnaire helmet"
-	desc = "(III*) An ancient helmet made of bronze and leather. Has a red crest on top of it."
-	icon_state = "roman_c"
-	item_state = "roman_c"
-
-/obj/item/clothing/head/helmet/roman/legionnaire/fake
-	desc = "(I) An ancient helmet made of plastic and leather. Has a red crest on top of it."
-	armor = list("tier" = 1, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
 /obj/item/clothing/head/helmet/gladiator
 	name = "gladiator helmet"
 	desc = "(III*) Ave, Imperator, morituri te salutant."
@@ -316,29 +382,16 @@
 	dog_fashion = null
 	mutantrace_variation = STYLE_MUZZLE
 
-
 /obj/item/clothing/head/helmet/knight/Initialize(mapload)
 	. = ..()
 	var/datum/component = GetComponent(/datum/component/wearertargeting/earprotection)
 	qdel(component)
-
-/obj/item/clothing/head/helmet/knight/blue
-	name = "blue medieval helmet"
-	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted blue."
-	icon_state = "knight_blue"
-	item_state = "knight_blue"
 
 /obj/item/clothing/head/helmet/knight/yellow
 	name = "yellow medieval helmet"
 	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted yellow."
 	icon_state = "knight_yellow"
 	item_state = "knight_yellow"
-
-/obj/item/clothing/head/helmet/knight/red
-	name = "red medieval helmet"
-	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted red."
-	icon_state = "knight_red"
-	item_state = "knight_red"
 
 /obj/item/clothing/head/helmet/knight/templar
 	name = "crusader helmet"
@@ -379,110 +432,12 @@
 	strip_delay = 80
 	mutantrace_variation = STYLE_MUZZLE
 
-//LightToggle
-
-/obj/item/clothing/head/helmet/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob)
-
-/obj/item/clothing/head/helmet/update_icon_state()
-	var/state = "[initial(icon_state)]"
-	if(attached_light)
-		if(attached_light.on)
-			state += "-flight-on" //"helmet-flight-on" // "helmet-cam-flight-on"
-		else
-			state += "-flight" //etc.
-
-	icon_state = state
-	return ..()
-
-/obj/item/clothing/head/helmet/ui_action_click(mob/user, action)
-	if(istype(action, /datum/action/item_action/toggle_helmet_flashlight))
-		toggle_helmlight()
-	else
-		..()
-
-/obj/item/clothing/head/helmet/attackby(obj/item/I, mob/user, params)
-	if(istype(I, repair_kit))
-		use_kit(I, user)
-		return
-
-	if(istype(I, /obj/item/flashlight/seclite))
-		if(can_flashlight && !attached_light)
-			var/obj/item/flashlight/seclite/S = I
-			if(!user.transferItemToLoc(S, src))
-				return
-			to_chat(user, "<span class='notice'>You click [S] into place on [src].</span>")
-			set_attached_light(S)
-			update_helmlight()
-			update_icon()
-			alight = new(src)
-			if(loc == user)
-				alight.Grant(user)
-		return
-	return ..()
-
-
-/obj/item/clothing/head/helmet/screwdriver_act(mob/living/user, obj/item/I)
-	. = ..()
-	if(can_flashlight && attached_light) //if it has a light but can_flashlight is false, the light is permanently attached.
-		I.play_tool_sound(src)
-		to_chat(user, "<span class='notice'>You unscrew [attached_light] from [src].</span>")
-		attached_light.forceMove(drop_location())
-		if(Adjacent(user) && !issilicon(user))
-			user.put_in_hands(attached_light)
-
-		var/obj/item/flashlight/removed_light = set_attached_light(null)
-		update_helmlight()
-		removed_light.update_brightness(user)
-		update_icon()
-		user.update_inv_head()
-		QDEL_NULL(alight)
-		return TRUE
-
-
-/obj/item/clothing/head/helmet/proc/toggle_helmlight()
-	set name = "Toggle Helmetlight"
-	set category = "Object"
-	set desc = "Click to toggle your helmet's attached flashlight."
-
-	if(!attached_light)
-		return
-
-	var/mob/user = usr
-	if(user.incapacitated())
-		return
-	attached_light.on = !attached_light.on
-	attached_light.update_brightness()
-	to_chat(user, "<span class='notice'>You toggle the helmet light [attached_light.on ? "on":"off"].</span>")
-
-	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
-	update_helmlight()
-
-
-/obj/item/clothing/head/helmet/proc/update_helmlight()
-	if(attached_light)
-		update_icon()
-
-	for(var/X in actions)
-		var/datum/action/A = X
-		A.UpdateButtonIcon()
-
-
 /obj/item/clothing/head/helmet/durathread
 	name = "makeshift helmet"
 	desc = "(III) A hardhat with strips of leather and durathread for additional blunt protection."
 	icon_state = "durathread"
 	item_state = "durathread"
 	armor = list("tier" = 3,"energy" = 10, "bomb" = 30, "bio" = 15, "rad" = 20, "fire" = 100, "acid" = 50)
-
-/obj/item/clothing/head/helmet/rus_helmet
-	name = "russian helmet"
-	desc = "(III) It can hold a bottle of vodka."
-	icon_state = "rus_helmet"
-	item_state = "rus_helmet"
-	armor = list("tier" = 3,"energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 20, "fire" = 30, "acid" = 50)
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
 
 /obj/item/clothing/head/helmet/rus_ushanka
 	name = "battle ushanka"

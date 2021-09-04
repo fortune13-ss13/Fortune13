@@ -133,6 +133,8 @@
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	clothing_flags = NOSLIP
+	can_be_tied = FALSE
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 
 /obj/item/clothing/shoes/f13/military/legion
 	name = "rough leather boots"

@@ -728,6 +728,15 @@
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 20000)
 
+/obj/item/ammo_box/a50MG/improvised
+	name = "bag with reloaded .50 bullets"
+	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "improvshotbag"
+	max_ammo = 8
+	multiple_sprites = 1
+	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)
+
 
 ////////////////////////////////
 // FLAMER FUEL AND OTHER MISC //

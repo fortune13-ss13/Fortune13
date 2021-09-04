@@ -1,3 +1,13 @@
+/obj/item/clothing/mask/whitefacemakeup
+	name = "white face makeup"
+	desc = "Face makeup made from zink-based paste, very white, and some rouge. Looks terrifying."
+	icon = 'icons/fallout/clothing/masks.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/mask.dmi'
+	icon_state = "whiteface"
+	item_state = "whiteface"
+	w_class = WEIGHT_CLASS_TINY
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 25, "rad" = 0, "fire" = 0, "acid" = 0)
+
 /obj/item/clothing/mask/muzzle
 	name = "muzzle"
 	desc = "To stop that awful noise."

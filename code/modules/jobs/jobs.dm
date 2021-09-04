@@ -75,6 +75,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 //	"Followers Administrator",
 
 	"Raider Boss",
+	"Raider Bishop",
+	"Raider Chieftain",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -219,7 +221,14 @@ GLOBAL_LIST_INIT(vault_positions, list(
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Raider Boss",
-	"Raider Enforcer",
+	"Raider Bishop",
+	"Raider Chieftain",
+	"Raider Bodyguard",
+	"Raider Strongman",
+	"Raider Berserker",
+	"Raider Bandit",
+	"Raider Psycho",
+	"Raider Tribal",
 	"Street Doc",
 	"Raider",
 //	"Great Khan",
@@ -266,10 +275,10 @@ GLOBAL_LIST_INIT(followers_positions, list(
 
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
-	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
+//	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#808080"),
 //	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
-	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#ffeeee"),
+//	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#ffeeee"),
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 //	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),

@@ -64,15 +64,16 @@
 //Zip gun												Keywords: 9mm, 5 rounds internal, Extra damage +2
 /obj/item/gun/ballistic/automatic/hobo/zipgun
 	name = "Zip gun (9mm)"
+	desc = "A home-made little gun, nothing fancy, not in the slightest."
 	icon_state = "zipgun"
 	item_state = "gun"
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_LIGHT
 	slowdown = 0.1
-	mag_type = /obj/item/ammo_box/magazine/zipgun
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised9mm
 	force = 16
 	extra_damage = 2
-	spread = 8
+	spread = 4
 	fire_delay = 4
 	burst_size = 1
 	fire_sound = 'sound/weapons/Gunshot.ogg'
@@ -116,7 +117,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised10mm
 	force = 20
 	fire_delay = 0.25
-	extra_damage = 3
+	extra_damage = 10
 	spread = 7
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 
@@ -197,9 +198,10 @@
 	force = 20
 	extra_damage = -2
 	burst_size = 3
-	fire_delay = 10
+	fire_delay = 8
 	burst_shot_delay = 5
 	spread = 24
+	recoil = 0.25
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 
 /obj/item/gun/ballistic/automatic/autopipe/update_icon_state()
@@ -287,43 +289,34 @@
 	slowdown = 0.1
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting
 	extra_speed = 0
-	spread = 7
+	extra_damage = 3
+	spread = 3
 	force = 16
 	can_scope = FALSE
 
 
 //Winchester rebore. 									Keywords: .308, 2 round internal, saw-off
 /obj/item/gun/ballistic/revolver/winchesterrebored
-	name = "rebored Winchester"
+	name = "elephant gun"
 	desc = "A Winchester double-barreled shotgun rebored to fire .308 ammunition."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "winchesterbore"
 	item_state = "shotgundouble"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised762
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised50
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	extra_damage = -1
-	fire_delay = 0.25
+	extra_damage = -2
+	fire_delay = 1
 	force = 20
-	spread = 5
+	spread = 2
+	recoil = 1
 	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
 	fire_sound = 'sound/f13weapons/max_sawn_off.ogg'
 
-/obj/item/gun/ballistic/revolver/winchesterrebored/attackby(obj/item/A, mob/user, params)
-	..()
-	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
-		sawoff(user)
-	if(istype(A, /obj/item/melee/transforming/energy))
-		var/obj/item/melee/transforming/energy/W = A
-		if(W.active)
-			sawoff(user)
-
 /obj/item/gun/ballistic/revolver/winchesterrebored/update_icon_state()
-	if(sawn_off)
-		icon_state = "[initial(icon_state)]-sawn"
-	else if(!magazine || !magazine.ammo_count(0))
+	if(!magazine || !magazine.ammo_count(0))
 		icon_state = "[initial(icon_state)]-e"
 	else
 		icon_state = "[initial(icon_state)]"	

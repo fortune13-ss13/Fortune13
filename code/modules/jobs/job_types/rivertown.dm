@@ -112,7 +112,7 @@ datum/job/oasis/f13sheriff
 	id = /obj/item/card/id/dogtag/sheriff/talon
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	ears = /obj/item/radio/headset/headset_town
-	head = /obj/item/clothing/head/helmet/f13/mercenary/heavy
+	head = /obj/item/clothing/head/helmet/steel/heavy
 	glasses = /obj/item/clothing/glasses/sunglasses
 	neck = /obj/item/storage/belt/holster/legholster
 	suit = /obj/item/clothing/suit/armor/f13/combat/swat
@@ -214,7 +214,7 @@ datum/job/oasis/f13sheriff
 
 /datum/outfit/loadout/grunt
 	name = "Grunt"
-	head = /obj/item/clothing/head/helmet/f13/mercenary
+	head = /obj/item/clothing/head/helmet/steel
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/cg45 = 1,
 		/obj/item/ammo_box/magazine/cg45 = 2,
@@ -222,7 +222,7 @@ datum/job/oasis/f13sheriff
 
 /datum/outfit/loadout/gunner
 	name = "Gunner"
-	head = /obj/item/clothing/head/helmet/f13/mercenary/cover
+	head = /obj/item/clothing/head/helmet/steel/cover
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/slr = 1,
 		/obj/item/ammo_box/magazine/m762 = 2,
