@@ -203,7 +203,7 @@
 		/obj/item/storage/box/mre/menu4 = 1,
 		)
 
-/datum/outfit/job/enclave/armor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/enclave/corporal/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
