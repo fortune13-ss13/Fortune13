@@ -692,25 +692,25 @@ here's a tip, go search DEFINES/access.dm
 
 
 
-/*---------------------- TOWN MECHANIC ---------------------------*/
+/*---------------------- TOWN MACHINIST ---------------------------*/
 // The secrets of blacksmithing and crafting many things from salvage
 // has been kept alive in Rivertown and is the main source of their
 // power, besides the income from the open air market and the fishing.
 
-/datum/job/town/mechanic
-	title = "Town Mechanic"
+/datum/job/town/machinist
+	title = "Town Machinist"
 	flag = F13SHOPKEEPER
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "town Alderman"
 	description = "A skilled craftsman and blacksmith, responsible for repairs to the vital water wheel that drives the generators and river trading barges."
-	outfit = /datum/outfit/job/town/mechanic
+	outfit = /datum/outfit/job/town/machinist
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 
-/datum/outfit/job/town/mechanic
-	name = "Town Mechanic"
-	jobtype =	/datum/job/town/mechanic
+/datum/outfit/job/town/machinist
+	name = "Town Machinist"
+	jobtype =	/datum/job/town/machinist
 	uniform =	/obj/item/clothing/under/f13/mechanic
 	glasses =	/obj/item/clothing/glasses/welding
 	suit =	/obj/item/clothing/suit/armor/f13/utilityvest

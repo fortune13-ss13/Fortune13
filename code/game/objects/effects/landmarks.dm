@@ -572,9 +572,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Town Doctor"
 	icon_state = "Town Doctor"
 
-/obj/effect/landmark/start/f13/town/mechanic
-	name = "Town Mechanic"
-	icon_state = "Town Mechanic"
+/obj/effect/landmark/start/f13/town/machinist
+	name = "Town Machinist"
+	icon_state = "Town Machinist"
 
 /obj/effect/landmark/start/f13/town/shopkeeper
 	name = "Shopkeeper"

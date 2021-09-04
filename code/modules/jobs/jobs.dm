@@ -156,17 +156,17 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 GLOBAL_LIST_INIT(oasis_positions, list(
 	"Alderman",
 	"Preacher",
-	"Talon Commander",
-	"Town Doctor",
-	"Citizen",
+	"Mercenary Commander",
 	"Mercenary",
-	"Shopkeeper",
-//	"Farmer",
-//	"Prospector",
-//	"Detective",
-	"Preacher",
+	"Town Doctor",
+	"Town Machinist",
 	"Barkeep",
+	"Citizen",
+	"Settler",
 	"Wastelander",
+//	"Shopkeeper",
+//	"Farmer",
+//	"Detective",
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
