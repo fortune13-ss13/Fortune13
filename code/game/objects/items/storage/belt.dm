@@ -787,11 +787,15 @@
 	icon_state = "holster_leg"
 	item_state = "holster_leg"
 
-/obj/item/storage/belt/holster/legholster/enclavesig/PopulateContents()
+/obj/item/storage/belt/holster/legholster/sig/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
 
+/obj/item/storage/belt/holster/legholster/chinapistol/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/type17(src)
+	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
+	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
 
 
 /obj/item/storage/belt/fannypack

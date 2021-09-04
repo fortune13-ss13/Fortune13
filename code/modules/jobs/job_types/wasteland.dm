@@ -357,11 +357,9 @@ Raider
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
-			/datum/job/oasis/f13dendoc,
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/wasteland/f13wastelander,
-			/datum/outfit/job/den/f13deputy,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/wasteland/f13wastelander,

@@ -169,7 +169,7 @@
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[enclave[name]]</td></tr>"
 			even = !even
 	if(length(oasis))
-		dat += "<tr><th colspan=3>Oasis</th></tr>"
+		dat += "<tr><th colspan=3>Rivertown</th></tr>"
 		for(var/name in oasis)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[oasis[name]]</td></tr>"
 			even = !even
@@ -199,7 +199,7 @@
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[vault[name]]</td></tr>"
 			even = !even
 	if(length(was))
-		dat += "<tr><th colspan=3>Wasteland</th></tr>"
+		dat += "<tr><th colspan=3>Raider</th></tr>"
 		for(var/name in was)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[was[name]]</td></tr>"
 			even = !even

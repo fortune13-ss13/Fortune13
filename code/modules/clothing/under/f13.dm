@@ -231,12 +231,13 @@
 	item_state = "vetranger"
 	item_color = "vetranger"
 
-/obj/item/clothing/under/f13/ranger/vet/foxflannel
-	name = "black ranger flannel outfit"
-	desc = "A black flannel ontop of a pair of slim-fitting pre-war jeans that were kept in excellent condition. The back leather panel is worn out but you can barely make out: '512'."
-	icon_state = "foxflannel"
-	item_state = "foxflannel"
-	item_color = "foxflannel"
+/obj/item/clothing/under/f13/flannelshirt
+	name = "durable flannel outfit"
+	desc = "A dark flannel shirt worn with a pair of slim-fitting jeans. "
+	icon_state = "darkflannel"
+	item_state = "darkflannel"
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
 
 /obj/item/clothing/under/f13/ranger/vet/thaxflannel
 	name = "Thaxton's ranger flannel outfit"

@@ -66,7 +66,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Chief of Security",
 
 	"Alderman",
-	"Talon Commander",
+	"Preacher",
+	"Mercenary Commander",
 
 //	"Chief",
 //	"Shaman",
@@ -111,10 +112,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Slave",
 
 "Alderman",
-"Talon Commander",
-"Talon Mercenary",
+"Mercenary Commander",
+"Preacher",
+"Mercenary",
 "Shopkeeper",
-"Doctor",
+"Town Doctor",
 "Prospector",
 "Detective",
 
@@ -153,16 +155,18 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 
 GLOBAL_LIST_INIT(oasis_positions, list(
 	"Alderman",
+	"Preacher",
 	"Talon Commander",
-	"Doctor",
+	"Town Doctor",
 	"Citizen",
-	"Talon Mercenary",
+	"Mercenary",
 	"Shopkeeper",
 //	"Farmer",
 //	"Prospector",
 //	"Detective",
 	"Preacher",
 	"Barkeep",
+	"Wastelander",
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -234,7 +238,6 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 //	"Great Khan",
 //	"Faithful",
 //	"Vigilante",
-	"Wastelander",
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
@@ -255,7 +258,7 @@ GLOBAL_LIST_INIT(silicon_positions, list(
 ))
 
 GLOBAL_LIST_INIT(tribal_positions, list(
-	"Chief",
+//	"Chief",
 //	"Shaman",
 //	"Head Hunter",
 //	"Druid",
