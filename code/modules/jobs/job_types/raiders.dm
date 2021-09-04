@@ -526,11 +526,11 @@
 	name =	"Lord of Flies"
 	head = /obj/item/clothing/head/helmet/f13/raider/supafly
 	suit =	/obj/item/clothing/suit/armor/f13/chitinarmor
-	r_hand = /obj/item/gun/ballistic/automatic/hobo/destroyer
+	r_hand = /obj/item/gun/ballistic/rifle/hobo/plasmacaster 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/greasegun = 2,
-		/obj/item/ammo_box/a762 = 2,
+		/obj/item/ammo_box/plasmamusket = 2,
 		/obj/item/gun/ballistic/revolver/hobo/knifegun = 1,
+		/obj/item/ammo_box/m44box/improvised = 1,
 		)
 
 /datum/outfit/loadout/cavebear
