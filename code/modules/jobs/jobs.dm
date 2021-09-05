@@ -49,11 +49,11 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 
 GLOBAL_LIST_INIT(command_positions, list(
 //	"Elder",
-//	"Head Scribe",
 	"Head Paladin",
-//	"Head Knight",
 
 	"Enclave Officer",
+	"Enclave Research Director",
+	"Enclave Sergeant",
 
 //	"NCR Captain",
 //	"NCR Lieutenant",
@@ -165,8 +165,6 @@ GLOBAL_LIST_INIT(oasis_positions, list(
 	"Settler",
 	"Wastelander",
 //	"Shopkeeper",
-//	"Farmer",
-//	"Detective",
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -236,17 +234,17 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Street Doc",
 	"Raider",
 //	"Great Khan",
-//	"Faithful",
 //	"Vigilante",
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
-	"Enclave Soldier",
-	"Enclave Sergeant",
-	"Enclave Corporal",
+	"Enclave Officer",
+	"Enclave Research Director",
 	"Enclave Scientist",
 	"Intelligence Specialist",
-	"Enclave Officer",
+	"Enclave Sergeant",
+	"Enclave Corporal",
+	"Enclave Private",
 ))
 
 GLOBAL_LIST_INIT(security_positions, list(

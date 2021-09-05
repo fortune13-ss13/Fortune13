@@ -633,42 +633,34 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 
 // ENCLAVE
-/obj/effect/landmark/start/f13/usspy
-	name = "Enclave Soldier"
-	icon_state = "Initiate"
 
-/obj/effect/landmark/start/f13/uslt
+/obj/effect/landmark/start/f13/enclave/officer
 	name = "Enclave Officer"
 	icon_state = "Paladin"
 
-/obj/effect/landmark/start/f13/ussgt
-	name = "Enclave Sergeant"
-	icon_state = "Knight"
+/obj/effect/landmark/start/f13/enclave/director
+	name = "Enclave Research Director"
+	icon_state = "Enclave Director"
 
-/obj/effect/landmark/start/f13/uscorporal
-	name = "Enclave Corporal"
-	icon_state = "Initiate Knight"
-
-/obj/effect/landmark/start/f13/uscommander
-	name = "US Commander"
-
-/obj/effect/landmark/start/f13/usmedic
-	name = "Intelligence Specialist"
-	icon_state = "Head of Security"
-
-/obj/effect/landmark/start/f13/usprivate
-	name = "US Private"
-
-/obj/effect/landmark/start/f13/usscientist
+/obj/effect/landmark/start/f13/enclave/scientist
 	name = "Enclave Scientist"
-	icon_state = "Chemist"
+	icon_state = "Enclave Scientist"
 
-/obj/effect/landmark/start/f13/usengineer
-	name = "US Engineer"
+/obj/effect/landmark/start/f13/enclave/intel
+	name = "Intelligence Specialist"
+	icon_state = "Enclave Intel"
 
-/obj/effect/landmark/start/f13/uscolonist
-	name = "US Colonist"
+/obj/effect/landmark/start/f13/enclave/sergeant
+	name = "Enclave Sergeant"
+	icon_state = "Enclave Sergeant"
 
+/obj/effect/landmark/start/f13/enclave/corporal
+	name = "Enclave Corporal"
+	icon_state = "Enclave Corporal"
+
+/obj/effect/landmark/start/f13/enclave/private
+	name = "Enclave Private"
+	icon_state = "Enclave Private"
 
 
 //Followers of the Apocalypse
@@ -904,14 +896,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/settler
 	name = "Citizen"
 	icon_state = "Settler"
-
-/obj/effect/landmark/start/f13/dendoc
-	name = "Doctor"
-	icon_state = "Chief Medical Officer"
-
-/obj/effect/landmark/start/f13/dendoctor
-	name = "Street Doc"
-	icon_state = "Pusher"
 
 /obj/effect/landmark/start/f13/preacher
 	name = "Preacher"
