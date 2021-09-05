@@ -348,6 +348,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = "enclave radio headset"
 	desc = "This is used by the enclave.\nTo access the enclave channel, use :z."
 	icon_state = "sec_headset"
+	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_enclave
 
 /obj/item/radio/headset/headset_enclave/ComponentInitialize()
@@ -358,12 +359,14 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = "town radio headset"
 	desc = "This is used by the town.\nTo access the town channel, use :f."
 	icon_state = "mine_headset"
+	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_town
 
 /obj/item/radio/headset/headset_den
 	name = "den radio headset"
 	desc = "This is used by the den. \nTo access the den channel, use :j."
 	icon_state = "mine_headset"
+	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_den
 
 /obj/item/radio/headset/headset_cent

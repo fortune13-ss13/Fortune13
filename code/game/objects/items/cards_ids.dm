@@ -908,7 +908,7 @@
 
 /obj/item/card/id/dogtag/deputy/talon
 	name = "dogtags"
-	desc = "Given to every recruit that joins Talon."
+	desc = "Given to every recruit that signs up for the mercs."
 	icon_state = "talon"
 
 /obj/item/card/id/dogtag/sheriff
@@ -926,8 +926,8 @@
 /obj/item/card/id/dogtag/town
 	name = "citizenship permit"
 	desc = "A permit identifying the holder as a citizen of a nearby town."
-	icon_state = "doctor"
-	item_state = "card-doctor"
+	icon_state = "permit"
+	item_state = null
 	assignment = "citizenship permit"
 	access = list(ACCESS_BAR)
 
@@ -1091,14 +1091,6 @@
 	item_state = "card-id_leg2"
 	assignment = "orator medallion"
 
-//For PilotBland's frumentarii custom loadout
-/obj/item/card/id/dogtag/legfrumentariiremus
-	name = "Remus Amius' frumentarius medallion"
-	desc = "A golden disc with a string threaded through the top, displaying official markings confirming a frumentarius' status."
-	icon_state = "legionmedallioncent"
-	item_state = "card-id_leg2"
-	assignment = "frumentarius medallion"
-
 /obj/item/card/id/legionbrand
 	name = "Legion's brand"
 	desc = "A brand for identifying Caesar's Legion's slaves."
@@ -1214,6 +1206,14 @@
 	name = "Aldermans silver watch"
 	desc = "A pocket watch in silver, engraved with the names of previous Aldermen, the current owners one at the bottom in tiny text."
 	icon_state = "alderman"
+
+/obj/item/card/id/dogtag/town/preacher
+	name = "family bible"
+	desc = "The preachers old personal bible."
+	icon_state = "preacher"
+	item_state = null
+	assignment = "citizenship permit"
+	access = list(ACCESS_BAR)
 
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"

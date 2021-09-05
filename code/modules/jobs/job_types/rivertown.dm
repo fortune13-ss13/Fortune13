@@ -124,9 +124,11 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/job/town/preacher
 	name = "Preacher"
 	jobtype = /datum/job/town/preacher
+	id = /obj/item/card/id/dogtag/town/preacher
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/f13/chaplain
+	suit = /obj/item/clothing/suit/armor/f13/rosary
 	shoes =	/obj/item/clothing/shoes/f13/fancy
 	r_pocket = /obj/item/flashlight/lantern
 	l_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5

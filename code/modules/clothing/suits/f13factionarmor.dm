@@ -801,6 +801,17 @@
 	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
 
 
+/obj/item/clothing/suit/armor/f13/rosary
+	name = "rosary"
+	desc = "Worn outside of your clothing, showing the world your faith is your armor."
+	icon_state = "rosary"
+	item_state = "rosary"
+	icon = 'icons/fallout/clothing/suits_utility.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
+	armor = list("tier" = 1, "energy" = 5, "bomb" = 5, "bio" = 10, "rad" = 5, "fire" = 30, "acid" = 0)
+	var/armor_block_threshold = 0.9
+	var/armor_block_chance = 0.6
+
 
 // -------------------------- RAIDER COALITION ------------------- //
 
