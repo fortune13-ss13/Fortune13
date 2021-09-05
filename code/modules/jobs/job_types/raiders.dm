@@ -724,20 +724,7 @@
 		/obj/item/reagent_containers/pill/radx,
 		)
 
-/datum/outfit/loadout/tribal
-	name = "Tribal"
-	uniform = /obj/item/clothing/under/f13/tribe
-	suit = /obj/item/clothing/suit/armor/f13/leatherarmor
-	suit_store = /obj/item/melee/onehanded/machete
-	shoes = /obj/item/clothing/shoes/sandal
-	belt = /obj/item/storage/backpack/spearquiver
-	box = /obj/item/storage/survivalkit_tribal
-	back = /obj/item/storage/backpack/satchel/explorer
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/hobo/piperifle	= 1,
-		/obj/item/ammo_box/a556/sport/improvised = 1,
-		)
-
+/
 /datum/outfit/loadout/salvager
 	name = "Salvager"
 	uniform = /obj/item/clothing/under/f13/machinist
@@ -747,39 +734,6 @@
 	suit = /obj/item/clothing/suit/armor/f13/kit
 	r_hand = /obj/item/weldingtool
 	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1)
-
-/datum/outfit/loadout/scavenger
-	name = "Scavenger"
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	uniform = /obj/item/clothing/under/f13/lumberjack
-	r_hand = /obj/item/storage/backpack/duffelbag/scavengers
-	suit =	/obj/item/clothing/suit/armor/f13/leather_jacket
-	l_hand = /obj/item/pickaxe
-	belt = /obj/item/storage/belt
-	backpack_contents = list(
-		/obj/item/mining_scanner=1,
-		/obj/item/metaldetector=1,
-		/obj/item/shovel=1,
-		/obj/item/gun/ballistic/revolver/winchesterrebored = 1,
-		/obj/item/ammo_box/a308box = 1,)
-
-/datum/outfit/loadout/settler
-	name = "Settler"
-	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	suit = /obj/item/clothing/suit/f13/veteran
-	r_hand = /obj/item/hatchet
-	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	belt = /obj/item/storage/belt
-	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/improvised = 1,
-		/obj/item/stack/sheet/metal = 50,
-		/obj/item/stack/sheet/mineral/wood = 50,
-		/obj/item/toy/crayon/spraycan = 1,
-		/obj/item/cultivator = 1,
-		/obj/item/reagent_containers/glass/bucket = 1,
-		/obj/item/storage/bag/plants/portaseeder = 1,
-		)
 
 /datum/outfit/loadout/medic
 	name = "Wandering Doctor"
@@ -803,15 +757,4 @@
 		/obj/item/saw=1
 		)
 
-/datum/outfit/loadout/warrior
-	name = "Wasteland Warrior"
-	uniform = /obj/item/clothing/under/f13/brahminm
-	shoes = /obj/item/clothing/shoes/f13/raidertreads
-	suit = /obj/item/clothing/suit/armor/light/wastewar
-	head = /obj/item/clothing/head/helmet/f13/wastewarhat
-	glasses = /obj/item/clothing/glasses/welding
-	l_hand = /obj/item/shield/riot/buckler/stop
-	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/scrapsabre = 1,
-		)
 */

@@ -538,155 +538,129 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-// Oasis
-
-/obj/effect/landmark/start/f13/mayor
-	name = "Alderman"
-	icon_state = "Elder"
-
-/obj/effect/landmark/start/f13/sheriff
-	name = "Talon Commander"
-	icon_state = "NCR Lieutenant"
-
-/obj/effect/landmark/start/f13/deputy
-	name = "Talon Mercenary"
-	icon_state = "NCR Sergeant"
-
-/obj/effect/landmark/start/f13/farmer
-	name = "Farmer"
-
-/obj/effect/landmark/start/f13/prospector
-	name = "Prospector"
-
-/obj/effect/landmark/start/f13/settler
-	name = "Citizen"
-	icon_state = "Settler"
-
-/obj/effect/landmark/start/f13/dendoc
-	name = "Doctor"
-	icon_state = "Chief Medical Officer"
-
-/obj/effect/landmark/start/f13/shopkeeper
-	name = "Shopkeeper"
-	icon_state = "Shopkeeper"
-
-/obj/effect/landmark/start/f13/banker
-	name = "Banker"
-	icon_state = "Banker"
-
-/obj/effect/landmark/start/f13/barkeep
-	name = "Barkeep"
-	icon_state = "Barkeep"
 
 // Wasteland
-
-
-
 /obj/effect/landmark/start/f13/vigilante
 	name = "Vigilante"
 	icon_state = "Scribe"
 
-/obj/effect/landmark/start/f13/wastelander
-	name = "Wastelander"
-	icon_state = "Wastelander"
-
-/obj/effect/landmark/start/f13/raider
-	name = "Raider"
-	icon_state = "Raider"
-
-/obj/effect/landmark/start/f13/pusher
-	name = "Great Khan"
-	icon_state = "Pusher"
-
-/obj/effect/landmark/start/f13/enforcer
-	name = "Raider Enforcer"
-	icon_state = "Enforcer"
-
-/obj/effect/landmark/start/f13/dendoctor
-	name = "Street Doc"
-	icon_state = "Pusher"
 
 
-/obj/effect/landmark/start/f13/raiderking
-	name = "Raider Boss"
-	icon_state = "raiderking"
+// RIVERTOWN
 
-/obj/effect/landmark/start/f13/raiderbodyguard
-	name = "Raider Bodyguard"
-	icon_state = "raiderbodyguard"
+/obj/effect/landmark/start/f13/town/alderman
+	name = "Alderman"
+	icon_state = "Town Alderman"
 
-/obj/effect/landmark/start/f13/raiderbandit
-	name = "Raider Bandit"
-	icon_state = "raiderbandit"
-
-/obj/effect/landmark/start/f13/raiderbishop
-	name = "Raider Bishop"
-	icon_state = "raiderbishop"
-
-/obj/effect/landmark/start/f13/raiderstrongman
-	name = "Raider Strongman"
-	icon_state = "raiderstrongman"
-
-/obj/effect/landmark/start/f13/raiderpsycho
-	name = "Raider Psycho"
-	icon_state = "raiderpsycho"
-
-/obj/effect/landmark/start/f13/raiderchieftain
-	name = "Raider Chieftain"
-	icon_state = "raiderchieftain"
-
-/obj/effect/landmark/start/f13/raiderberserker
-	name = "Raider Berserker"
-	icon_state = "raiderberserker"
-
-/obj/effect/landmark/start/f13/raidertribal
-	name = "Raider Tribal"
-	icon_state = "raidertribal"
-
-
-/obj/effect/landmark/start/f13/preacher
+/obj/effect/landmark/start/f13/town/preacher
 	name = "Preacher"
-	icon_state = "Preacher"
+	icon_state = "Town Preacher"
+
+/obj/effect/landmark/start/f13/commander
+	name = "Mercenary Commander"
+	icon_state = "Merc Commander"
+
+/obj/effect/landmark/start/f13/mercenary
+	name = "Mercenary"
+	icon_state = "Mercenary"
+
+/obj/effect/landmark/start/f13/town/citizen
+	name = "Citizen"
+	icon_state = "Town Citizen"
+
+/obj/effect/landmark/start/f13/town/nurse
+	name = "Town Doctor"
+	icon_state = "Town Doctor"
+
+/obj/effect/landmark/start/f13/town/machinist
+	name = "Town Machinist"
+	icon_state = "Town Machinist"
+
+/obj/effect/landmark/start/f13/town/shopkeeper
+	name = "Shopkeeper"
+	icon_state = "Town Shopkeeper"
+
+/obj/effect/landmark/start/f13/town/barkeeper
+	name = "Barkeep"
+	icon_state = "Town Barkeep"
+
+/obj/effect/landmark/start/f13/town/settler
+	name = "Settler"
+	icon_state = "Town Settler"
+
+// RAIDER COALITION
+
+/obj/effect/landmark/start/f13/raider/king
+	name = "Raider Boss"
+	icon_state = "Raider King"
+
+/obj/effect/landmark/start/f13/raider/bodyguard
+	name = "Raider Bodyguard"
+	icon_state = "Raider Bodyguard"
+
+/obj/effect/landmark/start/f13/raider/bandit
+	name = "Raider Bandit"
+	icon_state = "Raider Bandit"
+
+/obj/effect/landmark/start/f13/raider/bishop
+	name = "Raider Bishop"
+	icon_state = "Raider Bishop"
+
+/obj/effect/landmark/start/f13/raider/strongman
+	name = "Raider Strongman"
+	icon_state = "Raider Strongman"
+
+/obj/effect/landmark/start/f13/raider/psycho
+	name = "Raider Psycho"
+	icon_state = "Raider Psycho"
+
+/obj/effect/landmark/start/f13/raider/chieftain
+	name = "Raider Chieftain"
+	icon_state = "Raider Chieftain"
+
+/obj/effect/landmark/start/f13/raider/berserker
+	name = "Raider Berserker"
+	icon_state = "Raider Berserker"
+
+/obj/effect/landmark/start/f13/raider/tribal
+	name = "Raider Tribal"
+	icon_state = "Raider Tribal"
+
+/obj/effect/landmark/start/f13/raider/streetdoc
+	name = "Street Doc"
+	icon_state = "Raider Butcher"
 
 
 
-// Enclave
-/obj/effect/landmark/start/f13/usspy
-	name = "Enclave Soldier"
-	icon_state = "Initiate"
+// ENCLAVE
 
-/obj/effect/landmark/start/f13/uslt
+/obj/effect/landmark/start/f13/enclave/officer
 	name = "Enclave Officer"
 	icon_state = "Paladin"
 
-/obj/effect/landmark/start/f13/ussgt
-	name = "Enclave Sergeant"
-	icon_state = "Knight"
+/obj/effect/landmark/start/f13/enclave/director
+	name = "Enclave Research Director"
+	icon_state = "Enclave Director"
 
-/obj/effect/landmark/start/f13/uscorporal
-	name = "Enclave Corporal"
-	icon_state = "Initiate Knight"
-
-/obj/effect/landmark/start/f13/uscommander
-	name = "US Commander"
-
-/obj/effect/landmark/start/f13/usmedic
-	name = "Intelligence Specialist"
-	icon_state = "Head of Security"
-
-/obj/effect/landmark/start/f13/usprivate
-	name = "US Private"
-
-/obj/effect/landmark/start/f13/usscientist
+/obj/effect/landmark/start/f13/enclave/scientist
 	name = "Enclave Scientist"
-	icon_state = "Chemist"
+	icon_state = "Enclave Scientist"
 
-/obj/effect/landmark/start/f13/usengineer
-	name = "US Engineer"
+/obj/effect/landmark/start/f13/enclave/intel
+	name = "Intelligence Specialist"
+	icon_state = "Enclave Intel"
 
-/obj/effect/landmark/start/f13/uscolonist
-	name = "US Colonist"
+/obj/effect/landmark/start/f13/enclave/sergeant
+	name = "Enclave Sergeant"
+	icon_state = "Enclave Sergeant"
 
+/obj/effect/landmark/start/f13/enclave/corporal
+	name = "Enclave Corporal"
+	icon_state = "Enclave Corporal"
+
+/obj/effect/landmark/start/f13/enclave/private
+	name = "Enclave Private"
+	icon_state = "Enclave Private"
 
 
 //Followers of the Apocalypse
@@ -899,7 +873,35 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "BoS Off-Duty"
 	icon_state = "Off-Duty"
 
+// Oasis
 
+/obj/effect/landmark/start/f13/mayor
+	name = "Alderman"
+	icon_state = "Elder"
+
+/obj/effect/landmark/start/f13/sheriff
+	name = "Talon Commander"
+	icon_state = "NCR Lieutenant"
+
+/obj/effect/landmark/start/f13/deputy
+	name = "Talon Mercenary"
+	icon_state = "NCR Sergeant"
+
+/obj/effect/landmark/start/f13/farmer
+	name = "Farmer"
+
+/obj/effect/landmark/start/f13/prospector
+	name = "Prospector"
+
+/obj/effect/landmark/start/f13/settler
+	name = "Citizen"
+	icon_state = "Settler"
+
+/obj/effect/landmark/start/f13/preacher
+	name = "Preacher"
+	icon_state = "Preacher"
+
+/obj/effect/landmark/start/f13/barkeep
 /obj/effect/landmark/start/f13/faithful
 	name = "Faithful"
 	icon_state = "Preacher"
@@ -910,3 +912,15 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/cultleader
 	name = "Cult Leader"
+
+/obj/effect/landmark/start/f13/raider
+	name = "Raider"
+	icon_state = "Raider"
+
+/obj/effect/landmark/start/f13/pusher
+	name = "Great Khan"
+	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/enforcer
+	name = "Raider Enforcer"
+	icon_state = "Enforcer"

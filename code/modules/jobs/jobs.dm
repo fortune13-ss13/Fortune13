@@ -49,11 +49,11 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 
 GLOBAL_LIST_INIT(command_positions, list(
 //	"Elder",
-//	"Head Scribe",
 	"Head Paladin",
-//	"Head Knight",
 
 	"Enclave Officer",
+	"Enclave Research Director",
+	"Enclave Sergeant",
 
 //	"NCR Captain",
 //	"NCR Lieutenant",
@@ -66,7 +66,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Chief of Security",
 
 	"Alderman",
-	"Talon Commander",
+	"Preacher",
+	"Mercenary Commander",
 
 //	"Chief",
 //	"Shaman",
@@ -111,10 +112,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Slave",
 
 "Alderman",
-"Talon Commander",
-"Talon Mercenary",
+"Mercenary Commander",
+"Preacher",
+"Mercenary",
 "Shopkeeper",
-"Doctor",
+"Town Doctor",
 "Prospector",
 "Detective",
 
@@ -153,16 +155,16 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 
 GLOBAL_LIST_INIT(oasis_positions, list(
 	"Alderman",
-	"Talon Commander",
-	"Doctor",
-	"Citizen",
-	"Talon Mercenary",
-	"Shopkeeper",
-//	"Farmer",
-//	"Prospector",
-//	"Detective",
 	"Preacher",
+	"Mercenary Commander",
+	"Mercenary",
+	"Town Doctor",
+	"Town Machinist",
 	"Barkeep",
+	"Citizen",
+	"Settler",
+	"Wastelander",
+//	"Shopkeeper",
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -232,18 +234,17 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Street Doc",
 	"Raider",
 //	"Great Khan",
-//	"Faithful",
 //	"Vigilante",
-	"Wastelander",
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
-	"Enclave Soldier",
-	"Enclave Sergeant",
-	"Enclave Corporal",
+	"Enclave Officer",
+	"Enclave Research Director",
 	"Enclave Scientist",
 	"Intelligence Specialist",
-	"Enclave Officer",
+	"Enclave Sergeant",
+	"Enclave Corporal",
+	"Enclave Private",
 ))
 
 GLOBAL_LIST_INIT(security_positions, list(
@@ -255,7 +256,7 @@ GLOBAL_LIST_INIT(silicon_positions, list(
 ))
 
 GLOBAL_LIST_INIT(tribal_positions, list(
-	"Chief",
+//	"Chief",
 //	"Shaman",
 //	"Head Hunter",
 //	"Druid",

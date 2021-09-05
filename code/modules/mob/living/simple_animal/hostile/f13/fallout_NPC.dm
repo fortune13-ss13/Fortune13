@@ -590,12 +590,8 @@
 	head = /obj/item/clothing/head/helmet/f13/firefighter
 	//back = /obj/item/weapon/storage/backpack
 
-/mob/living/simple_animal/hostile/raider/Aggro()
-	..()
-	summon_backup(15)
-	say("HURRY, HURRY, HURRY!!!")
 
-/mob/living/simple_animal/hostile/raider/firefighter
+/mob/living/simple_animal/hostile/raider/old/firefighter
 	icon_state = "firefighter_raider"
 	icon_living = "firefighter_raider"
 	icon_dead = "firefighter_raider"
@@ -608,7 +604,7 @@
 	healable = 1
 	ranged = 0
 
-/mob/living/simple_animal/hostile/raider/tribal
+/mob/living/simple_animal/hostile/raider/old/tribal
 	icon_state = "tribal_raider"
 	icon_living = "tribal_raider"
 	icon_dead = "tribal_raider"
@@ -631,7 +627,7 @@
 	head = /obj/item/clothing/head/helmet/f13/fiend
 	//back = /obj/item/weapon/storage/backpack
 
-/mob/living/simple_animal/hostile/raider/baseball
+/mob/living/simple_animal/hostile/raider/old/baseball
 	icon_state = "baseball_raider"
 	icon_living = "baseball_raider"
 	icon_dead = "baseball_raider"
