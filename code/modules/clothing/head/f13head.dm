@@ -620,6 +620,7 @@
 	desc = "Pretty yellow hairband"
 	icon_state = "50shairband"
 	item_state = "50shairband"
+	flags_inv = null
 
 /obj/item/clothing/head/f13/nursehat
 	name = "nurse hat"
