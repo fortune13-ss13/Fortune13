@@ -27,64 +27,6 @@
 	name = "settler outfit"
 	path = /obj/item/clothing/under/f13/settler
 
-/datum/gear/uniform/ncr_fatigue_pants
-	name = "NCR fatigue pants"
-	path = /obj/item/clothing/under/f13/ncr/pants
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Veteran Ranger",
-							"NCR Lieutenant",
-							"NCR Sergeant First Class",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
-						)
-
-/datum/gear/uniform/ncr_shorts
-	name = "NCR fatigue shorts"
-	path = /obj/item/clothing/under/f13/ncr/ncr_shorts
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Veteran Ranger",
-							"NCR Lieutenant",
-							"NCR Sergeant First Class",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
-						)
-
-/datum/gear/uniform/ranger
-	name = "ranger outfit"
-	path = /obj/item/clothing/under/f13/ranger
-	restricted_desc = "Rangers"
-	restricted_roles = list("NCR Veteran Ranger", "NCR Ranger")
-
-/datum/gear/uniform/ranger/trail
-	name = "trail ranger outfit"
-	path = /obj/item/clothing/under/f13/ranger/trail
-
-/datum/gear/uniform/ranger/patrol
-	name = "patrol ranger outfit"
-	path = /obj/item/clothing/under/f13/ranger/patrol
-
-/datum/gear/uniform/ranger/vet
-	name = "ranger flannel outfit"
-	path = /obj/item/clothing/under/f13/ranger/vet
-
 /datum/gear/uniform/rustic
 	name = "rustic outfit"
 	path = /obj/item/clothing/under/f13/rustic
@@ -263,6 +205,36 @@
 	path = /obj/item/clothing/under/costume/kilt
 	cost = 2
 
+/datum/gear/uniform/navy
+	name = "Navy Jumpsuit"
+	path = /obj/item/clothing/under/f13/navy
+	cost = 2
+
+/datum/gear/uniform/bosremnant
+	name = "old battledress uniform"
+	path = /obj/item/clothing/under/f13/bosremnant
+	cost = 2
+
+/datum/gear/uniform/mechanicjumpsuit
+	name = "worn blue jumpsuit"
+	path = /obj/item/clothing/under/f13/mechanic
+	cost = 2
+
+/datum/gear/uniform/raiderleather
+	name = "raider leathers"
+	path = /obj/item/clothing/under/f13/raider_leather
+	cost = 2
+
+/datum/gear/uniform/tribe
+	name = "tribal rags"
+	path = /obj/item/clothing/under/f13/tribe
+	cost = 2
+
+/datum/gear/uniform/petrochico
+	name = "worn green jumpsuit"
+	path = /obj/item/clothing/under/f13/petrochico
+	cost = 2
+
 /datum/gear/uniform/pants/camo
 	name = "Camo Pants"
 	path = /obj/item/clothing/under/pants/camo
@@ -317,23 +289,6 @@
 	name = "Grey Turtleneck"
 	path = /obj/item/clothing/under/suit/turtle/grey
 	cost = 2
-/*
-/datum/gear/uniform/detbrown
-	name = "Brown Worn Suit"
-	path = /obj/item/clothing/under/rank/security/detective/brown
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_JOBS
-	restricted_desc = "Detective"
-	restricted_roles = list("Detective")
-
-/datum/gear/uniform/detbrown/detbrown2
-	name = "Padded Worn Suit"
-	path = /obj/item/clothing/under/rank/security/detective/brown/brown2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_JOBS
-	restricted_desc = "Detective"
-	restricted_roles = list("Detective")
-*/
-
-// Grey utility
 
 /datum/gear/uniform/grey/util
 	name = "Grey Utility Uniform"
