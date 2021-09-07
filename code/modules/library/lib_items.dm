@@ -361,3 +361,18 @@
 	else
 		to_chat(user, "<font color=red>No associated computer found. Only local scans will function properly.</font>")
 	to_chat(user, "\n")
+
+// 5 states, use them.
+/obj/structure/bookshelf
+	name = "bookshelf"
+	desc = "Old books."
+	icon = 'icons/fallout/furniture/stationary.dmi'
+	icon_state = "book-0"
+	layer = TABLE_LAYER
+	density = TRUE
+	anchored = TRUE
+	pass_flags = LETPASSTHROW //You can throw objects over this, despite it's density.
+	pass_flags_self = PASSTABLE
+	max_integrity = 100
+	attack_hand_speed = CLICK_CD_MELEE
+	attack_hand_is_action = TRUE

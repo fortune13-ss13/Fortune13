@@ -7,9 +7,15 @@
 /obj/structure/decoration/rag //Generic decoration. See decals.dmi - there are more things to choose the proper icon_state in map editor.
 	name = "rag"
 	desc = "A torn and dirty rag.<br>It could have been a curtain, or a bedsheet ages ago..."
-	icon = 'icons/fallout/objects/decals.dmi'
+	icon = 'icons/fallout/decals/decals.dmi'
 	icon_state = "rag" //skulls, skin
 	layer = 3.2
+
+/obj/structure/decoration/tombstone
+	name = "Jeremiahs grave"
+	desc = "A fine tombstone, marking the resting place of Jeremiah, the founder of Riverton."
+	icon = 'icons/fallout/decals/decals.dmi'
+	icon_state = "tombstone"
 
 /obj/structure/decoration/sign //Signs.
 	name = "sign"

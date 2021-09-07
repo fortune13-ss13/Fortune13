@@ -287,15 +287,16 @@
 	projectiletype = /obj/item/projectile/bullet/c10mm
 	loot = list(/obj/item/gun/ballistic/automatic/smg/smg10mm/worn, /obj/item/melee/onehanded/knife/cosmic)
 	projectilesound = 'sound/f13weapons/10mm_fire_03.ogg'
+	idlesound = list('sound/health/hunger1.ogg')
 
 /mob/living/simple_animal/hostile/raider/unique/gourmet/Aggro()
 	..()
-	say("Wonderful! You will be perfect alongside the mushroom stew. Enchanté!")
+	say("Wonderful! You will go perfectly with the Chianti. Enchanté!")
 
 
 /mob/living/simple_animal/hostile/raider/unique/hammertime
-	name = "Joe Hammertime"
-	desc = "Thin, twitching, a massive Turbo abuser, Joe lies in bed all day and only gets up to look for a fix, or to brain passers-by, hoping to rob their corpses. "
+	name = "Hammertime"
+	desc = "Pale and gaunt, plagued by tics, and a massive Turbo abuser. Hammertime lies in bed all day and only gets up to look for a fix, or to brain passers-by, hoping to rob their corpses. He then sells the corpses to the Gourmet. Good relations with your neighbours are important "
 	icon_state = "hammertime"
 	icon_living = "hammertime"
 	icon_dead = "hammertime_dead"

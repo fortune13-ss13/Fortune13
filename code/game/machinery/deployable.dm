@@ -78,10 +78,15 @@
 /obj/structure/barricade/wooden
 	name = "wooden barricade"
 	desc = "This space is blocked off by a wooden barricade."
-	icon = 'icons/obj/structures.dmi'
+	icon = 'icons/fallout/structures/barricades.dmi'
 	icon_state = "woodenbarricade"
 	bar_material = WOOD
 	var/drop_amount = 3
+
+/obj/structure/barricade/wooden/boarded
+	name = "boarded door"
+	icon_state = "boarded"
+	max_integrity = 120
 
 /obj/structure/barricade/wooden/attackby(obj/item/I, mob/user)
 	if(istype(I,/obj/item/stack/sheet/mineral/wood))

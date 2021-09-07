@@ -339,6 +339,13 @@
 	name = initial(I.name)
 	icon = initial(I.icon)
 	icon_state = initial(I.icon_state)
+
+
+/obj/structure/displaycase/knight
+	name = "display case"
+	start_showpiece_type = /obj/item/clothing/suit/armor/riot/knight/tabard
+
+
 /* Selling people in jars is currently disabled.
 /obj/structure/displaycase/forsale
 	name = "vend-a-tray"
