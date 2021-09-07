@@ -291,6 +291,10 @@
 	environment = 21
 	grow_chance = 25
 
+/area/f13/subway/ghouls
+	name = "Ghouls"
+	icon_state = "ghouls"
+
 /area/f13/secret
 	name = "Secret"
 	icon_state = "secret"
