@@ -242,6 +242,13 @@
 /turf/open/indestructible/ground/outside/dirt/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return //same thing here, dirt absorbs the liquid... :(
 
+/obj/effect/overlay/cliff
+	icon = 'icons/fallout/decals/turf_mergeoverlays.dmi'
+	icon_state = "dirt_side"
+
+/obj/effect/overlay/cliff/corner
+	icon_state = "dirt_corner"
+
 /turf/open/indestructible/ground/outside/road
 	name = "\proper road"
 	icon_state = "innermiddle"
@@ -405,8 +412,18 @@
 	icon = 'icons/fallout/turfs/sidewalkdirt.dmi'
 //	step_sounds = list("human" = "erikafootsteps")
 
+//GRAVEL OUTDOORS
 /turf/open/indestructible/ground/outside/graveldirt
 	name = "gravel"
 	icon_state = "graveldirt"
 	icon = 'icons/fallout/turfs/ground.dmi'
-//	step_sounds = list("human" = "erikafootsteps")
+	slowdown = 0.05
+	footstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
+	barefootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
+	clawfootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
+
+/turf/open/indestructible/ground/outside/graveldirt/path
+	icon_state = "graveldirtpath"
+
+/turf/open/indestructible/ground/outside/graveldirt/path/intersection
+	icon_state = "graveldirtpath_intersection"

@@ -113,21 +113,10 @@
 	desc = "Small pebbles, lots of them."
 	icon = 'icons/fallout/turfs/ground.dmi'
 	icon_state = "gravel"
+	footstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
+	barefootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
+	clawfootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
 
-/turf/open/floor/plating/f13/inside/gravel/edge
-	icon_state = "graveledge"
-
-/turf/open/floor/plating/f13/inside/gravel/corner
-	icon_state = "gravelcorner"
-
-
-//GRAVEL OUTDOORS
-/turf/open/floor/plating/f13/inside/gravel
-	name = "gravel"
-	desc = "Small pebbles, lots of them."
-	icon = 'icons/fallout/turfs/ground.dmi'
-	icon_state = "gravel"
-	sunlight_state = SUNLIGHT_SOURCE
 
 /turf/open/floor/plating/f13/inside/gravel/edge
 	icon_state = "graveledge"

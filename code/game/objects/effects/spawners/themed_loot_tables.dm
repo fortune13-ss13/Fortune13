@@ -365,7 +365,7 @@
 		/obj/item/ammo_box/a556 = 15,
 		/obj/item/ammo_box/a762 = 10,
 		/obj/item/ammo_box/a762box = 10,
-		/obj/item/ammo_box/magazine/m556/rifle/extended/empty = 8,
+		/obj/item/ammo_box/magazine/m556/rifle/extended = 8,
 		/obj/item/ammo_box/magazine/m762/ext/empty = 7,
 		/obj/item/ammo_box/a50MGbox = 5,
 		)
@@ -477,5 +477,5 @@
 	name = "worn 10mm SMG and ammo spawner"
 	items = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm/worn,
-		/obj/item/ammo_box/magazine/m10mm_adv/empty,
+		/obj/item/ammo_box/magazine/m10mm_adv/,
 		)

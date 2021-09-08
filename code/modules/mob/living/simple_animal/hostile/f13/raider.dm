@@ -74,9 +74,6 @@
 	projectiletype = /obj/item/projectile/bullet/c9mm/op
 	projectilesound = 'sound/f13weapons/ninemil.ogg'
 
-/mob/living/simple_animal/hostile/raider/Aggro()
-	..()
-	summon_backup(15)
 
 /mob/living/simple_animal/hostile/raider/ranged/Aggro()
 	..()
@@ -148,22 +145,23 @@
 /mob/living/simple_animal/hostile/raider/skull/Aggro()
 	..()
 	summon_backup(15)
-	say("My first kill! COME WATCH BOYS!!")
+	say("Gnnh...head hurts..wait...you ain't one of the boys...you done goofed!")
 
 
-/mob/living/simple_animal/hostile/raider/ranged/skull
+/mob/living/simple_animal/hostile/raider/skull/ranged
 	name = "Skulls member"
 	desc = "Full member of the gang called the Skulls. Permanent state of aggression due to glue sniffing and head trauma."
 	icon_state = "skullsmember"
 	icon_living = "skullsmember"
+	ranged = 1
+	maxHealth = 115
+	health = 115
+	retreat_distance = 4
+	minimum_distance = 6
 	loot = list(/obj/effect/mob_spawn/human/corpse/skullsmember, /obj/item/gun/ballistic/revolver/colt6520, /obj/item/ammo_box/c10mm/improvised)
 	projectiletype = /obj/item/projectile/bullet/c10mm/ap
 	projectilesound = 'sound/f13weapons/10mm_fire_02.ogg'
 
-/mob/living/simple_animal/hostile/raider/ranged/skull/Aggro()
-	..()
-	summon_backup(15)
-	say("Gnnh...head hurts..wait...you ain't one of the boys...time TO DIE!!")
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/skull
 	name = "Esteban the Killer"
@@ -171,6 +169,7 @@
 	icon_state = "skullsboss"
 	icon_living = "skullsboss"
 	loot = list(/obj/effect/mob_spawn/human/corpse/skullsboss, /obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/mask/cigarette/cigar/havana)
+	projectilesound = 'sound/weapons/gunshot.ogg'
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/skull/Aggro()
 	..()
@@ -185,12 +184,12 @@
 
 /mob/living/simple_animal/hostile/raider/thief/lurkerbeggar/Aggro()
 	..()
-	say("Gabba di sheeni!")
+	say("Gabba he sheeni!")
 
 /mob/living/simple_animal/hostile/raider/legendary/lurker/Aggro()
 	..()
 	summon_backup(15)
-	say("Faga di mut!!")
+	say("Faga di mutti!!")
 
 /mob/living/simple_animal/hostile/raider/thief/lurkerbeggar
 	name = "Lurkers beggar"
@@ -239,8 +238,8 @@
 	ranged = 1
 	maxHealth = 115
 	health = 115
-	retreat_distance = 4
-	minimum_distance = 6
+	retreat_distance = 3
+	minimum_distance = 4
 	loot = list(/obj/item/gun/ballistic/shotgun/hunting)
 	projectiletype = /obj/item/projectile/bullet/shotgun_slug
 	projectilesound = 'sound/f13weapons/shotgun.ogg'
@@ -256,7 +255,7 @@
 
 /mob/living/simple_animal/hostile/raider/legendary/lurker/chieftain
 	name = "Lurkers chieftain"
-	desc = "The Lurkers chieftains are usually very short and stocky, a family trait of the hereditary title no doubt."
+	desc = "The Lurkers chieftains are usually very short and stocky for some reason."
 	icon_state = "lurkerschief"
 	icon_living = "lurkerschief"
 	icon_dead = "lurkerschief_dead"
@@ -271,6 +270,48 @@
 	loot = list(/obj/item/gun/ballistic/shotgun/automatic/combat/auto5, /obj/item/clothing/head/f13/hairband)
 
 
+// Raider Characters
+
+/mob/living/simple_animal/hostile/raider/unique/gourmet
+	name = "The Aspiring Chef"
+	desc = "Corpulent and jovial, too bad Mr. Gourmet is a merciless murderer and cannibal."
+	icon_state = "gourmet"
+	icon_living = "gourmet"
+	icon_dead = "gourmet_dead"
+	maxHealth = 280
+	health = 280
+	speed = 2
+	ranged = 1
+	retreat_distance = 1
+	minimum_distance = 2
+	extra_projectiles = 3
+	projectiletype = /obj/item/projectile/bullet/c10mm
+	loot = list(/obj/item/gun/ballistic/automatic/smg/smg10mm/worn, /obj/item/melee/onehanded/knife/cosmic)
+	projectilesound = 'sound/f13weapons/10mm_fire_03.ogg'
+	idlesound = list('sound/health/hunger1.ogg')
+
+/mob/living/simple_animal/hostile/raider/unique/gourmet/Aggro()
+	..()
+	say("Wonderful! You will go perfectly with the Chianti. Enchanté!")
+
+
+/mob/living/simple_animal/hostile/raider/unique/hammertime
+	name = "Hammertime"
+	desc = "Pale and gaunt, plagued by tics, and a massive Turbo abuser. Hammertime lies in bed all day and only gets up to look for a fix, or to brain passers-by, hoping to rob their corpses. He then sells the corpses to the Gourmet. Good relations with your neighbours are important "
+	icon_state = "hammertime"
+	icon_living = "hammertime"
+	icon_dead = "hammertime_dead"
+	maxHealth = 220
+	health = 220
+	environment_smash = 1
+	wander = 1
+	melee_damage_lower = 50
+	melee_damage_upper = 50
+	loot = list(/obj/item/clothing/head/helmet/f13/motorcycle, /obj/item/twohanded/sledgehammer)
+
+/mob/living/simple_animal/hostile/raider/unique/hammertime/Aggro()
+	..()
+	say("Got any caps? Eh, never mind, I'll just search your corpse.")
 
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"

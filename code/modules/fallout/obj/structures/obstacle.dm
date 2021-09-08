@@ -172,8 +172,8 @@
 	desc = "Heavy doors jammed halfway open. Squeeze past or apply plenty of violence."
 	icon = 'icons/fallout/structures/barricades.dmi'
 	icon_state = "jammed"
-	obj_integrity = 400
-	max_integrity = 400
+	obj_integrity = 800
+	max_integrity = 800
 	climbable = TRUE
 
 

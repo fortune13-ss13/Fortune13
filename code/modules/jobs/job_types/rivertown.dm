@@ -3,7 +3,7 @@ Town access doors
 Sheriff/Deputy, Gatehouse etc: 62 ACCESS_GATEWAY
 General access: 25 ACCESS_BAR
 Clinic surgery/storage: 68 ACCESS_CLONING
-Shopkeeper: 34 ACCESS_CARGO_BOT
+Machinist/cargo: 34 ACCESS_CARGO_BOT
 Banker : 52 ACCESS_MINT_VAULT
 Barkeep : 28 ACCESS_KITCHEN - you jebronis made default bar for no reason bruh
 Prospector : 48 ACCESS_MINING
