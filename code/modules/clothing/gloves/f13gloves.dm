@@ -133,8 +133,8 @@
 //////////
 
 /obj/item/clothing/gloves/legion
-	name = "leather gloves"
-	desc = "Fingerless leather gloves to improve grip worn by legionaires."
+	name = "Leather Driving Gloves"
+	desc = "Worn, fingerless leather gloves to help improve grip."
 	icon = 'icons/fallout/clothing/gloves.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
 	icon_state = "legion_fingerless"
