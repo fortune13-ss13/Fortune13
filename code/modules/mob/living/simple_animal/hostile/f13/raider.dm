@@ -145,22 +145,23 @@
 /mob/living/simple_animal/hostile/raider/skull/Aggro()
 	..()
 	summon_backup(15)
-	say("My first kill! COME WATCH BOYS!!")
+	say("Gnnh...head hurts..wait...you ain't one of the boys...you done goofed!")
 
 
-/mob/living/simple_animal/hostile/raider/ranged/skull
+/mob/living/simple_animal/hostile/raider/skull/ranged
 	name = "Skulls member"
 	desc = "Full member of the gang called the Skulls. Permanent state of aggression due to glue sniffing and head trauma."
 	icon_state = "skullsmember"
 	icon_living = "skullsmember"
+	ranged = 1
+	maxHealth = 115
+	health = 115
+	retreat_distance = 4
+	minimum_distance = 6
 	loot = list(/obj/effect/mob_spawn/human/corpse/skullsmember, /obj/item/gun/ballistic/revolver/colt6520, /obj/item/ammo_box/c10mm/improvised)
 	projectiletype = /obj/item/projectile/bullet/c10mm/ap
 	projectilesound = 'sound/f13weapons/10mm_fire_02.ogg'
 
-/mob/living/simple_animal/hostile/raider/ranged/skull/Aggro()
-	..()
-	summon_backup(15)
-	say("Gnnh...head hurts..wait...you ain't one of the boys...time TO DIE!!")
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/skull
 	name = "Esteban the Killer"
