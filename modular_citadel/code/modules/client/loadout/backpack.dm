@@ -6,33 +6,59 @@
 /datum/gear/backpack/crayons
 	name = "Box of Crayons"
 	path = /obj/item/storage/crayons
-	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
 	cost = 2
-
-/datum/gear/backpack/toykatana
-	name = "Toy Katana"
-	path = /obj/item/toy/katana
-	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
+	
+/datum/gear/backpack/cigar
+	name = "Cigar"
+	path = /obj/item/clothing/mask/cigarette/cigar
+	cost = 2
+	
+/datum/gear/backpack/cigarettepack
+	name = "Cigarette Pack"
+	path = /obj/item/storage/fancy/cigarettes/cigpack_greytort
+	cost = 2
+	
+/datum/gear/backpack/dicebag
+	name = "Bag of Dice"
+	path = /obj/item/storage/box/dice
 	cost = 3
-
+	
 /datum/gear/backpack/fountainpen
 	name = "Fountain Pen"
 	path = /obj/item/pen/fountain
-	cost = 3
-
+	cost = 1
+	
+/datum/gear/backpack/eightball
+	name = "Magic Eightball"
+	path = /obj/item/toy/eightball
+	cost = 2
+	
 /datum/gear/backpack/multipen
 	name = "Multicolored Pen"
 	path = /obj/item/pen/fourcolor
-
-/datum/gear/backpack/necklace//this is here because loadout doesn't support proper accessories
+	cost = 1
+	
+/datum/gear/backpack/carddeck
+	name = "Playing Cards"
+	path = /obj/item/toy/cards/deck
+	cost = 2
+	
+/datum/gear/backpack/necklace
 	name = "Renameable Necklace"
 	path = /obj/item/clothing/accessory/necklace
-
-/datum/gear/backpack/tape
-	name = "Spare Cassette Tape"
-	path = /obj/item/tape/random
-
-/datum/gear/backpack/tapeplayer
-	name = "Taperecorder"
+	cost = 1
+	
+/datum/gear/backpack/soap
+	name = "Bar of Soap"
+	path = /obj/item/soap
+	cost = 2
+	
+/datum/gear/backpack/taperecorder
+	name = "Tape Recorder"
 	path = /obj/item/taperecorder
 	cost = 2
+	
+/datum/gear/backpack/wallet
+	name = "Wallet"
+	path = /obj/item/storage/wallet
+	cost = 1
