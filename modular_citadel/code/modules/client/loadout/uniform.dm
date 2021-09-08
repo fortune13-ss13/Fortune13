@@ -235,7 +235,7 @@
 	
 /datum/gear/uniform/prewarformal
 	name = "Pre-war Male Formalwear"
-	path = " /obj/item/clothing/under/f13/formal
+	path = /obj/item/clothing/under/f13/formal
 	cost = 3
 	
 /datum/gear/uniform/prewarrelaxed
