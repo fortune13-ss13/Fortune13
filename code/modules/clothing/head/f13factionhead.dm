@@ -681,8 +681,8 @@
 	item_state = "ncr_helmet"
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat
-	name = "ranger combat helmet"
-	desc = "(VII) An old combat helmet, out of use around the time of the war."
+	name = "USMC Riot Gear Helmet"
+	desc = "(VII) The most characteristic element of the riot gear, the helmet. A rounded shell protects the head from incoming gunfire, while the lamps on the right side of the provide illumination. The mask also incorporates a locking mechanism to properly join it together with the helmet shell, ear covers with membranes that do not inhibit hearing while maintaining its protective qualities, & air filters."
 	icon_state = "ranger"
 	item_state = "ranger"
 	armor = list("tier" = 7, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 0)
