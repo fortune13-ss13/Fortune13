@@ -809,7 +809,7 @@
 	icon = 'icons/fallout/clothing/suits_utility.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
 	armor = list("tier" = 1, "energy" = 5, "bomb" = 5, "bio" = 10, "rad" = 5, "fire" = 30, "acid" = 0)
-	var/armor_block_threshold = 0.9
+	var/armor_block_threshold = 1
 	var/armor_block_chance = 0.6
 
 

@@ -41,7 +41,7 @@
 	outdoors = 1
 	open_space = 1
 	blob_allowed = 0
-	environment = 15
+	environment = 19
 	grow_chance = 75
 
 /area/f13/ruins
@@ -87,7 +87,7 @@
 	outdoors = 1
 	open_space = 1
 	blob_allowed = 0
-	environment = 15
+	environment = 19
 	grow_chance = 50
 
 /area/f13/farm/farmhouse
@@ -324,13 +324,14 @@
 	outdoors = 1
 	open_space = 1
 	blob_allowed = 0
-	environment = 6
+	environment = 19
 	grow_chance = 5
 
 /area/f13/outlaw/indoors
 	name = "Outlaw building"
 	icon_state = "outlaws_indoor"
 	outdoors = 0
+	environment = 6
 
 /area/f13/vault
 	name = "Vault"
@@ -552,7 +553,7 @@
 //	ambientmusic = list('sound/f13music/fo2_chapel.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/bloodsucker/coffin_open.ogg','sound/bloodsucker/BloodsuckerAlert.ogg','sound/spookoween/ghost_whisper.ogg','sound/spookoween/ghosty_wind.ogg','sound/ambience/ambicha3.ogg','sound/ambience/ambicha4.ogg')
 	outdoors = 1
-	environment = 5
+	environment = 19
 	grow_chance = 5
 
 
@@ -577,6 +578,7 @@
 	ambientsounds = list('sound/f13effects/thunder_distant_1.ogg','sound/f13effects/thunder_distant_2.ogg','sound/ambience/seag3.ogg', \
 	'sound/ambience/seag2.ogg','sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg', \
 	'sound/f13ambience/bird_3.ogg', 'sound/ambience/shore.ogg','sound/weather/ashstorm/outside/weak_start.ogg')
+	environment = 19
 
 /area/f13/office/talon
 	name = "Talon"
@@ -585,6 +587,7 @@
 /area/shuttle/riverbarge
 	name = "Riverbarge"
 	icon_state = "town"
+	environment = 19
 
 /* Monster wails
 'sound/hallucinations/far_noise.ogg',
