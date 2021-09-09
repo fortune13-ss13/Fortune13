@@ -11,7 +11,7 @@
 
 /obj/item/clothing/glasses/legiongoggles
 	name = "sandstorm goggles"
-	desc = "Post-war makeshift protective goggles made by legion artisans."
+	desc = "Post-war makeshift protective goggles made & utilised mostly by various types of long distance traders and travellers to protect from weather, dust & sand."
 	icon_state = "legion"
 	item_state = "legion"
 

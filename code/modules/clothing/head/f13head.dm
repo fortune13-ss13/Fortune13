@@ -738,11 +738,11 @@
 
 /obj/item/clothing/head/helmet/f13/motorcycle
 	name = "motorcycle helmet"
-	desc = "(II) A type of helmet used by motorcycle riders.<br>The primary goal of a motorcycle helmet is motorcycle safety - to protect the rider's head during impact, thus preventing or reducing head injury and saving the rider's life."
+	desc = "(III) A type of helmet used by motorcycle riders.<br>The primary goal of a motorcycle helmet is motorcycle safety - to protect the rider's head during impact, thus preventing or reducing head injury and saving the rider's life."
 	icon_state = "motorcycle"
 	item_state = "motorcycle"
 	flags_cover = HEADCOVERSEYES
-	armor = list("tier" = 2, "linemelee" = 30, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 	strip_delay = 10
 
@@ -752,7 +752,7 @@
 	icon_state = "firefighter"
 	item_state = "firefighter"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("tier" = 3, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 90, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -766,7 +766,15 @@
 	desc = "(III) An old sombrero worn by Vaqueros to keep off the harsh sun."
 	icon_state = "vaquerohat"
 	item_state = "vaquerohat"
-	armor = list("tier" = 3, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEHAIR
+	
+/obj/item/clothing/head/helmet/f13/baseballhelmet
+	name = "worn baseball helmet"
+	desc = "(III) An old, metal University-style Baseball helmet.. seems familiar?"
+	icon_state = "legion-veteran"
+	item_state = "legion-veteran"
+	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/wastewarhat
