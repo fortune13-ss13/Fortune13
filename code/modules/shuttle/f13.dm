@@ -89,7 +89,7 @@
 	icon_keyboard = "tech_key"
 	light_color = null
 	circuit = null
-	shuttleId = "vault113_elevator"
+	shuttleId = "riverbarge"
 	possible_destinations = "Riverton dock"
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

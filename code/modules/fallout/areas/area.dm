@@ -518,7 +518,7 @@
 	icon_state = "animals"
 	ambientsounds = list('sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg','sound/f13ambience/bird_3.ogg','sound/f13ambience/bird_4.ogg','sound/f13ambience/bird_5.ogg', \
 	'sound/f13ambience/bird_6.ogg','sound/f13ambience/bird_7.ogg','sound/f13ambience/bird_8.ogg', \
-	'sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/rattlesnake_3.ogg')
+	'sound/f13ambience/dog_distant_1.ogg','sound/f13ambience/dog_distant_2.ogg','sound/f13ambience/dog_distant_3.ogg',)
 	outdoors = 0
 	environment = 15
 	grow_chance = 10
@@ -575,13 +575,16 @@
 //	ambience_area =  list('sound/f13ambience/wasteland.ogg')
 //	ambientmusic = list('sound/f13music/fo2_wasteland.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_world.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/f13effects/thunder_distant_1.ogg','sound/f13effects/thunder_distant_2.ogg','sound/ambience/seag3.ogg', \
-	'sound/ambience/seag2.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg', \
-	'sound/f13ambience/bird_3.ogg','sound/weather/ashstorm/outside/weak_start.ogg')
+	'sound/ambience/seag2.ogg','sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg', \
+	'sound/f13ambience/bird_3.ogg', 'sound/ambience/shore.ogg','sound/weather/ashstorm/outside/weak_start.ogg')
 
 /area/f13/office/talon
 	name = "Talon"
 	icon_state = "talon"
 
+/area/shuttle/riverbarge
+	name = "Riverbarge"
+	icon_state = "town"
 
 /* Monster wails
 'sound/hallucinations/far_noise.ogg',
