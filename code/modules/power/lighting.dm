@@ -897,6 +897,14 @@
 	bulb_colour = "#8B0000"
 	light_color = "#FF0000"
 
+/obj/machinery/light/small/orange
+	name = "orange light"
+	bulb_colour = "#dd8c52"
+	light_color = "#e0b25e"
+	desc = "A small lighting fixture."
+	light_type = /obj/item/light/bulb
+
+
 //Flickering Ported From Hippiestation. credits to yoyobatty
 /obj/machinery/light/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1)
 	. = ..()

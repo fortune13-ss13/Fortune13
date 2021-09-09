@@ -81,3 +81,15 @@
 	possible_destinations = "Vault113_Ground;Vault113_Level_1"
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
+/obj/machinery/computer/shuttle/riverbarge
+	name = "long-wave radio set"
+	desc = "Tuned to the channels used by the traders on the Kanawha river."
+	icon_screen = "shuttle"
+	icon_keyboard = "tech_key"
+	light_color = null
+	circuit = null
+	shuttleId = "vault113_elevator"
+	possible_destinations = "Riverton dock"
+	flags_1 = NODECONSTRUCT_1
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
