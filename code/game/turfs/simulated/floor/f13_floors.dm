@@ -113,9 +113,9 @@
 	desc = "Small pebbles, lots of them."
 	icon = 'icons/fallout/turfs/ground.dmi'
 	icon_state = "gravel"
-	footstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
-	barefootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
-	clawfootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_CARPET
+	clawfootstep = FOOTSTEP_CARPET
 
 
 /turf/open/floor/plating/f13/inside/gravel/edge

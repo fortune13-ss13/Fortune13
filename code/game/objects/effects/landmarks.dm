@@ -558,7 +558,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/commander
 	name = "Mercenary Commander"
-	icon_state = "Merc Commander"
+	icon_state = "Mercenary Commander"
 
 /obj/effect/landmark/start/f13/mercenary
 	name = "Mercenary"

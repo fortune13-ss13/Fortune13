@@ -107,6 +107,10 @@
 	new /obj/item/stack/f13Cash/random/ncr/low(src)
 
 // Standard Banker money bag. They are insanely wealthy, Caps only and only for RP purposes.
+/obj/item/storage/bag/money/small/banker
+	name = "money bag"
+	icon_state = "moneybag"
+
 /obj/item/storage/bag/money/small/banker/PopulateContents()
 	// ~162 worth of non legion money
 	new /obj/item/stack/f13Cash/random/banker(src)

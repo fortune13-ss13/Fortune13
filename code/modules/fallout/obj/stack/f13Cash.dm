@@ -31,7 +31,7 @@
 
 // The Bankers Vault-Stash, done like this make it so it only spawns on his person to stop metarushing. Average 8500.
 #define BANKER_MIN 2000
-#define BANKER_MAX 15000
+#define BANKER_MAX 5000
 
 /obj/item/stack/f13Cash //DO NOT USE THIS
 	name = "bottle cap"

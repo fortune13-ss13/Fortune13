@@ -285,3 +285,7 @@
 	icon_state = "button"
 	result_path = /obj/machinery/button
 	custom_materials = list(/datum/material/iron = MINERAL_MATERIAL_AMOUNT)
+
+/obj/machinery/button/door/simple
+	icon_state = "alt_doorctrl"
+	skin = "alt_doorctrl"

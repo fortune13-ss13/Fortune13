@@ -208,6 +208,7 @@ here's a tip, go search DEFINES/access.dm
 
 /datum/job/town/commander
 	title = "Mercenary Commander"
+	faction = "Mercenary"
 	flag = F13SHERIFF
 	head_announce = list("Security")
 	total_positions = 1
@@ -224,8 +225,8 @@ here's a tip, go search DEFINES/access.dm
 
 	outfit = /datum/outfit/job/town/commander
 
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_MINISAT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_MINISAT)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/town,
@@ -294,6 +295,7 @@ here's a tip, go search DEFINES/access.dm
 
 /datum/job/town/mercenary
 	title = "Mercenary"
+	faction = "Mercenary"
 	flag = F13DEPUTY
 	total_positions = 4
 	spawn_positions = 4
@@ -307,8 +309,8 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 	outfit = /datum/outfit/job/town/mercenary
-	access = list(ACCESS_BAR, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	access = list(ACCESS_BAR, ACCESS_GATEWAY, ACCESS_MINISAT)
+	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY, ACCESS_MINISAT)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis,
