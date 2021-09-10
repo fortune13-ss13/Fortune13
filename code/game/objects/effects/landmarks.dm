@@ -544,6 +544,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Vigilante"
 	icon_state = "Scribe"
 
+/obj/effect/landmark/start/f13/wastelander
+	name = "Wastelander"
+	icon_state = "wiznerd_spawn"
 
 
 // RIVERTOWN
