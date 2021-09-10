@@ -391,6 +391,8 @@ GLOBAL_LIST_INIT(loot_t4_armor, list(
 	/obj/item/clothing/suit/armor/f13/power_armor/t45b,
 	/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice,
 	/obj/item/clothing/head/helmet/f13/rangerbroken,
+	/obj/item/clothing/suit/armor/f13/rangercombat,
+	/obj/item/clothing/head/helmet/f13/ncr/rangercombat,
 	/obj/item/clothing/suit/armor/f13/combat/mk2,
 	/obj/item/clothing/head/helmet/f13/combat/mk2,
 	/obj/item/clothing/suit/armor/f13/power_armor/raiderpa,

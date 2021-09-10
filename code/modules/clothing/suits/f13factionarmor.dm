@@ -512,8 +512,8 @@
 	armor = list("tier" = 5, "energy" = 45, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
 
 /obj/item/clothing/suit/armor/f13/rangercombat
-	name = "veteran ranger combat armor"
-	desc = "(VII) The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
+	name = "USMC Riot Gear"
+	desc = "(VII) An advanced design fielded in limited quantities before the Great War, riot gear was a specialized model of combat armor used by the United States Marine Corps, Army units in the American West, & select law enforcement agencies."
 	icon_state = "ranger"
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
