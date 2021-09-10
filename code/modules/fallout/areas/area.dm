@@ -31,6 +31,12 @@
 	environment = 19
 	grow_chance = 45
 
+/area/f13/wasteland/farm
+	name = "Farmlands"
+	icon_state = "farm"
+	ambientsounds = list('sound/f13ambience/dog_distant_1.ogg','sound/f13ambience/dog_distant_2.ogg','sound/f13ambience/dog_distant_3.ogg', \
+	'sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg','sound/f13ambience/bird_3.ogg','sound/f13ambience/bird_4.ogg','sound/f13ambience/bird_5.ogg','sound/f13ambience/bird_6.ogg','sound/f13ambience/bird_7.ogg','sound/f13ambience/bird_8.ogg')
+
 /area/f13/forest
 	name = "Forest"
 	icon_state = "forest"

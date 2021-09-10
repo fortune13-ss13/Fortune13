@@ -141,7 +141,7 @@ GLOBAL_LIST_INIT(barefootstep, list(
 	FOOTSTEP_MEAT = list(list(
 		'sound/effects/meatslap.ogg'), 100, 0),
 	FOOTSTEP_RUST = list(list(
-		'sound/effects/footstep/rustystep1.ogg'), 100, 0)
+		'sound/effects/footstep/rustystep1.ogg'), 100, 0),
 ))
 
 //claw footsteps lists

@@ -418,9 +418,9 @@
 	icon_state = "graveldirt"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	slowdown = 0.05
-	footstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
-	barefootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
-	clawfootstep = 'sound/effects/footstep/carpetbarefoot5.ogg'
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_CARPET
+	clawfootstep = FOOTSTEP_CARPET
 
 /turf/open/indestructible/ground/outside/graveldirt/path
 	icon_state = "graveldirtpath"
