@@ -1,4 +1,5 @@
 /*
+WARNING: Changing job names changes spawn position and whitelists too. It's not just path that matters.
 Town access doors
 Sheriff/Deputy, Gatehouse etc: 62 ACCESS_GATEWAY
 General access: 25 ACCESS_BAR
@@ -49,7 +50,7 @@ here's a tip, go search DEFINES/access.dm
 	spawn_positions = 1
 	supervisors = "The town council in theory."
 	description = "You are the Alderman, chosen by the town council to be master of the market and keeper of the treasury. The settlers are a rough crowd but the council hired top-notch mercenaries to make sure the town stays free from outside rule and the council secure at the top."
-	exp_requirements = 120
+	exp_requirements = 180
 
 	outfit = /datum/outfit/job/town/alderman
 	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
@@ -103,7 +104,7 @@ here's a tip, go search DEFINES/access.dm
 	flag = F13PREACHER
 	department_head = list("Captain")
 	head_announce = list("Security")
-	exp_requirements = 60
+	exp_requirements = 120
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Rivertown Alderman in theory, but you true master is far above them. If the Alderman is indisposed the people look to you for leadership."
@@ -216,7 +217,7 @@ here's a tip, go search DEFINES/access.dm
 	supervisors = "None"
 	description = "The townies hired you to defend their dirty hovel, and so you will. You know the company lives and dies by its reputation, and so do you, so your boys are gonna bury any fool who tries to muscle their way in."
 	selection_color = "#dcba97"
-	exp_requirements = 60
+	exp_requirements = 180
 
 	loadout_options = list(
 	/datum/outfit/loadout/cleaner,

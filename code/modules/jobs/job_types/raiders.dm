@@ -317,7 +317,7 @@
 	description = "Psychos are a rough crowd to say the least, and while they are united by some coked out religious traditions, just because they call their their leader the Bishop don't expect the gang to be choir boys. Try to outcrazy your men or rule with fear, either way, you are smart enough to know you need to stay on top or die, either from traitors or the other gangs."
 	supervisors = "No one. Might makes right."
 	selection_color = "#ff4747"
-	exp_requirements = 120
+	exp_requirements = 180
 	outfit = /datum/outfit/job/raider/boss_psycho
 	loadout_options = list(
 		/datum/outfit/loadout/trenchie,
@@ -496,7 +496,7 @@
 	description = "You lead the tribe, a tough job as the weakest of the three gangs, and with least respect. You know the others need your gunsmiths and desire your women, but if bartering fails, your berserkers are fearsome warriors. Even a molerat can sever a jugular when cornered...."
 	supervisors = "No one, but you must maintain the approval of your blood kin and the respect of the other two gang leaders if possible."
 	selection_color = "#ff4747"
-	exp_requirements = 120
+	exp_requirements = 180
 	outfit = /datum/outfit/job/raider/boss_tribal
 
 	loadout_options = list(
