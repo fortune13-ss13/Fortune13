@@ -979,22 +979,21 @@
 
 //H&K G11				Keywords: 4.73mm, Automatic, 50 round magazine
 /obj/item/gun/ballistic/automatic/g11
-	name = "g11"
-	desc = "This experimental german gun fires a caseless cartridge consisting of a block of propellant with a bullet buried inside. The weight and space savings allows for a very high magazine capacity. Chambered in 4.73mm."
+	name = "H&K G11E"
+	desc = "This gun revolutionized squad level support weapon design. The gun fires a caseless cartridge consisting of a block of propellant with a bullet buried inside. The resultant weight and space savings allow it to have a very high magazine capacity."
 	icon_state = "g11"
 	item_state = "g11"
+	slowdown = 1
 	mag_type = /obj/item/ammo_box/magazine/m473
-	fire_delay = 2.5
-	burst_shot_delay = 1.5
-	can_attachments = TRUE
+	burst_size = 5
+	fire_delay = 7
+	burst_shot_delay = 2
+	can_attachments = FALSE
 	can_automatic = TRUE
 	semi_auto = TRUE
 	can_scope = FALSE
-	spread = 8
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-
+	spread = 11
+	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 
 
 ////////////////
