@@ -21,7 +21,7 @@
 	backpack =	/obj/item/storage/backpack/enclave
 	satchel =	/obj/item/storage/backpack/satchel/enclave
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	gloves =	/obj/item/clothing/gloves/rifleman
+	gloves =	/obj/item/clothing/gloves/f13/military
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	r_pocket =	/obj/item/flashlight/seclite
 	l_pocket =	/obj/item/melee/onehanded/knife/bayonet
@@ -246,7 +246,7 @@
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/combat
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	gloves =	/obj/item/clothing/gloves/rifleman
+	gloves =	/obj/item/clothing/gloves/f13/military
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	suit_store = /obj/item/gun/ballistic/automatic/xl70e3
@@ -325,7 +325,7 @@
 	uniform =	/obj/item/clothing/under/f13/enclave_officer
 	accessory =	/obj/item/clothing/accessory/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave/officercoat
-	gloves =	/obj/item/clothing/gloves/combat
+	gloves =	/obj/item/clothing/gloves/f13/military
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
