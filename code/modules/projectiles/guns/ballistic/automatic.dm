@@ -824,6 +824,7 @@
 	icon_state = "infiltrator"
 	item_state = "assault_carbine"
 	extra_damage = 1
+	can_attachments = FALSE
 	can_suppress = FALSE
 	can_unsuppress = FALSE
 	suppressed = 1
