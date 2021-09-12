@@ -54,6 +54,7 @@
 	head =	/obj/item/clothing/head/helmet/f13/envirosuit
 	glasses =	/obj/item/clothing/glasses/meson
 	mask =	/obj/item/clothing/mask/breath/medical
+	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	uniform =	/obj/item/clothing/under/f13/enclave/science
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
@@ -64,11 +65,9 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/gun/energy/laser/ultra_pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
-		/obj/item/storage/box/mre/menu3 = 1,
+		/obj/item/storage/box/mre/menu4 = 1,
 		)
 
 /datum/outfit/job/enclave/director/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -109,6 +108,7 @@
 	head =	/obj/item/clothing/head/helmet/f13/envirosuit
 	glasses =	/obj/item/clothing/glasses/meson
 	mask =	/obj/item/clothing/mask/breath/medical
+	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	uniform =	/obj/item/clothing/under/f13/enclave/science
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
@@ -119,8 +119,6 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/gun/energy/laser/ultra_pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
 		/obj/item/storage/box/mre/menu3 = 1,
