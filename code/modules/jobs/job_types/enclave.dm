@@ -192,23 +192,25 @@
 
 	outfit = /datum/outfit/job/enclave/armor
 
+	loadout_options = list(
+		/datum/outfit/loadout/hammer,
+		/datum/outfit/loadout/support,
+		)
+
 /datum/outfit/job/enclave/armor
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/armor
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/x02helmet
+	head =	/obj/item/clothing/head/helmet/f13/combat/dark
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/power_armor/x02
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/sergeant
 	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
-	gloves =	/obj/item/gun/ballistic/revolver/ballisticfist
+	gloves =	/obj/item/clothing/gloves/f13/military
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	suit_store = /obj/item/gun/energy/laser/plasma
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/stock_parts/cell/ammo/mfc = 3,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/storage/box/mre/menu3 = 1,
 		)
@@ -219,6 +221,22 @@
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
+
+/datum/outfit/loadout/hammer
+	name = "Hammer."
+	suit_store = /obj/item/twohanded/sledgehammer/supersledge
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/plasma/glock = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 3,
+		)
+
+/datum/outfit/loadout/support
+	name = "Support Gunner"
+	suit_store = /obj/item/gun/ballistic/automatic/g11
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/ballisticfist = 1,
+		/obj/item/ammo_box/shotgun/buck = 1,
+		)
 
 
 
@@ -235,6 +253,11 @@
 	selection_color = "#323232"
 	outfit = /datum/outfit/job/enclave/corporal
 
+	loadout_options = list(
+		/datum/outfit/loadout/corporalskirmisher,
+		/datum/outfit/loadout/marksman,
+		)
+
 /datum/outfit/job/enclave/corporal
 	name = "Enclave Corporal"
 	jobtype = /datum/job/enclave/corporal
@@ -242,14 +265,12 @@
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/combat
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/corporal
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves =	/obj/item/clothing/gloves/f13/military
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
 	belt =	/obj/item/storage/belt/military/assault/enclave
-	suit_store = /obj/item/gun/ballistic/automatic/xl70e3
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
@@ -262,6 +283,19 @@
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
+/datum/outfit/loadout/corporalskirmisher
+	name = "Skirmisher"
+	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/r91c
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
+		)
+
+/datum/outfit/loadout/marksman
+	name = "Marksman"
+	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/r91m
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
+		)
 
 
 /*--------------------- ENCLAVE PRIVATE ------------------------*/
@@ -277,6 +311,11 @@
 	selection_color = "#323232"
 	outfit = /datum/outfit/job/enclave/soldier
 
+	loadout_options = list(
+		/datum/outfit/loadout/rifleman,
+		/datum/outfit/loadout/skirmisher,
+		)
+
 /datum/outfit/job/enclave/soldier
 	name =	"Enclave Private"
 	jobtype =	/datum/job/enclave/soldier
@@ -284,18 +323,30 @@
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/enclave
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/private
 	accessory =	/obj/item/clothing/accessory/enclave/soldier
-	suit_store =	/obj/item/gun/ballistic/automatic/assault_carbine
 
 	backpack_contents = list(
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/storage/box/mre/menu2 = 1,
 		)
 
+/datum/outfit/loadout/rifleman
+	name = "Rifleman"
+	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/r91a1
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		)
+
+/datum/outfit/loadout/skirmisher
+	name = "Skirmisher"
+	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 2,
+		/obj/item/book/granter/trait/trekking = 1,
+		)
 
 
 // OFFICER  Admin/Event Role
