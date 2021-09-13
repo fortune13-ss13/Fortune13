@@ -797,6 +797,10 @@
 	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
 	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
 
+/obj/item/storage/belt/holster/legholster/aep7/PopulateContents()
+	new /obj/item/gun/energy/laser/pistol(src)
+	new /obj/item/stock_parts/cell/ammo/ec(src)
+
 
 /obj/item/storage/belt/fannypack
 	name = "fannypack"
