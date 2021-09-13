@@ -42,7 +42,7 @@ Overseer
 	supervisors = "Vault-tec"
 	selection_color = "#ccffcc"
 	req_admin_notify = 1
-	exp_requirements = 1500
+	exp_requirements = 180
 
 	outfit = /datum/outfit/job/vault/f13overseer
 

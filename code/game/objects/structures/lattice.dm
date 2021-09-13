@@ -17,6 +17,14 @@
 	smooth = SMOOTH_MORE
 	//	flags = CONDUCT_1
 
+/obj/structure/lattice/overpipe
+	layer = 3
+	plane = ABOVE_WALL_PLANE
+	name = "catwalk"
+	desc = "A catwalk for easy access to the machinery below."
+	icon = 'icons/obj/smooth_structures/catwalk.dmi'
+	icon_state = "catwalk"
+
 /obj/structure/lattice/examine(mob/user)
 	. = ..()
 	. += deconstruction_hints(user)

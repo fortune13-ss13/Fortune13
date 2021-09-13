@@ -42,7 +42,7 @@
 	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
 	supervisors = "the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 120
+	exp_requirements = 180
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 
@@ -188,7 +188,7 @@
 	description = "Entrusted with both the now rare advanced armor and command of a squad, your nation relies on you doing your job."
 	supervisors = "the Director and the United States Government."
 	selection_color = "#323232"
-	exp_requirements = 120
+	exp_requirements = 180
 
 	outfit = /datum/outfit/job/enclave/armor
 
