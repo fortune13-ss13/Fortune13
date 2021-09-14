@@ -170,7 +170,7 @@
 /obj/item/clothing/suit/armor/f13/enclave
 	name = "enclave armor template"
 	desc = "should not exist. Bugreport."
-	icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "combat_armor"
 	item_state = "combat_armor"
