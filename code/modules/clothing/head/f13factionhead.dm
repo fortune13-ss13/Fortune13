@@ -231,7 +231,22 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 
-//Enclave
+//////////
+//ENCLAVE/
+//////////
+
+/obj/item/clothing/head/helmet/f13/enclave
+	name = "enclave helmet template"
+	desc = "should not exist."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEHAIR
+	strip_delay = 50
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/science
 	name = "science beret"
@@ -240,27 +255,45 @@
 	item_state = "hat_enclave_science"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
-	armor = list("tier" = 1)
+	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/helmet/enclave/sergeant
+	name = "Reinforced Enclave Combat Helmet"
+	desc = "Issued as part of a rare suit of Reinforced Enclave Combat Armor, the helmet excels in protection from all types of energy weapons and boasts a triple chevron on the front & sides, denoting the user as a Sergeant."
+	icon_state = "helmet_enclave_sergeant"
+	item_state = "helmet_enclave_sergeant"
+	flags_inv = HIDEEARS|HIDEHAIR
+	flags_cover = null
+	armor = list("tier" = 5, "energy" = 60, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/helmet/enclave/corporal
+	name = "US Army Combat Helmet"
+	desc = "A standard US Army combat helmet consisting of olive drab armor plates, a double chevron is painted on both the front and sides, denoting the owner as a Corporal."
+	icon_state = "helmet_enclave_corporal"
+	item_state = "helmet_enclave_corporal"
+	flags_inv = HIDEEARS|HIDEHAIR
+	flags_cover = null
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/intel
 	name = "intel beret"
-	desc = "(III) Dark beret issued to Intelligence Officers of the Enclave."
+	desc = "(I) Dark beret issued to Intelligence Officers of the Enclave."
 	icon_state = "hat_enclave_intel"
 	item_state = "hat_enclave_intel"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
-	armor = list("tier" = 3)
+	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
 	name = "peacekeeper cap"
 	desc = "(IV) Reinforced field cap issued to the soldiers of the Enclave."
 	icon_state = "hat_enclave_peacekeeper"
 	item_state = "hat_enclave_peacekeeper"
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEFACE
 	strip_delay = 50
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
-	armor = list("tier" = 4)
+	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/helmet/enclave/officer
 	name = "enclave officer hat"
@@ -281,7 +314,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
-	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
+	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 	strip_delay = 50
 	dynamic_hair_suffix = ""

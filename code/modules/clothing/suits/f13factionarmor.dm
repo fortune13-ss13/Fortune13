@@ -186,8 +186,8 @@
 /obj/item/clothing/suit/armor/f13/enclave/corporal
 	name = "US Army Combat Armor"
 	desc = "A suit of standard US Army combat armor, consisting of olive drab armor plates affixed to the user's uniform. A double chevron is painted on each pauldron, denoting the owner as a Corporal."
-	icon_state = "combat_armor"
-	item_state = "combat_armor"
+	icon_state = "enclave_corporal"
+	item_state = "enclave_corporal"
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/enclave/sergeant
