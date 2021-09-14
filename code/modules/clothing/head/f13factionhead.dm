@@ -186,7 +186,7 @@
 //ENCLAVE//
 ///////////
 
-/obj/item/clothing/head/helmet/f13/usa
+/obj/item/clothing/head/helmet/f13/remnant
 	name = "enclave helmet template"
 	desc = "should not exist."
 	icon = 'icons/fallout/clothing/hats.dmi'
@@ -201,7 +201,7 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/f13/usa/science
+/obj/item/clothing/head/helmet/f13/remnant/science
 	name = "science beret"
 	desc = "(I) Blue beret signifying the wearer is a Science Officer of the Enclave."
 	icon_state = "hat_enclave_science"
@@ -210,7 +210,7 @@
 	flags_cover = null
 	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/usa/sergeant
+/obj/item/clothing/head/helmet/f13/remnant/sergeant
 	name = "Reinforced Enclave Combat Helmet"
 	desc = "Issued as part of a rare suit of Reinforced Enclave Combat Armor, the helmet excels in protection from all types of energy weapons and boasts a triple chevron on the front & sides, denoting the user as a Sergeant."
 	icon_state = "helmet_enclave_sergeant"
@@ -219,7 +219,7 @@
 	flags_cover = null
 	armor = list("tier" = 5, "energy" = 60, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/usa/corporal
+/obj/item/clothing/head/helmet/f13/remnant/corporal
 	name = "US Army Combat Helmet"
 	desc = "A standard US Army combat helmet consisting of olive drab armor plates, a double chevron is painted on both the front and sides, denoting the owner as a Corporal."
 	icon_state = "helmet_enclave_corporal"
@@ -228,7 +228,7 @@
 	flags_cover = null
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/usa/intel
+/obj/item/clothing/head/helmet/f13/remnant/intel
 	name = "intel beret"
 	desc = "(I) Dark beret issued to Intelligence Officers of the Enclave."
 	icon_state = "hat_enclave_intel"
@@ -237,7 +237,7 @@
 	flags_cover = null
 	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/usa/peacekeeper
+/obj/item/clothing/head/helmet/f13/remnant/peacekeeper
 	name = "peacekeeper cap"
 	desc = "(IV) Reinforced field cap issued to the soldiers of the Enclave."
 	icon_state = "hat_enclave_peacekeeper"
@@ -246,14 +246,14 @@
 	strip_delay = 50
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/usa/officer
+/obj/item/clothing/head/helmet/f13/remnant/officer
 	name = "enclave officer hat"
 	desc = "(VII) Wheeled hat with a cap made of light-weight alloys beneath."
 	icon_state = "hat_enclave_officer"
 	item_state = "hat_enclave_officer"
 	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30) // On par with BoS Knight
 
-/obj/item/clothing/head/helmet/f13/usa/envirosuit
+/obj/item/clothing/head/helmet/f13/remnant/envirosuit
 	name = "enclave envirosuit hood"
 	icon_state = "envirohead"
 	item_state = "envirohead"
