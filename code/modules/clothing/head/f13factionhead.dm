@@ -269,8 +269,8 @@
 /obj/item/clothing/head/helmet/f13/helmet/enclave/corporal
 	name = "US Army Combat Helmet"
 	desc = "A standard US Army combat helmet consisting of olive drab armor plates, a double chevron is painted on both the front and sides, denoting the owner as a Corporal."
-	icon_state = "helmet_enclave_sergeant"
-	item_state = "helmet_enclave_sergeant"
+	icon_state = "helmet_enclave_corporal"
+	item_state = "helmet_enclave_corporal"
 	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = null
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
