@@ -149,6 +149,13 @@
 	supervisors = "The United States Secret Service"
 	outfit = /datum/outfit/job/enclave/intel
 
+	loadout_options = list(
+		/datum/outfit/loadout/town,
+		/datum/outfit/loadout/brotherhood,
+		/datum/outfit/loadout/vault,
+		/datum/outfit/loadout/raider,
+		)
+
 /datum/outfit/job/enclave/intel
 	name =	"Intelligence Specialist"
 	jobtype =	/datum/job/enclave/intel
@@ -174,7 +181,33 @@
 	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
+/datum/outfit/loadout/town
+	name = "Town Infiltrator"
+	backpack_contents = list(
+		/obj/item/encryptionkey/headset_town = 1,
+		/obj/item/card/id/syndicate = 1,
+		)
 
+/datum/outfit/loadout/brotherhood
+	name = "Brotherhood Monitor"
+	backpack_contents = list(
+		/obj/item/encryptionkey/headset_bos = 1,
+		/obj/item/jammer = 1,
+		)
+
+/datum/outfit/loadout/vault
+	name = "Vault Monitor"
+	backpack_contents = list(
+		/obj/item/encryptionkey/headset_vault = 1,
+		/obj/item/jammer = 1,
+		)
+		
+/datum/outfit/loadout/raider
+	name = "Raider Infiltrator"
+	backpack_contents = list(
+		/obj/item/encryptionkey/headset_den = 1,
+		/obj/item/card/id/syndicate = 1,
+		)
 
 /*--------------------- ENCLAVE SERGEANT -----------------------*/
 // The highest ranking military Enclave personell are the two
