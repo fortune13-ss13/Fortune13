@@ -799,13 +799,17 @@
 	recoil = 0.1
 	can_attachments = TRUE
 	can_bayonet = TRUE
-	bayonet_state = "rifles"
+	bayonet_state = "bayonet"
 	knife_x_offset = 23
 	knife_y_offset = 11
 	can_suppress = TRUE
-	suppressor_x_offset = 32
-	suppressor_y_offset = 15
-	suppressor_state = "ar_suppressor"
+	suppressor_state = "rifle_suppressor"
+	suppressor_x_offset = 26
+	suppressor_y_offset = 31
+	can_flashlight = TRUE
+	gunlight_state = "flightangle"
+	flight_x_offset = 21
+	flight_y_offset = 21
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
@@ -830,6 +834,10 @@
 	can_attachments = FALSE
 	can_suppress = FALSE
 	can_unsuppress = FALSE
+	can_scope = TRUE
+	scope_state = "scope_short"
+	scope_x_offset = 4
+	scope_y_offset = 15
 	suppressed = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
@@ -841,6 +849,7 @@
 	icon_state = "r91m"
 	item_state = "fnfal"
 	extra_damage = 7
+	burst_size = 1
 	extra_penetration = 0.1
 	recoil = 0.6
 	can_attachments = FALSE
