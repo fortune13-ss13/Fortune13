@@ -286,3 +286,7 @@
 
 /obj/machinery/power/port_gen/pacman/mrs/overheat()
 	explosion(src.loc, 4, 4, 4, -1)
+
+/obj/machinery/power/port_gen/pacman/super
+	name = "Uranium Vaporization Stack"
+	anchored = 1

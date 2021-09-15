@@ -406,6 +406,48 @@
 			H.reagents.add_reagent(/datum/reagent/stimulum, max(0, 5 - existing))
 		breath.adjust_moles(/datum/gas/stimulum, -gas_breathed)
 
+
+	// Toxic fumes
+		gas_breathed = breath.get_moles(/datum/gas/fumes)
+		if (breath.get_moles(/datum/gas/fumes))
+			var/fumes_pp = breath.get_breath_partial_pressure(breath.get_moles(/datum/gas/fumes))
+			if(fumes_pp > MINIMUM_MOLES_DELTA_TO_MOVE)
+				// Fumes side effects
+				switch(fumes_pp)
+					if(1 to 3)
+						// At lower pp, give out a little warning
+						SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "smell")
+						if(prob(20))
+							to_chat(src, "<span class='notice'>Your nose stings and eyes burn.</span>")
+					if(3 to 6)
+						//At somewhat higher pp, warning becomes more obvious
+						if(prob(30))
+							to_chat(src, "<span class='warning'>Your eyes water, head pounds, the air here is very bad for you.</span>")
+							SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "smell", /datum/mood_event/disgust/bad_smell)
+							owner.vomit()
+					if(6 to 9)
+						//Small chance to vomit. By now, people have internals on anyway
+						if(prob(40))
+							to_chat(src, "<span class='warning'>Your body convulses, unable to stand this much longer/span>")
+							SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "epilepsy", /datum/mood_event/epilepsy)
+							owner.vomit()
+					if(9 to INFINITY)
+						//Higher chance to vomit. Let the horror start
+						if(prob(50))
+							to_chat(src, "<span class='warning'>The headache is killing you!</span>")
+							SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "brain_damage", /datum/mood_event/brain_damage)
+							owner.vomit()
+					else
+						SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "smell")
+
+				owner.adjust_disgust(0.1 * fumes_pp)
+
+				breath.adjust_moles(/datum/gas/fumes, -gas_breathed)
+		else
+			SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "smell")
+
+		handle_breath_temperature(breath, H)
+
 	// Miasma
 		if (breath.get_moles(/datum/gas/miasma))
 			var/miasma_pp = breath.get_breath_partial_pressure(breath.get_moles(/datum/gas/miasma))

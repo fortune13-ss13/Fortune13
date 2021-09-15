@@ -50,3 +50,12 @@
 	icon_state = "red_white"
 	gas_type = /datum/gas/nitrous_oxide
 
+/obj/machinery/atmospherics/components/unary/tank/f13chemtank
+	icon_state = "blue"
+	gas_type = /datum/gas/miasma
+	volume = 2000
+
+/obj/machinery/atmospherics/components/unary/tank/f13chemtank/poisongas
+	icon_state = "grey"
+	gas_type = /datum/gas/methyl_bromide
+

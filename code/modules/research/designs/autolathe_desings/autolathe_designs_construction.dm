@@ -76,13 +76,6 @@
 	build_path = /obj/item/wallframe/camera
 	category = list("initial", "Construction")
 
-/datum/design/newscaster_frame
-	name = "Newscaster Frame"
-	id = "newscaster_frame"
-	build_type = AUTOLATHE
-	materials = list(/datum/material/iron = 14000, /datum/material/glass = 8000)
-	build_path = /obj/item/wallframe/newscaster
-	category = list("initial", "Construction")
 
 /datum/design/turret_control_frame
 	name = "Turret Control Frame"

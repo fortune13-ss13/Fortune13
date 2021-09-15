@@ -61,7 +61,7 @@
 	layer = BELOW_OBJ_LAYER
 	anchored = TRUE
 	machine_tool_behaviour = TOOL_WORKBENCH
-	var/wrenchable = 1
+	var/wrenchable = 0
 
 
 /obj/machinery/workbench/can_be_unfasten_wrench(mob/user, silent)
@@ -103,7 +103,9 @@
 	name = "advanced workbench"
 	icon_state = "advanced_bench"
 	desc = "A large and advanced pre-war workbench to tackle any project!"
+	resistance_flags = null
 	machine_tool_behaviour = list(TOOL_AWORKBENCH, TOOL_WORKBENCH)
+	wrenchable = 1
 
 /obj/machinery/workbench/mbench
 	name = "machine workbench"
