@@ -296,9 +296,6 @@
 	//BREATH TEMPERATURE
 	handle_breath_temperature(breath)
 
-	return 1
-
-
 
 	//MIASMA
 	if(breath.get_moles(/datum/gas/miasma))
