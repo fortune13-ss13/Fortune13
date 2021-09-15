@@ -20,11 +20,12 @@
 	name = "toxic sludge"
 	desc = "Water mixed with chemical. Smells like chemical burns and thinner."
 	color = "#f4c7f9"
-	initial_gas_mix = "o2=20;n2=55;toxicfume=25;TEMP=325"
+//	initial_gas_mix = "o2=20;n2=55;toxicfume=25;TEMP=325"
 	slowdown = 10
 	luminosity	= 3
-	var/defer_change = 1
-
+//	var/defer_change = 1
+/*
 /obj/structure/barbedwire/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES)
+*/

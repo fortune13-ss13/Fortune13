@@ -406,7 +406,7 @@
 			H.reagents.add_reagent(/datum/reagent/stimulum, max(0, 5 - existing))
 		breath.adjust_moles(/datum/gas/stimulum, -gas_breathed)
 
-
+/*
 	// Toxic fumes
 		gas_breathed = breath.get_moles(/datum/gas/fumes)
 		if (breath.get_moles(/datum/gas/fumes))
@@ -447,7 +447,7 @@
 			SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "smell")
 
 		handle_breath_temperature(breath, H)
-
+*/
 	// Miasma
 		if (breath.get_moles(/datum/gas/miasma))
 			var/miasma_pp = breath.get_breath_partial_pressure(breath.get_moles(/datum/gas/miasma))
