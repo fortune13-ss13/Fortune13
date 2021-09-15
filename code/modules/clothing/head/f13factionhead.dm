@@ -48,11 +48,21 @@
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))*/
 
 
-
+//Old World Army clothing
+/obj/item/clothing/head/armycap
+	name = "national guard cap"
+	desc = "(III) Standard national guard forage cap."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "army_cap"
+	item_state = "army_cap"
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 //Enclave / Remnant
 /obj/item/clothing/head/donor/enclave
-	name = "enclave forge cap"
+	name = "enclave forage cap"
 	desc = "(III) A resistant, black forage cap issued to Enclave soldiers."
 	icon_state = "enclave_cap"
 	item_state = "enclave_cap"
@@ -90,9 +100,6 @@
 	desc = "(I) A standard-issue Enclave officer's cap."
 	icon_state = "enclave"
 	item_color = "enclave"
-
-
-
 
 
 

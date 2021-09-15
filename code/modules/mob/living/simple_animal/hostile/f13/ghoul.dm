@@ -248,3 +248,78 @@
 	faction = list("supermutant","ghoul")
 	decompose = FALSE
 	sharpness = SHARP_EDGED //They need to cut their finger nails
+
+/mob/living/simple_animal/hostile/ghoul/mamasboys
+	name = "worker ghoul"
+	desc = "A sentient ghoul, but involved in shady dealings and not very friendly."
+	icon = 'icons/fallout/mobs/npc/mobnpc.dmi'
+	icon_state = "ghoul_worker"
+	icon_living = "ghoul_worker"
+	icon_dead = "ghoul_worker_dead"
+	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	dextrous = TRUE
+	robust_searching = 0
+	turns_per_move = 5
+	emote_see = list("spits on the ground")
+	speak = list("Nothin' personal kid.","You'll regret this.","Crap...","Thought you could steal stuff while I wasn't looking?","Tough luck pinkskin.");
+	speak_chance = 10;
+	speak_emote = list("wheezes");
+	a_intent = INTENT_HARM
+	maxHealth = 120
+	health = 120
+	speed = 0.25
+	obj_damage = 100
+	harm_intent_damage = 20 // live by the fist, die by the fist
+	melee_damage_lower = 20
+	melee_damage_upper = 30
+	del_on_death = 0
+	attack_verb_simple = "punches hard"
+	attack_sound = 'sound/weapons/cqchit1.ogg'
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	unsuitable_atmos_damage = 20
+	faction = list("raider")
+	decompose = FALSE
+	sharpness = SHARP_NONE
+	death_sound = 'sound/voice/scream/scream_m1.ogg'
+
+/mob/living/simple_animal/hostile/ghoul/mamasboys/bruiser
+	name = "bruiser ghoul"
+	desc = "Experienced pit fighter, this ghoul is massive and got scraggly beard, and sappers on his hands."
+	icon_state = "ghoul_bruiser"
+	icon_living = "ghoul_bruiser"
+	icon_dead = "ghoul_bruiser_dead"
+	loot = list(/obj/item/melee/unarmed/sappers)
+	maxHealth = 250
+	health = 250
+	speed = 0.5
+	obj_damage = 200
+	melee_damage_lower = 40
+	melee_damage_upper = 50
+	attack_verb_simple = "uppercuts"
+	attack_sound = 'sound/weapons/cqchit2.ogg'
+
+/mob/living/simple_animal/hostile/ghoul/mamasboys/mama
+	name = "Mama Mulligan"
+	desc = "Female ghoul with a nice wig and some impressive kicking skills."
+	icon_state = "mama_mulligan"
+	icon_living = "mama_mulligan"
+	icon_dead = "mama_mulligan_dead"
+	maxHealth = 350
+	health = 350
+	speed = 0.25
+	obj_damage = 200
+	melee_damage_lower = 40
+	melee_damage_upper = 50
+	dodging = TRUE
+	approaching_target = TRUE
+	in_melee = TRUE
+	dodge_prob = 30
+	sidestep_per_cycle = 2
+	rapid_melee = 2
+	attack_verb_simple = "kicks"
+	death_sound = 'sound/voice/scream/scream_f3.ogg'
+	loot = list(/obj/item/book/granter/martial/krav_maga)
+
+/mob/living/simple_animal/hostile/ghoul/mamasboys/mama/Aggro()
+	..()
+	summon_backup(20)

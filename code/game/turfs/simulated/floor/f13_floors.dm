@@ -406,22 +406,71 @@
 	/* GREEN TILES */
 
 /turf/open/floor/plasteel/f13/vault_floor/green
+	icon = 'icons/fallout/turfs/floors.dmi'
 	icon_state = "greenfull"
 
-/turf/open/floor/plasteel/f13/vault_floor/green/whitegreenfull
-	icon_state = "whitegreenfull"
+/turf/open/floor/plasteel/f13/vault_floor/green/dirty
+	icon_state = "greenfull"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/rusty
+	icon_state = "greenrustyfull"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/solid
+	icon_state = "greensolid"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty
+	icon_state = "greendirtysolid"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty
+	icon_state = "greenrustysolid"
 
 /turf/open/floor/plasteel/f13/vault_floor/green/side
 	icon_state = "green"
 
+/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty
+	icon_state = "greendirty"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/side/rusty
+	icon_state = "greenrusty"
+
 /turf/open/floor/plasteel/f13/vault_floor/green/corner
 	icon_state = "greencorner"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty
+	icon_state = "greendirtycorner"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/corner/rusty
+	icon_state = "greenrustycorner"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/corner/rustyoutside
+	icon_state = "greenrustyfullgreencorner"
 
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess
 	icon_state = "greenchess"
 
-/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2
-	icon_state = "greenchess2"
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/dirty
+	icon_state = "greendirtychess"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/rusty
+	icon_state = "greenrustychess"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty
+	icon_state = "greendirtychess2"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/rusty
+	icon_state = "greenrustychess2"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/floorarrow
+	icon_state = "greendir"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/floorarrow/dirty
+	icon_state = "greendirtydir"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/boxmark
+	icon_state = "greenmark"
+
+/turf/open/floor/plasteel/f13/vault_floor/green/whitegreenfull
+	icon_state = "whitegreenfull"
 
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side
 	icon_state = "whitegreen"
