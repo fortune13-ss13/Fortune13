@@ -238,43 +238,91 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 
-//Enclave
+///////////
+//ENCLAVE//
+///////////
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/science
+/obj/item/clothing/head/helmet/f13/remnant
+	name = "enclave helmet template"
+	desc = "should not exist."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	icon_state = "top_hat"
+	item_state = "that"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEHAIR
+	strip_delay = 50
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/f13/remnant/science
 	name = "science beret"
 	desc = "(I) Blue beret signifying the wearer is a Science Officer of the Enclave."
 	icon_state = "hat_enclave_science"
 	item_state = "hat_enclave_science"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
-	armor = list("tier" = 1)
+	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
+/obj/item/clothing/head/helmet/f13/remnant/sergeant
+	name = "Reinforced Enclave Combat Helmet"
+	desc = "Issued as part of a rare suit of Reinforced Enclave Combat Armor, the helmet excels in protection from all types of energy weapons and boasts a triple chevron on the front & sides, denoting the user as a Sergeant."
+	icon_state = "helmet_enclave_sergeant"
+	item_state = "helmet_enclave_sergeant"
+	flags_inv = HIDEEARS|HIDEHAIR
+	flags_cover = null
+	armor = list("tier" = 5, "energy" = 60, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/remnant/corporal
+	name = "US Army Combat Helmet"
+	desc = "A standard US Army combat helmet consisting of olive drab armor plates, a double chevron is painted on both the front and sides, denoting the owner as a Corporal."
+	icon_state = "helmet_enclave_corporal"
+	item_state = "helmet_enclave_corporal"
+	flags_inv = HIDEEARS|HIDEHAIR
+	flags_cover = null
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/remnant/intel
 	name = "intel beret"
-	desc = "(III) Dark beret issued to Intelligence Officers of the Enclave."
+	desc = "(I) Dark beret issued to Intelligence Officers of the Enclave."
 	icon_state = "hat_enclave_intel"
 	item_state = "hat_enclave_intel"
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
-	armor = list("tier" = 3)
+	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
+/obj/item/clothing/head/helmet/f13/remnant/peacekeeper
 	name = "peacekeeper cap"
 	desc = "(IV) Reinforced field cap issued to the soldiers of the Enclave."
 	icon_state = "hat_enclave_peacekeeper"
 	item_state = "hat_enclave_peacekeeper"
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEFACE
 	strip_delay = 50
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	armor = list("tier" = 4)
+	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+/obj/item/clothing/head/helmet/f13/remnant/officer
 	name = "enclave officer hat"
 	desc = "(VII) Wheeled hat with a cap made of light-weight alloys beneath."
 	icon_state = "hat_enclave_officer"
 	item_state = "hat_enclave_officer"
 	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30) // On par with BoS Knight
+
+/obj/item/clothing/head/helmet/f13/remnant/envirosuit
+	name = "enclave envirosuit hood"
+	icon_state = "envirohead"
+	item_state = "envirohead"
+	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	clothing_flags = THICKMATERIAL
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 //////////
 //LEGION//
