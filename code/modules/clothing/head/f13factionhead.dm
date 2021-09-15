@@ -47,55 +47,6 @@
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))*/
 
-
-
-
-//Enclave / Remnant
-/obj/item/clothing/head/donor/enclave
-	name = "enclave forge cap"
-	desc = "(III) A resistant, black forage cap issued to Enclave soldiers."
-	icon_state = "enclave_cap"
-	item_state = "enclave_cap"
-	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
-
-/obj/item/clothing/head/helmet/f13/combat/enclave
-	name = "enclave combat helmet"
-	desc = "(VI) An intimidating helmet that is issued with it's corresponding suit."
-	icon_state = "enclave_new"
-	item_state = "enclave_new"
-	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
-
-/obj/item/clothing/head/helmet/f13/combat/remnant
-	name = "remnant combat helmet"
-	desc = "(VI) A dark helmet with yellow lenses, used commonly in espionage or shadow ops."
-	icon_state = "remnant_helmet"
-	item_state = "remnant_helmet"
-	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
-
-/obj/item/clothing/head/helmet/f13/envirosuit
-	name = "enclave envirosuit hood"
-	icon_state = "envirohead"
-	item_state = "envirohead"
-	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
-	clothing_flags = THICKMATERIAL
-	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
-	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
-	strip_delay = 60
-	equip_delay_other = 60
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
-
-/obj/item/clothing/head/soft/f13/enclave
-	name = "officer hat"
-	desc = "(I) A standard-issue Enclave officer's cap."
-	icon_state = "enclave"
-	item_color = "enclave"
-
-
-
-
-
-
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
 	name = "base raider helmet"
@@ -231,14 +182,16 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 
-//////////
-//ENCLAVE/
-//////////
+///////////
+//ENCLAVE//
+///////////
 
-/obj/item/clothing/head/helmet/f13/enclave
+/obj/item/clothing/head/helmet/f13/remnant
 	name = "enclave helmet template"
 	desc = "should not exist."
 	icon = 'icons/fallout/clothing/hats.dmi'
+	icon_state = "top_hat"
+	item_state = "that"
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
@@ -248,7 +201,7 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/science
+/obj/item/clothing/head/helmet/f13/remnant/science
 	name = "science beret"
 	desc = "(I) Blue beret signifying the wearer is a Science Officer of the Enclave."
 	icon_state = "hat_enclave_science"
@@ -257,7 +210,7 @@
 	flags_cover = null
 	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/sergeant
+/obj/item/clothing/head/helmet/f13/remnant/sergeant
 	name = "Reinforced Enclave Combat Helmet"
 	desc = "Issued as part of a rare suit of Reinforced Enclave Combat Armor, the helmet excels in protection from all types of energy weapons and boasts a triple chevron on the front & sides, denoting the user as a Sergeant."
 	icon_state = "helmet_enclave_sergeant"
@@ -266,7 +219,7 @@
 	flags_cover = null
 	armor = list("tier" = 5, "energy" = 60, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/corporal
+/obj/item/clothing/head/helmet/f13/remnant/corporal
 	name = "US Army Combat Helmet"
 	desc = "A standard US Army combat helmet consisting of olive drab armor plates, a double chevron is painted on both the front and sides, denoting the owner as a Corporal."
 	icon_state = "helmet_enclave_corporal"
@@ -275,7 +228,7 @@
 	flags_cover = null
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
+/obj/item/clothing/head/helmet/f13/remnant/intel
 	name = "intel beret"
 	desc = "(I) Dark beret issued to Intelligence Officers of the Enclave."
 	icon_state = "hat_enclave_intel"
@@ -284,23 +237,36 @@
 	flags_cover = null
 	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
+/obj/item/clothing/head/helmet/f13/remnant/peacekeeper
 	name = "peacekeeper cap"
 	desc = "(IV) Reinforced field cap issued to the soldiers of the Enclave."
 	icon_state = "hat_enclave_peacekeeper"
 	item_state = "hat_enclave_peacekeeper"
 	flags_inv = HIDEEARS|HIDEFACE
 	strip_delay = 50
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+/obj/item/clothing/head/helmet/f13/remnant/officer
 	name = "enclave officer hat"
 	desc = "(VII) Wheeled hat with a cap made of light-weight alloys beneath."
 	icon_state = "hat_enclave_officer"
 	item_state = "hat_enclave_officer"
 	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30) // On par with BoS Knight
+
+/obj/item/clothing/head/helmet/f13/remnant/envirosuit
+	name = "enclave envirosuit hood"
+	icon_state = "envirohead"
+	item_state = "envirohead"
+	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	clothing_flags = THICKMATERIAL
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 //////////
 //LEGION//

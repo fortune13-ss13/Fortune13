@@ -51,7 +51,7 @@
 /datum/outfit/job/enclave/director
 	name =	"Enclave Research Director"
 	jobtype =	/datum/job/enclave/director
-	head =	/obj/item/clothing/head/helmet/f13/envirosuit
+	head =	/obj/item/clothing/head/helmet/f13/remnant/envirosuit
 	glasses =	/obj/item/clothing/glasses/meson
 	mask =	/obj/item/clothing/mask/breath/medical
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
@@ -105,7 +105,7 @@
 /datum/outfit/job/enclave/scientist
 	name =	"Enclave Scientist"
 	jobtype =	/datum/job/enclave/scientist
-	head =	/obj/item/clothing/head/helmet/f13/envirosuit
+	head =	/obj/item/clothing/head/helmet/f13/remnant/envirosuit
 	glasses =	/obj/item/clothing/glasses/meson
 	mask =	/obj/item/clothing/mask/breath/medical
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
@@ -159,7 +159,7 @@
 /datum/outfit/job/enclave/intel
 	name =	"Intelligence Specialist"
 	jobtype =	/datum/job/enclave/intel
-	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
+	head =	/obj/item/clothing/head/helmet/f13/remnant/intel
 	glasses = /obj/item/clothing/glasses/night/polarizing
 	uniform =	/obj/item/clothing/under/f13/enclave/intel
 	suit =	/obj/item/clothing/suit/armor/f13/combat/swat
@@ -233,7 +233,7 @@
 /datum/outfit/job/enclave/armor
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/armor
-	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/sergeant
+	head =	/obj/item/clothing/head/helmet/f13/remnant/sergeant
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster
 	uniform =	/obj/item/clothing/under/f13/enclave
@@ -245,7 +245,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
-		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper = 1,
+		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
 		/obj/item/storage/box/mre/menu3 = 1,
 		)
 
@@ -295,7 +295,7 @@
 /datum/outfit/job/enclave/corporal
 	name = "Enclave Corporal"
 	jobtype = /datum/job/enclave/corporal
-	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/corporal
+	head =	/obj/item/clothing/head/helmet/f13/remnant/corporal
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
@@ -306,7 +306,7 @@
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper = 1,
+		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/storage/box/mre/menu4 = 1,
 		)
@@ -353,7 +353,7 @@
 /datum/outfit/job/enclave/soldier
 	name =	"Enclave Private"
 	jobtype =	/datum/job/enclave/soldier
-	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
+	head =	/obj/item/clothing/head/helmet/f13/remnant/peacekeeper
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
@@ -401,7 +401,7 @@
 /datum/outfit/job/enclave/officer
 	name =	"Enclave Officer"
 	jobtype =	/datum/job/enclave/officer
-	head =	/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
+	head =	/obj/item/clothing/head/helmet/f13/remnant/officer
 	glasses = /obj/item/clothing/glasses/night
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster
