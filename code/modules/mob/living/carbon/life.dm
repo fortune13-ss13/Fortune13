@@ -297,6 +297,45 @@
 	handle_breath_temperature(breath)
 */
 
+	//TOXIC FUMES
+	if(breath.get_moles(/datum/gas/fumes))
+		var/fumes_partialpressure = (breath.get_moles(/datum/gas/fumes)/breath.total_moles())*breath_pressure
+		if(fumes_partialpressure > MINIMUM_MOLES_DELTA_TO_MOVE)
+			//Fumes side effects
+			switch(fumes_partialpressure)
+				if(1 to 3)
+					// At lower pp, give out a little warning
+					SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "smell")
+					if(prob(20))
+						to_chat(src, "<span class='notice'>Your nose stings and eyes burn.</span>")
+				if(3 to 6)
+					//At somewhat higher pp, warning becomes more obvious
+					if(prob(30))
+						to_chat(src, "<span class='warning'>Your eyes water, head pounds, the air here is very bad for you.</span>")
+						SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "smell", /datum/mood_event/disgust/bad_smell)
+						vomit()
+				if(6 to 9)
+					//Small chance to vomit. By now, people have internals on anyway
+					if(prob(40))
+						to_chat(src, "<span class='warning'>Your body convulses, unable to stand this much longer/span>")
+						SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "epilepsy", /datum/mood_event/epilepsy)
+						vomit()
+				if(9 to INFINITY)
+					//Higher chance to vomit. Let the horror start
+					if(prob(50))
+						to_chat(src, "<span class='warning'>The headache is killing you!</span>")
+						SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "brain_damage", /datum/mood_event/brain_damage)
+						vomit()
+				else
+					SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "smell")
+
+	else
+		SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "smell")
+
+	//BREATH TEMPERATURE
+	handle_breath_temperature(breath)
+
+
 	//MIASMA
 	if(breath.get_moles(/datum/gas/miasma))
 		var/miasma_partialpressure = (breath.get_moles(/datum/gas/miasma)/breath.total_moles())*breath_pressure
