@@ -234,15 +234,14 @@
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/armor
 	head =	/obj/item/clothing/head/helmet/f13/remnant/sergeant
+	neck =	/obj/item/storage/belt/holster/legholster
 	mask =	/obj/item/clothing/mask/gas/enclave
-	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave/sergeant
 	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	gloves =	/obj/item/clothing/gloves/f13/military
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	suit_store = /obj/item/gun/energy/laser/plasma
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
@@ -306,9 +305,8 @@
 	gloves =	/obj/item/clothing/gloves/f13/military
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
 	belt =	/obj/item/storage/belt/military/assault/enclave
-	suit_store = /obj/item/gun/ballistic/automatic/xl70e3
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
+		/obj/item/grenade/smokebomb = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
@@ -363,14 +361,8 @@
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave/private
 	accessory =	/obj/item/clothing/accessory/enclave/soldier
-	suit_store =	/obj/item/gun/ballistic/automatic/assault_carbine
-
 	backpack_contents = list(
-		/obj/item/grenade/smokebomb = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/gun/energy/laser/pistol,
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
-		/obj/item/stock_parts/cell/ammo/ec = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/storage/box/mre/menu2 = 1,
 		)
