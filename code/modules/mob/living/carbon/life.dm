@@ -257,7 +257,7 @@
 	if(breath.get_moles(/datum/gas/nitryl))
 		var/nitryl_partialpressure = (breath.get_moles(/datum/gas/nitryl)/breath.total_moles())*breath_pressure
 		adjustFireLoss(nitryl_partialpressure/4)
-
+/* Disabled due to atmos issues OBSOLETE ??
 	//TOXIC FUMES
 	if(breath.get_moles(/datum/gas/fumes))
 		var/fumes_partialpressure = (breath.get_moles(/datum/gas/fumes)/breath.total_moles())*breath_pressure
@@ -295,7 +295,7 @@
 
 	//BREATH TEMPERATURE
 	handle_breath_temperature(breath)
-
+*/
 
 	//MIASMA
 	if(breath.get_moles(/datum/gas/miasma))
