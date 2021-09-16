@@ -240,18 +240,21 @@
 	health = 115
 	retreat_distance = 3
 	minimum_distance = 4
-	loot = list(/obj/item/gun/ballistic/shotgun/hunting)
+	loot = list(/obj/item/ammo_box/shotgun/improvised)
 	projectiletype = /obj/item/projectile/bullet/shotgun_slug
 	projectilesound = 'sound/f13weapons/shotgun.ogg'
 
 /mob/living/simple_animal/hostile/raider/legendary/lurker/shaman
 	name = "Lurkers shaman"
-	desc = "The Lurkers shamans are old but strong and armed with crab clubs."
+	desc = "The Lurkers shamans are old but strong and armed with a looted Ripper."
 	icon_state = "lurkersshaman"
 	icon_living = "lurkersshaman"
 	icon_dead = "lurkersshaman_dead"
 	del_on_death = 0
-	loot = list(/obj/item/clothing/gloves/ring/silver, /obj/item/reagent_containers/pill/patch/bitterdrink = 2)
+	attack_verb_simple = "rends"
+	attack_sound = 'sound/weapons/chainsawhit.ogg'
+	loot = list(/obj/item/melee/powered/ripper, /obj/item/reagent_containers/pill/patch/bitterdrink = 1)
+
 
 /mob/living/simple_animal/hostile/raider/legendary/lurker/chieftain
 	name = "Lurkers chieftain"

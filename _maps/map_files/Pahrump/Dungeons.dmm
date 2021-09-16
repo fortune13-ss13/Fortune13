@@ -62,7 +62,9 @@
 /area/f13/bunker)
 "ao" = (
 /mob/living/simple_animal/hostile/ghoul/mamasboys/mama,
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "aq" = (
 /obj/machinery/newscaster/security_unit{
@@ -124,7 +126,9 @@
 "aF" = (
 /obj/structure/table/wood,
 /obj/item/defibrillator/primitive,
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "aH" = (
 /obj/machinery/light{
@@ -148,9 +152,19 @@
 /obj/item/melee/classic_baton/militarypolice,
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
+"aN" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/plating/tunnel/rusty,
+/area/f13/bunker)
 "aO" = (
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 4;
+	name = "UV light"
 	},
 /obj/machinery/computer/shuttle/northbunkerelevator{
 	dir = 8
@@ -508,7 +522,9 @@
 	color = "000000"
 	},
 /mob/living/simple_animal/hostile/ghoul/mamasboys/bruiser,
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "cn" = (
 /mob/living/simple_animal/hostile/ghoul/mamasboys/bruiser,
@@ -683,9 +699,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/bunker)
 "dd" = (
-/obj/effect/decal/waste{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty,
 /area/f13/bunker)
 "df" = (
@@ -947,7 +961,9 @@
 "el" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/medspray/styptic,
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "em" = (
 /obj/machinery/atmospherics/components/unary/tank/f13chemtank/poisongas{
@@ -1024,12 +1040,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/bunker)
 "eB" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
 /obj/effect/decal/cleanable/glass,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/engine,
+/obj/item/broken_bottle,
+/turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "eE" = (
 /obj/structure/sign/warning/radiation{
@@ -1041,13 +1057,16 @@
 	},
 /area/f13/bunker)
 "eF" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
-/obj/effect/decal/waste{
-	icon_state = "goo10"
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
 	},
-/turf/open/floor/engine,
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "eH" = (
 /obj/effect/decal/cleanable/oil{
@@ -1086,11 +1105,9 @@
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "eQ" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/decal/waste{
-	icon_state = "goo12"
+/turf/open/floor/wood/f13{
+	icon_state = "housewood2"
 	},
-/turf/open/floor/engine,
 /area/f13/bunker)
 "eR" = (
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -1215,8 +1232,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "fs" = (
-/obj/item/defibrillator,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "ft" = (
 /obj/structure/bed,
@@ -1237,6 +1255,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer3,
+/mob/living/simple_animal/hostile/ghoul/mamasboys,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "fA" = (
@@ -1356,6 +1375,16 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green,
+/area/f13/bunker)
+"gm" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	name = "UV light"
+	},
+/turf/open/floor/engine,
 /area/f13/bunker)
 "gn" = (
 /obj/structure/table,
@@ -1514,12 +1543,7 @@
 /turf/closed/wall/f13/wood,
 /area/f13/caves)
 "ha" = (
-/obj/effect/decal/waste{
-	icon_state = "goo12"
-	},
-/obj/effect/decal/cleanable/glass,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
+/turf/open/floor/wood/f13,
 /area/f13/bunker)
 "hb" = (
 /obj/structure/table,
@@ -1750,7 +1774,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/bunker)
 "iw" = (
-/mob/living/simple_animal/hostile/supermutant/nationalguard/engineer,
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	dir = 1;
+	name = "UV light"
+	},
 /turf/open/floor/engine,
 /area/f13/bunker)
 "ix" = (
@@ -1904,11 +1932,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/bunker)
 "jl" = (
-/obj/effect/decal/waste{
-	icon_state = "goo10"
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/engine,
+/turf/open/floor/wood/f13/housewoodbroken3,
 /area/f13/bunker)
 "jm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1985,6 +2012,11 @@
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
+"jK" = (
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3,
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/plating/tunnel/rusty,
+/area/f13/bunker)
 "jL" = (
 /mob/living/simple_animal/hostile/ghoul/mamasboys/bruiser,
 /turf/open/floor/plating/tunnel/rusty,
@@ -2199,7 +2231,9 @@
 /obj/structure/curtain{
 	color = "#416F3B"
 	},
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "kW" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -2359,10 +2393,6 @@
 /area/f13/bunker)
 "lT" = (
 /obj/structure/table/glass,
-/obj/item/storage/box/bodybags,
-/obj/item/reagent_containers/glass/bottle/mutagen{
-	name = "FEV bottle"
-	},
 /obj/item/disk/plantgene,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty,
 /area/f13/bunker)
@@ -2513,6 +2543,7 @@
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer1{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "mL" = (
@@ -2710,8 +2741,20 @@
 /area/f13/bunker)
 "nG" = (
 /obj/structure/closet/anchored,
-/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/army,
 /turf/open/floor/engine,
+/area/f13/bunker)
+"nH" = (
+/obj/machinery/atmospherics/pipe/manifold/brown/visible/layer1{
+	dir = 4
+	},
+/obj/structure/barricade/wooden/strong,
+/turf/open/floor/plating/tunnel/rusty,
+/area/f13/bunker)
+"nI" = (
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3,
+/obj/structure/barricade/wooden/strong,
+/turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "nJ" = (
 /mob/living/simple_animal/hostile/ghoul,
@@ -2908,9 +2951,7 @@
 	},
 /area/f13/bunker)
 "oK" = (
-/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3,
-/mob/living/simple_animal/hostile/ghoul/mamasboys,
-/turf/open/floor/plating/tunnel/rusty,
+/turf/open/floor/wood/f13/housewoodbroken2,
 /area/f13/bunker)
 "oN" = (
 /obj/effect/decal/cleanable/dirt{
@@ -3011,6 +3052,7 @@
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "pk" = (
@@ -3078,8 +3120,7 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/caves)
 "pB" = (
-/obj/effect/decal/cleanable/glass,
-/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
+/turf/open/floor/wood/f13/housewoodbroken,
 /area/f13/bunker)
 "pE" = (
 /obj/structure/window/reinforced{
@@ -3161,8 +3202,11 @@
 /area/f13/bunker)
 "pW" = (
 /obj/effect/decal/cleanable/oil/slippery,
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -3543,11 +3587,16 @@
 	},
 /area/f13/bunker)
 "sd" = (
-/obj/effect/decal/cleanable/glass,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood2"
+	},
+/area/f13/bunker)
+"se" = (
+/mob/living/simple_animal/hostile/supermutant/nationalguard/engineer,
+/turf/open/floor/engine,
 /area/f13/bunker)
 "sf" = (
 /turf/open/floor/plasteel/cafeteria,
@@ -3585,7 +3634,9 @@
 	pixel_x = 2;
 	pixel_y = 15
 	},
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "sq" = (
 /obj/machinery/light{
@@ -3612,6 +3663,13 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /obj/item/folder/white,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/bunker)
+"su" = (
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	name = "UV light"
+	},
+/turf/open/floor/engine,
 /area/f13/bunker)
 "sy" = (
 /obj/structure/table,
@@ -3769,13 +3827,13 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "th" = (
-/obj/machinery/iv_drip,
-/obj/machinery/light/built{
-	dir = 4
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
-	dir = 8
-	},
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "tl" = (
 /obj/machinery/light/small/orange{
@@ -3923,7 +3981,9 @@
 /obj/effect/spawner/lootdrop/f13/cash_random_med,
 /obj/item/melee/unarmed/maceglove,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood2"
+	},
 /area/f13/bunker)
 "tR" = (
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer1{
@@ -3933,12 +3993,13 @@
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "tT" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/decal/waste{
-	icon_state = "goo10"
-	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	dir = 1;
+	name = "UV light"
 	},
 /turf/open/floor/engine,
 /area/f13/bunker)
@@ -4192,9 +4253,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
 "vj" = (
-/obj/effect/decal/cleanable/glass,
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
-	dir = 1
+/mob/living/simple_animal/hostile/ghoul/mamasboys/bruiser,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood2"
 	},
 /area/f13/bunker)
 "vk" = (
@@ -4441,7 +4502,6 @@
 /area/f13/bunker)
 "wp" = (
 /obj/item/stack/cable_coil/random/five,
-/obj/effect/decal/cleanable/greenglow,
 /mob/living/simple_animal/hostile/supermutant/nationalguard,
 /turf/open/floor/plasteel/f13/vault_floor/green/dirty,
 /area/f13/bunker)
@@ -4713,13 +4773,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/bunker)
 "yh" = (
-/obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
-	dir = 1
-	},
+/turf/open/floor/wood/f13/housewoodbroken4,
 /area/f13/bunker)
 "yi" = (
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer1{
@@ -4751,9 +4808,6 @@
 /area/f13/bunker)
 "yp" = (
 /obj/effect/decal/cleanable/generic,
-/obj/effect/decal/waste{
-	icon_state = "goo12"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty,
 /area/f13/bunker)
 "yq" = (
@@ -4791,7 +4845,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
 "yz" = (
-/obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty{
 	dir = 1
 	},
@@ -4849,14 +4902,15 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/bunker)
 "yM" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/decal/waste{
-	icon_state = "goo12"
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
+/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
+	dir = 4
 	},
-/turf/open/floor/engine,
 /area/f13/bunker)
 "yN" = (
 /obj/effect/decal/remains/human,
@@ -4895,6 +4949,14 @@
 	icon_state = "yellowrustyfull"
 	},
 /area/f13/caves)
+"yV" = (
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
+	dir = 8
+	},
+/obj/structure/barricade/wooden/strong,
+/obj/structure/decoration/rag,
+/turf/open/floor/plating/tunnel/rusty,
+/area/f13/bunker)
 "yW" = (
 /obj/item/radio/intercom{
 	frequency = 1361;
@@ -4983,6 +5045,15 @@
 "zs" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/f13/bunker)
+"zt" = (
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 4;
+	name = "UV light"
+	},
+/turf/open/floor/engine,
 /area/f13/bunker)
 "zu" = (
 /obj/effect/decal/cleanable/dirt{
@@ -5118,11 +5189,12 @@
 	},
 /area/f13/caves)
 "Aa" = (
-/obj/machinery/light/broken{
-	dir = 1
+/obj/machinery/light/small/orange{
+	pixel_y = -4
 	},
-/obj/structure/table_frame,
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "Ac" = (
 /obj/effect/decal/cleanable/dirt{
@@ -5251,8 +5323,10 @@
 /turf/open/floor/engine,
 /area/f13/bunker)
 "AJ" = (
-/mob/living/simple_animal/hostile/supermutant/nationalguard/engineer,
 /obj/effect/decal/cleanable/glass,
+/obj/structure/closet/crate/footlocker,
+/obj/item/reagent_containers/glass/beaker/waterbottle/large,
+/obj/item/reagent_containers/glass/beaker/waterbottle/large,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty{
 	dir = 8
 	},
@@ -5372,10 +5446,9 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "BB" = (
-/obj/effect/decal/waste{
-	icon_state = "goo12"
+/turf/open/floor/wood/f13{
+	icon_state = "housewood3"
 	},
-/turf/open/floor/engine,
 /area/f13/bunker)
 "BE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5567,10 +5640,14 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/caves)
 "Cs" = (
-/obj/machinery/light/built{
-	dir = 4
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 4;
+	name = "UV light"
 	},
 /obj/effect/decal/cleanable/generic,
+/obj/structure/closet/crate/footlocker,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
 	dir = 8
 	},
@@ -5580,7 +5657,9 @@
 	dir = 1;
 	pixel_y = 5
 	},
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood2"
+	},
 /area/f13/bunker)
 "Cu" = (
 /obj/structure/window/reinforced/fulltile,
@@ -5676,10 +5755,18 @@
 	},
 /area/f13/bunker)
 "CP" = (
-/obj/structure/table/optable,
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	dir = 1;
+	name = "UV light"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "CQ" = (
 /obj/structure/bodycontainer/morgue,
@@ -5828,6 +5915,16 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/bunker)
+"Dr" = (
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/plating/tunnel/rusty,
+/area/f13/bunker)
 "Ds" = (
 /obj/structure/closet/crate/bin,
 /obj/effect/turf_decal/delivery,
@@ -5975,7 +6072,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
 "Ee" = (
-/obj/item/twohanded/required/kirbyplants/random,
+/obj/item/kirbyplants/photosynthetic,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
 	dir = 4
 	},
@@ -6078,7 +6175,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,
 /area/f13/bunker)
 "EH" = (
-/obj/structure/closet/crate/freezer/surplus_limbs,
+/obj/structure/closet/crate/footlocker,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty{
 	dir = 1
 	},
@@ -6115,7 +6212,8 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "EQ" = (
-/obj/machinery/computer,
+/obj/structure/closet/crate/footlocker,
+/obj/item/flashlight/seclite,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty{
 	dir = 4
 	},
@@ -6383,6 +6481,11 @@
 	icon_state = "plating"
 	},
 /area/f13/bunker)
+"Gj" = (
+/obj/item/chair/stool,
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/plating/tunnel,
+/area/f13/bunker)
 "Gl" = (
 /obj/machinery/mineral/unloading_machine{
 	dir = 1;
@@ -6406,13 +6509,11 @@
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "Gp" = (
-/obj/effect/decal/waste{
-	icon_state = "goo12"
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	name = "UV light"
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/turf/open/floor/engine,
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "Gq" = (
 /obj/structure/fence/handrail{
@@ -6655,6 +6756,15 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/bunker)
+"HK" = (
+/obj/machinery/light/small/orange{
+	dir = 8;
+	pixel_x = -5
+	},
+/obj/structure/closet,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "HM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7012,7 +7122,7 @@
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
 	dir = 1
 	},
-/obj/effect/mine/stun,
+/obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "JK" = (
@@ -7216,14 +7326,8 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/bunker)
 "KW" = (
-/obj/structure/closet/secure_closet/medical2,
-/obj/item/tank/internals/anesthetic,
-/obj/item/tank/internals/anesthetic,
-/obj/item/clothing/mask/breath/medical,
-/obj/item/clothing/mask/breath/medical,
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
+/obj/structure/closet/crate/footlocker,
+/obj/item/storage/box/bodybags,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
 	dir = 4
 	},
@@ -7244,6 +7348,20 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,
+/area/f13/bunker)
+"La" = (
+/obj/machinery/light/small/orange{
+	dir = 4;
+	pixel_x = 4
+	},
+/obj/structure/closet/crate/trashcart,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/shard{
+	icon_state = "medium";
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "Ld" = (
 /obj/structure/ore_box,
@@ -7476,6 +7594,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/bottle/rotgut,
+/obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "Ml" = (
@@ -7537,8 +7656,11 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "Mv" = (
-/obj/machinery/light/built{
-	dir = 8
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
 	},
 /obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
@@ -7550,7 +7672,7 @@
 	color = "#363636"
 	},
 /obj/structure/table/single/round,
-/obj/item/dice/d20/fate/one_use,
+/obj/item/toy/figure/chef,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "Mx" = (
@@ -7562,8 +7684,14 @@
 /turf/open/floor/plating/tunnel/chess,
 /area/f13/bunker)
 "Mz" = (
-/obj/structure/wreck/trash/engine,
-/turf/open/floor/plating/tunnel,
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer1{
+	dir = 8
+	},
+/obj/structure/barricade/wooden/strong,
+/turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "MB" = (
 /obj/structure/window/reinforced{
@@ -7763,6 +7891,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/bunker)
 "No" = (
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 4;
+	name = "UV light"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
 	dir = 8
 	},
@@ -7866,6 +8000,7 @@
 "NM" = (
 /obj/effect/decal/cleanable/robot_debris/old,
 /mob/living/simple_animal/hostile/ghoul/mamasboys,
+/obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "NN" = (
@@ -7959,6 +8094,12 @@
 /area/f13/caves)
 "On" = (
 /obj/structure/frame/machine,
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
 	dir = 4
 	},
@@ -7968,7 +8109,9 @@
 /obj/item/bedsheet/yellow{
 	pixel_x = 1
 	},
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood2"
+	},
 /area/f13/bunker)
 "Op" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8161,7 +8304,7 @@
 /area/f13/caves)
 "Pw" = (
 /obj/effect/decal/cleanable/glass,
-/turf/open/floor/engine,
+/turf/open/floor/plating/tunnel/chess,
 /area/f13/bunker)
 "Py" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -8307,7 +8450,6 @@
 /area/f13/bunker)
 "Qm" = (
 /obj/structure/closet/anchored,
-/obj/item/clothing/shoes/f13/military,
 /obj/item/storage/belt/military,
 /turf/open/floor/engine,
 /area/f13/bunker)
@@ -8334,6 +8476,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
+"QA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
+/area/f13/bunker)
 "QB" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "vaultc1";
@@ -8356,7 +8508,9 @@
 	},
 /obj/structure/table/wood,
 /obj/item/stack/medical/suture/emergency/ten,
-/turf/open/floor/plating/tunnel,
+/turf/open/floor/wood/f13{
+	icon_state = "housewood4"
+	},
 /area/f13/bunker)
 "QH" = (
 /obj/structure/bookcase/random,
@@ -8417,6 +8571,7 @@
 /area/f13/bunker)
 "QT" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/plasteel/f13/vault_floor/green/boxmark,
 /area/f13/bunker)
 "QU" = (
@@ -8902,6 +9057,15 @@
 	},
 /turf/open/floor/engine,
 /area/f13/bunker)
+"Tv" = (
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
+	},
+/turf/open/floor/engine,
+/area/f13/bunker)
 "Tx" = (
 /obj/effect/decal/cleanable/glass,
 /mob/living/simple_animal/hostile/ghoul/mamasboys,
@@ -9370,6 +9534,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/tunnel/chess,
 /area/f13/bunker)
 "VX" = (
@@ -9534,10 +9699,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/bunker)
 "WJ" = (
-/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
-	dir = 1
-	},
-/mob/living/simple_animal/hostile/ghoul/mamasboys,
+/obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "WO" = (
@@ -9545,6 +9707,14 @@
 	pixel_y = -21
 	},
 /turf/open/floor/engine,
+/area/f13/bunker)
+"WQ" = (
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/structure/barricade/wooden/strong,
+/turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "WR" = (
 /obj/structure/simple_door/house{
@@ -9621,6 +9791,13 @@
 /obj/structure/barricade/wooden/strong,
 /turf/open/floor/plating/tunnel/chess,
 /area/f13/bunker)
+"Xn" = (
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
+	dir = 8
+	},
+/obj/structure/barricade/wooden/strong,
+/turf/open/floor/plating/tunnel/rusty,
+/area/f13/bunker)
 "Xo" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -9637,6 +9814,8 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer3,
+/obj/structure/barricade/wooden/strong,
+/obj/structure/decoration/rag,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "Xt" = (
@@ -9889,7 +10068,6 @@
 "Yj" = (
 /obj/structure/closet/anchored,
 /obj/item/storage/belt/holster/legholster/sig,
-/obj/item/storage/belt/military,
 /turf/open/floor/engine,
 /area/f13/bunker)
 "Yk" = (
@@ -9994,8 +10172,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/bunker)
 "YQ" = (
-/obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/structure/closet/crate/footlocker,
+/obj/item/reagent_containers/food/snacks/f13/mre,
+/obj/item/reagent_containers/food/snacks/f13/mre,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty,
 /area/f13/bunker)
 "YR" = (
@@ -10204,7 +10383,6 @@
 "ZZ" = (
 /obj/structure/closet/anchored,
 /obj/item/clothing/shoes/f13/military,
-/obj/item/clothing/under/f13/bdu,
 /turf/open/floor/engine,
 /area/f13/bunker)
 
@@ -26616,7 +26794,7 @@ wt
 em
 Ps
 wt
-Np
+HK
 aA
 aA
 DF
@@ -27361,7 +27539,7 @@ mY
 YK
 Ps
 Wp
-Ps
+lz
 Ps
 Va
 Yt
@@ -27680,8 +27858,8 @@ Ps
 YK
 IE
 wt
-wt
-EE
+Xk
+TH
 wt
 EE
 EE
@@ -27832,7 +28010,7 @@ Ps
 YK
 YK
 YK
-Ps
+NN
 wt
 EE
 EE
@@ -27969,8 +28147,8 @@ Ps
 FR
 FB
 LP
-oK
 FB
+jK
 PB
 Xs
 FB
@@ -28124,7 +28302,7 @@ ZN
 Ah
 Ah
 pj
-FV
+nH
 Ah
 Ah
 FV
@@ -28276,7 +28454,7 @@ Ps
 Ps
 gC
 bm
-FB
+nI
 SD
 Gr
 VP
@@ -28444,7 +28622,7 @@ cQ
 wt
 pb
 TH
-EE
+TH
 YK
 sY
 "}
@@ -28456,14 +28634,14 @@ mY
 li
 ZV
 Se
-kd
+eF
 kd
 ZV
 uL
 uL
 ZV
 fr
-kd
+eF
 uL
 ZV
 li
@@ -28764,7 +28942,7 @@ uL
 fr
 CD
 mP
-ha
+CE
 ZV
 DM
 kd
@@ -28879,13 +29057,13 @@ Ge
 YK
 wt
 xQ
-Ps
+NN
 Zp
 Zp
 Zp
 Zp
 Zp
-Vk
+yV
 DQ
 Zp
 Zp
@@ -28915,8 +29093,8 @@ ZV
 ZV
 CD
 CD
-mP
-pB
+CP
+Gp
 ZV
 ZV
 ZV
@@ -29037,7 +29215,7 @@ Zp
 Zp
 Zp
 Zp
-Vk
+Xn
 DQ
 Zp
 Zp
@@ -29050,7 +29228,7 @@ Ps
 YK
 Zt
 Zo
-Mz
+EE
 EE
 EE
 YK
@@ -29064,14 +29242,14 @@ mY
 li
 ZV
 Se
-uL
+th
 kd
 CD
 kd
-pB
+uL
 ZV
 kG
-CE
+QA
 Se
 ZV
 li
@@ -29192,9 +29370,9 @@ NU
 pm
 DQ
 Wt
-jL
-gC
 Ps
+gC
+jL
 Ps
 Ps
 Ie
@@ -29216,7 +29394,7 @@ mY
 li
 ZV
 fN
-pB
+uL
 kd
 kR
 uL
@@ -29337,7 +29515,7 @@ eu
 gb
 dm
 Ps
-Ps
+NN
 gC
 Wt
 bm
@@ -29347,7 +29525,7 @@ Ps
 Ps
 gC
 Ps
-Ps
+NN
 xD
 UJ
 Ps
@@ -29471,7 +29649,7 @@ mY
 mY
 mY
 YK
-TB
+eB
 dn
 dn
 Ge
@@ -29502,7 +29680,7 @@ Zp
 Zp
 xD
 dm
-Ps
+WJ
 YK
 UQ
 Tx
@@ -29653,8 +29831,8 @@ Zp
 Zp
 Zp
 kx
-dm
-wt
+Dr
+Pw
 YK
 Nz
 EE
@@ -29675,9 +29853,9 @@ li
 ZV
 Zj
 ut
-eB
+oZ
 ge
-ge
+Tv
 ge
 Uj
 lU
@@ -29789,8 +29967,8 @@ YK
 YK
 YK
 YK
-Ps
-vX
+kx
+Mz
 gC
 RP
 Zp
@@ -29830,7 +30008,7 @@ tm
 oZ
 ge
 ge
-Pw
+ge
 Uj
 lU
 ut
@@ -29982,9 +30160,9 @@ ge
 Uj
 ge
 ge
-Pw
+ge
 Uj
-tT
+lU
 Qy
 Qy
 ZV
@@ -30101,7 +30279,7 @@ Zp
 Zp
 Zp
 Zp
-jL
+Ps
 DQ
 Zp
 Zp
@@ -30129,18 +30307,18 @@ Me
 Me
 NY
 ZV
-ge
+iw
 DW
-Gp
+Uj
 BZ
 PI
 PI
 nZ
 lU
-Gp
 Uj
+gm
 ZV
-ge
+iw
 ge
 ge
 ge
@@ -30248,26 +30426,26 @@ YK
 Ps
 vX
 Ps
-Ps
-Ps
+xD
+NN
 gC
 oE
 dU
 dU
 Yz
-WJ
+SG
 SD
 gC
-Ps
-Ps
-Ps
+kx
+NN
+NN
 Ie
 Ps
 YK
 Zs
 vo
 YK
-EE
+TH
 Gs
 YK
 sY
@@ -30410,7 +30588,7 @@ eU
 QD
 fv
 mT
-mT
+WQ
 mT
 FB
 pm
@@ -30433,7 +30611,7 @@ Me
 Me
 qc
 by
-Gp
+Uj
 eo
 ge
 iW
@@ -30445,7 +30623,7 @@ uI
 ge
 by
 ge
-Gp
+Uj
 ge
 FD
 by
@@ -30562,7 +30740,7 @@ eu
 wt
 Vk
 eu
-Ps
+xD
 Ps
 Ps
 Ps
@@ -30585,7 +30763,7 @@ Me
 Me
 NY
 ZV
-Uj
+tT
 Uj
 ge
 Fx
@@ -30594,7 +30772,7 @@ Aw
 pE
 lU
 Uj
-ge
+su
 ZV
 iw
 ge
@@ -30714,13 +30892,13 @@ eu
 Qh
 hq
 Ps
-Ps
+xD
 wt
 wt
 YK
 YK
 YK
-eu
+aN
 vo
 YK
 EE
@@ -30742,14 +30920,14 @@ Uj
 ge
 ge
 DW
-Pw
 ge
-yM
+ge
+lU
 vV
 AI
 ZV
-BB
 ge
+se
 ge
 ge
 ZV
@@ -30891,9 +31069,9 @@ ZV
 ZV
 cZ
 cZ
-eF
-Pw
-jl
+NY
+ge
+DW
 kK
 ge
 HF
@@ -31009,12 +31187,12 @@ mY
 YK
 NN
 kx
-wt
+Pw
 pb
 Ps
 zY
-Ps
-Ps
+WJ
+jL
 Ps
 bm
 SD
@@ -31044,11 +31222,11 @@ ZV
 Zj
 ut
 NY
-Pw
 ge
+zt
 Uj
 ge
-eQ
+HF
 ut
 Zj
 ZV
@@ -31161,7 +31339,7 @@ mY
 YK
 hk
 lz
-Ps
+WJ
 pb
 Ps
 Ps
@@ -31346,7 +31524,7 @@ li
 li
 ZV
 dd
-la
+yM
 la
 aK
 HW
@@ -31505,7 +31683,7 @@ HW
 WX
 hY
 Si
-vj
+Fe
 GB
 bw
 wp
@@ -31606,9 +31784,9 @@ mY
 mY
 mY
 YK
-EE
-EE
-EE
+eQ
+fs
+pB
 aF
 YK
 OT
@@ -31657,9 +31835,9 @@ kE
 WX
 Mm
 uJ
-vj
+Fe
 ZE
-Aa
+bw
 pX
 CH
 ZV
@@ -31758,9 +31936,9 @@ mY
 mY
 mY
 YK
-EE
-EE
-EE
+fs
+ha
+ha
 el
 YK
 bb
@@ -31809,7 +31987,7 @@ HW
 WX
 pX
 Vc
-vj
+Fe
 si
 uQ
 TU
@@ -31911,7 +32089,7 @@ mY
 mY
 YK
 Ct
-bb
+jl
 cl
 QF
 YK
@@ -31930,7 +32108,7 @@ YK
 hp
 ZM
 Ru
-mF
+Gj
 EE
 Mk
 ZM
@@ -31959,7 +32137,7 @@ fn
 Fe
 HW
 yp
-sd
+pX
 bs
 BJ
 ZE
@@ -32062,10 +32240,10 @@ mY
 mY
 mY
 YK
-EE
-EE
-bb
-bb
+fs
+fs
+sd
+sd
 kU
 EE
 gt
@@ -32112,7 +32290,7 @@ Fe
 kE
 WX
 Wc
-fs
+hY
 Sv
 yA
 YQ
@@ -32214,10 +32392,10 @@ mY
 mY
 mY
 YK
-EE
+eQ
 ao
-EE
-bb
+fs
+yh
 kU
 EE
 gt
@@ -32265,11 +32443,11 @@ HW
 WX
 hY
 hY
-yh
+Sv
 kE
 WX
 hY
-CP
+Fe
 ZV
 li
 ZV
@@ -32367,9 +32545,9 @@ mY
 mY
 YK
 Ct
-EE
-cn
-Jz
+fs
+vj
+Aa
 YK
 wt
 Xk
@@ -32415,7 +32593,7 @@ eR
 ja
 HW
 mU
-th
+No
 vN
 yz
 ZE
@@ -32518,10 +32696,10 @@ mY
 mY
 mY
 YK
-EE
-EE
-EE
-EE
+fs
+oK
+eQ
+BB
 YK
 bb
 Xk
@@ -32673,7 +32851,7 @@ YK
 tO
 Oo
 sm
-EE
+eQ
 YK
 Rj
 EE
@@ -32692,7 +32870,7 @@ EE
 HY
 EE
 pb
-VE
+La
 EE
 pb
 VE
