@@ -47,6 +47,62 @@
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))*/
 
+
+//Old World Army clothing
+/obj/item/clothing/head/armycap
+	name = "national guard cap"
+	desc = "(III) Standard national guard forage cap."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "army_cap"
+	item_state = "army_cap"
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+//Enclave / Remnant
+/obj/item/clothing/head/donor/enclave
+	name = "enclave forage cap"
+	desc = "(III) A resistant, black forage cap issued to Enclave soldiers."
+	icon_state = "enclave_cap"
+	item_state = "enclave_cap"
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/combat/enclave
+	name = "enclave combat helmet"
+	desc = "(VI) An intimidating helmet that is issued with it's corresponding suit."
+	icon_state = "enclave_new"
+	item_state = "enclave_new"
+	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
+/obj/item/clothing/head/helmet/f13/combat/remnant
+	name = "remnant combat helmet"
+	desc = "(VI) A dark helmet with yellow lenses, used commonly in espionage or shadow ops."
+	icon_state = "remnant_helmet"
+	item_state = "remnant_helmet"
+	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
+
+/obj/item/clothing/head/helmet/f13/envirosuit
+	name = "enclave envirosuit hood"
+	icon_state = "envirohead"
+	item_state = "envirohead"
+	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
+	clothing_flags = THICKMATERIAL
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+
+/obj/item/clothing/head/soft/f13/enclave
+	name = "officer hat"
+	desc = "(I) A standard-issue Enclave officer's cap."
+	icon_state = "enclave"
+	item_color = "enclave"
+
+
+
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
 	name = "base raider helmet"
@@ -280,7 +336,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
-	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
 	strip_delay = 50
 	dynamic_hair_suffix = ""

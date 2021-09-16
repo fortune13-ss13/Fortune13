@@ -155,4 +155,16 @@
 			screen = params["screen"]
 			. = TRUE
 
+/*/ Ghetto system to make a room filled with poison gas
+/obj/machinery/smoke_machine/environmentaleffect
+
+	efficiency = 20
+	on = TRUE
+	setting = 3 
+	name = null
+	desc = null
+	density = FALSE
+	circuit = null
+something wrong here this line	var/reagents_list = list(/datum/reagent/toxin = 50000, /datum/reagent/consumable/ethanol/rotgut  = 50000)
+*/
 #undef REAGENTS_BASE_VOLUME

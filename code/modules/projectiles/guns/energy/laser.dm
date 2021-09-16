@@ -222,8 +222,8 @@
 
 //AEP 7 Laser pistol
 /obj/item/gun/energy/laser/pistol
-	name = "\improper AEP7 Laser Pistol"
-	desc = "The AEP7 was put into service pre-war with the US Military to replace obsolete sidearms such as the AEP5 and N99 though never saw full-scale adoption. Proving to be lighter & less bulky than it's predecessors, the weapon still functions as a viable sidearm to this day."
+	name = "\improper AEP7 laser pistol"
+	desc = "A basic energy-based laser gun that fires concentrated beams of light."
 	slowdown = 0.2
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
@@ -442,8 +442,8 @@
 
 //Glock 86 Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock
-	name = "Glock 86"
-	desc = "The Austrian-made Glock 86 plasma pistol, this weapon was designed pre-war by the Gaston Glock artificial intelligence. It shoots a small bolt of superheated plasma and is powered by a small energy cell."
+	name = "glock 86"
+	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma. Powered by a small energy cell."
 	item_state = "plasma-pistol"
 	icon_state = "glock86"
 	slowdown = 0.2
@@ -454,9 +454,9 @@
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 
-//Glock 86A Plasma pistol
+//Glock 86 A Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock/extended
-	name ="Glock 86A"
+	name ="glock 86a"
 	item_state = "plasma-pistol"
 	icon_state = "glock86a"
 	desc = "This Glock 86 plasma pistol has had its magnetic housing chamber realigned to reduce the drain on its energy cell. Its efficiency has doubled, allowing it to fire more shots before the battery is expended."

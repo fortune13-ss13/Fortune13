@@ -40,6 +40,23 @@
 	item_state = "uniform_enclave_intel"
 	armor = list("tier" = 2)
 
+//Old World Army clothing
+
+/obj/item/clothing/under/f13/army
+	name = "National Guard uniform"
+	desc = "Military clothing."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_uniform"
+	item_state = "army_uniform"
+
+/obj/item/clothing/under/f13/army/utility
+	name = "US Army utility overall"
+	desc = "Olive lightweight overall with white markings."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_engineer"
+	item_state = "army_engineer"
 
 //Vault
 
@@ -412,28 +429,6 @@
 	icon_state = "legslavef"
 	item_state = "legslavef"
 	item_color = "rag"
-
-
-//Roma Legion Legacy delete?
-
-/obj/item/clothing/under/f13/romaskirt
-	name = "roma legionary fatigues"
-	desc = "A worn and abused pair of fatigues, leftover from the legionary's service to Caesar."
-	icon_state = "roma_legion"
-	item_state = "roma_legion"
-	item_color = "roma_legion"
-
-/obj/item/clothing/under/f13/romaskirt/auxilia
-	name = "roma auxilia fatigues"
-	desc = "A black skirt and a thick long sleeve cotton shirt."
-	icon_state = "roma_auxilia"
-	item_state = "roma_auxilia"
-	item_color = "roma_auxilia"
-	var/sleeves_adjusted = 0
-	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
-	alt_covers_chest = TRUE
-	can_adjust = TRUE
 
 // Generic
 

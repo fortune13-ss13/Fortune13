@@ -140,10 +140,10 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 
 /obj/item/projectile/bullet/a473
 	name = "4.73 FMJ bullet"
-	damage = 26
+	damage = 31
 	armour_penetration = 0.25
-	wound_bonus = 18
-	bare_wound_bonus = -18
+	wound_bonus = 10
+	bare_wound_bonus = -10
 
 /obj/item/projectile/bullet/a473/explosive
 	name = "4.73 explosive bullet"
