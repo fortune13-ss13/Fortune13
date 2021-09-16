@@ -389,17 +389,6 @@
 	},
 /turf/open/floor/wood,
 /area/f13/vault)
-"bw" = (
-/obj/machinery/light/fo13colored/Aqua{
-	bulb_colour = "#b4ddea";
-	desc = "A lighting fixture with blue UV lighting.";
-	dir = 4;
-	name = "UV light"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "whitedirtysolid"
-	},
-/area/f13/enclave)
 "bx" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/outside/dirt,
@@ -469,18 +458,13 @@
 /turf/closed/wall/f13/wood,
 /area/f13/village)
 "bO" = (
-/mob/living/simple_animal/hostile/handy/gutsy,
+/mob/living/simple_animal/hostile/handy/gutsy/nationalguard,
 /turf/open/floor/plating,
 /area/f13/bunker)
 "bP" = (
 /obj/structure/stone_tile/surrounding,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
-"bU" = (
-/mob/living/simple_animal/hostile/handy/gutsy,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
-/area/f13/bunker)
 "bX" = (
 /obj/structure/window/reinforced/spawner{
 	dir = 8
@@ -1222,7 +1206,6 @@
 	},
 /area/f13/enclave)
 "eO" = (
-/obj/item/stack/medical/bruise_pack,
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
 	},
@@ -1320,6 +1303,7 @@
 "fj" = (
 /obj/structure/closet/cabinet/anchored,
 /obj/effect/spawner/lootdrop/raiderloot,
+/obj/effect/spawner/lootdrop/f13/attachments,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "fk" = (
@@ -1556,9 +1540,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/vault)
 "gb" = (
-/obj/item/storage/trash_stack,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
+/obj/structure/decoration/clock/old/active,
+/turf/closed/wall/f13/vault,
 /area/f13/bunker)
 "ge" = (
 /obj/machinery/hydroponics/constructable,
@@ -1837,7 +1820,7 @@
 /area/f13/office/talon)
 "ha" = (
 /obj/structure/table/wood/settler,
-/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/item/restraints/legcuffs/bola,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "hb" = (
@@ -1991,7 +1974,7 @@
 /area/f13/enclave)
 "hA" = (
 /obj/structure/closet/crate/bin,
-/obj/item/storage/trash_stack,
+/obj/item/melee/onehanded/knife/bayonet,
 /turf/open/floor/plasteel/f13/vault_floor/green/rusty,
 /area/f13/bunker)
 "hB" = (
@@ -2946,11 +2929,7 @@
 /area/f13/vault)
 "kT" = (
 /obj/machinery/chem_dispenser/fullupgrade,
-/obj/machinery/light/fo13colored/Aqua{
-	bulb_colour = "#b4ddea";
-	desc = "A lighting fixture with blue UV lighting.";
-	name = "UV light"
-	},
+/obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -3110,6 +3089,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
 	},
+/obj/item/stack/medical/bruise_pack,
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/rusty,
 /area/f13/bunker)
 "lB" = (
@@ -3435,9 +3415,6 @@
 	dir = 4;
 	icon_state = "bench"
 	},
-/obj/structure/decoration/clock/old/active{
-	pixel_y = 25
-	},
 /turf/open/floor/plasteel/f13/vault_floor/green/rusty,
 /area/f13/bunker)
 "mU" = (
@@ -3632,6 +3609,9 @@
 /area/f13/enclave)
 "nK" = (
 /obj/machinery/chem_master/primitive,
+/obj/item/reagent_containers/pill/patch/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
+/obj/item/stack/ore/blackpowder/twenty,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "nM" = (
@@ -4580,7 +4560,7 @@
 /obj/structure/closet,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/shoes/combat,
-/obj/item/clothing/under/f13/combat,
+/obj/item/clothing/under/f13/army/utility,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
 /area/f13/bunker)
 "rn" = (
@@ -4768,7 +4748,8 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "rX" = (
-/obj/structure/junk/micro,
+/obj/machinery/microwave,
+/obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/green/rusty,
 /area/f13/bunker)
 "rY" = (
@@ -5148,7 +5129,7 @@
 	},
 /area/f13/wasteland)
 "ty" = (
-/mob/living/simple_animal/hostile/handy/protectron,
+/mob/living/simple_animal/hostile/handy/gutsy/nationalguard,
 /turf/open/floor/plasteel/f13/vault_floor/green/rusty,
 /area/f13/bunker)
 "tz" = (
@@ -5300,7 +5281,6 @@
 /area/f13/building)
 "ud" = (
 /obj/structure/simple_door/bunker,
-/obj/structure/timeddoor,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -5337,12 +5317,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/vault)
 "uo" = (
-/obj/structure/table,
-/obj/item/kitchen/knife,
 /obj/item/crafting/coffee_pot{
 	pixel_x = -8;
 	pixel_y = 6
 	},
+/obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/green/rusty,
 /area/f13/bunker)
 "up" = (
@@ -6034,9 +6013,10 @@
 /area/f13/city/town)
 "xh" = (
 /obj/structure/rack,
-/obj/item/cultivator,
-/obj/item/storage/bag/plants,
-/obj/item/reagent_containers/glass/bucket/wood,
+/obj/item/stack/medical/gauze/improvised,
+/obj/item/stack/medical/suture/emergency/five,
+/obj/item/reagent_containers/food/snacks/grown/mushroom/reishi,
+/obj/item/reagent_containers/food/snacks/grown/mushroom/reishi,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "xk" = (
@@ -8026,11 +8006,8 @@
 	},
 /area/f13/bunker)
 "Ff" = (
-/obj/machinery/light/fo13colored/Aqua{
-	bulb_colour = "#b4ddea";
-	desc = "A lighting fixture with blue UV lighting.";
-	dir = 8;
-	name = "UV light"
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -8224,11 +8201,6 @@
 /obj/structure/wreck/trash/engine,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"FX" = (
-/obj/structure/table/wood/settler,
-/obj/item/stack/ore/blackpowder/twenty,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "FY" = (
 /obj/structure/closet/crate{
 	icon_state = "medicalcrate"
@@ -8448,8 +8420,8 @@
 "GR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/secure/weapon,
-/obj/item/gun/ballistic/automatic/pistol/sig,
-/obj/item/gun/ballistic/automatic/assault_carbine,
+/obj/item/clothing/suit/armor/f13/power_armor/x02,
+/obj/item/clothing/head/helmet/f13/power_armor/x02helmet,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -9280,7 +9252,7 @@
 	},
 /area/f13/enclave)
 "Kn" = (
-/mob/living/simple_animal/hostile/handy/protectron,
+/mob/living/simple_animal/hostile/handy/gutsy/nationalguard,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
 /area/f13/bunker)
@@ -10071,7 +10043,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "Nt" = (
-/obj/structure/filingcabinet,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/gutsy/nationalguard,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
 /area/f13/bunker)
 "Nu" = (
@@ -10268,16 +10241,6 @@
 /obj/machinery/light{
 	dir = 1;
 	light_color = "#706891"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "whitedirtysolid"
-	},
-/area/f13/enclave)
-"Ok" = (
-/obj/machinery/light/fo13colored/Aqua{
-	bulb_colour = "#b4ddea";
-	desc = "A lighting fixture with blue UV lighting.";
-	name = "UV light"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -12030,11 +11993,8 @@
 /area/f13/vault)
 "UQ" = (
 /obj/machinery/chem_heater,
-/obj/machinery/light/fo13colored/Aqua{
-	bulb_colour = "#b4ddea";
-	desc = "A lighting fixture with blue UV lighting.";
-	dir = 1;
-	name = "UV light"
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -15993,8 +15953,8 @@ jZ
 ea
 Us
 IN
-Pq
-nK
+ea
+Zy
 wJ
 ko
 nC
@@ -16156,7 +16116,7 @@ ea
 ea
 jX
 ea
-FX
+Pq
 yK
 ko
 nC
@@ -16168,9 +16128,9 @@ Hy
 Hy
 lQ
 ea
-fi
-fi
 ha
+fi
+Zy
 ea
 we
 Hy
@@ -16318,7 +16278,7 @@ ea
 ME
 ea
 ea
-Zy
+Pq
 bK
 ko
 nC
@@ -17334,7 +17294,7 @@ Ff
 RI
 RI
 Ya
-bw
+Ff
 Ya
 RI
 RI
@@ -17978,7 +17938,7 @@ VI
 VI
 Vz
 ly
-Ok
+sR
 Vz
 UQ
 QR
@@ -25380,7 +25340,7 @@ FC
 my
 ox
 IL
-ZB
+dv
 IL
 IL
 IL
@@ -27928,7 +27888,7 @@ Hy
 Hy
 Hy
 Hy
-jc
+gb
 mR
 eR
 ty
@@ -29064,7 +29024,7 @@ Hy
 Hy
 Hy
 jc
-Pn
+Nt
 ad
 Ml
 ad
@@ -29075,7 +29035,7 @@ Kn
 Pn
 ad
 Pn
-bU
+Kn
 jc
 Hy
 Hy
@@ -29391,11 +29351,11 @@ Hy
 Hy
 Hy
 jc
-Nt
+ad
 Pn
 Pn
 TC
-gb
+Pn
 Pn
 jc
 qV

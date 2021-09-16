@@ -76,10 +76,11 @@
 	},
 /area/f13/outlaw/indoors)
 "aed" = (
-/obj/structure/closet,
-/obj/item/clothing/under/f13/army/utility,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
-/area/f13/bunker)
+/obj/structure/closet/crate/footlocker,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/wasteland)
 "aen" = (
 /obj/structure/bed/old,
 /obj/item/blanket,
@@ -163,8 +164,6 @@
 "agI" = (
 /obj/structure/closet/crate/secure/weapon,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -323,7 +322,7 @@
 	},
 /area/f13/forest/animals)
 "aoU" = (
-/obj/structure/rack,
+/obj/structure/closet/crate,
 /obj/item/storage/pill_bottle/chem_tin/radx,
 /obj/item/storage/pill_bottle/chem_tin/radx,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -690,11 +689,8 @@
 /turf/closed/wall/mineral/brick,
 /area/f13/city/town)
 "aGJ" = (
-/obj/effect/decal/waste{
-	pixel_x = -4;
-	pixel_y = -7
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/obj/structure/simple_door/bunker,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "aGN" = (
 /obj/structure/window/fulltile/house{
@@ -891,6 +887,14 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
+"aQC" = (
+/obj/item/pipe{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "catwalk"
+	},
 /area/f13/bunker)
 "aQT" = (
 /obj/structure/car/rubbish3,
@@ -2254,9 +2258,11 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "cmN" = (
-/obj/machinery/light{
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
 	dir = 1;
-	light_color = "#706891"
+	name = "UV light";
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
@@ -3062,15 +3068,9 @@
 /turf/open/floor/carpet/purple,
 /area/f13/subway/ghouls)
 "dgw" = (
-/obj/structure/table/optable,
-/obj/effect/decal/waste{
-	icon_state = "goo12"
-	},
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wreck/trash/engine,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "dhg" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3230,6 +3230,15 @@
 	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland)
+"dpl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/button/door{
+	id = "Workshop";
+	name = "Workshop button";
+	pixel_y = -29
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "dps" = (
 /obj/structure/chair/sofa/corp/corner{
 	dir = 8
@@ -3471,8 +3480,10 @@
 /turf/open/floor/wood/wood_large,
 /area/f13/outlaw/indoors)
 "dAO" = (
-/obj/structure/closet,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack/steel,
+/obj/item/wrench,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "dBd" = (
 /obj/structure/fence{
@@ -3741,8 +3752,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 4;
+	name = "UV light"
 	},
 /obj/structure/window/reinforced/spawner{
 	dir = 8
@@ -4593,6 +4607,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/office)
+"eGU" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "eHB" = (
 /obj/effect/decal/cleanable/blood/old{
 	pixel_x = 12
@@ -4629,6 +4648,14 @@
 /obj/machinery/bookbinder,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
+"eIu" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wreck/trash/autoshaft,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "eIA" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/generic,
@@ -5045,6 +5072,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/forest/animals)
+"fdy" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/sink/cistern{
+	desc = "A tank with lubricant oil.";
+	dispensedreagent = /datum/reagent/oil;
+	name = "lubricant dispenser system"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "fdG" = (
 /obj/structure/simple_door/metal/barred{
 	req_access_txt = "87"
@@ -5071,9 +5107,11 @@
 /obj/effect/decal/waste{
 	icon_state = "goo5"
 	},
-/obj/machinery/light{
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
 	dir = 1;
-	light_color = "#706891"
+	name = "UV light";
+	pixel_y = 4
 	},
 /mob/living/simple_animal/hostile/supermutant/nationalguard,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty,
@@ -5212,6 +5250,13 @@
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright1"
 	},
+/area/f13/wasteland)
+"fjj" = (
+/obj/machinery/door/poddoor/gate{
+	id = "Workshop";
+	name = "Workshop gate"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/wasteland)
 "fjn" = (
 /obj/structure/sign/poster/prewar/poster72,
@@ -5794,9 +5839,13 @@
 	},
 /area/f13/wasteland)
 "fJT" = (
-/obj/structure/closet,
+/obj/structure/closet/secure_closet/medical2,
 /obj/structure/curtain,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/defibrillator,
+/obj/item/tank/internals/anesthetic,
+/obj/item/clothing/mask/breath/medical,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
 	dir = 8
 	},
@@ -6618,6 +6667,14 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"gAT" = (
+/obj/structure/table,
+/obj/machinery/computer/terminal{
+	dir = 4;
+	termtag = "Business"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "gBa" = (
 /obj/structure/rack/steel,
 /obj/item/clothing/accessory/medal/gold,
@@ -6937,8 +6994,11 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/subway/ghouls)
 "gSj" = (
-/mob/living/simple_animal/hostile/supermutant/nationalguard/nco,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/wreck/trash/two_tire,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "gSk" = (
 /obj/structure/table,
@@ -7003,6 +7063,12 @@
 	dir = 1
 	},
 /area/f13/forest/animals)
+"gVy" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack/steel,
+/obj/item/screwdriver,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "gVQ" = (
 /obj/effect/decal/marking{
 	icon_state = "doublehorizontal"
@@ -7206,9 +7272,10 @@
 /area/f13/wasteland)
 "hfJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty{
-	dir = 4
-	},
+/obj/structure/rack/steel,
+/obj/item/weldingtool/largetank,
+/obj/item/clothing/head/welding,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "hgu" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7299,14 +7366,11 @@
 /turf/open/floor/plasteel/darkred,
 /area/f13/forest/animals)
 "hjh" = (
-/obj/structure/wreck/car/bike{
-	dir = 8;
-	icon_state = "bike_rust_med_no_wheels"
-	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain2"
-	},
-/area/f13/wasteland)
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wreck/trash/secway,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "hjy" = (
 /obj/structure/closet/crate,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -7750,6 +7814,12 @@
 /obj/item/reagent_containers/food/snacks/f13/canned/dog,
 /turf/open/floor/plasteel/asteroid,
 /area/f13/forest/animals)
+"hEC" = (
+/obj/effect/decal/cleanable/oil/streak,
+/turf/open/floor/plasteel/f13{
+	icon_state = "catwalk"
+	},
+/area/f13/bunker)
 "hER" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -8388,7 +8458,7 @@
 	},
 /area/f13/building)
 "inG" = (
-/obj/structure/table,
+/obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty{
 	dir = 8
 	},
@@ -8473,8 +8543,16 @@
 /turf/open/floor/wood/wood_large,
 /area/f13/outlaw/indoors)
 "ipt" = (
-/mob/living/simple_animal/hostile/supermutant/nationalguard,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wreck/trash/five_tires,
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	dir = 1;
+	name = "UV light";
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "ipD" = (
 /mob/living/simple_animal/hostile/raider/skull/ranged,
@@ -8563,10 +8641,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "ivY" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty{
-	dir = 1
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "iwI" = (
 /obj/structure/flora/tree/tall{
@@ -9723,13 +9803,11 @@
 	},
 /area/f13/outlaw/indoors)
 "jKb" = (
-/obj/structure/table,
-/obj/machinery/computer/terminal{
-	dir = 1;
-	termtag = "Business"
-	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/obj/item/pipe{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "jKc" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10016,7 +10094,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "kab" = (
-/mob/living/simple_animal/hostile/handy/gutsy,
+/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "kar" = (
@@ -10208,12 +10286,6 @@
 /obj/structure/closet,
 /obj/item/clothing/head/armycap,
 /obj/item/clothing/under/f13/army,
-/obj/item/clothing/shoes/f13/enclave/serviceboots{
-	desc = "Tall polished leather boots.";
-	name = "shiny leather boots";
-	pixel_x = -7;
-	pixel_y = 4
-	},
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "knf" = (
@@ -10538,6 +10610,12 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"kFs" = (
+/obj/item/pipe{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "kFF" = (
 /obj/structure/fence/corner{
 	dir = 1
@@ -10560,6 +10638,11 @@
 	icon_state = "verticalrightborderright0"
 	},
 /area/f13/wasteland)
+"kGT" = (
+/obj/structure/closet/crate/bin,
+/obj/item/reagent_containers/pill/salicyclic,
+/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/area/f13/bunker)
 "kHa" = (
 /obj/structure/fence/wooden{
 	dir = 1;
@@ -10692,10 +10775,6 @@
 "kNE" = (
 /obj/structure/closet/crate/footlocker,
 /obj/effect/spawner/lootdrop/f13/resourcespawner,
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "kNT" = (
@@ -11013,11 +11092,11 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders/camp)
 "lbX" = (
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/obj/structure/wreck/trash/four_barrels,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "ldl" = (
 /obj/machinery/smartfridge/bottlerack/seedbin,
@@ -11073,6 +11152,12 @@
 	dir = 8
 	},
 /area/f13/raiders)
+"lem" = (
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plasteel/f13{
+	icon_state = "catwalk"
+	},
+/area/f13/bunker)
 "lfd" = (
 /obj/machinery/computer/slot_machine,
 /turf/open/floor/wood/f13/oak,
@@ -11411,8 +11496,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/light/fo13colored/Aqua{
+	bulb_colour = "#b4ddea";
+	desc = "A lighting fixture with blue UV lighting.";
+	dir = 8;
+	name = "UV light"
 	},
 /obj/structure/window/reinforced/spawner{
 	dir = 4
@@ -13003,9 +13091,11 @@
 	pixel_x = -10
 	},
 /obj/structure/filingcabinet,
-/obj/machinery/light{
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
 	dir = 1;
-	light_color = "#706891"
+	name = "UV light";
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/dirty,
 /area/f13/bunker)
@@ -13376,7 +13466,7 @@
 /area/f13/wasteland)
 "nID" = (
 /mob/living/simple_animal/hostile/supermutant/nationalguard/engineer,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "nJB" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -13642,7 +13732,6 @@
 	},
 /area/f13/wasteland)
 "nYz" = (
-/obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
 /turf/open/floor/f13{
 	icon = 'icons/turf/floors.dmi';
@@ -14427,7 +14516,10 @@
 	},
 /area/f13/raiders)
 "oOc" = (
-/turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack/steel,
+/obj/structure/wreck/trash/engine,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "oOS" = (
 /obj/effect/decal/marking{
@@ -14758,10 +14850,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "pkR" = (
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
-	dir = 1
-	},
+/obj/effect/decal/cleanable/oil/streak,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "pkY" = (
 /obj/structure/chair/office/dark{
@@ -14864,6 +14956,7 @@
 /area/f13/wasteland)
 "pqu" = (
 /obj/structure/chair/office/dark,
+/mob/living/simple_animal/hostile/supermutant/nationalguard,
 /turf/open/floor/plasteel/f13/vault_floor/green/dirty,
 /area/f13/bunker)
 "pqB" = (
@@ -15047,6 +15140,13 @@
 	},
 /turf/closed/wall/r_wall/rust,
 /area/f13/caves)
+"pBS" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "pBW" = (
 /obj/structure/sign/poster/prewar/poster73,
 /turf/closed/wall/r_wall/rust,
@@ -15241,6 +15341,15 @@
 	icon_state = "housewood3"
 	},
 /area/f13/building)
+"pNZ" = (
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	dir = 1;
+	name = "UV light";
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "pOd" = (
 /obj/structure/flora/tree/tall{
 	icon_state = "tree_2"
@@ -15485,6 +15594,14 @@
 	icon_state = "horizontalbottombordertop0"
 	},
 /area/f13/wasteland)
+"pYM" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wreck/car/bike{
+	dir = 8;
+	icon_state = "bike_rust_med_no_wheels"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "pZC" = (
 /obj/item/reagent_containers/food/snacks/f13/canned/dog,
 /obj/item/reagent_containers/food/snacks/f13/canned/dog,
@@ -16120,7 +16237,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "qFk" = (
-/obj/structure/sign/plaques/painting/president,
+/obj/structure/sign/plaques/painting/president{
+	name = "painting of the a man."
+	},
 /turf/closed/wall/f13/wood/interior,
 /area/f13/city/town)
 "qFL" = (
@@ -16140,6 +16259,7 @@
 /obj/effect/decal/waste{
 	icon_state = "goo12"
 	},
+/obj/machinery/iv_drip,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner/dirty,
 /area/f13/bunker)
 "qHv" = (
@@ -16590,6 +16710,7 @@
 /area/f13/office/talon)
 "rnH" = (
 /obj/structure/closet/crate/footlocker,
+/obj/item/clothing/shoes/f13/military,
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/f13/bunker)
 "rnP" = (
@@ -16672,8 +16793,12 @@
 /turf/open/floor/wood/f13/carpet,
 /area/f13/forest/animals)
 "rqC" = (
-/obj/machinery/light,
-/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	name = "UV light"
+	},
+/obj/structure/wreck/trash/five_tires,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "rqJ" = (
 /obj/structure/chair/stool/f13stool{
@@ -17963,6 +18088,13 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/forest/animals)
+"sEF" = (
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
+/mob/living/simple_animal/hostile/supermutant/nationalguard/engineer,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "sEI" = (
 /obj/structure/billboard/cola/pristine,
 /turf/open/indestructible/ground/outside/dirt,
@@ -18182,11 +18314,10 @@
 	},
 /area/f13/wasteland)
 "sQB" = (
-/obj/structure/wreck/trash/autoshaft,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain1"
-	},
-/area/f13/wasteland)
+/obj/structure/closet,
+/obj/item/reagent_containers/food/snacks/f13/mre,
+/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/area/f13/bunker)
 "sRe" = (
 /turf/open/floor/wood/f13/carpet{
 	icon_state = "torncarpet10"
@@ -18398,7 +18529,6 @@
 /turf/open/floor/carpet,
 /area/f13/city/town)
 "tag" = (
-/obj/structure/wreck/trash/secway,
 /obj/effect/decal/waste,
 /obj/effect/decal/fakelattice,
 /turf/open/indestructible/ground/outside/road{
@@ -18569,6 +18699,10 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/subway/ghouls)
+"thf" = (
+/mob/living/simple_animal/hostile/supermutant/nationalguard/nco,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "tht" = (
 /mob/living/simple_animal/hostile/skolf,
 /turf/open/floor/plating/f13/outside/road{
@@ -18899,6 +19033,15 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland)
+"tCW" = (
+/obj/structure/closet,
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
+	dir = 1;
+	name = "UV light"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/dirty,
+/area/f13/bunker)
 "tDb" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright2"
@@ -19092,6 +19235,15 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
+"tNq" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/item/pipe{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "tNI" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/royalblack,
@@ -19306,7 +19458,8 @@
 /area/f13/forest/animals)
 "tWD" = (
 /obj/structure/closet/crate/secure/weapon,
-/obj/effect/spawner/lootdrop/weapons/oldarmy,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "tXG" = (
@@ -20558,6 +20711,14 @@
 	dir = 1
 	},
 /area/f13/wasteland)
+"vkx" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/pipe{
+	dir = 4
+	},
+/obj/item/pipe_meter,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "vkP" = (
 /obj/structure/chair/pew/left{
 	dir = 4
@@ -20815,7 +20976,13 @@
 	},
 /area/f13/subway/ghouls)
 "vBw" = (
-/obj/structure/simple_door/bunker,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/oil{
+	icon_state = "floor6"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "vCD" = (
@@ -20847,6 +21014,7 @@
 /area/f13/subway/ghouls)
 "vDV" = (
 /obj/structure/closet/crate/bin,
+/obj/item/reagent_containers/food/snacks/f13/mre,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "vDW" = (
@@ -21118,11 +21286,12 @@
 	},
 /area/f13/raiders/camp)
 "vOW" = (
-/obj/structure/curtain,
-/obj/effect/decal/waste,
-/turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
-	dir = 4
-	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack/steel,
+/obj/structure/wreck/trash/autoshaft,
+/obj/item/wrench,
+/obj/item/flashlight/seclite,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "vPw" = (
 /obj/structure/window/fulltile/store,
@@ -21346,7 +21515,7 @@
 	},
 /area/f13/raiders/camp)
 "weQ" = (
-/mob/living/simple_animal/hostile/handy/gutsy,
+/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -21895,7 +22064,7 @@
 /turf/open/floor/carpet/arcade,
 /area/f13/forest/animals)
 "wIH" = (
-/obj/structure/rack,
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "wIU" = (
@@ -22625,10 +22794,11 @@
 	},
 /area/f13/building)
 "xua" = (
-/obj/structure/filingcabinet,
-/obj/structure/filingcabinet{
-	pixel_x = 11
-	},
+/obj/structure/closet,
+/obj/item/clothing/under/f13/army/utility,
+/obj/item/clothing/shoes/f13/military,
+/obj/item/clothing/under/f13/army/utility,
+/obj/item/storage/belt/military,
 /turf/open/floor/plasteel/f13/vault_floor/green/dirty,
 /area/f13/bunker)
 "xue" = (
@@ -22880,9 +23050,11 @@
 /area/f13/raiders/camp)
 "xMh" = (
 /obj/structure/chair/f13chair2,
-/obj/machinery/light{
+/obj/machinery/light/fo13colored/Aqua{
+	desc = "A lighting fixture with cold blue lighting.";
 	dir = 1;
-	light_color = "#706891"
+	name = "UV light";
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/dirty,
 /area/f13/bunker)
@@ -23241,6 +23413,11 @@
 /obj/structure/chalkboard,
 /turf/open/floor/plasteel/neutral/side,
 /area/f13/outlaw/indoors)
+"yiG" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/supermutant/nationalguard/engineer,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
+/area/f13/bunker)
 "yiN" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -37239,7 +37416,7 @@ uQQ
 uQQ
 uQQ
 uQQ
-uQQ
+aed
 uQQ
 uQQ
 uQQ
@@ -43900,7 +44077,7 @@ kfp
 iOt
 iOt
 iOt
-nID
+iOt
 gdy
 kfp
 fJS
@@ -44383,7 +44560,7 @@ cCZ
 cCZ
 cCZ
 kfp
-iOt
+kGT
 bHJ
 mxK
 iOt
@@ -44710,7 +44887,7 @@ qGS
 wRt
 hkL
 kfp
-iOt
+tCW
 iOt
 kfp
 fJS
@@ -45034,7 +45211,7 @@ inG
 fJT
 vwu
 kfp
-ipt
+iOt
 gdy
 kfp
 fJS
@@ -45190,14 +45367,14 @@ slv
 slv
 tIM
 cCZ
-cCZ
 kfp
 kfp
 kfp
-aGJ
 kfp
-lbX
-gdy
+kfp
+kfp
+kfp
+mhG
 kfp
 fJS
 wJw
@@ -45352,14 +45529,14 @@ slv
 slv
 tIM
 cCZ
-cCZ
 kfp
+oOc
 oOc
 vOW
 hfJ
-kfp
+gVy
 dAO
-gdy
+maC
 kfp
 fJS
 wJw
@@ -45514,14 +45691,14 @@ iHf
 iHf
 tIM
 cCZ
-cCZ
 kfp
-dgw
-gTW
-pkR
-kfp
-aed
-gdy
+odB
+maC
+yiG
+maC
+maC
+maC
+maC
 kfp
 fJS
 wJw
@@ -45676,14 +45853,14 @@ tIM
 tIM
 tIM
 cCZ
-cCZ
 kfp
-inG
-fJT
+dgw
+vBw
+cMP
 ivY
-kfp
-aed
-iOt
+eIu
+maC
+dpl
 kfp
 fJS
 wJw
@@ -45838,15 +46015,15 @@ cCZ
 cCZ
 cCZ
 cCZ
-cCZ
 kfp
-kfp
-kfp
-kfp
-kfp
-kfp
-mhG
-kfp
+hjh
+nyb
+nyb
+nyb
+nyb
+fnh
+maC
+fjj
 uot
 lvo
 lvo
@@ -46001,14 +46178,14 @@ kfp
 kfp
 kfp
 kfp
-kfp
-xua
-pqu
-gCS
-pqu
-gCS
-iOt
-kfp
+ipt
+nyb
+nyb
+lem
+nyb
+fnh
+odB
+odB
 uot
 uot
 uot
@@ -46021,8 +46198,8 @@ uot
 uot
 vJd
 dtQ
-hjh
-sQB
+hAT
+dtQ
 qes
 qes
 vHM
@@ -46162,15 +46339,15 @@ wRH
 nyb
 nyb
 nyb
+kfp
+pkR
 nyb
-kfp
-iOt
-iOt
-wvR
-iOt
-wvR
-gdy
-kfp
+lem
+aQC
+hEC
+fnh
+maC
+odB
 uot
 uot
 uot
@@ -46324,14 +46501,14 @@ aQq
 nyb
 nyb
 nyb
-nyb
 kfp
+odB
 lbX
 gSj
-gdy
-gdy
-gdy
-gdy
+tNq
+pBS
+maC
+maC
 kfp
 uot
 uot
@@ -46486,14 +46663,14 @@ odB
 nMR
 nMR
 nMR
-nMR
-vBw
-iOt
-pqu
+aGJ
+maC
+odB
+maC
 jKb
-iOt
-wvR
-iOt
+maC
+maC
+thf
 kfp
 kfp
 wPM
@@ -46648,13 +46825,13 @@ odB
 qmH
 cMP
 cMP
-cMP
-vBw
+aGJ
+maC
 nID
-iOt
-wvR
-pqu
-gCS
+maC
+jKb
+maC
+maC
 rqC
 kfp
 ajz
@@ -46810,14 +46987,14 @@ wRH
 nyb
 nyb
 nyb
-nyb
 kfp
-lbX
-gdy
-iOt
-iOt
-iOt
-iOt
+pNZ
+maC
+eGU
+kFs
+odB
+odB
+odB
 kfp
 kmQ
 lSq
@@ -46972,14 +47149,14 @@ wRH
 nyb
 nyb
 nyb
-nyb
 kfp
-gdy
-gdy
-wvR
-iOt
-wvR
-iOt
+odB
+maC
+pYM
+vkx
+odB
+mQE
+gAT
 kfp
 cmN
 nhL
@@ -47135,13 +47312,13 @@ kfp
 kfp
 kfp
 kfp
-kfp
-iOt
-pqu
-gCS
-pqu
-gCS
-iOt
+sQB
+xua
+maC
+fdy
+odB
+odB
+sEF
 kfp
 cea
 nhL
@@ -47296,7 +47473,7 @@ tIM
 tIM
 tIM
 tIM
-tIM
+kfp
 kfp
 kfp
 kfp

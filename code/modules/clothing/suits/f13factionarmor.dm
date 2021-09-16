@@ -833,6 +833,8 @@
 
 /obj/item/clothing/suit/armor/raider/iconoclast
 	name = "iconoclast raider armor"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	desc = "(IV) A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
 	icon_state = "iconoclast"
 	item_state = "iconoclast"
@@ -888,6 +890,8 @@
 /obj/item/clothing/suit/armor/raider/rebel
 	name = "rebel raider armor"
 	desc = "(III) Rebel, rebel. Your face is a mess."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "raider_rebel_icon"
 	item_state = "raider_rebel_armor"
 

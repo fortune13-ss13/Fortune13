@@ -249,6 +249,9 @@
 	decompose = FALSE
 	sharpness = SHARP_EDGED //They need to cut their finger nails
 
+// Mamas Boys - bootleg Rotgut makers and purveyors of ghetto fight rings. Love a good fistfight, and usually wear galoshes to not get the feet melted off in the toxic sludge where they live.
+// Pretty good stats but no guns, and vulnerable to unarmed combat, live by the fist, uh, die by the fist?
+
 /mob/living/simple_animal/hostile/ghoul/mamasboys
 	name = "worker ghoul"
 	desc = "A sentient ghoul, but involved in shady dealings and not very friendly."
@@ -269,7 +272,7 @@
 	health = 120
 	speed = 0.25
 	obj_damage = 100
-	harm_intent_damage = 20 // live by the fist, die by the fist
+	harm_intent_damage = 35 // live by the fist, die by the fist
 	melee_damage_lower = 20
 	melee_damage_upper = 30
 	del_on_death = 0
@@ -316,9 +319,19 @@
 	dodge_prob = 30
 	sidestep_per_cycle = 2
 	rapid_melee = 2
+	speak = list("Nothin' personal darling.","I'll use your hair for my next wig, I think.","Fight me with your fists if you dare.");
 	attack_verb_simple = "kicks"
 	death_sound = 'sound/voice/scream/scream_f3.ogg'
 	loot = list(/obj/item/book/granter/martial/krav_maga)
+
+/mob/living/simple_animal/hostile/ghoul/mamasboys/mama/bullet_act(obj/item/projectile/Proj)
+	if(!Proj)
+		return
+	if(prob(25))
+		return ..()
+	else
+		visible_message("<span class='danger'>[src] dodges [Proj]!</span>")
+		return 0
 
 /mob/living/simple_animal/hostile/ghoul/mamasboys/mama/Aggro()
 	..()
