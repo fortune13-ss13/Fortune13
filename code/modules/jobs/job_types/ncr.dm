@@ -598,9 +598,9 @@
 	. = ..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1garand)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/servicerifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/scoutcarbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/m1garand)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
@@ -950,11 +950,11 @@
 	. = ..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lmg)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rangemaster)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/marksmancarbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/r84lmg)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/scoutcarbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/rangemaster)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/servicerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
 	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
@@ -1023,7 +1023,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/ncruniform)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/servicerifle)
 
 // Logistics soldier	Tinkering
 /datum/outfit/loadout/rearlog

@@ -346,6 +346,7 @@
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
 
 /datum/outfit/loadout/trenchie
 	name = "Trenchie"
@@ -383,7 +384,7 @@
 	..()
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_NOSLIPALL, src)
+	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
 
 /datum/outfit/job/raider/enforcer_psycho
 	name =	"Raider Strongman"
@@ -447,6 +448,7 @@
 	..()
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
 
 /datum/outfit/job/raider/psycho
 	name =	"Raider Psycho"
@@ -564,7 +566,7 @@
 	..()
 	ADD_TRAIT(H, TRAIT_BERSERKER, src)
 	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
+
 
 /datum/outfit/job/raider/enforcer_tribal
 	name = "Raider Berserker"
@@ -629,7 +631,8 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/knifegun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/lasmusket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/plasmamusket)
-
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/m29snub)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/rockwell)
 
 /datum/outfit/job/raider/tribal
 	name =	"Raider Tribal"

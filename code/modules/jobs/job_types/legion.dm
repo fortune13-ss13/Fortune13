@@ -965,9 +965,9 @@ commented out pending rework*/
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/spatha)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lance)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionshield)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/grease_gun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/brush)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/lever_action
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/grease_gun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/brush)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionlance)
 
 

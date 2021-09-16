@@ -43,25 +43,25 @@
 
 /obj/item/components
 	name = "crafting items"
-	icon = 'icons/fallout/objects/items.dmi'
+	icon = 'icons/fallout/objects/paperwork/books.dmi'
 	icon_state = "blueprint_empty"
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/blueprint
 	name = "crafting blueprint"
-	icon = 'icons/fallout/objects/items.dmi'
+	icon = 'icons/fallout/objects/paperwork/books.dmi'
 	icon_state = "blueprint_empty"
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/prefabs
 	name = "crafting prefabs"
-	icon = 'icons/fallout/objects/items.dmi'
+	icon = 'icons/fallout/objects/paperwork/books.dmi'
 	icon_state = "blueprint_empty"
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/stack/prefabs
 	name = "crafting prefabs"
-	icon = 'icons/fallout/objects/items.dmi'
+	icon = 'icons/fallout/objects/paperwork/books.dmi'
 	icon_state = "blueprint_empty"
 	w_class = WEIGHT_CLASS_TINY
 
