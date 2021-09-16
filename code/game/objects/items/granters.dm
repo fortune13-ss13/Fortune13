@@ -435,7 +435,7 @@
 	icon_state = "gab4"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/explosive/coffeepotbomb, /datum/crafting_recipe/explosive/firebomb, /datum/crafting_recipe/chemical_payload, /datum/crafting_recipe/receiver, /datum/crafting_recipe/assembly, /datum/crafting_recipe/alloys)
+	crafting_recipe_types = list(/datum/crafting_recipe/explosive/coffeepotbomb, /datum/crafting_recipe/explosive/firebomb, /datum/crafting_recipe/chemical_payload)
 
 /obj/item/book/granter/crafting_recipe/blueprint/trapper
 	name = "Home Defense: Guide to minelaying"
@@ -691,11 +691,6 @@
 	name = "battle rifle blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/gun/m1garand)
-
-/obj/item/book/granter/crafting_recipe/blueprint/infiltrator
-	name = "infiltrator blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/infiltrator)
 
 /obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine
 	name = "scout carbine blueprint"
