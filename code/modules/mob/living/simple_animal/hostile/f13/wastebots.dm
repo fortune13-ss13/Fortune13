@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/handy
 	name = "mr. handy"
 	desc = "A crazed pre-war household assistant robot, armed with a cutting saw."
-	icon = 'icons/fallout/mobs/robots.dmi'
+	icon = 'icons/mob/robots.dmi'
 	icon_state = "handy"
 	icon_living = "handy"
 	icon_dead = "gib7"
@@ -94,14 +94,6 @@
 
 	aggrosound = list('sound/f13npc/gutsy/aggro1.ogg', 'sound/f13npc/gutsy/aggro2.ogg', 'sound/f13npc/gutsy/aggro3.ogg', 'sound/f13npc/gutsy/aggro4.ogg', 'sound/f13npc/gutsy/aggro5.ogg', 'sound/f13npc/gutsy/aggro6.ogg')
 	idlesound = list('sound/f13npc/gutsy/idle1.ogg', 'sound/f13npc/gutsy/idle2.ogg', 'sound/f13npc/gutsy/idle3.ogg')
-
-/mob/living/simple_animal/hostile/handy/gutsy/nationalguard
-	name = "private Gutsy"
-	icon_state = "pvtgutsy"
-	icon_living = "pvtgutsy"
-	aggro_vision_range = 15
-	faction = list("hostile", "supermutant")
-	obj_damage = 300
 
 /mob/living/simple_animal/hostile/handy/gutsy/playable
 	ranged = FALSE

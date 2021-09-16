@@ -727,20 +727,6 @@
 /obj/machinery/porta_turret/syndicate/assess_perp(mob/living/carbon/human/perp)
 	return 10 //Syndicate turrets shoot everything not in their faction
 
-/obj/machinery/porta_turret/syndicate/army
-	name = "Automated point-defense laser system"
-	desc = "Protects sensitive installations from unauthorized personell."
-	icon_state = "turretCover"
-	base_icon_state = "standard"
-	always_up = 0
-	has_cover = 1
-	stun_projectile = /obj/item/projectile/beam/weak/penetrator
-	lethal_projectile = /obj/item/projectile/beam/weak/penetrator
-	lethal_projectile_sound = 'sound/weapons/laser.ogg'
-	stun_projectile_sound = 'sound/weapons/laser.ogg'
-	faction = list("hostile","supermutant")
-
-
 /obj/machinery/porta_turret/syndicate/energy
 	icon_state = "standard_stun"
 	base_icon_state = "standard"

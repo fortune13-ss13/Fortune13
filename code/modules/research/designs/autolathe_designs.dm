@@ -568,6 +568,14 @@
 	build_path = /obj/item/wallframe/camera
 	category = list("initial", "Construction")
 
+/datum/design/newscaster_frame
+	name = "Newscaster Frame"
+	id = "newscaster_frame"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 14000, MAT_GLASS = 8000)
+	build_path = /obj/item/wallframe/newscaster
+	category = list("initial", "Construction")
+
 /datum/design/syringe
 	name = "Syringe"
 	id = "syringe"

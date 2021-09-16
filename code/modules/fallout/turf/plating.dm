@@ -17,12 +17,3 @@
 	icon_state = "tunneldirty"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	baseturfs = /turf/open/indestructible/ground/inside/mountain
-
-/turf/open/floor/plating/tunnel/rusty
-	icon_state = "tunnelrusty"
-
-/turf/open/floor/plating/tunnel/chess
-	icon_state = "tunnelchess"
-
-/turf/open/floor/plating/tunnel/chess2
-	icon_state = "tunnelchess2"
