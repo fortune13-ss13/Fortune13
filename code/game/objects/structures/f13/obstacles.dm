@@ -41,11 +41,3 @@
 /obj/structure/handrail/g_end/New()
 	if (dir>2)
 		layer = 4.2
-
-/obj/structure/wasteoutlet
-	name = "waste outlet pipe"
-	desc = "A pipe."
-	icon = 'icons/fallout/furniture/stationary.dmi'
-	icon_state = "wasteoutlet"
-	density = 0
-	anchored = 1

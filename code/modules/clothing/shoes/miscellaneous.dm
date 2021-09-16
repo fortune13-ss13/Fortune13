@@ -72,7 +72,7 @@
 	slowdown = SHOES_SLOWDOWN+1
 	strip_delay = 50
 	equip_delay_other = 50
-	resistance_flags = UNACIDABLE | ACID_PROOF
+	resistance_flags = NONE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 75)
 	custom_price = PRICE_ABOVE_EXPENSIVE
 	can_be_tied = FALSE
