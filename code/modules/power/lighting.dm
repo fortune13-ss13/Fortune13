@@ -904,6 +904,11 @@
 	desc = "A small lighting fixture."
 	light_type = /obj/item/light/bulb
 
+/obj/machinery/light/floor/orange
+	brightness = 4
+	nightshift_brightness = 3
+	bulb_colour = "#dd8c52"
+	light_color = "#dd8c52"
 
 //Flickering Ported From Hippiestation. credits to yoyobatty
 /obj/machinery/light/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1)
