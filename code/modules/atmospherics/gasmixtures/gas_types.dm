@@ -199,14 +199,6 @@ GLOBAL_LIST_INIT(nonreactive_gases, typecacheof(list(/datum/gas/oxygen, /datum/g
 	dangerous = TRUE
 	rarity = 310
 
-/datum/gas/fumes
-	id = "toxicfume"
-	specific_heat = 20
-	name = "Toxic fumes"
-	gas_overlay = "water_vapor"
-	moles_visible = MOLES_GAS_VISIBLE * 60
-	dangerous = TRUE
-	rarity = 310
 
 /obj/effect/overlay/gas
 	icon = 'icons/effects/atmospherics.dmi'
