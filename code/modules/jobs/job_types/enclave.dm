@@ -182,6 +182,7 @@
 	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
+/datum/outfit/loadout/town
 	name = "Town Infiltrator"
 	backpack_contents = list(
 		/obj/item/encryptionkey/headset_town = 1,
@@ -262,6 +263,7 @@
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 3,
+		/obj/item/book/granter/trait/bigleagues = 1,
 		)
 
 /datum/outfit/loadout/support
