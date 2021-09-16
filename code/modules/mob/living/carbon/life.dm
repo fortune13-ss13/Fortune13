@@ -295,7 +295,7 @@
 
 	//BREATH TEMPERATURE
 	handle_breath_temperature(breath)
-*/
+
 
 	//TOXIC FUMES
 	if(breath.get_moles(/datum/gas/fumes))
@@ -335,7 +335,7 @@
 	//BREATH TEMPERATURE
 	handle_breath_temperature(breath)
 
-
+*/
 	//MIASMA
 	if(breath.get_moles(/datum/gas/miasma))
 		var/miasma_partialpressure = (breath.get_moles(/datum/gas/miasma)/breath.total_moles())*breath_pressure
