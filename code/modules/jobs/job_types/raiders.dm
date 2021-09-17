@@ -234,9 +234,8 @@
 	suit = /obj/item/clothing/suit/armor/raider/king
 	mask = /obj/item/clothing/mask/bandana/skull
 	gloves = /obj/item/clothing/gloves/f13/leather
-	r_hand =	/obj/item/gun/ballistic/revolver/revolver45/gunslinger
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/revolver45/gunslinger = 1,
+		/obj/item/gun/ballistic/revolver/revolver45/gunslinger = 2,
 		/obj/item/ammo_box/a45lcbox = 1,
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
