@@ -391,7 +391,7 @@ Raider
 	id = null
 	ears = null
 	belt = null
-	r_hand = /obj/item/book/granter/trait/selection
+//	r_hand = /obj/item/book/granter/trait/selection
 	l_pocket = /obj/item/storage/bag/money/small/wastelander
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/melee/onehanded/knife/survival
