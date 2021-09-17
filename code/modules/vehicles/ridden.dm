@@ -4,8 +4,8 @@
 	max_buckled_mobs = 1
 	buckle_lying = FALSE
 	default_driver_move = FALSE
-	var/legs_required = 1
-	var/arms_required = 0	//why not?
+	var/legs_required = 2
+	var/arms_required = 2
 
 /obj/vehicle/ridden/Initialize()
 	. = ..()
