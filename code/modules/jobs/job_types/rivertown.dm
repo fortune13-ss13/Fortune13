@@ -542,7 +542,7 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = null
 	r_pocket = /obj/item/flashlight
-	r_hand = /obj/item/book/granter/trait/selection
+//	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler = 1,
 		)
@@ -645,7 +645,7 @@ here's a tip, go search DEFINES/access.dm
 	shoes = null
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/book/granter/trait/selection
+//	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler = 1,
 		)
