@@ -804,7 +804,7 @@
 	knife_x_offset = 22
 	knife_y_offset = 21
 	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
+	suppressor_state = "invisible?"
 	suppressor_x_offset = 15
 	suppressor_y_offset = 15
 	can_flashlight = TRUE
