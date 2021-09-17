@@ -9,7 +9,7 @@
 /obj/vehicle/ridden/atv/Initialize()
 	. = ..()
 	var/datum/component/riding/D = LoadComponent(/datum/component/riding)
-	D.vehicle_move_delay = 1
+	D.vehicle_move_delay = 0.6
 	D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 4), TEXT_SOUTH = list(0, 4), TEXT_EAST = list(0, 4), TEXT_WEST = list( 0, 4)))
 	D.set_vehicle_dir_layer(SOUTH, ABOVE_MOB_LAYER)
 	D.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
@@ -80,3 +80,9 @@
 	desc = "for when you want to look like even more of a tool than riding a secway."
 	icon_state = "snowcurity"
 	key_type = /obj/item/key/security
+
+/obj/vehicle/ridden/atv/rustyatv
+	name = "Rusty ATV"
+	desc = "An old, rusty, though mostly functional all-terrain vehicle, who'd have the ability to restore something like this locally..?"
+	icon_state = "rustyatv"
+	key_type = /obj/item/key/janitor
