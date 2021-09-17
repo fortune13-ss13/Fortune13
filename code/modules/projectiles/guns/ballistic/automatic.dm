@@ -994,10 +994,12 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "g11"
 	item_state = "g11"
+	slowdown = 1
 	mag_type = /obj/item/ammo_box/magazine/m473
-	fire_delay = 2.5
-	burst_shot_delay = 1.5
-	can_attachments = TRUE
+	burst_size = 5
+	fire_delay = 7
+	burst_shot_delay = 2
+	can_attachments = FALSE
 	can_automatic = TRUE
 	semi_auto = TRUE
 	can_scope = FALSE
