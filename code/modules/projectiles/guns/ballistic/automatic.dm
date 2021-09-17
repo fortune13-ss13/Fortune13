@@ -991,6 +991,7 @@
 /obj/item/gun/ballistic/automatic/g11
 	name = "H&K G11E"
 	desc = "This gun revolutionized squad level support weapon design. The gun fires a caseless cartridge consisting of a block of propellant with a bullet buried inside. The resultant weight and space savings allow it to have a very high magazine capacity."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "g11"
 	item_state = "g11"
 	mag_type = /obj/item/ammo_box/magazine/m473
