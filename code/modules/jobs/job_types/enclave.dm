@@ -269,6 +269,7 @@
 	name = "Support Gunner"
 	suit_store = /obj/item/gun/ballistic/automatic/g11
 	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m473 = 4,
 		/obj/item/gun/ballistic/revolver/ballisticfist = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		)
