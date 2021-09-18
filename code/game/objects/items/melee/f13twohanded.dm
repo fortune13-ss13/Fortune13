@@ -386,7 +386,8 @@
 	desc = "A huge wrench made for changing tracks on tanks and similar heavy duty work."
 	icon_state = "tankwrench"
 	icon_prefix = "tankwrench"
-
+	tool_behaviour = TOOL_WRENCH
+	toolspeed = 0.7
 
 /////////////////////////////////
 // ADVANCED TWO HANDED WEAPONS //
