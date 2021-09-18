@@ -582,7 +582,6 @@
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather
 	//radio = /obj/item/device/radio/headset

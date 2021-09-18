@@ -211,7 +211,6 @@
 	jobtype = /datum/job/raider/enforcer_bandit
 	uniform = /obj/item/clothing/under/f13/merccharm
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/fingerless
 	r_pocket = /obj/item/flashlight
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
@@ -223,6 +222,7 @@
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	suit = /obj/item/clothing/suit/armor/f13/metalarmor
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
+	gloves = /obj/item/clothing/gloves/fingerless
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
@@ -388,7 +388,6 @@
 /datum/outfit/job/raider/enforcer_psycho
 	name =	"Raider Strongman"
 	jobtype =	/datum/job/raider/enforcer_psycho
-	head =	/obj/item/clothing/head/helmet/raider/wastehound
 	uniform =	/obj/item/clothing/under/jabroni
 	suit =	/obj/item/clothing/suit/armor/raider/slammer
 	gloves =	/obj/item/clothing/gloves/f13/handwraps
@@ -583,7 +582,7 @@
 /datum/outfit/loadout/brawler
 	name = "Brawler"
 	head = /obj/item/clothing/head/helmet/raider/berserker
-	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
+	suit = /obj/item/clothing/suit/armor/raider/tribal/badlands
 	r_hand = /obj/item/gun/ballistic/revolver/hobo/knucklegun
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,

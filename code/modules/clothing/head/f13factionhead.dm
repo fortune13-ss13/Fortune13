@@ -57,8 +57,7 @@
 	icon_state = "army_cap"
 	item_state = "army_cap"
 	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
+	dynamic_hair_suffix = "+generic"
 
 
 

@@ -19,16 +19,6 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/suit/armor/f13/raider/rebel
-	name = "rebel raider armor"
-	desc = "(III) Rebel, rebel. Your face is a mess."
-	icon_state = "raider_rebel_icon"
-	item_state = "raider_rebel_armor"
-
-/obj/item/clothing/suit/armor/f13/raider/rebel/Initialize() //HQ parts reinforcement
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
 /obj/item/clothing/suit/armor/f13/raider/sadist
 	name = "sadist raider armor"
 	desc = "(III) A bunch of metal chaps adorned with severed hands at the waist with a leather plate worn on the left shoulder. Very intimidating."
@@ -61,16 +51,6 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/suit/armor/f13/raider/badlands
-	name = "badlands raider armor"
-	desc = "(III) A leather top with a bandolier over it and a straps that cover the arms."
-	icon_state = "badlands"
-	item_state = "badlands"
-
-/obj/item/clothing/suit/armor/f13/raider/badlands/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
 /obj/item/clothing/suit/armor/f13/raider/painspike
 	name = "painspike raider armor"
 	desc = "(III) A particularly unhuggable armor, even by raider standards. Extremely spiky."
@@ -78,16 +58,6 @@
 	item_state = "painspike"
 
 /obj/item/clothing/suit/armor/f13/raider/painspike/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
-/obj/item/clothing/suit/armor/f13/raider/iconoclast
-	name = "iconoclast raider armor"
-	desc = "(III) A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
-	icon_state = "iconoclast"
-	item_state = "iconoclast"
-
-/obj/item/clothing/suit/armor/f13/raider/iconoclast/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
@@ -867,7 +837,7 @@
 
 
 /obj/item/clothing/suit/armor/raider/iconoclast
-	name = "iconoclast raider armor"
+	name = "iconoclast armor"
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	desc = "(IV) A rigid armor set that appears to be fashioned from a radiation suit, or a mining suit."
@@ -881,7 +851,6 @@
 	icon_state = "maxson_battlecoat"
 	item_state = "maxson_battlecoat"
 	armor = list("tier" = 5, "energy" = 25, "bomb" = 20, "bio" = 10, "rad" = 20, "fire" = 40, "acid" = 40)
-
 
 /obj/item/clothing/suit/armor/raider/slammer
 	name = "slammer raider armor"
@@ -927,8 +896,8 @@
 	desc = "(III) Rebel, rebel. Your face is a mess."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "raider_rebel_icon"
-	item_state = "raider_rebel_armor"
+	icon_state = "rebel"
+	item_state = "rebel"
 
 /obj/item/clothing/suit/armor/raider/king
 	name = "renegade duster"
