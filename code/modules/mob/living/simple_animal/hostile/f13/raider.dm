@@ -69,6 +69,7 @@
 	desc = "Want to join the gang but haven't killed enough people yet, sniffs glue in their spare time. You might be their ticket in."
 	icon_state = "skulls"
 	icon_living = "skulls"
+	icon_dead = "skulls_dead"
 	loot = list(/obj/item/melee/onehanded/knife/hunting, /obj/item/crafting/wonderglue)
 
 /mob/living/simple_animal/hostile/raider/skull/Aggro()
@@ -82,11 +83,12 @@
 	desc = "Full member of the gang called the Skulls. Permanent state of aggression due to glue sniffing and head trauma."
 	icon_state = "skullsmember"
 	icon_living = "skullsmember"
+	icon_dead = "skullsmember_dead"
 	maxHealth = 120
 	health = 120
 	ranged = 1
-	retreat_distance = 4
-	minimum_distance = 6
+	retreat_distance = 3
+	minimum_distance = 5
 	loot = list(/obj/item/gun/ballistic/revolver/colt6520, /obj/item/ammo_box/c10mm/improvised)
 	projectiletype = /obj/item/projectile/bullet/c10mm/ap
 	projectilesound = 'sound/f13weapons/10mm_fire_02.ogg'
@@ -97,11 +99,12 @@
 	desc = "Leader of the independent gang called the Skulls. Got a macho image and low impulse control."
 	icon_state = "skullsboss"
 	icon_living = "skullsboss"
+	icon_dead = "skullsboss_dead"
 	maxHealth = 190
 	health = 190
 	ranged = 1
-	retreat_distance = 4
-	minimum_distance = 6
+	retreat_distance = 3
+	minimum_distance = 5
 	extra_projectiles = 3
 	loot = list(/obj/effect/spawner/bundle/f13/greasegun, /obj/item/clothing/mask/cigarette/cigar/havana)
 	projectiletype = /obj/item/projectile/bullet/c45/op

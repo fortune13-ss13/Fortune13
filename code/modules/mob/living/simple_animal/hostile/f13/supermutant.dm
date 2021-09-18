@@ -8,7 +8,7 @@
 	icon_living = "hulk_113_s"
 	icon_dead = "hulk_113_s"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	speak_chance = 10
+	speak_chance = 8
 	speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	speak_emote = list("shouts", "yells")
 	move_to_delay = 5
@@ -52,10 +52,12 @@
 	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 
 
+
+/*
 /mob/living/simple_animal/hostile/supermutant/Aggro()
 	..()
 	summon_backup(15)
-
+*/
 /mob/living/simple_animal/hostile/supermutant/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
@@ -64,6 +66,7 @@
 	else
 		visible_message("<span class='danger'>\The [Proj] is deflected harmlessly by \the [src]'s thick skin!</span>")
 		return FALSE
+
 
 /mob/living/simple_animal/hostile/supermutant/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
@@ -261,7 +264,7 @@
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "mutant_private"
 	icon_living = "mutant_private"
-	icon_dead = "mutant_private_dead"
+	icon_dead = "mutant_private"
 	speak = list("GRRRRRR!", "YAS SHIRR!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 
 /mob/living/simple_animal/hostile/supermutant/nationalguard/engineer
@@ -269,7 +272,7 @@
 	desc = "A ugly mutant in ripped engineer overalls, holding a tank track wrench."
 	icon_state = "mutant_engineer"
 	icon_living = "mutant_engineer"
-	icon_dead = "mutant_engineer_dead"
+	icon_dead = "mutant_engineer"
 	maxHealth = 325
 	health = 325
 	force_threshold = 15
@@ -277,18 +280,19 @@
 	melee_damage_upper = 65
 	attack_sound = "hit_swing"
 	speak = list("ME FIX!", "YAS SIRR!", "NNNNNGH!", "HMPH!", "ARRRRR!")
+	loot = list(/obj/item/twohanded/sledgehammer/tankwrench)
 
 /mob/living/simple_animal/hostile/supermutant/nationalguard/nco
 	name = "super mutant NCO"
 	desc = "A hulking mutant, bit less ragtag than the others, and wielding a beat up old military rifle."
 	icon_state = "mutant_NCO"
 	icon_living = "mutant_NCO"
-	icon_dead = "mutant_NCO_dead"
+	icon_dead = "mutant_NCO"
 	ranged = 1
 	maxHealth = 340
 	health = 340
-	retreat_distance = 4
-	minimum_distance = 6
+	retreat_distance = 2
+	minimum_distance = 5
 	rapid = 2
 	projectiletype = /obj/item/projectile/bullet/a556
 	projectilesound = 'sound/f13weapons/varmint_rifle.ogg'
@@ -307,7 +311,7 @@
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "mutant_elite"
 	icon_living = "mutant_elite"
-	icon_dead = "mutant_elite_dead"
+	icon_dead = "mutant_elite"
 	ranged = 1
 	maxHealth = 400
 	health = 400
@@ -317,8 +321,8 @@
 	melee_damage_upper = 55
 	attack_verb_simple = "smashes"
 	attack_sound = "punch"
-	retreat_distance = 5
-	minimum_distance = 7
+	retreat_distance = 2
+	minimum_distance = 5
 	projectiletype = /obj/item/projectile/beam/laser/wattz2k
 	projectilesound = 'sound/f13weapons/aer9fire.ogg'
 	loot = list(/obj/item/stock_parts/cell/ammo/mfc)
@@ -326,7 +330,13 @@
 	check_friendly_fire = 1
 	speak = list("COMMINIST!", "RELOADINGGG! GRRR!", "NNNNNGH!", "HMPH!", "FLANK-KING")
 
-/mob/living/simple_animal/hostile/supermutant/elite/Aggro()
+/mob/living/simple_animal/hostile/supermutant/nationalguard/elite/Aggro()
 	..()
 	summon_backup(12)
 	alpha = 255
+
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant/death(gibbed)
+	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
+	icon_state = icon_dead
+	anchored = FALSE
+	..()
