@@ -201,34 +201,6 @@
 	dynamic_hair_suffix = ""
 	armor = list("tier" = 1)
 
-/obj/item/clothing/head/helmet/f13/helmet/enclave/intel
-	name = "intel beret"
-	desc = "(III) Dark beret issued to Intelligence Officers of the Enclave."
-	icon_state = "hat_enclave_intel"
-	item_state = "hat_enclave_intel"
-	flags_inv = HIDEEARS|HIDEFACE
-	flags_cover = null
-	armor = list("tier" = 3)
-
-/obj/item/clothing/head/helmet/f13/helmet/enclave/peacekeeper
-	name = "peacekeeper cap"
-	desc = "(IV) Reinforced field cap issued to the soldiers of the Enclave."
-	icon_state = "hat_enclave_peacekeeper"
-	item_state = "hat_enclave_peacekeeper"
-	flags_inv = HIDEEARS|HIDEHAIR
-	strip_delay = 50
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-	armor = list("tier" = 4)
-
-/obj/item/clothing/head/helmet/f13/helmet/enclave/officer
-	name = "enclave officer hat"
-	desc = "(VII) Wheeled hat with a cap made of light-weight alloys beneath."
-	icon_state = "hat_enclave_officer"
-	item_state = "hat_enclave_officer"
-	armor = list("tier" = 7, "energy" = 45, "bomb" = 60, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30) // On par with BoS Knight
-
-
 
 
 // ------------------------------------ LEGACY HELMETS ----------------------------------------- //

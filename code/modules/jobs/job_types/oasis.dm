@@ -290,68 +290,6 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
-/datum/job/oasis/f13prospector
-	title = "Prospector"
-	flag = F13PROSPECTOR
-	department_flag = DEP_OASIS
-	faction = "Town"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "Oasis Government & Police Department"
-	description = "Prospecting is a complicated business, some call it scrounging or looting, but there is more to it than sifting through rubble - few can boast the skills you possess in mining and delving through the ruins of the fallen empire. Not many survive this line of business, and the pay has always been uncertain, but perhaps today you'll strike gold."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13prospector
-
-	access = list(ACCESS_BAR, ACCESS_MINING)
-	minimal_access = list(ACCESS_BAR, ACCESS_MINING)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-/datum/outfit/job/den/f13prospector
-	name = "Prospector"
-	jobtype = /datum/job/oasis/f13prospector
-
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town
-	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast/
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/pickaxe
-	belt = /obj/item/storage/bag/ore
-	shoes = /obj/item/clothing/shoes/workboots
-	backpack_contents = list(
-		/obj/item/mining_scanner,
-		/obj/item/shovel,
-		/obj/item/melee/onehanded/knife/hunting,
-		/obj/item/gun/ballistic/automatic/pistol/n99,
-		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
-		)
-
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/roving, \
-		/obj/item/clothing/under/f13/cowboyt)
-
-/datum/outfit/job/den/f13prospector/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-
-/*--------------------------------------------------------------*/
-
 /datum/job/oasis/f13dendoc
 	title = "Doctor"
 	flag = F13DENDOC

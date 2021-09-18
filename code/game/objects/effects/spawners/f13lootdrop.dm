@@ -240,7 +240,7 @@
 				/obj/effect/spawner/bundle/f13/armor/psycho,
 				/obj/item/clothing/suit/f13/duster,
 				/obj/effect/spawner/bundle/f13/armor/combatduster,
-				/obj/item/clothing/suit/armor/f13/raider/iconoclast
+				/obj/item/clothing/suit/armor/raider/iconoclast
 	)
 
 /obj/effect/spawner/bundle/f13/armor/supafly
@@ -274,7 +274,7 @@
 /obj/effect/spawner/bundle/f13/armor/badlands
 	name = "badlands raider armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/f13/raider/badlands,
+				/obj/item/clothing/suit/armor/raider/tribal/badlands,
 				/obj/item/clothing/head/helmet/f13/fiend
 				)
 

@@ -1305,7 +1305,7 @@
 	/obj/item/clothing/head/helmet/f13/raider/eyebot, /obj/item/clothing/head/helmet/knight/f13/metal/reinforced)
 
 	var/list/low = list(/obj/item/gun/ballistic/automatic/hobo/zipgun,/obj/item/gun/ballistic/revolver/hobo/pepperbox,/obj/item/fishingrod,/obj/item/grenade/homemade/firebomb,
-	/obj/item/clothing/suit/armor/f13/slam, /obj/item/clothing/suit/armor/f13/raider/raidermetal,/obj/item/clothing/head/helmet/f13/raidermetal,
+	/obj/item/clothing/suit/armor/raider/slammer, /obj/item/clothing/suit/armor/f13/raider/raidermetal,/obj/item/clothing/head/helmet/f13/raidermetal,
 	/obj/item/clothing/head/helmet/knight/f13/metal, /obj/item/melee/unarmed/punchdagger)
 
 	if(prob(60)||prob(30)&&HAS_TRAIT(user,TRAIT_MASTER_GUNSMITH))

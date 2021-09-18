@@ -27,7 +27,7 @@
 	faction = list("raider")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
-	del_on_death = 1
+	del_on_death = 0
 	healable = 1
 	ranged = 0
 
@@ -62,77 +62,6 @@
 		src.dropItemToGround(I)
 	. = ..()
 
-/mob/living/simple_animal/hostile/raider/ranged
-	icon_state = "raiderranged"
-	icon_living = "raiderranged"
-	loot = list(/obj/effect/mob_spawn/human/corpse/raiderranged, /obj/effect/spawner/lootdrop/f13/npc_raider)
-	ranged = 1
-	maxHealth = 115
-	health = 115
-	retreat_distance = 4
-	minimum_distance = 6
-	projectiletype = /obj/item/projectile/bullet/c9mm/op
-	projectilesound = 'sound/f13weapons/ninemil.ogg'
-
-
-/mob/living/simple_animal/hostile/raider/ranged/Aggro()
-	..()
-	summon_backup(15)
-	say("HURRY, HURRY, HURRY!!!")
-
-/mob/living/simple_animal/hostile/raider/legendary
-	loot = list(/obj/effect/mob_spawn/human/corpse/raiderranged, /obj/item/melee/onehanded/knife/survival, /obj/item/reagent_containers/food/snacks/kebab/human)
-	name = "Legendary Raider"
-	desc = "Another murderer churned out by the wastes - this one seems a bit faster than the average..."
-	color = "#FFFF00"
-	maxHealth = 450
-	health = 450
-	speed = 1.2
-	obj_damage = 300
-	aggro_vision_range = 15
-
-/mob/living/simple_animal/hostile/raider/ranged/legendary
-	name = "Legendary Raider"
-	desc = "Another murderer churned out by the wastes, wielding a decent pistol and looking very strong"
-	color = "#FFFF00"
-	icon_state = "raiderranged"
-	icon_living = "raiderranged"
-	loot = list(/obj/effect/mob_spawn/human/corpse/raiderranged, /obj/item/gun/ballistic/revolver/m29)
-	ranged = 1
-	maxHealth = 600
-	health = 600
-	retreat_distance = 1
-	minimum_distance = 2
-	projectiletype = /obj/item/projectile/bullet/m44
-	projectilesound = 'sound/f13weapons/44mag.ogg'
-	extra_projectiles = 1
-	aggro_vision_range = 15
-	obj_damage = 300
-
-/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged
-	icon_state = "metal_raider"
-	icon_living = "metal_raider"
-	loot = list(/obj/effect/mob_spawn/human/corpse/raiderrangedsulphite, /obj/item/gun/ballistic/automatic/pistol/m1911/custom)
-	ranged = 1
-	maxHealth = 180
-	health = 180
-	projectiletype = /obj/item/projectile/bullet/c45/op
-	projectilesound = 'sound/weapons/gunshot.ogg'
-
-/mob/living/simple_animal/hostile/raider/ranged/boss
-	name = "Raider Boss"
-	icon_state = "raiderboss"
-	icon_living = "raiderboss"
-	maxHealth = 170
-	health = 170
-	extra_projectiles = 3
-	projectiletype = /obj/item/projectile/bullet/c45/op
-	loot = list(/obj/effect/mob_spawn/human/corpse/raiderboss, /obj/item/gun/ballistic/automatic/smg/greasegun)
-
-/mob/living/simple_animal/hostile/raider/ranged/boss/Aggro()
-	..()
-	summon_backup(15)
-	say("KILL 'EM, FELLAS!")
 
 // Skulls
 /mob/living/simple_animal/hostile/raider/skull
@@ -140,11 +69,11 @@
 	desc = "Want to join the gang but haven't killed enough people yet, sniffs glue in their spare time. You might be their ticket in."
 	icon_state = "skulls"
 	icon_living = "skulls"
-	loot = list(/obj/effect/mob_spawn/human/corpse/skulls, /obj/item/melee/onehanded/knife/hunting, /obj/item/crafting/wonderglue)
+	loot = list(/obj/item/melee/onehanded/knife/hunting, /obj/item/crafting/wonderglue)
 
 /mob/living/simple_animal/hostile/raider/skull/Aggro()
 	..()
-	summon_backup(15)
+	summon_backup(12)
 	say("Gnnh...head hurts..wait...you ain't one of the boys...you done goofed!")
 
 
@@ -153,25 +82,32 @@
 	desc = "Full member of the gang called the Skulls. Permanent state of aggression due to glue sniffing and head trauma."
 	icon_state = "skullsmember"
 	icon_living = "skullsmember"
+	maxHealth = 120
+	health = 120
 	ranged = 1
-	maxHealth = 115
-	health = 115
 	retreat_distance = 4
 	minimum_distance = 6
-	loot = list(/obj/effect/mob_spawn/human/corpse/skullsmember, /obj/item/gun/ballistic/revolver/colt6520, /obj/item/ammo_box/c10mm/improvised)
+	loot = list(/obj/item/gun/ballistic/revolver/colt6520, /obj/item/ammo_box/c10mm/improvised)
 	projectiletype = /obj/item/projectile/bullet/c10mm/ap
 	projectilesound = 'sound/f13weapons/10mm_fire_02.ogg'
 
 
-/mob/living/simple_animal/hostile/raider/ranged/boss/skull
+/mob/living/simple_animal/hostile/raider/skull/boss
 	name = "Esteban the Killer"
 	desc = "Leader of the independent gang called the Skulls. Got a macho image and low impulse control."
 	icon_state = "skullsboss"
 	icon_living = "skullsboss"
-	loot = list(/obj/effect/mob_spawn/human/corpse/skullsboss, /obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/mask/cigarette/cigar/havana)
+	maxHealth = 190
+	health = 190
+	ranged = 1
+	retreat_distance = 4
+	minimum_distance = 6
+	extra_projectiles = 3
+	loot = list(/obj/effect/spawner/bundle/f13/greasegun, /obj/item/clothing/mask/cigarette/cigar/havana)
+	projectiletype = /obj/item/projectile/bullet/c45/op
 	projectilesound = 'sound/weapons/gunshot.ogg'
 
-/mob/living/simple_animal/hostile/raider/ranged/boss/skull/Aggro()
+/mob/living/simple_animal/hostile/raider/skull/boss/Aggro()
 	..()
 	summon_backup(15)
 	say("You DARE disrespect me!? Hijo de puta! Time to die!")
@@ -179,14 +115,14 @@
 // Lurkers
 /mob/living/simple_animal/hostile/raider/lurkers/club/Aggro()
 	..()
-	summon_backup(15)
+	summon_backup(12)
 	say("Duzman! Keeli!")
 
 /mob/living/simple_animal/hostile/raider/thief/lurkerbeggar/Aggro()
 	..()
 	say("Gabba he sheeni!")
 
-/mob/living/simple_animal/hostile/raider/legendary/lurker/Aggro()
+/mob/living/simple_animal/hostile/raider/lurker/chieftain/Aggro()
 	..()
 	summon_backup(15)
 	say("Faga di mutti!!")
@@ -217,9 +153,8 @@
 	melee_damage_lower = 40
 	melee_damage_upper = 40
 	healable = 1
-	loot = list(/obj/item/twohanded/spear/scrapspear)
+	loot = list(/obj/item/reagent_containers/food/snacks/grown/broc)
 	death_sound = 'sound/voice/scream/scream_m1.ogg'
-	del_on_death = 0
 
 /mob/living/simple_animal/hostile/raider/lurkers/club
 	name = "Lurkers clubman"
@@ -236,27 +171,32 @@
 	icon_living = "lurkersshotty"
 	icon_dead = "lurkersshotty_dead"
 	ranged = 1
-	maxHealth = 115
-	health = 115
+	maxHealth = 120
+	health = 120
 	retreat_distance = 3
 	minimum_distance = 4
 	loot = list(/obj/item/ammo_box/shotgun/improvised)
 	projectiletype = /obj/item/projectile/bullet/shotgun_slug
 	projectilesound = 'sound/f13weapons/shotgun.ogg'
 
-/mob/living/simple_animal/hostile/raider/legendary/lurker/shaman
+/mob/living/simple_animal/hostile/raider/lurker/shaman
 	name = "Lurkers shaman"
 	desc = "The Lurkers shamans are old but strong and armed with a looted Ripper."
 	icon_state = "lurkersshaman"
 	icon_living = "lurkersshaman"
 	icon_dead = "lurkersshaman_dead"
-	del_on_death = 0
+	color = "#FFFF00"
+	maxHealth = 340
+	health = 340
+	speed = 1.2
+	obj_damage = 300
+	aggro_vision_range = 14
 	attack_verb_simple = "rends"
 	attack_sound = 'sound/weapons/chainsawhit.ogg'
 	loot = list(/obj/item/melee/powered/ripper, /obj/item/reagent_containers/pill/patch/bitterdrink = 1)
 
 
-/mob/living/simple_animal/hostile/raider/legendary/lurker/chieftain
+/mob/living/simple_animal/hostile/raider/lurker/chieftain
 	name = "Lurkers chieftain"
 	desc = "The Lurkers chieftains are usually very short and stocky for some reason."
 	icon_state = "lurkerschief"
@@ -264,10 +204,12 @@
 	icon_dead = "lurkerschief_dead"
 	projectiletype = /obj/item/projectile/bullet/shotgun_slug
 	projectilesound = 'sound/f13weapons/shotgun.ogg'
-	del_on_death = 0
 	ranged = 1
-	maxHealth = 600
-	health = 600
+	maxHealth = 400
+	health = 400
+	speed = 1
+	obj_damage = 200
+	aggro_vision_range = 14
 	retreat_distance = 1
 	minimum_distance = 2
 	loot = list(/obj/item/gun/ballistic/shotgun/automatic/combat/auto5, /obj/item/clothing/head/f13/hairband)
@@ -319,7 +261,7 @@
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast
+	suit = /obj/item/clothing/suit/armor/raider/iconoclast
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather
 	head = /obj/item/clothing/head/helmet/f13/firefighter
