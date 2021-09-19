@@ -417,7 +417,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/storage/firstaid/regular,
 		/obj/item/clothing/accessory/armband/medblue  \
-		/obj/item/gun/ballistic/automatic/pistol/m1911/compact,
+		/obj/item/gun/ballistic/automatic/pistol/m1911/compact = 1,
 		/obj/item/ammo_box/magazine/m45 = 1,
 		)
 
