@@ -407,6 +407,7 @@ here's a tip, go search DEFINES/access.dm
 	name = "Town Doctor"
 	jobtype = /datum/job/town/doctor
 	uniform = /obj/item/clothing/under/f13/doctor
+	accessory = /obj/item/clothing/accessory/armband/medblue
 	backpack = /obj/item/storage/backpack/satchel/med
 	satchel = /obj/item/storage/backpack/satchel/med
 	shoes = /obj/item/clothing/shoes/f13/brownie
@@ -414,9 +415,8 @@ here's a tip, go search DEFINES/access.dm
 	l_pocket =	/obj/item/storage/bag/money/small/legenlisted
 	r_pocket = /obj/item/flashlight
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/storage/firstaid/regular,
-		/obj/item/clothing/accessory/armband/medblue  \
 		/obj/item/gun/ballistic/automatic/pistol/m1911/compact = 1,
 		/obj/item/ammo_box/magazine/m45 = 1,
 		)
