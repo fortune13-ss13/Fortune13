@@ -100,6 +100,16 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/vault)
+"au" = (
+/obj/structure/fence/handrail{
+	dir = 1;
+	pixel_y = -9
+	},
+/obj/machinery/light,
+/turf/open/floor/plasteel/f13{
+	icon_state = "catwalk"
+	},
+/area/f13/enclave)
 "av" = (
 /obj/structure/wreck/trash/two_barrels,
 /turf/open/floor/wood/f13/oak,
@@ -1037,7 +1047,7 @@
 	desc = "Once a soldier who underwent ghoulification and lost most of his mind. Remembers to not attack comrades, and even salutes sometimes.";
 	faction = list("mercenary");
 	maxHealth = 200;
-	name = "gunny"
+	name = "Gunny"
 	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -1047,10 +1057,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/office/talon)
-"ee" = (
-/mob/living/simple_animal/hostile/raider/ranged,
-/turf/open/floor/wood/f13/old,
-/area/f13/building)
 "eg" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
@@ -1088,7 +1094,7 @@
 /area/f13/village)
 "em" = (
 /obj/machinery/light/floor{
-	bulb_colour = "#b4ddea";
+	bulb_colour = null;
 	pixel_x = 8;
 	pixel_y = 8
 	},
@@ -1913,7 +1919,7 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/raider/legendary/lurker/shaman,
+/mob/living/simple_animal/hostile/raider/lurker/shaman,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "hq" = (
@@ -3562,6 +3568,11 @@
 /obj/machinery/light/floor,
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave/hq)
+"ns" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light/floor,
+/turf/open/floor/carpet/black,
+/area/f13/enclave)
 "ny" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -3876,7 +3887,7 @@
 /obj/effect/decal/fakelattice,
 /obj/effect/mob_spawn/human/corpse/vault/security,
 /obj/structure/spider/cocoon,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/tier10,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/tier8,
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
@@ -4755,10 +4766,6 @@
 "rY" = (
 /turf/closed/mineral/random/low_chance,
 /area/f13/wasteland)
-"rZ" = (
-/obj/structure/legion_extractor,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "sa" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -5627,7 +5634,7 @@
 /area/f13/bunker)
 "vs" = (
 /obj/machinery/light/floor{
-	bulb_colour = "#b4ddea";
+	bulb_colour = null;
 	pixel_x = -8;
 	pixel_y = -8
 	},
@@ -7670,6 +7677,7 @@
 /obj/structure/rack,
 /obj/item/flashlight/flare/torch,
 /obj/item/flashlight/flare/torch,
+/obj/item/gun/ballistic/shotgun/hunting,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "DS" = (
@@ -7723,7 +7731,9 @@
 	name = "emergency shower";
 	pixel_y = 23
 	},
-/obj/machinery/pool/drain,
+/obj/structure/decoration/vent{
+	icon_state = "ventrusty"
+	},
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
@@ -7752,24 +7762,16 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/village)
 "Ej" = (
-/obj/structure/fence/handrail_corner{
-	dir = 4;
-	pixel_x = 11;
-	pixel_y = 14
-	},
-/obj/structure/fence/handrail{
-	pixel_x = -13;
-	pixel_y = 14
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 11;
-	pixel_y = -9
+/obj/structure/simple_door/bunker{
+	desc = "An olive green painted airlock with hydraulic machinery.";
+	name = "security door";
+	req_access_txt = "134"
 	},
 /turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "titanium"
 	},
-/area/space)
+/area/f13/enclave)
 "Ek" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small{
@@ -9072,7 +9074,7 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/raider/legendary/lurker/chieftain,
+/mob/living/simple_animal/hostile/raider/lurker/chieftain,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
 	},
@@ -10151,8 +10153,9 @@
 	},
 /area/f13/bunker)
 "NN" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Enclave Airlock";
+/obj/structure/simple_door/bunker{
+	desc = "An olive green painted airlock with hydraulic machinery.";
+	name = "security door";
 	req_access_txt = "134"
 	},
 /turf/open/floor/plasteel/f13{
@@ -10726,7 +10729,7 @@
 /area/f13/outlaw/indoors)
 "PT" = (
 /obj/machinery/light/floor{
-	bulb_colour = "#b4ddea";
+	bulb_colour = null;
 	pixel_x = 8;
 	pixel_y = -8
 	},
@@ -11177,10 +11180,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
-"RP" = (
-/obj/structure/reagent_dispensers/compostbin,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "RQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
@@ -12216,7 +12215,7 @@
 /area/f13/enclave)
 "VJ" = (
 /obj/machinery/light/floor{
-	bulb_colour = "#b4ddea";
+	bulb_colour = null;
 	pixel_x = -8;
 	pixel_y = 7
 	},
@@ -12963,8 +12962,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "Yr" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Command Room";
+/obj/structure/simple_door/bunker{
+	desc = "An olive green painted airlock with hydraulic machinery.";
+	name = "security door";
 	req_access_txt = "134"
 	},
 /turf/open/floor/plasteel/f13{
@@ -16761,8 +16761,8 @@ ih
 ih
 ih
 Lb
-rZ
-RP
+ea
+ea
 jX
 ea
 ea
@@ -18596,7 +18596,7 @@ OF
 HJ
 Kr
 Kr
-Ej
+GD
 ay
 Km
 LU
@@ -18753,7 +18753,7 @@ Aj
 Wy
 Wy
 YH
-id
+au
 EC
 Wy
 Wy
@@ -19080,7 +19080,7 @@ GD
 Lq
 Wy
 vh
-CB
+ns
 Nz
 qE
 Wy
@@ -19566,7 +19566,7 @@ Vn
 KE
 Wy
 vh
-CB
+ns
 Nz
 wE
 Wy
@@ -20533,7 +20533,7 @@ Vz
 Vz
 Vz
 Vz
-jM
+Ej
 Vz
 Vz
 Vz
@@ -21116,7 +21116,7 @@ cA
 cA
 tJ
 tJ
-ee
+tJ
 UX
 UX
 og

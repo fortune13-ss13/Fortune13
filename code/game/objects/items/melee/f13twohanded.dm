@@ -329,7 +329,7 @@
 	icon_state = "louisville"
 	attack_verb = list("thwacked", "bashed", "slugged", "hit", "bludgeoned", "whacked", "bonked")
 
-/obj/item/twohanded/baseball/golfclub/ComponentInitialize()
+/obj/item/twohanded/baseball/golfclub/louisville/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded = 15, force_wielded = 33, icon_wielded="[icon_prefix]2")
 
@@ -380,6 +380,14 @@
 		W.take_damage(30, BRUTE, "melee", 0)
 		return
 
+// Heavy Wrench			Keywords: Damage 25/45
+/obj/item/twohanded/sledgehammer/tankwrench
+	name = "tank wrench"
+	desc = "A huge wrench made for changing tracks on tanks and similar heavy duty work."
+	icon_state = "tankwrench"
+	icon_prefix = "tankwrench"
+	tool_behaviour = TOOL_WRENCH
+	toolspeed = 0.7
 
 /////////////////////////////////
 // ADVANCED TWO HANDED WEAPONS //
@@ -460,8 +468,8 @@
 
 // Super Sledge			Keywords: Damage 25/60
 /obj/item/twohanded/sledgehammer/supersledge
-	name = "super sledge"
-	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
+	name = "Super Sledge"
+	desc = "The original incarnation of the Super Sledgehammer, produced formerly by the US Military. The head of the hammer contains the kinetic storage device and a pair of faces that transfer the stored energy to the target. It is mounted on a shock damper held in place by springs, designed to reduce the recoil produced by the impact to manageable, non-lethal levels. Additional padding helps make it more comfortable to use, while a fixture at the terminal end of the shaft ensures it won't slip out of the user's hands."
 	icon_state = "hammer-super"
 	icon_prefix = "hammer-super"
 	force = 25

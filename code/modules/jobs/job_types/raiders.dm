@@ -211,7 +211,6 @@
 	jobtype = /datum/job/raider/enforcer_bandit
 	uniform = /obj/item/clothing/under/f13/merccharm
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/fingerless
 	r_pocket = /obj/item/flashlight
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
@@ -223,6 +222,7 @@
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	suit = /obj/item/clothing/suit/armor/f13/metalarmor
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
+	gloves = /obj/item/clothing/gloves/fingerless
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
@@ -234,9 +234,8 @@
 	suit = /obj/item/clothing/suit/armor/raider/king
 	mask = /obj/item/clothing/mask/bandana/skull
 	gloves = /obj/item/clothing/gloves/f13/leather
-	r_hand =	/obj/item/gun/ballistic/revolver/revolver45/gunslinger
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/revolver45/gunslinger = 1,
+		/obj/item/gun/ballistic/revolver/revolver45/gunslinger = 2,
 		/obj/item/ammo_box/a45lcbox = 1,
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
@@ -346,6 +345,7 @@
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
 
 /datum/outfit/loadout/trenchie
 	name = "Trenchie"
@@ -383,12 +383,11 @@
 	..()
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_NOSLIPALL, src)
+	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
 
 /datum/outfit/job/raider/enforcer_psycho
 	name =	"Raider Strongman"
 	jobtype =	/datum/job/raider/enforcer_psycho
-	head =	/obj/item/clothing/head/helmet/raider/wastehound
 	uniform =	/obj/item/clothing/under/jabroni
 	suit =	/obj/item/clothing/suit/armor/raider/slammer
 	gloves =	/obj/item/clothing/gloves/f13/handwraps
@@ -447,6 +446,7 @@
 	..()
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
 
 /datum/outfit/job/raider/psycho
 	name =	"Raider Psycho"
@@ -564,7 +564,7 @@
 	..()
 	ADD_TRAIT(H, TRAIT_BERSERKER, src)
 	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)	
+
 
 /datum/outfit/job/raider/enforcer_tribal
 	name = "Raider Berserker"
@@ -582,7 +582,7 @@
 /datum/outfit/loadout/brawler
 	name = "Brawler"
 	head = /obj/item/clothing/head/helmet/raider/berserker
-	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
+	suit = /obj/item/clothing/suit/armor/raider/tribal/badlands
 	r_hand = /obj/item/gun/ballistic/revolver/hobo/knucklegun
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,
@@ -629,7 +629,8 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/knifegun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/lasmusket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/plasmamusket)
-
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/m29snub)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/rockwell)
 
 /datum/outfit/job/raider/tribal
 	name =	"Raider Tribal"

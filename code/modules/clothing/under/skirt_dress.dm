@@ -49,22 +49,6 @@
 	name = "white sundress"
 	icon_state = "sundress_white"
 
-/obj/item/clothing/under/dress/green
-	name = "green dress"
-	desc = "A tight green dress"
-	icon_state = "dress_green"
-	body_parts_covered = CHEST|GROIN
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
-/obj/item/clothing/under/dress/pink
-	name = "pink dress"
-	desc = "A tight pink dress"
-	icon_state = "dress_pink"
-	body_parts_covered = CHEST|GROIN
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
 /obj/item/clothing/under/dress/blacktango
 	name = "black tango dress"
 	desc = "Filled with Latin fire."
