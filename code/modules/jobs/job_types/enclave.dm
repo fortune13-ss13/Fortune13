@@ -67,7 +67,7 @@
 		/obj/item/grenade/chem_grenade/cleaner = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
-		/obj/item/storage/box/mre/menu3 = 1,
+		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
 /datum/outfit/job/enclave/director/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -121,7 +121,7 @@
 		/obj/item/grenade/chem_grenade/cleaner = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
-		/obj/item/storage/box/mre/menu4 = 1,
+		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
 /datum/outfit/job/enclave/scientist/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -172,7 +172,7 @@
 		/obj/item/clothing/mask/infiltrator = 1,
 		/obj/item/clothing/head/helmet/riot/vaultsec = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/storage/box/mre/menu2 = 1,
+		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
 /datum/outfit/job/enclave/intel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -246,7 +246,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
-		/obj/item/storage/box/mre/menu3 = 1,
+		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
 /datum/outfit/job/enclave/armor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -311,7 +311,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
-		/obj/item/storage/box/mre/menu4 = 1,
+		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
 /datum/outfit/job/enclave/corporal/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -365,7 +365,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
-		/obj/item/storage/box/mre/menu2 = 1,
+		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
 /datum/outfit/loadout/rifleman
