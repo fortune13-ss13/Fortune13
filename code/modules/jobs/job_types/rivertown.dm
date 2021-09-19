@@ -83,6 +83,7 @@ here's a tip, go search DEFINES/access.dm
 	r_pocket = /obj/item/flashlight/lantern
 	belt = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	shoes = /obj/item/clothing/shoes/f13/tan
+	l_hand = /obj/item/gun/ballistic/automatic/smg/greasegun
 	uniform = /obj/item/clothing/under/f13/gentlesuit
 	suit = /obj/item/clothing/suit/hooded/alderman
 	backpack_contents = list(
@@ -416,6 +417,8 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/storage/firstaid/regular,
 		/obj/item/clothing/accessory/armband/medblue  \
+		/obj/item/gun/ballistic/automatic/pistol/m1911/compact,
+		/obj/item/ammo_box/magazine/m45 = 1,
 		)
 
 /datum/outfit/loadout/physician
@@ -487,6 +490,8 @@ here's a tip, go search DEFINES/access.dm
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/gun/ballistic/revolver/widowmaker = 1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911/custom,
+		/obj/item/ammo_box/magazine/m45 = 1,
 		)
 
 /datum/outfit/loadout/richmantender
@@ -498,8 +503,10 @@ here's a tip, go search DEFINES/access.dm
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	neck = /obj/item/clothing/neck/tie/black
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
-		/obj/item/ammo_box/magazine/m22 = 1,
+		/obj/item/ammo_box/shotgun/bean = 1,
+		/obj/item/gun/ballistic/revolver/widowmaker = 1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911/custom,
+		/obj/item/ammo_box/magazine/m45 = 1,
 		)
 
 /datum/outfit/loadout/diner
@@ -707,8 +714,8 @@ here's a tip, go search DEFINES/access.dm
 	flag = F13SHOPKEEPER
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "town Alderman"
-	description = "A skilled craftsman and blacksmith, responsible for repairs to the vital water wheel that drives the generators and river trading barges."
+	supervisors = "Town Alderman"
+	description = "You are a skilled machinist and mechanic, you have a functional quad bike in your garage which you carry the key for & are responsible for repairs to the vital water wheel that drives the generators and river trading barges."
 	outfit = /datum/outfit/job/town/machinist
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
@@ -722,12 +729,11 @@ here's a tip, go search DEFINES/access.dm
 	gloves =	/obj/item/clothing/gloves/f13/blacksmith
 	belt = /obj/item/storage/belt/utility/waster
 	l_pocket =	/obj/item/storage/bag/money/small/den
-	r_pocket =	/obj/item/flashlight/lantern
+	r_pocket =	/obj/item/key/janitor
 	shoes =	/obj/item/clothing/shoes/f13/explorer
-	r_hand =	/obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
-	/obj/item/ammo_box/tube/a357 = 2,
-	/obj/item/hatchet = 1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911/compact,
+		/obj/item/ammo_box/magazine/m45 = 1,
 	)
 
 /datum/outfit/job/town/mechanic/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
