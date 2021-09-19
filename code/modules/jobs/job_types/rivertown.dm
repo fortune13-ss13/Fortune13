@@ -79,7 +79,7 @@ here's a tip, go search DEFINES/access.dm
 	backpack = /obj/item/storage/backpack/satchel/leather
 	satchel = /obj/item/storage/backpack/satchel/leather
 	neck = /obj/item/storage/belt/holster
-	l_pocket = /obj/item/storage/bag/money/small/banker
+	l_pocket =	/obj/item/storage/bag/money/small/legofficers
 	r_pocket = /obj/item/flashlight/lantern
 	belt = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	shoes = /obj/item/clothing/shoes/f13/tan
@@ -91,7 +91,6 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/ammo_box/magazine/m9mmds = 1,
 		/obj/item/pen/fountain/captain = 1,
 		/obj/item/megaphone = 1,
-		/obj/item/storage/bag/money/small/legofficers = 1,
 		)
 
 
@@ -256,7 +255,7 @@ here's a tip, go search DEFINES/access.dm
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	uniform = /obj/item/clothing/under/f13/talonuniform
 	belt = /obj/item/storage/belt/military/NCR_Bandolier/ammobandolier
-	l_pocket = /obj/item/storage/bag/money/small/legofficers = 1,
+	l_pocket =	/obj/item/storage/bag/money/small/legofficers
 	mask = /obj/item/clothing/mask/balaclava/merc
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs/cable/zipties = 1,
@@ -412,7 +411,7 @@ here's a tip, go search DEFINES/access.dm
 	satchel = /obj/item/storage/backpack/satchel/med
 	shoes = /obj/item/clothing/shoes/f13/brownie
 	id = /obj/item/card/id/dendoctor
-	l_pocket = 	/obj/item/storage/bag/money/small/legenlisted
+	l_pocket =	/obj/item/storage/bag/money/small/legenlisted
 	r_pocket = /obj/item/flashlight
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
@@ -728,7 +727,7 @@ here's a tip, go search DEFINES/access.dm
 	suit =	/obj/item/clothing/suit/armor/f13/utilityvest
 	gloves =	/obj/item/clothing/gloves/f13/blacksmith
 	belt = /obj/item/storage/belt/utility/waster
-	l_pocket =	/obj/item/storage/bag/money/small/den
+	l_pocket =	/obj/item/storage/bag/money/small/legenlisted
 	r_pocket =	/obj/item/key/janitor
 	shoes =	/obj/item/clothing/shoes/f13/explorer
 	backpack_contents = list(
