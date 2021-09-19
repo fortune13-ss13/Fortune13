@@ -99,6 +99,7 @@
 	name = "private Gutsy"
 	icon_state = "pvtgutsy"
 	icon_living = "pvtgutsy"
+	icon_dead = "gib6"
 	aggro_vision_range = 15
 	faction = list("hostile", "supermutant")
 	obj_damage = 300
@@ -477,12 +478,13 @@
 /mob/living/simple_animal/hostile/handy/assaultron
 	name = "assaultron"
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis."
+	icon = 'icons/fallout/mobs/robots/robot_general.dmi'
 	icon_state = "assaultron"
 	icon_living = "assaultron"
+	icon_dead = "gib6"
 	gender = FEMALE //Pffffffffffffffffffffff
-	icon_dead = "gib7"
-	health = 450
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
+	health = 450
 	maxHealth = 450
 	speed = 0
 	melee_damage_lower = 55
