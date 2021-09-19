@@ -329,7 +329,7 @@
 	icon_state = "louisville"
 	attack_verb = list("thwacked", "bashed", "slugged", "hit", "bludgeoned", "whacked", "bonked")
 
-/obj/item/twohanded/baseball/golfclub/ComponentInitialize()
+/obj/item/twohanded/baseball/golfclub/louisville/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded = 15, force_wielded = 33, icon_wielded="[icon_prefix]2")
 
@@ -380,6 +380,14 @@
 		W.take_damage(30, BRUTE, "melee", 0)
 		return
 
+// Heavy Wrench			Keywords: Damage 25/45
+/obj/item/twohanded/sledgehammer/tankwrench
+	name = "tank wrench"
+	desc = "A huge wrench made for changing tracks on tanks and similar heavy duty work."
+	icon_state = "tankwrench"
+	icon_prefix = "tankwrench"
+	tool_behaviour = TOOL_WRENCH
+	toolspeed = 0.7
 
 /////////////////////////////////
 // ADVANCED TWO HANDED WEAPONS //

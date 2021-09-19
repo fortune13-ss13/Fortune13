@@ -52,6 +52,7 @@
 	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)	
 	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	icon_state = "improvshotbag"
+	w_class = WEIGHT_CLASS_SMALL
 
 
 //.22 LR
@@ -119,6 +120,7 @@
 	max_ammo = 8
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)	
+	w_class = WEIGHT_CLASS_SMALL
 
 
 //10mm
@@ -154,6 +156,7 @@
 	max_ammo = 8
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)	
+	w_class = WEIGHT_CLASS_SMALL
 
 //.357 Magnum
 /obj/item/ammo_box/a357box
@@ -217,7 +220,7 @@
 	max_ammo = 8
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)	
-
+	w_class = WEIGHT_CLASS_SMALL
 
 // .45 ACP
 /obj/item/ammo_box/c45
@@ -247,7 +250,7 @@
 	max_ammo = 8
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)	
-
+	w_class = WEIGHT_CLASS_SMALL
 
 //.45-70 Gov't
 /obj/item/ammo_box/c4570box
@@ -311,7 +314,7 @@
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000, /datum/material/blackpowder = 500)	
 	icon_state = "improvshotbag"
-
+	w_class = WEIGHT_CLASS_SMALL
 
 //7.62x51, .308 Winchester
 /obj/item/ammo_box/a308box
