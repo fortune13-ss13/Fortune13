@@ -153,14 +153,12 @@
 	max_qty = BANKER_MAX / CASH_CAP
 
 /obj/item/stack/f13Cash/denarius
-	name = "Denarius"
+	name = "Rivertown Fish Chits"
 	latin = 1
-	singular_name = "Denari" // -us or -i
+	singular_name = "Rivertown Fish Chit" // -us or -i
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "denarius"
-	flavor_desc =	"The inscriptions are in Latin,\n\
-		'Caesar Dictator' on the front and\n\
-		'Magnum Chasma' on the back."
+	flavor_desc =	"The local currency of rivertown, made with some obscure mix of cheap metals."
 	value = CASH_DEN * CASH_CAP
 	merge_type = /obj/item/stack/f13Cash/denarius
 
@@ -192,14 +190,12 @@
 	max_qty = HIGH_MAX / CASH_DEN
 
 /obj/item/stack/f13Cash/aureus
-	name = "Aureus"
+	name = "Golden Fish Chits"
 	latin = 1
-	singular_name = "Aure"// -us or -i
+	singular_name = "Golden Fish Chit"// -us or -i
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "aureus"
-	flavor_desc = 	"The inscriptions are in Latin,\n\
-					'Aeternit Imperi' on the front and\n\
-					'Pax Per Bellum' on the back."
+	flavor_desc = 	"The higher denomination of local rivertown currency, the Golden Chit, each is worth 100 caps!"
 	value = CASH_AUR * CASH_CAP
 	merge_type = /obj/item/stack/f13Cash/aureus
 
@@ -219,9 +215,9 @@
 	max_qty = 5 //uses flat values because aurei are worth so much
 
 /obj/item/stack/f13Cash/ncr
-	name = "NCR Dollar"
-	singular_name = "NCR Dollar"  /* same for denarius, we can pretend the legion can't latin properly */
-	flavor_desc = "Paper money used by the NCR."
+	name = "Pre-war Money"
+	singular_name = "Pre-war Dollar"
+	flavor_desc = "Re-minted paper money inserted into the local economy by the Enclave, it holds little value."
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "ncr" /* 10 points to whoever writes flavour text for each bill */
 	value = CASH_NCR * CASH_CAP
