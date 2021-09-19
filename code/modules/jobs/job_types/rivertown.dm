@@ -91,6 +91,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/ammo_box/magazine/m9mmds = 1,
 		/obj/item/pen/fountain/captain = 1,
 		/obj/item/megaphone = 1,
+		/obj/item/storage/bag/money/small/legofficers = 1,
 		)
 
 
@@ -135,7 +136,7 @@ here's a tip, go search DEFINES/access.dm
 	r_pocket = /obj/item/flashlight/lantern
 	l_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
 	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/ammo_box/shotgun/slug = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		)
@@ -255,7 +256,7 @@ here's a tip, go search DEFINES/access.dm
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	uniform = /obj/item/clothing/under/f13/talonuniform
 	belt = /obj/item/storage/belt/military/NCR_Bandolier/ammobandolier
-	l_pocket = /obj/item/storage/bag/money/small/den
+	l_pocket = /obj/item/storage/bag/money/small/legofficers = 1,
 	mask = /obj/item/clothing/mask/balaclava/merc
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs/cable/zipties = 1,
@@ -343,7 +344,7 @@ here's a tip, go search DEFINES/access.dm
 	belt = /obj/item/storage/belt/military/NCR_Bandolier/ammobandolier
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs/cable/zipties = 1,
-		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		)
 
@@ -411,7 +412,7 @@ here's a tip, go search DEFINES/access.dm
 	satchel = /obj/item/storage/backpack/satchel/med
 	shoes = /obj/item/clothing/shoes/f13/brownie
 	id = /obj/item/card/id/dendoctor
-	l_pocket = /obj/item/storage/bag/money/small/settler
+	l_pocket = 	/obj/item/storage/bag/money/small/legenlisted
 	r_pocket = /obj/item/flashlight
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
@@ -476,7 +477,7 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/bartenderalt
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/storage/bag/money/small/legenlisted = 1,
 		)
 
 /datum/outfit/loadout/frontier
@@ -549,9 +550,8 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = null
 	r_pocket = /obj/item/flashlight
-//	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/storage/bag/money/small/legenlisted = 1,
 		)
 
 /datum/outfit/loadout/farmer
@@ -654,7 +654,7 @@ here's a tip, go search DEFINES/access.dm
 	r_pocket = /obj/item/flashlight/flare
 //	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
-		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/storage/bag/money/small/legenlisted = 1,
 		)
 
 /datum/outfit/loadout/properlady
