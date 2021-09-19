@@ -731,7 +731,7 @@ here's a tip, go search DEFINES/access.dm
 	r_pocket =	/obj/item/key/janitor
 	shoes =	/obj/item/clothing/shoes/f13/explorer
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/m1911/compact,
+		/obj/item/gun/ballistic/automatic/pistol/m1911/compact = 1,
 		/obj/item/ammo_box/magazine/m45 = 1,
 	)
 
