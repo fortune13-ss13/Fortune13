@@ -254,7 +254,7 @@
 
 /obj/machinery/door/proc/unelectrify()
 	secondsElectrified = MACHINE_NOT_ELECTRIFIED
-
+/* temp
 /obj/machinery/door/update_icon_state()
 	if(density)
 		icon_state = "door1"
@@ -276,7 +276,23 @@
 		if("deny")
 			if(!stat)
 				flick("door_deny", src)
+*/
 
+/obj/machinery/door/proc/do_animate(animation)
+	switch(animation)
+		if("opening")
+			if(panel_open)
+				flick("[icon_state]open", src)
+			else
+				flick("[icon_state]opening", src)
+		if("closing")
+			if(panel_open)
+				flick("[icon_state]closing", src)
+			else
+				flick("[icon_state]closing", src)
+		if("deny")
+			if(!stat)
+				flick("[icon_state]", src)
 
 /obj/machinery/door/proc/open()
 	if(!density)

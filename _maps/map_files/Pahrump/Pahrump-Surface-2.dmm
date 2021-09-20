@@ -705,7 +705,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "aHh" = (
-/obj/structure/closet/crate,
+/obj/machinery/autolathe/ammo,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "aHq" = (
@@ -1986,8 +1986,8 @@
 /turf/open/floor/carpet/red,
 /area/f13/office)
 "bUt" = (
-/obj/machinery/workbench/advanced,
-/obj/effect/spawner/lootdrop/f13/blueprintVHigh,
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "bUB" = (
@@ -2075,9 +2075,8 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "cbC" = (
-/obj/item/book/granter/crafting_recipe/gunsmith_one,
-/obj/item/book/granter/crafting_recipe/gunsmith_two,
-/obj/item/book/granter/crafting_recipe/gunsmith_three,
+/obj/machinery/workbench/advanced,
+/obj/effect/spawner/lootdrop/f13/blueprintVHigh,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "ccc" = (
@@ -2338,7 +2337,7 @@
 	},
 /area/f13/wasteland)
 "cpZ" = (
-/obj/machinery/autolathe/ammo,
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "cqh" = (
@@ -2724,8 +2723,9 @@
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "cMK" = (
-/obj/structure/table/reinforced,
-/obj/machinery/cell_charger,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/gunsmith_three,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "cMP" = (
@@ -3206,7 +3206,7 @@
 /turf/open/floor/wood/wood_diagonal,
 /area/f13/building)
 "dnr" = (
-/obj/structure/table/reinforced,
+/obj/machinery/autolathe,
 /obj/machinery/light/small/orange{
 	dir = 1;
 	pixel_y = 6
@@ -3809,13 +3809,13 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/office)
 "dOz" = (
-/obj/structure/railing{
-	dir = 6;
-	pixel_x = 8;
-	pixel_y = -8
+/obj/machinery/button/door/simple{
+	id = "shopkeeper1";
+	name = "workshop shutters";
+	pixel_x = 27
 	},
-/turf/open/transparent/openspace/outside,
-/area/space)
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/city/town)
 "dOG" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -3916,16 +3916,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
-"dTC" = (
-/obj/structure/simple_door/metal/iron{
-	req_access_txt = "34"
-	},
-/obj/machinery/door/poddoor/shutters{
-	id = "shopkeeper1";
-	name = "interior shutters"
-	},
-/turf/open/floor/wood/f13/maple,
-/area/f13/city/town)
 "dTJ" = (
 /obj/item/shard,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -4837,7 +4827,9 @@
 /area/f13/office/talon)
 "ePD" = (
 /obj/structure/simple_door/brokenglass,
-/turf/open/space/basic,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
 /area/f13/subway/ghouls)
 "ePL" = (
 /obj/structure/chair/stool{
@@ -7437,13 +7429,10 @@
 	},
 /area/f13/bunker)
 "hkY" = (
-/obj/structure/railing{
-	dir = 8;
-	pixel_x = -8;
-	pixel_y = -8
-	},
-/turf/open/transparent/openspace/outside,
-/area/space)
+/obj/structure/chair/comfy/brown,
+/obj/effect/landmark/start/f13/town/machinist,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/city/town)
 "hlf" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/f13/carpet{
@@ -8204,17 +8193,10 @@
 	},
 /area/f13/wasteland)
 "hYF" = (
-/obj/structure/railing{
-	dir = 10;
-	pixel_x = -8;
-	pixel_y = -8
-	},
-/obj/structure/railing{
-	pixel_x = 8;
-	pixel_y = -8
-	},
-/turf/open/transparent/openspace/outside,
-/area/space)
+/obj/structure/rack/steel,
+/obj/effect/spawner/lootdrop/f13/attachments,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/city/town)
 "hZt" = (
 /obj/item/newspaper,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -8353,13 +8335,14 @@
 	},
 /area/f13/wasteland)
 "igl" = (
-/obj/structure/railing{
-	dir = 4;
-	pixel_x = 8;
-	pixel_y = -8
+/obj/structure/rack/steel,
+/obj/effect/spawner/lootdrop/f13/advcrafting,
+/obj/effect/spawner/lootdrop/f13/advcrafting,
+/obj/machinery/light/small/orange{
+	pixel_y = -5
 	},
-/turf/open/transparent/openspace/outside,
-/area/space)
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/city/town)
 "igB" = (
 /obj/structure/fence{
 	dir = 4
@@ -8633,11 +8616,12 @@
 	},
 /area/f13/outlaw/indoors)
 "ivW" = (
-/obj/structure/rack/steel,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/obj/machinery/door/unpowered/padlockirondoor,
+/obj/machinery/door/poddoor/shutters{
+	id = "shopkeeper1";
+	name = "interior shutters"
+	},
+/turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "ivY" = (
 /obj/effect/turf_decal/stripes/line{
@@ -8657,12 +8641,11 @@
 /turf/open/indestructible/ground/outside/savannah/edgesnew,
 /area/f13/wasteland)
 "ixp" = (
-/obj/machinery/button/door/simple{
-	id = "shopkeeper1";
-	name = "workshop shutters";
-	pixel_x = 27
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/obj/structure/closet/crate/medical,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/healing_kits,
+/turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "iyb" = (
 /obj/structure/rack,
@@ -8875,6 +8858,13 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/wasteland)
+"iIU" = (
+/obj/machinery/door/unpowered/padlockwooddoor/clinic/interior,
+/turf/open/floor/f13{
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "sepia"
+	},
+/area/f13/clinic/river)
 "iKn" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9285,10 +9275,12 @@
 /turf/open/floor/wood/f13/carpet,
 /area/f13/subway/ghouls)
 "jkA" = (
-/obj/machinery/light/small/orange{
-	pixel_x = 18;
-	pixel_y = -5
-	},
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/sandblock/fifty,
+/obj/item/stack/sheet/plasteel/five,
+/obj/item/stack/sheet/plastic/five,
 /turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "jkE" = (
@@ -9456,7 +9448,7 @@
 	id = "Doctors_counter_windows";
 	name = "interior shutters"
 	},
-/obj/structure/simple_door/house,
+/obj/machinery/door/unpowered/padlockwooddoor/clinic,
 /turf/open/floor/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "sepia"
@@ -9900,7 +9892,9 @@
 /area/f13/building)
 "jOk" = (
 /obj/structure/rack/steel,
-/obj/effect/spawner/lootdrop/f13/attachments,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "jPq" = (
@@ -10043,13 +10037,8 @@
 	},
 /area/f13/wasteland)
 "jVT" = (
-/obj/structure/rack/steel,
-/obj/effect/spawner/lootdrop/f13/armor/tier2,
-/obj/effect/spawner/lootdrop/f13/armor/random_high,
-/obj/machinery/light/small/orange{
-	pixel_y = -5
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/obj/machinery/trading_machine,
+/turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "jWp" = (
 /obj/structure/fence/corner{
@@ -10520,9 +10509,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/raiders/camp)
 "kAB" = (
-/obj/structure/chair/comfy/brown,
-/obj/effect/landmark/start/f13/town/machinist,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/obj/structure/table/reinforced,
+/obj/structure/barricade/bars,
+/obj/machinery/door/poddoor/shutters{
+	id = "tradepost";
+	name = "tradepost shutters"
+	},
+/turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "kAV" = (
 /turf/closed/wall/f13/wood,
@@ -10696,8 +10689,8 @@
 /area/f13/subway/ghouls)
 "kJG" = (
 /obj/structure/rack/steel,
-/obj/effect/spawner/lootdrop/f13/advcrafting,
-/obj/effect/spawner/lootdrop/f13/advcrafting,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
+/obj/effect/spawner/lootdrop/f13/armor/random_high,
 /obj/machinery/light/small/orange{
 	pixel_y = -5
 	},
@@ -11352,10 +11345,11 @@
 /turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "lnX" = (
-/obj/structure/closet/crate/medical,
-/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/obj/effect/spawner/lootdrop/healing_kits,
+/obj/machinery/button/door/simple{
+	id = "tradepost";
+	name = "tradepost shutters";
+	pixel_x = -27
+	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "lot" = (
@@ -14429,8 +14423,12 @@
 	},
 /area/f13/wasteland)
 "oJV" = (
-/obj/machinery/trading_machine,
-/turf/open/floor/wood/f13/maple,
+/obj/machinery/button/door/simple{
+	id = "Machinist";
+	name = "machineshop gate";
+	pixel_x = -27
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "oKd" = (
 /obj/structure/wreck/trash/three_barrels,
@@ -15528,12 +15526,7 @@
 /turf/open/floor/carpet/red,
 /area/f13/forest/animals)
 "pVw" = (
-/obj/structure/table/reinforced,
-/obj/structure/barricade/bars,
-/obj/machinery/door/poddoor/shutters{
-	id = "shopkeeper1";
-	name = "interior shutters"
-	},
+/obj/vehicle/ridden/atv/rustyatv,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "pVQ" = (
@@ -15990,12 +15983,12 @@
 /turf/open/floor/wood/f13/stage_br/outdoors,
 /area/f13/subway/ghouls)
 "qtV" = (
+/obj/structure/table/reinforced,
 /obj/machinery/light/small/orange{
 	dir = 1;
-	pixel_x = 17;
 	pixel_y = 6
 	},
-/turf/open/floor/wood/f13/maple,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "quy" = (
 /obj/structure/fence/wooden{
@@ -16120,11 +16113,7 @@
 /turf/open/floor/mineral/uranium/dusty,
 /area/f13/radiation)
 "qzc" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	name = "Mayor's Office";
-	req_one_access_txt = "62"
-	},
+/obj/machinery/door/unpowered/padlockwooddoor/alderman/interior,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city/town)
 "qzt" = (
@@ -17372,13 +17361,11 @@
 	},
 /area/f13/subway/ghouls)
 "rUc" = (
-/obj/structure/table/reinforced,
-/obj/structure/barricade/bars,
-/obj/machinery/door/poddoor/shutters{
-	id = "tradepost";
-	name = "tradepost shutters"
+/obj/machinery/door/poddoor/gate{
+	id = "Machinist";
+	name = "Machineshop Gate"
 	},
-/turf/open/floor/wood/f13/maple,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "rUz" = (
 /obj/structure/junk/small/table,
@@ -18503,12 +18490,13 @@
 /turf/open/floor/plasteel/grimy,
 /area/f13/forest/animals)
 "sZc" = (
-/obj/machinery/button/door/simple{
-	id = "tradepost";
-	name = "tradepost shutters";
-	pixel_x = -27
+/obj/structure/table/reinforced,
+/obj/structure/barricade/bars,
+/obj/machinery/door/poddoor/shutters{
+	id = "shopkeeper1";
+	name = "interior shutters"
 	},
-/turf/open/floor/wood/f13/maple,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "sZl" = (
 /obj/machinery/light/small/broken{
@@ -18876,13 +18864,12 @@
 	},
 /area/f13/forest/animals)
 "tqh" = (
-/obj/structure/rack,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/sandblock/fifty,
-/obj/item/stack/sheet/plasteel/five,
-/obj/item/stack/sheet/plastic/five,
-/turf/open/floor/wood/f13/maple,
+/obj/structure/decoration/sign{
+	desc = "A sign";
+	icon_state = "memorial";
+	name = "Trading Post"
+	},
+/turf/closed/wall/mineral/brick,
 /area/f13/city/town)
 "tqx" = (
 /obj/structure/decoration/sign{
@@ -20663,12 +20650,7 @@
 /turf/open/floor/carpet/arcade,
 /area/f13/forest/animals)
 "vih" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	icon_state = "wood";
-	name = "Mayor's Office";
-	req_one_access_txt = "62"
-	},
+/obj/machinery/door/unpowered/padlockwooddoor/alderman,
 /turf/open/floor/wood/f13/maple{
 	icon_state = "maplefloor3"
 	},
@@ -21914,15 +21896,6 @@
 	dir = 4
 	},
 /area/f13/forest/animals)
-"wAs" = (
-/obj/structure/decoration/sign{
-	desc = "A sign";
-	icon_state = "memorial";
-	name = "Trading Post";
-	pixel_y = 31
-	},
-/turf/open/floor/wood/f13/oak/outdoors,
-/area/f13/wasteland)
 "wAy" = (
 /obj/item/reagent_containers/food/condiment/soysauce,
 /obj/structure/rack/steel{
@@ -22161,14 +22134,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/subway/ghouls)
-"wOb" = (
-/obj/machinery/autolathe,
-/obj/machinery/light/small/orange{
-	dir = 1;
-	pixel_y = 6
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/city/town)
 "wOI" = (
 /obj/structure/chair/wood/worn{
 	dir = 8
@@ -23395,11 +23360,7 @@
 /turf/open/transparent/openspace/outside,
 /area/space)
 "yhH" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	name = "Mayor's Office";
-	req_one_access_txt = "62"
-	},
+/obj/machinery/door/unpowered/padlockwooddoor/alderman/interior,
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
 "yhM" = (
@@ -41374,7 +41335,7 @@ oXT
 oXT
 wUZ
 wIU
-qBE
+iIU
 uPu
 uPu
 wIU
@@ -42833,14 +42794,14 @@ oXT
 wUZ
 aMr
 aGm
-wOb
-cbC
-ivW
-jVT
+prF
+prF
 aGm
+prF
+prF
+prF
 oJV
-oJV
-aGm
+rUc
 mZQ
 mZQ
 mZQ
@@ -42995,15 +42956,15 @@ oXT
 wUZ
 aMr
 aGm
-cpZ
 prF
 prF
+heN
 prF
 pVw
-wTY
-gWP
-aGm
-wAs
+prF
+prF
+prF
+mZQ
 mZQ
 mZQ
 aMr
@@ -43157,14 +43118,14 @@ oXT
 wUZ
 aMr
 aGm
-cMK
 prF
 prF
-kAB
-pVw
-wTY
-wTY
-voC
+aGm
+prF
+prF
+prF
+prF
+prF
 mZQ
 mZQ
 mZQ
@@ -43319,14 +43280,14 @@ oXT
 wUZ
 aMr
 aGm
-bUt
 prF
 prF
-prF
-pVw
-wTY
-wTY
-voC
+aGm
+aGm
+aGm
+aGm
+aGm
+aGm
 mZQ
 mZQ
 mZQ
@@ -43482,12 +43443,12 @@ wUZ
 aMr
 aGm
 dnr
-prF
+cMK
 jOk
 kJG
 aGm
-wTY
-gWP
+jVT
+jVT
 aGm
 mZQ
 mZQ
@@ -43645,12 +43606,12 @@ aMr
 aGm
 aHh
 prF
-ixp
 prF
-dTC
+prF
+sZc
 wTY
-wTY
-aGm
+gWP
+tqh
 mZQ
 mZQ
 mZQ
@@ -43805,14 +43766,14 @@ oXT
 wUZ
 aMr
 aGm
-aGm
-heN
-aGm
-aGm
-aGm
-rUc
-rUc
-aGm
+bUt
+prF
+prF
+hkY
+sZc
+wTY
+wTY
+voC
 mZQ
 mZQ
 mZQ
@@ -43967,14 +43928,14 @@ oXT
 xaa
 jWL
 aGm
-wTY
-wTY
-wTY
-wTY
+cbC
+prF
+prF
+prF
 sZc
-ndL
-qeb
-aGm
+wTY
+wTY
+voC
 mZQ
 mZQ
 mZQ
@@ -44130,12 +44091,12 @@ oXT
 dBP
 aGm
 qtV
-hkY
+prF
 hYF
+igl
+aGm
 wTY
-wTY
-wTY
-jkA
+gWP
 aGm
 mZQ
 mZQ
@@ -44291,11 +44252,11 @@ oXT
 oXT
 wUZ
 aGm
-wTY
-igl
+cpZ
+prF
 dOz
-wTY
-wTY
+prF
+ivW
 wTY
 wTY
 aGm
@@ -44453,13 +44414,13 @@ oXT
 oXT
 wUZ
 aGm
-wTY
-wTY
-wTY
-wTY
-wTY
-wTY
-wTY
+aGm
+aGm
+aGm
+heN
+aGm
+kAB
+kAB
 aGm
 mZQ
 mZQ
@@ -44613,15 +44574,15 @@ oXT
 oXT
 oXT
 oXT
-xaa
+wUZ
 aGm
-aGm
-aGm
-aGm
-aGm
+wTY
+oXT
+oXT
+wTY
 lnX
-wTY
-wTY
+ndL
+qeb
 aGm
 mZQ
 mZQ
@@ -44775,13 +44736,13 @@ oXT
 oXT
 oXT
 oXT
-oXT
-oXT
-oXT
-oXT
-dBP
+xaa
+qpQ
+qpQ
+qpQ
+qpQ
 aGm
-tqh
+wTY
 wTY
 wTY
 aGm
@@ -44941,7 +44902,7 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+dBP
 aGm
 rLp
 wTY
@@ -45105,7 +45066,7 @@ oXT
 oXT
 rVH
 aGm
-aGm
+ixp
 wTY
 wTY
 aGm
@@ -45265,9 +45226,9 @@ oXT
 oXT
 oXT
 oXT
-oXT
-dBP
+wUZ
 aGm
+jkA
 wTY
 wTY
 aGm
@@ -45427,9 +45388,9 @@ oXT
 oXT
 oXT
 oXT
-oXT
 wUZ
 aGm
+wTY
 wTY
 wTY
 qzc
@@ -45589,9 +45550,9 @@ oXT
 oXT
 oXT
 oXT
-oXT
 wUZ
 aGm
+wTY
 wTY
 wTY
 wdg
@@ -45751,8 +45712,8 @@ oXT
 oXT
 oXT
 oXT
-oXT
 wUZ
+aGm
 aGm
 wTY
 wTY

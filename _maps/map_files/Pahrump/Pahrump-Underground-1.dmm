@@ -917,7 +917,7 @@
 /area/f13/bunker)
 "dI" = (
 /obj/structure/railing{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/wood/wood_large,
 /area/f13/city/town)
@@ -3653,8 +3653,8 @@
 	},
 /area/f13/vault)
 "nQ" = (
-/obj/structure/stairs/north,
-/turf/open/floor/wood/wood_large,
+/obj/structure/stairs/south,
+/turf/closed/wall/mineral/brick,
 /area/f13/city/town)
 "nT" = (
 /obj/structure/sign/departments/security,
@@ -5482,6 +5482,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
+"uO" = (
+/obj/machinery/door/unpowered/padlockirondoor,
+/turf/open/floor/wood/wood_large,
+/area/f13/city/town)
 "uP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -5783,9 +5787,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "wc" = (
-/obj/structure/simple_door/metal/iron{
-	req_access_txt = "34"
-	},
+/obj/machinery/door/unpowered/padlockirondoor,
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
 "we" = (
@@ -6310,9 +6312,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "yl" = (
-/obj/structure/simple_door/metal/iron{
-	req_access_txt = "34"
-	},
+/obj/machinery/door/unpowered/padlockwooddoor/alderman,
 /turf/open/floor/wood/wood_large,
 /area/f13/city/town)
 "yn" = (
@@ -7289,13 +7289,6 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /turf/open/floor/carpet,
 /area/f13/building)
-"Cg" = (
-/obj/structure/stairs/north{
-	climb_time = 0;
-	level = 1
-	},
-/turf/open/floor/wood/wood_large,
-/area/f13/city/town)
 "Ck" = (
 /turf/open/floor/plasteel/vault{
 	dir = 5
@@ -8890,12 +8883,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"IO" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/floor/wood/wood_large,
-/area/f13/city/town)
 "IP" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -33921,8 +33908,8 @@ Hy
 Hy
 Hy
 KO
-IO
-IO
+XN
+XN
 XN
 XN
 XN
@@ -34083,8 +34070,8 @@ ih
 Hy
 Hy
 KO
-Cg
-nQ
+XN
+XN
 XN
 XN
 XN
@@ -34243,10 +34230,10 @@ ih
 ih
 ih
 Hy
-Hy
 KO
-Cg
-nQ
+KO
+XN
+XN
 XN
 XN
 XN
@@ -34405,8 +34392,8 @@ ih
 ih
 ih
 Hy
-Hy
 KO
+XN
 dI
 dI
 XN
@@ -34566,12 +34553,12 @@ ih
 ih
 ih
 ih
-Hy
-Hy
+ih
 KO
-KO
-KO
-KO
+XN
+nQ
+nQ
+XN
 XN
 XN
 XN
@@ -34729,10 +34716,10 @@ ih
 ih
 ih
 ih
-Hy
-Hy
-Hy
-Hy
+KO
+KO
+KO
+KO
 KO
 XN
 XN
@@ -34893,10 +34880,10 @@ ih
 ih
 ih
 ih
-Hy
-Hy
+ih
+ih
 KO
-XN
+Gr
 XN
 XN
 XN
@@ -35055,8 +35042,8 @@ ih
 ih
 ih
 ih
-Hy
-KO
+ih
+ih
 KO
 XN
 XN
@@ -35217,9 +35204,9 @@ ih
 ih
 ih
 ih
-Hy
+ih
+ih
 KO
-XN
 XN
 XN
 XN
@@ -35379,17 +35366,17 @@ ih
 ih
 ih
 ih
-Hy
-KO
-XN
-XN
+ih
+ih
 KO
 KO
 KO
 KO
 KO
 KO
-yl
+KO
+KO
+uO
 KO
 KO
 KO
@@ -35541,10 +35528,10 @@ ih
 ih
 ih
 ih
-Hy
-KO
-XN
-XN
+ih
+ih
+ih
+ih
 KO
 aa
 UD
@@ -35703,10 +35690,10 @@ ih
 ih
 ih
 ih
-Hy
-KO
-Gr
-XN
+ih
+ih
+ih
+ih
 KO
 aS
 Cb
@@ -35865,10 +35852,10 @@ ih
 ih
 ih
 ih
-Hy
-KO
-XN
-XN
+ih
+ih
+ih
+ih
 KO
 aS
 Zu
@@ -36027,10 +36014,10 @@ ih
 ih
 ih
 ih
-Hy
-KO
-KO
-KO
+ih
+ih
+ih
+ih
 KO
 aS
 Zu
@@ -36189,11 +36176,11 @@ ih
 ih
 ih
 ih
-Hy
-Hy
-Hy
-Hy
-Hy
+ih
+ih
+ih
+ih
+ih
 vg
 Zu
 ih
