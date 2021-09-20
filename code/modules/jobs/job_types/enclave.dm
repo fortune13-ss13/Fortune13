@@ -149,10 +149,10 @@
 	supervisors = "The United States Secret Service"
 	outfit = /datum/outfit/job/enclave/intel
 	loadout_options = list(
-		/datum/outfit/loadout/town,
-		/datum/outfit/loadout/brotherhood,
-		/datum/outfit/loadout/vault,
-		/datum/outfit/loadout/raider,
+		/datum/outfit/loadout/observationist,
+		/datum/outfit/loadout/infiltrator,
+		/datum/outfit/loadout/engineer,
+		/datum/outfit/loadout/medic,
 		)
 
 
@@ -169,7 +169,6 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
 		/obj/item/suppressor = 1,
-		/obj/item/clothing/mask/infiltrator = 1,
 		/obj/item/clothing/head/helmet/riot/vaultsec = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/storage/bag/money/small/ncr = 1,
@@ -183,32 +182,48 @@
 	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
-/datum/outfit/loadout/town
-	name = "Town Infiltrator"
-	backpack_contents = list(
-		/obj/item/encryptionkey/headset_town = 1,
-		/obj/item/card/id/syndicate = 1,
-		)
 
-/datum/outfit/loadout/brotherhood
-	name = "Brotherhood Monitor"
-	backpack_contents = list(
-		/obj/item/encryptionkey/headset_bos = 1,
-		/obj/item/jammer = 1,
-		)
-
-/datum/outfit/loadout/vault
-	name = "Vault Monitor"
+/datum/outfit/loadout/observationist
+	name = "Observationist"
 	backpack_contents = list(
 		/obj/item/encryptionkey/headset_vault = 1,
 		/obj/item/jammer = 1,
+		/obj/item/binoculars = 1,
+		/obj/item/clothing/mask/infiltrator = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		)
 
-/datum/outfit/loadout/raider
-	name = "Raider Infiltrator"
+/datum/outfit/loadout/infiltrator
+	name = "Infiltrator"
 	backpack_contents = list(
-		/obj/item/encryptionkey/headset_den = 1,
+		/obj/item/encryptionkey/headset_town = 1,
 		/obj/item/card/id/syndicate = 1,
+		/obj/item/clothing/mask/infiltrator = 1,
+		/obj/item/flashlight/emp = 1,
+		/obj/item/melee/classic_baton/telescopic = 1,
+		)
+
+/datum/outfit/loadout/engineer
+	name = "Combat Engineer"
+	backpack_contents = list(
+		/obj/item/storage/belt/utility = 1,
+		/obj/item/grenade/plastic = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 10,
+		/obj/item/stack/sheet/metal = 20,
+		/obj/item/clothing/gloves/color/yellow = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
+		)
+
+/datum/outfit/loadout/medic
+	name = "Field Medic"
+	backpack_contents = list(
+		/obj/item/storage/firstaid/ancient = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/clothing/accessory/armband/medblue = 1,
+		/obj/item/clothing/mask/surgical = 1,
+		/obj/item/clothing/gloves/color/latex/nitrile = 1,
 		)
 
 /*--------------------- ENCLAVE SERGEANT -----------------------*/
