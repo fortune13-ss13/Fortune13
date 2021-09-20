@@ -1,8 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/structure/fermenting_barrel,
-/turf/open/floor/wood/f13/stage_tl/outdoors,
-/area/f13/wasteland)
 "ab" = (
 /mob/living/simple_animal/hostile/raider/unique/gourmet,
 /obj/effect/decal/cleanable/blood/gibs{
@@ -245,10 +241,6 @@
 	icon_state = "rampdowntop"
 	},
 /area/f13/enclave)
-"aS" = (
-/obj/structure/fermenting_barrel,
-/turf/open/floor/wood/f13/stage_t,
-/area/f13/wasteland)
 "aT" = (
 /obj/structure/rack,
 /turf/open/indestructible/ground/inside/mountain,
@@ -809,9 +801,6 @@
 /obj/structure/rack/steel,
 /turf/open/floor/plating,
 /area/f13/bunker)
-"dl" = (
-/turf/open/floor/wood/f13/stage_tr,
-/area/f13/wasteland)
 "dm" = (
 /obj/item/radio/intercom{
 	frequency = 1361;
@@ -859,8 +848,8 @@
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/caves)
 "dv" = (
-/obj/structure/simple_door/metal/iron{
-	req_access_txt = "65"
+/obj/machinery/door/unpowered/padlockirondoor/merc{
+	name = "prison door with lock"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -916,11 +905,13 @@
 	},
 /area/f13/bunker)
 "dI" = (
-/obj/structure/railing{
-	dir = 4
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/open/floor/wood/wood_large,
-/area/f13/city/town)
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/office/talon)
 "dJ" = (
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
@@ -1621,6 +1612,10 @@
 	icon_state = "bar"
 	},
 /area/f13/outlaw/indoors)
+"gn" = (
+/obj/structure/fermenting_barrel,
+/turf/open/floor/wood/f13/stage_tl/outdoors,
+/area/f13/wasteland)
 "go" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -2189,6 +2184,12 @@
 /obj/item/blanket/blanketalt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"ig" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/wood/f13/maple,
+/area/f13/office/talon)
 "ih" = (
 /turf/open/indestructible/ground/outside/river,
 /area/f13/wasteland)
@@ -2340,6 +2341,13 @@
 	icon_state = "platingdmg1"
 	},
 /area/f13/bunker)
+"iQ" = (
+/obj/docking_port/mobile/supply{
+	dir = 4;
+	id = "Riverton dock"
+	},
+/turf/open/floor/wood/f13/stage_r/outdoors,
+/area/f13/wasteland)
 "iR" = (
 /obj/structure/table{
 	layer = 2.9
@@ -2757,6 +2765,15 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"kr" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/office/talon)
 "kt" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -2859,9 +2876,7 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "kH" = (
-/obj/structure/simple_door/metal/barred{
-	req_access_txt = "65"
-	},
+/obj/machinery/door/unpowered/barredcelldoor,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/office/talon)
 "kJ" = (
@@ -3452,6 +3467,9 @@
 "mZ" = (
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/village)
+"na" = (
+/turf/open/floor/wood/f13/stage_tr,
+/area/f13/wasteland)
 "nb" = (
 /obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
@@ -3652,10 +3670,6 @@
 	icon_state = "2-i"
 	},
 /area/f13/vault)
-"nQ" = (
-/obj/structure/stairs/south,
-/turf/closed/wall/mineral/brick,
-/area/f13/city/town)
 "nT" = (
 /obj/structure/sign/departments/security,
 /turf/closed/wall/r_wall/f13vault{
@@ -5005,7 +5019,7 @@
 /turf/open/water,
 /area/f13/caves)
 "te" = (
-/turf/open/floor/wood/f13/stage_bl/outdoors,
+/turf/open/floor/wood/f13/oak,
 /area/f13/wasteland)
 "tf" = (
 /obj/effect/turf_decal/stripes/red/line{
@@ -5215,7 +5229,8 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/vault)
 "tP" = (
-/turf/open/floor/wood/f13/stage_tr/outdoors,
+/obj/structure/fermenting_barrel,
+/turf/open/floor/wood/f13/stage_t,
 /area/f13/wasteland)
 "tQ" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -5483,9 +5498,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "uO" = (
-/obj/machinery/door/unpowered/padlockirondoor,
-/turf/open/floor/wood/wood_large,
-/area/f13/city/town)
+/turf/open/floor/wood/f13/stage_b/outdoors,
+/area/f13/wasteland)
 "uP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -5564,9 +5578,6 @@
 	icon_state = "yellow"
 	},
 /area/f13/enclave)
-"vg" = (
-/turf/open/floor/wood/f13/stage_t,
-/area/f13/wasteland)
 "vh" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -5787,7 +5798,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "wc" = (
-/obj/machinery/door/unpowered/padlockirondoor,
+/obj/machinery/door/unpowered/padlockirondoor{
+	name = "town harbor"
+	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
 "we" = (
@@ -6008,6 +6021,10 @@
 	},
 /turf/open/floor/wood,
 /area/f13/vault)
+"xc" = (
+/obj/structure/stairs/south,
+/turf/open/floor/wood/wood_large,
+/area/f13/city/town)
 "xd" = (
 /obj/structure/closet,
 /obj/item/restraints/handcuffs,
@@ -6683,6 +6700,14 @@
 	icon_state = "grass2"
 	},
 /area/f13/vault)
+"zF" = (
+/obj/machinery/door/unpowered/padlockirondoor/merc{
+	name = "armory door with lock"
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/office/talon)
 "zG" = (
 /obj/effect/decal/remains/human,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/random_high,
@@ -7275,7 +7300,7 @@
 /turf/open/floor/plating,
 /area/f13/bunker)
 "Cb" = (
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wood/f13/stage_t,
 /area/f13/wasteland)
 "Cd" = (
 /obj/structure/barricade/wooden/strong{
@@ -8628,8 +8653,8 @@
 	},
 /area/f13/enclave)
 "HK" = (
-/obj/machinery/door/unpowered/wooddoor{
-	req_access_txt = "62"
+/obj/structure/simple_door{
+	name = "barracks"
 	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
@@ -8813,6 +8838,9 @@
 	name = "temple wall"
 	},
 /area/f13/village)
+"Ix" = (
+/turf/open/floor/wood/f13/stage_bl/outdoors,
+/area/f13/wasteland)
 "Iy" = (
 /obj/structure/chair/office/light,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -9693,13 +9721,6 @@
 	icon_state = "catwalk"
 	},
 /area/f13/enclave)
-"LV" = (
-/obj/docking_port/mobile/supply{
-	dir = 4;
-	id = "Riverton dock"
-	},
-/turf/open/floor/wood/f13/stage_r/outdoors,
-/area/f13/wasteland)
 "LY" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -9738,6 +9759,12 @@
 	},
 /turf/closed/wall/f13/wood,
 /area/f13/village)
+"Mg" = (
+/obj/structure/simple_door{
+	name = "restroom"
+	},
+/turf/open/floor/wood/f13/maple,
+/area/f13/office/talon)
 "Mi" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/plasteel/f13/vault_floor/green,
@@ -12506,7 +12533,9 @@
 	},
 /area/f13/bunker)
 "WJ" = (
-/obj/machinery/door/unpowered/wooddoor,
+/obj/machinery/door/unpowered/padlockwooddoor/merc{
+	name = "barracks"
+	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "WK" = (
@@ -12774,6 +12803,9 @@
 "XN" = (
 /turf/open/floor/wood/wood_large,
 /area/f13/city/town)
+"XO" = (
+/turf/open/floor/wood/f13/stage_br/outdoors,
+/area/f13/wasteland)
 "XP" = (
 /obj/structure/barricade/tentclothcorner,
 /turf/open/indestructible/ground/inside/mountain,
@@ -13090,8 +13122,11 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "YR" = (
-/turf/open/floor/wood/f13/stage_br/outdoors,
-/area/f13/wasteland)
+/obj/machinery/door/unpowered/padlockirondoor{
+	name = "town harbor"
+	},
+/turf/open/floor/wood/wood_large,
+/area/f13/city/town)
 "YS" = (
 /mob/living/simple_animal/hostile/raider/lurkers,
 /turf/open/indestructible/ground/outside/dirt,
@@ -13242,7 +13277,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "Zu" = (
-/turf/open/floor/wood/f13/stage_b/outdoors,
+/turf/open/floor/wood/f13/stage_tr/outdoors,
 /area/f13/wasteland)
 "Zv" = (
 /obj/machinery/smartfridge/organ,
@@ -13278,9 +13313,7 @@
 	},
 /area/f13/bunker)
 "ZB" = (
-/obj/structure/simple_door/metal/iron{
-	req_access_txt = "65"
-	},
+/obj/machinery/door/unpowered/padlockirondoor/merc/commander,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/office/talon)
 "ZC" = (
@@ -24191,7 +24224,7 @@ ih
 ih
 Hy
 IL
-uZ
+dI
 uZ
 uZ
 Jz
@@ -24356,7 +24389,7 @@ IL
 mf
 uZ
 IL
-Jz
+kr
 to
 OG
 OG
@@ -24518,7 +24551,7 @@ IL
 qF
 Jz
 IL
-dv
+zF
 IL
 IL
 IL
@@ -24842,7 +24875,7 @@ IL
 GZ
 Jz
 IL
-rD
+ig
 Rg
 rD
 rD
@@ -25332,10 +25365,10 @@ IL
 IL
 IL
 IL
-rD
+ig
 IL
 IL
-WJ
+Mg
 IL
 IL
 IL
@@ -26466,7 +26499,7 @@ rD
 oR
 oH
 IL
-rD
+ig
 IL
 Wi
 rD
@@ -34394,8 +34427,8 @@ ih
 Hy
 KO
 XN
-dI
-dI
+XN
+XN
 XN
 XN
 XN
@@ -34556,8 +34589,8 @@ ih
 ih
 KO
 XN
-nQ
-nQ
+xc
+xc
 XN
 XN
 XN
@@ -35375,8 +35408,8 @@ KO
 KO
 KO
 KO
+YR
 KO
-uO
 KO
 KO
 KO
@@ -35531,20 +35564,20 @@ ih
 ih
 ih
 ih
-ih
+gn
+UD
+UD
+UD
+UD
+UD
+UD
+UD
+UD
+UD
+Ix
+mP
 KO
-aa
-UD
-UD
-UD
-UD
-UD
-UD
-UD
-UD
-UD
-te
-KO
+Hy
 Hy
 Hy
 mP
@@ -35693,20 +35726,20 @@ ih
 ih
 ih
 ih
-ih
+tP
+te
+IF
+IF
+IF
+iQ
+IF
+IF
+IF
+te
+uO
+mP
 KO
-aS
-Cb
-IF
-IF
-IF
-LV
-IF
-IF
-IF
-Cb
-Zu
-KO
+Hy
 Hy
 Hy
 mP
@@ -35855,20 +35888,20 @@ ih
 ih
 ih
 ih
+tP
+uO
+mP
 ih
+MK
+MK
+MK
+MK
+MK
+Cb
+uO
+mP
 KO
-aS
-Zu
-ih
-ih
-MK
-MK
-MK
-MK
-MK
-vg
-Zu
-KO
+Hy
 Hy
 Hy
 mP
@@ -36017,20 +36050,20 @@ ih
 ih
 ih
 ih
+tP
+uO
+mP
 ih
+MK
+MK
+MK
+MK
+MK
+Cb
+uO
+mP
 KO
-aS
-Zu
-ih
-ih
-MK
-MK
-MK
-MK
-MK
-vg
-Zu
-KO
+Hy
 Hy
 Hy
 mP
@@ -36179,20 +36212,20 @@ ih
 ih
 ih
 ih
-ih
-ih
-vg
-Zu
-ih
+Cb
+uO
+mP
 ih
 MK
 MK
 MK
 MK
 MK
-vg
-Zu
+Cb
+uO
+mP
 KO
+Hy
 Hy
 Hy
 mP
@@ -36341,20 +36374,20 @@ ih
 ih
 ih
 ih
-ih
-ih
-vg
-Zu
-ih
+Cb
+uO
+mP
 ih
 MK
 MK
 MK
 MK
 MK
-vg
-Zu
+Cb
+uO
+mP
 KO
+Hy
 Hy
 kB
 ih
@@ -36503,19 +36536,19 @@ ih
 ih
 ih
 ih
-ih
-ih
-vg
-Zu
-ih
+Cb
+uO
+mP
 ih
 ih
 MK
 ih
 ih
 ih
-vg
-Zu
+Cb
+uO
+mP
+ih
 ih
 ih
 ih
@@ -36665,19 +36698,19 @@ ih
 ih
 ih
 ih
-ih
-ih
-tP
-YR
-ih
+Zu
+XO
+mP
 ih
 ih
 MK
 ih
 ih
 ih
-dl
-YR
+na
+XO
+mP
+ih
 ih
 ih
 ih
@@ -36833,8 +36866,8 @@ ih
 ih
 ih
 ih
-ih
 MK
+ih
 ih
 ih
 ih
@@ -36995,8 +37028,8 @@ ih
 ih
 ih
 ih
-ih
 MK
+ih
 ih
 ih
 ih

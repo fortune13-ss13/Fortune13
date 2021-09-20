@@ -1,6 +1,7 @@
 /*
 WARNING: Changing job names changes spawn position and whitelists too. It's not just path that matters.
 Town access doors
+Mercenary Commander: 65 ACCESS_MINISAT
 Mercenaries: 62 ACCESS_GATEWAY
 General access: 25 ACCESS_BAR
 Clinic: 68 ACCESS_CLONING
@@ -53,8 +54,8 @@ here's a tip, go search DEFINES/access.dm
 	exp_requirements = 180
 
 	outfit = /datum/outfit/job/town/alderman
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/town,
@@ -226,8 +227,8 @@ here's a tip, go search DEFINES/access.dm
 
 	outfit = /datum/outfit/job/town/commander
 
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_MINISAT)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_MINISAT)
+	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_MINISAT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_MINISAT)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/town,
@@ -310,8 +311,8 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 	outfit = /datum/outfit/job/town/mercenary
-	access = list(ACCESS_BAR, ACCESS_GATEWAY, ACCESS_MINISAT)
-	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY, ACCESS_MINISAT)
+	access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis,

@@ -225,8 +225,9 @@
 	},
 /area/f13/building)
 "ajy" = (
-/turf/closed/wall/mineral/brick,
-/area/f13/wasteland)
+/obj/machinery/door/unpowered/padlockirondoor/merc,
+/turf/open/floor/wood/f13/maple,
+/area/f13/office/talon)
 "ajz" = (
 /obj/structure/bed/old,
 /obj/item/blanket/blanketalt,
@@ -570,7 +571,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wood/f13/oak/outdoors,
 /area/f13/wasteland/river)
 "azN" = (
 /obj/structure/closet/crate/footlocker,
@@ -821,7 +822,7 @@
 	},
 /area/f13/building)
 "aNH" = (
-/turf/open/floor/wood/f13/stage_t,
+/turf/open/floor/wood/f13/stage_tr/outdoors,
 /area/f13/wasteland/river)
 "aNJ" = (
 /obj/effect/overlay/cliff{
@@ -3207,10 +3208,6 @@
 /area/f13/building)
 "dnr" = (
 /obj/machinery/autolathe,
-/obj/machinery/light/small/orange{
-	dir = 1;
-	pixel_y = 6
-	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "doa" = (
@@ -4920,7 +4917,7 @@
 /area/f13/subway/ghouls)
 "eUM" = (
 /obj/structure/chair/sofa/corp/left,
-/turf/open/floor/wood/f13/stage_t,
+/turf/open/floor/wood/f13/stage_t/outdoors,
 /area/f13/wasteland/river)
 "eUP" = (
 /obj/structure/ladder/unbreakable{
@@ -4957,6 +4954,13 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland)
+"eXq" = (
+/obj/machinery/light/small/orange{
+	dir = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/city/town)
 "eXt" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
@@ -5249,7 +5253,7 @@
 	name = "Workshop gate"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
-/area/f13/wasteland)
+/area/f13/bunker)
 "fjn" = (
 /obj/structure/sign/poster/prewar/poster72,
 /turf/closed/wall/mineral/brick,
@@ -6494,11 +6498,8 @@
 /turf/open/floor/plasteel/grimy,
 /area/f13/forest/animals)
 "gpB" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	icon_state = "wood";
-	name = "Rivertown Housing";
-	req_one_access_txt = "25"
+/obj/machinery/door/unpowered/padlockwooddoor{
+	name = "townhouse"
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
@@ -7233,10 +7234,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/raiders/camp)
 "heN" = (
-/obj/structure/simple_door/house{
-	icon_state = "interioropening";
-	req_access_txt = "34"
-	},
+/obj/machinery/door/unpowered/padlockwooddoor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/town)
 "heO" = (
@@ -8269,14 +8267,8 @@
 /area/f13/wasteland)
 "idj" = (
 /obj/structure/fence{
-	dir = 4
-	},
-/obj/structure/fence/corner{
-	pixel_x = 13
-	},
-/obj/structure/fence/corner{
-	dir = 1;
-	pixel_x = -14
+	pixel_x = -14;
+	pixel_y = -4
 	},
 /turf/open/transparent/openspace/outside,
 /area/space)
@@ -8321,6 +8313,12 @@
 /obj/effect/landmark/start/f13/wastelander,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"ifH" = (
+/obj/structure/fence{
+	pixel_x = -14
+	},
+/turf/open/transparent/openspace/outside,
+/area/space)
 "ifK" = (
 /turf/open/indestructible/ground/outside/graveldirt{
 	icon_state = "graveldirtedge"
@@ -9444,10 +9442,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/outlaw/indoors)
 "jto" = (
-/obj/machinery/door/poddoor/shutters{
-	id = "Doctors_counter_windows";
-	name = "interior shutters"
-	},
 /obj/machinery/door/unpowered/padlockwooddoor/clinic,
 /turf/open/floor/f13{
 	icon = 'icons/turf/floors.dmi';
@@ -11096,7 +11090,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "ldq" = (
-/obj/structure/simple_door/metal/fence,
+/obj/machinery/door/unpowered/ragecagefencedoor,
 /turf/open/indestructible/ground/outside/graveldirt{
 	icon_state = "graveldirtedge"
 	},
@@ -11337,10 +11331,9 @@
 /turf/open/floor/wood/f13,
 /area/f13/building)
 "lnA" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	name = "Mayor's Office";
-	req_one_access_txt = "62"
+/obj/machinery/door/unpowered/padlockwooddoor/alderman/interior{
+	name = "restroom";
+	req_one_access_txt = null
 	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
@@ -11466,12 +11459,9 @@
 	},
 /area/f13/wasteland)
 "ltx" = (
-/obj/machinery/light,
-/turf/open/floor/f13{
-	icon = 'icons/turf/floors.dmi';
-	icon_state = "sepia"
-	},
-/area/f13/clinic/river)
+/obj/machinery/door/unpowered/padlockwooddoor,
+/turf/open/floor/wood/f13/maple,
+/area/f13/city/town)
 "ltz" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/indestructible/ground/inside/mountain,
@@ -12304,7 +12294,7 @@
 /obj/structure/chair/sofa/corp/corner{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/stage_t,
+/turf/open/floor/wood/f13/stage_t/outdoors,
 /area/f13/wasteland/river)
 "mpG" = (
 /turf/closed/wall/f13/wood/house,
@@ -12591,7 +12581,7 @@
 	},
 /area/f13/wasteland)
 "mIN" = (
-/turf/open/floor/wood/f13/oakbroken,
+/turf/open/floor/wood/f13/stage_b/outdoors,
 /area/f13/wasteland/river)
 "mJq" = (
 /obj/structure/closet,
@@ -13488,11 +13478,10 @@
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "nKh" = (
-/obj/structure/fence/cut{
-	pixel_x = -14
+/obj/structure/fluff/railing{
+	dir = 1;
+	pixel_y = -24
 	},
-/obj/effect/decal/fakelattice,
-/obj/structure/disposalpipe/segment,
 /turf/open/transparent/openspace/outside,
 /area/space)
 "nKi" = (
@@ -13910,9 +13899,6 @@
 /turf/open/transparent/openspace/outside,
 /area/space)
 "ogf" = (
-/obj/structure/fence/cut{
-	pixel_x = 17
-	},
 /obj/structure/window/fulltile/house{
 	dir = 2;
 	icon_state = "ruinswindow"
@@ -15921,11 +15907,18 @@
 	},
 /area/f13/wasteland)
 "qpQ" = (
-/obj/structure/fence/cut{
-	pixel_x = 17
+/obj/structure/fluff/railing{
+	dir = 5;
+	pixel_x = 8;
+	pixel_y = -24
 	},
-/turf/closed/wall/mineral/brick,
-/area/f13/city/town)
+/obj/structure/fluff/railing{
+	dir = 1;
+	pixel_x = -17;
+	pixel_y = -24
+	},
+/turf/open/transparent/openspace/outside,
+/area/space)
 "qqF" = (
 /obj/structure/closet/cabinet,
 /obj/item/megaphone,
@@ -16680,11 +16673,7 @@
 /area/f13/wasteland)
 "rlz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	name = "Armory";
-	req_one_access_txt = "62"
-	},
+/obj/machinery/door/unpowered/padlockwooddoor/merc,
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "rlS" = (
@@ -16811,7 +16800,7 @@
 /area/f13/office/talon)
 "rrn" = (
 /obj/structure/table/booth,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wood/f13/oak/outdoors,
 /area/f13/wasteland/river)
 "rrK" = (
 /obj/structure/fence,
@@ -17346,11 +17335,8 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/subway/ghouls)
 "rSF" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	icon_state = "wood";
-	name = "Rivertown Housing";
-	req_one_access_txt = "25"
+/obj/machinery/door/unpowered/padlockwooddoor{
+	name = "townhouse"
 	},
 /turf/open/floor/carpet,
 /area/f13/city/town)
@@ -17378,11 +17364,10 @@
 /turf/open/floor/wood/f13/carpet,
 /area/f13/subway/ghouls)
 "rVH" = (
-/obj/structure/fence/cut{
-	pixel_x = 17
-	},
-/obj/structure/fence{
-	dir = 4
+/obj/structure/fluff/railing{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = -7
 	},
 /turf/open/transparent/openspace/outside,
 /area/space)
@@ -18149,10 +18134,9 @@
 	},
 /area/f13/building)
 "sIG" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
+/obj/machinery/door/unpowered/padlockwooddoor/merc{
 	name = "Commanders office";
-	req_one_access_txt = "62"
+	req_one_access_txt = "65"
 	},
 /turf/open/floor/wood/f13/carpet,
 /area/f13/office/talon)
@@ -19279,6 +19263,21 @@
 	icon_state = "horizontalbottombordertop0"
 	},
 /area/f13/wasteland)
+"tPp" = (
+/obj/effect/decal/fakelattice,
+/obj/structure/disposalpipe/segment,
+/obj/structure/fluff/railing{
+	dir = 6;
+	pixel_x = 8;
+	pixel_y = 32
+	},
+/obj/structure/fluff/railing{
+	dir = 1;
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/turf/open/transparent/openspace/outside,
+/area/space)
 "tPG" = (
 /obj/structure/chair/stool/retro/tan,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -19629,7 +19628,7 @@
 	},
 /area/f13/wasteland)
 "ueF" = (
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wood/f13/oak/outdoors,
 /area/f13/wasteland/river)
 "ueG" = (
 /obj/structure/car/rubbish2,
@@ -20486,7 +20485,7 @@
 /obj/structure/chair/sofa/corp/right{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wood/f13/oak/outdoors,
 /area/f13/wasteland/river)
 "vas" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -20600,11 +20599,8 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/building)
 "vgj" = (
-/obj/machinery/door/unpowered/wooddoor{
-	autoclose = 1;
-	icon_state = "wood";
-	name = "Fishery";
-	req_one_access_txt = "25"
+/obj/machinery/door/unpowered/padlockwooddoor{
+	name = "Fishery"
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
@@ -20651,9 +20647,7 @@
 /area/f13/forest/animals)
 "vih" = (
 /obj/machinery/door/unpowered/padlockwooddoor/alderman,
-/turf/open/floor/wood/f13/maple{
-	icon_state = "maplefloor3"
-	},
+/turf/open/floor/carpet/royalblack,
 /area/f13/city/town)
 "vik" = (
 /obj/structure/car/rubbish2{
@@ -20796,8 +20790,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building)
 "voC" = (
-/obj/structure/simple_door/metal/iron,
-/turf/open/floor/wood/wood_diagonal,
+/obj/structure/simple_door/metal/iron{
+	name = "machinist and trade post"
+	},
+/turf/open/floor/wood/f13/maple,
 /area/f13/city/town)
 "voG" = (
 /turf/open/floor/wood/f13/maple,
@@ -22321,7 +22317,7 @@
 	},
 /area/f13/forest/animals)
 "wYC" = (
-/turf/open/floor/wood/f13/stage_br,
+/turf/open/floor/wood/f13/stage_br/outdoors,
 /area/f13/wasteland/river)
 "wZa" = (
 /obj/structure/closet,
@@ -22594,8 +22590,9 @@
 /turf/closed/wall/f13/supermart,
 /area/f13/forest/animals)
 "xmv" = (
-/obj/structure/fence/cut{
-	pixel_x = -14
+/obj/structure/fluff/railing{
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/open/transparent/openspace/outside,
 /area/space)
@@ -22998,7 +22995,7 @@
 	},
 /area/f13/wasteland)
 "xKE" = (
-/turf/open/floor/wood/f13/stage_r,
+/turf/open/floor/wood/f13/stage_r/outdoors,
 /area/f13/wasteland/river)
 "xLA" = (
 /obj/item/reagent_containers/food/drinks/bottle/instacocoa{
@@ -23261,7 +23258,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wood/f13/oak/outdoors,
 /area/f13/wasteland/river)
 "xZV" = (
 /obj/structure/wreck/trash/five_tires,
@@ -23360,7 +23357,10 @@
 /turf/open/transparent/openspace/outside,
 /area/space)
 "yhH" = (
-/obj/machinery/door/unpowered/padlockwooddoor/alderman/interior,
+/obj/machinery/door/unpowered/padlockwooddoor/clinic{
+	name = "weathere door";
+	req_one_access_txt = null
+	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
 "yhM" = (
@@ -35349,7 +35349,7 @@ oXT
 yhE
 voG
 voG
-rHE
+ajy
 voG
 unO
 wWq
@@ -39883,7 +39883,7 @@ uPu
 wcc
 xtG
 xtG
-ltx
+xtG
 uYm
 mZQ
 mZQ
@@ -42481,7 +42481,7 @@ fJS
 mZQ
 mZQ
 mZQ
-ajy
+aGm
 aGm
 aGm
 aGm
@@ -42797,7 +42797,7 @@ aGm
 prF
 prF
 aGm
-prF
+eXq
 prF
 prF
 oJV
@@ -42956,7 +42956,7 @@ oXT
 wUZ
 aMr
 aGm
-prF
+eXq
 prF
 heN
 prF
@@ -43121,7 +43121,7 @@ aGm
 prF
 prF
 aGm
-prF
+eXq
 prF
 prF
 prF
@@ -43935,7 +43935,7 @@ prF
 sZc
 wTY
 wTY
-voC
+aGm
 mZQ
 mZQ
 mZQ
@@ -44087,8 +44087,8 @@ oXT
 oXT
 oXT
 oXT
-oXT
-dBP
+idj
+ifH
 aGm
 qtV
 prF
@@ -44250,7 +44250,7 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+oXT
 aGm
 cpZ
 prF
@@ -44412,12 +44412,12 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+oXT
 aGm
 aGm
 aGm
 aGm
-heN
+ltx
 aGm
 kAB
 kAB
@@ -44574,9 +44574,9 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+oXT
 aGm
-wTY
+oXT
 oXT
 oXT
 wTY
@@ -44736,11 +44736,11 @@ oXT
 oXT
 oXT
 oXT
-xaa
-qpQ
-qpQ
-qpQ
-qpQ
+oXT
+aGm
+aGm
+aGm
+aGm
 aGm
 wTY
 wTY
@@ -44902,7 +44902,7 @@ oXT
 oXT
 oXT
 oXT
-dBP
+oXT
 aGm
 rLp
 wTY
@@ -45064,7 +45064,7 @@ oXT
 oXT
 oXT
 oXT
-rVH
+oXT
 aGm
 ixp
 wTY
@@ -45226,7 +45226,7 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+oXT
 aGm
 jkA
 wTY
@@ -45388,7 +45388,7 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+oXT
 aGm
 wTY
 wTY
@@ -45550,7 +45550,7 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+oXT
 aGm
 wTY
 wTY
@@ -45712,7 +45712,7 @@ oXT
 oXT
 oXT
 oXT
-wUZ
+oXT
 aGm
 aGm
 wTY
@@ -45875,7 +45875,7 @@ oXT
 oXT
 oXT
 oXT
-xaa
+oXT
 aGm
 aGm
 aGm
@@ -46038,7 +46038,7 @@ oXT
 oXT
 oXT
 oXT
-oJs
+oXT
 aGm
 aGm
 aGm
@@ -46201,7 +46201,7 @@ oXT
 oXT
 oXT
 oXT
-idj
+nKh
 moU
 azE
 vai
@@ -46363,21 +46363,21 @@ oXT
 oXT
 oXT
 oXT
-idj
+nKh
 eUM
 rrn
 ueF
 ueF
 ueF
 ueF
-ueF
-qpQ
+mIN
+aGm
 ogf
 ogf
 ogf
-qpQ
-nKh
-xmv
+aGm
+xbz
+oXT
 oXT
 oXT
 oXT
@@ -46525,15 +46525,15 @@ oXT
 oXT
 oXT
 oXT
-oXT
+qpQ
 aNH
-ueF
-ueF
+xKE
+xKE
 xKE
 xKE
 xKE
 wYC
-xbz
+tPp
 oXT
 oXT
 oXT
@@ -46688,12 +46688,12 @@ oXT
 oXT
 oXT
 oXT
-oXT
-oXT
-oXT
-oXT
-oXT
-oXT
+rVH
+xmv
+xmv
+xmv
+xmv
+xmv
 oXT
 oXT
 oXT
