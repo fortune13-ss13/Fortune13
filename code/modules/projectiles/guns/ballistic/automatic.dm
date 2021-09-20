@@ -817,7 +817,7 @@
 //R91A1
 /obj/item/gun/ballistic/automatic/assault_rifle/r91a1
 	name = "R91A1 Assault Rifle"
-	desc = "A post-war improvement of the R91 Assault Rifle, the Enclave began to develop these rifles for use by light infantry units outside of the Capital, boasting a chrome lined barrel, an improved receiver, and a reinforced, durable firing mechanism it’d be difficult even for a soldier to break this one."
+	desc = "A post-war improvement of the R91 Assault Rifle, the Enclave began to develop these rifles for use by light infantry units outside of the Capital, boasting a chrome lined barrel, an improved receiver & a reinvented durable firing mechanism, it’d be difficult to break."
 	icon_state = "r91"
 	item_state = "fnfal"
 	extra_damage = 3
@@ -828,7 +828,7 @@
 //R91-C
 /obj/item/gun/ballistic/automatic/assault_rifle/r91c
 	name = "R91-C"
-	desc = "The R91-C, a carbine version of it's parent rifle, boasting a shorter barrel with a suppressor, durable polymer furniture and railing for various attachments including scopes, this variant was designed initially to be compacted and lighter, for use by paratroopers, special forces and rear echelon units such as drivers."
+	desc = "The R91-C, a carbine version of it's parent rifle, boasting a shorter low-profile barrel, folding skeleton stock, durable polymer furniture & railing for various attachments, this variant was designed initially to be compacted for use by paratroopers, special forces and soldiers in need of smaller weapom such as drivers."
 	icon_state = "r91c"
 	item_state = "assault_carbine"
 	extra_damage = 1
@@ -848,7 +848,7 @@
 //R91-M
 /obj/item/gun/ballistic/automatic/assault_rifle/r91m
 	name = "R91-M"
-	desc = "The R91-M boasts a heavier barrel, a scope bracket and a low-profile upper receiver, this variant was designed to provide US Army units with a marksman capable platform at a squad level, still utilised today, though in refurbished frames by the Enclave."
+	desc = "The R91-M boasts a heavier barrel, scope bracket & a low-profile upper receiver, this variant was designed to provide the US Army with a marksman capable platform at a squad level."
 	icon_state = "r91m"
 	item_state = "fnfal"
 	extra_damage = 7
