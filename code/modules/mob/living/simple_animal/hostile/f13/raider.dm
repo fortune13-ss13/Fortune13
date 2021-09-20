@@ -188,7 +188,6 @@
 	icon_state = "lurkersshaman"
 	icon_living = "lurkersshaman"
 	icon_dead = "lurkersshaman_dead"
-	color = "#FFFF00"
 	maxHealth = 340
 	health = 340
 	speed = 1.2

@@ -307,7 +307,7 @@
 
 /mob/living/simple_animal/hostile/supermutant/nationalguard/elite
 	name = "elite mutant soldier"
-	desc = "A mutant that retains much of its intelligence, equipped with steathboys, armor and laser weapons."
+	desc = "A mutant that retains much of its intelligence,  armor and laser weapons."
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "mutant_elite"
 	icon_living = "mutant_elite"
@@ -315,7 +315,6 @@
 	ranged = 1
 	maxHealth = 400
 	health = 400
-	alpha = 80
 	force_threshold = 30
 	melee_damage_lower = 45
 	melee_damage_upper = 55
@@ -333,10 +332,3 @@
 /mob/living/simple_animal/hostile/supermutant/nationalguard/elite/Aggro()
 	..()
 	summon_backup(12)
-	alpha = 255
-
-/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant/death(gibbed)
-	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
-	icon_state = icon_dead
-	anchored = FALSE
-	..()

@@ -477,11 +477,10 @@
 
 /mob/living/simple_animal/hostile/handy/assaultron
 	name = "assaultron"
-	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis."
+	desc = "A military close combat robot developed by RobCo in a vaguely feminine chassis for some godforsaken reason."
 	icon = 'icons/fallout/mobs/robots/robot_general.dmi'
 	icon_state = "assaultron"
 	icon_living = "assaultron"
-	icon_dead = "gib6"
 	gender = FEMALE //Pffffffffffffffffffffff
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	health = 450
@@ -492,13 +491,25 @@
 	environment_smash = 2 //can smash walls
 	attack_verb_simple = "grinds their claws on"
 	faction = list("wastebot")
-	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc, /obj/effect/decal/cleanable/oil)
+	emote_taunt_sound = list('sound/f13npc/assaultron/taunt1.ogg', 'sound/f13npc/assaultron/aggro1.ogg')
+	emote_taunt = "focuses its red lens"
+	aggrosound = 'sound/f13npc/assaultron/aggro1.ogg'
+	idlesound = list('sound/f13npc/assaultron/idle1.ogg', 'sound/f13npc/assaultron/idle2.ogg')
+	death_sound = 'sound/f13npc/assaultron/death.ogg'
+	taunt_chance = 5
 
-	emote_taunt_sound = FALSE
-	emote_taunt = FALSE
+/mob/living/simple_animal/hostile/handy/assaultron/stealth
+	alpha = 80
 
-	aggrosound = FALSE
-	idlesound = FALSE
+/mob/living/simple_animal/hostile/handy/assaultron/stealth/nationalguard
+	aggro_vision_range = 12
+	faction = list("hostile", "supermutant")
+
+/mob/living/simple_animal/hostile/handy/assaultron/stealth/Aggro()
+	..()
+	summon_backup(8)
+	alpha = 255
 
 /mob/living/simple_animal/hostile/handy/assaultron/nsb //NSB + Raider Bunker specific.
 	name = "assaultron"
