@@ -1,4 +1,4 @@
-#define JOB_MODIFICATION_MAP_NAME "Yuma"
+#define JOB_MODIFICATION_MAP_NAME "St. Albans"
 
 /datum/job/New()
 	..()
