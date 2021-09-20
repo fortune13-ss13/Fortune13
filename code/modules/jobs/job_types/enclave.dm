@@ -341,6 +341,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/r91c
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
+		/obj/item/suppressor = 1,
 		)
 
 /datum/outfit/loadout/marksman
