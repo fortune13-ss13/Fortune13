@@ -621,6 +621,9 @@
 	icon_state = "50shairband"
 	item_state = "50shairband"
 	flags_inv = null
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
 
 /obj/item/clothing/head/f13/nursehat
 	name = "nurse hat"
