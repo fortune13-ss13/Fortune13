@@ -163,8 +163,6 @@ GLOBAL_LIST_INIT(oasis_positions, list(
 	"Barkeep",
 	"Citizen",
 	"Settler",
-	"Wastelander",
-//	"Shopkeeper",
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -221,6 +219,7 @@ GLOBAL_LIST_INIT(vault_positions, list(
 	"Cyborg",
 ))
 
+
 GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Raider Boss",
 	"Raider Bishop",
@@ -234,7 +233,6 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Street Doc",
 	"Raider",
 //	"Great Khan",
-//	"Vigilante",
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
@@ -246,6 +244,12 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Corporal",
 	"Enclave Private",
 ))
+
+GLOBAL_LIST_INIT(independent_positions, list(
+	"Wastelander",
+//	"Vigilante",
+))
+
 
 GLOBAL_LIST_INIT(security_positions, list(
 	"Vault-tec Security",
@@ -281,6 +285,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 //	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
 //	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#ffeeee"),
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
+	EXP_TYPE_FALLOUT = list("jobs" = independent_positions, "color" = "#006666"),
 //	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	EXP_TYPE_OASIS = list("jobs" = oasis_positions, "color" = "#d7b088"),
 	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#005eff"),
@@ -302,6 +307,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_OASIS = list("titles" = oasis_positions ),
 	EXP_TYPE_LEGION = list("titles" = legion_positions),
 	EXP_TYPE_VAULT = list("titles" = vault_positions),
+	EXP_TYPE_FALLOUT = list("titles" = independent_positions),
 	EXP_TYPE_WASTELAND = list("titles" = wasteland_positions),
 	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),

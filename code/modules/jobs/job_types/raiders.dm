@@ -1,3 +1,11 @@
+/* ACCESS DEN = 87  Basic Raider set of keys
+ACCESS LAWYER = 38 The Bosses got a special set of keys too to keep thieves away
+
+Red Devils - Salvage, couple basic guns, explosives
+Psychos - Drugs, chemistry
+Tribals - Tinker, hobo guns
+*/
+
 /datum/job/raider
 	department_flag = WASTELAND
 	access = list(ACCESS_DEN)
@@ -128,6 +136,8 @@
 	supervisors = "No one. Might makes right. Hail to the king"
 	exp_requirements = 180
 	outfit = /datum/outfit/job/raider/boss_bandit
+	access = list(ACCESS_DEN, ACCESS_LAWYER)
+	minimal_access = list(ACCESS_DEN, ACCESS_LAWYER)
 	loadout_options = list(
 		/datum/outfit/loadout/gambler,
 		/datum/outfit/loadout/goldenone,
@@ -260,6 +270,10 @@
 	..()
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lance)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/m29snub)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/rockwell)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/coffeepotbomb)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/firebomb)
 
 
 /datum/outfit/job/raider/bandit
@@ -318,6 +332,8 @@
 	selection_color = "#ff4747"
 	exp_requirements = 180
 	outfit = /datum/outfit/job/raider/boss_psycho
+	access = list(ACCESS_DEN, ACCESS_LAWYER)
+	minimal_access = list(ACCESS_DEN, ACCESS_LAWYER)
 	loadout_options = list(
 		/datum/outfit/loadout/trenchie,
 		/datum/outfit/loadout/hammertime,
@@ -335,7 +351,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/reagent_containers/pill/patch/turbo = 2,
-		/obj/item/flashlight/flare = 1,
+		/obj/item/grenade/smokebomb = 1,
 		/obj/item/storage/bag/money/small/raider/mobboss = 1,
 		/obj/item/storage/book/bible = 1,
 		)
@@ -498,7 +514,8 @@
 	selection_color = "#ff4747"
 	exp_requirements = 180
 	outfit = /datum/outfit/job/raider/boss_tribal
-
+	access = list(ACCESS_DEN, ACCESS_LAWYER)
+	minimal_access = list(ACCESS_DEN, ACCESS_LAWYER)
 	loadout_options = list(
 		/datum/outfit/loadout/insect,
 		/datum/outfit/loadout/cavebear,
@@ -630,7 +647,8 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/lasmusket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/plasmamusket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/m29snub)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/rockwell)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bola)
+
 
 /datum/outfit/job/raider/tribal
 	name =	"Raider Tribal"
@@ -662,100 +680,3 @@
 		/obj/item/ammo_box/c10mm = 1,
 		/obj/item/melee/onehanded/club/warclub = 1,
 		)
-
-/*
-// WASTELANDER
-
-/datum/job/wasteland/f13wastelander
-	title = "Wastelander"
-	flag = F13WASTELANDER
-	faction = "Wastelander"
-	total_positions = 4
-	spawn_positions = 4
-	description = "You got bleak prospects and little to your name, but you're still alive. With no home and no allies, you need to use your wits to survive."
-	supervisors = "God"
-	selection_color = "#dddddd"
-	outfit = /datum/outfit/job/wasteland/f13wastelander
-	access = list()		
-	minimal_access = list()
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-		/datum/matchmaking_pref/mentor = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-		/datum/matchmaking_pref/disciple = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-		/datum/matchmaking_pref/patron = list(
-			/datum/job/wasteland/f13wastelander,
-			/datum/job/wasteland/f13mobboss,
-		),
-		/datum/matchmaking_pref/protegee = list(
-			/datum/job/wasteland/f13wastelander,
-		),
-	)
-	loadout_options = list(
-	/datum/outfit/loadout/tribal,
-	/datum/outfit/loadout/salvager,
-	/datum/outfit/loadout/scavenger,
-	/datum/outfit/loadout/warrior,
-	/datum/outfit/loadout/doctor,
-	)
-
-/datum/outfit/job/wasteland/f13wastelander
-	name = "Wastelander"
-	jobtype = /datum/job/wasteland/f13wastelander
-	id = null
-	ears = null
-	belt = null
-	r_hand = /obj/item/book/granter/trait/selection
-	l_pocket = /obj/item/storage/bag/money/small/wastelander
-	r_pocket = /obj/item/flashlight/flare
-	belt = /obj/item/melee/onehanded/knife/survival
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
-		/obj/item/reagent_containers/pill/radx,
-		)
-
-/
-/datum/outfit/loadout/salvager
-	name = "Salvager"
-	uniform = /obj/item/clothing/under/f13/machinist
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/f13/blacksmith
-	head = /obj/item/clothing/head/welding
-	suit = /obj/item/clothing/suit/armor/f13/kit
-	r_hand = /obj/item/weldingtool
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1)
-
-/datum/outfit/loadout/medic
-	name = "Wandering Doctor"
-	uniform = /obj/item/clothing/under/f13/follower
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/color/latex
-	backpack_contents =  list(
-		/obj/item/reagent_containers/medspray/synthflesh=2,
-		/obj/item/stack/medical/suture/emergency/fifteen=1,
-		/obj/item/stack/medical/ointment/twelve=1,
-		/obj/item/defibrillator/primitive = 1,
-		/obj/item/smelling_salts/crafted=1,
-		/obj/item/healthanalyzer=1,
-		/obj/item/stack/sheet/mineral/silver=1,
-		/obj/item/gun/ballistic/automatic/pistol/pistol22=1,
-		/obj/item/ammo_box/magazine/m22 = 1,
-		/obj/item/lighter=1,
-		/obj/item/screwdriver=1,
-		/obj/item/wirecutters=1,
-		/obj/item/saw=1
-		)
-
-*/

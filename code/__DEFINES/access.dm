@@ -22,7 +22,7 @@
 #define ACCESS_CHAPEL_OFFICE 22
 #define ACCESS_TECH_STORAGE 23
 #define ACCESS_ATMOSPHERICS 24
-#define ACCESS_BAR 25
+#define ACCESS_BAR 25 // General Townie
 #define ACCESS_JANITOR 26
 #define ACCESS_CREMATORIUM 27
 #define ACCESS_KITCHEN 28
@@ -35,7 +35,7 @@
 #define ACCESS_HYDROPONICS 35
 #define ACCESS_MANUFACTURING 36 //Only used on research.dmm away mission
 #define ACCESS_LIBRARY 37
-#define ACCESS_LAWYER 38
+#define ACCESS_LAWYER 38 // Raider Boss
 #define ACCESS_VIROLOGY 39
 #define ACCESS_CMO 40
 #define ACCESS_QM 41
@@ -47,7 +47,7 @@
 #define ACCESS_MINING_OFFICE 49 //Not in use
 #define ACCESS_MAILSORTING 50
 #define ACCESS_MINT 51 //Not in use
-#define ACCESS_MINT_VAULT 52 //Not in use
+#define ACCESS_MINT_VAULT 52 //Alderman
 #define ACCESS_VAULT 53
 #define ACCESS_MINING_STATION 54
 #define ACCESS_XENOBIOLOGY 55
@@ -57,10 +57,10 @@
 #define ACCESS_RC_ANNOUNCE 59 //Request console announcements
 #define ACCESS_KEYCARD_AUTH 60 //Used for events which require at least two people to confirm them
 #define ACCESS_TCOMSAT 61 // has access to the entire telecomms satellite / machinery
-#define ACCESS_GATEWAY 62
+#define ACCESS_GATEWAY 62 // Mercenary
 #define ACCESS_SEC_DOORS 63 // Outer brig doors, department security posts
 #define ACCESS_MINERAL_STOREROOM 64 //For releasing minerals from the ORM
-#define ACCESS_MINISAT 65
+#define ACCESS_MINISAT 65 // Mercenary Commander
 #define ACCESS_WEAPONS 66 //Weapon authorization for secbots
 #define ACCESS_NETWORK 67 //NTnet diagnostics/monitoring software
 #define ACCESS_CLONING 68 //Cloning room and clone pod ejection

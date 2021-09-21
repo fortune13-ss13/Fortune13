@@ -10,7 +10,7 @@
 	name = "wooden door"
 	desc = "It opens and closes - nothing out of the ordinary."
 	icon = 'icons/obj/doors/wastelanddoors.dmi'
-	icon_state = "house"
+	icon_state = "wood"
 	opacity = TRUE
 	density = TRUE
 	anchored = TRUE
@@ -18,7 +18,7 @@
 	explosion_block = 0.5
 	var/can_hold_padlock = FALSE
 	var/obj/item/lock_construct/padlock
-	var/door_type = "house"
+	var/door_type = "wood"
 	var/base_opacity = TRUE
 	var/manual_opened = 0
 	var/material_count = 10
@@ -236,6 +236,24 @@
 
 // Fallout 13 general doors directory
 
+/obj/structure/simple_door/white
+	name = "white door"
+	desc = "A painted wooden door."
+	icon_state = "white"
+	door_type = "white"
+
+/obj/structure/simple_door/white/dirty
+	name = "dirty white door"
+	desc = "A painted wooden door."
+	icon_state = "white-dirty"
+	door_type = "white-dirty"
+
+/obj/structure/simple_door/white/weathered
+	name = "weathered white door"
+	desc = "A painted wooden door."
+	icon_state = "white-weathered"
+	door_type = "white-weathered"
+
 /obj/structure/simple_door/tentflap_leather
 	name = "brahminskin tent entrance"
 	icon = 'icons/fallout/turfs/doors.dmi'
@@ -261,8 +279,8 @@
 	close_sound = 'sound/effects//footstep/hardbarefoot5.ogg'
 
 /obj/structure/simple_door/house
-	icon_state = "house"
-	door_type = "house"
+	icon_state = "white-weathered"
+	door_type = "white-weathered"
 	can_disasemble = 1
 	can_hold_padlock = TRUE
 
@@ -307,6 +325,7 @@
 	opacity = FALSE
 	base_opacity = FALSE
 	can_hold_padlock = TRUE
+	hard_open = 0
 
 /obj/structure/simple_door/wood
 	icon_state = "wood"

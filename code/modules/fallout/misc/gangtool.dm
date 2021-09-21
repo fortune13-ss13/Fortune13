@@ -39,7 +39,7 @@
 	dat += "<b>Currency conversion rates:</b><br>"
 	dat += "1 Bottle cap = [CASH_CAP_GANG] influence <br>"
 	dat += "1 Pre-war Money = [CASH_NCR_GANG] influence <br>"
-	dat += "1 Rivertown Fish Chit = [CASH_DEN_GANG] influence <br>"
+	dat += "1 Riverton Fish Chit = [CASH_DEN_GANG] influence <br>"
 	dat += "1 Golden Fish Chit = [CASH_AUR_GANG] influence <br>"
 	dat += "</div>"
 	dat += "<br>"

@@ -69,11 +69,11 @@
 #define EXP_TYPE_GHOST			"Ghost"
 #define EXP_TYPE_ADMIN			"Admin"
 //f13 stuff
-#define EXP_TYPE_FALLOUT		"Fallout"
+#define EXP_TYPE_FALLOUT		"Independent"
 #define EXP_TYPE_VAULT			"Vault"
 #define EXP_TYPE_BROTHERHOOD	"Bos"
 #define EXP_TYPE_NCR			"Ncr"
-#define EXP_TYPE_OASIS			"Rivertown"
+#define EXP_TYPE_OASIS			"Riverton"
 #define EXP_TYPE_LEGION			"Legion"
 #define EXP_TYPE_WASTELAND		"Raiders"
 #define EXP_TYPE_ENCLAVE		"Enclave"
