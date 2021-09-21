@@ -244,6 +244,9 @@
 /obj/item/blueprint/armor/combat
 	name = "combat armor blueprint"
 
+/obj/item/blueprint/armor/x02
+	name = "X02 Power Armor Blueprint"
+
 /obj/item/blueprint/armor/reinforced
 	name = "reinforced armor blueprint"
 
