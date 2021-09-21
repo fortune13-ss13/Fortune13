@@ -366,6 +366,12 @@
 	desc = "For keeping in criminal scum."
 	req_access = list(ACCESS_BRIG)
 
+/obj/machinery/door/window/brigdoor/security/cell/research
+	name = "test chamber door"
+	desc = "Door to keep test subjects inside."
+	req_access = list(ACCESS_ENCLAVE_RD)
+
+
 /obj/machinery/door/window/brigdoor/security/holding
 	name = "holding cell door"
 	req_one_access = list(ACCESS_SEC_DOORS, ACCESS_LAWYER) //love for the lawyer

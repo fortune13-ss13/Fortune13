@@ -341,12 +341,12 @@ Raider
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
 	flag = F13WASTELANDER
-	faction = "Wastelander"
+	faction = "Independent"
 	total_positions = -1
 	spawn_positions = -1
-	description = "You arrive in Yuma Valley, hoping to escape your past, the war, or perhaps something worse. But you’ve seen the torchlight and heard the bark of the military officers. You haven’t escaped anything. Try to survive, establish your own settlement, make your own legend. Suffer well and die gladly."
+	description = "You got bleak prospects and little to your name, but you're still alive. With no home and no allies, you need to use your wits to survive."
 	supervisors = "God"
-	selection_color = "#dddddd"
+	selection_color = "#006666"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 
@@ -373,14 +373,12 @@ Raider
 		),
 	)
 	loadout_options = list(
-	/datum/outfit/loadout/vault_refugee,
 	/datum/outfit/loadout/salvager,
 	/datum/outfit/loadout/medic,
 	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/scavenger,
-	/datum/outfit/loadout/settler,
 	/datum/outfit/loadout/bosremnant,)
-	//datum/outfit/loadout/wastelander_desert_ranger)
+
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -389,7 +387,7 @@ Raider
 	id = null
 	ears = null
 	belt = null
-//	r_hand = /obj/item/book/granter/trait/selection
+	r_hand = /obj/item/book/granter/trait/selection
 	l_pocket = /obj/item/storage/bag/money/small/wastelander
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/melee/onehanded/knife/survival

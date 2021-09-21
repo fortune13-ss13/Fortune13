@@ -71,7 +71,6 @@
 /obj/machinery/door/unpowered/padlockwooddoor
 	name = "wooden door with lock"
 	icon_state = "wood" 
-	req_one_access_txt = "25" // Standard Town access
 	max_integrity = 180
 
 /obj/machinery/door/unpowered/padlockwooddoor/do_animate(animation)
@@ -83,11 +82,30 @@
 			playsound(src,'sound/machines/door_close.ogg',40,1)
 			icon_state = "woodclosing"
 
+/obj/machinery/door/unpowered/padlockwooddoor/town
+	req_one_access_txt = "25" // Standard Town access
+
 /obj/machinery/door/unpowered/padlockwooddoor/merc
-	name = "wooden door with lock"
-	icon_state = "wood" 
-	req_one_access_txt = "62" // Standard Town access
-	max_integrity = 180
+	req_one_access_txt = "62" // Merc access
+
+
+/obj/machinery/door/unpowered/padlockraiderdoor
+	name = "beat up old door with a rusty lock"
+	icon_state = "fakeglass" 
+	max_integrity = 160
+	req_one_access_txt = "87" // Raider access
+
+/obj/machinery/door/unpowered/padlockraiderdoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',40,1)
+			icon_state = "fakeglassopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',40,1)
+			icon_state = "fakeglassclosing"
+
+/obj/machinery/door/unpowered/padlockraiderdoor/boss
+	req_one_access_txt = "38" // Raider Boss access
 
 
 /obj/machinery/door/unpowered/ragecagefencedoor
@@ -120,6 +138,10 @@
 		if("closing")
 			playsound(src,'sound/f13machines/doorstore_close.ogg',40,1)
 			icon_state = "barredclosing"
+
+/obj/machinery/door/unpowered/barredcelldoor/raider
+	name = "barred door with a simple lock"
+	req_one_access_txt = "87" // Raider access
 
 
 /obj/machinery/door/unpowered/padlockwooddoor/clinic
@@ -201,3 +223,39 @@
 
 /obj/machinery/door/unpowered/padlockirondoor/merc/commander
 	req_one_access_txt = "65" // Mercenary commander access
+
+
+/obj/machinery/door/unpowered/militarydoor
+	name = "military secure door"
+	icon_state = "bunker"
+	max_integrity = 600
+
+/obj/machinery/door/unpowered/militarydoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorairlock_open.ogg',40,1)
+			icon_state = "bunkeropening"
+		if("closing")
+			playsound(src,'sound/f13machines/doorairlock_close.ogg',40,1)
+			icon_state = "bunkerclosing"
+
+/obj/machinery/door/unpowered/militarydoor/enclave
+	req_one_access_txt = "134" // Enclave access
+
+/obj/machinery/door/unpowered/militarydoor/glass
+	name = "military secure door with a window"
+	icon_state = "bunkerglass"
+	max_integrity = 400
+	opacity = 0
+
+/obj/machinery/door/unpowered/militarydoor/glass/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorairlock_open.ogg',40,1)
+			icon_state = "bunkerglassopening"
+		if("closing")
+			playsound(src,'sound/f13machines/doorairlock_close.ogg',40,1)
+			icon_state = "bunkerglassclosing"
+
+/obj/machinery/door/unpowered/militarydoor/glass/enclave
+	req_one_access_txt = "134" // Enclave access

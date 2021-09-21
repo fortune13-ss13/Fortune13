@@ -434,7 +434,7 @@
 	desc = "A handbook made by some madman, detailing various ways to make improvised explosives."
 	icon_state = "gab4"
 	oneuse = TRUE
-	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
+	remarks = list("Don't mix it in the wrong order...", "Was it three or thirtythree second fuze? I forgot...", "Once you light the fuze mr. Bomb is no longer your friend...")
 	crafting_recipe_types = list(/datum/crafting_recipe/explosive/coffeepotbomb, /datum/crafting_recipe/explosive/firebomb, /datum/crafting_recipe/chemical_payload)
 
 /obj/item/book/granter/crafting_recipe/blueprint/trapper
@@ -533,7 +533,7 @@
 	time_per_page = 0
 
 /obj/item/book/granter/trait/selection/attack_self(mob/user)
-	var/list/choices = list("Big Book of Science","Dean's Electronics","Grognak the Barbarian","First Aid Pamphlet","US Army: Weapon Maintenance","Wasteland Survival Guide")
+	var/list/choices = list("Big Book of Science (Chemistry)","Dean's Electronics (Salvage)","Grognak the Barbarian (Armed melee)","First Aid Pamphlet (First Aid)","US Army: Weapon Maintenance (Tinkering)","Wasteland Survival Guide (Trekking)")
 	if(granted_trait == null)
 		var/choice = input("Choose a trait:") in choices
 		switch(choice)

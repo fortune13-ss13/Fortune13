@@ -531,16 +531,16 @@
 	grow_chance = 10
 
 /area/f13/city/town
-	name = "Rivertown"
+	name = "Riverton"
 	icon_state = "town"
 	outdoors = 0
 
 /area/f13/clinic/river
-	name = "Rivertown clinic"
+	name = "Riverton clinic"
 	icon_state = "townclinic"
 
 /area/f13/bar/river
-	name = "Rivertown Bar"
+	name = "Riverton Bar"
 	icon_state = "townbar"
 
 /area/f13/chapel

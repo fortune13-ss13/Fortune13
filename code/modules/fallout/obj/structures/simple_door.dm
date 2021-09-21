@@ -325,6 +325,7 @@
 	opacity = FALSE
 	base_opacity = FALSE
 	can_hold_padlock = TRUE
+	hard_open = 0
 
 /obj/structure/simple_door/wood
 	icon_state = "wood"

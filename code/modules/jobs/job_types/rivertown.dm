@@ -109,7 +109,7 @@ here's a tip, go search DEFINES/access.dm
 	exp_requirements = 120
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Rivertown Alderman in theory, but you true master is far above them. If the Alderman is indisposed the people look to you for leadership."
+	supervisors = "Riverton Alderman in theory, but you true master is far above them. If the Alderman is indisposed the people look to you for leadership."
 	description = "There are many lost souls in this wasteland, comfort them or condemn them as your conscience and faith demands. You do live here so don't go overboard."
 	outfit = /datum/outfit/job/town/preacher
 	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
@@ -205,7 +205,7 @@ here's a tip, go search DEFINES/access.dm
 
 /*------------------ MERCENARY COMMANDER ---------------------*/
 // Leader of the mercenaries, men and women who fight for pay.
-// Loyalty to their employer is always negotiable, but Rivertown
+// Loyalty to their employer is always negotiable, but Riverton
 // is a fat monthly paycheck and betrayal costs reputation which is
 // vital if you wanna find work ever again in this business.
 
@@ -367,7 +367,7 @@ here's a tip, go search DEFINES/access.dm
 
 
 /*---------------------- TOWN DOCTOR ---------------------------*/
-// The wealth of Rivertown has allowed the citizens to send promising
+// The wealth of Riverton has allowed the citizens to send promising
 // children to other settlements to learn, or to hire tutors. The 
 // healtchare in the town has improved drastically due to this.
 
@@ -442,7 +442,7 @@ here's a tip, go search DEFINES/access.dm
 
 
 /*---------------------- TOWN BARKEEP ---------------------------*/
-// Rivertown specializes in seafood for obvious reasons, but people
+// Riverton specializes in seafood for obvious reasons, but people
 // love variety, and the barkeep provides both that and a place to 
 // gather, socialize and enjoy a break from daily life.
 
@@ -532,8 +532,8 @@ here's a tip, go search DEFINES/access.dm
 	flag = F13SETTLER
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "Rivertown Alderman"
-	description = "You are a new citizen of Rivertown, but you lack a home of your own in its safety. You scrape together a living in your settlers cabin as well you can."
+	supervisors = "Riverton Alderman"
+	description = "You are a new citizen of Riverton, but you lack a home of your own in its safety. You scrape together a living in your settlers cabin as well you can."
 	outfit = /datum/outfit/job/town/settler
 	loadout_options = list(
 		/datum/outfit/loadout/farmer,
@@ -622,7 +622,7 @@ here's a tip, go search DEFINES/access.dm
 
 
 /*---------------------- TOWN CITIZEN ---------------------------*/
-// The citizens of Rivertown work in the fishing industry, trading,
+// The citizens of Riverton work in the fishing industry, trading,
 // entertaining or doing any of the hundred odd jobs needed in the 
 // settlement. You are free, fairly safe, though the shadow of the 
 // disaster ten years ago weigh on the minds of the older members.
@@ -632,8 +632,8 @@ here's a tip, go search DEFINES/access.dm
 	flag = F13SETTLER
 	total_positions = 8
 	spawn_positions = 8
-	supervisors = "Rivertown Alderman"
-	description = "You are a citizen living in Rivertown, it's your home, so act accordingly and keep it as clean and safe as you can."
+	supervisors = "Riverton Alderman"
+	description = "You are a citizen living in Riverton, it's your home, so act accordingly and keep it as clean and safe as you can."
 
 	outfit = /datum/outfit/job/town/citizen
 	loadout_options = list(
@@ -706,7 +706,7 @@ here's a tip, go search DEFINES/access.dm
 
 /*---------------------- TOWN MACHINIST ---------------------------*/
 // The secrets of blacksmithing and crafting many things from salvage
-// has been kept alive in Rivertown and is the main source of their
+// has been kept alive in Riverton and is the main source of their
 // power, besides the income from the open air market and the fishing.
 
 /datum/job/town/machinist

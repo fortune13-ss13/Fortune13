@@ -2365,6 +2365,10 @@
 	icon_state = "yellow"
 	},
 /area/f13/enclave)
+"iS" = (
+/obj/machinery/door/unpowered/militarydoor/enclave,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/enclave)
 "iU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2655,16 +2659,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
-"jM" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Enclave Airlock";
-	req_access_txt = "134"
-	},
-/turf/open/floor/plasteel/f13{
-	icon = 'icons/turf/floors.dmi';
-	icon_state = "titanium"
-	},
-/area/f13/enclave)
 "jN" = (
 /obj/machinery/processor,
 /turf/open/floor/plasteel/f13{
@@ -4546,6 +4540,11 @@
 	icon_state = "platingdmg3"
 	},
 /area/f13/bunker)
+"re" = (
+/obj/structure/closet/crate/footchest,
+/obj/item/reagent_containers/pill/patch/bitterdrink,
+/turf/open/floor/f13/wood,
+/area/f13/village)
 "rf" = (
 /obj/structure/table/optable,
 /obj/machinery/light,
@@ -4625,6 +4624,13 @@
 /obj/structure/bed/old,
 /turf/open/floor/mineral/plastitanium,
 /area/f13/vault)
+"ru" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4
+	},
+/obj/structure/table/wood/settler,
+/turf/open/floor/f13/wood,
+/area/f13/village)
 "rv" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
@@ -7696,6 +7702,7 @@
 /obj/item/flashlight/flare/torch,
 /obj/item/flashlight/flare/torch,
 /obj/item/gun/ballistic/shotgun/hunting,
+/obj/item/ammo_box/shotgun/buck,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "DS" = (
@@ -7780,11 +7787,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/village)
 "Ej" = (
-/obj/structure/simple_door/bunker{
-	desc = "An olive green painted airlock with hydraulic machinery.";
-	name = "security door";
-	req_access_txt = "134"
-	},
+/obj/machinery/door/unpowered/militarydoor/enclave,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -9177,8 +9180,8 @@
 	},
 /area/f13/vault)
 "JV" = (
-/obj/machinery/door/window/brigdoor/security/cell/westright{
-	req_access_txt = "135"
+/obj/machinery/door/window/brigdoor/security/cell/research{
+	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/enclave)
@@ -9684,7 +9687,7 @@
 	},
 /area/f13/enclave)
 "LN" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/unpowered/militarydoor/enclave,
 /turf/open/floor/carpet/black,
 /area/f13/enclave)
 "LP" = (
@@ -10167,11 +10170,7 @@
 	},
 /area/f13/bunker)
 "NN" = (
-/obj/structure/simple_door/bunker{
-	desc = "An olive green painted airlock with hydraulic machinery.";
-	name = "security door";
-	req_access_txt = "134"
-	},
+/obj/machinery/door/unpowered/militarydoor/glass/enclave,
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluechess"
 	},
@@ -12363,10 +12362,7 @@
 /obj/machinery/door/poddoor/shutters/old/preopen{
 	id = "bos"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Enclave Airlock";
-	req_access_txt = "134"
-	},
+/obj/machinery/door/unpowered/militarydoor/enclave,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -12981,11 +12977,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "Yr" = (
-/obj/structure/simple_door/bunker{
-	desc = "An olive green painted airlock with hydraulic machinery.";
-	name = "security door";
-	req_access_txt = "134"
-	},
+/obj/machinery/door/unpowered/militarydoor/enclave,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -13443,10 +13435,7 @@
 	},
 /area/f13/vault)
 "ZZ" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Commissary";
-	req_access_txt = "134"
-	},
+/obj/machinery/door/unpowered/militarydoor/glass/enclave,
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
@@ -18137,8 +18126,8 @@ Vz
 Vz
 Vz
 Vz
-jM
-jM
+ZZ
+ZZ
 Vz
 Vz
 Za
@@ -19275,7 +19264,7 @@ dJ
 dJ
 aj
 VI
-Rn
+iS
 cA
 cA
 cA
@@ -19437,7 +19426,7 @@ dJ
 dJ
 aj
 VI
-Rn
+iS
 cA
 cA
 cA
@@ -19717,9 +19706,9 @@ lQ
 Hy
 we
 ea
-Pq
-Zy
-Pq
+ea
+ea
+re
 we
 Hy
 Hy
@@ -19879,9 +19868,9 @@ bK
 Hy
 we
 ea
-ea
-NG
-ea
+Pq
+ru
+Pq
 we
 Hy
 Hy
@@ -20564,7 +20553,7 @@ Hf
 ZZ
 Vz
 Hf
-jM
+ZZ
 Hf
 Vz
 ri

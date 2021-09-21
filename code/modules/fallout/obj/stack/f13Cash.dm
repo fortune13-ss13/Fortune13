@@ -153,12 +153,12 @@
 	max_qty = BANKER_MAX / CASH_CAP
 
 /obj/item/stack/f13Cash/denarius
-	name = "Rivertown Fish Chits"
+	name = "Riverton Fish Chits"
 	latin = 1
-	singular_name = "Rivertown Fish Chit" // -us or -i
+	singular_name = "Riverton Fish Chit" // -us or -i
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "denarius"
-	flavor_desc =	"The local currency of rivertown, made with some obscure mix of cheap metals."
+	flavor_desc =	"The local currency of riverton, made with some obscure mix of cheap metals."
 	value = CASH_DEN * CASH_CAP
 	merge_type = /obj/item/stack/f13Cash/denarius
 
@@ -195,7 +195,7 @@
 	singular_name = "Golden Fish Chit"// -us or -i
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "aureus"
-	flavor_desc = 	"The higher denomination of local rivertown currency, the Golden Chit, each is worth 100 caps!"
+	flavor_desc = 	"The higher denomination of local riverton currency, the Golden Chit, each is worth 100 caps!"
 	value = CASH_AUR * CASH_CAP
 	merge_type = /obj/item/stack/f13Cash/aureus
 
