@@ -454,6 +454,17 @@
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/mre
 
+/obj/item/reagent_containers/food/snacks/f13/mre/remnant
+	name = "Enclave MRE"
+	desc = "One of the few things the Enclave hasn't improved on following the war, no one on base is quite sure what the meat inside is."
+	icon_state = "remnantmre"
+
+/obj/item/reagent_containers/food/snacks/f13/mre/canned
+	name = "Canned MRE Meat"
+	desc = "MRE in a can! with 100% less cardboard and 300% more smell. Nutritious."
+	icon_state = "cannedmre"
+
+
 /obj/item/reagent_containers/food/snacks/f13/galette
 	name = "dehydrated pea soup"
 	desc = "A piece of military food ration.<br>Faded label on the front says: \"Dehydrated peas. Chew well, take with water. 60g.\""

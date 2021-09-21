@@ -26,10 +26,15 @@
 	path = /obj/item/storage/box/large/custom_kit/averyamadeus
 	ckeywhitelist = list("topbirb")
 
-
 */
 
 /datum/gear/donator/kits/crimson
 	name = "Crimson's Belongings"
 	path = /obj/item/storage/box/large/custom_kit/crimson
 	ckeywhitelist = list("rigbe")
+
+
+/datum/gear/donator/kits/tumbledown
+	name = "Tumbledown's Belongings"
+	path = /obj/item/storage/box/large/custom_kit/tumbledown
+	ckeywhitelist = list("spaceanglo")
