@@ -9,3 +9,9 @@
 /obj/item/storage/box/large/custom_kit/crimson/PopulateContents()
 	new /obj/item/clothing/mask/bandana/skull(src)
 	new /obj/item/clothing/glasses/sunglasses/big(src)
+
+//Tumbledown - SpaceAnglo
+/obj/item/storage/box/large/custom_kit/tumbledown/PopulateContents()
+	new /obj/item/clothing/head/helmet/f13/remnant/intel(src)
+	new /obj/item/clothing/under/f13/enclave/intel(src)
+	new /obj/item/clothing/accessory/ncr/SPC(src)

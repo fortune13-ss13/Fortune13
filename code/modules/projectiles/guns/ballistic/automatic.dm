@@ -801,58 +801,61 @@
 	can_attachments = TRUE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
-	knife_x_offset = 22
+	knife_x_offset = 23
 	knife_y_offset = 21
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
-	suppressor_y_offset = 25
+	suppressor_y_offset = 28
 	can_flashlight = TRUE
 	gunlight_state = "flightangle"
-	flight_x_offset = 21
-	flight_y_offset = 21
+	flight_x_offset = 20
+	flight_y_offset = 23
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 //R91A1
 /obj/item/gun/ballistic/automatic/assault_rifle/r91a1
 	name = "R91A1 Assault Rifle"
-	desc = "A post-war improvement of the R91 Assault Rifle, the Enclave began to develop these rifles for use by light infantry units outside of the Capital, boasting a chrome lined barrel, an improved receiver, and a reinforced, durable firing mechanism it’d be difficult even for a soldier to break this one."
+	desc = "A post-war improvement of the R91 Assault Rifle, the Enclave began to develop these rifles for use by light infantry units outside of the Capital, boasting a chrome lined barrel, an improved receiver & a reinvented durable firing mechanism, it’d be difficult to break."
 	icon_state = "r91"
 	item_state = "fnfal"
 	extra_damage = 3
 	burst_size = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 
 //R91-C
 /obj/item/gun/ballistic/automatic/assault_rifle/r91c
 	name = "R91-C"
-	desc = "The R91-C, a carbine version of it's parent rifle, boasting a shorter barrel with a suppressor, durable polymer furniture and railing for various attachments including scopes, this variant was designed initially to be compacted and lighter, for use by paratroopers, special forces and rear echelon units such as drivers."
+	desc = "The R91-C, a carbine version of it's parent rifle, boasting a shorter low-profile barrel, folding skeleton stock, durable polymer furniture & railing for various attachments, this variant was designed initially to be compacted for use by paratroopers, special forces and soldiers in need of smaller weapom such as drivers."
 	icon_state = "r91c"
 	item_state = "assault_carbine"
 	extra_damage = 1
 	can_attachments = FALSE
-	can_suppress = FALSE
-	can_unsuppress = FALSE
+	can_suppress = TRUE
+	suppressor_state = "rifle_suppressor"
+	suppressor_x_offset = 24
+	suppressor_y_offset = 25
 	can_scope = TRUE
 	scope_state = "scope_short"
 	scope_x_offset = 5
 	scope_y_offset = 12
 	suppressed = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
+	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 
 //R91-M
 /obj/item/gun/ballistic/automatic/assault_rifle/r91m
 	name = "R91-M"
-	desc = "The R91-M boasts a heavier barrel, a scope bracket and a low-profile upper receiver, this variant was designed to provide US Army units with a marksman capable platform at a squad level, still utilised today, though in refurbished frames by the Enclave."
+	desc = "The R91-M boasts a heavier barrel, scope bracket & a low-profile upper receiver, this variant was designed to provide the US Army with a marksman capable platform at a squad level."
 	icon_state = "r91m"
 	item_state = "fnfal"
 	extra_damage = 7
 	extra_penetration = 0.1
 	recoil = 0.6
 	can_attachments = FALSE
+	can_suppress = FALSE
 	can_bayonet = FALSE
 	can_scope = FALSE
 	zoomable = TRUE
@@ -860,7 +863,7 @@
 	zoom_out_amt = 13
 	burst_size = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
+	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 
 //Infiltrator			Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, Suppressed, Small scope, Damage -1, Pistol grip
 /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator

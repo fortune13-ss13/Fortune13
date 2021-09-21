@@ -459,7 +459,7 @@
 	desc = "One of the few things the Enclave hasn't improved on following the war, no one on base is quite sure what the meat inside is."
 	icon_state = "remnantmre"
 
-/obj/item/reagent_containers/food/snacks/f13/mre/remnant
+/obj/item/reagent_containers/food/snacks/f13/mre/canned
 	name = "Canned MRE Meat"
 	desc = "MRE in a can! with 100% less cardboard and 300% more smell. Nutritious."
 	icon_state = "cannedmre"
