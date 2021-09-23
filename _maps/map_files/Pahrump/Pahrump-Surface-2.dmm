@@ -2103,21 +2103,14 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/forest/animals)
 "bYC" = (
-/obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_4"
-	},
+/obj/structure/flora/grass/wasteland,
 /turf/open/indestructible/ground/outside/savannah/edgesnew{
-	dir = 10
+	dir = 1
 	},
 /area/f13/wasteland)
 "bYJ" = (
 /obj/effect/turf_decal/cliff{
 	dir = 6
-	},
-/obj/effect/overlay/cliff{
-	dir = 8;
-	pixel_x = 33;
-	pixel_y = 1
 	},
 /obj/effect/overlay/cliff{
 	dir = 1;
@@ -5488,9 +5481,11 @@
 /area/f13/forest/animals)
 "fmX" = (
 /obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_2"
+	icon_state = "tall_grass_8"
 	},
-/turf/open/indestructible/ground/outside/savannah,
+/turf/open/indestructible/ground/outside/savannah/edgesnew{
+	dir = 1
+	},
 /area/f13/wasteland)
 "fnh" = (
 /obj/effect/turf_decal/stripes/line{
@@ -14471,14 +14466,6 @@
 	icon_state = "panelscorched"
 	},
 /area/f13/building)
-"olI" = (
-/obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_4"
-	},
-/turf/open/indestructible/ground/outside/savannah/edgesnew{
-	dir = 4
-	},
-/area/f13/wasteland)
 "olV" = (
 /obj/effect/decal/waste{
 	icon_state = "goo10"
@@ -22968,6 +22955,10 @@
 "wSe" = (
 /obj/structure/chair/bench{
 	pixel_x = -9
+	},
+/obj/structure/railing/wooden{
+	dir = 4;
+	pixel_x = 3
 	},
 /turf/open/floor/wood/f13/stage_r/outdoors,
 /area/f13/wasteland)
@@ -32590,7 +32581,7 @@ qes
 pYK
 aMr
 nmV
-vHM
+qmT
 guw
 dIo
 pqf
@@ -32752,7 +32743,7 @@ qes
 pYK
 aMr
 nmV
-hFs
+lJc
 qXn
 qXn
 wSU
@@ -33576,7 +33567,7 @@ vHM
 vHM
 vHM
 vHM
-jrR
+hFs
 lkP
 oXT
 oXT
@@ -34051,7 +34042,7 @@ nmV
 hFs
 qXn
 qXn
-cgm
+qXn
 qXn
 qXn
 qXn
@@ -34544,10 +34535,10 @@ dVU
 dVU
 dVU
 ccc
-oky
-jIr
+vHM
+vHM
 lJc
-sXg
+qXn
 wyH
 lAD
 oXT
@@ -35192,7 +35183,7 @@ vHM
 onA
 qXn
 qXn
-apV
+qXn
 qXn
 cgm
 qXn
@@ -35354,7 +35345,7 @@ hFs
 guw
 qXn
 qXn
-apV
+qXn
 qXn
 qXn
 qXn
@@ -35516,7 +35507,7 @@ lJc
 qXn
 qXn
 qXn
-apV
+qXn
 qXn
 qXn
 qXn
@@ -35836,9 +35827,9 @@ wus
 wus
 uJj
 vHM
-onA
+lJc
 qXn
-apV
+qXn
 qXn
 qXn
 qXn
@@ -42463,7 +42454,7 @@ tIM
 tIM
 lJc
 dIo
-olI
+wus
 uJj
 aMr
 nmV
@@ -43119,7 +43110,7 @@ wPx
 hAT
 dtQ
 vHM
-ahm
+vHM
 vHM
 vHM
 vHM
@@ -44092,9 +44083,9 @@ lyc
 lyc
 deh
 vHM
-ahm
+vHM
 lJc
-fmX
+qXn
 qXn
 qXn
 wSU
@@ -44745,7 +44736,7 @@ qXn
 qXn
 tKW
 paH
-qZl
+vHM
 aNJ
 oXT
 oXT
@@ -45063,7 +45054,7 @@ qes
 dtQ
 qes
 vHM
-bvp
+iLy
 lao
 qXn
 wyH
@@ -45719,7 +45710,7 @@ qXn
 qXn
 qXn
 qXn
-bYC
+vLM
 bDH
 oXT
 oXT
@@ -45879,9 +45870,9 @@ lJc
 qXn
 qXn
 qXn
-apV
 qXn
 qXn
+wSU
 bDH
 oXT
 oXT
@@ -46043,7 +46034,7 @@ qXn
 qXn
 fSl
 qXn
-apV
+fmX
 bDH
 oXT
 oXT
@@ -46205,7 +46196,7 @@ apV
 qXn
 qXn
 qXn
-qXn
+wSU
 bDH
 oXT
 oXT
@@ -46367,7 +46358,7 @@ qXn
 qXn
 qXn
 fgn
-fiP
+ccc
 bDH
 oXT
 oXT
@@ -46848,8 +46839,8 @@ vHM
 lJc
 qXn
 iGz
-paH
-ihG
+wSU
+vHM
 vHM
 vHM
 vwS
@@ -47008,9 +46999,9 @@ qes
 qes
 vHM
 lJc
-apV
 qXn
-paH
+qXn
+wSU
 vHM
 vHM
 aFf
@@ -47172,7 +47163,7 @@ vHM
 lJc
 qXn
 qXn
-iaU
+bYC
 jIr
 vHM
 aNJ
