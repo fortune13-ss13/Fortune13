@@ -327,9 +327,37 @@
 	subcategory = CAT_ARMOR
 	always_availible = FALSE
 
+/datum/crafting_recipe/x02
+	name = "X02 Power Armor"
+	result = /obj/item/clothing/suit/armor/f13/power_armor/x02
+	reqs = list(/obj/item/stack/sheet/plasteel = 5,
+				/obj/item/stack/crafting/goodparts = 15,
+				/obj/item/stack/sheet/mineral/titanium = 15,
+				/obj/item/stack/crafting/metalparts = 10,
+				/obj/item/stack/crafting/electronicparts = 5)
+	time = 80
+	tools = list(TOOL_AWORKBENCH, /obj/item/blueprint/armor/x02)
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
 ///////////
 //HELMETS//
 ///////////
+
+/datum/crafting_recipe/x02
+	name = "X02 Power Armor Helmet"
+	result = /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
+	reqs = list(/obj/item/stack/sheet/plasteel = 3,
+				/obj/item/stack/crafting/goodparts = 10,
+				/obj/item/stack/sheet/mineral/titanium = 5,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/crafting/electronicparts = 5)
+	time = 80
+	tools = list(TOOL_AWORKBENCH, /obj/item/blueprint/armor/x02)
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
 
 /datum/crafting_recipe/bighorn
 	name = "Bighorner Helmet"
