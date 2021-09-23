@@ -1,7 +1,7 @@
 /obj/structure/railing
 	name = "railing"
 	desc = "Basic railing meant to protect idiots like you from falling."
-	icon = 'icons/obj/fluff.dmi'
+	icon = 'icons/obj/fence.dmi'
 	icon_state = "railing"
 	density = TRUE
 	anchored = TRUE
@@ -105,3 +105,49 @@
 	air_update_turf(1)
 	ini_dir = dir
 	add_fingerprint(user)
+
+
+/obj/structure/railing/wooden
+	name = "wooden fence"
+	desc = "Marks property and prevents accidents."
+	icon_state = "straight_wood"
+	layer = WALL_OBJ_LAYER
+
+/obj/structure/railing/wooden/underlayer
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/railing/wooden/corner 
+	icon_state = "corner_wood"
+	density = FALSE
+
+/obj/structure/railing/wooden/corner/underlayer
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/railing/wooden/corner/post
+	icon_state = "post_wood"
+	density = FALSE
+
+/obj/structure/railing/handrail
+	name = "handrail"
+	desc = "A waist high handrail, perhaps you could climb over it."
+	icon_state = "handrail_y"
+	layer = WALL_OBJ_LAYER
+
+/obj/structure/railing/handrail/end
+	icon_state = "handrail_y_end"
+	density = FALSE
+
+/obj/structure/railing/handrail/intersect
+	icon_state = "handrail_y_intersect"
+
+/obj/structure/railing/handrail/rusty
+	name = "handrail"
+	desc = "Old, rusted metal handrails. The green paint is chipping off in spots."
+	icon_state = "handrail_g"
+
+/obj/structure/railing/handrail/rusty/end
+	icon_state = "handrail_g_end"
+	density = FALSE
+
+
+

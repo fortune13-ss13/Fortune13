@@ -63,11 +63,6 @@
 	name = "door"
 	icon_state = "door1"
 
-/obj/machinery/door/unpowered/wooddoor
-	name = "wooden door"
-	icon_state = "wood"
-
-
 /obj/machinery/door/unpowered/padlockwooddoor
 	name = "wooden door with lock"
 	icon_state = "wood" 
@@ -76,10 +71,10 @@
 /obj/machinery/door/unpowered/padlockwooddoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/machines/door_open.ogg',40,1)
+			playsound(src,'sound/machines/door_open.ogg',30,1)
 			icon_state = "woodopening"
 		if("closing")
-			playsound(src,'sound/machines/door_close.ogg',40,1)
+			playsound(src,'sound/machines/door_close.ogg',30,1)
 			icon_state = "woodclosing"
 
 /obj/machinery/door/unpowered/padlockwooddoor/town
@@ -98,10 +93,10 @@
 /obj/machinery/door/unpowered/padlockraiderdoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/machines/door_open.ogg',40,1)
+			playsound(src,'sound/machines/door_open.ogg',30,1)
 			icon_state = "fakeglassopening"
 		if("closing")
-			playsound(src,'sound/machines/door_close.ogg',40,1)
+			playsound(src,'sound/machines/door_close.ogg',30,1)
 			icon_state = "fakeglassclosing"
 
 /obj/machinery/door/unpowered/padlockraiderdoor/boss
@@ -117,26 +112,42 @@
 /obj/machinery/door/unpowered/ragecagefencedoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',40,1)
+			playsound(src,'sound/f13machines/doorchainlink_open.ogg',30,1)
 			icon_state = "fenceopening"
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',40,1)
+			playsound(src,'sound/f13machines/doorchainlink_close.ogg',30,1)
 			icon_state = "fenceclosing"
 
+
+/obj/machinery/door/unpowered/woodenfencedoor
+	name = "padlocked wooden fence door"
+	icon_state = "fence_wood"
+	req_one_access_txt = "87" // Raider access
+	max_integrity = 100
+
+/obj/machinery/door/unpowered/woodenfencedoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "fence_woodopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "fence_woodclosing"
 
 /obj/machinery/door/unpowered/barredcelldoor
 	name = "cell door"
 	icon_state = "barred"
 	req_one_access_txt = "62" // Mercenary access
 	max_integrity = 220
+	autoclose = TRUE
 
 /obj/machinery/door/unpowered/barredcelldoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorstore_open.ogg',40,1)
+			playsound(src,'sound/f13machines/doorstore_open.ogg',30,1)
 			icon_state = "barredopening"
 		if("closing")
-			playsound(src,'sound/f13machines/doorstore_close.ogg',40,1)
+			playsound(src,'sound/f13machines/doorstore_close.ogg',30,1)
 			icon_state = "barredclosing"
 
 /obj/machinery/door/unpowered/barredcelldoor/raider
@@ -167,10 +178,10 @@
 /obj/machinery/door/unpowered/padlockwooddoor/clinic/interior/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/machines/door_open.ogg',40,1)
+			playsound(src,'sound/machines/door_open.ogg',30,1)
 			icon_state = "white-dirtyopening"
 		if("closing")
-			playsound(src,'sound/machines/door_close.ogg',40,1)
+			playsound(src,'sound/machines/door_close.ogg',30,1)
 			icon_state = "white-dirtyclosing"
 
 
@@ -178,14 +189,15 @@
 	name = "Aldermans office"
 	icon_state = "white-dirty" 
 	req_one_access_txt = "52" // Alderman access
+	autoclose = TRUE
 
 /obj/machinery/door/unpowered/padlockwooddoor/alderman/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/machines/door_open.ogg',40,1)
+			playsound(src,'sound/machines/door_open.ogg',30,1)
 			icon_state = "white-dirtyopening"
 		if("closing")
-			playsound(src,'sound/machines/door_close.ogg',40,1)
+			playsound(src,'sound/machines/door_close.ogg',30,1)
 			icon_state = "white-dirtyclosing"
 
 
@@ -196,10 +208,10 @@
 /obj/machinery/door/unpowered/padlockwooddoor/alderman/interior/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/machines/door_open.ogg',40,1)
+			playsound(src,'sound/machines/door_open.ogg',30,1)
 			icon_state = "whiteopening"
 		if("closing")
-			playsound(src,'sound/machines/door_close.ogg',40,1)
+			playsound(src,'sound/machines/door_close.ogg',30,1)
 			icon_state = "whiteclosing"
 
 
@@ -212,10 +224,10 @@
 /obj/machinery/door/unpowered/padlockirondoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorstore_open.ogg',40,1)
+			playsound(src,'sound/f13machines/doorstore_open.ogg',30,1)
 			icon_state = "metalopening"
 		if("closing")
-			playsound(src,'sound/f13machines/doorstore_close.ogg',40,1)
+			playsound(src,'sound/f13machines/doorstore_close.ogg',30,1)
 			icon_state = "metalclosing"
 
 /obj/machinery/door/unpowered/padlockirondoor/merc
@@ -224,19 +236,35 @@
 /obj/machinery/door/unpowered/padlockirondoor/merc/commander
 	req_one_access_txt = "65" // Mercenary commander access
 
+//
+/obj/machinery/door/unpowered/padlockwooddoor/alderman
+	name = "Aldermans office"
+	icon_state = "white-dirty" 
+	req_one_access_txt = "52" // Alderman access
+
+/obj/machinery/door/unpowered/padlockwooddoor/alderman/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "white-dirtyopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "white-dirtyclosing"
+//
 
 /obj/machinery/door/unpowered/militarydoor
 	name = "military secure door"
 	icon_state = "bunker"
 	max_integrity = 600
+	autoclose = TRUE
 
 /obj/machinery/door/unpowered/militarydoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorairlock_open.ogg',40,1)
+			playsound(src,'sound/f13machines/doorairlock_open.ogg',30,1)
 			icon_state = "bunkeropening"
 		if("closing")
-			playsound(src,'sound/f13machines/doorairlock_close.ogg',40,1)
+			playsound(src,'sound/f13machines/doorairlock_close.ogg',30,1)
 			icon_state = "bunkerclosing"
 
 /obj/machinery/door/unpowered/militarydoor/enclave
@@ -251,10 +279,10 @@
 /obj/machinery/door/unpowered/militarydoor/glass/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorairlock_open.ogg',40,1)
+			playsound(src,'sound/f13machines/doorairlock_open.ogg',30,1)
 			icon_state = "bunkerglassopening"
 		if("closing")
-			playsound(src,'sound/f13machines/doorairlock_close.ogg',40,1)
+			playsound(src,'sound/f13machines/doorairlock_close.ogg',30,1)
 			icon_state = "bunkerglassclosing"
 
 /obj/machinery/door/unpowered/militarydoor/glass/enclave

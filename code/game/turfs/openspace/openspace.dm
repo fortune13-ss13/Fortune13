@@ -24,6 +24,8 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/open/transparent/openspace/outside
 	sunlight_state = SUNLIGHT_SOURCE
 
+/turf/open/transparent/openspace/outside/fishingspot
+
 /turf/open/transparent/openspace/airless
 	initial_gas_mix = AIRLESS_ATMOS
 

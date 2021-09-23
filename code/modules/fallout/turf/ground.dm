@@ -51,7 +51,6 @@
 //////////////////////////////////////////////////////////////////////
 
 /turf/open/indestructible/ground/outside
-	sunlight_state = SUNLIGHT_SOURCE
 	slowdown = 0.2
 
 /turf/open/indestructible/ground/outside/Initialize()
@@ -242,12 +241,6 @@
 /turf/open/indestructible/ground/outside/dirt/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return //same thing here, dirt absorbs the liquid... :(
 
-/obj/effect/overlay/cliff
-	icon = 'icons/fallout/decals/turf_mergeoverlays.dmi'
-	icon_state = "dirt_side"
-
-/obj/effect/overlay/cliff/corner
-	icon_state = "dirt_corner"
 
 /turf/open/indestructible/ground/outside/road
 	name = "\proper road"
