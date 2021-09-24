@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/handy
 	name = "mr. handy"
 	desc = "A crazed pre-war household assistant robot, armed with a cutting saw."
-	icon = 'icons/fallout/mobs/robots.dmi'
+	icon = 'icons/fallout/mobs/robots/robot_general.dmi'
 	icon_state = "handy"
 	icon_living = "handy"
 	icon_dead = "gib7"
@@ -99,10 +99,27 @@
 	name = "private Gutsy"
 	icon_state = "pvtgutsy"
 	icon_living = "pvtgutsy"
+	melee_damage_type = BURN
 	icon_dead = "gib6"
-	aggro_vision_range = 15
+	aggro_vision_range = 12
 	faction = list("hostile", "supermutant")
 	obj_damage = 300
+
+/mob/living/simple_animal/hostile/handy/gutsy/nationalguard/flamer
+	desc = "Military combat robot with a terrifying heavy flamethrower and a circular saw."
+	icon_state = "pvtgutsyflamer"
+	icon_living = "pvtgutsyflamer"
+	extra_projectiles = 1
+	rapid = 6
+	rapid_fire_delay = 0.5 
+	emote_taunt = list("raises its flamer")
+	melee_damage_type = BRUTE
+	melee_damage_lower = 28
+	melee_damage_upper = 28 
+	projectilesound = 'sound/weapons/flamethrower.ogg'
+	projectiletype = /obj/item/projectile/incendiary/flamethrower
+	attack_verb_simple = "saws"
+	attack_sound = 'sound/f13npc/handy/attack.wav'
 
 /mob/living/simple_animal/hostile/handy/gutsy/playable
 	ranged = FALSE
