@@ -102,4 +102,4 @@
 /obj/structure/destructible/tribal_torch/lanternpost/cathouse
 	desc = "Lantern with a wax candle inside a pink colored glass and metal housing."
 	icon_state = "prospector_lamp-on"
-	light_color = #ffc0cb
+	light_color = "#ffc0cb"
