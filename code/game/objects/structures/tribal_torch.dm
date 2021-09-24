@@ -91,15 +91,15 @@
 	desc = "Lantern with a wax candle inside a glass and metal housing."
 	density = FALSE
 	anchored = TRUE
-	icon = 'icons/obj/candle.dmi'
+	icon = 'icons/obj/lighting.dmi'
 	icon_state = "prospector_lamp-on"
 	light_power = 1
-	light_range = 6
+	light_range = 5
 	break_sound = 'sound/hallucinations/veryfar_noise.ogg'
 	debris = list(/obj/item/candle/tribal_torch = 1)
 	burning = TRUE
 
 /obj/structure/destructible/tribal_torch/lanternpost/cathouse
 	desc = "Lantern with a wax candle inside a pink colored glass and metal housing."
-	icon_state = "prospector_lamp-on"
-	light_color = "#ffc0cb"
+	icon_state = "cathouse_lamp-on"
+	light_color = "#dd99a4"
