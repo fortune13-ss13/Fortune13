@@ -33,8 +33,17 @@
 	path = /obj/item/storage/box/large/custom_kit/crimson
 	ckeywhitelist = list("rigbe")
 
-
 /datum/gear/donator/kits/tumbledown
 	name = "Tumbledown's Belongings"
 	path = /obj/item/storage/box/large/custom_kit/tumbledown
 	ckeywhitelist = list("spaceanglo")
+
+/datum/gear/donator/kits/courier
+	name = "Courier of Hope's Belongings"
+	path = /obj/item/storage/box/large/custom_kit/courier
+	ckeywhitelist = list("kingfriesv3")
+
+/datum/gear/donator/kits/emelly
+	name = "Emelly Fries' Belongings"
+	path = /obj/item/storage/box/large/custom_kit/emelly
+	ckeywhitelist = list("kingfriesv3")

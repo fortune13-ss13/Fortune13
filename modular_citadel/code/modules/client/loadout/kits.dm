@@ -14,4 +14,14 @@
 /obj/item/storage/box/large/custom_kit/tumbledown/PopulateContents()
 	new /obj/item/clothing/head/helmet/f13/remnant/intel(src)
 	new /obj/item/clothing/under/f13/enclave/intel(src)
-	new /obj/item/clothing/accessory/ncr/SPC(src)
+
+//Courier of Hope - KingFriesV3
+/obj/item/storage/box/large/custom_kit/courier/PopulateContents()
+	new /obj/item/clothing/under/f13/exile/tribal(src)
+	new /obj/item/clothing/head/kitty(src)
+	new /obj/item/clothing/gloves/f13/blacksmith(src)
+
+//Emelly Fries - KingFriesV3
+/obj/item/storage/box/large/custom_kit/emelly/PopulateContents()
+	new /obj/item/clothing/under/f13/bos/bodysuit(src)
+	new /obj/item/clothing/accessory/bos/knightcaptain(src)

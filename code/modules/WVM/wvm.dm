@@ -770,6 +770,20 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("ORM Board",				/obj/item/circuitboard/machine/ore_redemption,				150)
 		)
 
+/obj/machinery/mineral/wasteland_vendor/enclave
+	name = "Enclave Headquarters Uplink Vendor"
+	icon_state = "enclave_vendor"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("PA Training Book",				/obj/item/book/granter/trait/pa_wear,							400),
+		new /datum/data/wasteland_equipment("X02 Armor Blueprint",			/datum/crafting_recipe/x02,										3000),
+		new /datum/data/wasteland_equipment("Enclave MRE",					/obj/item/reagent_containers/food/snacks/f13/mre/remnant,		35)
+		)
+	highpop_list = list(
+		new /datum/data/wasteland_equipment("PA Training Book",				/obj/item/book/granter/trait/pa_wear,							400),
+		new /datum/data/wasteland_equipment("X02 Armor Blueprint",			/datum/crafting_recipe/x02,										3000),
+		new /datum/data/wasteland_equipment("Enclave MRE",					/obj/item/reagent_containers/food/snacks/f13/mre/remnant,		35)
+		)
+
 /datum/data/wasteland_equipment
 	var/equipment_name = "generic"
 	var/equipment_path = null

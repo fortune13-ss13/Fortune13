@@ -160,6 +160,23 @@
 	max_integrity = 100
 
 
+/obj/structure/barricade/tanktrap
+	name = "tanktrap"
+	desc = "Metal bars welded together, blocks movement, but terrible cover."
+	icon = 'icons/fallout/structures/barricades.dmi'
+	icon_state = "iron_barricade"
+	anchored = 1
+	density = 1
+	obj_integrity = 500
+	max_integrity = 500
+	proj_pass_rate = 95
+	pass_flags = LETPASSTHROW
+
+/obj/structure/barricade/tanktrap/rust
+	obj_integrity = 400
+	max_integrity = 400
+	icon_state = "iron_barricade_rust"
+
 /obj/structure/barricade/old_locked_door
 	name = "old locked door"
 	desc = "Key long lost, lock rusted shut. Apply violence to gain entry."

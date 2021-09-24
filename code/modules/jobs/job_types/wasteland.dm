@@ -454,6 +454,7 @@ Raider
 	uniform = /obj/item/clothing/under/f13/bosremnant
 	id = /obj/item/card/id/rusted/brokenholodog
 	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
+	head = /obj/item/clothing/head/f13/boscap/beret
 	shoes = /obj/item/clothing/shoes/combat/swat
 	l_hand = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(

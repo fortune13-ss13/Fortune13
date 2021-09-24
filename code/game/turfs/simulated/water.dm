@@ -24,7 +24,3 @@
 	slowdown = 10
 	luminosity	= 3
 //	var/defer_change = 1
-
-/obj/structure/barbedwire/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES)

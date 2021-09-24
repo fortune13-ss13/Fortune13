@@ -131,6 +131,13 @@
 	icon_state = "drumfire"
 	density = 1
 
+/obj/structure/campfire/barrel/prelit
+	name = "steel drum firepit"
+	icon_state = "drumfire-lit"
+	fired = 1
+	fuel = 2000
+	light_range = 4
+
 /obj/structure/campfire/stove
 	name = "pot belly stove"
 	desc = "A warm stove, for cooking food, or keeping warm in the winter. It's really old fashioned, but works wonders when there's no electricity."

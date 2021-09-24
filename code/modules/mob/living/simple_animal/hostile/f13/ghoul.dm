@@ -268,13 +268,13 @@
 	speak_chance = 10;
 	speak_emote = list("wheezes");
 	a_intent = INTENT_HARM
-	maxHealth = 120
-	health = 120
-	speed = 0.25
+	maxHealth = 130
+	health = 130
+	speed = 0.2
 	obj_damage = 100
 	harm_intent_damage = 35 // live by the fist, die by the fist
 	melee_damage_lower = 20
-	melee_damage_upper = 30
+	melee_damage_upper = 35
 	del_on_death = 0
 	attack_verb_simple = "punches hard"
 	attack_sound = 'sound/weapons/cqchit1.ogg'
@@ -294,7 +294,7 @@
 	loot = list(/obj/item/melee/unarmed/sappers)
 	maxHealth = 250
 	health = 250
-	speed = 0.5
+	speed = 0.3
 	obj_damage = 200
 	melee_damage_lower = 40
 	melee_damage_upper = 50
@@ -327,12 +327,8 @@
 /mob/living/simple_animal/hostile/ghoul/mamasboys/mama/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
-	if(prob(25))
+	if(prob(50))
 		return ..()
 	else
 		visible_message("<span class='danger'>[src] dodges [Proj]!</span>")
 		return 0
-
-/mob/living/simple_animal/hostile/ghoul/mamasboys/mama/Aggro()
-	..()
-	summon_backup(20)
