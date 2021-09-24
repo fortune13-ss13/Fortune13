@@ -19,6 +19,12 @@
 	light_on = FALSE
 	var/on = FALSE
 
+/obj/item/flashlight/old
+	name = "ancient flashlight"
+	desc = "Large, very worn, and still working by some miracle."
+	icon_state = "flashlight_old"
+	item_state = "flashlight_old" 
+
 /obj/item/flashlight/Initialize()
 	. = ..()
 	if(icon_state == "[initial(icon_state)]-on")
