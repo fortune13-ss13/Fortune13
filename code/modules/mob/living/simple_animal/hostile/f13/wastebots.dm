@@ -99,8 +99,9 @@
 	name = "private Gutsy"
 	icon_state = "pvtgutsy"
 	icon_living = "pvtgutsy"
+	melee_damage_type = BURN
 	icon_dead = "gib6"
-	aggro_vision_range = 15
+	aggro_vision_range = 12
 	faction = list("hostile", "supermutant")
 	obj_damage = 300
 

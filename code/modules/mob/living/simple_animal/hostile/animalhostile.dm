@@ -66,7 +66,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	attack_sound = 'sound/hallucinations/growl1.ogg'
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 20
-	gold_core_spawnable = HOSTILE_SPAWN
 	faction = list("ghoul")
 	decompose = TRUE
 	sharpness = SHARP_NONE
@@ -85,8 +84,8 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	desc = "A common pest resembling an oversized blow-fly. Can attack at a distance."
 	icon = 'icons/fallout/mobs/hostile_general.dmi'
 	faction = list("gecko")
-	minimum_distance = 2
-	retreat_distance = 2
+	minimum_distance = 1
+	retreat_distance = 1
 	obj_damage = 0
 	ranged = 1
 	ranged_cooldown_time = 30
@@ -122,14 +121,13 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	health = 25
 	harm_intent_damage = 8
 	obj_damage = 15
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage_lower = 9
+	melee_damage_upper = 11
 	attack_verb_simple = "bites"
 	attack_sound = 'sound/creatures/molerat_attack.ogg'
 	speak_emote = list("chitters")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	faction = list("gecko")
-	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
 	emote_taunt_sound = list('sound/f13npc/molerat/taunt.ogg')
 	emote_taunt = list("hisses")
@@ -152,7 +150,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	health = 190
 	melee_damage_lower = 18
 	melee_damage_upper = 35
-	gold_core_spawnable = HOSTILE_SPAWN
 	blood_volume = 0
 
 /mob/living/simple_animal/hostile/mirelurk/ancient
@@ -180,7 +177,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	health = 50
 	melee_damage_lower = 5
 	melee_damage_upper = 10
-	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/mirelurk/baby/Initialize()
 	. = ..()
@@ -210,14 +206,14 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	response_help_simple = "pets"
 	response_disarm_simple = "pushes aside"
 	response_harm_simple = "kicks"
-	maxHealth = 70
-	health = 70
+	maxHealth = 75
+	health = 75
 	faction = list("hostile", "wolf")
 	environment_smash = 0
 	guaranteed_butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, /obj/item/reagent_containers/food/snacks/meat/slab/wolf = 1,/obj/item/stack/sheet/bone = 1)
-	melee_damage_lower = 14
-	melee_damage_upper = 23
-	aggro_vision_range = 12
+	melee_damage_lower = 18
+	melee_damage_upper = 24
+	aggro_vision_range = 9
 	attack_verb_simple = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 2
@@ -228,7 +224,18 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	aggrosound = list('sound/f13npc/dog/dog_alert1.ogg', 'sound/f13npc/dog/dog_alert2.ogg', 'sound/f13npc/dog/dog_alert3.ogg')
 	idlesound = list('sound/f13npc/dog/dog_bark1.ogg', 'sound/f13npc/dog/dog_bark2.ogg', 'sound/f13npc/dog/dog_bark3.ogg')
 	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
+	has_field_of_vision = FALSE
 
+/mob/living/simple_animal/hostile/skolf/alpha
+	name = "skull wolf alpha"
+	icon_state = "skolf"
+	icon_living = "skolf"
+	speed = -2
+	maxHealth = 90
+	health = 90
+	melee_damage_lower = 20
+	melee_damage_upper = 27
+	aggro_vision_range = 12
 
 // Uncommon beasts
 
@@ -336,7 +343,7 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	icon_gib = "yaoguai_dead"
 	speak = list("ROAR!","Rawr!","Grrrowl!","Growl!")
 	emote_taunt = list("stares blindly", "sniffs the air")
-	speed = 0
+	speed = -0.5
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/bear = 4,
 							/obj/item/clothing/head/bearpelt = 1,
 							/obj/item/stack/sheet/bone = 4)
@@ -354,6 +361,11 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
 	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
 	death_sound = 'sound/f13npc/deathclaw/death.ogg'
+	armour_penetration = 0.3
+
+/mob/living/simple_animal/hostile/deathclaw/yaoguai/Aggro()
+	..()
+	summon_backup(20)
 
 
 
