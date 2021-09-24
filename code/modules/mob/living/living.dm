@@ -500,6 +500,7 @@
 			lay_down()
 
 		Knockdown(200)
+		Paralyze(200)
 		visible_message("<span class='big bold'>[src] surrenders!</span>")
 		playsound(loc, 'sound/f13effects/surrender.ogg', 50, 1)
 
