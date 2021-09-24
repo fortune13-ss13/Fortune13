@@ -199,23 +199,6 @@
 #undef LARGE_HOLE
 #undef MAX_HOLE_SIZE
 
-/obj/structure/fence/wooden
-	name = "wooden fence"
-	desc = "A fence fashioned out of wood planks. Designed to keep animals in and vagrants out"
-	icon = 'icons/obj/fence.dmi'
-	icon_state = "straight_wood"
-	cuttable = FALSE
-	climbable = TRUE
-	proj_pass_rate = 80
-
-/obj/structure/fence/end/wooden
-	icon_state = "end_wood"
-	cuttable = FALSE
-
-/obj/structure/fence/corner/wooden
-	icon_state = "corner_wood"
-	cuttable = FALSE
-
 /obj/structure/simple_door/metal/fence/wooden
 	name = "wood fence gate"
 	desc = "A wooden gate for a wood fence."

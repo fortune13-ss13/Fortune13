@@ -2948,8 +2948,11 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "oU" = (
-/mob/living/simple_animal/hostile/ghoul/mamasboys/bruiser,
-/turf/open/floor/plating/tunnel/chess,
+/obj/machinery/atmospherics/pipe/manifold/brown/visible/layer3{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "oV" = (
 /obj/effect/turf_decal/stripes/line{
@@ -4318,7 +4321,9 @@
 /area/f13/caves)
 "vD" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/gutsy/nsb,
+/mob/living/simple_animal/hostile/handy/gutsy/nsb{
+	faction = list("wastebot")
+	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/bunker)
 "vE" = (
@@ -4492,7 +4497,6 @@
 /area/f13/bunker)
 "wu" = (
 /obj/structure/chair/stool,
-/mob/living/simple_animal/hostile/ghoul/mamasboys,
 /turf/open/floor/plating/tunnel/chess,
 /area/f13/bunker)
 "wy" = (
@@ -8107,6 +8111,10 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
+"OH" = (
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plating/tunnel/rusty,
+/area/f13/bunker)
 "OI" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -8670,7 +8678,9 @@
 	},
 /area/f13/bunker)
 "RC" = (
-/mob/living/simple_animal/hostile/handy/gutsy/nsb,
+/mob/living/simple_animal/hostile/handy/gutsy/nsb{
+	faction = list("wastebot")
+	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/bunker)
 "RE" = (
@@ -9207,10 +9217,13 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "Us" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer1{
+	dir = 8
 	},
-/mob/living/simple_animal/hostile/ghoul/mamasboys,
+/obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/oil/slippery,
 /turf/open/floor/plating/tunnel/rusty,
 /area/f13/bunker)
 "Ut" = (
@@ -9254,7 +9267,9 @@
 "UL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/abomination,
+/mob/living/simple_animal/hostile/abomination{
+	faction = list("wastebot")
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/bunker)
 "UM" = (
@@ -10257,7 +10272,9 @@
 "ZB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/abomination,
+/mob/living/simple_animal/hostile/abomination{
+	faction = list("wastebot")
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/corner{
 	dir = 4
 	},
@@ -19198,7 +19215,7 @@ HM
 yK
 mu
 PX
-tW
+Eb
 Eb
 RE
 LL
@@ -21938,7 +21955,7 @@ Jg
 Pd
 TQ
 Sc
-tW
+Eb
 Eb
 hl
 eq
@@ -26880,7 +26897,7 @@ mY
 YB
 YB
 YB
-mY
+YB
 mY
 mY
 mY
@@ -27507,7 +27524,7 @@ Va
 Yt
 Ps
 NB
-Us
+eu
 Fc
 Ps
 Ps
@@ -29328,9 +29345,9 @@ SG
 SG
 sX
 SG
-NU
+oU
 pm
-DQ
+Us
 Wt
 Ps
 gC
@@ -29483,7 +29500,7 @@ Wt
 bm
 JI
 mJ
-Ps
+OH
 Ps
 gC
 Ps
@@ -30090,7 +30107,7 @@ Zp
 Zp
 Zp
 Wt
-DQ
+Us
 Zp
 Zp
 Zp
@@ -32676,7 +32693,7 @@ Xk
 Ps
 YK
 wt
-Fw
+ZM
 Tq
 Fw
 pb
@@ -32822,7 +32839,7 @@ gu
 wt
 VE
 EE
-oU
+wt
 lz
 Df
 Jr
