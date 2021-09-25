@@ -918,12 +918,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "aQC" = (
-/obj/item/pipe{
-	dir = 4
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/oldpipes{
+	dir = 8;
+	pixel_x = -1
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "aQT" = (
 /obj/structure/car/rubbish3,
@@ -1266,8 +1266,8 @@
 /area/f13/forest/animals)
 "bhm" = (
 /obj/structure/car/rubbish1,
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontalbottombordertop2"
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain1"
 	},
 /area/f13/wasteland)
 "bhG" = (
@@ -5202,10 +5202,11 @@
 /area/f13/forest/animals)
 "fdy" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sink/cistern{
-	desc = "A tank with lubricant oil.";
-	dispensedreagent = /datum/reagent/oil;
-	name = "lubricant dispenser system"
+/obj/structure/barricade/bars{
+	desc = "Big and round.";
+	icon = 'icons/fallout/furniture/stationary.dmi';
+	icon_state = "vat";
+	name = "vat with lubricants"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
@@ -5970,11 +5971,11 @@
 "fJT" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/structure/curtain,
-/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /obj/item/defibrillator,
 /obj/item/tank/internals/anesthetic,
 /obj/item/clothing/mask/breath/medical,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
 	dir = 8
 	},
@@ -8000,12 +8001,6 @@
 	},
 /turf/open/indestructible/ground/outside/savannah,
 /area/f13/wasteland)
-"hBd" = (
-/turf/open/floor/plating/f13/outside/road{
-	dir = 4;
-	icon_state = "innermaincornerinner"
-	},
-/area/f13/wasteland)
 "hBv" = (
 /obj/structure/car/rubbish3{
 	pixel_x = -5
@@ -8171,11 +8166,6 @@
 /obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/raiders/camp)
-"hJF" = (
-/turf/closed/wall/r_wall/f13composite{
-	icon_state = "rubblepillar"
-	},
-/area/f13/wasteland)
 "hJI" = (
 /obj/structure/target_stake,
 /obj/item/target,
@@ -9339,11 +9329,6 @@
 /obj/structure/billboard/cola,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"iXw" = (
-/turf/closed/wall/r_wall/f13composite{
-	icon_state = "rubbleslab"
-	},
-/area/f13/wasteland)
 "iYD" = (
 /obj/structure/closet/fridge,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -10041,13 +10026,6 @@
 	name = "bathroom tiles"
 	},
 /area/f13/outlaw/indoors)
-"jKb" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/pipe{
-	dir = 4
-	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
-/area/f13/bunker)
 "jKc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_diagonal{
@@ -10890,8 +10868,8 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "kFs" = (
-/obj/item/pipe{
-	dir = 4
+/obj/effect/decal/oldpipes{
+	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
@@ -13905,10 +13883,6 @@
 	icon_state = "horizontalinnermain2left"
 	},
 /area/f13/wasteland)
-"nID" = (
-/mob/living/simple_animal/hostile/supermutant/nationalguard/engineer,
-/turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
-/area/f13/bunker)
 "nJB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/chalkboard,
@@ -16842,12 +16816,6 @@
 	icon_state = "asteroidfloor"
 	},
 /area/f13/subway/ghouls)
-"qIx" = (
-/turf/open/floor/plating/f13/outside/road{
-	dir = 1;
-	icon_state = "innermaincornerinner"
-	},
-/area/f13/wasteland)
 "qID" = (
 /obj/structure/flora/grass/wasteland,
 /turf/open/indestructible/ground/outside/dirthole,
@@ -19864,8 +19832,16 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/pipe{
-	dir = 4
+/obj/structure/sink/cistern{
+	density = 0;
+	desc = "Part of some piping system.";
+	dir = 4;
+	dispensedreagent = /datum/reagent/oil;
+	icon = 'icons/fallout/decals/turf_decoration.dmi';
+	icon_state = "rustpipe-end";
+	name = "lubricant dispenser system";
+	pixel_x = 3;
+	pixel_y = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
@@ -20643,11 +20619,6 @@
 /mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/carpet/red,
 /area/f13/office)
-"uxM" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontalbottombordertop2"
-	},
-/area/f13/wasteland)
 "uyh" = (
 /obj/structure/fence{
 	dir = 4
@@ -21349,10 +21320,9 @@
 /area/f13/wasteland)
 "vkx" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/pipe{
-	dir = 4
+/obj/effect/decal/oldpipes{
+	dir = 8
 	},
-/obj/item/pipe_meter,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/f13/bunker)
 "vkP" = (
@@ -24059,11 +24029,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/forest/animals)
-"yhW" = (
-/turf/closed/wall/r_wall/f13composite{
-	icon_state = "rubbleplate"
-	},
-/area/f13/wasteland)
 "yhZ" = (
 /mob/living/simple_animal/chicken{
 	faction = list("raider");
@@ -32378,9 +32343,9 @@ okc
 wZg
 eMP
 lRc
-yhW
+hfw
 foY
-uxM
+dtQ
 dtQ
 uaT
 fSY
@@ -32540,9 +32505,9 @@ fax
 fax
 jMm
 lRc
-hJF
-iXw
-hBd
+hfw
+foY
+wSY
 dtQ
 uaT
 mXl
@@ -32702,9 +32667,9 @@ lfu
 lSi
 eMP
 beM
-hJF
-iXw
-qIx
+hfw
+foY
+hQY
 dtQ
 uaT
 lRc
@@ -32864,7 +32829,7 @@ nwI
 lfu
 nZr
 fSY
-hJF
+hfw
 tix
 bhm
 pYK
@@ -34001,7 +33966,7 @@ jyI
 jGU
 qes
 qes
-eJQ
+dtQ
 dtQ
 qes
 qes
@@ -34325,7 +34290,7 @@ qes
 dtQ
 qes
 dtQ
-eJQ
+dtQ
 dtQ
 qes
 qes
@@ -34970,13 +34935,13 @@ tVh
 qes
 qes
 qes
-eJQ
+dtQ
 dtQ
 qes
 qes
 qes
 dtQ
-hAT
+hQY
 dtQ
 qes
 dtQ
@@ -35132,7 +35097,7 @@ qes
 qes
 qes
 dtQ
-eJQ
+dtQ
 dtQ
 qes
 qes
@@ -35294,8 +35259,8 @@ qes
 qes
 qes
 qes
-eJQ
-eJQ
+dtQ
+dtQ
 qes
 qes
 qes
@@ -35456,7 +35421,7 @@ uQQ
 uQQ
 uQQ
 sKN
-byV
+hQY
 byV
 tSd
 uQQ
@@ -37527,7 +37492,7 @@ oXT
 ubb
 cxX
 cxX
-gbK
+cxX
 cxX
 cxX
 bzh
@@ -47009,7 +46974,7 @@ kfp
 pkR
 nyb
 lem
-aQC
+nyb
 hEC
 fnh
 maC
@@ -47333,7 +47298,7 @@ aGJ
 maC
 odB
 maC
-jKb
+vkx
 maC
 maC
 thf
@@ -47493,9 +47458,9 @@ cMP
 cMP
 aGJ
 maC
-nID
+odB
 maC
-jKb
+aQC
 maC
 maC
 rqC
