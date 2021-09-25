@@ -27,4 +27,3 @@
 	W.anchored = 1
 	W.resistance_flags = INDESTRUCTIBLE
 	W.dir = src.dir
- 
