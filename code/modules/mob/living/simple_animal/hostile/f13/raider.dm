@@ -70,7 +70,7 @@
 	icon_state = "skulls"
 	icon_living = "skulls"
 	icon_dead = "skulls_dead"
-	loot = list(/obj/item/melee/onehanded/knife/hunting, /obj/item/crafting/wonderglue)
+	loot = list(/obj/effect/spawner/lootdrop/f13/npcdrop/skulls)
 
 /mob/living/simple_animal/hostile/raider/skull/Aggro()
 	..()
@@ -88,8 +88,8 @@
 	health = 120
 	ranged = 1
 	retreat_distance = 3
-	minimum_distance = 5
-	loot = list(/obj/item/gun/ballistic/revolver/colt6520, /obj/item/ammo_box/c10mm/improvised)
+	minimum_distance = 3
+	loot = list(/obj/effect/spawner/lootdrop/f13/npcdrop/skulls/member)
 	projectiletype = /obj/item/projectile/bullet/c10mm/ap
 	projectilesound = 'sound/f13weapons/10mm_fire_02.ogg'
 
@@ -104,10 +104,10 @@
 	health = 190
 	ranged = 1
 	retreat_distance = 3
-	minimum_distance = 5
+	minimum_distance = 4
 	extra_projectiles = 3
-	loot = list(/obj/effect/spawner/bundle/f13/greasegun, /obj/item/clothing/mask/cigarette/cigar/havana)
-	projectiletype = /obj/item/projectile/bullet/c45/op
+	loot = list(/obj/effect/spawner/bundle/weapon/worn10mmsmg, /obj/effect/spawner/lootdrop/f13/npcdrop/skulls/boss)
+	projectiletype = /obj/item/projectile/bullet/c10mm/ap
 	projectilesound = 'sound/weapons/gunshot.ogg'
 
 /mob/living/simple_animal/hostile/raider/skull/boss/Aggro()

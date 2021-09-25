@@ -27,25 +27,4 @@
 	W.anchored = 1
 	W.resistance_flags = INDESTRUCTIBLE
 	W.dir = src.dir
-
-
-/obj/structure/handrail/g_end
-	name = "handrail end"
-	desc = "Heavy-duty metal handrail ends here.<br>You can pass now!"
-	icon = 'icons/obj/obstacles.dmi'
-	icon_state = "g_handrail_end"
-	density = 0
-	anchored = 1
-	pixel_y = -9
-
-/obj/structure/handrail/g_end/New()
-	if (dir>2)
-		layer = 4.2
-
-/obj/structure/wasteoutlet
-	name = "waste outlet pipe"
-	desc = "A pipe."
-	icon = 'icons/fallout/furniture/stationary.dmi'
-	icon_state = "wasteoutlet"
-	density = 0
-	anchored = 1
+ 

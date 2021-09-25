@@ -27,7 +27,6 @@
 				/obj/effect/spawner/bundle/f13/plaidskirt,
 				/obj/item/clothing/under/blacktango,
 				/obj/item/clothing/under/redeveninggown,
-				/obj/item/clothing/under/janimaid,
 				/obj/effect/spawner/bundle/f13/badass,
 				/obj/effect/spawner/bundle/f13/puffer,
 				/obj/effect/spawner/bundle/f13/that,
@@ -146,7 +145,6 @@
 /obj/effect/spawner/lootdrop/f13/armor/costumes
 	name = "pre-war costumes spawner"
 	loot = list(
-				/obj/effect/spawner/bundle/f13/soviet,
 				/obj/effect/spawner/bundle/f13/geisha,
 				/obj/item/clothing/under/blacktango,
 				/obj/item/clothing/under/redeveninggown,
@@ -155,20 +153,12 @@
 				/obj/effect/spawner/lootdrop/f13/schoolgirl,
 				/obj/effect/spawner/bundle/f13/hats,
 				/obj/effect/spawner/bundle/f13/jabroni,
-				/obj/effect/spawner/bundle/f13/romeaboo,
 				/obj/item/clothing/under/maid,
 				/obj/effect/spawner/bundle/f13/vampire,
 				/obj/item/clothing/under/kilt,
 				/obj/effect/spawner/bundle/f13/pirate
 	)
 
-/obj/effect/spawner/bundle/f13/soviet
-	name = "soviet costume"
-	items = list(
-		/obj/item/clothing/head/ushanka,
-		/obj/item/clothing/under/soviet,
-		/obj/item/clothing/neck/mantle/gray,
-	)
 
 /obj/effect/spawner/bundle/f13/geisha
 	name = "geisha costume"
@@ -205,12 +195,6 @@
 				/obj/item/clothing/glasses/sunglasses/blindfold
 				)
 
-/obj/effect/spawner/bundle/f13/romeaboo
-	name = "roman gladiator outfit spawner"
-	items = list(
-				/obj/item/clothing/under/gladiator,
-				/obj/item/clothing/shoes/roman
-				)
 
 /obj/effect/spawner/bundle/f13/vampire
 	name = "vampire outfit spawner"
@@ -687,7 +671,7 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 //TIER 1 GUN
 	name = "tier 1 gun"
-	loot = list(/obj/effect/spawner/bundle/f13/single_shotgun,
+	loot = list(/obj/effect/spawner/bundle/f13/piperifle,
 				/obj/effect/spawner/bundle/f13/pistol22,
 				/obj/effect/spawner/bundle/f13/zipgun
 				)
@@ -699,12 +683,7 @@
 				/obj/item/ammo_box/magazine/zipgun
 				)
 
-/obj/effect/spawner/bundle/f13/single_shotgun
-	name = "shotgun bat and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/revolver/single_shotgun,
-				/obj/item/ammo_box/shotgun/improvised
-				)
+
 
 /obj/effect/spawner/bundle/f13/caravan_shotgun
 	name = "caravan shotgun and ammo spawner"
@@ -793,15 +772,43 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 //TIER 2 GUN
 	name = "tier 2 gun"
 	loot = list(/obj/effect/spawner/bundle/f13/caravan_shotgun,
-				/obj/effect/spawner/bundle/f13/piperifle
+				/obj/effect/spawner/bundle/f13/pepperbox
 	)
 
+//RAIDER GUNS
+
 /obj/effect/spawner/bundle/f13/piperifle
+	name = "piperifle spawner"
+	items = list(
+				/obj/item/gun/ballistic/revolver/hobo/piperifle,
+				/obj/item/ammo_box/a556/sport/improvised,
+				)
+/obj/effect/spawner/bundle/f13/pepperbox
 	name = "pepperbox gun spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/hobo/pepperbox,
 				/obj/item/ammo_box/c10mm/improvised,
 				)
+/obj/effect/spawner/bundle/f13/single_shotgun
+	name = "shotgun bat and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/revolver/single_shotgun,
+				/obj/item/ammo_box/shotgun/improvised
+				)
+/obj/effect/spawner/bundle/f13/guns/rockwell
+	name = "rockwell gun and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/smg/rockwell,
+				/obj/item/ammo_box/magazine/uzim9mm/rockwell,
+				)
+/obj/effect/spawner/bundle/f13/autopipe
+	name = "auto pipe rifle and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/autopipe,
+				/obj/item/ammo_box/magazine/autopipe
+				)
+
+
 
 /obj/effect/spawner/bundle/f13/huntingshotgun
 	name = "hunting shotgun and ammo spawner"
@@ -887,12 +894,7 @@
 				/obj/item/gun/ballistic/revolver/widowmaker
 				)
 
-/obj/effect/spawner/bundle/f13/autopipe
-	name = "auto pipe rifle and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/autopipe,
-				/obj/item/ammo_box/magazine/autopipe
-				)
+
 
 /obj/effect/spawner/bundle/f13/miniuzi
 	name = "mini uzi and ammo spawner"
@@ -901,12 +903,7 @@
 				/obj/item/ammo_box/magazine/uzim9mm,
 				)
 
-/obj/effect/spawner/bundle/f13/guns/rockwell
-	name = "rockwell gun and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/smg/rockwell,
-				/obj/item/ammo_box/magazine/uzim9mm/rockwell,
-				)
+
 
 /obj/effect/spawner/bundle/f13/smg10mm
 	name = "10mm SMG and ammo spawner"
@@ -1404,7 +1401,7 @@
 
 /obj/effect/spawner/lootdrop/f13/junkspawners //TIER 4 GARBAGE
 	name = "garbage spawner"
-	lootcount = 2
+	lootcount = 1
 	fan_out_items = TRUE
 
 	loot = list(
@@ -1588,7 +1585,7 @@
 
 
 /obj/effect/spawner/lootdrop/f13/alcoholspawner //TIER 7 ALCOHOL
-	name = "alcoholspawner"
+	name = "fine alcoholspawner"
 	lootdoubles = TRUE
 	fan_out_items = TRUE
 
@@ -1611,6 +1608,7 @@
 				/obj/item/reagent_containers/food/drinks/bottle/grappa,
 				/obj/item/reagent_containers/food/drinks/bottle/sake,
 				/obj/item/reagent_containers/food/drinks/bottle/fernet
+
 				)
 
 /obj/effect/spawner/lootdrop/f13/alcoholspawner/Initialize(mapload) //on mapload, pick how many shit to spawn
@@ -1768,8 +1766,16 @@
 				/obj/item/book/granter/crafting_recipe/gunsmith_one = 50,
 				/obj/item/book/granter/crafting_recipe/gunsmith_two = 20,
 				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
-				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10
+				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10,
+				/obj/item/book/granter/crafting_recipe/demolition = 1,
+				/obj/item/book/granter/trait/bigleagues = 1,
+				/obj/item/book/granter/trait/midsurgery = 1,
+				/obj/item/book/granter/trait/tinkering = 1,
+				/obj/item/book/granter/trait/techno = 1,
+				/obj/item/book/granter/trait/iron_fist = 1,
+				/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
 				)
+
 
 /obj/effect/spawner/lootdrop/f13/blueprintLow
 	name = "gun comps spawner"

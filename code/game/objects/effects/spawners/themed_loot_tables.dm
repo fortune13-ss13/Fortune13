@@ -21,8 +21,8 @@
 /obj/effect/spawner/lootdrop/wastelootgood
 	name = "wasteloot good"
 	loot = list(
-		/obj/effect/spawner/lootdrop/f13/junkspawners = 40,
-		/obj/effect/spawner/lootdrop/ammo/civilian = 13,
+		/obj/effect/spawner/lootdrop/f13/junkspawners = 38,
+		/obj/effect/spawner/lootdrop/ammo/civilian = 15,
 		/obj/effect/spawner/lootdrop/toolsbasic = 10,
 		/obj/effect/spawner/lootdrop/weapons/waster = 6,
 		/obj/effect/spawner/lootdrop/f13/crafting = 5,
@@ -479,3 +479,31 @@
 		/obj/item/gun/ballistic/automatic/smg/smg10mm/worn,
 		/obj/item/ammo_box/magazine/m10mm_adv/,
 		)
+
+// NPC Loot drops St. Albans
+
+/obj/effect/spawner/lootdrop/f13/npcdrop/skulls
+	name = "skulls hangaround loot"
+	lootcount = 1
+	loot = list(/obj/item/melee/onehanded/knife/hunting = 30,
+				/obj/item/melee/onehanded/knife/bowie = 5,
+				/obj/item/melee/onehanded/knife/switchblade = 5,
+				/obj/item/crafting/wonderglue = 35,
+				/obj/item/stack/medical/bruise_pack = 25
+				)
+
+/obj/effect/spawner/lootdrop/f13/npcdrop/skulls/member
+	name = "skulls hangaround loot"
+	loot = list(/obj/item/stack/medical/gauze/improvised = 10,
+				/obj/item/ammo_box/c10mm/improvised = 50,
+				/obj/item/ammo_box/magazine/m9mm = 30,
+				/obj/item/gun/ballistic/revolver/colt6520 = 10,
+				)
+
+/obj/effect/spawner/lootdrop/f13/npcdrop/skulls/boss
+	name = "skulls boss loot"
+	loot = list(/obj/item/clothing/suit/armor/f13/metalarmor/reinforced = 50,
+				/obj/item/stack/medical/bruise_pack/five = 10,
+				/obj/item/clothing/mask/cigarette/cigar/havana = 30,
+				/obj/item/clothing/mask/bandana/skull = 10,
+				)
