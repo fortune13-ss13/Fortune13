@@ -626,56 +626,6 @@
 	head = /obj/item/clothing/head/helmet/f13/fiend
 	//back = /obj/item/weapon/storage/backpack
 
-/mob/living/simple_animal/hostile/raider/old/baseball
-	icon_state = "baseball_raider"
-	icon_living = "baseball_raider"
-	icon_dead = "baseball_raider"
-	icon_gib = "baseball_raider"
-	retreat_distance = 1
-	minimum_distance = 1
-	melee_damage_lower = 40
-	melee_damage_upper = 40
-	maxHealth = 200
-	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/baseball, /obj/item/twohanded/baseball)
-	healable = 1
-	ranged = 0
-
-/obj/effect/mob_spawn/human/corpse/raider/baseball
-	uniform = /obj/item/clothing/under/f13/mechanic
-	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	//radio = /obj/item/device/radio/headset
-	//mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/f13/raider/yankee
-	//back = /obj/item/weapon/storage/backpack
-
-/mob/living/simple_animal/hostile/raider/biker
-	icon_state = "biker_raider"
-	icon_living = "biker_raider"
-	icon_dead = "biker_raider"
-	icon_gib = "biker_raider"
-	retreat_distance = 4
-	minimum_distance = 4
-	melee_damage_lower = 20
-	melee_damage_upper = 20
-	maxHealth = 200
-	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/biker, /obj/item/gun/ballistic/revolver/thatgun)
-	healable = 1
-	ranged = 1
-	projectiletype = /obj/item/projectile/bullet/a556/match
-	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
-	casingtype = /obj/item/ammo_casing/a556
-
-/obj/effect/mob_spawn/human/corpse/raider/biker
-	uniform = /obj/item/clothing/under/f13/ncrcf
-	suit = /obj/item/clothing/suit/armor/f13/combatrusted
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	head = /obj/item/clothing/head/helmet/f13/raidercombathelmet
-	neck = /obj/item/clothing/neck/mantle/brown
 
 /mob/living/simple_animal/hostile/abomination
 	name = "abomination"
@@ -687,8 +637,8 @@
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	robust_searching = 1
-	maxHealth = 1000
-	health = 1000
+	maxHealth = 500
+	health = 500
 	harm_intent_damage = 8
 	melee_damage_lower = 75
 	melee_damage_upper = 75
@@ -705,7 +655,7 @@
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		var/choice = pick(1, 1, 2, 2, 3, 4)
-		H.reagents.add_reagent(/datum/reagent/toxin/FEV_solution, choice)
+		H.reagents.add_reagent(/datum/reagent/toxin/acid/fluacid, choice)
 
 /mob/living/simple_animal/hostile/abomination/Initialize()
 	. = ..()
@@ -744,8 +694,8 @@
 	icon_dead = "horror_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	robust_searching = 1
-	maxHealth = 700
-	health = 700
+	maxHealth = 400
+	health = 400
 	harm_intent_damage = 8
 	melee_damage_lower = 50
 	melee_damage_upper = 50
@@ -756,8 +706,8 @@
 	deathmessage = "wails as its form shudders and violently comes to a stop."
 
 /mob/living/simple_animal/hostile/abomhorror/nsb
-	maxHealth = 1000
-	health = 1000
+	maxHealth = 500
+	health = 500
 	desc = "A terrible fusion of man, animal, and something else entirely. It looks to be in great pain, constantly shuddering violently and seeming relatively docile to the robots and raiders of the bunker. Huh."
 	harm_intent_damage = 8
 	melee_damage_lower = 60
