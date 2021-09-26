@@ -6976,10 +6976,6 @@
 "gKn" = (
 /turf/open/floor/plasteel/darkbrown,
 /area/f13/building)
-"gKx" = (
-/obj/structure/simple_door/wood,
-/turf/open/floor/carpet,
-/area/f13/chapel)
 "gMm" = (
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -19950,8 +19946,10 @@
 	},
 /area/f13/bar/river)
 "tXS" = (
-/obj/structure/simple_door/metal/fence,
-/obj/machinery/door/unpowered/ragecagefencedoor,
+/obj/machinery/door/unpowered/ragecagefencedoor{
+	name = "fence door";
+	req_one_access_txt = null
+	},
 /turf/open/indestructible/ground/outside/graveldirt/path,
 /area/f13/wasteland)
 "tXV" = (
@@ -23582,7 +23580,9 @@
 /turf/open/indestructible/ground/outside/savannah/cornersnew,
 /area/f13/wasteland)
 "xOc" = (
-/obj/structure/spirit_board,
+/obj/structure/spirit_board{
+	anchored = 1
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet,
 /area/f13/chapel)
@@ -41189,7 +41189,7 @@ vHM
 vHM
 lAS
 lAS
-gKx
+jTC
 lAS
 lAS
 vHM
