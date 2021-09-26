@@ -441,3 +441,14 @@
 /obj/structure/signs/powerplant/dorms
 	name = "Dorms"
 	icon_state = "vault_dorm"
+
+/obj/structure/signs/powerplant/dorms
+	name = "Dorms"
+	icon_state = "vault_dorm"
+
+
+//DECORATION
+/obj/structure/decoration/menu
+	icon = 'icons/fallout/decals/walldecoration.dmi'
+	icon_state = "menu"
+	desc = "Ask for the special of the day. Probably more fish."
