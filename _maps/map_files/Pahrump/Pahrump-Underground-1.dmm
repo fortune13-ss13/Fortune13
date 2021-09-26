@@ -2365,7 +2365,9 @@
 "iV" = (
 /obj/structure/flora/rock/pile/largejungle,
 /obj/structure/flora/rock/jungle,
-/turf/open/indestructible/ground/outside/river,
+/turf/open/indestructible/ground/outside/river{
+	density = 1
+	},
 /area/f13/wasteland)
 "iW" = (
 /obj/effect/decal/fakelattice,
@@ -9826,9 +9828,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/vault)
 "MK" = (
-/turf/open/indestructible/ground/outside/river{
-	density = 1
-	},
+/turf/open/indestructible/ground/outside/river,
 /area/f13/wasteland)
 "ML" = (
 /obj/structure/sign/warning/securearea,
@@ -10598,7 +10598,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/rusty,
 /area/f13/bunker)
 "PI" = (
-/obj/structure/flora/rock/jungle,
+/obj/effect/decal/fakelattice,
 /turf/open/indestructible/ground/outside/river,
 /area/f13/wasteland)
 "PJ" = (
@@ -12387,7 +12387,9 @@
 "WE" = (
 /obj/structure/flora/rock/pile/largejungle,
 /obj/effect/decal/fakelattice,
-/turf/open/indestructible/ground/outside/river,
+/turf/open/indestructible/ground/outside/river{
+	density = 1
+	},
 /area/f13/wasteland)
 "WF" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -13025,7 +13027,9 @@
 "YX" = (
 /obj/structure/flora/rock/jungle,
 /obj/structure/flora/rock/pile/largejungle,
-/turf/open/indestructible/ground/outside/river,
+/turf/open/indestructible/ground/outside/river{
+	density = 1
+	},
 /area/f13/wasteland)
 "YZ" = (
 /obj/machinery/smartfridge/bottlerack/grownbin,
@@ -13105,10 +13109,6 @@
 "Zn" = (
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/vault)
-"Zq" = (
-/obj/structure/flora/rock/pile/largejungle,
-/turf/open/indestructible/ground/outside/river,
-/area/f13/wasteland)
 "Zs" = (
 /obj/structure/bed/old,
 /obj/effect/decal/cleanable/dirt{
@@ -13533,7 +13533,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -13686,16 +13686,16 @@ ih
 ih
 ih
 ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
+MK
+MK
+ih
+ih
+ih
+ih
+ih
+ih
+ih
 ih
 ih
 ih
@@ -13848,16 +13848,16 @@ ih
 ih
 ih
 ih
-ih
-Zq
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
+tx
+MK
+ih
+ih
+ih
+ih
+ih
+ih
+ih
 ih
 ih
 ih
@@ -14010,16 +14010,16 @@ ih
 ih
 ih
 ih
-ih
-iV
-PI
-ih
-ih
-ih
-ih
-ih
-ih
 MK
+iV
+zN
+ih
+ih
+ih
+ih
+ih
+ih
+ih
 ih
 ih
 ih
@@ -14172,16 +14172,16 @@ Hy
 ih
 ih
 ih
-ih
-PI
-PI
-ih
-ih
-ih
-ih
-ih
-ih
 MK
+zN
+zN
+ih
+ih
+ih
+ih
+ih
+ih
+ih
 ih
 ih
 ih
@@ -14343,7 +14343,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -14505,7 +14505,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -14667,7 +14667,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -14829,7 +14829,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -14991,7 +14991,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -15151,8 +15151,8 @@ ih
 ih
 ih
 ih
-ih
-ih
+MK
+MK
 MK
 ih
 ih
@@ -15313,8 +15313,8 @@ ih
 ih
 ih
 ih
-ih
-Zq
+MK
+tx
 MK
 ih
 ih
@@ -15474,8 +15474,8 @@ ih
 ih
 ih
 ih
-ih
-ih
+MK
+MK
 iV
 zN
 ih
@@ -15636,8 +15636,8 @@ ih
 ih
 ih
 ih
-ih
-Zq
+MK
+tx
 iV
 zN
 ih
@@ -15798,9 +15798,9 @@ ih
 ih
 ih
 ih
-ih
-ih
-PI
+MK
+MK
+zN
 MK
 ih
 ih
@@ -15962,7 +15962,7 @@ ih
 ih
 ih
 ih
-PI
+zN
 MK
 ih
 ih
@@ -16125,7 +16125,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -16287,7 +16287,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -16449,7 +16449,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -16611,7 +16611,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -16773,7 +16773,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -16935,7 +16935,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -17092,12 +17092,12 @@ ih
 ih
 ih
 ih
-ih
-ih
-ih
-ih
-ih
 MK
+MK
+MK
+ih
+ih
+ih
 ih
 Hh
 Hh
@@ -17254,12 +17254,12 @@ ih
 ih
 ih
 ih
-ih
-iV
-ih
-ih
-ih
 MK
+iV
+MK
+ih
+ih
+ih
 Lb
 Hd
 bx
@@ -17416,12 +17416,12 @@ ih
 ih
 ih
 ih
-ih
-ih
-ih
-ih
-ih
 MK
+MK
+MK
+ih
+ih
+ih
 Lb
 bx
 aA
@@ -17583,7 +17583,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 bx
 bx
@@ -17745,7 +17745,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 NL
@@ -17907,7 +17907,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 bx
@@ -18069,7 +18069,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 NL
@@ -18231,7 +18231,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 Hd
@@ -18393,7 +18393,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 pP
@@ -18555,7 +18555,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 NL
@@ -18717,7 +18717,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 bx
@@ -18879,7 +18879,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 Hd
 aA
@@ -19041,7 +19041,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 Lb
 bx
 Hd
@@ -19203,7 +19203,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 yS
 yS
@@ -19365,7 +19365,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -19527,7 +19527,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -19689,7 +19689,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -19851,7 +19851,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -20013,7 +20013,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -20174,9 +20174,9 @@ ih
 ih
 ih
 ih
-PI
+zN
 MK
-ih
+MK
 ih
 ih
 Lb
@@ -20335,10 +20335,10 @@ jD
 ih
 ih
 ih
-PI
-PI
+zN
+zN
 tx
-ih
+MK
 ih
 ih
 ih
@@ -20496,11 +20496,11 @@ Rp
 jD
 ih
 ih
-ih
+MK
 iV
-PI
 zN
-ih
+zN
+MK
 ih
 ih
 ih
@@ -20658,9 +20658,9 @@ Rp
 jD
 ih
 ih
-ih
-PI
-PI
+MK
+zN
+zN
 zN
 ih
 ih
@@ -20822,7 +20822,7 @@ ih
 ih
 ih
 ih
-PI
+zN
 MK
 ih
 ih
@@ -20985,7 +20985,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -21147,7 +21147,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -21309,10 +21309,10 @@ ih
 ih
 ih
 ih
+ih
 MK
-ih
-ih
-ih
+MK
+MK
 ih
 ih
 Lb
@@ -21471,11 +21471,11 @@ ih
 ih
 ih
 ih
+ih
 MK
-ih
-Zq
-ih
-ih
+tx
+MK
+MK
 ih
 Lb
 rI
@@ -21633,11 +21633,11 @@ ih
 ih
 ih
 ih
+ih
 MK
-ih
-ih
+MK
 iV
-ih
+MK
 ih
 ih
 pt
@@ -21795,11 +21795,11 @@ ih
 ih
 ih
 ih
+ih
+ih
 MK
-ih
-ih
 iV
-ih
+MK
 ih
 ih
 Lb
@@ -21957,11 +21957,11 @@ ih
 ih
 ih
 ih
+ih
 MK
-ih
-ih
+MK
 iV
-ih
+MK
 ih
 ih
 ih
@@ -22119,11 +22119,11 @@ ih
 ih
 ih
 ih
+ih
 MK
-ih
-Zq
-ih
-ih
+tx
+MK
+MK
 ih
 ih
 ih
@@ -22281,10 +22281,10 @@ ih
 ih
 ih
 ih
+ih
 MK
-ih
-ih
-ih
+MK
+MK
 ih
 ih
 ih
@@ -22443,7 +22443,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -22605,7 +22605,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -22767,7 +22767,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -22929,7 +22929,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -23091,7 +23091,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -23253,7 +23253,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -23415,7 +23415,7 @@ ih
 ih
 ih
 ih
-MK
+ih
 ih
 ih
 ih
@@ -24240,9 +24240,9 @@ Hy
 mP
 ih
 ih
-ih
-ih
-ih
+MK
+MK
+MK
 ih
 ih
 ih
@@ -24402,9 +24402,9 @@ Hy
 Hy
 mP
 ih
-ih
-Zq
-ih
+MK
+tx
+MK
 ih
 ih
 ih
@@ -24563,10 +24563,10 @@ IL
 IL
 Hy
 Hy
-mP
-Zq
-Zq
-ih
+PI
+tx
+tx
+MK
 ih
 ih
 ih
@@ -24727,8 +24727,8 @@ Hy
 Hy
 Hy
 WE
-ih
-ih
+MK
+MK
 ih
 ih
 ih
@@ -24889,7 +24889,7 @@ Hy
 Hy
 Hy
 WE
-ih
+MK
 ih
 ih
 ih
@@ -25050,8 +25050,8 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
+PI
+MK
 ih
 ih
 ih
@@ -27810,7 +27810,7 @@ ih
 ih
 ih
 ih
-PI
+zN
 ih
 ih
 Hy
@@ -27970,9 +27970,9 @@ mP
 ih
 ih
 ih
-ih
-PI
-ih
+MK
+zN
+MK
 ih
 ih
 Hy
@@ -28101,9 +28101,9 @@ Hy
 ih
 ih
 ih
-ih
-PI
-ih
+MK
+zN
+MK
 ih
 ih
 Hy
@@ -28132,9 +28132,9 @@ mP
 ih
 ih
 ih
-ih
+MK
 iV
-ih
+MK
 ih
 ih
 Hy
@@ -28263,9 +28263,9 @@ ih
 ih
 ih
 ih
-PI
+zN
 YX
-ih
+MK
 ih
 ih
 Hy
@@ -28294,9 +28294,9 @@ mP
 ih
 ih
 ih
-ih
-ih
-ih
+MK
+MK
+MK
 ih
 ih
 Hy
@@ -28425,9 +28425,9 @@ ih
 ih
 ih
 ih
-PI
-PI
-ih
+zN
+zN
+MK
 ih
 ih
 Hy
@@ -28588,7 +28588,7 @@ ih
 ih
 ih
 ih
-PI
+zN
 ih
 ih
 ih
@@ -29263,9 +29263,9 @@ Hy
 Hy
 Hy
 mP
-ih
-ih
-ih
+MK
+MK
+MK
 ih
 ih
 ih
@@ -29425,9 +29425,9 @@ Hy
 Hy
 Hy
 mP
-ih
+MK
 iV
-PI
+zN
 ih
 ih
 ih
@@ -29587,9 +29587,9 @@ Hy
 Hy
 Hy
 mP
-ih
-PI
-PI
+MK
+zN
+zN
 ih
 ih
 ih
@@ -29750,7 +29750,7 @@ Hy
 Hy
 mP
 ih
-PI
+zN
 ih
 ih
 ih
