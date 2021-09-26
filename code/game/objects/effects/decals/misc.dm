@@ -29,3 +29,31 @@
 	icon = 'icons/obj/smooth_structures/lattice.dmi'
 	icon_state = "lattice"
 	density = FALSE
+
+
+//Some pipe crap to put on the floor
+/obj/effect/decal/oldpipes
+	name = "old pipes"
+	desc = "Rusty old pipes."
+	icon = 'icons/fallout/decals/turf_decoration.dmi'
+	icon_state = "rustpipe"
+	density = FALSE
+	mouse_opacity = MOUSE_OPACITY_OPAQUE
+
+/obj/effect/decal/oldpipes/manifold
+	icon_state = "rustpipe-manifold"
+
+/obj/effect/decal/oldpipes/manifold/fourway
+	icon_state = "rustpipe-fourway"
+
+/obj/effect/decal/oldpipes/end
+	icon_state = "rustpipe-end"
+
+/obj/effect/decal/oldpipes/vent
+	icon_state = "rustpipe-vent"
+
+/obj/effect/decal/oldpipes/valve
+	icon_state = "rustpipe-valve"
+
+/obj/effect/decal/oldpipes/meter
+	icon_state = "meter"

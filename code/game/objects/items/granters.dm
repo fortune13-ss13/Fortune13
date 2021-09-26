@@ -370,21 +370,6 @@
 	oneuse = FALSE
 	remarks = list("Looks like these would sell much better in a plasma fire...", "Using glass bowls rather then cones?", "Mixing soda and ice-cream?", "Tall glasses with of liquids and solids...", "Just add a bit of icecream and cherry on top?")
 
-/obj/item/book/granter/crafting_recipe/bone_bow //Bow crafting for non-ashwalkers
-	name = "bowyery sandstone slab" // this is an actual word
-	desc = "A sandstone slab with inscriptions describing the Ash Walkers of Lavaland's bowyery."
-//	crafting_recipe_types = list(/datum/crafting_recipe/bone_arrow, /datum/crafting_recipe/bone_bow, /datum/crafting_recipe/ashen_arrow, /datum/crafting_recipe/quiver, /datum/crafting_recipe/bow_tablet)
-	icon_state = "stone_tablet"
-	oneuse = FALSE
-	remarks = list("Sticking burning arrows into the sand makes them stronger...", "Breaking the bone apart to get shards, not sharpening the bone...", "Sinew is just like rope...")
-
-/obj/item/book/granter/crafting_recipe/under_the_oven //Illegal cook book
-	name = "Under The Oven"
-	desc = "A cook book that teaches you many illegal and fun candys. MALF AI approved, and a best seller on the blackmarket."
-	crafting_recipe_types = list()
-	icon_state = "cooking_learing_illegal"
-	oneuse = FALSE
-	remarks = list()
 
 /obj/item/book/granter/crafting_recipe/gunsmith_one
 	name = "Guns and Bullets, Part 1"

@@ -10,7 +10,7 @@ Tribals - Tinker, hobo guns
 	department_flag = WASTELAND
 	access = list(ACCESS_DEN)
 	minimal_access = list(ACCESS_DEN)
-	exp_type = EXP_TYPE_OUTLAW
+	exp_type = EXP_TYPE_WASTELAND
 	faction = "Wastelander"
 	social_faction = "Raiders"
 	exp_requirements = 0
@@ -167,9 +167,10 @@ Tribals - Tinker, hobo guns
 	uniform = /obj/item/clothing/under/f13/raider_leather
 	shoes = /obj/item/clothing/shoes/f13/military
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1,
-		/obj/item/restraints/handcuffs=1,
-		/obj/item/storage/bag/money/small/raider/mobboss = 1,)
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/restraints/handcuffs = 1,
+		/obj/item/storage/bag/money/small/raider/mobboss = 1,
+		/obj/item/melee/chainofcommand = 1,)
 
 /datum/outfit/job/raider/boss_bandit/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -322,9 +323,7 @@ Tribals - Tinker, hobo guns
 
 /datum/job/raider/boss_psycho
 	title = "Raider Bishop"
-	faction = "Wastelander"
 	flag = RAIDERBISHOP
-	social_faction = "Raiders"
 	total_positions = 1
 	spawn_positions = 1
 	description = "Psychos are a rough crowd to say the least, and while they are united by some coked out religious traditions, just because they call their their leader the Bishop don't expect the gang to be choir boys. Try to outcrazy your men or rule with fear, either way, you are smart enough to know you need to stay on top or die, either from traitors or the other gangs."

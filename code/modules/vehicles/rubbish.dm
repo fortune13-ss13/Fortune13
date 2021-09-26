@@ -14,11 +14,7 @@
 	. = ..()
 	AddComponent(/datum/component/largetransparency, x_size = 1, y_size = 2)
 
-/obj/structure/statue_fal/rivertown
-	name = "Alderman statue"
-	desc = "A statue of the first Alderman, Jeremiah, the greediest ghoul of his day. He got together the first armed gangs who controlled the bridge, collecting tolls, which evolved into a proper settlement over time."
-	icon_state = "statue_rivertown"
-	
+
 //Fallout 13 rubish decoration
 
 /obj/structure/car

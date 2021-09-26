@@ -232,22 +232,6 @@
 /obj/item/grenade/barrier/ui_action_click(mob/user)
 	toggle_mode(user)
 
-
-/obj/structure/barbedwire
-	name = "barbed wire"
-	desc = "Don't walk into this."
-	icon = 'icons/fallout/structures/barricades.dmi'
-	icon_state = "barbed"
-	max_integrity = 100
-	density = FALSE
-	anchored = TRUE
-	var/slowdown = 40
-
-/obj/structure/barbedwire/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES)
-
-
 #undef SINGLE
 #undef VERTICAL
 #undef HORIZONTAL

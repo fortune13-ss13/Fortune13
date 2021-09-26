@@ -228,8 +228,8 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 
 /mob/living/simple_animal/hostile/skolf/alpha
 	name = "skull wolf alpha"
-	icon_state = "skolf"
-	icon_living = "skolf"
+	icon_state = "skolfalpha"
+	icon_living = "skolfalpha"
 	speed = -2
 	maxHealth = 90
 	health = 90

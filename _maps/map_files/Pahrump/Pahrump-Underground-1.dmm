@@ -115,10 +115,14 @@
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/caves)
 "ay" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 11;
-	pixel_y = 13
+/obj/structure/railing/handrail{
+	dir = 4;
+	pixel_x = 3
+	},
+/obj/structure/railing/handrail{
+	dir = 10;
+	pixel_x = 21;
+	pixel_y = -9
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
@@ -143,6 +147,15 @@
 	yieldmod = 1.3
 	},
 /obj/structure/flora/ausbushes/sparsegrass,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/village)
+"aB" = (
+/obj/machinery/hydroponics/soil{
+	mutmod = 0;
+	name = "ancient fertile soil";
+	yieldmod = 1.3
+	},
+/obj/structure/flora/wasteplant/wild_broc,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/village)
 "aC" = (
@@ -179,9 +192,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "aJ" = (
-/obj/structure/barricade/wooden,
-/turf/closed/wall/f13/wood,
-/area/f13/city/town)
+/obj/structure/simple_door/interior,
+/turf/open/floor/wood/f13/oak,
+/area/f13/building)
 "aL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/secure/science,
@@ -467,6 +480,14 @@
 /obj/structure/stone_tile/surrounding,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"bV" = (
+/obj/effect/decal/fakelattice,
+/obj/effect/decal/waste,
+/obj/machinery/power/rtg,
+/turf/open/floor/plating{
+	icon_state = "platingdmg1"
+	},
+/area/f13/bunker)
 "bX" = (
 /obj/structure/window/reinforced/spawner{
 	dir = 8
@@ -484,6 +505,10 @@
 /obj/item/pen,
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/vault)
+"bZ" = (
+/obj/structure/flora/wasteplant/wild_broc,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/village)
 "ca" = (
 /obj/structure/fireaxecabinet{
 	pixel_y = 30
@@ -691,23 +716,20 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/vault)
 "cQ" = (
-/obj/structure/table,
-/obj/item/clothing/shoes/combat{
-	pixel_y = 5
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_y = 11
 	},
-/obj/item/clothing/under/f13/talonuniform,
-/turf/open/floor/wood/f13/maple,
-/area/f13/office/talon)
+/turf/open/floor/wood/wood_large,
+/area/f13/city/town)
 "cR" = (
 /obj/machinery/telecomms/server/presets/command,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/caves)
 "cS" = (
-/obj/structure/lattice{
-	layer = 3
-	},
-/turf/open/floor/plating/tunnel,
-/area/f13/enclave/hq)
+/obj/structure/simple_door/interior,
+/turf/open/floor/carpet/black,
+/area/f13/building)
 "cT" = (
 /turf/open/floor/plasteel/f13{
 	dir = 4;
@@ -726,14 +748,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "cW" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 12
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
-	},
-/area/f13/enclave)
+/mob/living/simple_animal/hostile/handy/gutsy/nationalguard/flamer,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
+/area/f13/bunker)
 "da" = (
 /obj/structure/plasticflaps,
 /obj/machinery/conveyor/auto{
@@ -865,9 +883,6 @@
 "dy" = (
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate,
-/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
-/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
-/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
@@ -902,8 +917,9 @@
 	},
 /area/f13/bunker)
 "dI" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_x = -7
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -1044,6 +1060,14 @@
 	color = "#363636"
 	},
 /turf/open/indestructible/ground/inside/mountain,
+/area/f13/office/talon)
+"ee" = (
+/obj/structure/closet/old,
+/obj/item/clothing/under/f13/talonuniform,
+/obj/item/clothing/shoes/combat{
+	pixel_y = 5
+	},
+/turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "eg" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -1206,7 +1230,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/rusty,
 /area/f13/bunker)
 "eP" = (
-/obj/structure/railing/wooden{
+/obj/structure/railing/wood{
 	pixel_y = -3
 	},
 /turf/open/indestructible/ground/inside/mountain,
@@ -1274,10 +1298,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "fg" = (
-/obj/structure/decoration/sign{
-	desc = "A sign";
-	icon_state = "memorial";
-	name = "St. Albans thermo-electric power plant";
+/obj/structure/signs/powerplant{
 	pixel_y = -29
 	},
 /turf/open/floor/plating/rust,
@@ -1326,14 +1347,15 @@
 	},
 /area/f13/enclave)
 "fn" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -19
+/obj/structure/railing/wood{
+	dir = 1;
+	pixel_y = 1
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
+/obj/structure/railing/wood/corner/post{
+	pixel_x = 13
 	},
-/area/f13/enclave)
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/village)
 "fo" = (
 /obj/structure/junk/small/tv,
 /turf/open/indestructible/ground/inside/mountain,
@@ -1548,10 +1570,9 @@
 /turf/closed/wall/r_wall,
 /area/f13/enclave)
 "gg" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/old/fridge,
 /obj/item/reagent_containers/food/drinks/beer/light,
 /obj/item/reagent_containers/food/drinks/beer/light,
-/obj/item/reagent_containers/glass/beaker/waterbottle/large,
 /obj/item/reagent_containers/glass/beaker/waterbottle/large,
 /obj/item/reagent_containers/glass/beaker/waterbottle/large,
 /turf/open/floor/plasteel/freezer,
@@ -1590,7 +1611,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/city/town)
 "gl" = (
-/obj/structure/railing/wooden,
+/obj/structure/railing/wood,
 /turf/open/floor/wood/f13/stage_b,
 /area/f13/city/town)
 "gm" = (
@@ -1933,25 +1954,6 @@
 /obj/item/paper_bin,
 /turf/open/floor/plasteel,
 /area/f13/caves)
-"hx" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 11;
-	pixel_y = -9
-	},
-/obj/structure/fence/handrail{
-	pixel_x = -13;
-	pixel_y = 14
-	},
-/obj/structure/fence/handrail_corner{
-	dir = 4;
-	pixel_x = 11;
-	pixel_y = 14
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "hz" = (
 /obj/structure/rack/steel,
 /obj/item/flashlight/seclite,
@@ -2154,15 +2156,6 @@
 	dir = 4
 	},
 /area/f13/vault)
-"id" = (
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_y = -9
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "ie" = (
 /obj/structure/table,
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super,
@@ -2176,14 +2169,21 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "ig" = (
-/obj/machinery/light{
-	dir = 1
+/obj/structure/table,
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorgrime"
 	},
-/turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "ih" = (
-/turf/open/indestructible/ground/outside/river,
-/area/f13/wasteland)
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "*Smells of ammonia";
+	name = "abraxo solution"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
+/area/f13/enclave)
 "ii" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/maple,
@@ -2319,7 +2319,7 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/outlaw/indoors)
 "iN" = (
-/obj/structure/window/plasma/reinforced/unanchored,
+/obj/structure/window/plasma/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/enclave)
 "iP" = (
@@ -2372,7 +2372,9 @@
 "iV" = (
 /obj/structure/flora/rock/pile/largejungle,
 /obj/structure/flora/rock/jungle,
-/turf/open/indestructible/ground/outside/river,
+/turf/open/indestructible/ground/outside/river{
+	density = 1
+	},
 /area/f13/wasteland)
 "iW" = (
 /obj/effect/decal/fakelattice,
@@ -2600,20 +2602,6 @@
 	dir = 8
 	},
 /area/f13/vault)
-"jI" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -12
-	},
-/obj/structure/fence/handrail_corner{
-	dir = 1;
-	pixel_x = -12;
-	pixel_y = -9
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "jJ" = (
 /obj/machinery/mineral/ore_redemption{
 	input_dir = 8;
@@ -2749,7 +2737,8 @@
 "kr" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	pixel_y = 5
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -2832,8 +2821,8 @@
 	},
 /area/f13/caves)
 "kE" = (
-/obj/structure/bed/mattress{
-	icon_state = "mattress4"
+/obj/machinery/door/window/brigdoor/security/cell/research{
+	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/enclave)
@@ -2958,6 +2947,16 @@
 	icon_state = "titanium"
 	},
 /area/f13/enclave)
+"li" = (
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/ingredients/american,
+/obj/structure/closet/old/fridge,
+/turf/open/floor/plasteel/f13{
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "cafeteria"
+	},
+/area/f13/enclave)
 "lj" = (
 /obj/machinery/light{
 	dir = 8;
@@ -3055,10 +3054,14 @@
 	pixel_y = 23;
 	start_charge = 500
 	},
-/obj/structure/fence/handrail{
-	density = 0;
+/obj/structure/railing/handrail{
 	dir = 4;
-	pixel_x = 12
+	pixel_x = 3;
+	pixel_y = 18
+	},
+/obj/structure/railing/handrail{
+	dir = 4;
+	pixel_x = 3
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -3238,6 +3241,10 @@
 /obj/structure/guncase/shotgun,
 /obj/item/gun/ballistic/shotgun/police,
 /obj/item/ammo_box/shotgun/buck,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 5
+	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -3358,12 +3365,12 @@
 /turf/open/floor/carpet/black,
 /area/f13/vault)
 "mI" = (
-/obj/structure/barricade/tentclothedge{
-	dir = 4;
-	pixel_x = 4
+/obj/structure/railing/wood{
+	dir = 1;
+	pixel_y = 1
 	},
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/outlaw/indoors)
+/area/f13/village)
 "mJ" = (
 /turf/closed/indestructible/rock,
 /area/f13/caves)
@@ -3401,10 +3408,6 @@
 /obj/item/clothing/head/bearpelt,
 /turf/open/floor/wood/f13/old,
 /area/f13/building)
-"mP" = (
-/obj/effect/decal/fakelattice,
-/turf/open/indestructible/ground/outside/river,
-/area/f13/wasteland)
 "mQ" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -3579,10 +3582,10 @@
 /area/f13/vault)
 "nA" = (
 /obj/machinery/light/floor,
-/obj/structure/railing/wooden{
+/obj/structure/railing/wood{
 	pixel_x = 5
 	},
-/obj/structure/railing/wooden/corner/post{
+/obj/structure/railing/wood/corner/post{
 	pixel_x = -10;
 	pixel_y = 3
 	},
@@ -3605,10 +3608,6 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/outlaw/indoors)
 "nJ" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -19
-	},
 /obj/machinery/shower{
 	dir = 4;
 	pixel_x = 1
@@ -3634,6 +3633,13 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "nN" = (
+/obj/structure/railing/wood/corner/post{
+	dir = 8;
+	pixel_y = 22
+	},
+/obj/structure/railing/wood{
+	dir = 8
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "nO" = (
@@ -3678,14 +3684,22 @@
 /turf/closed/mineral/random/low_chance,
 /area/f13/village)
 "nX" = (
-/obj/structure/lattice{
-	layer = 3
+/obj/structure/railing/wood{
+	dir = 4;
+	pixel_x = 3
 	},
-/obj/machinery/light/floor,
-/turf/open/floor/bronze{
-	name = "floor"
+/obj/structure/railing/wood/corner/post{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 22
 	},
-/area/f13/enclave/hq)
+/obj/structure/railing/wood{
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/village)
 "nZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3724,11 +3738,14 @@
 /area/f13/bunker)
 "od" = (
 /obj/structure/rack,
-/obj/item/stack/sheet/mineral/gold,
 /obj/effect/spawner/lootdrop/raiderloot,
-/obj/item/flashlight,
 /obj/item/reagent_containers/glass/beaker/waterbottle{
 	pixel_x = 11
+	},
+/obj/item/flashlight/old,
+/obj/item/reagent_containers/pill/patch/turbo{
+	pixel_x = 9;
+	pixel_y = 6
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/outlaw/indoors)
@@ -3921,20 +3938,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/vault)
-"oO" = (
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_y = -9
-	},
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_x = 13;
-	pixel_y = -9
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "oP" = (
 /obj/machinery/light/small,
 /obj/machinery/light,
@@ -4020,15 +4023,13 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/outlaw/indoors)
 "pg" = (
-/obj/machinery/door/airlock/hatch,
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_tech";
-	pixel_y = 33
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice/overpipe,
+/obj/effect/turf_decal/bot,
+/obj/structure/signs/powerplant/tech{
+	pixel_x = -31
 	},
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
+/turf/open/floor/plating,
 /area/f13/bunker)
 "ph" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
@@ -4124,8 +4125,6 @@
 	},
 /area/f13/bunker)
 "pF" = (
-/obj/item/newspaper,
-/obj/item/newspaper,
 /obj/item/newspaper,
 /obj/item/newspaper,
 /obj/structure/table/wood,
@@ -4386,13 +4385,20 @@
 	},
 /area/f13/enclave)
 "qH" = (
+/obj/structure/railing/wood{
+	dir = 8
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "qI" = (
-/obj/structure/fence/handrail{
+/obj/structure/railing/handrail{
 	dir = 8;
-	pixel_x = -12;
-	pixel_y = 14
+	pixel_x = -3
+	},
+/obj/structure/railing/handrail{
+	dir = 6;
+	pixel_x = -21;
+	pixel_y = -9
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
@@ -4836,7 +4842,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "st" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/old/fridge,
 /obj/item/reagent_containers/food/condiment/enzyme,
 /obj/item/reagent_containers/food/condiment/pack/bbqsauce,
 /obj/item/reagent_containers/food/condiment/pack/bbqsauce,
@@ -4863,10 +4869,10 @@
 /turf/open/floor/wood,
 /area/f13/vault)
 "sB" = (
-/obj/structure/railing/wooden{
+/obj/structure/railing/wood{
 	pixel_y = -3
 	},
-/obj/structure/railing/wooden/corner/post{
+/obj/structure/railing/wood/corner/post{
 	pixel_x = 8;
 	pixel_y = -4
 	},
@@ -5139,7 +5145,8 @@
 /area/f13/bunker)
 "tz" = (
 /obj/machinery/light/small{
-	dir = 1
+	dir = 1;
+	pixel_y = 11
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
@@ -5497,21 +5504,6 @@
 /mob/living/simple_animal/hostile/raider/thief/lurkerbeggar/fem,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"uR" = (
-/obj/structure/fence/handrail_corner{
-	dir = 1;
-	pixel_x = -12;
-	pixel_y = -9
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 17
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "uU" = (
 /obj/machinery/rnd/production/protolathe,
 /turf/open/floor/plasteel/darkpurple/side{
@@ -5637,6 +5629,7 @@
 	pixel_x = -8;
 	pixel_y = -8
 	},
+/obj/item/reagent_containers/glass/bucket/plastic,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/enclave)
 "vu" = (
@@ -5705,7 +5698,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/vault)
 "vK" = (
-/obj/structure/window/plasma/reinforced/unanchored{
+/obj/structure/window/plasma/reinforced{
 	dir = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
@@ -5778,6 +5771,10 @@
 	},
 /area/f13/bunker)
 "wa" = (
+/obj/structure/railing/wood{
+	dir = 4;
+	pixel_x = 3
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "wc" = (
@@ -5819,25 +5816,6 @@
 /obj/structure/target_stake,
 /obj/item/target,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/enclave)
-"wo" = (
-/obj/structure/fence/handrail_corner{
-	dir = 4;
-	pixel_x = 11;
-	pixel_y = 14
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 11;
-	pixel_y = -9
-	},
-/obj/structure/fence/handrail{
-	pixel_x = -13;
-	pixel_y = 14
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
 /area/f13/enclave)
 "wt" = (
 /obj/machinery/light{
@@ -5967,18 +5945,16 @@
 	},
 /area/f13/bunker)
 "wU" = (
-/obj/structure/barricade/tentclothedge{
-	dir = 8;
-	pixel_x = -3
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/outlaw/indoors)
-"wV" = (
-/obj/structure/window/plasma/reinforced/unanchored{
+/obj/structure/railing/wood{
 	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/enclave)
+/obj/structure/railing/wood/corner/post{
+	dir = 8;
+	pixel_x = 2;
+	pixel_y = 22
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/village)
 "wW" = (
 /obj/structure/chair/stool/f13stool,
 /mob/living/simple_animal/hostile/ghoul/reaver,
@@ -6013,6 +5989,15 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/bunker)
+"xf" = (
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_y = 11
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/office/talon)
 "xg" = (
 /obj/machinery/light/small,
 /turf/open/floor/wood/f13/oak,
@@ -6024,6 +6009,14 @@
 /obj/item/reagent_containers/food/snacks/grown/mushroom/reishi,
 /obj/item/reagent_containers/food/snacks/grown/mushroom/reishi,
 /turf/open/floor/f13/wood,
+/area/f13/village)
+"xi" = (
+/obj/machinery/hydroponics/soil{
+	mutmod = 2;
+	name = "ancient mutated soil"
+	},
+/obj/structure/flora/wasteplant/wild_broc,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/village)
 "xk" = (
 /obj/item/reagent_containers/pill/radx,
@@ -6109,9 +6102,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "xx" = (
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_office";
+/obj/structure/signs/powerplant/office{
 	pixel_y = 33
 	},
 /turf/open/floor/f13{
@@ -6332,11 +6323,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
 /area/f13/bunker)
 "yu" = (
-/obj/structure/barricade/tentclothedge{
-	dir = 1
+/obj/structure/railing/wood{
+	dir = 4;
+	pixel_x = 3
+	},
+/obj/structure/railing/wood/corner/post{
+	dir = 4;
+	pixel_y = 22
 	},
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/outlaw/indoors)
+/area/f13/village)
 "yw" = (
 /obj/structure/chair/office/light,
 /obj/effect/landmark/start/f13/enclave/scientist,
@@ -6455,6 +6451,14 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/building)
+"yV" = (
+/obj/effect/decal/fakelattice,
+/obj/structure/spider/stickyweb,
+/obj/machinery/power/rtg,
+/turf/open/floor/plating{
+	icon_state = "platingdmg1"
+	},
+/area/f13/bunker)
 "yW" = (
 /turf/closed/indestructible/fakeglass,
 /area/f13/bunker)
@@ -6476,6 +6480,13 @@
 	icon_state = "yellow"
 	},
 /area/f13/enclave)
+"zb" = (
+/obj/machinery/light/small{
+	pixel_x = 1;
+	pixel_y = -6
+	},
+/turf/open/floor/wood/f13/maple,
+/area/f13/office/talon)
 "zc" = (
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 9
@@ -6621,8 +6632,9 @@
 	name = "GPS Ping Grabber."
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence/handrail{
-	pixel_y = 23
+/obj/structure/railing/handrail{
+	dir = 1;
+	pixel_y = 18
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -6752,15 +6764,17 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/outlaw/indoors)
 "zW" = (
-/obj/structure/fence/handrail_corner{
-	dir = 4;
-	pixel_x = -12;
-	pixel_y = -9
+/obj/structure/railing/wood/corner/post{
+	dir = 8;
+	pixel_x = 2;
+	pixel_y = 22
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
+/obj/structure/barricade/wooden/strong{
+	layer = 4.3;
+	obj_integrity = 500
 	},
-/area/f13/enclave)
+/turf/closed/wall/f13/wood,
+/area/f13/village)
 "zX" = (
 /obj/structure/curtain{
 	color = "#845f58"
@@ -6874,14 +6888,6 @@
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13/wood,
 /area/f13/subway/ghouls)
-"Au" = (
-/obj/effect/turf_decal/arrows,
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 12
-	},
-/turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/enclave)
 "Av" = (
 /obj/structure/flora/ausbushes/palebush,
 /obj/structure/flora/ausbushes/fullgrass{
@@ -6965,7 +6971,7 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/outlaw/indoors)
 "AN" = (
-/obj/structure/closet/crate/footlocker,
+/obj/structure/closet/old,
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "AO" = (
@@ -7266,6 +7272,13 @@
 "Cb" = (
 /turf/open/floor/wood/f13/stage_t,
 /area/f13/wasteland)
+"Cc" = (
+/obj/effect/decal/fakelattice,
+/obj/machinery/power/rtg,
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+/area/f13/bunker)
 "Cd" = (
 /obj/structure/barricade/wooden/strong{
 	obj_integrity = 500
@@ -7468,7 +7481,8 @@
 "Dd" = (
 /obj/structure/junk/drawer,
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	pixel_y = 5
 	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
@@ -7495,9 +7509,7 @@
 	},
 /obj/structure/lattice/overpipe,
 /obj/effect/turf_decal/bot,
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_toilet";
+/obj/structure/signs/powerplant/toilet{
 	pixel_y = 33
 	},
 /turf/open/floor/plating,
@@ -7538,12 +7550,17 @@
 /turf/open/floor/mineral/plastitanium,
 /area/f13/vault)
 "Dq" = (
-/obj/machinery/light/fo13colored/Red{
-	dir = 1;
-	name = "emergency light"
+/obj/structure/barricade/wooden/strong{
+	layer = 4.3;
+	obj_integrity = 500
 	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
+/obj/structure/railing/wood/corner/post{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 22
+	},
+/turf/closed/wall/f13/wood,
+/area/f13/village)
 "Dr" = (
 /obj/structure/wreck/trash/three_barrels,
 /turf/open/indestructible/ground/inside/mountain,
@@ -7569,7 +7586,7 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "Dy" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/fridge,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/outlaw/indoors)
@@ -7827,10 +7844,14 @@
 /area/f13/bunker)
 "EB" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence/handrail{
-	density = 0;
-	dir = 4;
-	pixel_x = -13
+/obj/structure/railing/handrail{
+	dir = 8;
+	pixel_x = -3;
+	pixel_y = 18
+	},
+/obj/structure/railing/handrail{
+	dir = 8;
+	pixel_x = -3
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -7892,10 +7913,6 @@
 	icon_state = "catwalk"
 	},
 /area/f13/bunker)
-"EO" = (
-/obj/item/reagent_containers/glass/bucket,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/enclave)
 "EP" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/plasteel/f13/vault_floor/green,
@@ -8189,7 +8206,6 @@
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
-/obj/item/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/storage/firstaid/ancient,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
@@ -8227,6 +8243,14 @@
 "Gk" = (
 /turf/closed/mineral/random/high_chance,
 /area/f13/caves)
+"Gl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	pixel_x = -16;
+	pixel_y = -6
+	},
+/turf/open/floor/wood/f13/maple,
+/area/f13/office/talon)
 "Gn" = (
 /obj/structure/stone_tile/surrounding_tile,
 /turf/open/indestructible/ground/inside/mountain,
@@ -8251,10 +8275,6 @@
 /area/f13/city/town)
 "Gs" = (
 /obj/effect/turf_decal/arrows,
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -19
-	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/enclave)
 "Gt" = (
@@ -8312,18 +8332,19 @@
 /turf/open/floor/plating,
 /area/f13/bunker)
 "GD" = (
-/obj/structure/fence/handrail_corner{
-	dir = 4;
-	pixel_x = 11;
-	pixel_y = 14
+/obj/structure/railing/handrail{
+	dir = 5;
+	pixel_x = 3;
+	pixel_y = 16
 	},
-/obj/structure/fence/handrail{
+/obj/structure/railing/handrail{
+	dir = 1;
 	pixel_x = -13;
-	pixel_y = 14
+	pixel_y = 18
 	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 11;
+/obj/structure/railing/handrail{
+	dir = 4;
+	pixel_x = 3;
 	pixel_y = -9
 	},
 /turf/open/floor/plasteel/f13{
@@ -8485,9 +8506,7 @@
 /turf/closed/wall/f13/supermart,
 /area/f13/bunker)
 "Hm" = (
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_guard";
+/obj/structure/signs/powerplant/guard{
 	pixel_y = 33
 	},
 /turf/closed/wall/rust,
@@ -8529,18 +8548,6 @@
 /obj/item/soap/homemade,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"Hu" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 12
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "rampdowntop"
-	},
-/area/f13/enclave)
 "Hw" = (
 /obj/machinery/light/fo13colored/Red{
 	name = "emergency light"
@@ -8599,20 +8606,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/f13/bunker)
-"HJ" = (
-/obj/structure/fence/handrail_corner{
-	pixel_x = 11;
-	pixel_y = -9
-	},
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_x = -12;
-	pixel_y = -9
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "HK" = (
 /obj/structure/simple_door{
 	name = "barracks"
@@ -8932,19 +8925,15 @@
 	},
 /obj/effect/decal/cleanable/robot_debris/down,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence/handrail{
-	pixel_x = 2;
-	pixel_y = 23
+/obj/structure/railing/handrail{
+	dir = 1;
+	pixel_x = 19;
+	pixel_y = 18
 	},
-/obj/structure/fence/handrail{
-	density = 0;
-	dir = 4;
-	pixel_x = -13
-	},
-/obj/structure/fence/handrail_corner{
-	dir = 8;
-	pixel_x = -13;
-	pixel_y = 23
+/obj/structure/railing/handrail{
+	dir = 9;
+	pixel_x = -3;
+	pixel_y = 16
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -9034,7 +9023,7 @@
 	},
 /area/f13/enclave)
 "Jy" = (
-/obj/structure/barricade/old_locked_door,
+/obj/structure/obstacle/old_locked_door,
 /obj/structure/barricade/wooden/boarded{
 	icon = 'icons/fallout/structures/barricades.dmi'
 	},
@@ -9076,16 +9065,6 @@
 /obj/structure/wreck/trash/halftire,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"JI" = (
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_x = -12;
-	pixel_y = -9
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "JJ" = (
 /obj/item/flashlight/lantern,
 /turf/open/indestructible/ground/inside/mountain,
@@ -9138,7 +9117,7 @@
 	},
 /area/f13/vault)
 "JV" = (
-/obj/machinery/door/window/brigdoor/security/cell/research{
+/obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
@@ -9220,10 +9199,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "Km" = (
-/obj/structure/fence/handrail_corner{
-	dir = 1;
-	pixel_x = 11;
-	pixel_y = 14
+/obj/structure/railing/handrail{
+	dir = 5;
+	pixel_x = -21;
+	pixel_y = 16
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
@@ -9250,17 +9229,6 @@
 /turf/open/floor/plasteel/f13{
 	dir = 8;
 	icon_state = "rampdowntop"
-	},
-/area/f13/enclave)
-"Ku" = (
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_x = -12;
-	pixel_y = -9
-	},
-/obj/machinery/light,
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
 	},
 /area/f13/enclave)
 "Kv" = (
@@ -9307,14 +9275,18 @@
 	},
 /area/f13/bunker)
 "KE" = (
-/obj/structure/fence/handrail{
+/obj/structure/railing/handrail{
+	dir = 10;
+	pixel_x = -3;
+	pixel_y = -9
+	},
+/obj/structure/railing/handrail{
 	dir = 8;
-	pixel_x = -12;
+	pixel_x = -3;
 	pixel_y = 17
 	},
-/obj/structure/fence/handrail_corner{
-	dir = 1;
-	pixel_x = -12;
+/obj/structure/railing/handrail{
+	pixel_x = 19;
 	pixel_y = -9
 	},
 /turf/open/floor/plasteel/f13{
@@ -9325,6 +9297,13 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/green/rusty,
+/area/f13/bunker)
+"KH" = (
+/obj/effect/decal/fakelattice,
+/obj/machinery/power/rtg,
+/turf/open/floor/plating{
+	icon_state = "platingdmg1"
+	},
 /area/f13/bunker)
 "KI" = (
 /obj/structure/barricade/tentclothcorner{
@@ -9393,7 +9372,6 @@
 /area/f13/vault)
 "KU" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/crafting,
 /obj/effect/spawner/lootdrop/f13/crafting,
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
@@ -9503,8 +9481,18 @@
 	},
 /area/f13/vault)
 "Lq" = (
-/obj/structure/fence/handrail_corner{
-	pixel_x = 11;
+/obj/structure/railing/handrail{
+	pixel_x = -17;
+	pixel_y = -9
+	},
+/obj/structure/railing/handrail{
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 12
+	},
+/obj/structure/railing/handrail{
+	dir = 6;
+	pixel_x = 3;
 	pixel_y = -9
 	},
 /turf/open/floor/plasteel/f13{
@@ -9671,13 +9659,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "LU" = (
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_y = -9
-	},
-/obj/structure/fence/handrail{
-	dir = 1;
-	pixel_x = -12;
+/obj/structure/railing/handrail{
 	pixel_y = -9
 	},
 /turf/open/floor/plasteel/f13{
@@ -9792,7 +9774,8 @@
 "Mv" = (
 /obj/machinery/light{
 	dir = 1;
-	pixel_x = -16
+	pixel_x = -15;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
@@ -9838,13 +9821,8 @@
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/vault)
-"MH" = (
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/village)
 "MK" = (
-/turf/open/indestructible/ground/outside/river{
-	density = 1
-	},
+/turf/open/indestructible/ground/outside/river,
 /area/f13/wasteland)
 "ML" = (
 /obj/structure/sign/warning/securearea,
@@ -9862,7 +9840,7 @@
 	},
 /area/f13/bunker)
 "MN" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet/old,
 /obj/item/restraints/handcuffs,
 /obj/item/restraints/handcuffs,
 /obj/item/restraints/handcuffs,
@@ -9933,12 +9911,11 @@
 /turf/closed/wall/f13/vault,
 /area/f13/vault)
 "Nc" = (
-/obj/structure/railing,
-/obj/structure/table,
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
+/obj/machinery/door/unpowered/padlockwooddoor/town{
+	name = "machine shop"
 	},
-/area/f13/office/talon)
+/turf/open/floor/wood/wood_large,
+/area/f13/city/town)
 "Ne" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating{
@@ -9998,8 +9975,14 @@
 	},
 /obj/structure/table/glass,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/fence/handrail{
-	pixel_y = 23
+/obj/structure/railing/handrail{
+	dir = 1;
+	pixel_x = 13;
+	pixel_y = 18
+	},
+/obj/structure/railing/handrail{
+	dir = 1;
+	pixel_y = 18
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -10015,20 +9998,6 @@
 /mob/living/simple_animal/hostile/handy/gutsy/nationalguard,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/rusty,
 /area/f13/bunker)
-"Nu" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 17
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -12
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "Nv" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 4;
@@ -10136,9 +10105,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "NT" = (
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_dorm";
+/obj/structure/signs/powerplant/dorms{
 	pixel_y = 33
 	},
 /turf/closed/wall/rust,
@@ -10285,10 +10252,9 @@
 	},
 /area/f13/bunker)
 "OF" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 11;
-	pixel_y = -9
+/obj/structure/railing/handrail{
+	dir = 4;
+	pixel_x = 3
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
@@ -10626,7 +10592,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/rusty,
 /area/f13/bunker)
 "PI" = (
-/obj/structure/flora/rock/jungle,
+/obj/effect/decal/fakelattice,
 /turf/open/indestructible/ground/outside/river,
 /area/f13/wasteland)
 "PJ" = (
@@ -10636,10 +10602,6 @@
 "PK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -19
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "rampdowntop"
@@ -10843,30 +10805,21 @@
 /area/f13/vault)
 "Qw" = (
 /obj/machinery/rnd/server/bos,
-/obj/structure/fence/handrail{
-	density = 0;
-	dir = 4;
-	pixel_x = 12
-	},
-/obj/structure/fence/handrail_corner{
-	dir = 4;
-	pixel_x = 12;
-	pixel_y = 23
-	},
-/obj/structure/fence/handrail{
-	pixel_x = -19;
-	pixel_y = 23
+/obj/structure/railing/handrail{
+	dir = 5;
+	pixel_x = 3;
+	pixel_y = 16
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
 /area/f13/enclave/hq)
 "Qy" = (
-/obj/structure/railing/wooden{
+/obj/structure/railing/wood{
 	pixel_x = 8;
 	pixel_y = -3
 	},
-/obj/structure/railing/wooden/corner/post{
+/obj/structure/railing/wood/corner/post{
 	pixel_x = -10;
 	pixel_y = -4
 	},
@@ -11052,12 +11005,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/enclave)
 "Ro" = (
-/obj/structure/decoration/sign{
-	desc = "A sign";
-	icon_state = "memorial";
-	name = "National Guard depot no. 241";
-	pixel_y = 31
-	},
+/obj/structure/signs/national/depot,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Rp" = (
@@ -11234,10 +11182,6 @@
 /obj/machinery/light,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/f13/caves)
-"Sf" = (
-/obj/structure/bed/mattress,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/enclave)
 "Sh" = (
 /obj/machinery/light{
 	dir = 1
@@ -11397,10 +11341,6 @@
 	},
 /area/f13/enclave)
 "SO" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 12
-	},
 /obj/machinery/pool/drain{
 	pixel_x = -10
 	},
@@ -11442,16 +11382,6 @@
 	dir = 8
 	},
 /area/f13/caves)
-"ST" = (
-/obj/structure/fence/handrail_corner{
-	dir = 8;
-	pixel_x = 11;
-	pixel_y = -9
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "SU" = (
 /obj/structure/lattice{
 	layer = 3
@@ -11582,7 +11512,7 @@
 	},
 /area/f13/enclave)
 "Tq" = (
-/obj/structure/barricade/jammed_door,
+/obj/structure/obstacle/jammed_door,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -12032,10 +11962,19 @@
 	},
 /area/f13/bunker)
 "Vn" = (
-/obj/structure/fence/handrail_corner{
+/obj/structure/railing/handrail{
+	dir = 9;
+	pixel_x = -3;
+	pixel_y = 16
+	},
+/obj/structure/railing/handrail{
 	dir = 8;
-	pixel_x = -12;
-	pixel_y = 14
+	pixel_x = -3
+	},
+/obj/structure/railing/handrail{
+	dir = 1;
+	pixel_x = 19;
+	pixel_y = 18
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
@@ -12169,6 +12108,7 @@
 	pixel_x = -8;
 	pixel_y = 7
 	},
+/obj/structure/bed/roller,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/enclave)
 "VK" = (
@@ -12216,20 +12156,6 @@
 	icon_state = "rampdowntop"
 	},
 /area/f13/vault)
-"VR" = (
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -12
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 17
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "VS" = (
 /obj/structure/closet/crate,
 /obj/machinery/light/small/broken{
@@ -12255,7 +12181,6 @@
 "VW" = (
 /obj/item/trash/f13/mre,
 /obj/structure/rack,
-/obj/item/reagent_containers/food/snacks/f13/mre,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "VX" = (
@@ -12292,7 +12217,6 @@
 "Wd" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/food/snacks/beans,
-/obj/item/reagent_containers/food/snacks/f13/mre,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "We" = (
@@ -12320,7 +12244,11 @@
 	},
 /area/f13/bunker)
 "Wi" = (
-/obj/structure/junk/cabinet,
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_x = -7;
+	pixel_y = -1
+	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "Wj" = (
@@ -12372,8 +12300,8 @@
 /turf/open/floor/carpet/black,
 /area/f13/enclave)
 "Wq" = (
-/obj/structure/railing/wooden,
-/obj/structure/railing/wooden/corner/post{
+/obj/structure/railing/wood,
+/obj/structure/railing/wood/corner/post{
 	pixel_x = 9;
 	pixel_y = 3
 	},
@@ -12450,7 +12378,9 @@
 "WE" = (
 /obj/structure/flora/rock/pile/largejungle,
 /obj/effect/decal/fakelattice,
-/turf/open/indestructible/ground/outside/river,
+/turf/open/indestructible/ground/outside/river{
+	density = 1
+	},
 /area/f13/wasteland)
 "WF" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -12704,7 +12634,8 @@
 /obj/structure/table,
 /obj/item/soap,
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	pixel_y = 5
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -12876,10 +12807,11 @@
 	dir = 1
 	},
 /obj/machinery/computer/rdconsole/core/bos,
-/obj/structure/fence/handrail{
-	pixel_y = 23
-	},
 /obj/machinery/autolathe/army,
+/obj/structure/railing/handrail{
+	dir = 1;
+	pixel_y = 18
+	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -12894,9 +12826,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Yn" = (
-/obj/structure/fence/handrail{
+/obj/structure/railing/handrail{
 	dir = 8;
-	pixel_x = -12
+	pixel_x = -3
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
@@ -12990,15 +12922,6 @@
 	},
 /turf/closed/wall/f13/wood,
 /area/f13/village)
-"YH" = (
-/obj/structure/fence/handrail{
-	pixel_x = -13;
-	pixel_y = 14
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
 "YI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light,
@@ -13095,7 +13018,9 @@
 "YX" = (
 /obj/structure/flora/rock/jungle,
 /obj/structure/flora/rock/pile/largejungle,
-/turf/open/indestructible/ground/outside/river,
+/turf/open/indestructible/ground/outside/river{
+	density = 1
+	},
 /area/f13/wasteland)
 "YZ" = (
 /obj/machinery/smartfridge/bottlerack/grownbin,
@@ -13152,19 +13077,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "Zh" = (
-/obj/structure/window/plasma/reinforced/unanchored{
+/obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/enclave)
-"Zk" = (
-/obj/structure/fence/handrail_corner{
-	pixel_x = -12;
-	pixel_y = 14
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
 /area/f13/enclave)
 "Zl" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13184,23 +13100,6 @@
 "Zn" = (
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/vault)
-"Zp" = (
-/obj/structure/fence/handrail{
-	pixel_x = -13;
-	pixel_y = 14
-	},
-/obj/structure/fence/handrail{
-	pixel_x = -22;
-	pixel_y = 14
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/enclave)
-"Zq" = (
-/obj/structure/flora/rock/pile/largejungle,
-/turf/open/indestructible/ground/outside/river,
-/area/f13/wasteland)
 "Zs" = (
 /obj/structure/bed/old,
 /obj/effect/decal/cleanable/dirt{
@@ -13314,9 +13213,7 @@
 	},
 /obj/structure/lattice/overpipe,
 /obj/effect/turf_decal/bot,
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_lounge";
+/obj/structure/signs/powerplant/lounge{
 	pixel_y = 33
 	},
 /turf/open/floor/plating,
@@ -13341,13 +13238,9 @@
 	},
 /area/f13/bunker)
 "ZT" = (
-/obj/structure/fence/handrail{
-	pixel_x = -13;
-	pixel_y = 14
-	},
-/obj/structure/fence/handrail{
-	pixel_x = -3;
-	pixel_y = 14
+/obj/structure/railing/handrail{
+	dir = 1;
+	pixel_y = 18
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "catwalk"
@@ -13618,24 +13511,24 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 aO
@@ -13780,24 +13673,24 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -13942,24 +13835,24 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-Zq
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+tx
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 aO
 By
@@ -14104,23 +13997,23 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-iV
-PI
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+iV
+zN
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 lk
@@ -14267,22 +14160,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-PI
-PI
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+zN
+zN
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 lk
@@ -14429,22 +14322,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 cA
@@ -14591,22 +14484,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 lk
@@ -14753,22 +14646,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 lk
@@ -14778,9 +14671,9 @@ mZ
 mZ
 mZ
 Oy
-wa
+Ol
 df
-wa
+Ol
 Hy
 Hy
 Hy
@@ -14915,22 +14808,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 By
@@ -14939,11 +14832,11 @@ cA
 mZ
 mZ
 mZ
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
 Hy
 Hy
 Hy
@@ -15077,35 +14970,35 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 lk
 cA
 cA
 mZ
-wa
+Ol
 pk
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
 Hy
 Hy
 Hy
@@ -15240,34 +15133,34 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 pt
 lk
 cA
 cA
-wa
+Ol
 mZ
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 Hy
 Hy
 Hy
@@ -15402,33 +15295,33 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Zq
 MK
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+tx
+MK
+MK
+MK
+MK
+MK
 Lb
 lk
 cA
 cA
-wa
+Ol
 mZ
-wa
+Ol
 Oy
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ct
 Hy
 Hy
@@ -15564,22 +15457,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 iV
 zN
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
 Lb
 Oy
 Oy
@@ -15590,8 +15483,8 @@ Oy
 Oy
 Oy
 bx
-wa
-wa
+Ol
+Ol
 Hy
 Hy
 Hy
@@ -15726,22 +15619,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Zq
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+tx
 iV
 zN
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
 JG
 pA
 Pe
@@ -15749,11 +15642,11 @@ Pe
 Pe
 Pe
 rI
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
 Hy
 Hy
 Hy
@@ -15888,21 +15781,21 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-PI
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+zN
+MK
+MK
+MK
+MK
 Lb
 jZ
 ea
@@ -15912,10 +15805,10 @@ ea
 Zy
 wJ
 ko
-wa
-wa
+Ol
+Ol
 bx
-wa
+Ol
 Hy
 Hy
 Hy
@@ -16051,20 +15944,20 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-PI
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+zN
+MK
+MK
+MK
+MK
 Lb
 sX
 ea
@@ -16074,10 +15967,10 @@ ea
 Pq
 yK
 ko
-wa
-wa
+Ol
+Ol
 Hd
-wa
+Ol
 Hy
 Hy
 Hy
@@ -16213,20 +16106,20 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 Pq
 ea
@@ -16236,9 +16129,9 @@ ea
 Pq
 bK
 ko
-wa
+Ol
 df
-wa
+Ol
 Hd
 Hy
 Hy
@@ -16375,20 +16268,20 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 jZ
 ea
@@ -16397,10 +16290,10 @@ uQ
 Zx
 xh
 wJ
-wa
+Ol
 ct
-wa
-wa
+Ol
+Ol
 Hd
 ct
 Hy
@@ -16434,10 +16327,10 @@ Za
 VI
 Vz
 iN
-kE
-EO
-Sf
-EO
+RK
+RK
+RK
+RK
 vK
 Vz
 Vz
@@ -16537,21 +16430,21 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 yS
 pt
 Mf
@@ -16559,12 +16452,12 @@ lQ
 tH
 zX
 iu
-wa
+Ol
 ko
-wa
+Ol
 YS
-wa
-wa
+Ol
+Ol
 LP
 Hy
 pA
@@ -16699,47 +16592,47 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 ea
 ea
 jX
 ea
 ea
-wa
-wa
-wa
+Ol
+Ol
+Ol
 bx
 Hd
-wa
-wa
+Ol
+Ol
 ct
-wa
-wa
+Ol
+Ol
 cV
-wa
+Ol
 cV
 Hy
 Hy
 Hy
 Hy
 ea
-wa
+Ol
 ea
 zx
 Hy
@@ -16759,8 +16652,8 @@ VI
 Vz
 em
 JV
-wV
-wV
+JV
+kE
 JV
 PT
 Vz
@@ -16861,40 +16754,40 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 ea
 ea
 ea
 ea
-wa
-wa
-wa
-wa
-wa
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 Am
-wa
+Ol
 Us
 jX
 ea
@@ -17023,40 +16916,40 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 Hd
 HW
-wa
-wa
+Ol
+Ol
 ou
-wa
-wa
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 ea
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ea
 Md
 ea
@@ -17185,18 +17078,18 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hh
 Hh
 Hh
@@ -17207,16 +17100,16 @@ AV
 ou
 ou
 RX
-wa
+Ol
 ea
-wa
-wa
+Ol
+Ol
 Us
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
 ea
 gE
 tH
@@ -17347,16 +17240,16 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 iV
-ih
-ih
-ih
+MK
+MK
+MK
 MK
 Lb
 Hd
@@ -17366,18 +17259,18 @@ IV
 bx
 Hd
 Hd
-wa
+Ol
 df
 ea
 jX
-wa
+Ol
 fM
 ea
 Pq
 oM
 GN
 ea
-wa
+Ol
 df
 Hy
 bK
@@ -17406,7 +17299,7 @@ Za
 VI
 VI
 Vz
-FQ
+ih
 RI
 RI
 RI
@@ -17508,17 +17401,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 bx
@@ -17527,19 +17420,19 @@ Hd
 pP
 HW
 Hd
-wa
+Ol
 rA
-wa
-wa
-wa
+Ol
+Ol
+Ol
 hO
 vq
 ea
 Pq
 ea
 vQ
-wa
-wa
+Ol
+Ol
 Hy
 Hy
 bK
@@ -17670,17 +17563,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 bx
@@ -17689,18 +17582,18 @@ Hd
 NL
 Hd
 NL
-wa
+Ol
 vn
-wa
-wa
-wa
+Ol
+Ol
+Ol
 vq
 vq
 dZ
 Pq
-wa
+Ol
 GN
-wa
+Ol
 RX
 Hy
 Hy
@@ -17832,29 +17725,29 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
 NL
 NL
 Hd
-HW
+xi
 Hd
 bx
-wa
-wa
-wa
+Ol
+Ol
+Ol
 BD
 vq
 DW
@@ -17862,8 +17755,8 @@ ea
 ea
 ea
 ea
-wa
-wa
+Ol
+Ol
 Hy
 Hy
 iu
@@ -17994,17 +17887,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
@@ -18015,17 +17908,17 @@ YS
 NL
 Hd
 pP
-wa
-wa
+Ol
+Ol
 Zx
 vq
 vq
 er
 SH
-wa
+Ol
 Pq
-wa
-wa
+Ol
+Ol
 df
 Hy
 iu
@@ -18156,17 +18049,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
@@ -18175,24 +18068,24 @@ Hd
 IV
 NL
 Hd
-wa
-wa
+Ol
+Ol
 df
-wa
-wa
+Ol
+Ol
 aH
 vq
 ea
 Pq
-wa
+Ol
 Pq
 Us
-wa
-wa
-wa
+Ol
+Ol
+Ol
 sE
-wa
-wa
+Ol
+Ol
 ea
 ea
 df
@@ -18318,45 +18211,45 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
 Hd
-NL
+aB
 NL
 Hd
 NL
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
 ea
-wa
+Ol
 fM
-wa
+Ol
 GN
-wa
+Ol
 GN
 ea
-wa
-wa
-wa
+Ol
+Ol
+Ol
 sE
 ea
 VC
-wa
-wa
+Ol
+Ol
 ea
 sE
 ea
@@ -18384,15 +18277,15 @@ Rn
 Wy
 Wy
 Vn
-VR
 Yn
-jI
+Yn
+KE
 Kr
 Kr
 Vn
-Nu
 Yn
-jI
+Yn
+KE
 Wy
 Wy
 Wy
@@ -18480,17 +18373,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
@@ -18501,24 +18394,24 @@ NL
 Hd
 bx
 ct
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 Zx
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
 RX
-wa
+Ol
 gE
 Hy
 Hy
-wa
-wa
+Ol
+Ol
 ea
 iu
 kL
@@ -18545,15 +18438,15 @@ Aj
 Aj
 wt
 Wy
-YH
-ST
+ZT
+sx
 OF
-HJ
+Lq
 Kr
 Kr
 GD
 ay
-Km
+sx
 LU
 Wy
 ob
@@ -18642,17 +18535,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
@@ -18663,23 +18556,23 @@ Hd
 NL
 ct
 ct
-wa
-wa
-wa
+Ol
+Ol
+Ol
 AK
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ko
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
 rB
 bK
 Hy
 Hy
-wa
+Ol
 ea
 ea
 lQ
@@ -18707,7 +18600,7 @@ Qc
 Aj
 Wy
 Wy
-YH
+ZT
 au
 EC
 Wy
@@ -18715,8 +18608,8 @@ Wy
 Wy
 Wy
 Wy
-sx
-id
+ZT
+LU
 Wy
 Wy
 sZ
@@ -18804,17 +18697,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
@@ -18823,16 +18716,16 @@ NL
 Hd
 NL
 Hd
-wa
+Ol
 ct
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
 ea
-wa
-wa
+Ol
+Ol
 mc
 Zm
 Zm
@@ -18841,8 +18734,8 @@ Zm
 bK
 Hy
 nW
-wa
-wa
+Ol
+Ol
 Hy
 bK
 tN
@@ -18869,23 +18762,23 @@ uL
 Aj
 Wy
 Wy
-YH
-oO
+ZT
+LU
 Wy
 eg
 QE
 ZU
 qO
 Wy
-Zp
-oO
+ZT
+LU
 Wy
 Wy
 sZ
-sx
-sx
-sx
-sx
+OF
+OF
+OF
+OF
 Vz
 Za
 cA
@@ -18966,17 +18859,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 Hd
@@ -18984,27 +18877,27 @@ aA
 Hd
 IV
 bx
-wa
-wa
-wa
+Ol
+Ol
+Ol
 df
-wa
-wa
+Ol
+Ol
 Pz
 Us
 cp
-wa
-wa
+Ol
+Ol
 Lr
+nN
 qH
-MH
-MH
-MH
-Cd
+wU
+qH
+zW
 Hy
 df
 ea
-wa
+Ol
 Hy
 rI
 Pe
@@ -19044,7 +18937,7 @@ Lq
 Wy
 Wy
 sZ
-fn
+dJ
 nJ
 PK
 Gs
@@ -19129,16 +19022,16 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 Lb
 bx
@@ -19150,22 +19043,22 @@ ea
 ea
 zw
 rI
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ea
 ea
-wa
+Ol
 GN
-nN
-wa
+fn
+Ol
 Hd
 Dt
 Hd
 bK
 Hy
-wa
-wa
+Ol
+Ol
 Hy
 Hy
 Hy
@@ -19186,7 +19079,7 @@ uL
 Yj
 EF
 uL
-cS
+Oc
 Oc
 Fu
 uL
@@ -19291,18 +19184,18 @@ cA
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 yS
 yS
 pt
@@ -19312,21 +19205,21 @@ ea
 ea
 zx
 Ht
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ea
 jX
-wa
+Ol
 GN
-nN
-wa
+mI
+Ol
 Hd
 Eh
-wa
+Ol
 bK
 Hy
-wa
+Ol
 ea
 Hy
 Hy
@@ -19349,7 +19242,7 @@ Nq
 uL
 uL
 SU
-nX
+Ak
 Fs
 uL
 Aj
@@ -19454,19 +19347,19 @@ FM
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 Ol
 Fg
@@ -19474,13 +19367,13 @@ ea
 jX
 Pq
 zL
-wa
-wa
+Ol
+Ol
 ko
 ea
 AK
-wa
-wa
+Ol
+Ol
 Jt
 Hd
 Hd
@@ -19526,14 +19419,14 @@ Nz
 wE
 Wy
 Vn
-uR
+KE
 Wy
 Wy
 sZ
-cW
+dJ
 SO
-Hu
-Au
+PK
+Gs
 Vz
 Za
 cA
@@ -19616,19 +19509,19 @@ cA
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 Ol
 ej
@@ -19636,18 +19529,18 @@ ea
 ea
 nK
 zw
-wa
-wa
+Ol
+Ol
 ko
 ea
-wa
-wa
+Ol
+Ol
 GN
-nN
+fn
 Dt
 BM
-wa
-wa
+Ol
+Ol
 lQ
 Hy
 we
@@ -19679,23 +19572,23 @@ Qc
 Aj
 Wy
 Wy
-YH
-JI
+ZT
+LU
 Wy
 ps
 ON
 vU
 VD
 Wy
-YH
+ZT
 LU
 Wy
 Wy
 sZ
-sx
-sx
-sx
-sx
+Yn
+Yn
+Yn
+Yn
 Vz
 Za
 cA
@@ -19778,19 +19671,19 @@ cA
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 Ol
 cl
@@ -19798,17 +19691,17 @@ ea
 AK
 ea
 BK
-wa
+Ol
 ko
-wa
+Ol
 ea
-wa
-wa
+Ol
+Ol
 GN
-nN
+mI
 Hd
-wa
-wa
+Ol
+Ol
 Hd
 bK
 Hy
@@ -19841,8 +19734,8 @@ Aj
 Aj
 Wy
 Wy
-YH
-Ku
+ZT
+nj
 HA
 Wy
 Wy
@@ -19850,7 +19743,7 @@ Wy
 Wy
 Wy
 ZT
-id
+LU
 Wy
 Wy
 sZ
@@ -19940,19 +19833,19 @@ cA
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 rI
 jn
@@ -19964,15 +19857,15 @@ fA
 PV
 fA
 fA
-wa
+Ol
 Xa
 fA
 Lr
-qH
-qH
-qH
-qH
-Cd
+nX
+wa
+yu
+wa
+Dq
 Hy
 we
 ea
@@ -20003,16 +19896,16 @@ VI
 Vz
 wt
 Wy
-YH
-zW
-Yn
-jI
+ZT
+sx
+Km
+KE
 aR
 aR
 Vn
 qI
-Zk
-oO
+sx
+LU
 Wy
 Tw
 Vz
@@ -20104,17 +19997,17 @@ Hy
 Hy
 YJ
 YJ
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 Pe
 Pe
@@ -20123,12 +20016,12 @@ tH
 Pe
 bK
 df
-wa
+Ol
 ea
-wa
+Ol
 df
-wa
-wa
+Ol
+Ol
 iu
 TP
 TP
@@ -20165,13 +20058,13 @@ VI
 Vz
 Wy
 Wy
-wo
+GD
 OF
 OF
-HJ
+Lq
 aR
 aR
-hx
+GD
 OF
 OF
 Lq
@@ -20267,16 +20160,16 @@ Hy
 Rp
 Rp
 vB
-ih
-ih
-ih
-ih
-ih
-PI
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+zN
+MK
+MK
+MK
+MK
 Lb
 Pe
 bK
@@ -20285,12 +20178,12 @@ ea
 Hz
 vq
 dM
-wa
-wa
+Ol
+Ol
 RX
 ea
-wa
-wa
+Ol
+Ol
 tH
 Zx
 ea
@@ -20430,16 +20323,16 @@ Rp
 Rp
 Rp
 jD
-ih
-ih
-ih
-PI
-PI
+MK
+MK
+MK
+zN
+zN
 tx
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
 pt
 bK
 Vu
@@ -20447,12 +20340,12 @@ ea
 Zx
 CG
 dM
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ea
 Zx
-wa
+Ol
 yj
 ea
 AK
@@ -20592,16 +20485,16 @@ Rp
 Rp
 Rp
 jD
-ih
-ih
-ih
+MK
+MK
+MK
 iV
-PI
 zN
-ih
-ih
-ih
-ih
+zN
+MK
+MK
+MK
+MK
 Lb
 bK
 Xu
@@ -20609,12 +20502,12 @@ ea
 oM
 ol
 dM
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ea
-wa
-wa
+Ol
+Ol
 Va
 oC
 ea
@@ -20655,7 +20548,7 @@ Vz
 OP
 NO
 jN
-sS
+li
 uj
 jK
 SQ
@@ -20754,16 +20647,16 @@ Rp
 Rp
 Rp
 jD
-ih
-ih
-ih
-PI
-PI
+MK
+MK
+MK
 zN
-ih
-ih
-ih
-ih
+zN
+zN
+MK
+MK
+MK
+MK
 Lb
 we
 uI
@@ -20771,12 +20664,12 @@ ea
 ea
 vq
 dM
-wa
-wa
+Ol
+Ol
 oM
 Us
-wa
-wa
+Ol
+Ol
 WS
 DR
 ea
@@ -20916,16 +20809,16 @@ Rp
 Rp
 Rp
 jD
-ih
-ih
-ih
-ih
-PI
 MK
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+zN
+MK
+MK
+MK
+MK
+MK
 Lb
 rI
 bK
@@ -20933,12 +20826,12 @@ yb
 Us
 Jm
 ea
-wa
-wa
+Ol
+Ol
 ea
 ea
-wa
-wa
+Ol
+Ol
 ln
 QZ
 jX
@@ -21077,30 +20970,30 @@ UX
 og
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 pt
 we
 jX
 AK
 Zx
 ea
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 Va
 ea
 ea
@@ -21239,30 +21132,30 @@ su
 og
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 bK
 ea
 ea
 Jm
-wa
-wa
+Ol
+Ol
 ea
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
 we
 Yu
 ea
@@ -21401,29 +21294,29 @@ qt
 og
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 bK
 QN
 vq
 zw
 df
-wa
+Ol
 RX
-wa
+Ol
 cp
-wa
+Ol
 ea
 Lr
 Pe
@@ -21563,30 +21456,30 @@ og
 og
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-Zq
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+tx
+MK
+MK
+MK
 Lb
 rI
 Pe
 rI
 iu
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
 Zx
-wa
-wa
+Ol
+Ol
 qo
 jX
 IN
@@ -21725,31 +21618,31 @@ og
 og
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 iV
-ih
-ih
-ih
+MK
+MK
+MK
 pt
-wa
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 ea
-wa
+Ol
 Zx
-wa
+Ol
 ea
 pQ
 ea
@@ -21842,9 +21735,9 @@ cA
 cA
 cA
 co
-mI
 BJ
-mI
+BJ
+BJ
 mx
 Hy
 Hy
@@ -21885,33 +21778,33 @@ rM
 og
 og
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 iV
-ih
-ih
-ih
+MK
+MK
+MK
 Lb
 df
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
 ea
-wa
-wa
-wa
+Ol
+Ol
+Ol
 ea
-wa
+Ol
 ea
 yZ
 ea
@@ -22047,33 +21940,33 @@ tJ
 pF
 og
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 iV
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
 yS
 pt
-wa
+Ol
 ct
 ct
-wa
+Ol
 ko
 Pz
-wa
-wa
-wa
+Ol
+Ol
+Ol
 xE
 xE
 xE
@@ -22171,7 +22064,7 @@ Ft
 vL
 Tr
 HS
-mI
+BJ
 KI
 mJ
 Hy
@@ -22209,33 +22102,33 @@ tJ
 oP
 og
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-Zq
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+tx
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
-wa
-wa
+Ol
+Ol
 LP
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 Zt
 En
 GN
@@ -22334,7 +22227,7 @@ vL
 vL
 vL
 od
-yu
+PW
 mJ
 Hy
 Hy
@@ -22370,39 +22263,39 @@ eL
 tJ
 uc
 og
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 yS
 yS
 pt
 ct
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
 vN
 nM
-wa
+Ol
 Jl
 CT
-wa
+Ol
 KJ
 KJ
 zK
@@ -22532,42 +22425,42 @@ og
 og
 og
 og
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
-wa
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
+Ol
 rT
-wa
-wa
-wa
+Ol
+Ol
+Jt
 zK
 eG
 KJ
-wa
+Ol
 ao
 cA
 cA
@@ -22658,7 +22551,7 @@ VN
 VN
 vL
 HP
-yu
+PW
 mJ
 Hy
 Hy
@@ -22694,40 +22587,40 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 yS
 yS
 pt
-wa
-wa
+Ol
+Ol
 vN
 Ze
 fa
 GN
 CT
 En
-wa
+Ol
 xG
 Zt
 Oy
@@ -22820,7 +22713,7 @@ Yf
 fo
 Oe
 iL
-yu
+PW
 mJ
 Hy
 lk
@@ -22855,42 +22748,42 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
-wa
-wa
-wa
+bZ
+Ol
+Ol
 bP
 Gn
 PP
 Iv
 tQ
 KJ
-wa
+Ol
 RJ
 Oy
 cd
@@ -22976,12 +22869,12 @@ cA
 cA
 cA
 jU
-wU
 Mn
-wU
-wU
-wU
-wU
+Mn
+Mn
+Mn
+Mn
+Mn
 XP
 mJ
 Hy
@@ -23017,38 +22910,38 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Lb
 df
-wa
-wa
-wa
-wa
-wa
+Ol
+Ol
+Ol
+Ol
+Ol
 BW
 po
 RJ
@@ -23179,32 +23072,32 @@ Hy
 mJ
 mJ
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 yS
 pt
 Hy
@@ -23341,34 +23234,34 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -23503,35 +23396,35 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -23665,12 +23558,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -23688,13 +23581,13 @@ Hy
 Hy
 Hy
 kB
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -23827,12 +23720,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -23849,16 +23742,16 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -23989,12 +23882,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 IL
@@ -24011,17 +23904,17 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24151,15 +24044,15 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
-dI
+uZ
 uZ
 uZ
 Jz
@@ -24173,17 +24066,17 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24313,12 +24206,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 mf
@@ -24335,17 +24228,17 @@ IL
 IL
 IL
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24475,11 +24368,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 IL
@@ -24498,16 +24391,16 @@ DF
 IL
 Hy
 Hy
-mP
-ih
-ih
-Zq
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+tx
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24580,7 +24473,7 @@ Jw
 sp
 sQ
 sQ
-TX
+aJ
 Dw
 Wd
 QH
@@ -24636,11 +24529,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24649,27 +24542,27 @@ rH
 Jz
 IL
 FB
-rD
+Wi
 rD
 rD
 IL
 XF
 EY
 IL
-EY
+xf
 IL
 IL
 Hy
 Hy
-mP
-Zq
-Zq
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+tx
+tx
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24798,10 +24691,10 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24810,7 +24703,7 @@ IL
 GZ
 Jz
 IL
-ig
+rD
 Rg
 rD
 rD
@@ -24825,13 +24718,13 @@ Hy
 Hy
 Hy
 WE
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -24960,10 +24853,10 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
 Hy
 IL
 IL
@@ -24979,7 +24872,7 @@ rD
 IL
 IL
 EY
-IL
+EY
 EY
 IL
 IL
@@ -24987,13 +24880,13 @@ Hy
 Hy
 Hy
 WE
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -25121,11 +25014,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 FC
@@ -25138,7 +25031,7 @@ rD
 IL
 FB
 FB
-rD
+zb
 IL
 EY
 EY
@@ -25148,14 +25041,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -25283,11 +25176,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 ed
@@ -25300,7 +25193,7 @@ IL
 IL
 IL
 IL
-ig
+rD
 IL
 IL
 Mg
@@ -25310,14 +25203,14 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -25390,7 +25283,7 @@ lq
 lq
 sQ
 Kb
-Xv
+cS
 Ux
 Xv
 QH
@@ -25445,11 +25338,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 bc
@@ -25472,14 +25365,14 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -25607,11 +25500,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 IL
@@ -25634,14 +25527,14 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -25769,15 +25662,15 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 uZ
-uZ
+dI
 Jz
 Jz
 Jz
@@ -25788,22 +25681,22 @@ LJ
 IL
 rD
 IL
-cQ
+QU
 ii
 ii
-AN
+ee
 IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -25930,12 +25823,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 fY
@@ -25958,15 +25851,15 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -25977,7 +25870,7 @@ cA
 cA
 wF
 cA
-Dq
+cA
 Hy
 Hy
 Hy
@@ -26092,25 +25985,25 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 gZ
 mb
 IL
-IL
+ig
 Ie
-Nc
+br
 rD
 MZ
 oH
 IL
-FB
+Gl
 IL
 rD
 rD
@@ -26120,15 +26013,15 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 vo
@@ -26254,12 +26147,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 ij
@@ -26282,15 +26175,15 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 vo
@@ -26416,12 +26309,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 iX
@@ -26434,9 +26327,9 @@ rD
 oR
 oH
 IL
-ig
+rD
 IL
-Wi
+QU
 rD
 nB
 XR
@@ -26444,15 +26337,15 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 cA
@@ -26577,13 +26470,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 IL
 IL
@@ -26606,15 +26499,15 @@ IL
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 vo
 cA
@@ -27711,13 +27604,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -27740,15 +27633,15 @@ cA
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -27872,14 +27765,14 @@ mJ
 mJ
 mJ
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -27902,15 +27795,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
 PI
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+zN
+MK
+MK
 Hy
 Hy
 Hy
@@ -28034,14 +27927,14 @@ mJ
 mJ
 mJ
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 lg
 lg
@@ -28064,15 +27957,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
 PI
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+zN
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -28196,14 +28089,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-PI
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+zN
+MK
+MK
+MK
 Hy
 lg
 Lh
@@ -28226,15 +28119,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 iV
-ih
-ih
-ih
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -28357,15 +28250,15 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-PI
+MK
+MK
+MK
+MK
+zN
 YX
-ih
-ih
-ih
+MK
+MK
+MK
 Hy
 lg
 Dn
@@ -28388,15 +28281,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -28519,28 +28412,28 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-PI
-PI
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+zN
+zN
+MK
+MK
+MK
 Hy
 lg
 Lh
 Dr
-aJ
+yQ
 Uz
 Uz
 TO
-aJ
+yQ
 Uz
 Uz
 Uz
-aJ
+yQ
 lg
 Hy
 Hy
@@ -28550,14 +28443,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -28681,15 +28574,15 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-PI
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+zN
+MK
+MK
+MK
 Hy
 lg
 Lh
@@ -28712,14 +28605,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -28843,15 +28736,15 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 lg
 Lh
@@ -28874,14 +28767,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -28990,7 +28883,7 @@ Kn
 Pn
 ad
 Pn
-Kn
+cW
 jc
 Hy
 Hy
@@ -29004,16 +28897,16 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 lg
 PF
@@ -29036,14 +28929,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -29166,14 +29059,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -29198,14 +29091,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -29328,14 +29221,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -29346,7 +29239,7 @@ Uz
 TO
 Uz
 Uz
-aJ
+yQ
 Um
 TO
 TO
@@ -29360,14 +29253,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -29490,14 +29383,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -29522,14 +29415,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-iV
 PI
-ih
-ih
-ih
-ih
+MK
+iV
+zN
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -29652,14 +29545,14 @@ Gk
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -29684,14 +29577,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
 PI
-PI
-ih
-ih
-ih
-ih
+MK
+zN
+zN
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -29814,14 +29707,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -29846,14 +29739,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
 PI
-ih
-ih
-ih
-ih
-ih
+MK
+zN
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -29976,14 +29869,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -30008,14 +29901,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -30138,14 +30031,14 @@ Gk
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -30156,7 +30049,7 @@ Uz
 fN
 Uz
 Uz
-aJ
+yQ
 Um
 Um
 TO
@@ -30170,14 +30063,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -30301,13 +30194,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -30332,14 +30225,14 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -30463,13 +30356,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -30494,15 +30387,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -30625,13 +30518,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -30656,15 +30549,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -30787,13 +30680,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -30804,7 +30697,7 @@ iq
 fN
 Uz
 Uz
-aJ
+yQ
 Um
 TO
 TO
@@ -30818,15 +30711,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -30950,12 +30843,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -30980,15 +30873,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31112,12 +31005,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -31142,15 +31035,15 @@ Hy
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31274,12 +31167,12 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -31298,21 +31191,21 @@ TO
 Uz
 Uz
 TO
-aJ
+yQ
 lg
 lg
 lg
 lg
 lg
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31437,11 +31330,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -31460,21 +31353,21 @@ cE
 TO
 TO
 TO
-aJ
+yQ
 TO
 Ql
 Um
 TO
 lg
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31599,22 +31492,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
 lg
 dq
 dq
-aJ
+yQ
 aT
 Uz
 Uz
-aJ
+yQ
 Um
 TO
 TO
@@ -31622,21 +31515,21 @@ yQ
 Uz
 Uz
 vA
-aJ
+yQ
 Um
 Um
 Um
 Um
 UW
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31761,11 +31654,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31790,15 +31683,15 @@ Um
 Um
 Um
 UW
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31923,11 +31816,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -31946,21 +31839,21 @@ TO
 Uz
 vA
 TO
-aJ
+yQ
 Um
 Um
 Um
 Um
 lg
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -32085,11 +31978,11 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -32108,21 +32001,21 @@ cE
 TO
 TO
 Uz
-aJ
-aJ
-aJ
-aJ
-aJ
+yQ
+yQ
+yQ
+yQ
+yQ
 lg
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -32247,22 +32140,22 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
 aT
 aT
-aJ
+yQ
 aT
 Uz
 Uz
-aJ
+yQ
 Um
 TO
 TO
@@ -32270,21 +32163,21 @@ yQ
 Uz
 Uz
 Uz
-aJ
+yQ
 Um
 TO
 TO
 TO
 lg
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -32322,7 +32215,7 @@ YK
 YK
 YK
 YK
-pg
+Bg
 YK
 YK
 YK
@@ -32408,13 +32301,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -32438,15 +32331,15 @@ Um
 TO
 TO
 xt
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -32483,7 +32376,7 @@ HI
 HI
 HI
 HI
-HI
+pg
 kJ
 HI
 HI
@@ -32570,13 +32463,13 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -32594,21 +32487,21 @@ aV
 nA
 Uz
 PM
-aJ
+yQ
 TO
 TO
 TO
 TO
 UW
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -32731,14 +32624,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -32756,21 +32649,21 @@ TO
 Wq
 jA
 PM
-aJ
+yQ
 Uz
 Bo
 Uz
 Um
 lg
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -32893,14 +32786,14 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 lg
@@ -32918,21 +32811,21 @@ TO
 gl
 TO
 MT
-aJ
-aJ
+yQ
+yQ
 lg
 lg
 lg
 lg
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -33054,15 +32947,15 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 KO
 KO
@@ -33086,15 +32979,15 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -33215,16 +33108,16 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 KO
 QX
@@ -33248,14 +33141,14 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -33292,12 +33185,12 @@ Ec
 YW
 HV
 YO
-YO
+KH
 oK
 jb
 Wf
 oK
-mF
+Cc
 HV
 QL
 HV
@@ -33376,17 +33269,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 KO
 cu
@@ -33410,14 +33303,14 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -33538,17 +33431,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 KO
 XN
@@ -33572,13 +33465,13 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -33700,17 +33593,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 KO
 KO
@@ -33721,7 +33614,7 @@ KO
 yl
 KO
 KO
-XN
+cQ
 XN
 XN
 XN
@@ -33734,13 +33627,13 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -33862,17 +33755,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 KO
@@ -33896,13 +33789,13 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -34025,17 +33918,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 KO
 XN
@@ -34058,13 +33951,13 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -34187,20 +34080,20 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
 KO
-XN
+cQ
 XN
 XN
 XN
@@ -34220,13 +34113,13 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -34349,17 +34242,17 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Hy
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
 XN
 XN
@@ -34382,13 +34275,13 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -34512,16 +34405,16 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
 XN
 xc
@@ -34544,12 +34437,12 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -34674,24 +34567,24 @@ Gk
 Gk
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
 KO
 KO
 KO
 KO
-XN
-XN
-XN
+KO
+KO
+KO
 XN
 XN
 XN
@@ -34706,12 +34599,12 @@ KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -34836,24 +34729,24 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
 Gr
 XN
-XN
+Nc
 XN
 XN
 XN
@@ -34867,11 +34760,11 @@ BB
 KO
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -34998,24 +34891,24 @@ Hy
 Gk
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
+cQ
 XN
-XN
-XN
+KO
 XN
 XN
 XN
@@ -35029,11 +34922,11 @@ HB
 KO
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -35160,24 +35053,24 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
 XN
 XN
-XN
+KO
 XN
 XN
 XN
@@ -35191,11 +35084,11 @@ HB
 KO
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -35322,20 +35215,20 @@ Gk
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 KO
 KO
 KO
@@ -35353,11 +35246,11 @@ KO
 KO
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -35398,12 +35291,12 @@ eQ
 YW
 HV
 gC
-kK
+bV
 ro
 Wf
 Wf
 ro
-ei
+yV
 HV
 JP
 HV
@@ -35484,21 +35377,21 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 gn
 UD
 UD
@@ -35510,16 +35403,16 @@ UD
 UD
 UD
 Ix
-mP
+PI
 KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -35646,21 +35539,21 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 tP
 te
 IF
@@ -35672,16 +35565,16 @@ IF
 IF
 te
 uO
-mP
+PI
 KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -35807,26 +35700,26 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 tP
 uO
-mP
-ih
+PI
+MK
 MK
 MK
 MK
@@ -35834,16 +35727,16 @@ MK
 MK
 Cb
 uO
-mP
+PI
 KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -35968,27 +35861,27 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 tP
 uO
-mP
-ih
+PI
+MK
 MK
 MK
 MK
@@ -35996,16 +35889,16 @@ MK
 MK
 Cb
 uO
-mP
+PI
 KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -36129,28 +36022,19 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Cb
-uO
-mP
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 MK
 MK
@@ -36158,16 +36042,25 @@ MK
 MK
 Cb
 uO
-mP
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+Cb
+uO
+PI
 KO
 Hy
 Hy
 Hy
-mP
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -36291,28 +36184,19 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Cb
-uO
-mP
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 MK
 MK
 MK
@@ -36320,16 +36204,25 @@ MK
 MK
 Cb
 uO
-mP
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+Cb
+uO
+PI
 KO
 Hy
 Hy
 kB
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -36454,44 +36347,44 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-Cb
-uO
-mP
-ih
-ih
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Cb
 uO
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+Cb
+uO
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -36616,44 +36509,44 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Zu
 XO
-mP
-ih
-ih
+PI
 MK
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
 na
 XO
-mP
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+PI
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -36779,43 +36672,43 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -36941,43 +36834,43 @@ Hy
 Hy
 Hy
 Hy
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -37105,40 +36998,40 @@ Hy
 Hy
 Hy
 rY
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -37267,40 +37160,40 @@ Hy
 Hy
 Hy
 rY
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy
@@ -37429,39 +37322,39 @@ Hy
 Hy
 Hy
 rY
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
 MK
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
-ih
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
+MK
 Hy
 Hy
 Hy

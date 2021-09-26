@@ -93,6 +93,9 @@
 /obj/item/stack/medical/bruise_pack/one
 	amount = 1
 
+/obj/item/stack/medical/bruise_pack/five
+	amount = 5
+
 /obj/item/stack/medical/bruise_pack/heal(mob/living/M, mob/user)
 	if(M.stat == DEAD)
 		to_chat(user, "<span class='notice'> [M] is dead. You can not help [M.p_them()]!</span>")
