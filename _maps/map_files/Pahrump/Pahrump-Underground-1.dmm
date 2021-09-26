@@ -716,13 +716,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/vault)
 "cQ" = (
-/obj/structure/table,
-/obj/item/clothing/shoes/combat{
-	pixel_y = 5
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_y = 11
 	},
-/obj/item/clothing/under/f13/talonuniform,
-/turf/open/floor/wood/f13/maple,
-/area/f13/office/talon)
+/turf/open/floor/wood/wood_large,
+/area/f13/city/town)
 "cR" = (
 /obj/machinery/telecomms/server/presets/command,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
@@ -884,9 +883,6 @@
 "dy" = (
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate,
-/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
-/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
-/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
@@ -921,8 +917,9 @@
 	},
 /area/f13/bunker)
 "dI" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_x = -7
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -1063,6 +1060,14 @@
 	color = "#363636"
 	},
 /turf/open/indestructible/ground/inside/mountain,
+/area/f13/office/talon)
+"ee" = (
+/obj/structure/closet/old,
+/obj/item/clothing/under/f13/talonuniform,
+/obj/item/clothing/shoes/combat{
+	pixel_y = 5
+	},
+/turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "eg" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -1293,10 +1298,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "fg" = (
-/obj/structure/decoration/sign{
-	desc = "A sign";
-	icon_state = "memorial";
-	name = "St. Albans thermo-electric power plant";
+/obj/structure/signs/powerplant{
 	pixel_y = -29
 	},
 /turf/open/floor/plating/rust,
@@ -1568,10 +1570,9 @@
 /turf/closed/wall/r_wall,
 /area/f13/enclave)
 "gg" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/old/fridge,
 /obj/item/reagent_containers/food/drinks/beer/light,
 /obj/item/reagent_containers/food/drinks/beer/light,
-/obj/item/reagent_containers/glass/beaker/waterbottle/large,
 /obj/item/reagent_containers/glass/beaker/waterbottle/large,
 /obj/item/reagent_containers/glass/beaker/waterbottle/large,
 /turf/open/floor/plasteel/freezer,
@@ -2168,10 +2169,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "ig" = (
-/obj/machinery/light{
-	dir = 1
+/obj/structure/table,
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorgrime"
 	},
-/turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "ih" = (
 /turf/open/indestructible/ground/outside/river,
@@ -2727,7 +2728,8 @@
 "kr" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	pixel_y = 5
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -2934,6 +2936,16 @@
 /turf/open/floor/plasteel/f13{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "titanium"
+	},
+/area/f13/enclave)
+"li" = (
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/ingredients/american,
+/obj/structure/closet/old/fridge,
+/turf/open/floor/plasteel/f13{
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "cafeteria"
 	},
 /area/f13/enclave)
 "lj" = (
@@ -3220,6 +3232,10 @@
 /obj/structure/guncase/shotgun,
 /obj/item/gun/ballistic/shotgun/police,
 /obj/item/ammo_box/shotgun/buck,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 5
+	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -3717,11 +3733,14 @@
 /area/f13/bunker)
 "od" = (
 /obj/structure/rack,
-/obj/item/stack/sheet/mineral/gold,
 /obj/effect/spawner/lootdrop/raiderloot,
-/obj/item/flashlight,
 /obj/item/reagent_containers/glass/beaker/waterbottle{
 	pixel_x = 11
+	},
+/obj/item/flashlight/old,
+/obj/item/reagent_containers/pill/patch/turbo{
+	pixel_x = 9;
+	pixel_y = 6
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/outlaw/indoors)
@@ -3999,15 +4018,13 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/outlaw/indoors)
 "pg" = (
-/obj/machinery/door/airlock/hatch,
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_tech";
-	pixel_y = 33
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice/overpipe,
+/obj/effect/turf_decal/bot,
+/obj/structure/signs/powerplant/tech{
+	pixel_x = -31
 	},
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
+/turf/open/floor/plating,
 /area/f13/bunker)
 "ph" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
@@ -4103,8 +4120,6 @@
 	},
 /area/f13/bunker)
 "pF" = (
-/obj/item/newspaper,
-/obj/item/newspaper,
 /obj/item/newspaper,
 /obj/item/newspaper,
 /obj/structure/table/wood,
@@ -4822,7 +4837,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "st" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/old/fridge,
 /obj/item/reagent_containers/food/condiment/enzyme,
 /obj/item/reagent_containers/food/condiment/pack/bbqsauce,
 /obj/item/reagent_containers/food/condiment/pack/bbqsauce,
@@ -5125,7 +5140,8 @@
 /area/f13/bunker)
 "tz" = (
 /obj/machinery/light/small{
-	dir = 1
+	dir = 1;
+	pixel_y = 11
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
@@ -5973,6 +5989,15 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/bunker)
+"xf" = (
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_y = 11
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/office/talon)
 "xg" = (
 /obj/machinery/light/small,
 /turf/open/floor/wood/f13/oak,
@@ -6077,9 +6102,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "xx" = (
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_office";
+/obj/structure/signs/powerplant/office{
 	pixel_y = 33
 	},
 /turf/open/floor/f13{
@@ -6457,6 +6480,13 @@
 	icon_state = "yellow"
 	},
 /area/f13/enclave)
+"zb" = (
+/obj/machinery/light/small{
+	pixel_x = 1;
+	pixel_y = -6
+	},
+/turf/open/floor/wood/f13/maple,
+/area/f13/office/talon)
 "zc" = (
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 9
@@ -6941,7 +6971,7 @@
 /turf/open/floor/wood/f13/old,
 /area/f13/outlaw/indoors)
 "AN" = (
-/obj/structure/closet/crate/footlocker,
+/obj/structure/closet/old,
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "AO" = (
@@ -7451,7 +7481,8 @@
 "Dd" = (
 /obj/structure/junk/drawer,
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	pixel_y = 5
 	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
@@ -7478,9 +7509,7 @@
 	},
 /obj/structure/lattice/overpipe,
 /obj/effect/turf_decal/bot,
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_toilet";
+/obj/structure/signs/powerplant/toilet{
 	pixel_y = 33
 	},
 /turf/open/floor/plating,
@@ -7557,7 +7586,7 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "Dy" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/fridge,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/outlaw/indoors)
@@ -8181,7 +8210,6 @@
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
-/obj/item/reagent_containers/food/drinks/bottle/vodka,
 /obj/item/storage/firstaid/ancient,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
@@ -8219,6 +8247,14 @@
 "Gk" = (
 /turf/closed/mineral/random/high_chance,
 /area/f13/caves)
+"Gl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	pixel_x = -16;
+	pixel_y = -6
+	},
+/turf/open/floor/wood/f13/maple,
+/area/f13/office/talon)
 "Gn" = (
 /obj/structure/stone_tile/surrounding_tile,
 /turf/open/indestructible/ground/inside/mountain,
@@ -8474,9 +8510,7 @@
 /turf/closed/wall/f13/supermart,
 /area/f13/bunker)
 "Hm" = (
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_guard";
+/obj/structure/signs/powerplant/guard{
 	pixel_y = 33
 	},
 /turf/closed/wall/rust,
@@ -9343,7 +9377,6 @@
 "KU" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/crafting,
-/obj/effect/spawner/lootdrop/f13/crafting,
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
 	pixel_y = 12
@@ -9745,7 +9778,8 @@
 "Mv" = (
 /obj/machinery/light{
 	dir = 1;
-	pixel_x = -16
+	pixel_x = -15;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
@@ -9812,7 +9846,7 @@
 	},
 /area/f13/bunker)
 "MN" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet/old,
 /obj/item/restraints/handcuffs,
 /obj/item/restraints/handcuffs,
 /obj/item/restraints/handcuffs,
@@ -9883,12 +9917,11 @@
 /turf/closed/wall/f13/vault,
 /area/f13/vault)
 "Nc" = (
-/obj/structure/railing,
-/obj/structure/table,
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
+/obj/machinery/door/unpowered/padlockwooddoor/town{
+	name = "machine shop"
 	},
-/area/f13/office/talon)
+/turf/open/floor/wood/wood_large,
+/area/f13/city/town)
 "Ne" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating{
@@ -10078,9 +10111,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "NT" = (
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_dorm";
+/obj/structure/signs/powerplant/dorms{
 	pixel_y = 33
 	},
 /turf/closed/wall/rust,
@@ -10980,12 +11011,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/enclave)
 "Ro" = (
-/obj/structure/decoration/sign{
-	desc = "A sign";
-	icon_state = "memorial";
-	name = "National Guard depot no. 241";
-	pixel_y = 31
-	},
+/obj/structure/signs/national/depot,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Rp" = (
@@ -12164,7 +12190,6 @@
 "VW" = (
 /obj/item/trash/f13/mre,
 /obj/structure/rack,
-/obj/item/reagent_containers/food/snacks/f13/mre,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "VX" = (
@@ -12201,7 +12226,6 @@
 "Wd" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/food/snacks/beans,
-/obj/item/reagent_containers/food/snacks/f13/mre,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
 "We" = (
@@ -12229,7 +12253,11 @@
 	},
 /area/f13/bunker)
 "Wi" = (
-/obj/structure/junk/cabinet,
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_x = -7;
+	pixel_y = -1
+	},
 /turf/open/floor/wood/f13/maple,
 /area/f13/office/talon)
 "Wj" = (
@@ -12613,7 +12641,8 @@
 /obj/structure/table,
 /obj/item/soap,
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	pixel_y = 5
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -13193,9 +13222,7 @@
 	},
 /obj/structure/lattice/overpipe,
 /obj/effect/turf_decal/bot,
-/obj/structure/decoration/sign{
-	icon = 'icons/fallout/decals/decals_signs.dmi';
-	icon_state = "vault_lounge";
+/obj/structure/signs/powerplant/lounge{
 	pixel_y = 33
 	},
 /turf/open/floor/plating,
@@ -20530,7 +20557,7 @@ Vz
 OP
 NO
 jN
-sS
+li
 uj
 jK
 SQ
@@ -24034,7 +24061,7 @@ ih
 ih
 Hy
 IL
-dI
+uZ
 uZ
 uZ
 Jz
@@ -24524,14 +24551,14 @@ rH
 Jz
 IL
 FB
-rD
+Wi
 rD
 rD
 IL
 XF
 EY
 IL
-EY
+xf
 IL
 IL
 Hy
@@ -24685,7 +24712,7 @@ IL
 GZ
 Jz
 IL
-ig
+rD
 Rg
 rD
 rD
@@ -24854,7 +24881,7 @@ rD
 IL
 IL
 EY
-IL
+EY
 EY
 IL
 IL
@@ -25013,7 +25040,7 @@ rD
 IL
 FB
 FB
-rD
+zb
 IL
 EY
 EY
@@ -25175,7 +25202,7 @@ IL
 IL
 IL
 IL
-ig
+rD
 IL
 IL
 Mg
@@ -25652,7 +25679,7 @@ ih
 Hy
 IL
 uZ
-uZ
+dI
 Jz
 Jz
 Jz
@@ -25663,10 +25690,10 @@ LJ
 IL
 rD
 IL
-cQ
+QU
 ii
 ii
-AN
+ee
 IL
 Hy
 Hy
@@ -25978,14 +26005,14 @@ IL
 gZ
 mb
 IL
-IL
+ig
 Ie
-Nc
+br
 rD
 MZ
 oH
 IL
-FB
+Gl
 IL
 rD
 rD
@@ -26309,9 +26336,9 @@ rD
 oR
 oH
 IL
-ig
+rD
 IL
-Wi
+QU
 rD
 nB
 XR
@@ -32127,7 +32154,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 Hy
 lg
@@ -32197,7 +32224,7 @@ YK
 YK
 YK
 YK
-pg
+Bg
 YK
 YK
 YK
@@ -32289,7 +32316,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 Hy
 lg
@@ -32358,7 +32385,7 @@ HI
 HI
 HI
 HI
-HI
+pg
 kJ
 HI
 HI
@@ -32451,7 +32478,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 Hy
 lg
@@ -32613,7 +32640,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 Hy
 lg
@@ -32775,7 +32802,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 Hy
 lg
@@ -32937,7 +32964,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 KO
 KO
@@ -33099,7 +33126,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 KO
 QX
@@ -33261,7 +33288,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 KO
 cu
@@ -33423,7 +33450,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 KO
 XN
@@ -33585,7 +33612,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 KO
 KO
@@ -33596,7 +33623,7 @@ KO
 yl
 KO
 KO
-XN
+cQ
 XN
 XN
 XN
@@ -33747,7 +33774,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 Hy
 KO
@@ -33910,7 +33937,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 Hy
 KO
 XN
@@ -34072,10 +34099,10 @@ ih
 ih
 ih
 ih
-Hy
+ih
 KO
 KO
-XN
+cQ
 XN
 XN
 XN
@@ -34234,7 +34261,7 @@ ih
 ih
 ih
 ih
-Hy
+ih
 KO
 XN
 XN
@@ -34564,9 +34591,9 @@ KO
 KO
 KO
 KO
-XN
-XN
-XN
+KO
+KO
+KO
 XN
 XN
 XN
@@ -34728,7 +34755,7 @@ ih
 KO
 Gr
 XN
-XN
+Nc
 XN
 XN
 XN
@@ -34888,9 +34915,9 @@ ih
 ih
 ih
 KO
+cQ
 XN
-XN
-XN
+KO
 XN
 XN
 XN
@@ -35052,7 +35079,7 @@ ih
 KO
 XN
 XN
-XN
+KO
 XN
 XN
 XN

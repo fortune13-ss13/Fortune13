@@ -26,7 +26,6 @@
 
 
 //RAILING
-
 /obj/structure/railing
 	icon = 'icons/fallout/structures/fences.dmi'
 
@@ -76,15 +75,14 @@
 
 
 // JUNK
-
 /obj/structure/junk
 	icon = 'icons/fallout/furniture/ruined.dmi'
 	obj_integrity = 100
 	max_integrity = 100
 	anchored = 1
 	density = 1
-	buildstacktype = /obj/item/stack/rods
-	buildstackamount = 1
+	var/buildstacktype = /obj/item/stack/rods
+	var/buildstackamount = 1
 
 /obj/structure/junk/deconstruct()
 	// If we have materials, and don't have the NOCONSTRUCT flag
@@ -215,13 +213,12 @@
 
 
 // OBSTACLES
-
 /obj/structure/obstacle
 	name = "chest high wall"
 	desc = "Looks like this would make good cover."
 	icon = 'icons/fallout/structures/barricades.dmi'
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	obj_integrity = 100
 	max_integrity = 100
 
@@ -235,6 +232,7 @@
 	max_integrity = 500
 	proj_pass_rate = 95
 	pass_flags = LETPASSTHROW
+	climbable = TRUE
 
 /obj/structure/obstacle/tanktrap/rust
 	obj_integrity = 400
@@ -255,8 +253,22 @@
 	max_integrity = 800
 	climbable = TRUE
 
-// LIGHTING
+// BARBED WIRE
+/obj/structure/obstacle/barbedwire
+	name = "barbed wire"
+	desc = "Don't walk into this."
+	icon_state = "barbed"
+	density = FALSE
+	var/slowdown = 40
 
+/obj/structure/obstacle/barbedwire/end
+	icon_state = "barbed_end"
+
+/obj/structure/obstacle/barbedwire/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES)
+
+// LIGHTING
 /obj/structure/destructible/tribal_torch/lanternpost
 	name = "Lantern post"
 	desc = "Lantern with a wax candle inside a glass and metal housing."
@@ -274,3 +286,158 @@
 	desc = "Lantern with a wax candle inside a pink colored glass and metal housing."
 	icon_state = "cathouse_lamp-on"
 	light_color = "#dd99a4"
+
+
+// CLOSETS
+/obj/structure/closet/old
+	name = "locker"
+	desc = "Worn but serviceable."
+	icon = 'icons/fallout/furniture/closets.dmi'
+	icon_state = "gray"
+	anchored = TRUE
+	storage_capacity = 30
+
+/obj/structure/closet/old/fridge
+	name = "fridge"
+	desc = "Old fridge, but in good condition for its age."
+	icon_state = "fridger"
+
+// Becomes dense when opened then closed. Key is in the close proc in closet but I don't know how to just make exception for this.
+/obj/structure/closet/wallcabinet/medicine
+	name = "medicine cabinet"
+	icon = 'icons/fallout/furniture/closets.dmi'
+	icon_state = "medcab"
+	density = FALSE
+	storage_capacity = 10
+	mob_storage_capacity = 0
+	max_mob_size = MOB_SIZE_TINY
+
+
+// CHAIR
+/obj/structure/chair/throne
+	name = "throne"
+	desc = "You sit in this. Either by will or force."
+	icon = 'icons/fallout/furniture/thrones.dmi'
+	icon_state = "throne"
+
+
+//SIGNS
+/obj/structure/signs
+	icon = 'icons/fallout/decals/signs.dmi'
+	icon_state = "memorial"
+	desc = "A sign."
+	anchored = TRUE
+	opacity = 0
+	density = FALSE
+	plane = ABOVE_WALL_PLANE
+	layer = SIGN_LAYER
+	max_integrity = 100
+
+//Waterfront Mall Signs
+/obj/structure/signs/waterfront
+	name = "Waterfront Mall"
+	color = "#b7bcf7"
+
+/obj/structure/signs/waterfront/office
+	icon_state = "vault_admin"
+	name = "Managers office."
+
+/obj/structure/signs/waterfront/restroom
+	icon_state = "vault_toilet"
+	name = "Restroom"
+
+/obj/structure/signs/waterfront/sportsstore
+	icon_state = "vault_store"
+	name = "Sports goods"
+
+/obj/structure/signs/waterfront/janitor
+	name = "Janitorial"
+	icon_state = "vault_maint"
+
+/obj/structure/signs/waterfront/store
+	name = "Supermarket"
+	icon_state = "vault_store"
+
+/obj/structure/signs/waterfront/store/clothes
+	icon_state = "vault_store"
+	name = "Clothing store"
+
+/obj/structure/signs/waterfront/store/pet
+	name = "Pet shop"
+	icon_state = "vault_store"
+
+/obj/structure/signs/waterfront/store/hardware
+	name = "Hardware store"
+	icon_state = "vault_store"
+
+/obj/structure/signs/waterfront/mallcop
+	name = "Mall cop office"
+	icon_state = "vault_guard"
+
+/obj/structure/signs/waterfront/arcade
+	name = "Arcade"
+	icon_state = "vault_arcade"
+
+/obj/structure/signs/waterfront/diner
+	name = "Mall diner"
+	icon_state = "vault_diner"
+
+//McKinley Junior High signs
+/obj/structure/signs/school
+	name = "McKinley Junior High"
+	icon_state = "memorial"
+	color = "#e8dd7d"
+
+/obj/structure/signs/school/teacher
+	name = "Teachers room"
+	icon_state = "vault_admin"
+
+/obj/structure/signs/school/restroom
+	name = "Restrooms"
+	icon_state = "vault_toilet"
+
+/obj/structure/signs/school/classroom
+	name = "Classroom"
+	icon_state = "vault_class"
+
+/obj/structure/signs/school/classroom/lab
+	icon_state = "vault_lab"
+
+//National Guard signs
+/obj/structure/signs/national
+	name = "Fort Kanawha"
+	desc = "Home of the 5th National Guard Engineer Batallion";
+	color = "#adb794"
+
+/obj/structure/signs/national/depot
+	name = "National Guard depot no. 241"
+	desc = "restricted area"
+
+//Thermo-Electric Plant signs
+/obj/structure/signs/powerplant
+	name = "St. Albans thermo-electric power plant"
+	color = "#f47373"
+
+/obj/structure/signs/powerplant/lounge
+	name = "Lounge"
+	icon_state = "vault_lounge"
+
+/obj/structure/signs/powerplant/tech
+	name = "Tech"
+	icon_state = "vault_tech"
+
+/obj/structure/signs/powerplant/office
+	name = "Office"
+	icon_state = "vault_office"
+
+/obj/structure/signs/powerplant/toilet
+	name = "Toilet"
+	icon_state = "vault_toilet"
+
+/obj/structure/signs/powerplant/guard
+	name = "Guard"
+	icon_state = "vault_guard"
+
+/obj/structure/signs/powerplant/dorms
+	name = "Dorms"
+	icon_state = "vault_dorm"
