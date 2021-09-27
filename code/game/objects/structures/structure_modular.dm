@@ -142,7 +142,7 @@
 
 /obj/structure/junk/small
 	density = 0
-	var/slowdown = 4
+	slowdown = 4
 
 /obj/structure/junk/small/table
 	name = "ruined old furniture"
@@ -259,7 +259,7 @@
 	desc = "Don't walk into this."
 	icon_state = "barbed"
 	density = FALSE
-	var/slowdown = 40
+	slowdown = 40
 
 /obj/structure/obstacle/barbedwire/end
 	icon_state = "barbed_end"
