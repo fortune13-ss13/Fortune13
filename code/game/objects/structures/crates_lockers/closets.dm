@@ -49,6 +49,8 @@
 	update_icon()
 	if(should_populate_contents)
 		PopulateContents()
+	if(anchored)
+		storage_capacity = 30
 	if(mapload && !opened)		// if closed, any item at the crate's loc is put in the contents
 		addtimer(CALLBACK(src, .proc/take_contents), 0)
 	if(secure)
@@ -116,7 +118,7 @@
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_SKITTISH))
 			. += "<span class='notice'>Ctrl-Shift-click [src] to jump inside.</span>"
-	if(isobserver(user))
+	if(isobserver(user) && check_rights_for(user.client, R_ADMIN))
 		. += "<span class='info'>It contains: [english_list(contents)].</span>"
 		investigate_log("had its contents examined by [user] as a ghost.", INVESTIGATE_GHOST)
 
