@@ -81,8 +81,8 @@
 	max_integrity = 100
 	anchored = 1
 	density = 1
-	var/buildstacktype = /obj/item/stack/rods
-	var/buildstackamount = 1
+	buildstacktype = /obj/item/stack/rods
+	buildstackamount = 1
 
 /obj/structure/junk/deconstruct()
 	// If we have materials, and don't have the NOCONSTRUCT flag
