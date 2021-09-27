@@ -43,12 +43,36 @@
 //Old World Army clothing
 
 /obj/item/clothing/under/f13/army
+	name = "US Army enlisted uniform"
+	desc = "Standard issue uniform for the pre-war army."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_uniform"
+	item_state = "army_uniform"
+
+/obj/item/clothing/under/f13/army/officer
+	name = "US Army officer's uniform"
+	desc = "Military clothing."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_officer"
+	item_state = "army_officer"
+
+/obj/item/clothing/under/f13/army/nationalguard
 	name = "National Guard uniform"
 	desc = "Military clothing."
 	icon = 'icons/fallout/clothing/uniforms.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
 	icon_state = "army_uniform"
 	item_state = "army_uniform"
+
+/obj/item/clothing/under/f13/army/nationalguard/officer
+	name = "National Guard officer's uniform"
+	desc = "Military clothing."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_officer"
+	item_state = "army_officer"
 
 /obj/item/clothing/under/f13/army/utility
 	name = "US Army utility overall"
