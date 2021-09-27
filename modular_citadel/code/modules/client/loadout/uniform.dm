@@ -55,12 +55,12 @@
 
 /datum/gear/uniform/ussoldier
 	name = "US Army enlisted uniform"
-	path = /obj/item/clothing/head/armycap
-	cost = 3
+	path = /obj/item/clothing/under/f13/army
+	cost = 2
 
 /datum/gear/head/usofficer
 	name = "US Army officer's uniform"
-	path = /obj/item/clothing/head/armyofficer
+	path = /obj/item/clothing/under/f13/army/officer
 	cost = 3
 
 /datum/gear/uniform/classicjeans
