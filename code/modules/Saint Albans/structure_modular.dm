@@ -81,8 +81,8 @@
 	max_integrity = 100
 	anchored = 1
 	density = 1
-	var/buildstacktype = /obj/item/stack/rods
-	var/buildstackamount = 1
+	buildstacktype = /obj/item/stack/rods
+	buildstackamount = 1
 
 /obj/structure/junk/deconstruct()
 	// If we have materials, and don't have the NOCONSTRUCT flag
@@ -142,7 +142,7 @@
 
 /obj/structure/junk/small
 	density = 0
-	slowdown = 4
+	var/slowdown = 4
 
 /obj/structure/junk/small/table
 	name = "ruined old furniture"
@@ -259,7 +259,7 @@
 	desc = "Don't walk into this."
 	icon_state = "barbed"
 	density = FALSE
-	slowdown = 40
+	var/slowdown = 40
 
 /obj/structure/obstacle/barbedwire/end
 	icon_state = "barbed_end"
