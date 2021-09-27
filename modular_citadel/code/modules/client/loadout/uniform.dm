@@ -53,16 +53,6 @@
 	path = /obj/item/clothing/under/f13/chinese
 	cost = 2
 
-/datum/gear/uniform/ussoldier
-	name = "US Army enlisted uniform"
-	path = /obj/item/clothing/under/f13/army
-	cost = 2
-
-/datum/gear/head/usofficer
-	name = "US Army officer's uniform"
-	path = /obj/item/clothing/under/f13/army/officer
-	cost = 3
-
 /datum/gear/uniform/classicjeans
 	name = "Classic Jeans"
 	path = /obj/item/clothing/under/pants/classicjeans
@@ -306,4 +296,14 @@
 /datum/gear/uniform/greenjumpsuit
 	name = "Worn Green Jumpsuit"
 	path = /obj/item/clothing/under/f13/petrochico
+	cost = 2
+
+/datum/gear/uniform/ussoldier
+	name = "US Army enlisted uniform"
+	path = /obj/item/clothing/under/f13/army
+	cost = 2
+
+/datum/gear/head/usofficer
+	name = "US Army officer's uniform"
+	path = /obj/item/clothing/under/f13/army/officer
 	cost = 2
