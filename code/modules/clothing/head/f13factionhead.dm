@@ -50,8 +50,26 @@
 
 //Old World Army clothing
 /obj/item/clothing/head/armycap
-	name = "national guard cap"
-	desc = "(III) Standard national guard forage cap."
+	name = "US Army field cap"
+	desc = "Standard issue US Army field cap."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "army_cap"
+	item_state = "army_cap"
+	dynamic_hair_suffix = "+generic"
+
+/obj/item/clothing/head/armycap/officer
+	name = "US Army officer's cap"
+	desc = "Standard issue US Army officer's cap."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "army_officer"
+	item_state = "army_officer"
+	dynamic_hair_suffix = "+generic"
+
+/obj/item/clothing/head/armycap/nationalguard
+	name = "National Guard field cap"
+	desc = "(III) Standard issue national guard field cap."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "army_cap"
@@ -59,7 +77,15 @@
 	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
 	dynamic_hair_suffix = "+generic"
 
-
+/obj/item/clothing/head/armycap/nationalguard/officer
+	name = "National Guard officer's cap"
+	desc = "(III) Standard issue national guard officer's cap."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "army_officer"
+	item_state = "army_officer"
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	dynamic_hair_suffix = "+generic"
 
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
@@ -732,8 +758,8 @@
 	flash_protect = 0
 	resistance_flags = null
 	armor = list("tier" = 2, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 0)
-	
-	
+
+
 /obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
 	name = "reclaimed desert ranger gear"
 	desc = "(IV) A refurbished and personalized set of pre-unification desert ranger gear."
@@ -851,7 +877,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
-	strip_delay = 20 
+	strip_delay = 20
 
 /obj/item/clothing/head/helmet/f13/khan/Initialize()
 	. = ..()
