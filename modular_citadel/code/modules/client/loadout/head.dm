@@ -55,7 +55,7 @@
 
 /datum/gear/head/usofficer
 	name = "US Army officer's cap"
-	path = /obj/item/clothing/head/armyofficer
+	path = /obj/item/clothing/head/armycap/officer
 	cost = 3
 
 /datum/gear/head/fedora
