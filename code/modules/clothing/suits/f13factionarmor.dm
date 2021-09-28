@@ -153,6 +153,7 @@
 	desc = "A light, replaceable armored vest issued usually as part of a suit of advanced combat armor."
 	icon_state = "armor_enclave_peacekeeper"
 	item_state = "armor_enclave_peacekeeper"
+	armor = list("tier" = 4, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/enclave/corporal
 	name = "US Army Combat Armor"
