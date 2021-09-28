@@ -771,7 +771,7 @@
 	item_state = "vaquerohat"
 	armor = list("tier" = 3, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
-	
+
 /obj/item/clothing/head/helmet/f13/baseballhelmet
 	name = "worn baseball helmet"
 	desc = "(III) An old, metal University-style Baseball helmet.. seems familiar?"
@@ -995,13 +995,13 @@
 	item_state = "ranger_grey_hat"
 	armor = list("tier" = 2, "energy" = 15, "bomb" = 0, "bio" = 0, "rad" = 70, "fire" = 70, "acid" = 15)
 	flags_inv = HIDEEARS|HIDEHAIR
-	
+
 /obj/item/clothing/head/f13/ranger_hat/banded
 	name = "banded cowboy hat"
 	desc = "(II) A grey cowboy hat with a hat band decorated with brassen rings."
 	icon_state = "ranger_banded_hat"
 	item_state = "ranger_banded_hat"
-	
+
 /obj/item/clothing/head/f13/ranger_hat/tan
 	name = "tan cowboy hat"
 	desc = "(II) A thick tanned leather hat, with a Montana Peak crease."
