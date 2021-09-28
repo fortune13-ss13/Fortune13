@@ -52,7 +52,7 @@
 
 /obj/item/clothing/under/f13/army/officer
 	name = "US Army officer's uniform"
-	desc = "Military clothing."
+	desc = "Standard issue uniform for the pre-war army."
 	icon = 'icons/fallout/clothing/uniforms.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
 	icon_state = "army_officer"

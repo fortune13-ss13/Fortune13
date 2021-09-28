@@ -303,7 +303,7 @@
 	path = /obj/item/clothing/under/f13/army
 	cost = 2
 
-/datum/gear/head/usofficer
+/datum/gear/uniform/usofficer
 	name = "US Army officer's uniform"
 	path = /obj/item/clothing/under/f13/army/officer
 	cost = 2
