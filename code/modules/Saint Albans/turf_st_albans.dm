@@ -1,7 +1,6 @@
 //Pebbles St. Albans turf file.
 
 
-
 /turf/open/indestructible/ground/outside/road/crossing
 	name = "road"
 	icon_state = "cross1"
@@ -20,7 +19,6 @@
 
 /turf/open/indestructible/ground/outside/roaddirt/hole
 	icon_state = "hole"
-
 
 
 //lighter road, dirtmerged
@@ -195,17 +193,53 @@
 
 
 // Oak stage
-/turf/open/floor/wooden/chestnut
-	icon_state = "chestnut1"
+/turf/open/floor/wooden/oakstage
+	icon_state = "stageoak_bl"
 
-	Initialize()
-		..()
-		if(icon_state == "chestnut1")
-			icon_state = "chestnut[rand(1,4)]"
+/turf/open/floor/wooden/oakstageb
+	icon_state = "stageoak_b"
 
-/turf/open/floor/wooden/chestnut/outdoors
+/turf/open/floor/wooden/oakstagebr
+	icon_state = "stageoak_br"
+
+/turf/open/floor/wooden/oakstagetl
+	icon_state = "stageoak_tl"
+
+/turf/open/floor/wooden/oakstagetr
+	icon_state = "stageoak_tr"
+
+/turf/open/floor/wooden/oakstaget
+	icon_state = "stageoak_t"
+
+/turf/open/floor/wooden/oakstager
+	icon_state = "stageoak_r"
+
+/turf/open/floor/wooden/oakstagel
+	icon_state = "stageoak_l"
+
+/turf/open/floor/wooden/oakstage/outdoors
 	sunlight_state = SUNLIGHT_SOURCE
 
+/turf/open/floor/wooden/oakstageb/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wooden/oakstagebr/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wooden/oakstagetl/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wooden/oakstagetr/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wooden/oakstaget/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wooden/oakstager/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wooden/oakstagel/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
 
 // Laminate
 /turf/open/floor/wooden/laminate
