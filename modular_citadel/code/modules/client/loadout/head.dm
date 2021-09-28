@@ -41,21 +41,11 @@
 /datum/gear/head/chinesegeneral
 	name = "Chinese Peaked Cap"
 	path = /obj/item/clothing/head/f13/chinese_general
-	cost = 4
+	cost = 2
 
 /datum/gear/head/chinesesoldier
 	name = "Chinese Side Cap"
 	path = /obj/item/clothing/head/f13/chinese_soldier
-	cost = 3
-
-/datum/gear/head/ussoldier
-	name = "US Army field cap"
-	path = /obj/item/clothing/head/armycap
-	cost = 3
-
-/datum/gear/head/usofficer
-	name = "US Army officer's cap"
-	path = /obj/item/clothing/head/armycap/officer
 	cost = 3
 
 /datum/gear/head/fedora
@@ -126,4 +116,14 @@
 /datum/gear/head/widered
 	name = "Wide Red Hat"
 	path = /obj/item/clothing/head/widered
+	cost = 2
+
+/datum/gear/head/ussoldier
+	name = "US Army field cap"
+	path = /obj/item/clothing/head/armycap
+	cost = 2
+
+/datum/gear/head/usofficer
+	name = "US Army officer's cap"
+	path = /obj/item/clothing/head/armycap/officer
 	cost = 2
