@@ -295,6 +295,7 @@
 
 /obj/item/clothing/head/helmet/f13/remnant/envirosuit
 	name = "enclave envirosuit hood"
+	icon = 'icons/obj/clothing/hats.dmi'
 	icon_state = "envirohead"
 	item_state = "envirohead"
 	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
