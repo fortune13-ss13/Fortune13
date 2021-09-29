@@ -11,6 +11,15 @@
 /turf/open/indestructible/ground/outside/road/crossing/alttwo
 	icon_state = "cross3"
 
+/turf/open/indestructible/ground/outside/road/crossing/vertical
+	icon_state = "crosswalkvert1"
+
+/turf/open/indestructible/ground/outside/road/crossing/verticaltwo
+	icon_state = "crosswalkvert2"
+
+/turf/open/indestructible/ground/outside/road/crossing/verticalthree
+	icon_state = "crosswalkvert3"
+
 //dark road thats dirtmerged
 /turf/open/indestructible/ground/outside/roaddirt
 	name = "road"

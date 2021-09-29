@@ -155,12 +155,9 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/indoors/tribals)
 "aC" = (
-/obj/structure/ladder/unbreakable{
-	height = 1;
-	id = "oldhouse"
-	},
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/building)
+/mob/living/simple_animal/hostile/ghoul/reaver,
+/turf/open/indestructible/ground/inside/mountain,
+/area/indoors/caves)
 "aD" = (
 /obj/item/bedsheet/random,
 /obj/effect/landmark/start/f13/vaultdweller,
@@ -463,7 +460,7 @@
 "bJ" = (
 /obj/structure/flora/junglebush,
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/building)
+/area/indoors/caves)
 "bK" = (
 /obj/structure/decoration/rag,
 /turf/closed/wall/f13/wood,
@@ -536,7 +533,7 @@
 "ck" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/building)
+/area/indoors/caves)
 "cl" = (
 /obj/structure/rack,
 /obj/item/cultivator,
@@ -971,10 +968,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "dR" = (
-/mob/living/simple_animal/hostile/ghoul,
-/obj/structure/flora/rock/jungle,
-/turf/open/indestructible/ground/inside/mountain,
-/area/indoors/caves)
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "oldhouse"
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/indoors/manhole)
 "dS" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -3238,8 +3237,12 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/caves)
 "mn" = (
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/building)
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "town1"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/indoors/manhole)
 "mo" = (
 /obj/effect/decal/fakelattice,
 /turf/open/floor/plating{
@@ -3369,9 +3372,12 @@
 /turf/open/floor/wood/f13/oak,
 /area/indoors/ruins)
 "mN" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "village"
+	},
 /turf/open/indestructible/ground/inside/mountain,
-/area/indoors/caves)
+/area/indoors/manhole)
 "mO" = (
 /obj/structure/rack,
 /obj/item/card/id/rusted/brokenholodog,
@@ -5378,13 +5384,6 @@
 	icon_state = "darkrusty"
 	},
 /area/indoors/bunker)
-"uF" = (
-/obj/structure/ladder/unbreakable{
-	height = 1;
-	id = "town1"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/indoors/caves)
 "uG" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/r_wall/rust,
@@ -5842,9 +5841,6 @@
 /obj/structure/barricade/wooden/strong,
 /turf/open/floor/wooden/chestnut,
 /area/indoors/tribals)
-"wL" = (
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/building)
 "wN" = (
 /obj/effect/landmark/start/f13/vaultscientist,
 /obj/structure/cable{
@@ -6970,7 +6966,7 @@
 	dir = 4
 	},
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/building)
+/area/indoors/caves)
 "Ba" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -8958,12 +8954,6 @@
 /mob/living/simple_animal/hostile/raider/lurker/chieftain,
 /turf/open/floor/wooden/chestnut,
 /area/indoors/tribals)
-"JB" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 8
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/building)
 "JF" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/backpack/duffelbag/med/surgery,
@@ -14403,7 +14393,7 @@ MK
 MK
 Lb
 lk
-lk
+mN
 lk
 lk
 rY
@@ -20841,7 +20831,7 @@ rY
 rY
 GJ
 DI
-DI
+aC
 rY
 rY
 rY
@@ -22782,7 +22772,7 @@ rY
 TN
 aY
 lk
-DI
+aC
 rY
 rY
 rY
@@ -23114,7 +23104,7 @@ rY
 rY
 DI
 DI
-dR
+dr
 DI
 cm
 rY
@@ -23600,8 +23590,8 @@ DI
 DI
 DI
 DI
-mN
 DI
+dR
 DI
 rY
 rY
@@ -23760,7 +23750,7 @@ rY
 rY
 DI
 DI
-mN
+DI
 CI
 DI
 DI
@@ -24367,7 +24357,7 @@ rY
 rY
 rY
 rY
-wL
+DI
 bJ
 QH
 Jw
@@ -24526,11 +24516,11 @@ mi
 mi
 rY
 rY
-mn
+lk
 ck
-JB
-wL
-wL
+hC
+DI
+DI
 QH
 jp
 bp
@@ -24688,11 +24678,11 @@ mi
 rC
 rY
 rY
-mn
-mn
-wL
-wL
-wL
+lk
+lk
+DI
+DI
+DI
 cz
 kG
 bp
@@ -24850,11 +24840,11 @@ mi
 mi
 rY
 rY
-aC
-mn
-wL
-wL
-wL
+lk
+lk
+DI
+DI
+DI
 cz
 ll
 sQ
@@ -25012,10 +25002,10 @@ mi
 mi
 rY
 rY
-mn
-mn
-wL
-wL
+lk
+lk
+DI
+DI
 ck
 eA
 TX
@@ -25174,8 +25164,8 @@ mi
 mi
 rY
 rY
-mn
-wL
+lk
+DI
 AY
 ck
 ck
@@ -27036,7 +27026,7 @@ pz
 DI
 DI
 DI
-DI
+mn
 DI
 DI
 DI
@@ -27198,7 +27188,7 @@ DI
 BG
 DI
 DI
-uF
+DI
 DI
 DI
 DI

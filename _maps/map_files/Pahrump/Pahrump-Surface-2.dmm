@@ -388,20 +388,6 @@
 	},
 /turf/open/indestructible/ground/outside/savannah,
 /area/outdoors)
-"aqA" = (
-/obj/effect/turf_decal/cliff{
-	dir = 10
-	},
-/obj/effect/overlay/cliff{
-	dir = 4;
-	pixel_x = -31
-	},
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/outdoors)
 "arf" = (
 /obj/structure/chair/pew{
 	dir = 4
@@ -561,9 +547,15 @@
 	},
 /area/outdoors)
 "ayv" = (
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "oldhouse"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain0"
+	},
+/area/outdoors/manhole)
 "ayG" = (
 /mob/living/simple_animal/hostile/bloatfly/east,
 /turf/open/indestructible/ground/outside/dirt,
@@ -671,10 +663,12 @@
 /turf/closed/wall/f13/store,
 /area/indoors/caves)
 "aFf" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 9;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -16
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 10;
+	pixel_y = -28
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -857,10 +851,9 @@
 /turf/open/floor/wood/f13/stage_tr/outdoors,
 /area/outdoors)
 "aNJ" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 5;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_x = -8;
+	pixel_y = -16
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -1168,6 +1161,14 @@
 /obj/structure/chair/f13chair2,
 /turf/open/floor/wood/f13/oak,
 /area/indoors)
+"bcA" = (
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -10
+	},
+/turf/open/indestructible/ground/outside/savannah/edgesnew{
+	dir = 1
+	},
+/area/outdoors)
 "bcC" = (
 /obj/structure/table,
 /obj/structure/barricade/bars,
@@ -1206,10 +1207,16 @@
 /turf/open/floor/wood/f13/oakbroken3,
 /area/indoors/raiders)
 "beM" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontaloutermain2left"
+/obj/structure/window/fulltile/store{
+	icon_state = "storewindowbottom"
 	},
-/area/f13/wasteland)
+/obj/structure/barricade/wooden/planks{
+	icon_state = "board-2"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/indoors)
 "beP" = (
 /turf/open/floor/wood/f13,
 /area/indoors/town)
@@ -1636,19 +1643,12 @@
 	},
 /area/outdoors)
 "bzk" = (
-/obj/effect/turf_decal/cliff{
-	dir = 5
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 9;
+	pixel_x = 7;
+	pixel_y = -3
 	},
-/obj/effect/overlay/cliff{
-	dir = 8;
-	pixel_x = 33;
-	pixel_y = 1
-	},
-/obj/effect/overlay/cliff{
-	dir = 10;
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/transparent/openspace/outside,
 /area/outdoors)
 "bzr" = (
 /obj/structure/barricade/bars,
@@ -1736,10 +1736,8 @@
 	},
 /area/outdoors)
 "bDH" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -15
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -1846,6 +1844,18 @@
 	icon_state = "horizontaloutermain2"
 	},
 /area/indoors/caves)
+"bIt" = (
+/obj/effect/overlay/turfs/cliff{
+	dir = 5;
+	pixel_y = -8
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 8;
+	pixel_x = -9;
+	pixel_y = -4
+	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner,
+/area/outdoors)
 "bIy" = (
 /obj/item/kirbyplants/dead,
 /turf/open/floor/f13{
@@ -1875,9 +1885,7 @@
 	},
 /area/outdoors)
 "bIW" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "cross2"
-	},
+/turf/open/indestructible/ground/outside/road/crossing/alt,
 /area/outdoors)
 "bJc" = (
 /obj/structure/fence{
@@ -2022,6 +2030,9 @@
 	icon_state = "sepia"
 	},
 /area/indoors/town/clinic)
+"bSy" = (
+/turf/open/indestructible/ground/outside/road/crossing/alttwo,
+/area/outdoors)
 "bTs" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/oak,
@@ -2064,14 +2075,10 @@
 	},
 /area/outdoors)
 "bUU" = (
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -16
 	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	dir = 8;
-	icon_state = "outerborder"
-	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "bVg" = (
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -2122,14 +2129,17 @@
 	},
 /area/outdoors)
 "bYJ" = (
-/obj/effect/turf_decal/cliff{
-	dir = 6
+/obj/effect/overlay/turfs/cliff{
+	dir = 9;
+	pixel_y = -14
 	},
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 4;
+	pixel_x = 22
 	},
-/turf/open/indestructible/ground/outside/savannah/topleft,
+/turf/open/indestructible/ground/outside/savannah/cornersnew{
+	dir = 8
+	},
 /area/outdoors)
 "bYN" = (
 /obj/structure/chair/office/dark{
@@ -2230,6 +2240,16 @@
 	icon_state = "housewood3"
 	},
 /area/indoors/animals)
+"cgv" = (
+/turf/open/floor/wooden/oakstage/outdoors,
+/area/outdoors)
+"chb" = (
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
+	},
+/turf/closed/mineral/random/low_chance,
+/area/indoors/caves)
 "chl" = (
 /obj/structure/barricade/wooden/planks{
 	icon_state = "board-2"
@@ -2449,7 +2469,7 @@
 	id = "town1"
 	},
 /turf/open/floor/wood/f13/oak/outdoors,
-/area/outdoors)
+/area/outdoors/manhole)
 "cuG" = (
 /obj/structure/junk/small/mirror{
 	pixel_y = 31
@@ -2588,21 +2608,22 @@
 /turf/open/floor/wood/f13,
 /area/indoors/mercenaries)
 "cBw" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 9;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -16
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 10;
+	pixel_x = -6;
+	pixel_y = -30
 	},
 /turf/open/indestructible/ground/outside/savannah/edgesnew{
 	dir = 1
 	},
 /area/outdoors)
 "cBC" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
 	},
 /obj/structure/flora/tree/tall{
 	icon_state = "tree_2"
@@ -2641,15 +2662,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/indoors/raiders)
 "cCP" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
 	},
 /obj/structure/railing/wood/underlayer{
 	dir = 1;
 	pixel_y = 12
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -3017,10 +3036,19 @@
 	},
 /area/indoors/town/bar)
 "cZa" = (
-/obj/structure/fence,
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontaloutermain2right"
+/obj/effect/turf_decal/cliff{
+	dir = 5
 	},
+/obj/effect/overlay/cliff{
+	dir = 10;
+	pixel_y = 32
+	},
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "cZh" = (
 /obj/structure/rack,
@@ -3088,9 +3116,17 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/indoors/raiders)
 "dbv" = (
-/obj/structure/fence,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 9;
+	pixel_x = -3;
+	pixel_y = 27
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "dbB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_diagonal{
@@ -3181,6 +3217,21 @@
 	},
 /turf/open/floor/wood/f13/stage_tl,
 /area/indoors/raiders)
+"dhd" = (
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 5;
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 9;
+	pixel_x = -3;
+	pixel_y = 27
+	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 4
+	},
+/area/outdoors)
 "dhg" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/f13{
@@ -4055,16 +4106,6 @@
 	},
 /turf/open/floor/carpet,
 /area/indoors/raiders)
-"dXO" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
-/obj/effect/overlay/cliff{
-	dir = 6;
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/outdoors)
 "dXP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/computer/arcade/minesweeper,
@@ -4083,8 +4124,9 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/outdoors)
 "dYp" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
 	},
 /obj/effect/turf_decal/cliff{
 	dir = 5
@@ -4102,9 +4144,6 @@
 	dir = 4;
 	pixel_x = 1;
 	pixel_y = -5
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -4235,7 +4274,7 @@
 	pixel_y = -2
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
+/area/outdoors)
 "efj" = (
 /obj/structure/simple_door/metal/store{
 	icon_state = "brokenstore"
@@ -4277,7 +4316,7 @@
 /area/indoors/ruins)
 "egX" = (
 /obj/structure/memorial/rivertown,
-/turf/open/floor/wood/f13/oak/outdoors,
+/turf/open/floor/wooden/oak/outdoors,
 /area/outdoors)
 "ehf" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4366,6 +4405,18 @@
 	},
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/ruins)
+"ejC" = (
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 10;
+	pixel_x = 7;
+	pixel_y = 29
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "eke" = (
 /turf/open/indestructible/ground/inside/subway,
 /area/indoors)
@@ -4745,6 +4796,9 @@
 	icon_state = "platingdmg2"
 	},
 /area/indoors)
+"eHC" = (
+/turf/open/floor/wooden/oak/outdoors,
+/area/outdoors)
 "eHD" = (
 /obj/structure/rack/steel,
 /obj/item/clothing/under/pants/chaps{
@@ -5062,7 +5116,9 @@
 	},
 /area/indoors)
 "eUB" = (
-/obj/structure/window/fulltile/store,
+/obj/structure/window/fulltile/store{
+	icon_state = "storewindowright"
+	},
 /obj/structure/barricade/wooden/planks{
 	icon_state = "board-1"
 	},
@@ -5513,6 +5569,9 @@
 	icon_state = "horizontaloutermain1"
 	},
 /area/outdoors)
+"fnv" = (
+/turf/open/floor/wooden/oakstagebr/outdoors,
+/area/outdoors)
 "fol" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder{
@@ -5851,10 +5910,8 @@
 	},
 /area/indoors/animals)
 "fCq" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -15
 	},
 /turf/open/indestructible/ground/outside/savannah/cornersnew{
 	dir = 1
@@ -6163,11 +6220,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/darkbrown,
 /area/indoors)
-"fSY" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontaloutermain1"
-	},
-/area/f13/wasteland)
 "fTa" = (
 /obj/structure/junk/micro,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess/redchess2,
@@ -6212,9 +6264,7 @@
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/mercenaries)
 "fUy" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "crosswalkvert3"
-	},
+/turf/open/indestructible/ground/outside/road/crossing/verticalthree,
 /area/outdoors)
 "fVb" = (
 /obj/structure/chair/sofa/left{
@@ -6797,24 +6847,6 @@
 /obj/structure/wreck/trash/three_barrels,
 /turf/open/indestructible/ground/outside/savannah/topleft,
 /area/outdoors)
-"gAL" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
-/obj/structure/railing/wood/underlayer{
-	dir = 1;
-	pixel_y = 12
-	},
-/obj/structure/railing/wood/corner/post{
-	pixel_x = -14;
-	pixel_y = 14
-	},
-/obj/effect/overlay/cliff{
-	dir = 10;
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/savannah/bottomcenter,
-/area/outdoors)
 "gAN" = (
 /obj/structure/cargocrate,
 /obj/structure/cargocrate{
@@ -7043,10 +7075,15 @@
 	icon_state = "damaged2"
 	},
 /area/indoors/bandits)
-"gOm" = (
-/obj/effect/turf_decal/cliff{
-	dir = 5
+"gNY" = (
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -12
 	},
+/turf/open/indestructible/ground/outside/savannah/edgesnew{
+	dir = 1
+	},
+/area/outdoors)
+"gOm" = (
 /obj/structure/railing/wood{
 	dir = 4;
 	pixel_x = 1;
@@ -7061,13 +7098,17 @@
 	pixel_x = 11;
 	pixel_y = 12
 	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 5;
+	pixel_x = -1;
+	pixel_y = 8
 	},
-/obj/effect/overlay/cliff{
-	dir = 8;
-	pixel_x = 33;
-	pixel_y = 1
+/obj/effect/turf_decal/cliff{
+	dir = 5
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	pixel_x = 11;
+	pixel_y = 7
 	},
 /turf/open/indestructible/ground/outside/savannah/bottomleft,
 /area/outdoors)
@@ -7458,6 +7499,12 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/indoors/town/bar)
+"hfn" = (
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -15
+	},
+/turf/closed/mineral/random/low_chance,
+/area/indoors/caves)
 "hfw" = (
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaltopbordertop0"
@@ -7493,13 +7540,11 @@
 	},
 /area/indoors/animals)
 "hgF" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -16
 	},
-/turf/open/indestructible/ground/outside/savannah/cornersnew{
-	dir = 8
+/turf/open/indestructible/ground/outside/savannah/edgesnew{
+	dir = 1
 	},
 /area/outdoors)
 "hgI" = (
@@ -7886,10 +7931,12 @@
 	},
 /area/outdoors)
 "hxV" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 5;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -16
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 6;
+	pixel_y = -28
 	},
 /turf/open/indestructible/ground/outside/savannah/edgesnew{
 	dir = 1
@@ -7964,6 +8011,9 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2"
 	},
+/area/outdoors)
+"hAY" = (
+/turf/open/indestructible/ground/outside/road/crossing,
 /area/outdoors)
 "hAZ" = (
 /obj/structure/table/wood/settler,
@@ -8175,10 +8225,21 @@
 	},
 /area/indoors/ruins)
 "hKb" = (
-/obj/effect/turf_decal/cliff{
-	dir = 10
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 12
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/obj/effect/overlay/turfs/cliff{
+	dir = 5;
+	pixel_y = -8
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 8;
+	pixel_x = -9;
+	pixel_y = -4
+	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner,
 /area/outdoors)
 "hKk" = (
 /obj/structure/bed/mattress{
@@ -8256,16 +8317,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/indoors)
-"hPh" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
-	},
-/turf/open/indestructible/ground/outside/savannah/edgesnew{
-	dir = 1
-	},
-/area/outdoors)
 "hPq" = (
 /obj/structure/chair/wood/worn{
 	dir = 8
@@ -9184,6 +9235,12 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/ruins)
+"iSs" = (
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -12
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "iSW" = (
 /obj/structure/barricade/bars,
 /obj/structure/barricade/wooden,
@@ -9215,7 +9272,7 @@
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaloutermain1"
 	},
-/area/f13/wasteland)
+/area/outdoors)
 "iUF" = (
 /obj/structure/junk/jukebox{
 	icon_state = "junk_arcade";
@@ -9301,9 +9358,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/caves)
 "iZC" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "crosswalkvert1"
-	},
+/turf/open/indestructible/ground/outside/road/crossing/vertical,
 /area/outdoors)
 "iZN" = (
 /turf/open/indestructible/ground/outside/graveldirt{
@@ -9627,7 +9682,7 @@
 /area/indoors/town/clinic)
 "jty" = (
 /obj/structure/window/fulltile/store{
-	icon_state = "storewindowvertical"
+	icon_state = "storewindowtop"
 	},
 /obj/structure/barricade/wooden/planks{
 	icon_state = "board-1"
@@ -9698,6 +9753,20 @@
 	icon_state = "outerborder"
 	},
 /area/outdoors)
+"jwx" = (
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 9;
+	pixel_y = 7
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 1;
+	pixel_x = 8;
+	pixel_y = 26
+	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 1
+	},
+/area/outdoors)
 "jwz" = (
 /obj/structure/weightlifter,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9766,6 +9835,13 @@
 	},
 /turf/open/floor/carpet/red,
 /area/indoors/animals)
+"jyl" = (
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 10;
+	pixel_y = -30
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "jyI" = (
 /obj/effect/decal/marking,
 /turf/open/indestructible/ground/outside/road{
@@ -9825,6 +9901,11 @@
 	dir = 4;
 	pixel_x = 1;
 	pixel_y = -5
+	},
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = 6;
+	pixel_y = 23
 	},
 /turf/open/indestructible/ground/outside/savannah/edgesnew{
 	dir = 8
@@ -10238,13 +10319,9 @@
 /turf/open/floor/carpet/red,
 /area/indoors/animals)
 "jXW" = (
-/obj/effect/turf_decal/cliff{
-	dir = 4
-	},
-/obj/effect/overlay/cliff{
-	dir = 8;
-	pixel_x = 33;
-	pixel_y = 1
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = 6
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -10825,9 +10902,6 @@
 	},
 /area/outdoors)
 "kFW" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
 /obj/structure/railing/wood{
 	dir = 4;
 	pixel_x = 7
@@ -10841,18 +10915,9 @@
 	dir = 1;
 	pixel_y = 12
 	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/outdoors)
-"kGb" = (
-/obj/effect/turf_decal/cliff{
-	dir = 10
-	},
-/obj/effect/overlay/cliff{
+/obj/effect/overlay/turfs/cliff{
 	dir = 1;
-	pixel_y = -32
+	pixel_y = 7
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -11014,6 +11079,9 @@
 /area/indoors/enclave)
 "kLg" = (
 /turf/closed/wall/f13/ruins,
+/area/outdoors)
+"kNh" = (
+/turf/open/floor/wooden/oakstager/outdoors,
 /area/outdoors)
 "kNx" = (
 /obj/structure/wreck/trash/five_tires{
@@ -11496,25 +11564,12 @@
 /turf/open/floor/mineral/uranium/dusty,
 /area/indoors/radiation)
 "lja" = (
-/obj/structure/railing/wood{
-	pixel_x = 10
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -16
 	},
-/obj/structure/railing/wood{
-	dir = 8;
-	pixel_x = 1;
-	pixel_y = 15
-	},
-/obj/structure/railing/wood/corner{
-	dir = 8;
-	pixel_x = 1;
-	pixel_y = 4
-	},
-/obj/effect/turf_decal/cliff{
-	dir = 10
-	},
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 6;
+	pixel_y = -28
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -11548,6 +11603,17 @@
 	icon_state = "horizontaloutermain2"
 	},
 /area/outdoors)
+"lkl" = (
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 6;
+	pixel_x = -26
+	},
+/obj/effect/overlay/turfs/cliff{
+	dir = 5;
+	pixel_y = -8
+	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner,
+/area/outdoors)
 "lkI" = (
 /obj/structure/safe,
 /obj/effect/spawner/lootdrop/f13/cash_ncr_low,
@@ -11555,10 +11621,8 @@
 /turf/open/floor/plasteel/grimy,
 /area/indoors/animals)
 "lkP" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 9;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -16
 	},
 /turf/open/indestructible/ground/outside/savannah/cornersnew{
 	dir = 1
@@ -11824,15 +11888,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/indoors/animals)
-"lyP" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/outdoors)
 "lzn" = (
 /obj/structure/barricade/tentclothcorner{
 	pixel_y = 3
@@ -11889,12 +11944,12 @@
 	},
 /area/indoors/ruins)
 "lAD" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -15
 	},
-/turf/open/indestructible/ground/outside/savannah/topleft,
+/turf/open/indestructible/ground/outside/savannah/cornersnew{
+	dir = 8
+	},
 /area/outdoors)
 "lAS" = (
 /turf/closed/wall/f13/wood,
@@ -12113,9 +12168,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/indoors/animals)
 "lKF" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "crosswalkvert2"
-	},
+/turf/open/indestructible/ground/outside/road/crossing/verticaltwo,
 /area/outdoors)
 "lKV" = (
 /obj/structure/table/wood,
@@ -12376,12 +12429,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/indoors)
 "lYF" = (
-/obj/effect/turf_decal/cliff,
-/obj/structure/railing/wood,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -12
 	},
+/obj/structure/railing/wood,
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "lYJ" = (
@@ -12644,6 +12695,9 @@
 	},
 /turf/open/floor/wood/f13/stage_t/outdoors,
 /area/outdoors)
+"moY" = (
+/turf/open/floor/wooden/oakstagel/outdoors,
+/area/outdoors)
 "mpG" = (
 /turf/closed/wall/f13/wood/house,
 /area/indoors)
@@ -12740,14 +12794,17 @@
 	},
 /area/indoors/animals)
 "muf" = (
-/obj/effect/turf_decal/cliff{
-	dir = 6
+/obj/effect/overlay/turfs/cliff{
+	dir = 9;
+	pixel_y = -14
 	},
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 4;
+	pixel_x = 22
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 8
+	},
 /area/outdoors)
 "mug" = (
 /obj/structure/fence/cut/large{
@@ -12908,10 +12965,20 @@
 	},
 /area/indoors/ruins)
 "mEs" = (
-/obj/structure/railing/wood,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -12
+	},
+/obj/structure/railing/wood{
+	pixel_x = 11
+	},
+/obj/structure/railing/wood{
+	dir = 8;
+	pixel_x = 5;
+	pixel_y = 12
+	},
+/obj/structure/railing/wood/corner/post{
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -12991,6 +13058,9 @@
 	icon_state = "torncarpet4"
 	},
 /area/indoors/animals)
+"mLt" = (
+/turf/open/floor/wooden/oakstagetr/outdoors,
+/area/outdoors)
 "mLW" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/f13{
@@ -13103,11 +13173,6 @@
 /obj/structure/decoration/rag,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/outdoors)
-"mXl" = (
-/turf/open/floor/plating/f13/outside/road{
-	icon_state = "horizontaloutermain2right"
-	},
-/area/f13/wasteland)
 "mXt" = (
 /obj/structure/barricade/bars,
 /obj/structure/decoration/rag{
@@ -13392,6 +13457,14 @@
 	name = "wood flooring"
 	},
 /area/indoors/bandits)
+"noc" = (
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -12
+	},
+/turf/open/indestructible/ground/outside/savannah/edgesnew{
+	dir = 1
+	},
+/area/outdoors)
 "not" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -14612,6 +14685,12 @@
 	},
 /turf/open/floor/wood/wood_diagonal,
 /area/indoors)
+"oBQ" = (
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = 12
+	},
+/turf/open/transparent/openspace/outside,
+/area/outdoors)
 "oBX" = (
 /obj/machinery/chem_master/primitive{
 	pixel_y = 5
@@ -14758,12 +14837,12 @@
 /turf/open/floor/carpet,
 /area/indoors/raiders)
 "oKR" = (
-/obj/effect/turf_decal/cliff{
-	dir = 4
+/obj/structure/railing/wood{
+	dir = 8;
+	pixel_x = 5;
+	pixel_y = 1
 	},
-/turf/open/indestructible/ground/outside/savannah/edgesnew{
-	dir = 8
-	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "oKU" = (
 /obj/item/paper_bin,
@@ -15525,14 +15604,16 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/outdoors)
 "pEn" = (
-/obj/effect/overlay/cliff{
-	dir = 9;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	dir = 5;
+	pixel_y = -8
 	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	dir = 8;
-	icon_state = "outerborder"
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 6;
+	pixel_x = -24;
+	pixel_y = 3
 	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner,
 /area/outdoors)
 "pFc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -15813,7 +15894,7 @@
 /area/outdoors)
 "pSC" = (
 /obj/docking_port/stationary{
-	area_type = /area/f13/wasteland;
+	area_type = /area/outdoors;
 	dir = 4;
 	height = 6;
 	id = "emergency_home";
@@ -15997,6 +16078,16 @@
 	icon_state = "asteroidfloor"
 	},
 /area/indoors/ruins)
+"pZN" = (
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -12
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 6;
+	pixel_y = -24
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "pZQ" = (
 /turf/open/floor/wood/f13/stage_tr,
 /area/indoors/town/bar)
@@ -16007,15 +16098,13 @@
 	},
 /area/outdoors)
 "qaC" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
 /obj/structure/railing/wood/underlayer{
 	dir = 1;
 	pixel_y = 12
 	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
 	},
 /turf/open/indestructible/ground/outside/savannah/bottomcenter,
 /area/outdoors)
@@ -16086,7 +16175,7 @@
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaloutermain1"
 	},
-/area/f13/wasteland)
+/area/outdoors)
 "qeb" = (
 /obj/structure/table/single,
 /obj/item/stamp,
@@ -16371,13 +16460,10 @@
 /turf/open/floor/wood/f13/oak,
 /area/indoors)
 "quO" = (
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -10
 	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "outerborder"
-	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "quS" = (
 /obj/structure/table/wood/bar,
@@ -16415,18 +16501,6 @@
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
 	},
-/area/outdoors)
-"qvQ" = (
-/obj/effect/turf_decal/cliff{
-	dir = 4
-	},
-/obj/effect/turf_decal/cliff{
-	dir = 5
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "qwb" = (
 /obj/structure/bed/mattress{
@@ -16602,9 +16676,6 @@
 	},
 /area/outdoors)
 "qDI" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
 /obj/structure/railing/wood{
 	dir = 8;
 	pixel_x = -6
@@ -16621,8 +16692,9 @@
 	pixel_x = -14;
 	pixel_y = 14
 	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -16806,6 +16878,9 @@
 	icon_state = "outerbordercorner"
 	},
 /area/outdoors)
+"qQh" = (
+/turf/open/floor/wooden/oakstageb/outdoors,
+/area/outdoors)
 "qQA" = (
 /obj/structure/simple_door/interior,
 /turf/open/floor/plasteel/dark,
@@ -16898,17 +16973,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/caves)
-"qXS" = (
-/obj/structure/window/fulltile/store{
-	icon_state = "storewindowvertical"
-	},
-/obj/structure/barricade/wooden/planks{
-	icon_state = "board-2"
-	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/indoors)
 "qYQ" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/barricade/wooden,
@@ -17046,6 +17110,9 @@
 	pixel_x = -7
 	},
 /turf/open/floor/wood/f13/oak/outdoors,
+/area/outdoors)
+"rgP" = (
+/turf/open/floor/wooden/oakstagetl/outdoors,
 /area/outdoors)
 "rgU" = (
 /obj/structure/railing{
@@ -17485,20 +17552,17 @@
 /turf/open/floor/wood/f13/oak,
 /area/indoors/town/chapel)
 "rCn" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
 /obj/structure/railing/wood/underlayer{
 	dir = 1;
 	pixel_y = 12
 	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 9;
+	pixel_y = 32
+	},
 /obj/structure/railing/wood/corner/post{
 	pixel_x = -18;
 	pixel_y = 13
-	},
-/obj/effect/overlay/cliff{
-	dir = 10;
-	pixel_y = 32
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -17657,21 +17721,18 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/indoors)
 "rIU" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 5;
+	pixel_y = 7
 	},
-/obj/effect/turf_decal/cliff{
-	dir = 5
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = -18
 	},
-/obj/effect/overlay/cliff{
-	dir = 8;
-	pixel_x = 33;
-	pixel_y = 1
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 4
 	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "rJi" = (
 /mob/living/simple_animal/hostile/centaur,
@@ -17730,13 +17791,8 @@
 	},
 /area/outdoors)
 "rMg" = (
-/obj/structure/railing/wood,
-/obj/structure/railing/wood/corner/post{
-	pixel_x = 13
-	},
-/obj/effect/overlay/cliff{
-	dir = 5;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -12
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -17930,7 +17986,7 @@
 "saK" = (
 /obj/structure/chair/stool,
 /turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
+/area/outdoors)
 "saL" = (
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "cross1"
@@ -18816,7 +18872,7 @@
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaloutermain1"
 	},
-/area/f13/wasteland)
+/area/outdoors)
 "sRE" = (
 /obj/structure/cargocrate,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -18825,18 +18881,6 @@
 /obj/structure/simple_door/wood,
 /turf/open/floor/wood/f13/oak,
 /area/indoors)
-"sSl" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
-/obj/effect/turf_decal/cliff{
-	dir = 5
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/outdoors)
 "sSR" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/attachments,
@@ -19241,14 +19285,9 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/outdoors)
 "tkz" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
-	},
-/obj/structure/flora/tree/tall{
-	icon_state = "tree_2"
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -19583,11 +19622,17 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/indoors/raiders)
+"tFP" = (
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "tGs" = (
-/obj/structure/railing/wood{
-	dir = 8;
-	pixel_x = 1;
-	pixel_y = 1
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -14
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -19836,15 +19881,12 @@
 	},
 /area/indoors/town/bar)
 "tSY" = (
-/obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/ladder/unbreakable{
 	height = 2;
-	id = "oldhouse"
+	id = "village"
 	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/outdoors)
+/turf/open/indestructible/ground/inside/mountain,
+/area/indoors/manhole)
 "tSZ" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -19995,34 +20037,27 @@
 /turf/open/floor/carpet/red,
 /area/indoors/animals)
 "tYJ" = (
-/obj/effect/turf_decal/cliff{
-	dir = 1
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 5;
+	pixel_y = 7
 	},
-/obj/effect/turf_decal/cliff{
-	dir = 5
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = -21
 	},
-/obj/effect/overlay/cliff{
-	dir = 8;
-	pixel_x = 33;
-	pixel_y = 1
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 4
 	},
-/obj/effect/overlay/cliff{
-	dir = 10;
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "tYK" = (
-/obj/effect/turf_decal/cliff{
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 9;
+	pixel_y = 7
+	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
 	dir = 1
 	},
-/obj/effect/turf_decal/cliff{
-	dir = 9
-	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
-	},
-/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "tZf" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -20354,9 +20389,6 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/indoors/ruins)
-"uot" = (
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
 "uox" = (
 /obj/structure/simple_door/interior,
 /obj/structure/barricade/wooden,
@@ -20739,7 +20771,7 @@
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaloutermain2right"
 	},
-/area/f13/wasteland)
+/area/outdoors)
 "uMs" = (
 /obj/structure/fence{
 	dir = 4
@@ -21314,6 +21346,12 @@
 /obj/structure/dresser,
 /turf/open/floor/carpet/royalblack,
 /area/indoors/town)
+"vqq" = (
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -16
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "vqF" = (
 /obj/structure/table,
 /obj/machinery/light/small{
@@ -21402,14 +21440,17 @@
 	},
 /area/indoors/bunker)
 "vwS" = (
-/obj/effect/turf_decal/cliff{
-	dir = 6
-	},
-/obj/effect/overlay/cliff{
+/obj/effect/overlay/turfs/cliff{
 	dir = 9;
-	pixel_y = -32
+	pixel_y = -17
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 4;
+	pixel_x = 22
+	},
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 8
+	},
 /area/outdoors)
 "vyr" = (
 /obj/structure/chair/comfy/brown{
@@ -21600,7 +21641,7 @@
 /area/outdoors)
 "vJd" = (
 /obj/structure/window/fulltile/store{
-	icon_state = "storewindowhorizontalbroken"
+	icon_state = "storewindowleft"
 	},
 /obj/structure/barricade/wooden/planks{
 	icon_state = "board-2"
@@ -21807,6 +21848,9 @@
 /obj/item/clothing/head/beret/durathread,
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/ruins)
+"vRO" = (
+/turf/open/floor/wooden/oakstaget/outdoors,
+/area/outdoors)
 "vRZ" = (
 /obj/structure/signs/waterfront/store/pet,
 /turf/closed/wall/f13/supermart,
@@ -21864,6 +21908,14 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/f13/wood/interior,
 /area/indoors/bandits)
+"vWy" = (
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 4;
+	pixel_x = -8;
+	pixel_y = 10
+	},
+/turf/open/transparent/openspace/outside,
+/area/outdoors)
 "vXw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/asteroid{
@@ -22316,8 +22368,9 @@
 /area/outdoors)
 "wwE" = (
 /obj/structure/campfire/barrel/prelit,
-/obj/effect/overlay/cliff{
-	pixel_y = 32
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 12
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
@@ -22535,8 +22588,14 @@
 	},
 /area/indoors/bandits)
 "wHE" = (
-/obj/effect/turf_decal/cliff{
-	dir = 8
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = -28
+	},
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 6;
+	pixel_x = -31;
+	pixel_y = 8
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
@@ -22544,22 +22603,17 @@
 /turf/closed/wall/rust,
 /area/indoors/caves)
 "wIb" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
+/obj/effect/overlay/turfs/cliff{
 	dir = 9;
-	pixel_y = -32
+	pixel_y = -11
 	},
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891";
-	pixel_y = 5
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 4;
+	pixel_x = 22
 	},
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891";
-	pixel_y = 5
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 8
 	},
-/turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
 "wIo" = (
 /obj/structure/fermenting_barrel,
@@ -22673,6 +22727,17 @@
 	},
 /turf/closed/wall/f13/store,
 /area/indoors/ruins)
+"wQZ" = (
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 10;
+	pixel_x = -6
+	},
+/obj/effect/overlay/turfs/cliff{
+	pixel_x = 13;
+	pixel_y = 12
+	},
+/turf/open/transparent/openspace/outside,
+/area/outdoors)
 "wRd" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/red,
@@ -23153,13 +23218,18 @@
 /turf/open/floor/carpet/arcade,
 /area/indoors/arcade)
 "xnO" = (
-/obj/effect/turf_decal/cliff{
-	dir = 5
+/obj/effect/overlay/turfs/cliff/alt{
+	dir = 5;
+	pixel_y = 7
 	},
-/obj/effect/overlay/cliff{
-	pixel_y = 32
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 9;
+	pixel_x = 32;
+	pixel_y = -7
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/indestructible/ground/outside/dirt/cliffcorner{
+	dir = 4
+	},
 /area/outdoors)
 "xoc" = (
 /obj/structure/rack,
@@ -23188,15 +23258,17 @@
 	},
 /area/outdoors)
 "xoX" = (
-/obj/effect/turf_decal/cliff{
-	dir = 10
+/obj/effect/overlay/turfs/cliff{
+	dir = 5;
+	pixel_y = -8
 	},
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 8;
+	pixel_x = -9;
+	pixel_y = -4
 	},
-/turf/open/indestructible/ground/outside/savannah/edgesnew{
-	dir = 10
+/turf/open/indestructible/ground/outside/savannah/cornersnew{
+	dir = 1
 	},
 /area/outdoors)
 "xpY" = (
@@ -23593,6 +23665,12 @@
 /obj/structure/window/fulltile/house,
 /turf/open/floor/wood/f13/oak,
 /area/indoors)
+"xNx" = (
+/obj/effect/overlay/turfs/cliff/alt{
+	pixel_y = -18
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/outdoors)
 "xNz" = (
 /obj/structure/fence{
 	dir = 4
@@ -23787,13 +23865,11 @@
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/forest/animals)
 "xXJ" = (
-/obj/effect/turf_decal/cliff,
-/obj/effect/overlay/cliff{
-	dir = 1;
-	pixel_y = -32
+/obj/effect/overlay/turfs/cliff{
+	pixel_y = -15
 	},
 /turf/open/indestructible/ground/outside/savannah/edgesnew{
-	dir = 6
+	dir = 1
 	},
 /area/outdoors)
 "xZp" = (
@@ -24215,7 +24291,7 @@ tIM
 tIM
 tIM
 tIM
-tIM
+hfn
 uUd
 uUd
 uUd
@@ -24377,7 +24453,7 @@ tIM
 tIM
 tIM
 tIM
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -24701,7 +24777,7 @@ tIM
 tIM
 tIM
 tIM
-aNJ
+lja
 uUd
 uUd
 uUd
@@ -24864,7 +24940,7 @@ tIM
 tIM
 tIM
 vHM
-kGb
+bIt
 uUd
 uUd
 uUd
@@ -25207,7 +25283,7 @@ uUd
 uUd
 uUd
 mpG
-onG
+tSY
 xuM
 dOG
 vaT
@@ -25350,7 +25426,7 @@ pHj
 pHj
 pHj
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -25512,7 +25588,7 @@ wtV
 bkY
 pHj
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -25999,7 +26075,7 @@ dzi
 pHj
 qXn
 qXn
-hPh
+gNY
 uUd
 uUd
 uUd
@@ -26161,7 +26237,7 @@ tmn
 aHt
 qXn
 qXn
-hPh
+gNY
 uUd
 uUd
 uUd
@@ -26323,7 +26399,7 @@ kaM
 aHt
 qXn
 qXn
-hPh
+gNY
 uUd
 uUd
 uUd
@@ -26506,7 +26582,7 @@ uUd
 glf
 pSh
 ruK
-maZ
+bnP
 bnP
 tmM
 mjY
@@ -26810,7 +26886,7 @@ pHj
 qXn
 qXn
 qXn
-hPh
+bcA
 uUd
 uUd
 uUd
@@ -26972,7 +27048,7 @@ pHj
 qXn
 qXn
 qXn
-hPh
+gNY
 uUd
 uUd
 uUd
@@ -27134,7 +27210,7 @@ oMz
 qXn
 qXn
 qXn
-hPh
+noc
 uUd
 uUd
 uUd
@@ -27296,7 +27372,7 @@ pHj
 qXn
 qXn
 qXn
-hPh
+gNY
 uUd
 uUd
 uUd
@@ -27458,7 +27534,7 @@ pHj
 qXn
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -27620,7 +27696,7 @@ pHj
 qXn
 pYg
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -27944,7 +28020,7 @@ aHt
 qXn
 qXn
 wyH
-muf
+bYJ
 uUd
 uUd
 uUd
@@ -28066,8 +28142,8 @@ aMr
 gOr
 gOr
 jty
+beM
 gOr
-qXS
 gOr
 gOr
 gAO
@@ -28267,7 +28343,7 @@ niv
 aHt
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -28429,7 +28505,7 @@ jke
 aHt
 qXn
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -28591,7 +28667,7 @@ tmn
 aHt
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -28753,7 +28829,7 @@ lCo
 pHj
 dVU
 lao
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -28915,7 +28991,7 @@ pHj
 pHj
 hxF
 lJc
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -29077,7 +29153,7 @@ ltr
 pSh
 nmV
 lJc
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -29239,7 +29315,7 @@ nqg
 cpL
 nmV
 lJc
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -29563,7 +29639,7 @@ kwD
 ltr
 nmV
 vHM
-aNJ
+lja
 uUd
 uUd
 uUd
@@ -29726,7 +29802,7 @@ ltr
 nmV
 vHM
 vHM
-bDH
+bIt
 uUd
 uUd
 uUd
@@ -29770,7 +29846,7 @@ vHU
 tVh
 tVh
 tVh
-saL
+hAY
 tVh
 tVh
 tVh
@@ -29888,7 +29964,7 @@ ltr
 nmV
 vHM
 vHM
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -29904,7 +29980,7 @@ cnH
 cnH
 cnH
 cnH
-lyP
+tkz
 vHM
 fti
 fti
@@ -30066,7 +30142,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 hFs
 uJj
 vHM
@@ -30094,7 +30170,7 @@ eJQ
 dtQ
 qes
 qes
-gCC
+bSy
 qes
 hAT
 qes
@@ -30212,7 +30288,7 @@ neJ
 sjZ
 lJc
 wSU
-aNJ
+lja
 uUd
 uUd
 uUd
@@ -30228,7 +30304,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 lJc
 wSU
 vHM
@@ -30256,7 +30332,7 @@ byV
 tSd
 uQQ
 uQQ
-saL
+hAY
 uQQ
 byV
 tSd
@@ -30360,7 +30436,7 @@ dtQ
 tVh
 tVh
 tVh
-saL
+hAY
 tVh
 qes
 qes
@@ -30375,7 +30451,7 @@ mpG
 mpG
 mpG
 vHM
-bDH
+bIt
 uUd
 uUd
 uUd
@@ -30390,7 +30466,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 lJc
 wSU
 vHM
@@ -30522,7 +30598,7 @@ dtQ
 qes
 qes
 qes
-gCC
+bIW
 qes
 qes
 qes
@@ -30537,7 +30613,7 @@ vgU
 cWH
 mpG
 vHM
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -30552,7 +30628,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 bvp
 omo
 crW
@@ -30608,7 +30684,7 @@ tVh
 tVh
 tVh
 tVh
-saL
+hAY
 qes
 qes
 fuW
@@ -30684,7 +30760,7 @@ qes
 qes
 uQQ
 uQQ
-saL
+bSy
 uQQ
 qes
 qes
@@ -30714,7 +30790,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 nZA
 kFk
@@ -30861,7 +30937,7 @@ vgU
 cWH
 mpG
 uJj
-aNJ
+lja
 uUd
 uUd
 uUd
@@ -30932,7 +31008,7 @@ uQQ
 uQQ
 uQQ
 uQQ
-gCC
+bSy
 qes
 qes
 qes
@@ -31024,7 +31100,7 @@ cWH
 mpG
 dIo
 wus
-fCq
+xoX
 uUd
 uUd
 uUd
@@ -31039,7 +31115,7 @@ uUd
 uUd
 uUd
 uUd
-ocm
+tkz
 vHM
 kFk
 vHM
@@ -31186,7 +31262,7 @@ bVD
 mpG
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -31201,7 +31277,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 kFk
 vHM
@@ -31348,7 +31424,7 @@ cWH
 mpG
 qXn
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -31363,7 +31439,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 dHn
 vHM
@@ -31510,7 +31586,7 @@ cWH
 mpG
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -31672,7 +31748,7 @@ cWH
 mpG
 qXn
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -31688,7 +31764,7 @@ uUd
 uUd
 uUd
 uUd
-ocm
+tkz
 kFk
 vHM
 vHM
@@ -31834,7 +31910,7 @@ cWH
 mpG
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -31850,7 +31926,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 kFk
 vHM
 vHM
@@ -31996,7 +32072,7 @@ lrr
 mpG
 qXn
 cgm
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -32012,7 +32088,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 kFk
 qZl
 vHM
@@ -32158,7 +32234,7 @@ cWH
 mpG
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -32174,7 +32250,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 kFk
 vHM
 vHM
@@ -32319,8 +32395,8 @@ tfV
 cWH
 mpG
 qXn
-wyH
-lAD
+dVU
+hgF
 uUd
 uUd
 uUd
@@ -32336,7 +32412,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 fNV
 fQq
 fQq
@@ -32805,7 +32881,7 @@ mpG
 mpG
 mpG
 wSU
-aFf
+vqq
 uUd
 uUd
 uUd
@@ -32825,7 +32901,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 ahm
 ydU
 ong
@@ -32987,7 +33063,7 @@ uUd
 uUd
 uUd
 uUd
-sSl
+xnO
 vHM
 ydU
 ouj
@@ -33150,7 +33226,7 @@ uUd
 uUd
 uUd
 uUd
-ocm
+tkz
 ydU
 gNJ
 gNJ
@@ -33312,9 +33388,9 @@ uUd
 uUd
 uUd
 uUd
-rIU
+tYJ
 jXW
-vOd
+jXW
 vHM
 ydU
 ydU
@@ -33452,7 +33528,7 @@ gXx
 vHM
 vHM
 kZK
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -33614,7 +33690,7 @@ vHM
 lMV
 vHM
 guw
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -33776,7 +33852,7 @@ vHM
 vHM
 hFs
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -33938,7 +34014,7 @@ vHM
 hFs
 qXn
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -34226,7 +34302,7 @@ tVh
 tVh
 tVh
 tVh
-saL
+hAY
 qes
 qes
 qes
@@ -34240,7 +34316,7 @@ tVh
 tVh
 tVh
 tVh
-saL
+hAY
 obB
 msI
 qes
@@ -34293,8 +34369,8 @@ uUd
 uUd
 uUd
 uUd
-bzk
-vOd
+cZa
+tFP
 vHM
 vHM
 vHM
@@ -34405,7 +34481,7 @@ qes
 bIW
 obB
 sge
-qes
+ayv
 pYK
 aMr
 nmV
@@ -34457,7 +34533,7 @@ uUd
 uUd
 uUd
 uUd
-ehR
+dhd
 vHM
 iAn
 lJc
@@ -34550,7 +34626,7 @@ byV
 byV
 gEY
 uQQ
-saL
+bSy
 qes
 uSI
 wSY
@@ -34564,7 +34640,7 @@ uQQ
 uQQ
 uQQ
 uQQ
-saL
+bSy
 qes
 qes
 qes
@@ -34620,7 +34696,7 @@ uUd
 uUd
 uUd
 uUd
-ocm
+dbv
 vHM
 bvp
 dVU
@@ -34748,7 +34824,7 @@ qXn
 qXn
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -34782,7 +34858,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 vHM
 vHM
@@ -34816,7 +34892,7 @@ tVh
 tVh
 tVh
 tVh
-saL
+hAY
 tVh
 qes
 qes
@@ -34910,7 +34986,7 @@ qXn
 cgm
 qXn
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -34944,7 +35020,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 qmT
 ncP
@@ -35072,7 +35148,7 @@ qXn
 qXn
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -35106,7 +35182,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 qmT
 guw
 pHj
@@ -35140,7 +35216,7 @@ qes
 dtQ
 dtQ
 dtQ
-gCC
+bSy
 qes
 qes
 qes
@@ -35234,7 +35310,7 @@ qXn
 qXn
 qXn
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -35268,7 +35344,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 guw
 qXn
 pHj
@@ -35302,7 +35378,7 @@ sKN
 byV
 byV
 tSd
-saL
+hAY
 uQQ
 uQQ
 uQQ
@@ -35396,7 +35472,7 @@ qXn
 qXn
 qXn
 qXn
-hPh
+xXJ
 uUd
 uUd
 uUd
@@ -35430,7 +35506,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 qXn
 sXg
 pHj
@@ -35558,7 +35634,7 @@ qXn
 qXn
 qXn
 qXn
-hPh
+hgF
 uUd
 uUd
 uUd
@@ -35592,7 +35668,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 qXn
 qXn
 pHj
@@ -35628,23 +35704,23 @@ rMc
 rMc
 kFF
 ifU
-dbv
-dbv
-dbv
-dbv
-dbv
-dbv
-dbv
+ifU
+ifU
+ifU
+ifU
+ifU
+ifU
+ifU
 eem
-mXl
-fSY
+crX
+bnP
 qdX
 iUD
-dbv
-dbv
-dbv
-dbv
-dbv
+ifU
+ifU
+ifU
+ifU
+ifU
 cJK
 tIM
 tIM
@@ -35719,8 +35795,8 @@ qXn
 fgn
 dVU
 dVU
-oKR
-bYJ
+ccc
+muf
 uUd
 uUd
 uUd
@@ -35754,7 +35830,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 qXn
 qXn
 pHj
@@ -35797,10 +35873,10 @@ fsd
 nHF
 rsQ
 nHF
-uot
-mXl
-fSY
-beM
+pSh
+crX
+bnP
+cpL
 nHF
 hWG
 nHF
@@ -35880,9 +35956,9 @@ dVU
 dVU
 ccc
 vHM
-aFf
-uUd
-uUd
+jyl
+bzk
+vWy
 uUd
 uUd
 uUd
@@ -35916,7 +35992,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 sXg
 dks
 pHj
@@ -35959,10 +36035,10 @@ udE
 uzd
 udE
 nHF
-uot
-uot
-uot
-fSY
+pSh
+pSh
+pSh
+bnP
 vPA
 jLf
 uUw
@@ -36078,7 +36154,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 lao
 qXn
 pHj
@@ -36121,10 +36197,10 @@ fax
 elC
 fax
 gYV
-uot
-uot
-fSY
-fSY
+pSh
+pSh
+bnP
+bnP
 xeK
 wZg
 lfu
@@ -36240,7 +36316,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 bvp
 dVU
 pHj
@@ -36283,9 +36359,9 @@ uPX
 xGB
 ljs
 nHF
-beM
-beM
-mXl
+cpL
+cpL
+crX
 sRv
 xRD
 lCB
@@ -36402,7 +36478,7 @@ uUd
 uUd
 uUd
 uUd
-qvQ
+xnO
 vHM
 vHM
 pHj
@@ -36445,9 +36521,9 @@ fsd
 nHF
 hWG
 nHF
-uot
-uot
-uot
+pSh
+pSh
+pSh
 uLK
 nHF
 hWG
@@ -36527,7 +36603,7 @@ vHM
 vHM
 lJc
 wyH
-vHM
+omo
 muf
 uUd
 uUd
@@ -36565,7 +36641,7 @@ uUd
 uUd
 uUd
 uUd
-ocm
+tkz
 vHM
 pHj
 mFd
@@ -36689,7 +36765,7 @@ wus
 wus
 qXn
 wSU
-aFf
+vqq
 uUd
 uUd
 uUd
@@ -36727,7 +36803,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 pHj
 jzJ
@@ -36889,7 +36965,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 nZA
 pHj
 pHj
@@ -37051,7 +37127,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 vHM
 vHM
@@ -37174,8 +37250,8 @@ lvo
 lvo
 lvo
 lvo
-pEn
-uUd
+hxF
+wQZ
 uUd
 uUd
 uUd
@@ -37190,10 +37266,10 @@ ata
 ata
 ata
 ata
-ayv
-ayv
-ayv
-ayv
+wjp
+wjp
+wjp
+wjp
 ata
 uDj
 hnQ
@@ -37336,8 +37412,8 @@ rMc
 rMc
 bzh
 rMc
-quO
-uUd
+jwq
+oBQ
 uUd
 uUd
 uUd
@@ -38146,8 +38222,8 @@ lvo
 lvo
 bGt
 lvo
-bUU
-uUd
+hxF
+oBQ
 uUd
 uUd
 uUd
@@ -38308,8 +38384,8 @@ rMc
 rMc
 rMc
 rMc
-quO
-uUd
+jwq
+oBQ
 uUd
 uUd
 uUd
@@ -38471,7 +38547,7 @@ vHM
 vHM
 aFf
 uUd
-uUd
+vWy
 uUd
 uUd
 uUd
@@ -38480,9 +38556,9 @@ uUd
 uUd
 wWG
 iMo
-frF
-edk
-gCp
+rgP
+moY
+cgv
 gRK
 bhm
 gRK
@@ -38631,7 +38707,7 @@ iCo
 iAn
 ahm
 vHM
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -38642,9 +38718,9 @@ uUd
 uUd
 wWG
 iMo
-nnm
+vRO
 egX
-mIN
+qQh
 hHl
 bhm
 hHl
@@ -38793,7 +38869,7 @@ lAS
 vHM
 vHM
 nZA
-muf
+wIb
 uUd
 uUd
 uUd
@@ -38804,9 +38880,9 @@ uUd
 uUd
 wWG
 iMo
-nnm
-ueF
-mIN
+vRO
+eHC
+qQh
 hHl
 bhm
 hHl
@@ -38954,7 +39030,7 @@ gWK
 lAS
 lAS
 uJj
-aFf
+vqq
 uUd
 uUd
 uUd
@@ -38966,9 +39042,9 @@ uUd
 uUd
 wWG
 iMo
-fwa
-iEB
-thG
+mLt
+kNh
+fnv
 ifs
 bhm
 hYp
@@ -39116,7 +39192,7 @@ lTL
 mwF
 lAS
 wSU
-bDH
+rMg
 uUd
 uUd
 uUd
@@ -39278,7 +39354,7 @@ lTL
 lTL
 lAS
 wSU
-bDH
+tGs
 uUd
 uUd
 uUd
@@ -39440,7 +39516,7 @@ wxe
 uNg
 lAS
 vEF
-muf
+wIb
 uUd
 uUd
 uUd
@@ -39601,7 +39677,7 @@ lTL
 lTL
 mwF
 lto
-wIb
+vqq
 uUd
 uUd
 uUd
@@ -39763,7 +39839,7 @@ lTL
 ibe
 vkP
 lAS
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -39925,7 +40001,7 @@ mwF
 lTL
 ohR
 lAS
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -40087,7 +40163,7 @@ wVq
 fTl
 vGl
 lAS
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -40237,7 +40313,7 @@ gvf
 aMr
 nmV
 wJw
-tSY
+dtQ
 vcC
 bCv
 iaL
@@ -40249,7 +40325,7 @@ mse
 vGl
 vGl
 lto
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -40411,7 +40487,7 @@ xOc
 rjE
 vGl
 lAS
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -40573,7 +40649,7 @@ lAS
 lAS
 lAS
 lAS
-bDH
+bUU
 uUd
 uUd
 uUd
@@ -40735,7 +40811,7 @@ qki
 vGl
 bdY
 lAS
-aNJ
+lja
 uUd
 uUd
 uUd
@@ -40897,8 +40973,8 @@ adp
 adp
 jrv
 kOQ
-tGs
-lja
+vHM
+bIt
 uUd
 uUd
 uUd
@@ -40989,7 +41065,7 @@ bnP
 bnP
 crX
 cpL
-cZa
+crX
 kKL
 sel
 tIM
@@ -41059,7 +41135,7 @@ adp
 vGl
 lAS
 lAS
-vHM
+oKR
 mEs
 uUd
 uUd
@@ -41384,7 +41460,7 @@ vHM
 vHM
 vHM
 vHM
-rMg
+pZN
 uUd
 uUd
 uUd
@@ -41546,8 +41622,8 @@ vHM
 vHM
 vHM
 vHM
-ycL
-kGb
+uCd
+bIt
 uUd
 uUd
 uUd
@@ -41709,7 +41785,7 @@ nWq
 qkx
 nSz
 ycL
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -41871,7 +41947,7 @@ vHM
 ojC
 qEG
 ycL
-aNJ
+pZN
 uUd
 uUd
 uUd
@@ -41925,7 +42001,7 @@ fzd
 qes
 qes
 pYK
-qes
+pYK
 qes
 hAT
 dtQ
@@ -42034,7 +42110,7 @@ vHM
 jHc
 uCd
 vHM
-kGb
+bIt
 uUd
 uUd
 uUd
@@ -42071,7 +42147,7 @@ uUd
 uUd
 uUd
 uUd
-gAL
+rCn
 qXn
 qXn
 xEx
@@ -42196,7 +42272,7 @@ ojC
 jHc
 ycL
 vHM
-bDH
+quO
 uUd
 uUd
 uUd
@@ -42358,7 +42434,7 @@ qkx
 hpo
 ycL
 nZA
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -42520,7 +42596,7 @@ mrK
 yjr
 gxZ
 vHM
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -42682,7 +42758,7 @@ vHM
 cay
 vHM
 vHM
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -42844,7 +42920,7 @@ uJj
 vHM
 vHM
 iAn
-muf
+bDH
 uUd
 uUd
 uUd
@@ -43005,8 +43081,8 @@ qXn
 wSU
 vHM
 vHM
-aFf
-uUd
+vHM
+vqq
 uUd
 uUd
 uUd
@@ -43045,7 +43121,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 qXn
 qXn
 qXn
@@ -43167,8 +43243,8 @@ qXn
 vLM
 vHM
 vHM
+vHM
 muf
-uUd
 uUd
 uUd
 uUd
@@ -43207,7 +43283,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 qXn
 qXn
 qXn
@@ -43328,8 +43404,8 @@ qXn
 qXn
 wSU
 vHM
-aFf
-uUd
+vHM
+vwS
 uUd
 uUd
 uUd
@@ -43490,7 +43566,7 @@ qXn
 dks
 wSU
 vHM
-muf
+vwS
 uUd
 uUd
 uUd
@@ -43531,7 +43607,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 sXg
 qXn
 qXn
@@ -43693,7 +43769,7 @@ uUd
 uUd
 uUd
 uUd
-dXO
+ejC
 qXn
 qXn
 wyH
@@ -43973,7 +44049,7 @@ qXn
 qXn
 qXn
 cAN
-aFf
+vqq
 uUd
 uUd
 uUd
@@ -44016,7 +44092,7 @@ uUd
 uUd
 uUd
 uUd
-dXO
+ejC
 vHM
 bvp
 dVU
@@ -44135,7 +44211,7 @@ qXn
 qXn
 fgn
 qeD
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -44297,7 +44373,7 @@ qXn
 qXn
 iaU
 vHM
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -44339,7 +44415,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 qmT
 wus
 wus
@@ -44459,7 +44535,7 @@ qXn
 tKW
 paH
 vHM
-aNJ
+xNx
 uUd
 uUd
 uUd
@@ -44501,7 +44577,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 taP
 qXn
 qXn
@@ -44621,8 +44697,8 @@ qXn
 wyH
 ccc
 vHM
-vHM
-kGb
+ahm
+lkl
 uUd
 uUd
 uUd
@@ -44663,7 +44739,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 taP
 qXn
 qXn
@@ -44825,7 +44901,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 taP
 qXn
 qXn
@@ -44987,7 +45063,7 @@ uUd
 uUd
 uUd
 uUd
-dXO
+ejC
 taP
 qXn
 qXn
@@ -45109,7 +45185,7 @@ vHM
 vHM
 vHM
 vHM
-kGb
+pEn
 uUd
 uUd
 uUd
@@ -45271,7 +45347,7 @@ wus
 rXk
 wus
 uJj
-bDH
+quO
 uUd
 uUd
 uUd
@@ -45310,7 +45386,7 @@ uUd
 uUd
 uUd
 uUd
-dXO
+ejC
 vHM
 lJc
 dks
@@ -45433,7 +45509,7 @@ qXn
 qXn
 qXn
 vLM
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -45471,7 +45547,7 @@ uUd
 uUd
 uUd
 uUd
-dXO
+jwx
 vHM
 vHM
 lJc
@@ -45595,7 +45671,7 @@ qXn
 qXn
 qXn
 wSU
-bDH
+rMg
 uUd
 uUd
 uUd
@@ -45757,7 +45833,7 @@ qXn
 fSl
 qXn
 fmX
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -45794,7 +45870,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 ahm
 qmT
 guw
@@ -45956,7 +46032,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 taP
 qXn
@@ -46081,7 +46157,7 @@ qXn
 qXn
 fgn
 ccc
-bDH
+vqq
 uUd
 uUd
 uUd
@@ -46118,7 +46194,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 iAn
 taP
 qXn
@@ -46442,7 +46518,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 lJc
 qXn
@@ -46604,7 +46680,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 lJc
 qXn
@@ -46726,7 +46802,7 @@ qXn
 wSU
 vHM
 vHM
-aFf
+vqq
 uUd
 uUd
 uUd
@@ -46766,7 +46842,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 ihG
 gCG
 hjZ
@@ -46874,7 +46950,7 @@ aMr
 pSh
 pSh
 pSh
-pSh
+kTt
 igb
 wJw
 hAT
@@ -46888,7 +46964,7 @@ qXn
 bYC
 iAn
 vHM
-aNJ
+xNx
 uUd
 uUd
 uUd
@@ -46928,7 +47004,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 gZT
 hkl
@@ -47035,7 +47111,7 @@ lvo
 eNK
 pSh
 pSh
-nDo
+pSh
 pSh
 igb
 kig
@@ -47051,7 +47127,7 @@ ccc
 vHM
 vHM
 ahm
-kGb
+lkl
 uUd
 uUd
 uUd
@@ -47090,7 +47166,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 iLy
 hsp
@@ -47213,7 +47289,7 @@ vHM
 vHM
 vHM
 vHM
-aNJ
+pZN
 uUd
 uUd
 uUd
@@ -47252,7 +47328,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 nZA
 vHM
 vHM
@@ -47376,7 +47452,7 @@ vHM
 vHM
 vHM
 vHM
-hKb
+bIt
 uUd
 uUd
 uUd
@@ -47414,7 +47490,7 @@ uUd
 uUd
 uUd
 uUd
-lyP
+tkz
 vHM
 vHM
 vHM
@@ -47538,7 +47614,7 @@ tIM
 vHM
 vHM
 vHM
-aNJ
+iSs
 uUd
 uUd
 uUd
@@ -47576,7 +47652,7 @@ uUd
 uUd
 uUd
 uUd
-tIM
+chb
 tIM
 tIM
 tIM
@@ -47702,7 +47778,7 @@ tIM
 vHM
 vHM
 wHE
-aqA
+hKb
 uUd
 uUd
 uUd
@@ -47864,7 +47940,7 @@ tIM
 tIM
 tIM
 tIM
-bDH
+iSs
 uUd
 uUd
 uUd
@@ -48026,7 +48102,7 @@ tIM
 tIM
 tIM
 tIM
-tIM
+hfn
 uUd
 uUd
 uUd
