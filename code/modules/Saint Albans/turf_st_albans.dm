@@ -171,12 +171,12 @@
 // Chestnut
 /turf/open/floor/wooden/chestnut
 	icon_state = "chestnut1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "chestnut1")
 			icon_state = "chestnut[rand(1,4)]"
-
+*/
 /turf/open/floor/wooden/chestnut/broken
 	icon_state = "chestnutbroken1"
 
