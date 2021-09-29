@@ -714,6 +714,18 @@
 /obj/structure/table/snooker,
 /turf/open/floor/carpet,
 /area/f13/enclave)
+"db" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
+	dir = 1
+	},
+/area/f13/enclave)
 "dd" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/reagent_containers/food/condiment/soymilk,
@@ -2498,6 +2510,13 @@
 	},
 /turf/open/floor/plasteel/darkred/side,
 /area/f13/vault)
+"jt" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/table/single/round,
+/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/area/f13/enclave)
 "ju" = (
 /obj/structure/fence,
 /obj/effect/decal/cleanable/dirt,
@@ -2638,6 +2657,7 @@
 "ke" = (
 /obj/structure/table,
 /obj/item/paper_bin,
+/obj/item/pen/fourcolor,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave/hq)
 "kf" = (
@@ -5773,8 +5793,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "wE" = (
-/turf/closed/indestructible/vaultdoor,
-/area/f13/caves)
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/f13/enclave)
 "wF" = (
 /obj/structure/flora/rock/jungle,
 /obj/structure/flora/rock/pile/largejungle,
@@ -8471,6 +8494,12 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/bunker)
+"HE" = (
+/obj/machinery/door/unpowered/militarydoor/enclave{
+	name = "Storage"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/area/f13/enclave)
 "HF" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -10169,6 +10198,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/vault)
+"OV" = (
+/obj/structure/chalkboard,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/f13/enclave)
 "OW" = (
 /obj/structure/sign/departments/chemistry,
 /turf/closed/wall/r_wall/f13vault{
@@ -10900,6 +10933,14 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
+"RP" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
+	dir = 1
+	},
+/area/f13/enclave)
 "RQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
@@ -11541,7 +11582,10 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/obj/structure/closet/crate,
+/turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
+	dir = 1
+	},
 /area/f13/enclave)
 "Up" = (
 /obj/structure/chair/f13foldupchair,
@@ -13248,29 +13292,29 @@ Hy
 Hy
 Hy
 Hy
-Hy
 mJ
+mJ
+Gk
 Hy
 Hy
+Gk
 Hy
 Hy
+Gk
 Hy
-Hy
-Hy
-Hy
-Hy
-wE
-wE
-wE
-wE
-wE
-wE
-wE
-wE
-wE
-wE
-wE
-wE
+Gk
+Za
+Za
+Za
+Za
+Za
+Za
+Za
+Za
+Za
+Za
+Za
+Za
 Hy
 Hy
 Hy
@@ -13410,16 +13454,16 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
+Gk
 Hy
 Hy
 Hy
+Gk
 Hy
-Hy
-Hy
-Hy
+Gk
 Za
 Za
 Vz
@@ -13572,14 +13616,14 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
+Gk
+Gk
+Gk
 Hy
-Hy
-Hy
-Hy
-Hy
+Gk
 Hy
 Hy
 Za
@@ -13734,16 +13778,16 @@ Hy
 Hy
 Hy
 Hy
-Hy
 mJ
+mJ
+Gk
+Hy
+Gk
 Hy
 Hy
 Hy
-Hy
-Hy
-Hy
-Hy
-Hy
+Gk
+Gk
 Za
 Vz
 CZ
@@ -13896,16 +13940,16 @@ Hy
 Hy
 Hy
 Hy
-Hy
 mJ
-Hy
+mJ
+Gk
 Hy
 Hy
 hz
 Hy
 Hy
-Hy
-Hy
+Gk
+Gk
 Za
 Vz
 iR
@@ -14058,15 +14102,15 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
-Hy
+Gk
 Hy
 hz
 cA
 Hy
-Hy
+Gk
 Hy
 Za
 Vz
@@ -14220,7 +14264,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -14228,7 +14272,7 @@ ar
 hz
 cA
 ar
-Hy
+Gk
 Hy
 Za
 Vz
@@ -14382,10 +14426,10 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
-Hy
+Gk
 cA
 hz
 cA
@@ -14544,10 +14588,10 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
-Hy
+Gk
 cA
 hz
 cA
@@ -14706,7 +14750,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 ar
@@ -14868,7 +14912,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 em
@@ -15030,9 +15074,9 @@ Hy
 Hy
 Hy
 Hy
-Hy
 mJ
-Hy
+mJ
+Gk
 eN
 fr
 hz
@@ -15192,9 +15236,9 @@ Hy
 Hy
 Hy
 Hy
-Hy
 mJ
-Hy
+mJ
+Gk
 cA
 cA
 nZ
@@ -15354,7 +15398,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 cA
@@ -15516,7 +15560,7 @@ Pe
 Pe
 Pe
 rI
-Hy
+mJ
 mJ
 Hy
 TJ
@@ -15678,9 +15722,9 @@ Zy
 IN
 zk
 we
-Hy
 mJ
-Hy
+mJ
+Gk
 Hy
 cA
 hz
@@ -15840,7 +15884,7 @@ on
 ea
 OS
 bK
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -16002,15 +16046,15 @@ jX
 ea
 ea
 bK
-Hy
+mJ
 mJ
 Hy
-Hy
+Gk
 ar
 hz
 cA
 ar
-Hy
+Gk
 Za
 Vz
 SU
@@ -16164,16 +16208,16 @@ tH
 rI
 Pe
 rI
-Hy
+mJ
 mJ
 Hy
-Hy
-Hy
+Gk
+Gk
 hz
 Hy
-Hy
-Hy
-wE
+Gk
+Gk
+Za
 Vz
 SU
 SU
@@ -16326,7 +16370,7 @@ ea
 zx
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -16335,7 +16379,7 @@ Hy
 Hy
 Hy
 Hy
-wE
+Za
 Vz
 SU
 SU
@@ -16488,16 +16532,16 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
+Gk
 Hy
 Hy
-Hy
-Hy
+Gk
 Hy
 mJ
-wE
+Za
 Vz
 Vz
 Pt
@@ -16650,16 +16694,16 @@ Hy
 Hy
 Hy
 Hy
-Hy
-mJ
-Hy
-Hy
-Hy
-Hy
-Hy
 mJ
 mJ
-wE
+Gk
+Hy
+Gk
+Gk
+Hy
+mJ
+mJ
+Za
 Vz
 Ep
 oI
@@ -16812,16 +16856,16 @@ Hy
 Hy
 Hy
 Hy
+mJ
+mJ
 Hy
+Gk
+Gk
 mJ
 Hy
 Hy
 Hy
-mJ
-Hy
-Hy
-Hy
-wE
+Za
 Vz
 Gz
 oI
@@ -16974,16 +17018,16 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
 mJ
 mJ
 Hy
-mJ
-mJ
-mJ
-mJ
-Hy
-wE
+Za
 Vz
 GR
 oI
@@ -17136,16 +17180,16 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
 mJ
 mJ
 Gk
-mJ
-mJ
-mJ
-mJ
-Gk
-wE
+Za
 Vz
 Vz
 Pt
@@ -17154,7 +17198,7 @@ Vz
 Vz
 Vz
 Vz
-Mc
+BF
 Vz
 Vz
 Vz
@@ -17300,19 +17344,19 @@ Pe
 Pe
 rI
 mJ
+mJ
 Gk
-Gk
 Hy
 Hy
 Hy
 Hy
 Hy
-wE
+Za
 Za
 Vz
 SU
 Vz
-Zv
+wE
 Zv
 fm
 Uo
@@ -17462,7 +17506,7 @@ sD
 yL
 we
 mJ
-Hy
+mJ
 Hy
 Gk
 Gk
@@ -17474,10 +17518,10 @@ Za
 Vz
 SU
 Vz
-Zv
+OV
 yw
 fm
-Uo
+db
 ZU
 VD
 Vz
@@ -17624,7 +17668,7 @@ ea
 ea
 bK
 mJ
-Hy
+mJ
 Gk
 Hy
 Hy
@@ -17639,7 +17683,7 @@ Vz
 Zv
 Zv
 fm
-Uo
+RP
 ZU
 VD
 Vz
@@ -17786,7 +17830,7 @@ Pq
 qL
 bK
 mJ
-Hy
+mJ
 Hy
 Gk
 Hy
@@ -17804,7 +17848,7 @@ Zv
 ZU
 ZU
 ZU
-qD
+HE
 ZU
 ZU
 ZU
@@ -17963,7 +18007,7 @@ Vz
 cD
 Zv
 fm
-Uo
+jt
 ZU
 VD
 Vz
@@ -18756,7 +18800,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -18918,7 +18962,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -19080,7 +19124,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Gk
@@ -19402,9 +19446,9 @@ Pq
 we
 Hy
 Hy
-Hy
 mJ
-Hy
+mJ
+mJ
 Hy
 Hy
 Gk
@@ -19566,7 +19610,7 @@ Hy
 mJ
 mJ
 mJ
-Hy
+mJ
 Hy
 Gk
 Hy
@@ -19726,8 +19770,8 @@ Hy
 Hy
 Hy
 mJ
-Hy
-Hy
+mJ
+mJ
 Hy
 Hy
 Hy
@@ -19888,7 +19932,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -20050,7 +20094,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -20212,7 +20256,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Gk
 Hy
@@ -20391,7 +20435,7 @@ Hy
 Hy
 Hy
 Hy
-Ym
+cA
 cA
 cA
 Hy
@@ -20536,7 +20580,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -20553,7 +20597,7 @@ Hy
 Hy
 Hy
 Hy
-Ym
+cA
 cA
 cA
 Hy
@@ -20698,7 +20742,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Gk
 Hy
@@ -20860,7 +20904,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Gk
 Hy
 Hy
@@ -21022,7 +21066,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Gk
 Hy
 Gk
@@ -21184,7 +21228,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Gk
 Gk
 Gk
@@ -21346,7 +21390,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Gk
 Hy
@@ -21508,7 +21552,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -21670,7 +21714,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -22480,7 +22524,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -22642,7 +22686,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -22804,7 +22848,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -22966,7 +23010,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Gk
@@ -23128,7 +23172,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Gk
@@ -23290,7 +23334,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -23452,7 +23496,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -23614,7 +23658,7 @@ cA
 Kc
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -23776,7 +23820,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -23938,7 +23982,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -24100,7 +24144,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -24262,7 +24306,7 @@ cA
 CI
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -24424,7 +24468,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -24586,7 +24630,7 @@ cA
 cA
 cA
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -24604,9 +24648,9 @@ Hy
 Hy
 Gk
 Hy
-Hy
-Hy
-Hy
+mJ
+mJ
+mJ
 Hy
 Hy
 Hy
@@ -24763,15 +24807,15 @@ Hy
 Hy
 Hy
 Hy
+mJ
+mJ
+mJ
+mJ
+mJ
 Hy
 Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
+mJ
+mJ
 Hy
 Hy
 Hy
@@ -25073,30 +25117,30 @@ cA
 cA
 Hy
 Hy
-Hy
-Hy
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
 mJ
 mJ
 Hy
 Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
 mJ
 mJ
-Hy
+mJ
+mJ
 Hy
 Gk
 Hy
@@ -25254,11 +25298,11 @@ Hy
 Hy
 Hy
 Hy
-Hy
-Hy
 mJ
 mJ
-Hy
+mJ
+mJ
+mJ
 Hy
 Hy
 Hy
@@ -25420,7 +25464,7 @@ Hy
 Hy
 mJ
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -25580,7 +25624,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -25742,7 +25786,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Gk
@@ -25904,7 +25948,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -26066,8 +26110,8 @@ Hy
 Hy
 Hy
 Hy
-Hy
-Hy
+mJ
+mJ
 Hy
 Gk
 Hy
@@ -26228,8 +26272,8 @@ Hy
 Hy
 Hy
 Hy
-Hy
-Hy
+mJ
+mJ
 Hy
 Hy
 Hy
@@ -26390,7 +26434,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -26552,7 +26596,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -26714,7 +26758,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -26876,7 +26920,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Gk
 Gk
@@ -27038,7 +27082,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Gk
@@ -27200,7 +27244,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -27362,7 +27406,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -27524,7 +27568,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -27686,7 +27730,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Gk
 Gk
@@ -27848,7 +27892,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Gk
@@ -28010,7 +28054,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -28172,7 +28216,7 @@ Hy
 Hy
 Hy
 Hy
-Hy
+mJ
 mJ
 Hy
 Hy
@@ -28334,9 +28378,9 @@ Hy
 Hy
 Hy
 Hy
-Hy
 mJ
-Hy
+mJ
+mJ
 Gk
 Hy
 Hy
@@ -28495,11 +28539,11 @@ Hy
 Hy
 Hy
 Hy
-Hy
-Hy
 mJ
-Hy
-Hy
+mJ
+mJ
+mJ
+mJ
 Hy
 Hy
 Hy
@@ -28657,30 +28701,30 @@ Hy
 Hy
 Hy
 Hy
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
 Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Hy
+Gk
+Gk
 Hy
 mJ
-Gk
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Gk
-Gk
-Hy
-Hy
-Hy
-Hy
+mJ
+mJ
 mJ
 mJ
 "}
@@ -28819,8 +28863,8 @@ Hy
 Hy
 Hy
 Hy
-Hy
-Hy
+mJ
+mJ
 mJ
 mJ
 mJ
@@ -28982,28 +29026,28 @@ Hy
 Hy
 Hy
 Hy
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
 Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
+mJ
+mJ
+mJ
+mJ
+mJ
+mJ
 mJ
 mJ
 mJ
@@ -29155,15 +29199,15 @@ Hy
 Hy
 Hy
 Hy
+mJ
+mJ
+mJ
 Hy
 Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
-Hy
+mJ
+mJ
+mJ
+mJ
 Hy
 Hy
 Hy
