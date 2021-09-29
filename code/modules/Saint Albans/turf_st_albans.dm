@@ -66,12 +66,12 @@
 	name = "ruined housebase"
 	icon = 'icons/fallout/module_rivermap/turfs/turf_decoration.dmi'
 	icon_state = "housebase1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "housebase1")
 			icon_state = "housebase[rand(1,5)]"
-
+*/
 /obj/effect/overlay/turfs/decoration/fakecatwalk
 	name = "catwalk"
 	icon_state = "catwalk"
