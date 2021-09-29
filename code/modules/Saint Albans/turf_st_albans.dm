@@ -11,6 +11,15 @@
 /turf/open/indestructible/ground/outside/road/crossing/alttwo
 	icon_state = "cross3"
 
+/turf/open/indestructible/ground/outside/road/crossing/vertical
+	icon_state = "crosswalkvert1"
+
+/turf/open/indestructible/ground/outside/road/crossing/verticaltwo
+	icon_state = "crosswalkvert2"
+
+/turf/open/indestructible/ground/outside/road/crossing/verticalthree
+	icon_state = "crosswalkvert3"
+
 //dark road thats dirtmerged
 /turf/open/indestructible/ground/outside/roaddirt
 	name = "road"
@@ -57,12 +66,12 @@
 	name = "ruined housebase"
 	icon = 'icons/fallout/module_rivermap/turfs/turf_decoration.dmi'
 	icon_state = "housebase1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "housebase1")
 			icon_state = "housebase[rand(1,5)]"
-
+*/
 /obj/effect/overlay/turfs/decoration/fakecatwalk
 	name = "catwalk"
 	icon_state = "catwalk"
@@ -114,20 +123,20 @@
 	icon = 'icons/fallout/module_rivermap/turfs/floor_wood.dmi'
 	icon_state = "darkoak1"
 	baseturfs = /turf/open/indestructible/woodenbase
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "darkoak1")
 			icon_state = "darkoak[rand(1,4)]"
-
+*/
 /turf/open/floor/wooden/broken
 	icon_state = "darkoakbroken1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "darkoakbroken1")
 			icon_state = "darkoakbroken[rand(1,4)]"
-
+*/
 /turf/open/floor/wooden/outdoors
 	sunlight_state = SUNLIGHT_SOURCE
 
@@ -137,20 +146,20 @@
 // Oak
 /turf/open/floor/wooden/oak
 	icon_state = "oak1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "oak1")
 			icon_state = "oak[rand(1,4)]"
-
+*/
 /turf/open/floor/wooden/oak/broken
 	icon_state = "oakbroken1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "oakbroken1")
 			icon_state = "oakbroken[rand(1,4)]"
-
+*/
 /turf/open/floor/wooden/oak/outdoors
 	sunlight_state = SUNLIGHT_SOURCE
 
@@ -160,31 +169,31 @@
 // Maple
 /turf/open/floor/wooden/maple
 	icon_state = "maple1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "maple1")
 			icon_state = "maple[rand(1,4)]"
-
+*/
 
 
 // Chestnut
 /turf/open/floor/wooden/chestnut
 	icon_state = "chestnut1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "chestnut1")
 			icon_state = "chestnut[rand(1,4)]"
-
+*/
 /turf/open/floor/wooden/chestnut/broken
 	icon_state = "chestnutbroken1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "chestnutbroken1")
 			icon_state = "chestnutbroken[rand(1,4)]"
-
+*/
 /turf/open/floor/wooden/chestnut/outdoors
 	sunlight_state = SUNLIGHT_SOURCE
 
@@ -247,31 +256,32 @@
 
 /turf/open/floor/wooden/laminate/broken
 	icon_state = "laminateAbroken1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "laminateAbroken1")
 			icon_state = "laminateAbroken[rand(1,3)]"
-
+*/
 /turf/open/floor/wooden/laminatebig
 	icon_state = "laminateB"
 
 /turf/open/floor/wooden/laminatebig/broken
 	icon_state = "laminateBbroken1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "laminateBbroken1")
 			icon_state = "laminateBbroken[rand(1,3)]"
-
+*/
 
 /turf/open/floor/wooden/laminatediagonal
 	icon_state = "laminateC"
 
 /turf/open/floor/wooden/laminatediagonal/broken
 	icon_state = "laminateCbroken1"
-
+/*
 	Initialize()
 		..()
 		if(icon_state == "laminateCbroken1")
 			icon_state = "laminateCbroken[rand(1,3)]"
+*/
