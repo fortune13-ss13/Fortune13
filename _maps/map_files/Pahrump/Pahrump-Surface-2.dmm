@@ -33,7 +33,7 @@
 	color = "#845f58"
 	},
 /obj/structure/decoration/rag,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "abZ" = (
 /obj/structure/simple_door/metal/store{
@@ -129,7 +129,9 @@
 	dir = 2;
 	icon_state = "ruinswindowdestroyed"
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken5"
+	},
 /area/indoors)
 "afK" = (
 /obj/structure/flora/grass/wasteland{
@@ -151,12 +153,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/indoors/animals)
-"agb" = (
-/obj/structure/chair/booth{
-	dir = 4
-	},
-/turf/open/floor/wood/f13/oak,
-/area/indoors/ruins)
 "agd" = (
 /obj/structure/car/rubbish3{
 	pixel_x = -5
@@ -395,7 +391,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "arg" = (
 /obj/structure/bed/old,
@@ -412,7 +408,7 @@
 "arW" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/raiderloot,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "asp" = (
 /obj/effect/decal/cleanable/blood/old{
@@ -622,9 +618,7 @@
 	dir = 1;
 	pixel_x = -16
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "aDg" = (
 /obj/structure/wreck/car/bike{
@@ -1063,7 +1057,7 @@
 /obj/structure/chair/stool/retro/backed{
 	dir = 8
 	},
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "aWu" = (
 /obj/structure/railing/wood,
@@ -1206,6 +1200,12 @@
 "bey" = (
 /turf/open/floor/wood/f13/oakbroken3,
 /area/indoors/raiders)
+"beD" = (
+/obj/structure/chair/wood{
+	dir = 4
+	},
+/turf/open/floor/wooden,
+/area/indoors)
 "beM" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowbottom"
@@ -1344,7 +1344,7 @@
 /area/indoors)
 "bkU" = (
 /mob/living/simple_animal/hostile/raider/skull,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "bkY" = (
 /obj/structure/toilet{
@@ -1431,12 +1431,6 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/outdoors)
-"bou" = (
-/obj/structure/simple_door/house,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
-/area/indoors/bandits)
 "boy" = (
 /turf/open/indestructible/ground/outside/graveldirt{
 	dir = 5;
@@ -1452,6 +1446,11 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/indoors)
+"bpD" = (
+/turf/open/floor/wooden/oak{
+	icon_state = "oak3"
+	},
+/area/indoors/farmhouse)
 "bpQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1484,7 +1483,7 @@
 "bsd" = (
 /mob/living/simple_animal/hostile/radroach/east,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "bsE" = (
 /obj/structure/bonfire,
@@ -1495,7 +1494,7 @@
 /obj/machinery/smartfridge/bottlerack/lootshelf/construction{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "btK" = (
 /obj/structure/bed/dogbed{
@@ -1560,6 +1559,12 @@
 	icon_state = "floorrusty"
 	},
 /area/indoors/animals)
+"bwL" = (
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/open/floor/wooden/oak,
+/area/indoors/ruins)
 "bxq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table{
@@ -1778,7 +1783,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "gibmid1"
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "bEQ" = (
 /mob/living/simple_animal/hostile/aradnid,
@@ -1936,6 +1941,10 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/outdoors)
+"bOh" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wooden,
+/area/indoors)
 "bOH" = (
 /obj/structure/noticeboard,
 /turf/closed/wall/f13/supermart,
@@ -2198,7 +2207,7 @@
 /area/outdoors)
 "cdf" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "cea" = (
 /obj/structure/bed/old,
@@ -2212,10 +2221,6 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/outdoors)
-"ceF" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/wood/f13/oak,
-/area/indoors/ruins)
 "ceN" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/wood/f13/carpet,
@@ -2339,9 +2344,7 @@
 /obj/structure/chair/f13chair2{
 	dir = 1
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "cms" = (
 /obj/machinery/light/broken{
@@ -2373,7 +2376,7 @@
 /area/indoors/bunker)
 "cmV" = (
 /obj/structure/window/fulltile/house,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "cmX" = (
 /obj/effect/decal/cleanable/blood/old{
@@ -2448,6 +2451,11 @@
 /obj/structure/wreck/trash/four_barrels,
 /turf/open/floor/mineral/uranium/dusty,
 /area/indoors/radiation)
+"crA" = (
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken4"
+	},
+/area/indoors/bandits)
 "crG" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/indoors/bandits)
@@ -2696,9 +2704,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "cFD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2834,6 +2840,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/indoors/bunker)
+"cNl" = (
+/obj/structure/simple_door/fakeglass,
+/turf/open/floor/wooden/laminate,
+/area/indoors/bandits)
 "cNu" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/handy/protectron,
@@ -3017,10 +3027,15 @@
 	},
 /area/outdoors)
 "cYe" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood6-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken7"
 	},
 /area/indoors)
+"cYo" = (
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken2"
+	},
+/area/indoors/ruins)
 "cYw" = (
 /obj/structure/barricade/tentclothedge{
 	dir = 8;
@@ -3171,9 +3186,7 @@
 "ddK" = (
 /obj/structure/table/wood/bar,
 /obj/item/paper/crumpled,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "ddS" = (
 /obj/structure/railing/wood{
@@ -3251,7 +3264,9 @@
 /obj/machinery/light/broken{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken3"
+	},
 /area/indoors/ruins)
 "dhQ" = (
 /turf/open/floor/plating/rust,
@@ -3267,11 +3282,6 @@
 /obj/structure/chair/sofa/corner,
 /turf/open/floor/wood/f13,
 /area/indoors/mercenaries)
-"diT" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood4-broken"
-	},
-/area/indoors)
 "diY" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/inside/mountain,
@@ -3526,9 +3536,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "duS" = (
 /obj/item/blanket,
@@ -3609,7 +3617,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "dAO" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3788,9 +3796,7 @@
 /obj/item/book/granter/trait/techno{
 	pixel_x = 7
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "dIo" = (
 /turf/open/indestructible/ground/outside/savannah/edgesnew{
@@ -3846,10 +3852,12 @@
 	},
 /area/indoors/animals)
 "dLI" = (
-/obj/machinery/light{
+/obj/machinery/light/broken{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oakbroken4,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken7"
+	},
 /area/indoors)
 "dLT" = (
 /obj/effect/decal/waste{
@@ -3942,7 +3950,9 @@
 "dOG" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken5"
+	},
 /area/indoors)
 "dOL" = (
 /obj/structure/signs/national,
@@ -4001,6 +4011,11 @@
 	},
 /turf/closed/wall/rust,
 /area/indoors/raiders)
+"dRu" = (
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
+/area/indoors/bandits)
 "dRL" = (
 /turf/open/floor/wood/f13/oak/outdoors,
 /area/indoors/raiders)
@@ -4016,6 +4031,11 @@
 	},
 /turf/open/floor/wood/f13/stage_r/outdoors,
 /area/outdoors)
+"dSQ" = (
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken4"
+	},
+/area/indoors/ruins)
 "dSR" = (
 /obj/structure/barricade/sandbags,
 /obj/machinery/light/small{
@@ -4031,8 +4051,8 @@
 /turf/open/floor/wood/f13/oak,
 /area/indoors/raiders)
 "dTx" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2"
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
 	},
 /area/indoors)
 "dTJ" = (
@@ -4051,7 +4071,7 @@
 /obj/structure/table/wood,
 /obj/item/paper,
 /obj/item/pen,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/floor/wooden,
 /area/indoors)
 "dVm" = (
 /obj/structure/table/booth,
@@ -4095,9 +4115,7 @@
 /obj/structure/junk/small/table,
 /obj/item/stack/sheet/mineral/wood,
 /obj/item/trash/f13/rotten,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "dXM" = (
 /obj/structure/bedsheetbin/towel,
@@ -4256,11 +4274,12 @@
 /turf/open/floor/wood/f13/stage_l/outdoors,
 /area/outdoors)
 "edv" = (
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
+/obj/machinery/light/broken{
+	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "eek" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4361,7 +4380,9 @@
 /area/outdoors)
 "eic" = (
 /mob/living/simple_animal/hostile/ghoulrotter,
-/turf/open/floor/wood/f13/oakbroken,
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken3"
+	},
 /area/indoors/ruins)
 "eim" = (
 /obj/structure/closet,
@@ -4456,9 +4477,7 @@
 /obj/item/cigbutt{
 	pixel_y = 14
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "els" = (
 /mob/living/simple_animal/hostile/securitron,
@@ -4512,6 +4531,10 @@
 	icon_state = "horizontaltopbordertop0"
 	},
 /area/indoors/caves)
+"eoQ" = (
+/obj/effect/overlay/turfs/decoration,
+/turf/open/floor/wooden,
+/area/indoors)
 "eoW" = (
 /obj/structure/chair/stool{
 	icon_state = "bench"
@@ -4526,7 +4549,7 @@
 /area/indoors/town/bar)
 "epF" = (
 /obj/structure/table/booth,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "epN" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -4762,17 +4785,14 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/glass,
-/turf/open/floor/wood/wood_diagonal{
-	icon_state = "diagonal_wood-broken3";
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "eFP" = (
 /obj/structure/window/fulltile/wood,
 /obj/structure/curtain{
 	color = "#845f58"
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "eGG" = (
 /obj/structure/window/fulltile/store{
@@ -4824,8 +4844,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/indoors/raiders)
 "eHU" = (
-/obj/machinery/bookbinder,
-/turf/open/floor/wood/f13/oak,
+/obj/structure/junk/machinery,
+/turf/open/floor/wooden,
 /area/indoors)
 "eIu" = (
 /obj/effect/turf_decal/stripes/line{
@@ -4846,7 +4866,7 @@
 "eIF" = (
 /obj/structure/table/wood,
 /obj/item/newspaper,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "eIT" = (
 /obj/structure/fence,
@@ -4892,7 +4912,7 @@
 	dir = 1;
 	termtag = "Business"
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "eLb" = (
 /obj/structure/chair/stool,
@@ -5012,7 +5032,9 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oakbroken3,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken2"
+	},
 /area/indoors)
 "ePC" = (
 /obj/structure/chair/sofa/corner{
@@ -5063,13 +5085,13 @@
 	},
 /obj/structure/filingcabinet,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "eRY" = (
 /obj/structure/chair/office,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/radroach/east,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "eSA" = (
 /obj/structure/chair/f13chair2{
@@ -5227,7 +5249,7 @@
 "eZo" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "fax" = (
 /turf/open/floor/f13{
@@ -5264,7 +5286,7 @@
 "fca" = (
 /obj/structure/closet/fridge,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "fcc" = (
 /obj/machinery/door/poddoor/gate/preopen,
@@ -5307,7 +5329,9 @@
 	},
 /area/outdoors)
 "fel" = (
-/turf/open/floor/wood/f13/oakbroken4,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken2"
+	},
 /area/indoors/bandits)
 "fex" = (
 /obj/structure/table/optable,
@@ -5324,7 +5348,9 @@
 /area/indoors/bunker)
 "ffy" = (
 /obj/structure/chair/office,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "ffP" = (
 /obj/effect/landmark/start/f13/raider/streetdoc,
@@ -5366,7 +5392,7 @@
 /obj/machinery/light/broken{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "fhh" = (
 /obj/structure/junk/small/tv,
@@ -5378,11 +5404,12 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
+/obj/machinery/light/broken{
+	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
+	},
 /area/indoors)
 "fhK" = (
 /obj/structure/table/wood/bar,
@@ -5438,7 +5465,9 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak4"
+	},
 /area/indoors)
 "fjd" = (
 /obj/machinery/workbench,
@@ -5674,7 +5703,7 @@
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/toy/cards/deck,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "fsK" = (
 /obj/structure/fence{
@@ -5788,7 +5817,7 @@
 /obj/machinery/smartfridge/bottlerack/lootshelf/construction{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "fwT" = (
 /turf/open/floor/wood/f13{
@@ -5949,7 +5978,9 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "fCS" = (
 /obj/structure/barricade/tentclothedge{
@@ -6023,6 +6054,11 @@
 	icon_state = "floorrusty"
 	},
 /area/indoors/animals)
+"fGV" = (
+/turf/open/floor/wooden{
+	icon_state = "darkoak4"
+	},
+/area/indoors)
 "fGY" = (
 /obj/structure/destructible/tribal_torch/lanternpost/cathouse{
 	pixel_x = 11;
@@ -6212,9 +6248,7 @@
 /area/outdoors)
 "fSr" = (
 /obj/structure/simple_door/fakeglass,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "fSO" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -6276,7 +6310,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor1-old"
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "fVN" = (
 /obj/structure/wreck/trash/five_tires,
@@ -6404,12 +6438,6 @@
 	icon_state = "horizontaltopbordertop0"
 	},
 /area/indoors/caves)
-"gaG" = (
-/obj/structure/chair/booth{
-	dir = 8
-	},
-/turf/open/floor/wood/f13/oak,
-/area/indoors/ruins)
 "gaZ" = (
 /obj/effect/decal/cleanable/glass,
 /obj/effect/spawner/lootdrop/waste_loot_poor,
@@ -6417,7 +6445,9 @@
 /turf/open/floor/plasteel/darkpurple,
 /area/indoors/animals)
 "gbc" = (
-/turf/open/floor/wood/f13/oakbroken4,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak3"
+	},
 /area/indoors/ruins)
 "gbs" = (
 /turf/open/floor/plating/f13/outside/road{
@@ -6435,7 +6465,7 @@
 /obj/structure/decoration/rag{
 	pixel_x = -14
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "gbF" = (
 /obj/structure/fluff/fokoff_sign,
@@ -6495,7 +6525,7 @@
 /area/outdoors)
 "gdj" = (
 /obj/structure/barricade/sandbags,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "gds" = (
 /obj/structure/fence{
@@ -6561,8 +6591,8 @@
 /area/indoors)
 "ghq" = (
 /obj/structure/closet/fridge,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood5-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken5"
 	},
 /area/indoors)
 "ghz" = (
@@ -6589,7 +6619,7 @@
 /area/indoors/radiation)
 "gjF" = (
 /obj/structure/simple_door/metal/store,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "gjP" = (
 /obj/structure/fence/corner{
@@ -6751,6 +6781,12 @@
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
+"gwb" = (
+/obj/structure/junk/micro,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
+/area/indoors)
 "gwc" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -6783,6 +6819,12 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
+"gyL" = (
+/obj/structure/chair/f13chair2{
+	dir = 1
+	},
+/turf/open/floor/wooden/laminatediagonal,
+/area/indoors/bandits)
 "gyU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/securityloot,
@@ -6839,8 +6881,8 @@
 /obj/effect/decal/cleanable/glass{
 	pixel_x = 12
 	},
-/turf/open/floor/wood/f13{
-	icon_state = "housewood7-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken6"
 	},
 /area/indoors)
 "gAy" = (
@@ -6858,6 +6900,16 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/outdoors)
+"gAP" = (
+/obj/structure/table/wood,
+/obj/machinery/computer/terminal{
+	dir = 1;
+	termtag = "Business"
+	},
+/turf/open/floor/wooden{
+	icon_state = "darkoak4"
+	},
+/area/indoors)
 "gAT" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal{
@@ -6938,9 +6990,7 @@
 "gFz" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/paper/crumpled,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "gGo" = (
 /obj/structure/signs{
@@ -6960,7 +7010,7 @@
 	pixel_x = 12
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "gGT" = (
 /turf/open/floor/plating/f13/outside/road{
@@ -7021,11 +7071,7 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/outdoors)
 "gJI" = (
-/turf/open/floor/wood/f13/oakbroken3,
-/area/indoors/bandits)
-"gJR" = (
-/obj/structure/simple_door/house,
-/turf/open/floor/wood/wood_diagonal,
+/turf/open/floor/wooden/broken,
 /area/indoors/bandits)
 "gKn" = (
 /turf/open/floor/plasteel/darkbrown,
@@ -7050,9 +7096,7 @@
 /area/outdoors)
 "gNv" = (
 /obj/item/chair,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "gNJ" = (
 /obj/structure/window/fulltile/house{
@@ -7203,7 +7247,9 @@
 /area/outdoors)
 "gSi" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
 /area/indoors/ruins)
 "gSj" = (
 /obj/effect/turf_decal/stripes/line{
@@ -7243,6 +7289,9 @@
 /obj/structure/curtain,
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2/dirty,
 /area/indoors/bunker)
+"gUb" = (
+/turf/open/floor/wooden/oak,
+/area/indoors/ruins)
 "gUe" = (
 /obj/structure/railing/wood{
 	dir = 4;
@@ -7311,7 +7360,7 @@
 /turf/open/floor/wood/f13/maple,
 /area/indoors/town)
 "gWo" = (
-/turf/open/floor/wood/f13/oakbroken3,
+/turf/open/floor/wooden/oak/broken,
 /area/indoors/ruins)
 "gWG" = (
 /obj/structure/table/optable,
@@ -7332,7 +7381,7 @@
 /obj/structure/chair/pew/left{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "gWP" = (
 /obj/machinery/light/small/orange{
@@ -7379,11 +7428,12 @@
 /area/f13/forest/animals)
 "gYf" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small{
-	dir = 8;
-	pixel_y = 14
+/obj/machinery/light/broken{
+	dir = 8
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "gYV" = (
 /obj/structure/simple_door/metal/store,
@@ -7628,9 +7678,7 @@
 /obj/machinery/light{
 	pixel_x = -16
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "hjO" = (
 /turf/open/floor/wood/f13/stage_b,
@@ -7711,6 +7759,12 @@
 	icon_state = "damaged"
 	},
 /area/indoors/animals)
+"hlv" = (
+/obj/item/chair/stool/bar,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken4"
+	},
+/area/indoors)
 "hlF" = (
 /obj/structure/fence{
 	dir = 4
@@ -7768,9 +7822,7 @@
 	pixel_y = 8
 	},
 /obj/structure/junk/small/bed,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "hnQ" = (
 /obj/structure/window/fulltile/store{
@@ -7904,9 +7956,7 @@
 /area/outdoors)
 "hvV" = (
 /obj/effect/decal/remains/human,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "hwh" = (
 /obj/structure/closet,
@@ -8105,7 +8155,7 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "hEU" = (
 /obj/structure/table/wood,
@@ -8172,7 +8222,7 @@
 /obj/structure/rack{
 	pixel_y = 7
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "hIP" = (
 /obj/structure/window/fulltile/house{
@@ -8333,7 +8383,9 @@
 /obj/item/stack/sheet/cloth/ten,
 /obj/item/stack/sheet/metal/ten,
 /obj/item/stack/sheet/mineral/wood/twenty,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
 /area/indoors/farmhouse)
 "hQQ" = (
 /obj/effect/decal/waste{
@@ -8398,9 +8450,7 @@
 "hVc" = (
 /obj/structure/closet,
 /obj/item/reagent_containers/food/snacks/f13/sugarbombs,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "hVy" = (
 /obj/structure/table/wood,
@@ -8409,7 +8459,7 @@
 	pixel_x = -5;
 	pixel_y = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "hVI" = (
 /obj/structure/chair/stool/f13stool{
@@ -8480,6 +8530,12 @@
 /obj/effect/spawner/lootdrop/f13/attachments,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/indoors/town)
+"hYZ" = (
+/obj/structure/junk/small/table,
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
+	},
+/area/indoors)
 "hZt" = (
 /obj/item/newspaper,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -8500,12 +8556,6 @@
 /obj/structure/flora/grass/wasteland,
 /turf/open/indestructible/ground/outside/savannah/topcenter,
 /area/outdoors)
-"ibe" = (
-/obj/structure/chair/pew/right{
-	dir = 4
-	},
-/turf/open/floor/wood/f13/oak,
-/area/indoors/town/chapel)
 "ibR" = (
 /turf/open/floor/wood/f13/stage_b,
 /area/indoors/raiders)
@@ -8617,13 +8667,17 @@
 /obj/structure/flora/grass/wasteland,
 /turf/open/indestructible/ground/outside/dirt,
 /area/outdoors)
+"ihT" = (
+/obj/effect/overlay/turfs/decoration,
+/turf/open/indestructible/ground/inside/mountain,
+/area/indoors)
 "iiP" = (
 /obj/item/kirbyplants/dead{
 	desc = "A mummified potted plant.";
 	name = "very dead potted plant"
 	},
 /mob/living/simple_animal/cockroach,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "iiY" = (
 /obj/item/kirbyplants,
@@ -8675,15 +8729,13 @@
 	pixel_y = 6
 	},
 /mob/living/simple_animal/hostile/raider/skull/ranged,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "imi" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_east_north"
 	},
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "imI" = (
 /obj/structure/table,
@@ -8722,8 +8774,8 @@
 "inS" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/junk/small/bed2,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken3"
 	},
 /area/indoors)
 "ioe" = (
@@ -8772,7 +8824,7 @@
 /area/indoors/animals)
 "ipp" = (
 /obj/structure/junk/jukebox,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "ipt" = (
 /obj/effect/turf_decal/stripes/line,
@@ -8789,16 +8841,11 @@
 "ipD" = (
 /mob/living/simple_animal/hostile/raider/skull/ranged,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "ipG" = (
 /obj/structure/rack,
-/turf/open/floor/wood/f13/oak,
-/area/indoors)
-"iqi" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2-broken"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "isK" = (
 /obj/structure/closet/fridge,
@@ -8807,9 +8854,7 @@
 	pixel_x = -16;
 	pixel_y = 8
 	},
-/turf/open/floor/wood/f13{
-	icon_state = "housewood5-broken"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "itd" = (
 /obj/structure/railing{
@@ -8878,7 +8923,9 @@
 /obj/item/chair/wood{
 	pixel_y = -3
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak3"
+	},
 /area/indoors/farmhouse)
 "iws" = (
 /obj/structure/simple_door/interior,
@@ -8913,7 +8960,7 @@
 "iyM" = (
 /obj/structure/bed/wooden,
 /obj/item/blanket/blanketalt,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "iyN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9089,7 +9136,7 @@
 /obj/structure/decoration/rag{
 	pixel_x = -14
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "iHf" = (
 /obj/effect/decal/fakelattice,
@@ -9113,6 +9160,9 @@
 	icon_state = "sepia"
 	},
 /area/indoors/town/clinic)
+"iJL" = (
+/turf/open/floor/wooden/broken,
+/area/indoors)
 "iKL" = (
 /turf/open/indestructible/ground/outside/savannah/rightcenter,
 /area/outdoors)
@@ -9162,9 +9212,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/chair,
 /obj/item/pen,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "iNY" = (
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -9259,9 +9307,7 @@
 	dir = 2;
 	icon_state = "ruinswindow"
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "iUA" = (
 /obj/structure/simple_door/dirtyglass,
@@ -9383,9 +9429,7 @@
 	pixel_x = 7;
 	pixel_y = 6
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "jcU" = (
 /turf/open/indestructible/ground/outside/graveldirt/path{
@@ -9486,10 +9530,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/indoors/bandits)
-"jim" = (
-/obj/structure/junk/small/tv,
-/turf/open/floor/wood/f13/oak,
-/area/indoors)
 "jiC" = (
 /obj/structure/campfire/barrel,
 /turf/open/floor/plating/f13/outside/road{
@@ -9592,7 +9632,9 @@
 "joC" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
+	},
 /area/indoors)
 "jpF" = (
 /obj/structure/guncase,
@@ -10051,6 +10093,10 @@
 	icon_state = "horizontaltopbordertop0"
 	},
 /area/outdoors)
+"jJn" = (
+/obj/structure/junk/micro,
+/turf/open/floor/wooden,
+/area/indoors)
 "jJy" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/freezer{
@@ -10123,18 +10169,13 @@
 	icon_state = "booth_east_south"
 	},
 /obj/machinery/light/broken,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "jLQ" = (
 /obj/structure/table/wood/settler,
 /obj/item/instrument/guitar,
 /turf/open/floor/wood/f13/stage_t,
 /area/indoors/town/bar)
-"jLW" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3-broken"
-	},
-/area/indoors)
 "jMm" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/f13{
@@ -10151,6 +10192,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/indoors/raiders)
+"jMJ" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/wooden,
+/area/indoors)
 "jMS" = (
 /obj/effect/decal/waste,
 /turf/open/floor/plasteel/f13/vault_floor/green/side/dirty{
@@ -10462,14 +10509,16 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "kgi" = (
 /obj/structure/chair/wood{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak4"
+	},
 /area/indoors)
 "kgn" = (
 /obj/structure/sink/cistern,
@@ -10488,6 +10537,9 @@
 	},
 /turf/open/floor/wood/f13,
 /area/indoors/mercenaries)
+"kgO" = (
+/turf/open/floor/wooden,
+/area/indoors)
 "khc" = (
 /obj/structure/fence,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -10572,11 +10624,15 @@
 "knf" = (
 /obj/structure/table/wood,
 /obj/item/paper/crumpled/bloody,
-/turf/open/floor/wood/f13/oakbroken3,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors/bandits)
 "koi" = (
 /obj/structure/table,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
 /area/indoors/ruins)
 "kpg" = (
 /obj/effect/decal/remains/human,
@@ -10665,7 +10721,7 @@
 /obj/structure/chair/stool/retro/backed{
 	dir = 8
 	},
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "kus" = (
 /obj/structure/table/single/round,
@@ -10699,7 +10755,7 @@
 	pixel_x = 6;
 	pixel_y = 2
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "kwD" = (
 /obj/structure/wreck/trash/three_barrels,
@@ -10935,7 +10991,7 @@
 /area/indoors/bunker)
 "kHa" = (
 /obj/structure/campfire/stove,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "kHk" = (
 /obj/structure/rack/steel{
@@ -11017,7 +11073,7 @@
 "kJM" = (
 /obj/structure/table/wood,
 /obj/item/stack/sheet/plasteel/five,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "kKc" = (
 /obj/structure/toilet,
@@ -11111,7 +11167,7 @@
 /area/indoors/mercenaries)
 "kOs" = (
 /obj/structure/dresser,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "kOF" = (
 /obj/structure/chair/stool/f13stool{
@@ -11340,6 +11396,12 @@
 	icon_state = "horizontaloutermain2"
 	},
 /area/outdoors)
+"kYf" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
+	},
+/area/indoors)
 "kYl" = (
 /obj/structure/chair/bench,
 /obj/machinery/light/broken,
@@ -11445,8 +11507,8 @@
 /turf/open/floor/wood/wood_diagonal,
 /area/indoors)
 "ldY" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood1-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken3"
 	},
 /area/indoors)
 "leb" = (
@@ -11591,7 +11653,7 @@
 /obj/structure/chair/booth{
 	icon_state = "booth_west_south"
 	},
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "ljW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11634,7 +11696,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oakbroken4,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors/bandits)
 "lma" = (
 /obj/structure/mirror{
@@ -11663,10 +11727,6 @@
 	icon_state = "torncarpet9"
 	},
 /area/indoors/ruins)
-"lnu" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13,
-/area/indoors)
 "lnA" = (
 /obj/machinery/door/unpowered/padlockwooddoor/alderman/interior{
 	name = "restroom";
@@ -11715,7 +11775,7 @@
 /area/indoors/bandits)
 "lqa" = (
 /obj/structure/closet/fridge,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "lqq" = (
 /obj/structure/rack/steel{
@@ -11780,7 +11840,7 @@
 /area/indoors/ruins)
 "lso" = (
 /obj/structure/simple_door/wood,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "lsx" = (
 /obj/structure/campfire/barrel,
@@ -12103,7 +12163,7 @@
 /area/indoors/raiders)
 "lGT" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "lHb" = (
 /obj/structure/window/fulltile/house{
@@ -12208,6 +12268,15 @@
 /obj/structure/junk/cabinet,
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/ruins)
+"lMQ" = (
+/obj/structure/window/fulltile/house{
+	dir = 2;
+	icon_state = "ruinswindow"
+	},
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
+	},
+/area/indoors)
 "lMV" = (
 /obj/structure/nest/mirelurk,
 /turf/open/indestructible/ground/outside/savannah/cornersnew{
@@ -12242,19 +12311,26 @@
 /obj/effect/decal/cleanable/glass{
 	pixel_x = 12
 	},
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken3"
 	},
 /area/indoors)
 "lOZ" = (
 /obj/machinery/light,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "lPM" = (
 /turf/open/floor/wood/f13/carpet{
 	icon_state = "torncarpet12"
 	},
 /area/indoors/animals)
+"lQb" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/junk/small/bed2,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken4"
+	},
+/area/indoors)
 "lQk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet{
@@ -12309,16 +12385,6 @@
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/ruins)
-"lTL" = (
-/turf/open/floor/wood/f13/oak,
-/area/indoors/town/chapel)
-"lUc" = (
-/obj/structure/simple_door/house,
-/turf/open/floor/wood/wood_diagonal{
-	icon_state = "diagonal_wood-broken3";
-	name = "wood flooring"
-	},
-/area/indoors/bandits)
 "lUk" = (
 /obj/machinery/door/unpowered/woodenfencedoor{
 	req_one_access_txt = "25"
@@ -12333,9 +12399,7 @@
 	},
 /obj/item/melee/baton/cattleprod,
 /obj/item/storage/crayons,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "lVa" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -12389,7 +12453,7 @@
 /turf/open/floor/plasteel/darkbrown/corner,
 /area/indoors)
 "lWQ" = (
-/obj/machinery/light{
+/obj/machinery/light/broken{
 	dir = 8
 	},
 /turf/open/floor/f13{
@@ -12413,12 +12477,12 @@
 /obj/structure/barricade/wooden/planks{
 	icon_state = "board-2"
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "lYp" = (
 /obj/structure/junk/micro,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2"
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
 	},
 /area/indoors)
 "lYw" = (
@@ -12446,9 +12510,7 @@
 /area/indoors/animals)
 "mai" = (
 /mob/living/simple_animal/hostile/raider/skull,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "maC" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -12483,9 +12545,7 @@
 /area/outdoors)
 "mdv" = (
 /obj/machinery/light/small/broken,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3-broken"
-	},
+/turf/open/floor/wooden/broken,
 /area/indoors)
 "mdD" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -12528,9 +12588,6 @@
 /obj/structure/closet/crate/miningcar,
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/caves)
-"mfk" = (
-/turf/open/floor/wood/f13/oakbroken3,
-/area/indoors/town/chapel)
 "mfl" = (
 /obj/structure/closet/fridge/cannibal,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -12641,8 +12698,9 @@
 /turf/open/floor/wood/f13/oak,
 /area/indoors)
 "mks" = (
-/obj/structure/chair/office/dark,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken2"
+	},
 /area/indoors)
 "mmn" = (
 /obj/structure/railing{
@@ -12676,14 +12734,12 @@
 /area/indoors/ruins)
 "mnn" = (
 /obj/structure/rack,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "mnO" = (
 /obj/structure/closet,
 /obj/item/melee/onehanded/knife/switchblade,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "moU" = (
 /obj/structure/chair/sofa/corp/corner{
@@ -12868,7 +12924,7 @@
 /area/indoors/arcade)
 "mwF" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "mxB" = (
 /obj/structure/reagent_dispensers/barrel/explosive{
@@ -12915,13 +12971,6 @@
 /obj/structure/simple_door/metal/fence,
 /turf/open/floor/wood/f13/maple,
 /area/indoors/town)
-"mAd" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/junk/locker,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
-	},
-/area/indoors)
 "mAR" = (
 /obj/structure/table/wood/settler,
 /obj/machinery/chem_dispenser/drinks,
@@ -13049,9 +13098,7 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "mLp" = (
 /turf/open/floor/wood/f13/carpet{
@@ -13075,11 +13122,7 @@
 /area/indoors/radiation)
 "mNB" = (
 /obj/structure/table/wood,
-/obj/machinery/computer/terminal{
-	dir = 1;
-	termtag = "Business"
-	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "mND" = (
 /turf/open/floor/f13{
@@ -13201,7 +13244,9 @@
 /obj/structure/chair/booth{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oakbroken,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak3"
+	},
 /area/indoors/ruins)
 "nas" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
@@ -13218,13 +13263,10 @@
 	dir = 4
 	},
 /area/indoors/animals)
-"naE" = (
-/turf/open/floor/wood/f13/oak,
-/area/indoors/ruins)
 "naM" = (
 /obj/structure/barricade/sandbags,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "nbf" = (
 /obj/structure/window/fulltile/house,
@@ -13238,7 +13280,9 @@
 /obj/structure/filingcabinet{
 	pixel_x = 11
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "nbR" = (
 /obj/machinery/deepfryer,
@@ -13453,9 +13497,7 @@
 /obj/machinery/light/broken{
 	dir = 4
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "noc" = (
 /obj/effect/overlay/turfs/cliff/alt{
@@ -13533,9 +13575,7 @@
 /area/outdoors)
 "nql" = (
 /obj/structure/junk/small/tv,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "nqI" = (
 /obj/structure/junk/small/toilet{
@@ -13553,7 +13593,9 @@
 "nqR" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/radroach/east,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
+	},
 /area/indoors)
 "nrs" = (
 /obj/machinery/light,
@@ -13596,7 +13638,7 @@
 "nuZ" = (
 /obj/structure/simple_door/wood,
 /obj/structure/barricade/wooden/planks,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "nvJ" = (
 /obj/structure/table,
@@ -13702,7 +13744,7 @@
 	},
 /obj/structure/decoration/rag,
 /obj/structure/barricade/wooden/planks,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "nAE" = (
 /obj/structure/junk/cabinet,
@@ -13726,7 +13768,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	pixel_x = 12
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "nCh" = (
 /obj/structure/car/rubbish3{
@@ -13775,7 +13817,9 @@
 	pixel_y = 8
 	},
 /mob/living/simple_animal/hostile/retaliate/poison/snake,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
 /area/indoors/farmhouse)
 "nEA" = (
 /obj/effect/decal/remains/human,
@@ -13879,9 +13923,7 @@
 "nJB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/chalkboard,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "nKb" = (
 /obj/machinery/light/lampost,
@@ -13964,7 +14006,7 @@
 /area/indoors/raiders)
 "nOM" = (
 /obj/structure/simple_door/wood,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "nPD" = (
 /obj/structure/railing/wood{
@@ -13984,7 +14026,7 @@
 /obj/machinery/chem_dispenser/drinks{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "nQK" = (
 /obj/structure/wreck/trash/one_tire{
@@ -14003,6 +14045,10 @@
 	},
 /turf/open/floor/carpet,
 /area/indoors/town)
+"nRJ" = (
+/obj/structure/simple_door/wood,
+/turf/open/floor/wooden/oak,
+/area/indoors/ruins)
 "nSz" = (
 /turf/open/indestructible/ground/outside/graveldirt/path{
 	dir = 6
@@ -14048,13 +14094,15 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "nUk" = (
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
 /area/indoors/farmhouse)
 "nUA" = (
 /obj/structure/simple_door/brokenglass,
@@ -14106,7 +14154,9 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken2"
+	},
 /area/indoors/ruins)
 "nXK" = (
 /obj/structure/closet/crate{
@@ -14153,9 +14203,7 @@
 /obj/structure/bed/mattress{
 	pixel_y = 5
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "nZr" = (
 /obj/structure/simple_door/metal/store,
@@ -14176,9 +14224,7 @@
 	},
 /obj/item/clothing/shoes/sneakers/white,
 /obj/item/reagent_containers/food/snacks/chocolatebar,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "oad" = (
 /obj/machinery/light/broken{
@@ -14225,7 +14271,7 @@
 	},
 /area/outdoors)
 "obU" = (
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "ocm" = (
 /obj/effect/turf_decal/cliff{
@@ -14274,7 +14320,7 @@
 "oeC" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/raiderloot,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "ofv" = (
 /obj/structure/displaycase,
@@ -14325,7 +14371,7 @@
 	},
 /area/outdoors)
 "ohR" = (
-/turf/open/floor/wood/f13/oakbroken4,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "ojC" = (
 /obj/structure/closet/crate/grave,
@@ -14401,9 +14447,7 @@
 /obj/structure/sign/plaques/worldmap_left{
 	pixel_y = 32
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "onA" = (
 /obj/structure/flora/grass/wasteland,
@@ -14486,9 +14530,7 @@
 	layer = 2.5;
 	pixel_y = 31
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "opO" = (
 /obj/structure/rack,
@@ -14502,6 +14544,13 @@
 /obj/structure/sign/poster/contraband/pinup_pink,
 /turf/closed/wall/r_wall/rust,
 /area/indoors/raiders)
+"oqB" = (
+/obj/structure/chair/stool/bar,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken7"
+	},
+/area/indoors)
 "oqE" = (
 /obj/structure/safe/floor,
 /obj/effect/spawner/lootdrop/f13/cash_ncr_med,
@@ -14559,9 +14608,7 @@
 /obj/structure/sign/plaques/worldmap_right{
 	pixel_y = 32
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "out" = (
 /obj/effect/decal/cleanable/blood/old{
@@ -14657,7 +14704,7 @@
 /area/indoors/town)
 "oxN" = (
 /obj/structure/junk/drawer,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "oyg" = (
 /obj/structure/simple_door/fakeglass,
@@ -14671,7 +14718,7 @@
 /area/indoors/ruins)
 "oAk" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "oBC" = (
 /obj/structure/rack,
@@ -14710,7 +14757,7 @@
 "oDc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "oDg" = (
 /turf/open/floor/wood/wood_diagonal{
@@ -14729,7 +14776,7 @@
 	icon_state = "housewindowbroken"
 	},
 /obj/structure/barricade/wooden/planks,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "oDI" = (
 /obj/structure/closet,
@@ -14787,7 +14834,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/spawner/lootdrop/f13/cash_random_med,
 /obj/effect/spawner/lootdrop/raiderloot,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "oHZ" = (
 /obj/structure/junk/small/table,
@@ -14859,9 +14906,7 @@
 /obj/structure/chair/comfy/purple{
 	dir = 4
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "oLJ" = (
 /obj/structure/chair/office/dark,
@@ -14896,7 +14941,9 @@
 /area/indoors/town/bar)
 "oMz" = (
 /obj/structure/simple_door/wood,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak3"
+	},
 /area/indoors/ruins)
 "oMF" = (
 /obj/structure/chair/comfy/brown,
@@ -14968,7 +15015,7 @@
 /obj/structure/table/wood,
 /obj/item/newspaper,
 /obj/item/stack/ore/blackpowder/fifty,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "oSr" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -14976,9 +15023,7 @@
 	name = "old clock";
 	pixel_y = 29
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "oTe" = (
 /obj/structure/table/wood,
@@ -15159,7 +15204,9 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "peR" = (
 /obj/machinery/jukebox,
@@ -15216,15 +15263,19 @@
 /obj/structure/table/glass,
 /turf/open/floor/carpet/arcade,
 /area/indoors/arcade)
+"piE" = (
+/obj/structure/chair/office/dark,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
+/area/indoors)
 "piQ" = (
 /obj/structure/closet,
 /obj/item/storage/backpack/satchel/leather,
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "pjj" = (
 /obj/structure/table/wood,
@@ -15232,7 +15283,9 @@
 /obj/machinery/light/small/broken{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "pjI" = (
 /obj/structure/simple_door/metal/store{
@@ -15310,8 +15363,8 @@
 /area/indoors/mercenaries)
 "pnh" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
 	},
 /area/indoors)
 "pnX" = (
@@ -15325,9 +15378,7 @@
 "poJ" = (
 /obj/structure/table/wood/bar,
 /obj/item/pen,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "poW" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -15335,9 +15386,7 @@
 /obj/structure/closet,
 /obj/item/storage/fancy/heart_box,
 /obj/item/clothing/neck/stripedgreenscarf,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "poX" = (
 /turf/open/floor/plasteel/neutral,
@@ -15408,7 +15457,7 @@
 "prA" = (
 /obj/structure/rack,
 /obj/item/flashlight/seclite,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "prF" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -15425,7 +15474,9 @@
 /area/outdoors)
 "ptd" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak3"
+	},
 /area/indoors/ruins)
 "ptN" = (
 /obj/structure/fence{
@@ -15438,7 +15489,9 @@
 "pus" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/crafting,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors/bandits)
 "put" = (
 /obj/structure/simple_door/bunker/glass,
@@ -15448,9 +15501,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood/bar,
 /obj/item/flashlight/lamp,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "pve" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
@@ -15465,8 +15516,8 @@
 /area/indoors/town/bar)
 "pvy" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood1-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken2"
 	},
 /area/indoors)
 "pxi" = (
@@ -15493,9 +15544,7 @@
 "pxF" = (
 /obj/structure/junk/locker,
 /obj/effect/spawner/lootdrop/wastelootgood,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "pxO" = (
 /obj/effect/decal/cleanable/oil{
@@ -15520,7 +15569,9 @@
 "pze" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/cash_random_low,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "pzh" = (
 /obj/structure/rack,
@@ -15665,7 +15716,9 @@
 /area/outdoors)
 "pIq" = (
 /obj/structure/junk/small/bed,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors)
 "pIL" = (
 /obj/machinery/hydroponics/soil,
@@ -15718,7 +15771,7 @@
 /area/indoors/caves)
 "pKU" = (
 /obj/item/chair/stool/retro/backed,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "pLc" = (
 /obj/machinery/light/small,
@@ -15751,11 +15804,13 @@
 "pLO" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "pLP" = (
 /obj/machinery/microwave/stove,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak4"
+	},
 /area/indoors)
 "pLR" = (
 /obj/structure/rack,
@@ -15801,8 +15856,8 @@
 	dir = 1
 	},
 /obj/structure/junk/small/bed,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
 	},
 /area/indoors)
 "pNZ" = (
@@ -15910,12 +15965,20 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/animals)
+"pTg" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
+	},
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken2"
+	},
+/area/indoors/ruins)
 "pTQ" = (
 /obj/structure/junk/locker,
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "pUd" = (
 /mob/living/simple_animal/hostile/handy/gutsy/nationalguard,
@@ -16192,8 +16255,8 @@
 /area/outdoors)
 "qew" = (
 /obj/structure/junk/drawer,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood6-broken"
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
 	},
 /area/indoors)
 "qeD" = (
@@ -16328,9 +16391,7 @@
 "qmf" = (
 /obj/structure/junk/drawer,
 /obj/effect/spawner/lootdrop/waste_loot_poor,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "qmH" = (
 /obj/effect/turf_decal/stripes/line{
@@ -16393,7 +16454,7 @@
 /obj/structure/chair/booth{
 	icon_state = "booth_west_north"
 	},
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "qrZ" = (
 /obj/structure/railing/wood{
@@ -16434,7 +16495,7 @@
 /turf/closed/wall/f13/wood,
 /area/outdoors)
 "qtz" = (
-/turf/open/floor/wood/f13/stage_br/outdoors,
+/turf/open/floor/wooden/oakstagebr,
 /area/indoors/ruins)
 "qtV" = (
 /obj/structure/table/reinforced,
@@ -16491,10 +16552,7 @@
 /area/outdoors)
 "qvF" = (
 /obj/structure/simple_door/house,
-/turf/open/floor/wood/wood_diagonal{
-	icon_state = "diagonal_wood-broken";
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "qvK" = (
 /obj/structure/closet/crate/wooden,
@@ -16808,9 +16866,7 @@
 /obj/structure/table/wood/bar,
 /obj/item/pen,
 /obj/item/ammo_box/c10mm/improvised,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "qKl" = (
 /obj/structure/closet/secure_closet/freezer/cream_pie,
@@ -16952,7 +17008,7 @@
 /area/indoors/animals)
 "qWx" = (
 /obj/machinery/light/broken,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "qXg" = (
 /obj/structure/simple_door/metal/fence,
@@ -17020,18 +17076,14 @@
 /obj/item/clothing/shoes/sneakers/white,
 /obj/item/reagent_containers/food/snacks/lollipop,
 /obj/item/clothing/glasses/regular/hipster,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "rcB" = (
 /obj/structure/chair/f13chair2{
 	dir = 1
 	},
 /mob/living/simple_animal/hostile/raider/skull,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "rcD" = (
 /turf/open/indestructible/ground/outside/graveldirt,
@@ -17185,7 +17237,7 @@
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat,
 /obj/item/stack/medical/bruise_pack,
 /obj/item/clothing/suit/armor/f13/brahmin_leather_duster,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "rkV" = (
 /obj/structure/flora/tree/tall{
@@ -17275,7 +17327,7 @@
 "rpK" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "rqa" = (
 /obj/item/pickaxe,
@@ -17421,7 +17473,9 @@
 /area/indoors/animals)
 "ruF" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oakbroken3,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken6"
+	},
 /area/indoors)
 "ruK" = (
 /obj/structure/bonfire/prelit,
@@ -17549,7 +17603,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "rCn" = (
 /obj/structure/railing/wood/underlayer{
@@ -17575,7 +17629,9 @@
 /area/indoors/caves)
 "rCN" = (
 /mob/living/simple_animal/hostile/radroach/east,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken5"
+	},
 /area/indoors)
 "rCW" = (
 /obj/item/pickaxe,
@@ -17586,8 +17642,8 @@
 /turf/open/floor/carpet/royalblack,
 /area/indoors/town)
 "rDS" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood7-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken6"
 	},
 /area/indoors)
 "rEl" = (
@@ -17603,9 +17659,7 @@
 /area/indoors/raiders)
 "rEX" = (
 /obj/structure/table/wood/bar,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "rFb" = (
 /obj/structure/wreck/trash/halftire,
@@ -17635,7 +17689,7 @@
 	},
 /area/indoors/bandits)
 "rFL" = (
-/turf/open/floor/wood/f13/stage_b/outdoors,
+/turf/open/floor/wooden/oakstageb/outdoors,
 /area/indoors/ruins)
 "rGh" = (
 /obj/structure/fence{
@@ -17657,7 +17711,7 @@
 /area/indoors/caves)
 "rGM" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/construction,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "rHo" = (
 /obj/structure/rack/steel{
@@ -17831,9 +17885,7 @@
 	pixel_x = 7;
 	pixel_y = 6
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "rOv" = (
 /turf/open/floor/plasteel/dark,
@@ -17919,9 +17971,7 @@
 /obj/item/radio{
 	name = "handheld radio"
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "rWl" = (
 /obj/structure/campfire/barrel/prelit,
@@ -17983,6 +18033,10 @@
 	icon_state = "verticalleftborderleft0"
 	},
 /area/outdoors)
+"saI" = (
+/obj/structure/simple_door/interior,
+/turf/open/floor/wooden,
+/area/indoors/bandits)
 "saK" = (
 /obj/structure/chair/stool,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -18173,7 +18227,7 @@
 /area/indoors/raiders)
 "sjP" = (
 /obj/structure/simple_door/interior,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "sjZ" = (
 /obj/item/storage/trash_stack,
@@ -18208,9 +18262,7 @@
 /obj/structure/closet,
 /obj/item/lipstick/random,
 /obj/item/storage/backpack/satchel/leather,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "smm" = (
 /turf/open/floor/plating/f13/outside/road{
@@ -18254,9 +18306,7 @@
 	icon_state = "ruinswindowdestroyed"
 	},
 /obj/item/shard,
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "soK" = (
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -18283,8 +18333,8 @@
 	},
 /area/outdoors)
 "spm" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood5-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken5"
 	},
 /area/indoors)
 "spw" = (
@@ -18502,11 +18552,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/f13/oakbroken4,
 /area/indoors/enclave)
+"sAS" = (
+/obj/structure/simple_door/wood,
+/turf/open/floor/wooden,
+/area/indoors)
 "sBf" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_east_south"
 	},
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "sBi" = (
 /obj/structure/closet/crate/bin,
@@ -18528,9 +18582,7 @@
 "sBM" = (
 /obj/structure/closet,
 /obj/item/flashlight,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "sCb" = (
 /obj/machinery/light/broken{
@@ -18648,7 +18700,7 @@
 /area/indoors)
 "sEX" = (
 /mob/living/simple_animal/hostile/raider/skull,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "sEZ" = (
 /obj/item/ammo_box/m22,
@@ -18704,8 +18756,8 @@
 /turf/open/floor/wood/f13,
 /area/indoors/mercenaries)
 "sJd" = (
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
 	},
 /area/indoors)
 "sKh" = (
@@ -18846,9 +18898,7 @@
 "sPP" = (
 /obj/structure/table/wood/bar,
 /obj/item/ammo_box/c45/improvised,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "sQc" = (
 /obj/structure/wreck/trash/two_tire,
@@ -18976,7 +19026,7 @@
 /area/outdoors)
 "sXk" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oakbroken,
+/turf/open/floor/wooden/broken,
 /area/indoors/bandits)
 "sXo" = (
 /obj/structure/junk/small/toilet{
@@ -19110,15 +19160,13 @@
 "tbQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "tcu" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "tcB" = (
 /obj/structure/window/fulltile/house{
@@ -19215,6 +19263,12 @@
 /mob/living/simple_animal/hostile/supermutant/nationalguard/nco,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid/dirty,
 /area/indoors/bunker)
+"tho" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
+/area/indoors/bandits)
 "tht" = (
 /mob/living/simple_animal/hostile/skolf,
 /turf/open/floor/plating/f13/outside/road{
@@ -19252,9 +19306,7 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "tjh" = (
 /obj/structure/chair/wood/worn{
@@ -19305,9 +19357,7 @@
 "tmh" = (
 /obj/structure/table/wood/bar,
 /obj/item/paper,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "tmn" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -19326,9 +19376,7 @@
 /obj/structure/table/wood/bar,
 /obj/item/paper/crumpled,
 /obj/item/pen,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "tmX" = (
 /obj/structure/table,
@@ -19361,7 +19409,7 @@
 /area/outdoors)
 "toF" = (
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/wood/f13/oakbroken3,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "tpk" = (
 /obj/structure/fence{
@@ -19454,9 +19502,7 @@
 "tua" = (
 /obj/structure/table/wood/bar,
 /obj/item/crafting/reloader,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "tut" = (
 /obj/structure/barricade/wooden/strong,
@@ -19481,9 +19527,7 @@
 /obj/item/chair{
 	pixel_y = -5
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "tww" = (
 /obj/structure/table,
@@ -19748,8 +19792,8 @@
 	pixel_x = -16;
 	pixel_y = 8
 	},
-/turf/open/floor/wood/f13{
-	icon_state = "housewood4-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken4"
 	},
 /area/indoors)
 "tMH" = (
@@ -19833,8 +19877,8 @@
 /area/outdoors)
 "tQa" = (
 /obj/item/chair/stool/bar,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood4-broken"
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken3"
 	},
 /area/indoors)
 "tQe" = (
@@ -19892,7 +19936,7 @@
 	dir = 2;
 	icon_state = "ruinswindow"
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "tTe" = (
 /obj/structure/barricade/bars,
@@ -20062,7 +20106,7 @@
 "tZf" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "tZP" = (
 /turf/open/indestructible/ground/outside/dirt,
@@ -20242,7 +20286,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/skull/ranged,
 /obj/structure/chair/office/light,
-/turf/open/floor/wood/wood_diagonal,
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "ujI" = (
 /obj/structure/closet/crate{
@@ -20392,7 +20436,7 @@
 "uox" = (
 /obj/structure/simple_door/interior,
 /obj/structure/barricade/wooden,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "upj" = (
 /obj/structure/bed,
@@ -20656,11 +20700,15 @@
 	icon_state = "floorrusty"
 	},
 /area/indoors/bandits)
+"uEa" = (
+/obj/structure/chair/booth{
+	dir = 4
+	},
+/turf/open/floor/wooden/oak,
+/area/indoors/ruins)
 "uEk" = (
 /obj/structure/filingcabinet/chestdrawer/wheeled,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "uEu" = (
 /obj/structure/fence{
@@ -20729,6 +20777,11 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/indoors/bandits)
+"uIM" = (
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken4"
+	},
+/area/indoors)
 "uIS" = (
 /obj/structure/junk/small/urinal{
 	pixel_y = 30
@@ -20789,7 +20842,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "uNB" = (
 /obj/structure/chair/stool/f13stool{
@@ -20885,7 +20938,7 @@
 /obj/structure/chair/booth{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oakbroken,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "uSI" = (
 /turf/open/indestructible/ground/outside/road{
@@ -20899,9 +20952,7 @@
 "uTp" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/junk/locker,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood6-broken"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "uTV" = (
 /obj/structure/wreck/trash/two_barrels{
@@ -20912,7 +20963,7 @@
 "uUc" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "uUd" = (
 /turf/open/transparent/openspace/outside,
@@ -21054,6 +21105,7 @@
 /area/outdoors)
 "vaT" = (
 /obj/structure/flora/grass/jungle/b,
+/obj/effect/overlay/turfs/decoration,
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors)
 "vbN" = (
@@ -21082,9 +21134,7 @@
 /obj/item/book/granter/crafting_recipe/cooking_sweets_101{
 	pixel_x = 6
 	},
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "vcC" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -21127,7 +21177,7 @@
 	pixel_y = 9
 	},
 /mob/living/simple_animal/hostile/ghoul,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "veS" = (
 /obj/structure/bookshelf{
@@ -21174,7 +21224,9 @@
 /area/indoors)
 "vgY" = (
 /obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
 /area/indoors/ruins)
 "vhh" = (
 /obj/structure/window/fulltile/house{
@@ -21244,7 +21296,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "vlv" = (
 /obj/structure/fence/corner,
@@ -21360,7 +21412,7 @@
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/ruins)
 "vqL" = (
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "vrv" = (
 /turf/open/floor/f13{
@@ -21388,9 +21440,7 @@
 /obj/structure/table/wood/bar,
 /obj/effect/spawner/lootdrop/f13/cash_random_low,
 /obj/item/melee/onehanded/knife/bowie,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "vvx" = (
 /obj/structure/rack{
@@ -21596,8 +21646,8 @@
 "vGT" = (
 /obj/structure/junk/drawer,
 /obj/effect/spawner/lootdrop/waste_loot_poor,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood3"
+/turf/open/floor/wooden{
+	icon_state = "darkoak3"
 	},
 /area/indoors)
 "vHM" = (
@@ -21800,9 +21850,7 @@
 "vON" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/vending/coffee,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "vOS" = (
 /obj/structure/barricade/bars,
@@ -21930,11 +21978,13 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 10
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken4"
+	},
 /area/indoors/ruins)
 "vZW" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_large,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "vZZ" = (
 /obj/structure/window/reinforced/spawner{
@@ -21946,7 +21996,7 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "waH" = (
 /obj/structure/signs/waterfront/store,
@@ -22004,11 +22054,15 @@
 	},
 /area/indoors/animals)
 "wcH" = (
-/turf/open/floor/wood/f13/oakbroken,
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
 /area/indoors/ruins)
 "wcQ" = (
 /obj/machinery/mineral/wasteland_vendor/pipboy,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
+	},
 /area/indoors/bandits)
 "wdg" = (
 /turf/closed/wall/f13/wood/interior,
@@ -22067,9 +22121,7 @@
 /area/indoors/ruins)
 "wgi" = (
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "wgj" = (
 /obj/structure/bed/oldalt,
@@ -22081,6 +22133,10 @@
 /obj/structure/simple_door/interior,
 /turf/open/floor/wood/f13/carpet,
 /area/indoors/animals)
+"wgL" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wooden/oak,
+/area/indoors/ruins)
 "whd" = (
 /obj/structure/wreck/trash/engine,
 /obj/effect/decal/fakelattice,
@@ -22090,9 +22146,7 @@
 /area/outdoors)
 "whA" = (
 /obj/structure/closet,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "whN" = (
 /obj/structure/fence{
@@ -22204,16 +22258,12 @@
 /turf/open/floor/wood/wood_diagonal,
 /area/indoors/town)
 "wnw" = (
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "wnx" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/bed/mattress,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "wnz" = (
 /obj/machinery/shower{
@@ -22263,7 +22313,7 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/ruins)
 "wrl" = (
 /obj/structure/junk/small/toilet{
@@ -22293,9 +22343,8 @@
 /obj/effect/decal/cleanable/glass{
 	pixel_x = 12
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
-	},
+/obj/effect/overlay/turfs/decoration,
+/turf/open/indestructible/ground/inside/mountain,
 /area/indoors)
 "wtu" = (
 /obj/structure/window/fulltile/house{
@@ -22344,9 +22393,7 @@
 "wvL" = (
 /obj/structure/table/wood/bar,
 /obj/item/paper_bin,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "wvR" = (
 /obj/structure/table,
@@ -22387,7 +22434,7 @@
 /obj/structure/chair/pew/right{
 	dir = 4
 	},
-/turf/open/floor/wood/f13/oakbroken,
+/turf/open/floor/wooden/oak,
 /area/indoors/town/chapel)
 "wyt" = (
 /obj/structure/decoration/rag{
@@ -22440,9 +22487,7 @@
 	dir = 2;
 	icon_state = "ruinswindowbrokenvertical"
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "wAk" = (
 /obj/structure/simple_door/metal/store{
@@ -22496,6 +22541,11 @@
 /obj/structure/table/booth,
 /turf/open/floor/wood/wood_diagonal,
 /area/indoors)
+"wBQ" = (
+/turf/open/floor/wooden/oak/broken{
+	icon_state = "oakbroken3"
+	},
+/area/indoors/ruins)
 "wCe" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbroken"
@@ -22691,9 +22741,7 @@
 /area/indoors/ruins)
 "wMU" = (
 /mob/living/simple_animal/hostile/radroach/east,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "wNy" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -22708,6 +22756,12 @@
 	},
 /turf/open/floor/wood/f13,
 /area/indoors/town/bar)
+"wOK" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken4"
+	},
+/area/indoors)
 "wPw" = (
 /obj/structure/window/fulltile/wood_window,
 /turf/open/floor/wood/f13/oak,
@@ -22796,7 +22850,7 @@
 /turf/open/indestructible/ground/outside/dirthole,
 /area/outdoors)
 "wTh" = (
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/oak,
 /area/indoors/farmhouse)
 "wTk" = (
 /obj/structure/closet/crate/bin,
@@ -22901,6 +22955,13 @@
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plasteel/darkbrown/side,
 /area/indoors)
+"wYl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach/east,
+/turf/open/floor/wooden/broken{
+	icon_state = "darkoakbroken2"
+	},
+/area/indoors)
 "wYy" = (
 /obj/structure/rack/steel{
 	icon = 'icons/obj/rack.dmi';
@@ -22951,8 +23012,8 @@
 /area/outdoors)
 "xad" = (
 /obj/structure/chair/sofa,
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2-broken"
+/turf/open/floor/wooden{
+	icon_state = "darkoak2"
 	},
 /area/indoors)
 "xaD" = (
@@ -23094,6 +23155,12 @@
 	icon_state = "torncarpet9"
 	},
 /area/indoors/animals)
+"xfS" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wooden{
+	icon_state = "darkoak4"
+	},
+/area/indoors)
 "xfV" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -23127,11 +23194,14 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/outdoors)
+"xhI" = (
+/turf/open/floor/wooden/oak{
+	icon_state = "oak2"
+	},
+/area/indoors/farmhouse)
 "xix" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "xjd" = (
 /obj/structure/campfire/barrel,
@@ -23246,10 +23316,10 @@
 "xoG" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/obj/machinery/light/small{
+/obj/machinery/light/broken{
 	dir = 1
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors)
 "xoH" = (
 /obj/structure/closet/crate/trashcart,
@@ -23453,9 +23523,7 @@
 	dir = 2;
 	icon_state = "ruinswindowvertical"
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "xBP" = (
 /obj/structure/chair/bench,
@@ -23475,9 +23543,7 @@
 	pixel_x = -16;
 	pixel_y = 8
 	},
-/turf/open/floor/wood/f13{
-	icon_state = "housewood2"
-	},
+/turf/open/floor/wooden,
 /area/indoors)
 "xDP" = (
 /obj/structure/chair/wood/modern,
@@ -23592,7 +23658,7 @@
 /turf/closed/wall/f13/store,
 /area/indoors/ruins)
 "xJw" = (
-/turf/open/floor/wood/f13/stage_bl/outdoors,
+/turf/open/floor/wooden/oakstage/outdoors,
 /area/indoors/ruins)
 "xJD" = (
 /turf/open/floor/wood/f13/carpet{
@@ -23652,9 +23718,7 @@
 	dir = 1
 	},
 /mob/living/simple_animal/hostile/raider/skull/ranged,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "xMq" = (
 /turf/open/floor/wood/f13{
@@ -23784,12 +23848,16 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/indoors)
+"xUA" = (
+/obj/machinery/door/unpowered/padlockwooddoor/town{
+	name = "preachers quarters"
+	},
+/turf/open/floor/wooden/oak,
+/area/indoors/town/chapel)
 "xUT" = (
 /obj/structure/table/wood/bar,
 /obj/effect/decal/cleanable/glass,
-/turf/open/floor/wood/wood_diagonal{
-	name = "wood flooring"
-	},
+/turf/open/floor/wooden/laminatediagonal,
 /area/indoors/bandits)
 "xUZ" = (
 /obj/structure/safe,
@@ -23799,7 +23867,7 @@
 /area/indoors/ruins)
 "xVq" = (
 /mob/living/simple_animal/hostile/raider/skull/ranged,
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden,
 /area/indoors/bandits)
 "xVt" = (
 /obj/structure/table,
@@ -24025,7 +24093,7 @@
 /obj/structure/barricade/wooden/planks{
 	icon_state = "board-2"
 	},
-/turf/open/floor/wood/f13/oak,
+/turf/open/floor/wooden/laminate,
 /area/indoors/bandits)
 "yjr" = (
 /obj/structure/railing/wood{
@@ -24484,19 +24552,19 @@ mpG
 mpG
 oSa
 fjc
-fjc
+jMJ
 mpG
 tIM
 tIM
 mpG
 peM
-peM
-fhS
+beD
+kgO
 gYf
 lqa
 vMN
 pLO
-fhS
+fGV
 ipG
 tia
 atK
@@ -24641,24 +24709,24 @@ onG
 pLG
 pLG
 pry
-fhS
+spm
 nbs
 mpG
 ffy
 bsd
-fhS
-vhh
+sJd
+iUt
 tIM
 tIM
 mpG
 pjj
 joC
 oDc
-pXq
+iJL
 pLP
 vMN
 xoG
-nqR
+wYl
 gGL
 abR
 npY
@@ -24803,25 +24871,25 @@ pLG
 ecc
 pLG
 mpG
-pXq
+mks
 eRw
 mpG
 fgY
-xuM
-fhS
+iJL
+fGV
 mdY
 tIM
 tIM
 mpG
 ePq
 kgi
-cHW
+xfS
 nqR
 pze
 vMN
 pIq
 ruF
-cHW
+wOK
 tia
 lrq
 xts
@@ -24965,24 +25033,24 @@ mpG
 mpG
 mpG
 mpG
-fhS
-fhS
+fGV
+kgO
 fbc
-fhS
-cHW
-cHW
-vhh
+sJd
+pnh
+bOh
+iUt
 bnP
 gsp
 mpG
-jim
-fhS
-fhS
-fhS
+nql
+dTx
+mks
+sJd
 fVL
 sjP
-fhS
-fhS
+spm
+eoQ
 oxN
 mpG
 tIM
@@ -25124,21 +25192,21 @@ mpG
 dhm
 mks
 mNB
-fhS
+rDS
 eHU
 mpG
 edv
 eRY
 fbr
-qmP
+ldY
 oDc
-cHW
-vhh
+pnh
+iUt
 bnP
 jwn
 dhm
 mpG
-sSd
+sAS
 mpG
 xNb
 mpG
@@ -25284,17 +25352,17 @@ uUd
 uUd
 mpG
 tSY
-xuM
+rDS
 dOG
 vaT
-fhS
+dTx
 mpG
-fhS
-cHW
+kgO
+pnh
 fbc
-fhS
-fhS
-fhS
+kgO
+dTx
+dTx
 mpG
 bnP
 pSh
@@ -25446,17 +25514,17 @@ uUd
 uUd
 mpG
 dsr
-onG
-fhS
-cHW
-xuM
-fhS
-fhS
-cHW
+ihT
+uIM
+pvy
+rDS
+mks
+kgO
+kYf
 dhm
 fhu
 fCN
-fhS
+uIM
 nuZ
 pSh
 cpL
@@ -25611,14 +25679,14 @@ dhm
 dLI
 dVl
 rCN
-onG
+ihT
 eIF
-fhS
-fhS
+uIM
+kgO
 sjP
-rCN
-fhS
-fhS
+wMU
+mks
+rDS
 mpG
 pSh
 ydL
@@ -25770,13 +25838,13 @@ uUd
 uUd
 tFB
 tFB
-mks
-mNB
-fhS
-mks
+piE
+gAP
+uIM
+cYe
 eJU
-fhS
-pXq
+spm
+mks
 mpG
 mpG
 mpG
@@ -25794,9 +25862,9 @@ ydL
 crX
 mpG
 cYe
+ihT
 dTx
-rke
-dTx
+sJd
 uTp
 mpG
 nmV
@@ -25956,9 +26024,9 @@ ydL
 pSh
 mpG
 tME
-aij
-rke
-dTx
+oqB
+fGV
+sJd
 pxF
 mpG
 nmV
@@ -26118,10 +26186,10 @@ ydL
 pSh
 dhm
 dXL
-gmE
-tQa
+hYZ
+hlv
 dTx
-mAd
+uTp
 dhm
 nmV
 iPy
@@ -26272,17 +26340,17 @@ aMr
 lgO
 fel
 obU
-lGT
+tho
 btp
-obU
+dRu
 fww
 fWM
 pSh
 mpG
-lYp
-dhg
+gwb
+pnh
 wMU
-dTx
+fGV
 lOQ
 soB
 nmV
@@ -26444,7 +26512,7 @@ mpG
 mpG
 ssF
 mpG
-dhg
+wOK
 spm
 dhm
 nmV
@@ -26607,7 +26675,7 @@ rNI
 rNI
 mpG
 wMU
-iqi
+mks
 mpG
 nmV
 wJw
@@ -27033,16 +27101,16 @@ qes
 pYK
 aMr
 wPw
-naE
+wcH
 nXs
 nBN
 uUc
 veP
 vgY
 vYo
-naE
+gbc
 wqR
-gSi
+wgL
 wcH
 pHj
 qXn
@@ -27092,8 +27160,8 @@ mpG
 bDh
 qDm
 mpG
-inS
-hgI
+lQb
+pnh
 mpG
 nmV
 wJw
@@ -27195,18 +27263,18 @@ qes
 pYK
 aMr
 oMz
-naE
+gUb
 gSi
-naE
+gUb
 gbc
-naE
-naE
+gUb
+wcH
 was
-naE
+gUb
 gSi
 gSi
-naE
-oMz
+wBQ
+nRJ
 qXn
 qXn
 qXn
@@ -27243,8 +27311,8 @@ pYK
 aMr
 hcl
 hER
-lGT
-obU
+tho
+dRu
 ydL
 tXW
 tXW
@@ -27255,7 +27323,7 @@ rNI
 kfd
 mpG
 xDK
-dTx
+fGV
 dhm
 nmV
 wJw
@@ -27357,17 +27425,17 @@ qes
 pYK
 aMr
 rHG
-naE
+gbc
 dht
-naE
-ceF
-naE
-naE
-was
-naE
-dht
-naE
-naE
+wcH
+toF
+dSQ
+gUb
+pTg
+wcH
+bwL
+gbc
+gUb
 pHj
 qXn
 qXn
@@ -27417,7 +27485,7 @@ mpG
 ssF
 mpG
 qmf
-pnh
+bOh
 mpG
 nmV
 wJw
@@ -27568,18 +27636,18 @@ aMr
 lgO
 obU
 lGT
-lGT
+tho
 ydL
 lGT
-lGT
+tho
 ydL
 pSh
 mpG
-lYp
-dhg
-sJd
-dTx
-jLW
+jJn
+kYf
+kgO
+kgO
+ldY
 iUt
 nmV
 wJw
@@ -27730,17 +27798,17 @@ aMr
 ovJ
 knf
 obU
-fel
-eCg
+crA
+saI
 sEX
 oHR
 ydL
 pSh
 dhm
-dTx
-dTx
+kgO
+kgO
 xad
-dhg
+kYf
 nql
 mpG
 nmV
@@ -27901,7 +27969,7 @@ pSh
 mpG
 isK
 gAw
-dTx
+uIM
 rDS
 spm
 dhm
@@ -27997,7 +28065,7 @@ niv
 eek
 jmm
 shE
-gWo
+wBQ
 rFL
 nmV
 wJw
@@ -28700,7 +28768,7 @@ qes
 gWc
 aMr
 xqo
-rke
+fGV
 dTx
 hgI
 mpG
@@ -28711,8 +28779,8 @@ mOh
 qew
 mpG
 jtN
-rke
-diT
+dTx
+ldY
 rke
 mpG
 nmV
@@ -28874,7 +28942,7 @@ pvy
 gPh
 rke
 pnh
-lnu
+pnh
 bQO
 fZB
 nmV
@@ -29172,14 +29240,14 @@ ueF
 yhZ
 ueF
 ueF
-orR
+cNl
 vqL
 eZo
 ipD
 cdf
 gdj
 cdf
-orR
+cNl
 nmV
 wJw
 qes
@@ -29187,7 +29255,7 @@ pYK
 aMr
 xNb
 lYp
-dhg
+xfS
 sJd
 snN
 ldY
@@ -29350,7 +29418,7 @@ aMr
 mpG
 ghq
 rDS
-iqi
+mks
 vfC
 afq
 vGT
@@ -29358,10 +29426,10 @@ mpG
 rNI
 rNI
 reK
-jLW
-ldY
-rke
+mks
+iJL
 sJd
+fGV
 mpG
 nmV
 wJw
@@ -29522,7 +29590,7 @@ dhm
 mpG
 mpG
 mpG
-vhh
+lMQ
 mpG
 mpG
 nmV
@@ -29823,7 +29891,7 @@ dEj
 ydL
 ydL
 ydL
-orR
+cNl
 uBR
 ydL
 ydL
@@ -31624,7 +31692,7 @@ wnw
 wnw
 wnw
 tiL
-lUc
+qvF
 iAD
 pSh
 nmV
@@ -31931,7 +31999,7 @@ kFk
 vHM
 vHM
 vHM
-gJR
+qvF
 stO
 tiL
 oDg
@@ -31948,7 +32016,7 @@ wnw
 wnw
 oDg
 xix
-bou
+qvF
 iAD
 pSh
 nmV
@@ -32261,13 +32329,13 @@ vcp
 dHM
 tiL
 rEX
-adz
+gyL
 rEX
-adz
+gyL
 rEX
-adz
+gyL
 sPP
-adz
+gyL
 tcu
 bav
 xix
@@ -32423,7 +32491,7 @@ xix
 xix
 xix
 tmh
-adz
+gyL
 ddK
 cmf
 rEX
@@ -33077,7 +33145,7 @@ cmf
 ddK
 cmf
 tmR
-adz
+gyL
 xix
 ydU
 ydU
@@ -33237,7 +33305,7 @@ rcB
 rEX
 nnX
 poJ
-adz
+gyL
 xUT
 eFj
 duQ
@@ -35189,7 +35257,7 @@ pHj
 kKc
 dvn
 pHj
-agb
+mZW
 gSi
 mZW
 cmV
@@ -35352,7 +35420,7 @@ pHj
 hJZ
 pHj
 nTx
-naE
+gWo
 epF
 cmV
 nmV
@@ -35513,9 +35581,9 @@ pHj
 pqT
 dvn
 pHj
-gaG
+uSF
 toF
-gaG
+uSF
 oDE
 rpH
 oCm
@@ -35676,7 +35744,7 @@ wTk
 dvn
 uox
 eic
-naE
+gUb
 ptd
 pHj
 nmV
@@ -35838,8 +35906,8 @@ pHj
 pHj
 pHj
 pHj
-naE
-agb
+gUb
+uEa
 cmV
 nmV
 fDH
@@ -36000,7 +36068,7 @@ yfM
 gMm
 gMm
 pGq
-naE
+wcH
 epF
 cmV
 nmV
@@ -36324,8 +36392,8 @@ nbR
 gMm
 oAd
 bxG
-naE
-naE
+dSQ
+gbc
 pHj
 nmV
 fDH
@@ -36486,7 +36554,7 @@ unf
 gMm
 mDI
 sze
-naE
+wcH
 bEA
 efj
 nmV
@@ -36648,8 +36716,8 @@ mFd
 gMm
 gMm
 rmZ
-naE
-gbc
+gUb
+cYo
 gjF
 nip
 wJw
@@ -39024,7 +39092,7 @@ nmV
 vHM
 vrw
 lAS
-ibe
+wxe
 arf
 gWK
 lAS
@@ -39185,10 +39253,10 @@ aMr
 iNY
 lvo
 lso
-lTL
-mfk
-lTL
-lTL
+ohR
+ohR
+ohR
+ohR
 mwF
 lAS
 wSU
@@ -39347,11 +39415,11 @@ jWL
 rMc
 rMc
 lso
-lTL
-lTL
+ohR
+ohR
 mwF
-lTL
-lTL
+ohR
+ohR
 lAS
 wSU
 tGs
@@ -39671,10 +39739,10 @@ bCv
 vHM
 ahm
 lto
-lTL
-lTL
-lTL
-lTL
+ohR
+ohR
+ohR
+ohR
 mwF
 lto
 vqq
@@ -39835,8 +39903,8 @@ uJj
 lAS
 wxe
 gWK
-lTL
-ibe
+ohR
+wxe
 vkP
 lAS
 vqq
@@ -39995,10 +40063,10 @@ bCv
 lJc
 wSU
 lAS
-lTL
+ohR
 mwF
 mwF
-lTL
+ohR
 ohR
 lAS
 vqq
@@ -41293,7 +41361,7 @@ vHM
 vHM
 lAS
 lAS
-jTC
+xUA
 lAS
 lAS
 vHM
@@ -41340,8 +41408,8 @@ cCP
 eFP
 nUk
 wTh
-wTh
-wTh
+xhI
+bpD
 eFP
 vHM
 npn
@@ -41501,7 +41569,7 @@ uUd
 cCP
 xEx
 hVy
-wTh
+bpD
 wTh
 wTh
 nOM
@@ -41664,8 +41732,8 @@ cCP
 eFP
 iwk
 wTh
-wTh
-wTh
+xhI
+bpD
 eFP
 vHM
 npn
@@ -41825,7 +41893,7 @@ uUd
 cCP
 xEx
 iyM
-wTh
+xhI
 kOs
 rkD
 xEx
