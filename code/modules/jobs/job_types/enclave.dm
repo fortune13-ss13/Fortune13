@@ -99,8 +99,6 @@
 	supervisors = "the United States Government."
 	selection_color = "#323232"
 	outfit = /datum/outfit/job/enclave/scientist
-	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
-	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 
 /datum/outfit/job/enclave/scientist
 	name =	"Enclave Scientist"
@@ -148,6 +146,8 @@
 	description = "You are a US Secret Service Operative broadly tasked with ensuring the continued existence of your current post, you're free to assist the scientists, go completely undercover within another organisation, or simply act as a Paramedic for local forces."
 	supervisors = "The United States Secret Service"
 	outfit = /datum/outfit/job/enclave/intel
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 	loadout_options = list(
 		/datum/outfit/loadout/observationist,
 		/datum/outfit/loadout/infiltrator,
@@ -240,6 +240,8 @@
 	selection_color = "#323232"
 	exp_requirements = 180
 	outfit = /datum/outfit/job/enclave/armor
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 	loadout_options = list(
 		/datum/outfit/loadout/hammer,
 		/datum/outfit/loadout/support,
