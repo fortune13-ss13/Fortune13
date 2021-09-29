@@ -2679,13 +2679,10 @@
 	},
 /area/f13/outlaw/indoors)
 "kl" = (
-/obj/structure/sign/warning/securearea{
-	name = "RESTRICTED AREA";
-	pixel_x = 32
-	},
-/turf/open/floor/plasteel/f13/vault_floor/green/corner{
-	dir = 1
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/plating/f13,
 /area/f13/enclave)
 "km" = (
 /obj/structure/table/wood/bar,
@@ -3859,7 +3856,7 @@
 /area/f13/office/talon)
 "oI" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "oJ" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -4330,7 +4327,7 @@
 /area/f13/office/talon)
 "qG" = (
 /obj/machinery/door/unpowered/militarydoor/enclave{
-	name = "Weapons Storage";
+	name = "Records";
 	req_one_access_txt = "135"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
@@ -7378,8 +7375,8 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/vault)
 "CS" = (
-/obj/structure/closet,
 /obj/machinery/light,
+/obj/structure/closet,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "CT" = (
@@ -7744,9 +7741,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/item/reagent_containers/glass/bucket,
-/turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
-	dir = 1
-	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "Er" = (
 /obj/machinery/vending/cola/starkist,
@@ -8228,7 +8223,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/mop,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "GB" = (
 /obj/structure/closet/crate/engineering,
@@ -8332,7 +8327,7 @@
 /area/f13/enclave)
 "GR" = (
 /obj/machinery/vending/wardrobe/jani_wardrobe,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "GS" = (
 /obj/structure/window/reinforced{
@@ -10333,7 +10328,7 @@
 	name = "Maintenance";
 	req_one_access_txt = "135"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "Pu" = (
 /obj/structure/closet/fridge/standard,
@@ -10914,15 +10909,6 @@
 	dir = 6
 	},
 /turf/open/floor/carpet,
-/area/f13/enclave)
-"RL" = (
-/obj/structure/sign/warning/securearea{
-	name = "RESTRICTED AREA";
-	pixel_x = 32
-	},
-/turf/open/floor/plasteel/f13/vault_floor/green/corner{
-	dir = 8
-	},
 /area/f13/enclave)
 "RM" = (
 /obj/structure/cable{
@@ -11881,8 +11867,7 @@
 /area/f13/enclave)
 "VA" = (
 /obj/machinery/door/unpowered/militarydoor/enclave{
-	name = "Maintenance";
-	req_one_access_txt = "135"
+	name = "Janitor's Closet"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
@@ -14949,10 +14934,10 @@ ZZ
 ZZ
 Vz
 Vz
-RL
+dB
 RI
 RI
-kl
+Vn
 Vz
 Vz
 Za
@@ -15895,7 +15880,7 @@ cA
 Hy
 Za
 Vz
-SU
+iR
 iR
 Vz
 Zh
@@ -16057,8 +16042,8 @@ ar
 Gk
 Za
 Vz
-SU
-SU
+iR
+iR
 Vz
 Zh
 PT
@@ -16219,8 +16204,8 @@ Gk
 Gk
 Za
 Vz
-SU
-SU
+iR
+CZ
 Vz
 ci
 PT
@@ -16381,8 +16366,8 @@ Hy
 Hy
 Za
 Vz
-SU
-SU
+kl
+CZ
 Vz
 qn
 PT
@@ -16898,7 +16883,7 @@ ZU
 ZU
 ZU
 Kk
-Mc
+Mr
 uW
 mJ
 "}
@@ -17354,7 +17339,7 @@ Hy
 Za
 Za
 Vz
-SU
+iR
 Vz
 wE
 Zv
@@ -17516,7 +17501,7 @@ Hy
 Gk
 Za
 Vz
-SU
+iR
 Vz
 OV
 yw
@@ -20418,7 +20403,7 @@ Hy
 Hy
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -21067,7 +21052,7 @@ Hy
 Hy
 mJ
 mJ
-Gk
+mJ
 Hy
 Gk
 Gk
@@ -21229,7 +21214,7 @@ Hy
 Hy
 mJ
 mJ
-Gk
+mJ
 Gk
 Gk
 Hy
@@ -21391,7 +21376,7 @@ Hy
 Hy
 mJ
 mJ
-Hy
+mJ
 Gk
 Hy
 Hy
@@ -21553,7 +21538,7 @@ Hy
 Hy
 mJ
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
@@ -21713,9 +21698,9 @@ cA
 Hy
 Hy
 Hy
-mJ
-mJ
 Hy
+mJ
+mJ
 Hy
 Hy
 Hy
@@ -21875,9 +21860,9 @@ cd
 cA
 cA
 Hy
-mJ
-mJ
 Hy
+mJ
+mJ
 Hy
 Hy
 Gk
@@ -22039,7 +22024,7 @@ cA
 cA
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Gk
@@ -22201,7 +22186,7 @@ CI
 cA
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Gk
@@ -22363,7 +22348,7 @@ cA
 cA
 Hy
 mJ
-Hy
+mJ
 Hy
 Hy
 Hy
