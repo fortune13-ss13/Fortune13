@@ -21,7 +21,7 @@
 	backpack =	/obj/item/storage/backpack/enclave
 	satchel =	/obj/item/storage/backpack/satchel/enclave
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	gloves =	/obj/item/clothing/gloves/f13/military
+	gloves =	/obj/item/clothing/gloves/f13/military/remnant
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	r_pocket =	/obj/item/flashlight/seclite
 	l_pocket =	/obj/item/melee/onehanded/knife/bayonet
@@ -56,7 +56,7 @@
 	mask =	/obj/item/clothing/mask/breath/medical
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
-	uniform =	/obj/item/clothing/under/f13/enclave/science
+	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
 	accessory =	/obj/item/clothing/accessory/armband/science
 	belt =	/obj/item/storage/belt/medical
@@ -65,7 +65,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/storage/bag/money/small/ncrofficers = 1,
+		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
@@ -108,7 +108,7 @@
 	glasses =	/obj/item/clothing/glasses/meson
 	mask =	/obj/item/clothing/mask/breath/medical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
-	uniform =	/obj/item/clothing/under/f13/enclave/science
+	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
 	accessory =	/obj/item/clothing/accessory/armband/science
 	belt =	/obj/item/storage/belt/medical
@@ -117,7 +117,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
@@ -171,7 +171,7 @@
 		/obj/item/suppressor = 1,
 		/obj/item/clothing/head/helmet/riot/vaultsec = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
@@ -251,19 +251,19 @@
 /datum/outfit/job/enclave/armor
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/armor
-	head =	/obj/item/clothing/head/helmet/f13/remnant/sergeant
+	head =	/obj/item/clothing/head/helmet/f13/remnant/army
 	neck =	/obj/item/storage/belt/holster/legholster
 	mask =	/obj/item/clothing/mask/gas/enclave
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/enclave/sergeant
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
-	gloves =	/obj/item/clothing/gloves/f13/military
+	gloves =	/obj/item/clothing/gloves/f13/military/remnant
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
-		/obj/item/storage/bag/money/small/ncrofficers = 1,
+		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
@@ -315,20 +315,20 @@
 /datum/outfit/job/enclave/corporal
 	name = "Enclave Corporal"
 	jobtype = /datum/job/enclave/corporal
-	head =	/obj/item/clothing/head/helmet/f13/remnant/corporal
+	head =	/obj/item/clothing/head/helmet/f13/remnant/army
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/enclave/corporal
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	gloves =	/obj/item/clothing/gloves/f13/military
+	gloves =	/obj/item/clothing/gloves/f13/military/remnant
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	backpack_contents = list(
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
@@ -375,15 +375,15 @@
 /datum/outfit/job/enclave/soldier
 	name =	"Enclave Private"
 	jobtype =	/datum/job/enclave/soldier
-	head =	/obj/item/clothing/head/helmet/f13/remnant/peacekeeper
+	head =	/obj/item/clothing/head/helmet/f13/remnant/army
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/enclave/private
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	accessory =	/obj/item/clothing/accessory/enclave/soldier
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 

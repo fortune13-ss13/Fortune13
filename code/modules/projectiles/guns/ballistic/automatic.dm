@@ -840,7 +840,6 @@
 	scope_state = "scope_short"
 	scope_x_offset = 5
 	scope_y_offset = 12
-	suppressed = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 
@@ -850,6 +849,7 @@
 	desc = "The R91-M boasts a heavier barrel, scope bracket & a low-profile upper receiver, this variant was designed to provide the US Army with a marksman capable platform at a squad level."
 	icon_state = "r91m"
 	item_state = "fnfal"
+	spread = 1
 	extra_damage = 7
 	extra_penetration = 0.1
 	recoil = 0.6
@@ -862,7 +862,7 @@
 	zoom_out_amt = 13
 	burst_size = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
+	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 
 //Infiltrator			Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, Suppressed, Small scope, Damage -1, Pistol grip
 /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator

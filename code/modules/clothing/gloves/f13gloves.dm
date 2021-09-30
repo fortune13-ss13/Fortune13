@@ -48,6 +48,12 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
+/obj/item/clothing/gloves/f13/military/remnant
+	name = "Light Infantry Combat Gloves"
+	desc = "Tight fitting green ballistic gloves with mesh along the finger tips and padding along the palm. The craftsmanship is beyond what most in the wasteland could achieve, belonging to some kind of soldier."
+	icon_state = "enclave_gloves"
+	item_state = "enclave_gloves"
+
 /obj/item/clothing/gloves/f13/doom
 	name = "strange gloves"
 	desc = "These gloves look like a part of some sort of space suit, or maybe exquisite armor, but you can't tell for sure."

@@ -347,7 +347,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/headset_enclave
 	name = "enclave radio headset"
 	desc = "This is used by the enclave.\nTo access the enclave channel, use :z."
-	icon_state = "sec_headset"
+	icon_state = "enclave_headset"
 	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_enclave
 
