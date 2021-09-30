@@ -13,8 +13,8 @@
 //ENCLAVE PEACEKEEPERS
 
 /obj/item/clothing/under/f13/enclave
-	name = "US Army peacekeeper uniform"
-	desc = "Khaki standard issue uniform over a black turtleneck."
+	name = "US Army Battle Dress Uniform"
+	desc = "A Post-war iteration of the standard US Army uniform utilised by the Enclave, featuring a basic Khaki overcoat & trousers over a black turtleneck."
 	icon = 'icons/fallout/clothing/uniforms.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
 	icon_state = "uniform_enclave_peacekeeper"
@@ -22,10 +22,9 @@
 
 /obj/item/clothing/under/f13/enclave/science
 	name = "science officer uniform"
-	desc = "(I)Off-white military style uniform for scientists."
+	desc = "Off-white military style uniform for scientists."
 	icon_state = "uniform_enclave_science"
 	item_state = "uniform_enclave_science"
-	armor = list("tier" = 1, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
 
 /obj/item/clothing/under/f13/enclave/officer
 	name = "officer uniform"
@@ -34,11 +33,10 @@
 	item_state = "uniform_enclave_officer"
 
 /obj/item/clothing/under/f13/enclave/intel
-	name = "intel officer uniform"
-	desc = "(II)Dark pants and turtleneck with hidden kevlar layers, since intel officers often carry light armor."
+	name = "Intel Specialist Uniform"
+	desc = "Dark pants and turtleneck with hidden kevlar layers, since intel officers often carry light armor."
 	icon_state = "uniform_enclave_intel"
 	item_state = "uniform_enclave_intel"
-	armor = list("tier" = 2)
 
 //Old World Army clothing
 
