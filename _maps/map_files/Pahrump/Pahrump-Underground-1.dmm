@@ -1043,6 +1043,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/vending/snack,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner,
 /area/indoors/enclave)
 "eA" = (
@@ -1469,6 +1470,10 @@
 /obj/structure/decoration/clock/old/active,
 /turf/closed/wall/f13/vault,
 /area/indoors/bunker)
+"gd" = (
+/obj/effect/turf_decal/plaque,
+/turf/open/floor/plasteel/f13/vault_floor/green,
+/area/indoors/enclave)
 "ge" = (
 /obj/machinery/hydroponics/constructable,
 /obj/machinery/light{
@@ -3110,7 +3115,7 @@
 /turf/open/floor/carpet/black,
 /area/f13/vault)
 "ma" = (
-/obj/structure/window/reinforced/spawner{
+/obj/structure/window/spawner{
 	dir = 1
 	},
 /obj/machinery/biogenerator,
@@ -3439,6 +3444,12 @@
 	icon_state = "2-i"
 	},
 /area/f13/vault)
+"nr" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 4
+	},
+/area/indoors/enclave)
 "ny" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -4661,8 +4672,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/rusty,
 /area/indoors/bunker)
 "sj" = (
-/obj/structure/table,
 /obj/machinery/light,
+/obj/machinery/jukebox,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/indoors/enclave)
 "sn" = (
@@ -4685,6 +4696,14 @@
 /mob/living/simple_animal/hostile/giantantqueen,
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/caves)
+"ss" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 4
+	},
+/area/indoors/enclave)
 "st" = (
 /obj/machinery/vending/sustenance,
 /turf/open/floor/plasteel/f13/vault_floor/green,
@@ -4693,6 +4712,18 @@
 /obj/machinery/light,
 /turf/open/floor/carpet,
 /area/indoors/bandits)
+"sv" = (
+/obj/structure/table,
+/obj/item/reagent_containers/food/condiment/ketchup{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/food/condiment/soysauce{
+	pixel_x = -5;
+	pixel_y = 10
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/indoors/enclave)
 "sw" = (
 /obj/structure/sign/poster/official/soft_cap_pop_art{
 	pixel_x = 32
@@ -5196,10 +5227,11 @@
 /turf/open/floor/carpet,
 /area/indoors/bandits)
 "uz" = (
-/obj/structure/table,
-/obj/item/clipboard,
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
-/area/indoors/enclave/hq)
+/obj/machinery/vending/nukacolavendfull,
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 4
+	},
+/area/indoors/enclave)
 "uA" = (
 /obj/item/pickaxe,
 /turf/open/indestructible/ground/inside/mountain,
@@ -5235,7 +5267,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/chalkboard,
+/obj/structure/filingcabinet,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave/hq)
 "uI" = (
@@ -5340,6 +5372,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "vf" = (
+/obj/machinery/vending/coffee{
+	name = "Americana Hot Drinks";
+	products = list(/obj/item/reagent_containers/food/drinks/coffee = 11, /obj/item/reagent_containers/food/drinks/mug/tea = 3, /obj/item/reagent_containers/food/drinks/mug/coco = 8)
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave/hq)
 "vi" = (
@@ -5532,7 +5568,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/indoors/enclave)
 "vU" = (
-/turf/open/space/basic,
+/turf/open/floor/plasteel/f13/vault_floor/green/floorarrow{
+	dir = 8
+	},
 /area/indoors/enclave)
 "vX" = (
 /obj/structure/sink{
@@ -5607,7 +5645,7 @@
 /area/indoors/bunker)
 "wm" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced/spawner{
+/obj/structure/window/spawner{
 	dir = 8
 	},
 /obj/item/paper_bin,
@@ -5615,7 +5653,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave/hq)
 "wt" = (
-/obj/structure/window/reinforced/spawner{
+/obj/structure/window/spawner{
 	dir = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/purple,
@@ -6572,6 +6610,15 @@
 /obj/structure/destructible/tribal_torch/wall/lit,
 /turf/open/floor/wooden/chestnut,
 /area/indoors/tribals)
+"zY" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/kirbyplants,
+/turf/open/floor/plasteel/f13/vault_floor/green/corner{
+	dir = 4
+	},
+/area/indoors/enclave)
 "Aa" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -7066,6 +7113,15 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /turf/open/floor/carpet,
 /area/indoors/bandits)
+"Ch" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/kirbyplants,
+/turf/open/floor/plasteel/f13/vault_floor/green/corner{
+	dir = 1
+	},
+/area/indoors/enclave)
 "Ck" = (
 /turf/open/floor/plasteel/vault{
 	dir = 5
@@ -7597,6 +7653,15 @@
 /obj/machinery/telecomms/server/presets/supply,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/indoors/caves)
+"Eu" = (
+/obj/structure/sign/plaques/painting/president{
+	name = "painting of the US president";
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 4
+	},
+/area/indoors/enclave/hq)
 "Ex" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7620,7 +7685,7 @@
 /turf/closed/wall/r_wall/rust,
 /area/indoors/bunker)
 "EB" = (
-/obj/structure/window/reinforced/spawner{
+/obj/structure/window/spawner{
 	dir = 8
 	},
 /obj/machinery/computer/rdconsole/core/bos{
@@ -8063,6 +8128,13 @@
 	},
 /turf/open/floor/plating,
 /area/indoors/bunker)
+"Gp" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/kirbyplants,
+/turf/open/floor/plasteel/f13/vault_floor/green/corner,
+/area/indoors/enclave)
 "Gq" = (
 /obj/structure/punching_bag,
 /turf/open/floor/wood/f13/old,
@@ -8663,9 +8735,8 @@
 /area/indoors/tribals)
 "IW" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/terminal{
-	dir = 8
-	},
+/obj/item/clipboard,
+/obj/item/pen/fourcolor,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid,
 /area/indoors/enclave/hq)
 "IY" = (
@@ -8699,7 +8770,7 @@
 "Jh" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
-/obj/item/pen/fourcolor,
+/obj/item/pen,
 /turf/open/floor/plasteel/f13/vault_floor/green/solid,
 /area/indoors/enclave/hq)
 "Jj" = (
@@ -9469,6 +9540,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"Mz" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/kirbyplants,
+/turf/open/floor/plasteel/f13/vault_floor/green/corner{
+	dir = 8
+	},
+/area/indoors/enclave)
 "MA" = (
 /obj/structure/guncase/shotgun,
 /obj/effect/turf_decal/bot,
@@ -10280,6 +10360,18 @@
 /obj/structure/junk/small/table,
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/bandits)
+"PT" = (
+/obj/structure/table,
+/obj/item/reagent_containers/food/condiment/saltshaker{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/reagent_containers/food/condiment/peppermill{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/indoors/enclave)
 "PU" = (
 /obj/structure/table,
 /obj/item/papercutter{
@@ -10338,6 +10430,14 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
+"Qf" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 8
+	},
+/area/indoors/enclave)
 "Qg" = (
 /obj/structure/closet/crate/footchest,
 /turf/open/indestructible/ground/inside/mountain,
@@ -10943,7 +11043,7 @@
 /obj/machinery/computer/security{
 	dir = 4
 	},
-/obj/structure/window/reinforced/spawner{
+/obj/structure/window/spawner{
 	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
@@ -11451,7 +11551,7 @@
 	},
 /area/f13/vault)
 "UQ" = (
-/obj/structure/window/reinforced/spawner{
+/obj/structure/window/spawner{
 	dir = 1
 	},
 /obj/machinery/seed_extractor,
@@ -14368,10 +14468,10 @@ Vz
 oa
 Vz
 Vz
-uz
+Gz
 CJ
 GR
-GR
+Eu
 GR
 Sa
 Gz
@@ -16312,13 +16412,13 @@ Vz
 Mk
 Vz
 Vz
-ez
+Gp
+ss
+ss
 TD
-TD
-TD
-TD
-TD
-Yv
+ss
+ss
+zY
 Vz
 Vz
 Vz
@@ -16468,8 +16568,8 @@ VI
 bA
 Vz
 ez
-TD
-TD
+uz
+nr
 TD
 TD
 TD
@@ -16639,7 +16739,7 @@ ZU
 ZU
 ZU
 ZU
-ZU
+gd
 ZU
 ZU
 ZU
@@ -16960,13 +17060,13 @@ Vz
 Mc
 Vz
 Vz
-ih
+Mz
+Qf
+Qf
 RI
-RI
-RI
-RI
-RI
-YI
+Qf
+Qf
+Ch
 Vz
 Vz
 Vz
@@ -17782,8 +17882,8 @@ FD
 FD
 ZZ
 ZZ
-FD
-FD
+ZZ
+PT
 Vz
 kh
 ap
@@ -17944,7 +18044,7 @@ KG
 PK
 ZZ
 ZZ
-PK
+ZZ
 sj
 Vz
 xS
@@ -18106,8 +18206,8 @@ py
 py
 ZZ
 ZZ
-py
-py
+ZZ
+sv
 Vz
 ke
 jr
