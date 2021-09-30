@@ -21,7 +21,7 @@
 	backpack =	/obj/item/storage/backpack/enclave
 	satchel =	/obj/item/storage/backpack/satchel/enclave
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	gloves =	/obj/item/clothing/gloves/f13/military
+	gloves =	/obj/item/clothing/gloves/f13/military/remnant
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	r_pocket =	/obj/item/flashlight/seclite
 	l_pocket =	/obj/item/melee/onehanded/knife/bayonet
@@ -258,7 +258,7 @@
 	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
-	gloves =	/obj/item/clothing/gloves/f13/military
+	gloves =	/obj/item/clothing/gloves/f13/military/remnant
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
@@ -321,7 +321,7 @@
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
-	gloves =	/obj/item/clothing/gloves/f13/military
+	gloves =	/obj/item/clothing/gloves/f13/military/remnant
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	backpack_contents = list(
