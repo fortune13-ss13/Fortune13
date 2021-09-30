@@ -143,31 +143,17 @@
 	desc = "should not exist. Bugreport."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "enclave_corporal"
-	item_state = "enclave_corporal"
+	icon_state = "armor_enclave_peacekeeper"
+	item_state = "armor_enclave_peacekeeper"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-/obj/item/clothing/suit/armor/f13/enclave/private
-	name = "Mark 2 Combat Vest"
-	desc = "A light, replaceable armored vest issued usually as part of a suit of advanced combat armor."
+/obj/item/clothing/suit/armor/f13/enclave/army
+	name = "Light Infantry Combat Armor"
+	desc = "A post war revision of standard US Army combat armor components, the vest is light and maneuverable, lined with advanced olive drab armor plating & made to be easily replaceable."
 	icon_state = "armor_enclave_peacekeeper"
 	item_state = "armor_enclave_peacekeeper"
-	armor = list("tier" = 4, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/enclave/corporal
-	name = "US Army Combat Armor"
-	desc = "A suit of standard US Army combat armor, consisting of olive drab armor plates affixed to the user's uniform. A double chevron is painted on each pauldron, denoting the owner as a Corporal."
-	icon_state = "enclave_corporal"
-	item_state = "enclave_corporal"
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-
-/obj/item/clothing/suit/armor/f13/enclave/sergeant
-	name = "Reinforced Enclave Combat Armor"
-	desc = "A rare suit of Reinforced Enclave Combat Armor, consisting of reinforced plating affixed to it's users uniform the suit excels in protection from all types of energy weapons and boasts a triple chevron upon each shoulder, denoting the user as a Sergeant."
-	icon_state = "enclave_sergeant"
-	item_state = "enclave_sergeant"
-	armor = list("tier" = 5, "energy" = 60, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 
 //////////
