@@ -56,7 +56,7 @@
 	mask =	/obj/item/clothing/mask/breath/medical
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
-	uniform =	/obj/item/clothing/under/f13/enclave/science
+	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
 	accessory =	/obj/item/clothing/accessory/armband/science
 	belt =	/obj/item/storage/belt/medical
@@ -108,7 +108,7 @@
 	glasses =	/obj/item/clothing/glasses/meson
 	mask =	/obj/item/clothing/mask/breath/medical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
-	uniform =	/obj/item/clothing/under/f13/enclave/science
+	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
 	accessory =	/obj/item/clothing/accessory/armband/science
 	belt =	/obj/item/storage/belt/medical
