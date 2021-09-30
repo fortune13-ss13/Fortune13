@@ -221,6 +221,10 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/city/town)
+"aX" = (
+/obj/structure/chalkboard,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/f13/enclave)
 "aY" = (
 /obj/structure/nest/ghoul,
 /turf/open/indestructible/ground/inside/subway,
@@ -595,7 +599,7 @@
 /area/f13/vault)
 "cD" = (
 /obj/machinery/rnd/production/protolathe,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "cE" = (
 /obj/machinery/light/small{
@@ -702,14 +706,11 @@
 	},
 /area/f13/enclave)
 "db" = (
-/obj/structure/window/reinforced{
+/obj/structure/window/reinforced/spawner{
 	dir = 1
 	},
-/obj/structure/closet/crate{
-	icon_state = "crateopen";
-	opened = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/obj/machinery/seed_extractor,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
 "dd" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -1420,6 +1421,10 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/wood/f13/old,
 /area/f13/outlaw/indoors)
+"fP" = (
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
+/area/f13/enclave)
 "fQ" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
@@ -2470,13 +2475,6 @@
 	},
 /turf/open/floor/plasteel/darkred/side,
 /area/f13/vault)
-"jt" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/table/single/round,
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
-/area/f13/enclave)
 "ju" = (
 /obj/structure/fence,
 /obj/effect/decal/cleanable/dirt,
@@ -3535,7 +3533,7 @@
 /area/f13/vault)
 "nR" = (
 /obj/machinery/rnd/destructive_analyzer,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "nT" = (
 /obj/structure/sign/departments/security,
@@ -4577,7 +4575,7 @@
 /area/f13/vault)
 "sb" = (
 /obj/machinery/rnd/production/circuit_imprinter,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "sc" = (
 /obj/effect/decal/fakelattice,
@@ -5357,6 +5355,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave/hq)
+"vh" = (
+/obj/structure/chair/office/dark,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/f13/enclave)
 "vj" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/mortar,
@@ -5520,6 +5522,12 @@
 	},
 /turf/open/floor/wood/f13/oak,
 /area/f13/subway/ghouls)
+"vW" = (
+/obj/machinery/mineral/equipment_vendor,
+/turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
+	dir = 1
+	},
+/area/f13/enclave)
 "vX" = (
 /obj/structure/sink{
 	dir = 4;
@@ -5586,13 +5594,6 @@
 	dir = 1
 	},
 /area/f13/enclave)
-"ws" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/mineral/equipment_vendor,
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
-/area/f13/enclave)
 "wt" = (
 /obj/machinery/shower{
 	dir = 1;
@@ -5643,9 +5644,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "wE" = (
-/obj/structure/table,
-/obj/item/paper_bin,
-/obj/item/pen,
+/obj/machinery/vending/hydronutrients,
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
 "wF" = (
@@ -6042,6 +6041,10 @@
 	icon_state = "2-i"
 	},
 /area/f13/vault)
+"xY" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/f13/enclave)
 "xZ" = (
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -6139,7 +6142,11 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "yw" = (
-/obj/structure/chair/office/dark,
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
 "yy" = (
@@ -8949,7 +8956,7 @@
 /area/f13/vault)
 "KA" = (
 /obj/machinery/computer/rdconsole/core/bos,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "KB" = (
 /obj/structure/cable{
@@ -10028,7 +10035,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/vault)
 "OV" = (
-/obj/structure/chalkboard,
+/obj/machinery/vending/hydroseeds,
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
 "OW" = (
@@ -10768,10 +10775,10 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
 "RP" = (
-/obj/structure/window/reinforced{
+/obj/structure/window/reinforced/spawner{
 	dir = 1
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
 "RQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10972,6 +10979,12 @@
 /obj/structure/junk/small/bench,
 /turf/open/floor/wood/f13/oak,
 /area/f13/subway/ghouls)
+"SG" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/f13/enclave)
 "SH" = (
 /obj/structure/chair/bench,
 /turf/open/floor/wood/f13/oak,
@@ -11383,11 +11396,11 @@
 /turf/open/floor/wood/f13/oak,
 /area/f13/city/town)
 "Uo" = (
-/obj/structure/window/reinforced{
+/obj/structure/window/reinforced/spawner{
 	dir = 1
 	},
-/obj/structure/closet/crate,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/obj/machinery/biogenerator,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/enclave)
 "Up" = (
 /obj/structure/bed,
@@ -13106,7 +13119,7 @@ Za
 Za
 Za
 Za
-Za
+Hy
 mJ
 "}
 (3,1,1) = {"
@@ -13267,7 +13280,7 @@ Hk
 Hk
 Hk
 Hk
-Vz
+Za
 Za
 mJ
 "}
@@ -17129,10 +17142,10 @@ iR
 Vz
 wE
 Zv
-fm
+fP
 Uo
-ZU
-ZU
+Zv
+SG
 Vz
 Vz
 Vz
@@ -17290,11 +17303,11 @@ Vz
 iR
 Vz
 OV
-yw
-fm
+Zv
+fP
 db
-ZU
-ZU
+vh
+fm
 Vz
 nk
 wm
@@ -17451,12 +17464,12 @@ Za
 Vz
 iR
 Vz
+yw
 Zv
+fP
+RP
 Zv
 fm
-RP
-ZU
-ZU
 Vz
 tn
 xZ
@@ -17613,12 +17626,12 @@ Za
 Vz
 iR
 Vz
+xY
 Zv
 Zv
 Zv
-ZU
-ZU
-ZU
+Zv
+Zv
 Vz
 ts
 ts
@@ -17778,9 +17791,9 @@ Vz
 cD
 Zv
 fm
-jt
-ZU
-ZU
+RP
+Zv
+Zv
 qY
 ZU
 ZU
@@ -17940,9 +17953,9 @@ Vz
 KA
 DD
 fm
-ws
-ZU
-ZU
+RP
+Zv
+aX
 Vz
 VD
 VD
@@ -18102,9 +18115,9 @@ Vz
 nR
 Zv
 sb
-ws
-ZU
-ZU
+RP
+Zv
+Zv
 Vz
 EC
 VD
@@ -18585,7 +18598,7 @@ Za
 Vz
 SU
 Vz
-Fu
+vW
 ZU
 bN
 jf
