@@ -13,10 +13,10 @@
 	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/mask/gas/enclave
-	name = "gas mask mk 2"
-	desc = "Gas mask with efficient cleanable filters and flash protected lenses"
-	icon_state = "gasmask_enclave"
-	item_state = "gasmask_enclave"
+	name = "US Army Combat Respirator"
+	desc = "A well maintained/ reproduced pre-war combat respirator designed to protect it's user from chemical, biological, radiological & nuclear threats on the battlefield."
+	icon_state = "enclave_gasmask"
+	item_state = "enclave_gasmask"
 	flash_protect = 2
 
 /obj/item/clothing/mask/gas/glass
