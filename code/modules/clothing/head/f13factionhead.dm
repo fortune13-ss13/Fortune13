@@ -250,20 +250,11 @@
 	flags_cover = null
 	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
-/obj/item/clothing/head/helmet/f13/remnant/sergeant
-	name = "Reinforced Enclave Combat Helmet"
-	desc = "Issued as part of a rare suit of Reinforced Enclave Combat Armor, the helmet excels in protection from all types of energy weapons and boasts a triple chevron on the front & sides, denoting the user as a Sergeant."
-	icon_state = "helmet_enclave_sergeant"
-	item_state = "helmet_enclave_sergeant"
-	flags_inv = HIDEEARS|HIDEHAIR
-	flags_cover = null
-	armor = list("tier" = 5, "energy" = 60, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-
-/obj/item/clothing/head/helmet/f13/remnant/corporal
-	name = "US Army Combat Helmet"
-	desc = "A standard US Army combat helmet consisting of olive drab armor plates, a double chevron is painted on both the front and sides, denoting the owner as a Corporal."
-	icon_state = "helmet_enclave_corporal"
-	item_state = "helmet_enclave_corporal"
+/obj/item/clothing/head/helmet/f13/remnant/army
+	name = "Light Infantry Combat Helmet"
+	desc = "A post-war revision of the US Army combat helmet consisting of advanced olive drab armor plating & lining to reduce impact force & durability."
+	icon_state = "helmet_enclave"
+	item_state = "helmet_enclave"
 	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = null
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
