@@ -251,11 +251,11 @@
 /datum/outfit/job/enclave/armor
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/armor
-	head =	/obj/item/clothing/head/helmet/f13/remnant/sergeant
+	head =	/obj/item/clothing/head/helmet/f13/remnant/army
 	neck =	/obj/item/storage/belt/holster/legholster
 	mask =	/obj/item/clothing/mask/gas/enclave
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/enclave/sergeant
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	accessory =	/obj/item/clothing/accessory/enclave/sgt
 	belt =	/obj/item/storage/belt/military/assault/enclave
 	gloves =	/obj/item/clothing/gloves/f13/military
@@ -315,11 +315,11 @@
 /datum/outfit/job/enclave/corporal
 	name = "Enclave Corporal"
 	jobtype = /datum/job/enclave/corporal
-	head =	/obj/item/clothing/head/helmet/f13/remnant/corporal
+	head =	/obj/item/clothing/head/helmet/f13/remnant/army
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/enclave/corporal
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	shoes =	/obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves =	/obj/item/clothing/gloves/f13/military
 	accessory =	/obj/item/clothing/accessory/ncr/CPL
@@ -375,11 +375,11 @@
 /datum/outfit/job/enclave/soldier
 	name =	"Enclave Private"
 	jobtype =	/datum/job/enclave/soldier
-	head =	/obj/item/clothing/head/helmet/f13/remnant/peacekeeper
+	head =	/obj/item/clothing/head/helmet/f13/remnant/army
 	mask =	/obj/item/clothing/mask/gas/enclave
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	uniform =	/obj/item/clothing/under/f13/enclave
-	suit =	/obj/item/clothing/suit/armor/f13/enclave/private
+	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
 	accessory =	/obj/item/clothing/accessory/enclave/soldier
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
