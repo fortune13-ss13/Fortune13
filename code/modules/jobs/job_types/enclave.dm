@@ -65,7 +65,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/storage/bag/money/small/ncrofficers = 1,
+		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
@@ -117,7 +117,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/grenade/chem_grenade/cleaner = 1,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
@@ -171,7 +171,7 @@
 		/obj/item/suppressor = 1,
 		/obj/item/clothing/head/helmet/riot/vaultsec = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
@@ -263,7 +263,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
-		/obj/item/storage/bag/money/small/ncrofficers = 1,
+		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
@@ -328,7 +328,7 @@
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/clothing/head/helmet/f13/remnant/peacekeeper = 1,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
@@ -383,7 +383,7 @@
 	accessory =	/obj/item/clothing/accessory/enclave/soldier
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
 		)
 
