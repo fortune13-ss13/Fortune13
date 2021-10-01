@@ -168,6 +168,20 @@
 	item_state = "ncrflag"
 	faction = "NCR"
 
+/obj/item/flag/ncr
+	name = "Enclave Flag"
+	desc = "A flag with an 'E' and stars wrapped around it, the symbol of the Enclave."
+	icon_state = "enclaveflag"
+	item_state = "enclaveflag"
+	faction = "Enclave"
+
+/obj/item/flag/usa
+	name = "US Flag"
+	desc = "The star spangled banner."
+	icon_state = "usaflag"
+	item_state = "usaflag"
+	faction = "Enclave"
+
 /obj/item/flag/bos
 	name = "Brotherhood of Steel flag"
 	desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
