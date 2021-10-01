@@ -725,6 +725,11 @@
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/tribals)
+"dh" = (
+/obj/structure/table,
+/obj/machinery/light,
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/indoors/enclave)
 "di" = (
 /obj/machinery/light{
 	dir = 8
@@ -1268,6 +1273,9 @@
 /area/indoors/bunker)
 "fr" = (
 /obj/machinery/computer/rdconsole/core/bos,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/indoors/enclave)
 "fu" = (
@@ -2534,10 +2542,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "jN" = (
-/obj/machinery/door/unpowered/militarydoor/enclave{
-	name = "Armory"
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/enclave)
 "jO" = (
 /obj/structure/table/wood,
@@ -2957,6 +2965,9 @@
 /area/f13/vault)
 "ly" = (
 /obj/machinery/vending/hydroseeds,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/indoors/enclave)
 "lz" = (
@@ -3397,14 +3408,14 @@
 /obj/structure/decoration/vent{
 	name = "Shower drain"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave)
 "nk" = (
 /obj/item/pickaxe/drill,
 /obj/structure/rack/steel,
 /obj/item/storage/bag/ore,
 /obj/item/clothing/head/hardhat,
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave)
 "nl" = (
 /obj/structure/closet/old/fridge,
@@ -5615,6 +5626,9 @@
 "wg" = (
 /obj/structure/chair/f13foldupchair{
 	dir = 8
+	},
+/obj/structure/sign/warning/radiation/rad_area{
+	pixel_x = -32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/side{
 	dir = 4
@@ -7919,6 +7933,9 @@
 /area/indoors/bandits)
 "Fu" = (
 /obj/machinery/mineral/equipment_vendor,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
 	dir = 1
 	},
@@ -12510,6 +12527,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/caves)
+"YC" = (
+/obj/structure/sign/warning/radiation/rad_area{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 4
+	},
+/area/indoors/enclave)
 "YD" = (
 /turf/open/floor/plasteel/f13/vault_floor/green/side{
 	dir = 5
@@ -12850,6 +12875,7 @@
 /area/indoors/ruins)
 "ZT" = (
 /obj/structure/chalkboard,
+/obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/indoors/enclave)
 "ZU" = (
@@ -15783,7 +15809,7 @@ RN
 wg
 TD
 TD
-TD
+YC
 rb
 Vz
 Za
@@ -17382,7 +17408,7 @@ Wy
 Zv
 UQ
 QR
-Rn
+dh
 Vz
 Ak
 FL
@@ -18678,7 +18704,7 @@ ZU
 Yr
 mB
 qE
-ZU
+tk
 Vz
 Km
 ZU
@@ -18999,7 +19025,7 @@ SU
 Vz
 gf
 Vz
-jN
+oa
 Vz
 Vz
 gf
@@ -19161,7 +19187,7 @@ SU
 Vz
 aQ
 Vz
-ZU
+Ig
 nj
 Vz
 aQ
@@ -19323,7 +19349,7 @@ SU
 Vz
 Fs
 Vz
-ZU
+jN
 nj
 Vz
 Fs
@@ -19485,7 +19511,7 @@ SU
 Vz
 Fs
 Vz
-ZU
+Ig
 nk
 Vz
 Fs
@@ -19647,7 +19673,7 @@ Fs
 Vz
 Fs
 Vz
-jN
+oa
 Vz
 Vz
 SU
