@@ -15,6 +15,7 @@
 /obj/item/clothing/mask/gas/enclave
 	name = "US Army Combat Respirator"
 	desc = "A well maintained/ reproduced pre-war combat respirator designed to protect it's user from chemical, biological, radiological & nuclear threats on the battlefield."
+	icon = 'icons/fallout/clothing/masks.dmi'
 	icon_state = "enclave_gasmask"
 	item_state = "enclave_gasmask"
 	flash_protect = 2
