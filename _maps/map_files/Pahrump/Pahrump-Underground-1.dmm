@@ -1371,6 +1371,9 @@
 "fH" = (
 /obj/machinery/light,
 /obj/structure/closet,
+/obj/structure/sign/poster/official/safety_internals{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave)
 "fJ" = (
@@ -3496,6 +3499,13 @@
 /obj/item/blanket/blanketalt,
 /turf/open/floor/wooden/chestnut,
 /area/indoors/tribals)
+"nG" = (
+/obj/structure/table,
+/obj/structure/sign/poster/official/help_others{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/indoors/enclave)
 "nI" = (
 /obj/structure/campfire/stove{
 	pixel_x = -7
@@ -4042,6 +4052,9 @@
 	},
 /area/indoors/ruins)
 "pI" = (
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/sign/poster/official/obey{
 	pixel_y = 32
 	},
@@ -5458,6 +5471,9 @@
 	},
 /area/indoors/bunker)
 "vs" = (
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/sign/poster/official/safety_report{
 	pixel_y = 32
 	},
@@ -6480,6 +6496,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/poster/official/do_not_question{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave/hq)
 "zz" = (
@@ -6795,6 +6814,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/vault)
+"AJ" = (
+/obj/structure/sign/poster/official/safety_internals{
+	pixel_y = -32
+	},
+/turf/closed/wall/r_wall,
+/area/indoors/enclave)
 "AK" = (
 /mob/living/simple_animal/hostile/raider/lurkers,
 /turf/open/floor/wooden/chestnut,
@@ -7853,6 +7878,20 @@
 	icon_state = "platingdmg3"
 	},
 /area/indoors/bunker)
+"Ff" = (
+/obj/machinery/shower{
+	dir = 1;
+	pixel_y = -3
+	},
+/obj/structure/decoration/vent{
+	name = "Shower drain"
+	},
+/obj/structure/sign/poster/official/safety_internals{
+	pixel_x = -16;
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+/area/indoors/enclave)
 "Fg" = (
 /obj/structure/rack,
 /obj/item/seeds/poppy/broc,
@@ -9098,6 +9137,9 @@
 /obj/structure/table,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/sign/poster/official/work_for_a_future{
+	pixel_y = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/indoors/enclave)
@@ -11789,6 +11831,13 @@
 	},
 /turf/open/floor/carpet/black,
 /area/indoors/ruins)
+"VP" = (
+/obj/structure/table,
+/obj/structure/sign/poster/official/build{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/indoors/enclave)
 "VQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/autoname{
@@ -15139,7 +15188,7 @@ Vz
 Vz
 Vz
 Vz
-pI
+ZU
 ZU
 Vz
 wm
@@ -15459,7 +15508,7 @@ Za
 Vz
 aQ
 Vz
-eh
+pI
 ZU
 ZU
 li
@@ -15787,7 +15836,7 @@ Vz
 Vz
 Vz
 Vz
-vs
+ZU
 ZU
 Vz
 za
@@ -16107,7 +16156,7 @@ Za
 Vz
 aQ
 Vz
-eh
+vs
 ZU
 ZU
 lw
@@ -17580,7 +17629,7 @@ ZU
 OF
 Zl
 Vz
-PK
+VP
 PK
 ZZ
 ZZ
@@ -18552,7 +18601,7 @@ Vz
 Vz
 Vz
 Vz
-PK
+nG
 PK
 ZZ
 ZZ
@@ -19027,7 +19076,7 @@ gf
 Vz
 oa
 Vz
-Vz
+AJ
 gf
 Vz
 BE
@@ -19350,7 +19399,7 @@ Vz
 Fs
 Vz
 jN
-nj
+Ff
 Vz
 Fs
 Vz
