@@ -107,6 +107,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/mop,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/enclave)
 "av" = (
@@ -818,7 +821,7 @@
 "dB" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/green/corner,
 /area/indoors/enclave)
 "dC" = (
 /obj/item/twohanded/required/kirbyplants/photosynthetic,
@@ -987,7 +990,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/green/side,
 /area/indoors/enclave)
 "ei" = (
 /obj/effect/decal/fakelattice,
@@ -1015,7 +1018,9 @@
 /obj/item/clothing/shoes/sneakers/orange,
 /obj/item/clothing/under/rank/prisoner,
 /obj/item/restraints/handcuffs,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/green/corner{
+	dir = 8
+	},
 /area/indoors/enclave)
 "en" = (
 /turf/open/floor/plasteel/f13{
@@ -1045,11 +1050,13 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/indoors/caves)
 "ez" = (
-/obj/machinery/light{
+/obj/structure/closet,
+/obj/item/clothing/shoes/sneakers/orange,
+/obj/item/clothing/under/rank/prisoner,
+/obj/item/restraints/handcuffs,
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
 	dir = 8
 	},
-/obj/machinery/vending/snack,
-/turf/open/floor/plasteel/f13/vault_floor/green/corner,
 /area/indoors/enclave)
 "eA" = (
 /obj/structure/simple_door/wood,
@@ -1482,8 +1489,10 @@
 /turf/closed/wall/f13/vault,
 /area/indoors/bunker)
 "gd" = (
-/obj/effect/turf_decal/plaque,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/obj/machinery/vending/nukacolavendfull,
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 4
+	},
 /area/indoors/enclave)
 "ge" = (
 /obj/machinery/hydroponics/constructable,
@@ -2025,7 +2034,7 @@
 /obj/structure/toilet{
 	dir = 4
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/enclave)
 "hY" = (
 /obj/structure/table/wood,
@@ -2408,7 +2417,7 @@
 /obj/structure/mirror{
 	pixel_x = -27
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/enclave)
 "jn" = (
 /obj/structure/rack,
@@ -2843,13 +2852,13 @@
 /area/indoors/town)
 "lh" = (
 /obj/structure/barricade/bars,
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave)
 "li" = (
 /obj/machinery/door/unpowered/barredcelldoor{
 	name = "Cell 2"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave)
 "lj" = (
 /obj/machinery/light{
@@ -2950,7 +2959,7 @@
 /obj/machinery/door/unpowered/barredcelldoor{
 	name = "Cell 1"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave)
 "lx" = (
 /obj/structure/frame/machine,
@@ -3004,9 +3013,7 @@
 	},
 /area/indoors/bunker)
 "lG" = (
-/obj/structure/closet/crate{
-	icon_state = "medicalcrate"
-	},
+/obj/structure/closet/crate/medical,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
@@ -4041,7 +4048,7 @@
 /obj/structure/sign/poster/official/obey{
 	pixel_y = 32
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/enclave)
 "pJ" = (
 /obj/structure/reagent_dispensers/barrel/four,
@@ -4713,7 +4720,9 @@
 /area/indoors/enclave)
 "st" = (
 /obj/machinery/vending/sustenance,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/green/corner{
+	dir = 4
+	},
 /area/indoors/enclave)
 "su" = (
 /obj/machinery/light,
@@ -4828,7 +4837,9 @@
 /obj/item/taperecorder,
 /obj/item/tape,
 /obj/item/tape,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/green/side{
+	dir = 1
+	},
 /area/indoors/enclave)
 "sT" = (
 /obj/machinery/door/airlock/medical/glass,
@@ -5234,10 +5245,8 @@
 /turf/open/floor/carpet,
 /area/indoors/bandits)
 "uz" = (
-/obj/machinery/vending/nukacolavendfull,
-/turf/open/floor/plasteel/f13/vault_floor/green/side{
-	dir = 4
-	},
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/indoors/enclave)
 "uA" = (
 /obj/item/pickaxe,
@@ -5460,7 +5469,7 @@
 /obj/structure/sign/poster/official/safety_report{
 	pixel_y = 32
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/enclave)
 "vu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5475,9 +5484,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/vault)
 "vx" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
-/area/indoors/enclave/hq)
+/obj/machinery/vending/coffee{
+	name = "Americana Hot Drinks";
+	products = list(/obj/item/reagent_containers/food/drinks/coffee = 11, /obj/item/reagent_containers/food/drinks/mug/tea = 3, /obj/item/reagent_containers/food/drinks/mug/coco = 8)
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/indoors/enclave)
 "vy" = (
 /obj/effect/turf_decal/caution{
 	dir = 1
@@ -6774,12 +6786,6 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/indoors/bunker)
-"AE" = (
-/obj/structure/closet/crate/secure/weapon,
-/turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
-	dir = 1
-	},
-/area/indoors/enclave)
 "AF" = (
 /obj/structure/table/reinforced,
 /obj/machinery/microwave,
@@ -8165,7 +8171,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/kirbyplants,
+/obj/machinery/vending/snack,
 /turf/open/floor/plasteel/f13/vault_floor/green/corner,
 /area/indoors/enclave)
 "Gq" = (
@@ -8974,7 +8980,7 @@
 "JV" = (
 /obj/structure/bed,
 /obj/item/bedsheet/black,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/enclave)
 "JX" = (
 /obj/machinery/door/airlock/public/glass{
@@ -10813,7 +10819,7 @@
 /obj/structure/decoration/vent{
 	name = "Shower drain"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/green/solid,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/indoors/enclave)
 "RM" = (
 /obj/structure/cable{
@@ -12851,11 +12857,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "ZN" = (
-/obj/structure/closet/crate{
-	icon_state = "medicalcrate"
-	},
-/obj/effect/spawner/lootdrop/f13/medical/vault/equipment,
-/obj/effect/spawner/lootdrop/f13/medical/vault/equipment,
+/obj/structure/closet/crate/medical,
+/obj/effect/spawner/lootdrop/f13/medical/surgical,
+/obj/effect/spawner/lootdrop/f13/medical/surgical,
 /obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/green/boxmark{
 	dir = 1
@@ -14663,10 +14667,10 @@ Vz
 Fs
 Vz
 dB
-ZU
-ZU
-ZU
-ZU
+TD
+TD
+TD
+TD
 st
 Vz
 uH
@@ -14987,13 +14991,13 @@ Vz
 Fs
 Vz
 em
-em
-em
-em
-ZU
-ZU
+ez
+ez
+ez
+Oj
+JB
 Vz
-vx
+vf
 Dk
 Hf
 Cr
@@ -15152,8 +15156,8 @@ Vz
 Vz
 Vz
 Vz
-ZU
-ZU
+FQ
+JB
 Vz
 wm
 EB
@@ -15314,8 +15318,8 @@ RK
 hX
 jm
 lh
-ZU
-ZU
+FQ
+JB
 Vz
 wR
 EF
@@ -15473,11 +15477,11 @@ Vz
 aQ
 Vz
 pI
-ZU
-ZU
+Ig
+Ig
 li
-ZU
-tk
+FQ
+kn
 Vz
 yw
 CQ
@@ -15635,11 +15639,11 @@ Vz
 aQ
 Vz
 JV
-ZU
+Ig
 JV
 lh
-ZU
-ZU
+FQ
+JB
 Vz
 yx
 CQ
@@ -15800,8 +15804,8 @@ Vz
 Vz
 Vz
 Vz
-ZU
-ZU
+FQ
+JB
 Vz
 za
 CQ
@@ -15962,8 +15966,8 @@ RK
 hX
 jm
 lh
-ZU
-ZU
+FQ
+JB
 Vz
 zy
 Fc
@@ -16121,11 +16125,11 @@ Vz
 aQ
 Vz
 vs
-ZU
-ZU
+Ig
+Ig
 lw
-ZU
-tk
+FQ
+kn
 Vz
 vY
 Vw
@@ -16283,11 +16287,11 @@ Vz
 aQ
 Vz
 JV
-ZU
+Ig
 JV
 lh
-ZU
-ZU
+eT
+Ho
 Vz
 Vz
 Vz
@@ -16452,8 +16456,8 @@ Mk
 Vz
 Vz
 Gp
-ss
-ss
+gd
+nr
 TD
 ss
 ss
@@ -16606,9 +16610,9 @@ Vz
 VI
 bA
 Vz
-ez
-uz
-nr
+fR
+TD
+TD
 TD
 TD
 TD
@@ -16778,7 +16782,7 @@ ZU
 ZU
 ZU
 ZU
-gd
+ZU
 ZU
 ZU
 ZU
@@ -17747,8 +17751,8 @@ ZU
 ZU
 ZU
 Vz
-AE
-AE
+OF
+OF
 ZU
 ML
 ZU
@@ -18889,12 +18893,12 @@ ZU
 ZU
 Eq
 Vz
+uz
 ZZ
 ZZ
 ZZ
 ZZ
-ZZ
-ZZ
+vx
 Vz
 vi
 UA
