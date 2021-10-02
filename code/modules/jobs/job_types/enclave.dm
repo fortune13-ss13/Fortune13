@@ -52,7 +52,7 @@
 	name =	"Enclave Research Director"
 	jobtype =	/datum/job/enclave/director
 	head =	/obj/item/clothing/head/helmet/f13/remnant/envirosuit
-	glasses =	/obj/item/clothing/glasses/meson
+	glasses =	/obj/item/clothing/glasses/science
 	mask =	/obj/item/clothing/mask/breath/medical
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
@@ -64,7 +64,6 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/grenade/chem_grenade/cleaner = 1,
 		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
@@ -105,7 +104,7 @@
 	jobtype =	/datum/job/enclave/scientist
 	head =	/obj/item/clothing/head/helmet/f13/remnant/envirosuit
 	neck =	/obj/item/storage/belt/holster/legholster/aep7
-	glasses =	/obj/item/clothing/glasses/meson
+	glasses =	/obj/item/clothing/glasses/hud/health
 	mask =	/obj/item/clothing/mask/breath/medical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	uniform =	/obj/item/clothing/under/f13/enclave
@@ -116,7 +115,6 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/grenade/chem_grenade/cleaner = 1,
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/clothing/head/helmet/f13/helmet/enclave/science = 1,
 		/obj/item/reagent_containers/food/snacks/f13/mre/remnant = 1,
@@ -161,7 +159,6 @@
 	name =	"Intelligence Specialist"
 	jobtype =	/datum/job/enclave/intel
 	head =	/obj/item/clothing/head/helmet/f13/remnant/intel
-	glasses = /obj/item/clothing/glasses/night/polarizing
 	uniform =	/obj/item/clothing/under/f13/enclave/intel
 	suit =	/obj/item/clothing/suit/armor/f13/combat/swat
 	suit_store =	/obj/item/gun/ballistic/automatic/pistol/n99/enclave
@@ -189,6 +186,7 @@
 		/obj/item/encryptionkey/headset_vault = 1,
 		/obj/item/jammer = 1,
 		/obj/item/binoculars = 1,
+		/obj/item/clothing/glasses/night = 1,
 		/obj/item/clothing/mask/infiltrator = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		)
@@ -253,6 +251,7 @@
 	jobtype = /datum/job/enclave/armor
 	head =	/obj/item/clothing/head/helmet/f13/remnant/army
 	neck =	/obj/item/storage/belt/holster/legholster
+	glasses = /obj/item/clothing/glasses/night
 	mask =	/obj/item/clothing/mask/gas/enclave
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/enclave/army
@@ -278,7 +277,7 @@
 	name = "Hammer."
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma/glock = 1,
+		/obj/item/gun/energy/laser/plasma/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 3,
 		/obj/item/book/granter/trait/bigleagues = 1,
 		)
