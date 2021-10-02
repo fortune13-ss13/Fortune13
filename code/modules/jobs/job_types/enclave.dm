@@ -38,9 +38,9 @@
 	flag = F13USSCIENTIST
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are in command of the Enclave outpost here, conduct research and help rebuild America by using your brains rather than your, admittedly impressive, military resources.."
+	description = "You are in command of the post, holding the rank of First Lieutenant- albiet honourably, the Sergeants have command in any sort of combat scenario. Conduct research and help rebuild America with your Scientists aswell as any research you wish to pursuit, utilise any resources available to you to achieve this."
 	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
-	supervisors = "the United States Government."
+	supervisors = "Enclave Research and Development Division."
 	selection_color = "#323232"
 	exp_requirements = 180
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
@@ -58,7 +58,7 @@
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	uniform =	/obj/item/clothing/under/f13/enclave
 	suit =	/obj/item/clothing/suit/armor/f13/environmentalsuit
-	accessory =	/obj/item/clothing/accessory/armband/science
+	accessory =	/obj/item/clothing/accessory/ncr/LT1
 	belt =	/obj/item/storage/belt/medical
 	suit_store =	/obj/item/tank/internals/oxygen
 
@@ -92,10 +92,9 @@
 	faction = "Enclave"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in proficiency, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
+	description = "You are a Scientist, this post was constructed to assist you, and your division in field research, you're free to pick a topic or subject of research and utilise any resources at hand to achieve your goals in regards to this- though you should run it by the Research Director first."
 	forbids = "The Enclave forbids you from leaving the base alone while it is still habitable."
-	enforces = "You must maintain the secrecy of organization."
-	supervisors = "the United States Government."
+	supervisors = "Enclave Research and Development Division."
 	selection_color = "#323232"
 	outfit = /datum/outfit/job/enclave/scientist
 
@@ -141,8 +140,8 @@
 	faction = "Enclave"
 	total_positions = 2
 	spawn_positions = 2
-	description = "You are a US Secret Service Operative broadly tasked with ensuring the continued existence of your current post, you're free to assist the scientists, go completely undercover within another organisation, or simply act as a Paramedic for local forces."
-	supervisors = "The United States Secret Service"
+	description = "You are a US Secret Service agent broadly tasked with ensuring the continued existence of your post, you're free to assist the scientists, go completely undercover, or simply act as a Paramedic for local forces."
+	supervisors = "United States Secret Service."
 	outfit = /datum/outfit/job/enclave/intel
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
@@ -233,16 +232,17 @@
 	flag = F13USSGT
 	total_positions = 2
 	spawn_positions = 2
-	description = "Entrusted with both the now rare advanced armor and command of a squad, your nation relies on you doing your job."
-	supervisors = "the Director and the United States Government."
+	description = "Entrused with the command of the squads assigned to your bunker, your job is to assist the Research Director alongside the scientists, though you are given full command in any combat scenario."
+	supervisors = "Enclave Department of the Army."
 	selection_color = "#323232"
 	exp_requirements = 180
 	outfit = /datum/outfit/job/enclave/armor
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_RD)
 	loadout_options = list(
-		/datum/outfit/loadout/hammer,
+		/datum/outfit/loadout/shocktrooper,
 		/datum/outfit/loadout/support,
+		/datum/outfit/loadout/sniper,
 		)
 
 
@@ -273,8 +273,8 @@
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
-/datum/outfit/loadout/hammer
-	name = "Hammer."
+/datum/outfit/loadout/shocktrooper
+	name = "Shocktrooper"
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/pistol = 1,
@@ -291,6 +291,15 @@
 		/obj/item/ammo_box/shotgun/buck = 1,
 		)
 
+/datum/outfit/loadout/sniper
+	name = "Sniper"
+	suit_store = /obj/item/gun/energy/laser/aer12
+	backpack_contents = list(
+		/obj/item/attachments/scope = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 3,
+		/obj/item/gun/ballistic/revolver/ballisticfist = 1,
+		/obj/item/ammo_box/shotgun/buck = 1,
+		)
 
 /*-------------------- ENCLAVE CORPORAL -----------------------*/
 // NCO
@@ -300,8 +309,8 @@
 	flag = F13USCORPORAL
 	total_positions = 2
 	spawn_positions = 2
-	description = "You are a member of a dying breed, true Americans, but you will do what you can to help revitalize the nation, and protect her from all enemies, foreign and domestic."
-	supervisors = "You report to the Sergeants directly."
+	description = "You are a Corporal, you report directly to your Sergeants and command the Privates under you."
+	supervisors = "Enclave Department of the Army."
 	selection_color = "#323232"
 	outfit = /datum/outfit/job/enclave/corporal
 	loadout_options = list(
@@ -360,8 +369,8 @@
 	flag = F13USPRIVATE
 	total_positions = 4
 	spawn_positions = 4
-	description = "You are a member of a dying breed, true Americans, but you will do what you can to help revitalize the nation, and protect her from all enemies, foreign and domestic."
-	supervisors = "The Corporals, alongside the Sergeants."
+	description = "You are a Private, you report directly to your Corporals, who in turn take orders from the Sergeants."
+	supervisors = "Enclave Department of the Army."
 	selection_color = "#323232"
 	outfit = /datum/outfit/job/enclave/soldier
 	loadout_options = list(
