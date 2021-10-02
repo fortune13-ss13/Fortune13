@@ -246,7 +246,7 @@
 	desc = "(I) Blue beret signifying the wearer is a Science Officer of the Enclave."
 	icon_state = "hat_enclave_science"
 	item_state = "hat_enclave_science"
-	flags_inv = HIDEEARS|HIDEFACE
+	flags_inv = HIDEEARS
 	flags_cover = null
 	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
@@ -264,7 +264,7 @@
 	desc = "(I) Dark beret issued to Intelligence Officers of the Enclave."
 	icon_state = "hat_enclave_intel"
 	item_state = "hat_enclave_intel"
-	flags_inv = HIDEEARS|HIDEFACE
+	flags_inv = HIDEEARS
 	flags_cover = null
 	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
@@ -273,9 +273,9 @@
 	desc = "(IV) Reinforced field cap issued to the soldiers of the Enclave."
 	icon_state = "hat_enclave_peacekeeper"
 	item_state = "hat_enclave_peacekeeper"
-	flags_inv = HIDEEARS|HIDEFACE
+	flags_inv = HIDEEARS
 	strip_delay = 50
-	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 1, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/remnant/officer
 	name = "enclave officer hat"
@@ -290,8 +290,7 @@
 	icon_state = "envirohead"
 	item_state = "envirohead"
 	desc = "(II) A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/head.dmi'
 	clothing_flags = THICKMATERIAL
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
