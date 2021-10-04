@@ -242,7 +242,7 @@
 	loadout_options = list(
 		/datum/outfit/loadout/shocktrooper,
 		/datum/outfit/loadout/support,
-		/datum/outfit/loadout/sniper,
+		/datum/outfit/loadout/enclavesniper,
 		)
 
 
@@ -291,7 +291,7 @@
 		/obj/item/ammo_box/shotgun/buck = 1,
 		)
 
-/datum/outfit/loadout/sniper
+/datum/outfit/loadout/enclavesniper
 	name = "Sniper"
 	suit_store = /obj/item/gun/energy/laser/aer12
 	backpack_contents = list(

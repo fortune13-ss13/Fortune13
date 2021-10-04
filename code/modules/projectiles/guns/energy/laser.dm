@@ -317,8 +317,12 @@
 	fire_delay = 3
 	can_scope = TRUE
 	scope_state = "AEP7_scope"
-	scope_x_offset = 12
-	scope_y_offset = 20
+	scope_x_offset = 10
+	scope_y_offset = 18
+	can_bayonet = TRUE
+	bayonet_state = "bayonetstraight"
+	knife_x_offset = 23
+	knife_y_offset = 7
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 
 
@@ -360,8 +364,12 @@
 	fire_delay = 3.5
 	can_scope = TRUE
 	scope_state = "AEP7_scope"
-	scope_x_offset = 12
-	scope_y_offset = 20
+	scope_x_offset = 10
+	scope_y_offset = 18
+	can_bayonet = TRUE
+	bayonet_state = "bayonetstraight"
+	knife_x_offset = 23
+	knife_y_offset = 7
 	equipsound = 'sound/f13weapons/equipsounds/tribeamequip.ogg'
 
 
@@ -376,8 +384,12 @@
 	fire_delay = 3.5
 	can_scope = TRUE
 	scope_state = "AEP7_scope"
-	scope_x_offset = 12
-	scope_y_offset = 20
+	scope_x_offset = 10
+	scope_y_offset = 18
+	can_bayonet = TRUE
+	bayonet_state = "bayonetstraight"
+	knife_x_offset = 23
+	knife_y_offset = 7
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 
 
