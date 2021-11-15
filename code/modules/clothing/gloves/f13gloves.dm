@@ -51,6 +51,7 @@
 /obj/item/clothing/gloves/f13/military/remnant
 	name = "Light Infantry Combat Gloves"
 	desc = "Tight fitting green ballistic gloves with mesh along the finger tips and padding along the palm. The craftsmanship is beyond what most in the wasteland could achieve, belonging to some kind of soldier."
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
 	icon = 'icons/fallout/clothing/gloves.dmi'
 	icon_state = "enclave_gloves"
 	item_state = "enclave_gloves"
