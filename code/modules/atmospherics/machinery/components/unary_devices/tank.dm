@@ -1,5 +1,5 @@
 #define AIR_CONTENTS	((25*ONE_ATMOSPHERE)*(air_contents.return_volume())/(R_IDEAL_GAS_EQUATION*air_contents.return_temperature()))
-/*/obj/machinery/atmospherics/components/unary/tank
+/obj/machinery/atmospherics/components/unary/tank
 	icon = 'icons/obj/atmospherics/pipes/pressure_tank.dmi'
 	icon_state = "generic"
 	name = "pressure tank"
@@ -50,7 +50,7 @@
 	icon_state = "red_white"
 	gas_type = /datum/gas/nitrous_oxide
 
-/* /obj/machinery/atmospherics/components/unary/tank/f13chemtank
+/obj/machinery/atmospherics/components/unary/tank/f13chemtank
 	icon_state = "blue"
 	gas_type = /datum/gas/miasma
 	volume = 2000
@@ -59,4 +59,3 @@
 	icon_state = "grey"
 	gas_type = /datum/gas/methyl_bromide
 
-/*
