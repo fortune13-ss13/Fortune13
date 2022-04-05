@@ -89,17 +89,22 @@
 		to_chat(user, "<span class='warning'>You don't want to harm other living beings!</span>")
 		return
 
-	var/bigleagues = force*0.45
-	var/buffout = force*0.55
+	var/bigleagues = force*0.25
+	var/buffout = force*0.25
+	var/smutant = force*0.50
+
 	//var/regular = force*(user.special_s/100)//SPECIAL integration
 
 	//force += regular//SPECIAL integration
-	
+
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_BIG_LEAGUES))
 		force += bigleagues
-	
+
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 		force += buffout
+
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_SMUTANT))
+		force += smutant
 
 	if(!force)
 		playsound(loc, 'sound/weapons/tap.ogg', get_clamped_volume(), 1, -1)
@@ -119,24 +124,10 @@
 
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_BIG_LEAGUES))
 		force -= bigleagues
-	
+
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 		force -= buffout
 
-	var/weight = getweight(user, STAM_COST_ATTACK_MOB_MULT) //CIT CHANGE - makes attacking things cause stamina loss
-	if(weight)
-		user.adjustStaminaLossBuffered(weight)
-
-	// CIT SCREENSHAKE
-	if(force >= 15)
-		shake_camera(user, ((force - 10) * 0.01 + 1), ((force - 10) * 0.01))
-		if(M.client)
-			switch (M.client.prefs.damagescreenshake)
-				if (1)
-					shake_camera(M, ((force - 10) * 0.015 + 1), ((force - 10) * 0.015))
-				if (2)
-					if(!CHECK_MOBILITY(M, MOBILITY_MOVE))
-						shake_camera(M, ((force - 10) * 0.015 + 1), ((force - 10) * 0.015))
 
 //the equivalent of the standard version of attack() but for object targets.
 /obj/item/proc/attack_obj(obj/O, mob/living/user)
@@ -146,9 +137,6 @@
 		return
 	user.do_attack_animation(O)
 	O.attacked_by(src, user)
-	var/weight = getweight(user, STAM_COST_ATTACK_OBJ_MULT)
-	if(weight)
-		user.adjustStaminaLossBuffered(weight)//CIT CHANGE - makes attacking things cause stamina loss
 
 /atom/movable/proc/attacked_by()
 	return
