@@ -101,6 +101,7 @@
 #define TRAIT_SLEEPIMMUNE		"sleep_immunity"
 #define TRAIT_PUSHIMMUNE		"push_immunity"
 #define TRAIT_SHOCKIMMUNE		"shock_immunity"
+#define TRAIT_WIREVISION		"wire omniescience"
 #define TRAIT_TESLA_SHOCKIMMUNE	"tesla_shock_immunity"
 #define TRAIT_STABLEHEART		"stable_heart"
 #define TRAIT_STABLELIVER		"stable_liver"
@@ -134,6 +135,7 @@
 #define TRAIT_NODEATH			"nodeath"
 #define TRAIT_NOHARDCRIT		"nohardcrit"
 #define TRAIT_NOSOFTCRIT		"nosoftcrit"
+#define TRAIT_NUKA_LOVER		"nukalover"
 #define TRAIT_MINDSHIELD		"mindshield"
 #define TRAIT_HIJACKER			"hijacker"
 #define TRAIT_SIXTHSENSE		"sixthsense"
@@ -186,6 +188,7 @@
 #define TRAIT_SKITTISH			"skittish"
 #define TRAIT_POOR_AIM			"poor_aim"
 #define TRAIT_INSANE_AIM		"insane_aim" //they don't miss. they never miss. it was all part of their immaculate plan.
+#define SPREAD_CONTROL		"spread_control"
 #define TRAIT_PROSOPAGNOSIA		"prosopagnosia"
 #define TRAIT_DRUNK_HEALING		"drunk_healing"
 #define TRAIT_TAGGER			"tagger"
@@ -213,6 +216,7 @@
 #define TRAIT_NO_ALCOHOL		"alcohol_intolerance"
 #define TRAIT_MUTATION_STASIS			"mutation_stasis" //Prevents processed genetics mutations from processing.
 #define TRAIT_FAST_PUMP				"fast_pump"
+#define TRAIT_AUTO_DRAW				"auto_draw" //can use bows good
 #define TRAIT_NO_PROCESS_FOOD	"no-process-food" // You don't get benefits from nutriment, nor nutrition from reagent consumables
 #define TRAIT_NICE_SHOT			"nice_shot" //hnnnnnnnggggg..... you're pretty good...
 #define TRAIT_PERFECT_ATTACKER	"perfect_attacker"
@@ -243,33 +247,35 @@
 #define TRAIT_SPRINT_LOCKED				"sprint_locked"
 
 
+#define TRAIT_SMUTANT		"Super Mutant"	//boosts salvage return
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
 #define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens
-#define TRAIT_LONGPORKLOVER		"Cannibal"
-#define TRAIT_TRIBAL			"Tribalistic Person"
-#define TRAIT_BERSERKER			"berserker"
-#define TRAIT_TECHNOPHREAK		"technophreak"	//needed to use the autolathe, renamed and sprited 30/06/2020
-#define TRAIT_PA_WEAR           "pa_wear"
+#define TRAIT_LONGPORKLOVER		"Cannibal" //guess
+#define TRAIT_TRIBAL			"Tribalistic Person" //has access to tribal crafting recipes
+#define TRAIT_BERSERKER			"berserker" //currently unused
+#define TRAIT_TECHNOPHREAK		"technophreak"	//boosts salvage return
+#define TRAIT_PA_WEAR           "pa_wear" //guess
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
 #define TRAIT_MEDICALGRADUATE		"Medical Graduate" //generalised offmap medschool graduation training
 #define TRAIT_UNETHICAL_PRACTITIONER	"Unethical Practitioner" //Can do harmful experimental surguries
 #define TRAIT_CYBERNETICIST		"Cyberneticist" //Utilizes powerful cybernetics
 #define TRAIT_CYBERNETICIST_EXPERT	"Cyberneticist Expert" //Can augument people into robots directly
 #define TRAIT_MACHINE_SPIRITS	"machine_spirits" //for tribe unique functions.
-#define TRAIT_HARD_YARDS        "hard_yards"
-#define	TRAIT_LIFEGIVER			"lifegiver"
+#define TRAIT_HARD_YARDS        "hard_yards" //trekking, removes slowdown on all tiles
+#define	TRAIT_LIFEGIVER			"lifegiver" //boosts HP
 #define TRAIT_MARS_TEACH		"mars_teachings" //for legion unique functions
+#define TRAIT_EXPLOSIVE_CRAFTING "explosive_crafting" //can craft explosives and bombs
+#define TRAIT_ADVANCED_EXPLOSIVE_CRAFTING "advanced explosive crafting" //can craft almost all kinds of explosives
 
 #define TRAIT_SURGERY_LOW		"lowsurgery"
 #define TRAIT_SURGERY_MID		"midsurgery"
 #define TRAIT_SURGERY_HIGH		"highsurgery"
 
 // fallout crafting traits
-#define TRAIT_GUNSMITH_ONE      "gunsmith_one"
-#define TRAIT_GUNSMITH_TWO      "gunsmith_two"
-#define TRAIT_GUNSMITH_THREE    "gunsmith_three"
-#define TRAIT_GUNSMITH_FOUR     "gunsmith_four"
-#define TRAIT_MASTER_GUNSMITH   "master_gunsmith"
+#define TRAIT_GUNSMITH_ONE      "gunsmith_one" //crafts poor guns
+#define TRAIT_GUNSMITH_TWO      "gunsmith_two" //crafts mid level guns
+#define TRAIT_GUNSMITH_THREE    "gunsmith_three" //crafts weapon parts
+#define TRAIT_GUNSMITH_FOUR     "gunsmith_four" //currently unused
 
 
 //non-mob traits
@@ -358,3 +364,4 @@
 /// This trait is added by the parry system.
 #define ACTIVE_PARRY_TRAIT				"active_parry"
 #define STICKY_NODROP "sticky-nodrop" //sticky nodrop sounds like a bad soundcloud rapper's name
+#define TRAIT_SPACEWALK "spacewalk"
